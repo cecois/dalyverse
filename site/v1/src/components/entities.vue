@@ -61,6 +61,7 @@
     <div class="tile is-child box">
       <p class="title is-size-7" v-if="active.key">ACTIVE</p>
 {{active.key}}
+{{active.item.article}}
     </div>
   </div>
 </div>
@@ -147,7 +148,7 @@ export default {
       },
       active: {
         key: null,
-        item: null,
+        item: {article:null},
         graph: null
       },
       entities_total: 0,
@@ -241,9 +242,6 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-// d3.json("miserables.json", function(error, graph) {
-  // if (error) throw error;
-
   let fakenodes = [
   {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
 
@@ -252,9 +250,9 @@ var simulation = d3.forceSimulation()
 {source:'people/_:daltonwilcox',target:'people/_:mummy'}
   ]
 
-  var nodes = fakenodes,
+  var nodes = this.nodes,
       nodeById = d3.map(nodes, function(d) { return d.id; }),
-      links = fakeedges,
+      links = this.edges,
       bilinks = [];
 
   links.forEach(function(link) {
@@ -271,13 +269,12 @@ var simulation = d3.forceSimulation()
     .enter().append("path")
       .attr("class", "edge");
 
-// var that=this
   var node = svg.selectAll(".node")
     .data(nodes.filter(function(d) { return d.id; }))
     .enter().append("circle")
       .attr("class", "node")
       .attr("r", 5)
-      // .attr("fill", function(d) { return color(d.group); })
+      .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -297,7 +294,6 @@ var simulation = d3.forceSimulation()
     link.attr("d", positionLink);
     node.attr("transform", positionNode);
   }
-// });
 
 function positionLink(d) {
   return "M" + d[0].x + "," + d[0].y
@@ -389,6 +385,13 @@ return count(entities[0])'
 
       this.page.title = "Dalyverse Events Graph: " + sub;
     }, //setPageTitle
+    setItem: function(q){
+
+this.active.item=this.$_.find(this.nodes,(no)=>{
+  return no._id==q
+})
+
+    },
     nullItem: function() {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
@@ -504,7 +507,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
   }, //methods
   computed: {}, //computed
   watch: {
-    'active.key': {handler:function(){this.console.msg=this.active.key}} //active
+    'active.key': {handler:function(vnew){this.setItem(vnew)}} //active
     ,nodes: {
       handler: function(vnew, vold) {
         console.info(
@@ -514,7 +517,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
-        this.d3ForceDirect()
+        // this.d3ForceDirect()
       }
     } //nodes
   } //watch
