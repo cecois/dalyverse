@@ -1,5 +1,28 @@
 [
   {
+    "_key": "_:patrickmcmahoncrashesaparty1",
+    "name": "Johnny McGory (Patrick McMahon) Crashes a Party and Steals $33",
+    "article": "Encountering a party to which he was not invited, Mr. McGory faked a mutual friend named 'Jackie' and stole $33 from the upstairs coatroom. He then got drunk waiting for a bus to the Morongo casinos and snorted an unknown white substance in the station bathroom. Then 'one thing led to another' and McGory ended up hijacking a bus and driving it into a ditch 'on purpose because of the fear'",
+    "timestamp": 
+      "2002-11-01T00:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "event is a loose estimate - some time prior to ADPPP#8"
+    }
+  },
+  {
+    "_key": "_:johnnymcgorrybreaksandenters",
+    "name": "Johnny McGory (Patrick McMahon) Does a B&E",
+    "article": "Booked on a doomed world tour by a booking agent that is, in reality, just 'a schizophrenic with a briefcase full of knives,' McGory developed a habit of breaking into presumed-empty homes for food and shelter. One morning he woke in the home of a bed-ridden elderly woman who was expecting her caretaker, Greta. McGory temporarily assumed the identity of Greta, fed her, then sat down to watch cartoons in his underwear. Greta then returned to the house and 'immediately gets violent.' A scuffle ensued in which Mr. McGory was pepper-sprayed. McGory then stumbled out to splash water on his face from a litter-strewn brook, where he stayed and 'cried and cried and cried.'",
+    "timestamp": 
+      "start": "2000-09-28T07:00:00Z"
+    ,
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "event is loose approximation - any time prior to ADPPP#8"
+    }
+  },
+  {
     "_key": "_:hotdoggetschewedoutbyhisbossathertz",
     "name": "Hot Dog Gets Chewed Out at Work",
     "article": "Unable to sell supplemental insurance for the entire month of July 2013, Hot Dog is rebuked and reprimanded by his boss at the Burbank Airport Hertz desk. The episode scars him such that the following March he incoroprates the event into a Sha Na Na-themed Dreams and Aspirations Journal, commissioned by a life coach.",

@@ -18,7 +18,7 @@
 * participatedIn
 * seeAlso
 
-### EVENTS
+### EVENTS:TIMELINE
 
 * for e in events
 	** e.hasParticant(s)
@@ -31,7 +31,7 @@
 		return {"evkey":ev._key,"p":p.name}
 	** e.occurredAt
 
-### PLACES
+### PLACES:MAP
 
 	* for e in places (no grouping)
 		for e in edges
@@ -52,12 +52,12 @@
 		collect placeid = pl._id,placename=pl.name INTO involved
 		return {"plid":placeid,"plname":placename,"participants":involved}
 
-### PEOPLE
+### PEOPLE:GRAPH
 
 	* people.has_murdered==true
 	* people.attributes
 
-### FULL GRAPH
+### ALL:GRAPH
 * livesAt
 * worksAt
 * caresFor

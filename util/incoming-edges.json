@@ -1,4 +1,8 @@
 [
+  {"_from": "events/_:patrickmcmahoncrashesaparty1","_to": "people/_:patrickmcmahon","type":"hasParticipant","vertex":"_:patrickmcmahoncrashesaparty1"},
+  {"_from": "events/_:johnnymcgorrybreaksandenters","_to": "people/_:unnamedelderlywoman1","type":"hasParticipant","vertex":"_:johnnymcgorrybreaksandenters"},
+  {"_from": "events/_:johnnymcgorrybreaksandenters","_to": "people/_:gretathecaretaker","type":"hasParticipant","vertex":"_:johnnymcgorrybreaksandenters"},
+  {"_from": "events/_:johnnymcgorrybreaksandenters","_to": "people/_:patrickmcmahon","type":"hasParticipant","vertex":"_:johnnymcgorrybreaksandenters"},
   {"_from": "people/_:monsignordamienfearnly","_to": "people/_:patrickmcmahon","type":"hasFriend","vertex":"_:monsignordamienfearnly"},
   {"_from": "people/_:slamminoliverrothwell","_to": "things/_:shanana","type":"hasWorkedAt","vertex":"_:slamminoliverrothwell"},
   {"_from": "events/_:thegreatminingoflakesuperior","_to": "places/_:lakesuperior","type":"occurredAt","vertex":"_:thegreatminingoflakesuperior"},

@@ -1,10 +1,26 @@
 <template>
 <div>
 default
+<code>{{console.msg}}</code>
 </div>
 </template>
 
 <script>
+export default {
+name:'Default',
+data() {
+return {
+console:{msg:"",throb:false},
+computed:{},
+watch:{},
+methods:{},
+created(){},
+mounted(){this.console.msg="loaded"},
+}//return
+}//data
+
+
+}//export.default
 
 </script>
 

@@ -14,7 +14,7 @@ export default new Router({
     component: DEFAULT
   }
   ,{
-    path: '/:component?',
+    path: '/events/:tstart?/:tend?/:filter?',
     name: 'Timeline',
     component: TIMELINE
   }
