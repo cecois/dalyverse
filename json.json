@@ -1,0 +1,173 @@
+[{
+  "class": "character",
+  "name":"Bill Carter",
+  "player":"Andy Daly",
+  "desc":"personal trainer at Bally's; wizard",
+  "url":"http://trainerforthestarsseekingstars.org",
+  "facts":["sports a tattoo of an eyeless woman","has been to jail for beating people up","has been to jail for not beating people up","dabbles a little bit in black magic","has attempted suicide 19 times","sports a hole in the back of his head, largely unexplained","b.1922","is extremely charismatic","fights in his sleep"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"August Lindt",
+  "player":"Andy Daly",
+  "desc":"pretzel maker from Düsseldorf",
+  "url":null,
+  "facts":["is cheerful","is suicidal"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Ben Alterman",
+  "player":"Andy Daly",
+  "desc":"aged amateur standup",
+  "url":null,
+  "facts":["b.1922","first wife, Ingrid, was barren then committed suicide","granddaughter, Ashley (to daughter Crystal), turned 16 in 2010","second wife died of ovarian cancer","lures children under bridges with chocolate","stopped watching television after the St. Elsewhere finale","likes Madonna's childrens books"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Danny Mahoney",
+  "player":"Andy Daly",
+  "desc":"party resurrector",
+  "url":"http://lotp.milleria.org",
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Shooter",
+  "player":"Andy Daly",
+  "desc":"L.A.-based standup comedian",
+  "url":null,
+  "facts":["has shot somebody a couple of times","sometimes goes up on the roof to take pot shots","is named Shooter not because of the gunplay but because in his comedy he shoots from the hip","has a standing thursday morning gig at El Cid"]
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Victor",
+  "desc":"assistant to Bill Carter; amateur camera man; technical giant",
+  "url":null,
+  "facts":[]
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "event",
+  "name":"I like to see a good fight, is all I'm sayin.",
+  "desc":"Bill Carter roots on the Watts riots.",
+  "character_primary":"bill_carter_character_id",
+  "assoc_char_array":[],
+  "date_start":"19650811", //date
+  "date_end":"19650811", //date
+  "date_certainty":"estimated" //enum
+  "location":"Watts, CA"
+}
+,{
+  "class": "event",
+  "name":"I thought Rains was gonna win.",
+  "desc":"Bill Carter sees Carey Grant in 'Notorious,' is disgusted by his upper body strength.",
+  "character_primary":"bill_carter_character_id",
+  "assoc_char_array":[],
+  "date_start":"19460906", //date
+  "date_end":"19460906", //date
+  "date_certainty":"estimated" //enum
+  "location":""
+}
+,{
+  "class": "event",
+  "name":"Bring a boxed dinner.",
+  "desc":"Ben Alterman performs at his daughter Ashley's sweet 16 birthday party",
+  "character_primary":"ben_altermans_character_id",
+  "assoc_char_array":[],
+  "date_start":"20100327", //date
+  "date_end":"20100327", //date
+  "date_certainty":"stated" //enum
+  "location":"Courtyard by Marriott Los Angeles Pasadena/Old Town - 180 N Fair Oaks Ave, Pasadena, CA 91103"
+}
+,{
+  "class": "event",
+  "name":"Nothing but pine trees all over the place.",
+  "desc":"August Lindt visits the Pine Barrens of New Jersey.",
+  "character_primary":"august_lindt_character_id",
+  "assoc_char_array":[],
+  "date_start":"20100501", //date
+  "date_end":"20100731", //date
+  "date_certainty":"estimated" //enum
+  "location":"Pine Barrens of New Jersey"
+}
+,{
+  "class": "event",
+  "name":"I went - a targeted strike on Epcott.",
+  "desc":"August Lindt visits Epcott Center.",
+  "character_primary":"august_lindt_character_id",
+  "assoc_char_array":[],
+  "date_start":"20100501", //date
+  "date_end":"20100731", //date
+  "date_certainty":"estimated" //enum
+  "location":"Epcott Center"
+}
+,{
+  "class": "event",
+  "name":"They don't let you go up to the bathroom where he died but I snuck up there.",
+  "desc":"August Lindt sneaks up to the Graceland bathroom.",
+  "character_primary":"august_lindt_character_id",
+  "assoc_char_array":[],
+  "date_start":"20100501", //date
+  "date_end":"20100731", //date
+  "date_certainty":"estimated" //enum
+  "location":"Graceland Mansion"
+}
+,{
+  "class": "event",
+  "name":"I saw someone the other day who knocked my goddamn socks off of my feet and onto another part of my body.",
+  "desc":"S. Aukerman is impressed by an open mic set by Ben Alterman",
+  "character_primary":"ben_altermans_character_id",
+  "assoc_char_array":[],
+  "date_start":"20100317", //date
+  "date_end":"20100317", //date
+  "date_certainty":"estimated" //enum
+  "location":"Los Angeles, CA"
+}
+,{
+  "class": "event",
+  "name":"I've only ever played L.A.",
+  "desc":"Shooter starts doing comedy",
+  "character_primary":"shooters_character_id",
+  "assoc_char_array":[],
+  "date_start":"19990101", //date
+  "date_end":"19990101", //date
+  "date_certainty":"estimated" //enum
+  "location":"Los Angeles, CA"
+}
+,{
+  "class": "event",
+  "name":"I put on a heavy coat and I walked into the ocean.",
+  "desc":"despondent, Danny Mahoney buys Nordstrom's heaviest coat and walks into the ocean",
+  "character_primary":"danny_mahoneys_character_id",
+  "assoc_char_array":[],
+  "date_start":"20081101", //date
+  "date_end":"20081231", //date
+  "date_certainty":"estimated" //enum
+  "location":[-118.49493027,34.01346726]
+}
+,{
+  "class": "event",
+  "name":"He grew weary of my personality, apparently.",
+  "desc":"in a coup d'etat, Bertand Mahoney, grown weary of Danny's personality and antics, forces him out of their shared plumbing business",
+  "character_primary":"danny_mahoneys_character_id",
+  "assoc_char_array":["bertand_mahoneys_character_id","23498ihaoh","etc."],
+  "date_start":"20081101", //date
+  "date_end":"20081231", //date
+  "date_certainty":"estimated" //enum
+}
+,{
+  "class": "event",
+  "name":"A gentleman came up to me and he said he'd like to talk about his business.",
+  "desc":"Danny Mahoney spots S. Aukerman on Melrose Av, asks to appear on the Comedy Bang! Bang! podcast.",
+  "character_primary":"danny_mahoneys_character_id",
+  "assoc_char_array":[],
+  "date_start":"20090729", //date
+  "date_end":"20090729", //date
+  "date_certainty":"stated", //enum
+  "location":[-118.322182,34.083525]
+}
+]
