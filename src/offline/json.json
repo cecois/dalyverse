@@ -1,5 +1,50 @@
 [{
   "class": "character",
+  "name":"Shamus McMahon",
+  "player":"",
+  "desc":"traditional Irish storyteller",
+  "url":"",
+  "facts":[],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Patrick McMahon",
+  "player":"Andy Daly",
+  "desc":"traditional Irish storyteller",
+  "url":"",
+  "facts":["hails from Limerick, IE","plays tambourine for Dexys Midnight Runners","was fired from a medical packaging plant following allegations of sexual inappropriateness","was fired by his brother for auto mechanical ineptitude"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Don DiMello",
+  "player":"Andy Daly",
+  "desc":"theatrical director",
+  "url":"",
+  "facts":["includes a photo of his penis with every acceptance letter sent to a new Rockette","is not a theatrical producer","wears Carhart sweatpants every Christmas season, all season-long","has been told he's 'a bit of a drooler'","directed the Rockettes' Christmas show at Radio City from at least 1992-2010"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Joe Bongo",
+  "player":"Andy Daly",
+  "desc":"Health Teacher",
+  "url":"",
+  "facts":["works at Marina del Rey High school","plays the bongos","does not know his birthday","parents were both diabetics","has been to birthday parties","wishes he'd been keeping track of Julys","has seen 18 Olympic long jump competitions","found his first pair of bongos under the Venice Fishing Pier","lapses into a character while playing bongos","is tired of being asked if he's an android","is an auto-didact on the bongos","owns a rug made of human hair","former driver's ed instructor"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Jimmy Bongos",
+  "player":"Andy Daly",
+  "desc":"percussionist",
+  "url":"",
+  "facts":["b.1962","is not angry, he just enjoys hurting people","has killed 'hundreds' of people","owns a houseful of rugs all made from the hair of his victims"],
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
   "name":"Bill Carter",
   "player":"Andy Daly",
   "desc":"personal trainer at Bally's; wizard",
@@ -44,11 +89,69 @@
 }
 ,{
   "class": "character",
-  "name":"Victor",
-  "desc":"assistant to Bill Carter; amateur camera man; technical giant",
+  "name":"Victor the Giant",
+  "player":"Billy Merritt"
+  "desc":"assistant to Bill Carter; amateur camera man; technically a giant",
   "url":null,
   "facts":[]
   "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "character",
+  "name":"Rochelle the Elf",
+  "player":"Miriam Tolan"
+  "desc":"former nurse practitioner",
+  "url":null,
+  "facts":[]
+  "etc":"...rest of fields from Sheets"
+}
+,{
+  "class": "event",
+  "name":"Before that I was directing an all-nude review in Midtown.",
+  "desc":"Don DiMello begins directing the Rockettes' Christmas show at Radio City Music Hall.",
+  "character_primary":"don_dimello_character_id",
+  "assoc_char_array":[],
+  "citations":["cbb.85"]
+  "date_start":"19921201", //date
+  "date_end":"19921231", //date
+  "date_certainty":"estimated" //enum
+  "location":["Radio City Music Hall, Manhattan, NY"]
+}
+,{
+  "class": "event",
+  "name":"She just rubbed her hands over me and said 'dont worry about it.'",
+  "desc":"Rochelle the Elf tests Bill Carter for AIDS.",
+  "character_primary":"bill_carter_character_id",
+  "assoc_char_array":[rochelle_the_elf_character_id],
+  "citations":["cbb.74"]
+  "date_start":null, //date
+  "date_end":null, //date
+  "date_certainty":"unk" //enum
+  "location":null
+}
+,{
+  "class": "event",
+  "name":"Finally his brother had to fire him and it was the worst day of both of their lives.",
+  "desc":"Shamus McMahon fires his brother, Patrick, from his auto mechanic business.",
+  "character_primary":"patrick_mcmahon_character_id",
+  "assoc_char_array":[shamus_mcmahon_character_id],
+  "citations":["cbb.74"]
+  "date_start":null, //date
+  "date_end":null, //date
+  "date_certainty":"unk" //enum
+  "location":null
+}
+,{
+  "class": "event",
+  "name":"That's the circumstance under which I'd write a limerick or something like that.",
+  "desc":"Patrick McMahon performs at Margaret & Ted's anniversary party.",
+  "character_primary":"patrick_mcmahon_character_id",
+  "assoc_char_array":[],
+  "citations":["cbb.74"]
+  "date_start":"20101006", //date
+  "date_end":"20101006", //date
+  "date_certainty":"estimated" //enum
+  "location":null
 }
 ,{
   "class": "event",
@@ -56,6 +159,7 @@
   "desc":"Bill Carter roots on the Watts riots.",
   "character_primary":"bill_carter_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.74"]
   "date_start":"19650811", //date
   "date_end":"19650811", //date
   "date_certainty":"estimated" //enum
@@ -67,6 +171,7 @@
   "desc":"Bill Carter sees Carey Grant in 'Notorious,' is disgusted by his upper body strength.",
   "character_primary":"bill_carter_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.74"]
   "date_start":"19460906", //date
   "date_end":"19460906", //date
   "date_certainty":"estimated" //enum
@@ -78,6 +183,7 @@
   "desc":"Ben Alterman performs at his daughter Ashley's sweet 16 birthday party",
   "character_primary":"ben_altermans_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.46"]
   "date_start":"20100327", //date
   "date_end":"20100327", //date
   "date_certainty":"stated" //enum
@@ -85,10 +191,23 @@
 }
 ,{
   "class": "event",
+  "name":"Unnamed pretzel maker from Düsseldorf is dead.",
+  "desc":"August Lindt attempts suicide by tying himself to the Hollywood sign and setting it on fire.",
+  "character_primary":"august_lindt_character_id",
+  "assoc_char_array":[],
+  "citations":["cbb.bo2010"]
+  "date_start":"20100625", //date
+  "date_end":"20100625", //date
+  "date_certainty":"deduced" //enum
+  "location":"Hollywood sign"
+}
+,{
+  "class": "event",
   "name":"Nothing but pine trees all over the place.",
   "desc":"August Lindt visits the Pine Barrens of New Jersey.",
   "character_primary":"august_lindt_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.59"]
   "date_start":"20100501", //date
   "date_end":"20100731", //date
   "date_certainty":"estimated" //enum
@@ -100,6 +219,7 @@
   "desc":"August Lindt visits Epcott Center.",
   "character_primary":"august_lindt_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.59"]
   "date_start":"20100501", //date
   "date_end":"20100731", //date
   "date_certainty":"estimated" //enum
@@ -111,6 +231,7 @@
   "desc":"August Lindt sneaks up to the Graceland bathroom.",
   "character_primary":"august_lindt_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.59"]
   "date_start":"20100501", //date
   "date_end":"20100731", //date
   "date_certainty":"estimated" //enum
@@ -122,6 +243,7 @@
   "desc":"S. Aukerman is impressed by an open mic set by Ben Alterman",
   "character_primary":"ben_altermans_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.46"]
   "date_start":"20100317", //date
   "date_end":"20100317", //date
   "date_certainty":"estimated" //enum
@@ -133,6 +255,7 @@
   "desc":"Shooter starts doing comedy",
   "character_primary":"shooters_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.14"]
   "date_start":"19990101", //date
   "date_end":"19990101", //date
   "date_certainty":"estimated" //enum
@@ -144,6 +267,7 @@
   "desc":"despondent, Danny Mahoney buys Nordstrom's heaviest coat and walks into the ocean",
   "character_primary":"danny_mahoneys_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.14"]
   "date_start":"20081101", //date
   "date_end":"20081231", //date
   "date_certainty":"estimated" //enum
@@ -155,6 +279,7 @@
   "desc":"in a coup d'etat, Bertand Mahoney, grown weary of Danny's personality and antics, forces him out of their shared plumbing business",
   "character_primary":"danny_mahoneys_character_id",
   "assoc_char_array":["bertand_mahoneys_character_id","23498ihaoh","etc."],
+  "citations":["cbb.14"]
   "date_start":"20081101", //date
   "date_end":"20081231", //date
   "date_certainty":"estimated" //enum
@@ -165,6 +290,7 @@
   "desc":"Danny Mahoney spots S. Aukerman on Melrose Av, asks to appear on the Comedy Bang! Bang! podcast.",
   "character_primary":"danny_mahoneys_character_id",
   "assoc_char_array":[],
+  "citations":["cbb.14"]
   "date_start":"20090729", //date
   "date_end":"20090729", //date
   "date_certainty":"stated", //enum
