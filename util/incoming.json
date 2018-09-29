@@ -1,0 +1,62 @@
+{
+  "set": [
+    {
+      "uid": "_:dannymahoney",
+      "name": "Danny Mahoney",
+      "worked_at": {
+        "uid": "_:unnamedplumbingco"
+    },
+    "works_at": {
+        "uid": "_:lotpcinc"
+    },
+    "has_family": {
+        "uid": "_:bertmahoney"
+    },
+    "events": [
+        {
+            "uid": "_:mahoneymeetsaukerman"
+      },
+      {
+          "uid": "_:event2"
+      }
+  ]
+},
+{
+  "uid": "_:bertmahoney",
+  "name": "Bertrand (Bert) Mahoney",
+  "worked_at": {
+    "uid": "_:unnamedplumbingco"
+},
+"has_family": {
+    "uid": "_:dannymahoney"
+}
+},
+{
+  "uid": "_:unnamedplumbingco",
+  "name": "Unnamed Plumbing Company",
+  "employees": [
+    {
+      "uid": "_:dannymahoney"
+  },
+  {
+      "uid": "_:bertmahoney"
+  }
+]
+},
+{
+  "uid": "_:mahoneymeetsaukerman",
+  "name": "Danny Mahoney Meets Scott",
+  "the_geom": geojson goes here
+}
+,{
+  "uid": "_:lotpinc",
+  "name": "Life of the Party, Inc.",
+  "location": {"type":"address","value":"address goes here"},
+  "employees": [
+    {
+      "uid": "_:dannymahoney"
+  }
+]
+}
+]
+}
