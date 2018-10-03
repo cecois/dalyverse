@@ -3,60 +3,79 @@
     {
       "uid": "_:dannymahoney",
       "name": "Danny Mahoney",
+      "article":"Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following a failed suicide attempt by Mr. Mahoney -- itself the result of a failed plumbing business."
       "worked_at": {
         "uid": "_:unnamedplumbingco"
-    },
-    "works_at": {
-        "uid": "_:lotpcinc"
-    },
-    "has_family": {
-        "uid": "_:bertmahoney"
-    },
-    "events": [
-        {
-            "uid": "_:mahoneymeetsaukerman"
       },
-      {
+      "works_at": {
+        "uid": "_:lotpcinc"
+      },
+      "has_family": {
+        "uid": "_:bertmahoney"
+      },
+      "events": [
+        {
+          "uid": "_:mahoneymeetsaukerman"
+        },
+        {
           "uid": "_:event2"
+        }
+      ]
+    },
+    {
+      "uid": "_:bertmahoney",
+      "name": "Bertrand (Bert) Mahoney",
+      "worked_at": {
+        "uid": "_:unnamedplumbingco"
+      },
+      "has_family": {
+        "uid": "_:dannymahoney"
       }
+    },
+    {
+      "uid": "_:unnamedplumbingco",
+      "name": "Unnamed Plumbing Company",
+      "article": "Until late 2008, Danny and Bert Mahoney operated a as-yet unnamed plumbing business. In the winter of that year, Bertrand 'grew weary' of Danny's personality and executed a hostile takeover, plunging Danny into a short-lived emotional spiral that led to a failed suicide attempt.",
+      "staff": [
+        {
+          "uid": "_:dannymahoney"
+        },
+        {
+          "uid": "_:bertmahoney"
+        }
+      ]
+    },
+    {
+      "uid": "_:dannymahoneymeetsscottaukerman",
+      "name": "Danny Mahoney Meets Scott",
+      "the_geom": geojson goes here,
+      "timestamp":"2009-07-29T00:00:00Z",
+      "nb_timestamp":"date is 'yesterday' relative to CBB #14"
+    },
+    {
+      "uid": "_:dannymahoneywalksintotheocean",
+      "name": "Danny Mahoney Wears a Heavy Coat Into the Ocean",
+      "the_geom": geojson goes here,
+      "timestamp":"2009-12-01T10:00:00Z",
+      "nb_timestamp":"timestamp is approximate - winter prior to CBB #14"
+    },
+    {
+      "uid": "_:dannymahoneybuysaheavycoat",
+      "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat",
+      "the_geom": geojson goes here,
+      "timestamp":"2008-12-01T09:00:00Z",
+      "nb_timestamp":"timestamp is approximate - winter prior to CBB #14"
+    }
+    ,{
+      "uid": "_:lotpinc",
+      "name": "Life of the Party, Inc.",
+      "article": "Life of the Party, Inc., is a party-execution operation launched and owned by Danny Mahoney. The way it works is: if you're throwing a party -- any kind of a party, doesn't matter if it's a Baz Mitzvah, somebody's getting out of jail, or even a gay wedding -- you hire LOTPCInc and Danny will come to the party and make it fantastic by being the life of the party.",
+      "the_geom": geojson goes here,
+      "staff": [
+        {
+          "uid": "_:dannymahoney"
+        }
+      ]
+    }
   ]
-},
-{
-  "uid": "_:bertmahoney",
-  "name": "Bertrand (Bert) Mahoney",
-  "worked_at": {
-    "uid": "_:unnamedplumbingco"
-},
-"has_family": {
-    "uid": "_:dannymahoney"
-}
-},
-{
-  "uid": "_:unnamedplumbingco",
-  "name": "Unnamed Plumbing Company",
-  "employees": [
-    {
-      "uid": "_:dannymahoney"
-  },
-  {
-      "uid": "_:bertmahoney"
-  }
-]
-},
-{
-  "uid": "_:mahoneymeetsaukerman",
-  "name": "Danny Mahoney Meets Scott",
-  "the_geom": geojson goes here
-}
-,{
-  "uid": "_:lotpinc",
-  "name": "Life of the Party, Inc.",
-  "location": {"type":"address","value":"address goes here"},
-  "employees": [
-    {
-      "uid": "_:dannymahoney"
-  }
-]
-}
-]
 }
