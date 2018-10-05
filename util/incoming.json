@@ -34,6 +34,11 @@
       }
     },
     {
+      "uid": "_:scottaukerman",
+      "name": "Scott Aukerman",
+      "article":"Scott Aukerman is a host."
+    },
+    {
       "uid": "_:shooter",
       "name": "Shooter",
       "article":"Shooter is an L.A.-based comedian whose first national tour was supposed to occur in Fall 2009. Prior to that he would sit at Buzz Coffee near Sunset to watch women on the escalators letting out from Cardio Ballet. He has also shot somebody 'a couple of times' and admitted on Comedy Bang! Bang! #14 that he sometimes will 'go up on a rooftop and take potshots.'"
@@ -56,17 +61,33 @@
       "name": "Danny Mahoney Meets Scott",
       "geo_key": {"type":"point","id":111},
       "timestamp":"2009-07-29T00:00:00Z",
-      "nb_timestamp":"date is 'yesterday' relative to CBB #14"
+      "nb_timestamp":"date is 'yesterday' relative to CBB #14",
+      "participants":[
+        {
+          "uid": "_:dannymahoney"
+        },
+        {
+          "uid": "_:scottaukerman"
+        }
+      ]
     },
     {
       "uid": "_:dannymahoneywalksintotheocean",
+      "class":"event",
       "name": "Danny Mahoney Wears a Heavy Coat Into the Ocean",
       "geo_key": {"type":"point","id":111},
       "timestamp":"2009-12-01T10:00:00Z",
       "nb_timestamp":"timestamp is approximate - winter prior to CBB #14"
     },
     {
+      "uid": "_:shooteratbuzzcoffeei",
+      "name": "Shooter Hangs at Buzz Coffee I",
+      "geo_key": {"type":"point","id":111},
+      "timestamp":null
+    },
+    {
       "uid": "_:dannymahoneybuysaheavycoat",
+      "class":"event",
       "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat",
       "geo_key": {"type":"point","id":111},
       "timestamp":"2008-12-01T09:00:00Z",
