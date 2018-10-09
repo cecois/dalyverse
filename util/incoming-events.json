@@ -1,0 +1,53 @@
+{
+  "set": [
+    {
+      "uid": "_:dannymahoneymeetsscottaukerman",
+      "name": "Danny Mahoney Meets Scott",
+      "geo_key": {
+        "type": "point",
+        "id": 111
+      },
+      "timestamp": "2009-07-29T00:00:00Z",
+      "nb_timestamp": "date is 'yesterday' relative to CBB #14",
+      "participants": [
+        {
+          "uid": "_:dannymahoney"
+        },
+        {
+          "uid": "_:scottaukerman"
+        }
+      ]
+    },
+    {
+      "uid": "_:dannymahoneywalksintotheocean",
+      "class": "event",
+      "name": "Danny Mahoney Wears a Heavy Coat Into the Ocean",
+      "geo_key": {
+        "type": "point",
+        "id": 111
+      },
+      "timestamp": "2009-12-01T10:00:00Z",
+      "nb_timestamp": "timestamp is approximate - winter prior to CBB #14"
+    },
+    {
+      "uid": "_:shooteratbuzzcoffeei",
+      "name": "Shooter Hangs at Buzz Coffee I to Watch Women Let Out of Cardio Ballet",
+      "geo_key": {
+        "type": "point",
+        "id": 111
+      },
+      "timestamp": null
+    },
+    {
+      "uid": "_:dannymahoneybuysaheavycoat",
+      "class": "event",
+      "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat",
+      "geo_key": {
+        "type": "point",
+        "id": 111
+      },
+      "timestamp": "2008-12-01T09:00:00Z",
+      "nb_timestamp": "timestamp is approximate - winter prior to CBB #14"
+    },
+  ]
+}
