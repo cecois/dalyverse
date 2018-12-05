@@ -1,0 +1,46 @@
+{
+  "uid": "_:clivedundee",
+  "name": "Clive Dundee",
+  "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit.",
+  "born":1963,
+  "worked_at": {
+    "uid": "_:u2"
+  },
+  "has_spouses": {
+    "uid": "_:clivedundeeswife"
+  },
+  "has_friends": {
+    "uid": "_:dondimello"
+  },
+  "events": [
+  ],
+  "links": [
+    {
+      "uri": "https://comedybangbang.fandom.com/wiki/Clive_Dundee",
+      "label": "CBB Wikia"
+    }
+  ]
+}
+
+{
+  "uid": "_:u2",
+  "name": "U2",
+  "article": "Rock and roll musical combination.",
+  "events": [
+  ],
+  "links": [
+  ]
+}
+
+{
+  "uid": "_:clivedundeeswife",
+  "name": "Clive Dundee's Unnamed Wife",
+  "article": "She is  barren.",
+  "has_spouses": [
+    {"uid":"_:clivedundee"}
+  ],
+  "events": [
+  ],
+  "links": [
+  ]
+}
