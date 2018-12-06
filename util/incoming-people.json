@@ -1,29 +1,186 @@
 {
   "set": [
     {
+      "uid": "_:hotdog",
+      "name": "Hot Dog",
+      "article": "Hot Dog (b. 1954) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. Also wherever you could arguably say his legs end - that's where his shorts begin.",
+      "has_children": [
+        {
+          "uid": "_:hotdogsson"
+        }
+      ],
+      "worked_at":[
+        {"uid":"_:unnamedbedandbreakfast"}
+      ]
+      ,"links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Hot_Dog",
+          "label": "CBB Wikia"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:dondimellosanimalguy",
+      "name": "Don DiMello's Animal Guy",
+      "article": "Don DiMello's Animal Guy is, in effect, a technical advisor to Mr. DiMello's theatre productions."
+    }
+    ,{
+      "uid": "_:shanana",
+      "name": "Sha Na Na",
+      "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
+      "links": [
+        {
+          "uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
+          "label": "Wikipedia"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:hotdogsson",
+      "name": "Hot Dog's Son",
+      "article": "Hot Dog's unnamed son (b. 1986) is a young man who fairly frequently is kidnapped.",
+    }
+    ,{
+      "uid": "_:dondimello",
+      "name": "Don DiMello",
+      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011.",
+      "worked_at": [
+        {"uid":"_:radiocity"}
+        ,{"uid":"_:unnamedmidtownpeeptheatre"}
+      ],
+      "has_family": []
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Don_DiMello",
+          "label": "CBB Wikia"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:patrickmcmahon",
+      "name": "Patrick McMahon",
+      "article": "Patrick McMahon is a traditional Irish storyteller from Limerick, Ireland. Born in 1960, he wrote limericks for the first 50 years of his life, then transitioned to prose in Fall, 2010. He formerly played tambourine for Dexys Midnight Runners and worked at a medical packaging plant.",
+      "worked_at": [
+        {"uid": "_:dexysmidnightrunners"}
+        ,{"uid": "_:unnamedmedicalpackagingplant"}
+        ,{"uid": "_:unnamedmechanicbusiness"}
+      ],
+      "has_family": [
+        {
+          "uid": "_:shamusmcmahon"
+        }
+        ,{
+          "uid": "_:tommcmahon"
+        }
+      ]
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Patrick_McMahon",
+          "label": "CBB Wikia"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:shamusmcmahon",
+      "name": "Shamus McMahon",
+      "article": "Shamus McMahon is a wealthy and successful traditional Irish storyteller from Limerick, Ireland.",
+      "has_family": [
+        {
+          "uid": "_:patrickmcmahon"
+        }
+        ,{
+          "uid": "_:tommcmahon"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:tommcmahon",
+      "name": "Tom McMahon",
+      "article": "Tom McMahon is a mechanic.",
+      "worked_at": [
+        {"uid": "_:unnamedmechanicbusiness"}
+      ],
+      "has_family": [
+        {
+          "uid": "_:patrickmcmahon"
+        }
+        ,{
+          "uid": "_:shamusmcmahon"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:billcarter",
+      "name": "Bill Carter",
+      "article": "Bill Carter is a personal trainer born in 1922. He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant). At least as recently as 2010 he works at Bally's in Hollywood. Sort of. He is also riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed. He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business. He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group). He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.",
+      "works_at": [{
+        "uid": "_:trainerforthestarsseekingstars"
+      }],
+      "worked_at": [{
+        "uid": "_:ballyshollywood"
+      }],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Bill_Carter",
+          "label": "CBB Wikia"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:rochelletheelf",
+      "name": "Rochelle the Elf",
+      "article": :"Rochelle the Elf is a former nurse practitioner but now mostly spends her time in the woods performing Satanic rituals. She once tested Bill Carter for AIDS (negative).",
+      "links": [
+      ]
+    }
+    ,{
+      "uid": "_:victor",
+      "name": "Victor",
+      "article": :"Victor is Bill Carter's Strongman and camera man. He is also a certified giant.",
+      "works_at": [{
+        "uid": "_:trainerforthestarsseekingstars"
+      }],
+      "links": [
+      ]
+    }
+    ,{
+      "uid": "_:carygrant",
+      "name": "Cary Grant",
+      "article": "Cary Grant was an actor.",
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Bill_Carter",
+          "label": "CBB Wikia"
+        }
+      ]
+    }
+    ,{
+      "uid": "_:augustlindt",
+      "name": "August Lindt",
+      "article": "August Lindt is a maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler and in 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide.",
+      "works_at": [{
+        "uid": "_:unnameddusseldorfpretzelcompany"
+      }],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/August_Lindt",
+          "label": "CBB Wikia"
+        }
+      ]
+    }
+    ,{
       "uid": "_:dannymahoney",
       "name": "Danny Mahoney",
       "article": "Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following his failed suicide attempt in the Pacific Ocean. Prior to that (~2008) he owned and operated a plumbing business with his nephew, Bertrand until that nephew 'grew weary of [Danny's] personality' and executed a hostile takeover. Danny \"didn't get into drugs or join a Russian Roullette club\" and instead, in the winter of 2008, bought a heavy coat from Nordstrom's Hollywood. In the water, about to drown, he invented LotP. He left the coat on the beach.",
-      "worked_at": {
+      "worked_at": [{
         "uid": "_:unnamedplumbingco"
-      },
-      "works_at": {
+      }],
+      "works_at": [{
         "uid": "_:lotpcinc"
-      },
-      "has_family": {
+      }],
+      "has_family": [{
         "uid": "_:bertmahoney"
-      },
-      "events": [
-        {
-          "uid": "_:dannymahoneymeetsscottaukerman"
-        },
-        {
-          "uid": "_:dannymahoneywalksintotheocean"
-        },
-        {
-          "uid": "_:dannymahoneybuysaheavycoat"
-        } 
-      ],
+      }],
       "links": [
         {
           "uri": "http://comedybangbang.wikia.com/wiki/Danny_Mahoney",
@@ -35,12 +192,16 @@
       "uid": "_:bertmahoney",
       "name": "Bertrand (Bert) Mahoney",
       "article": "Bertrand Mahoney is the nephew of Danny Mahoney. He is the victim of physical abuse (by Danny and by Danny's own admission) and the successful executor in 2008 of a hostile takeover of the pair's plumbing business.",
-      "worked_at": {
-        "uid": "_:unnamedplumbingco"
-      },
-      "has_family": {
-        "uid": "_:dannymahoney"
-      }
+      "worked_at": [
+        {
+          "uid": "_:unnamedplumbingco"
+        }
+      ],
+      "has_family": [
+        {
+          "uid": "_:dannymahoney"
+        }
+      ]
     },
     {
       "uid": "_:scottaukerman",
@@ -64,5 +225,177 @@
       ],
       "article": "Shooter is an L.A.-based comedian whose first national tour was supposed to occur in Fall 2009. Prior to that he would sit at Buzz Coffee near Sunset to watch women on the escalators letting out from Cardio Ballet. He admitted on Comedy Bang! Bang! #14 that he sometimes will 'go up on a rooftop and take potshots' and, in fact, admitted he shot somebody 'a couple of times.'"
     },
+    {
+      "uid": "_:benalterman",
+      "name": "Ben Alterman",
+      "lives_at": {
+        "geo_key": null,
+        "type": "point"
+      },
+      "has_children": [
+        {
+          "uid": "_:crystalalterman"
+        }
+      ],
+      "has_grandchildren": [
+        {
+          "uid": "_:ashleypinto"
+        }
+      ],
+      "has_exspouses": [
+        {
+          "uid": "_:ingridalterman"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:thewidowfeeney"
+        },
+        {
+          "uid": "_:mrshakamora"
+        }
+      ],
+      "has_pets": [
+        {
+          "uid": "_:pietrothedog"
+        }
+      ],
+      "links": [
+        {
+          "uri": "http://comedybangbang.wikia.com/wiki/Ben_Alterman",
+          "label": "CBB Wikia"
+        }
+      ],
+      "article": "Ben Alterman is an older gentleman (b. 1922) who had never been on the radio before his appearance on Comedy Bang! Bang! episode 46 on March 25, 2010. He has been known to Vogue when alone at home."
+    },
+    {
+      "uid": "_:crystalalterman",
+      "name": "Crystal Pinto",
+      "death_by": "Ovarian Cancer",
+      "links": [],
+      "has_spouse": [
+        {
+          "uid": "_:bigbob"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:littlebarnabus"
+        }
+      ],
+      "article": "Crystal Pinto (b. 1966) is the daughter of Ben Alterman."
+    },
+    {
+      "uid": "_:ashleypinto",
+      "name": "Ashley Pinto",
+      "links": [],
+      "article": "Ashley Pinto (b. 1994) is the granddaughter of Ben Alterman."
+    },
+    {
+      "uid": "_:ingridalterman",
+      "name": "Ingrid Alterman",
+      "death_by": "suicide",
+      "links": [],
+      "has_exspouses": [
+        {
+          "uid": "_:benalterman"
+        }
+      ],
+      "article": "Ingrid Alterman is the barren first wife of Ben Alterman."
+    },
+    {
+      "uid": "_:irenetherockette",
+      "name": "Irene the Rockette",
+      "death_by": "unk.",
+      "links": [],
+      "worked_at": [
+        {"uid":"_:radiocity"}
+      ],
+      "article": "Irene the Rockette was kicked off of the Rockettes team due to a leg rash and later died."
+    },
+    {
+      "uid": "_:thewidowfeeney",
+      "name": "The Widow Feeney",
+      "death_by": null,
+      "links": [],
+      "lives_at": {
+        "geo_key": null,
+        "type": "point"
+      },
+      "has_friends": [
+        {
+          "uid": "_:benalterman"
+        }
+      ],
+      "article": "The Widow Feeney is a very thin friend and buildingmate of Ben Alterman."
+    },
+    {
+      "uid": "_:mrshakamora",
+      "name": "Mrs. Hakamora",
+      "death_by": null,
+      "links": [],
+      "lives_at": {
+        "geo_key": null,
+        "type": "point"
+      },
+      "has_friends": [
+        {
+          "uid": "_:benalterman"
+        }
+      ],
+      "article": "Mrs. Hakamora is a friend and buildingmate of Ben Alterman."
+    },
+    {
+      "uid": "_:mrfrancisco",
+      "name": "Mr. Francisco",
+      "death_by": null,
+      "links": [],
+      "lives_at": {
+        "geo_key": null,
+        "type": "point"
+      },
+      "works_at": [{
+        "uid": "_:thelotionshop"
+      }],
+      "has_friends": [
+        {
+          "uid": "_:benalterman"
+        }
+      ],
+      "article": "Mr. Francisco is a friend of Ben Alterman's and works at 'the lotion shop.' He is, according to Ben, reliably unreliable. He also, according to the same source, gives great blowjobs."
+    },
+    {
+      "uid": "_:pietrothedog",
+      "name": "Pietro the Dog",
+      "death_by": null,
+      "links": [],
+      "lives_at": {
+        "geo_key": null,
+        "type": "point"
+      },
+      "article": "Pietro the Dog is the illegal pet of Ben Alterman."
+    },
+    {
+      "uid": "_:littlebarnabus",
+      "name": "Little Barnabus",
+      "links": [],
+      "has_friends": [
+        {
+          "uid": "_:crystalalterman"
+        }
+      ],
+      "article": "Little Barnabus is a childhood boyfriend of Crystal Alterman."
+    },
+    {
+      "uid": "_:bigbobpinto",
+      "name": "Big Bob Pinto",
+      "links": [],
+      "has_spouse": [
+        {
+          "uid": "_:crystalalterman"
+        }
+      ],
+      "article": "Big Bob Pinto (5'1\", 420) married Crystal Alterman."
+    }
   ]
 }

@@ -1,8 +1,308 @@
 {
   "set": [
     {
+      "uid": "_:dondimellostagescinderella",
+      "name": "Don DiMello Stages 'Cinderella' at the Pasadena Fairytale Theatre",
+      "article": "The show was 'not your typical garbage,' according to Mr. DiMello, and featured a number of liberties taken in the interpretation of the classic story including an extra sister and considerable nudity. Cinderella was triple-cast and spoke simultaneously. The show failed to reach denouement.",
+      "timestamp": "2011-04-08T19:00:00Z",
+      "geo_key": {
+        "type": "point",
+        "id": 6
+      },
+      "nb_timestamp": "timestamp is a tight approximation - 'next weekend' relative to CBB#99",
+      "participants": [
+        {
+          "uid": "_:dondimello"
+        }
+      ]
+    },
+    {
+      "uid": "_:dondimellostagesbeautyandthebeast",
+      "name": "Don DiMello Stages 'Disney\'s Beauty and the Beast' in a Church Basement in Connecticut",
+      "article": "The production featured live animals and failed to reach denouement. It ran 18 months and received 'scathing' reviews. Police were involved.",
+      "timestamp": "1995-04-08T19:00:00Z",
+      "geo_key": {
+        "type": "poly",
+        "id": 2
+      },
+      "nb_timestamp": "timestamp is a very loose approximation",
+      "participants": [
+        {
+          "uid": "_:dondimello"
+        }
+        ,{
+          "uid": "_:dondimellosanimalguy"
+        }
+      ]
+    },
+    {
+      "uid": "_:dondimellodirectstherockettes",
+      "name": "Don DiMello Stages His First of Many Rockettes Shows at Radio City",
+      "article": "",
+      "timestamp": "1992-12-24T19:00:00Z",
+      "geo_key": {
+        "type": "point",
+        "id": 98
+      },
+      "nb_timestamp": "timestamp is based on CBB#99 - 18 years",
+      "participants": [
+        {
+          "uid": "_:dondimello"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogeatshisskiis",
+      "name": "Hot Dog Becomes the First Person Ever to Ski on Edible Water Skiis",
+      "timestamp": "1967-07-04T14:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },{
+      "uid": "_:hotdogintroducesfirearms",
+      "name": "Hot Dog Becomes the First Person Ever to Introduce Firearms into Water Skiing",
+      "timestamp": "1966-07-04T14:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },{
+      "uid": "_:hotdogwaterskiisonamotorcycle",
+      "name": "Hot Dog Becomes the First Person Ever to Water Ski on a Motorcycle",
+      "timestamp": "1965-07-04T14:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },{
+      "uid": "_:hotdogchangeshisname",
+      "name": "Hot Dog Changes His Name to Hot Dog",
+      "timestamp": "1970-08-01T12:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogaudition3",
+      "name": "Hot Dog Auditions for Sha Na Na",
+      "timestamp": "2011-03-05T12:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - 'next week' from 2011.Feb.27",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+        ,{
+          "uid": "_:shanana"
+        }
+      ]
+    },
+    {
+      "uid": "_:classiccarnightbobsbigboytoluca",
+      "name": "Classic Car Night at Bob's Big Boy in Toluca Lake",
+      "timestamp": "recurring",
+      "nb_timestamp": "fridays",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogrunsan80sbedandbreakfast",
+      "name": "Hot Dog Operates a Haunted 80s-Themed Bed and Breakfast",
+      "timestamp": "1985-06-01T12:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - 'in the 80s' rel to 2011.Feb.27",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+        ,{
+          "uid": "_:unnamed80sbedandbreakfast"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogrunsa50sbedandbreakfast",
+      "name": "Hot Dog Operates a Haunted 50s-Themed Bed and Breakfast",
+      "timestamp": "1990-06-01T12:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - '20 years ago' from 2011.Feb.27",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+        ,{
+          "uid": "_:unnamedbedandbreakfast"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogaudition1",
+      "name": "Hot Dog Auditions for Sha Na Na",
+      "timestamp": "2008-06-04T11:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation - 'a few years' before 2011.Feb",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+        ,{
+          "uid": "_:shanana"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogaudition2",
+      "name": "Hot Dog Auditions for Sha Na Na",
+      "timestamp": "2010-07-11T12:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation - some time before 2011.Feb",
+      "participants": [
+        {
+          "uid": "_:hotdog"
+        }
+        ,{
+          "uid": "_:shanana"
+        }
+      ]
+    },
+    {
+      "uid": "_:billcarterisaccomplicetoabande",
+      "name": "Bill Carter Aids and Abets His Brother-in-law's Attack on a Woman",
+      "timestamp": "1970-04-14T16:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation",
+      "participants": [
+        {
+          "uid": "_:billcarter"
+        }
+      ]
+    },
+    {
+      "uid": "_:patrickmcmahonisaccused",
+      "name": "Johnny McGory (Patrick McMahon) is accused of sexual misconduct.",
+      "timestamp": "2009-01-01T16:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation",
+      "participants": [
+        {
+          "uid": "_:patrickmcmahon"
+        }
+      ]
+    },
+    {
+      "uid": "_:patrickmcmahonbirth",
+      "name": "Patrick McMahon is born in Limerick, Ireland.",
+      "timestamp": "1960-01-01T16:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation",
+      "participants": [
+        {
+          "uid": "_:patrickmcmahon"
+        }
+      ]
+    },
+    {
+      "uid": "_:billcartercheersaraceriot",
+      "name": "Bill Carter Gets a Black Guy and a White Guy Together near La Cañada Flintridge to 'See What Happens,' is Arrested for Inciting a Riot",
+      "timestamp": "1965-08-11T16:00:00Z",
+      "nb_timestamp": "timestamp is proxied by the watts riots"
+      "participants": [
+        {
+          "uid": "_:billcarter"
+        }
+      ]
+    },
+    {
+      "uid": "_:billcartertrainscarygrant",
+      "name": "Bill Carter Grows Disgusted by Cary Grant's Physique, Travels to Hollywood to Surreptitiously Train Him",
+      "timestamp": "1945-06-24T16:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation - some time after the end of world war ii",
+      "participants": [
+        {
+          "uid": "_:billcarter"
+        }
+        ,{
+          "uid": "_:carygrant"
+        }
+      ]
+    },
+    {
+      "uid": "_:augustlindtattemptssuicide1",
+      "name": "August Lindt Ties Himself to the Hollywood sign and Sets it on Fire",
+      "geo_key": {
+        "type": "point",
+        "id": 134
+      },
+      "timestamp": "2010-06-24T16:00:00Z",
+      "participants": [
+        {
+          "uid": "_:augustlindt"
+        }
+      ]
+    },
+    {
+      "uid": "_:augustlindtwinsbestandydalycharacter",
+      "name": "August Lindt Wins Best Andy Daly Character at Comedy Bang! Bang! Best-of 2010",
+      "timestamp": "2010-12-25T16:00:00Z",
+      "participants": [
+        {
+          "uid": "_:augustlindt"
+        }
+      ]
+    },
+    {
+      "uid": "_:augustlindtisarrestedatgraceland",
+      "name": "August Lindt is Arrested for Sneaking into the Bathroom at Graceland",
+      "geo_key": {
+        "type": "point",
+        "id": 130
+      },
+      "timestamp": "2010-05-09T00:00:00Z",
+      "nb_timestamp": "timestamp is approximate - april prior to CBB #59"
+      "participants": [
+        {
+          "uid": "_:augustlindt"
+        }
+      ]
+    },
+    {
+      "uid": "_:augustlindtvisitsthepinebarrens",
+      "name": "August Lindt Visits the Pine Barrens of New Jersey",
+      "geo_key": {
+        "type": "poly",
+        "id": 27
+      },
+      "timestamp": "2010-05-11T00:00:00Z",
+      "nb_timestamp": "timestamp is approximate - april prior to CBB #59"
+      "participants": [
+        {
+          "uid": "_:augustlindt"
+        }
+      ]
+    },
+    {
+      "uid": "_:augustlindtvisitsepcot",
+      "name": "August Lindt Visits Epcot Center",
+      "geo_key": {
+        "type": "poly",
+        "id": 143
+      },
+      "timestamp": "2010-05-29T00:00:00Z",
+      "nb_timestamp": "timestamp is approximate - april prior to CBB #59"
+      "participants": [
+        {
+          "uid": "_:augustlindt"
+        }
+      ]
+    },
+    {
       "uid": "_:dannymahoneymeetsscottaukerman",
-      "name": "Danny Mahoney Meets Scott",
+      "name": "Danny Mahoney Meets Scott Aukerman",
       "geo_key": {
         "type": "point",
         "id": 111
@@ -48,6 +348,36 @@
       },
       "timestamp": "2008-12-01T09:00:00Z",
       "nb_timestamp": "timestamp is approximate - winter prior to CBB #14"
+    },{
+      "uid": "_:ashleypintossweetsixteen",
+      "class": "event",
+      "name": "Ashley Pinto's Sweet Sixteen",
+      "geo_key": {
+        "type": "point",
+        "id": 111
+      },
+      "timestamp": "2010-03-27T16:00:00Z",
+      "nb_timestamp": null
     },
+    {
+      "uid": "_:crystalaltermanmarriesbigbob",
+      "class": "event",
+      "name": "Crystal Alterman Marries Big Bob Pinto",
+      "article": "Against the wishes of father Ben Alterman, Crystal and Big Bob were married at an undisclosed location at an undisclosed time. In his toast, Ben revealed he'd watch his daughter fuck almost anyone but Big Bob.",
+      "participants": [
+        {
+          "uid": "_:benalterman"
+        },
+        {
+          "uid": "_:crystalalterman"
+        },
+        {
+          "uid": "_:bigbobpinto"
+        }
+      ]
+      "geo_key": null,
+      "timestamp": null,
+      "nb_timestamp": null
+    }
   ]
 }
