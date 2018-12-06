@@ -1,4 +1,25 @@
 {
+  "uid": "_:andicallahanrn",
+  "name": "Andi Callahan, RN",
+  "article": "Andi Callahan is a medical professional who works at the Long-Term Care Floor of Bergen Regional Medical Center where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. In 2011 he wrote a memoir about his adventures as an RN in New Jersey, primarily featuring the crazy things said and done by his patients.",
+  "works_at":[
+    {"uid":"_:bergenregional"}],
+  "events": [
+  ],
+  "cares_for":[
+    {"uid":"_:bergenregionalbernard"}],
+  "events": [
+  ],
+  "links": [
+    {
+      "uri": "https://comedybangbang.fandom.com/wiki/Andi_Callahan",
+      "label": "CBB Wikia"
+    }
+  ]
+}
+
+
+{
   "uid": "_:clivedundee",
   "name": "Clive Dundee",
   "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit.",
@@ -19,6 +40,30 @@
       "uri": "https://comedybangbang.fandom.com/wiki/Clive_Dundee",
       "label": "CBB Wikia"
     }
+  ]
+}
+
+{
+  "uid": "_:bergenregional",
+  "name": "Bergen Regional Medical Center",
+  "article": "Bergen Regional Medical Center.",
+        "geo_key": {
+        "type": "point",
+        "id": 202
+      },
+  "events": [
+  ],
+  "links": [
+  ]
+}
+
+{
+  "uid": "_:bergenregionalbernard",
+  "name": "Bernard at Bergen Regional Medical Center",
+  "article": "",
+  "events": [
+  ],
+  "links": [
   ]
 }
 
