@@ -1,13 +1,14 @@
 {
   "uid": "_:andicallahanrn",
   "name": "Andi Callahan, RN",
-  "article": "Andi Callahan is a medical professional who works at the Long-Term Care Floor of Bergen Regional Medical Center where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. In 2011 he wrote a memoir about his adventures as an RN in New Jersey, primarily featuring the crazy things said and done by his patients.",
+  "article": "Andi Callahan is a medical professional who enjoys frailty, has a history of experimenting on animals, and works at the Long-Term Care Floor of Bergen Regional Medical Center where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. In 2011 he wrote a memoir about his adventures as an RN in New Jersey, primarily featuring the crazy things said and done by his patients.",
   "works_at":[
     {"uid":"_:bergenregional"}],
   "events": [
   ],
   "cares_for":[
-    {"uid":"_:bergenregionalbernard"}],
+    {"uid":"_:bergenregionalbernard"},
+    {"uid":"bergenregionalrosa"}],
   "events": [
   ],
   "links": [
@@ -59,7 +60,17 @@
 
 {
   "uid": "_:bergenregionalbernard",
-  "name": "Bernard at Bergen Regional Medical Center",
+  "name": "Bernard was a patient at Bergen Regional Medical Center who had his sheets stolent by another patient. They were later found balled up in a toilet alongside a #2.",
+  "article": "",
+  "events": [
+  ],
+  "links": [
+  ]
+}
+
+{
+  "uid": "_:bergenregionalrosa",
+  "name": "Rosa was a patient at Bergen Regional Medical Center in New Jersey who was found uncontrollably crying one night, when no number of comedy bits and magic tricks would cure it, and who was therefore wheeled down to a vacant room at the end of the hallway and was found dead the next morning with a defunct nurse's call button in her hand.",
   "article": "",
   "events": [
   ],
