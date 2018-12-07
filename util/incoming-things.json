@@ -1,6 +1,36 @@
 {
   "set": [
     {
+      "uid": "_:bergenregional",
+      "name": "Bergen Regional Medical Center",
+      "article": "Bergen Regional Medical Center.",
+      "geo_key": {
+        "type": "point",
+        "id": 202
+      }
+    }
+    ,{
+      "uid": "_:pasadenafairytaletheatre",
+      "name": "Pasadena Fairy Tale Theatre",
+      "article": "Legendary arts venue"
+      "geo_key": {
+        "type": "point",
+        "id": 6
+      }
+    },{
+      "uid": "_:u2",
+      "name": "U2",
+      "article": "Rock and roll musical combination."
+    },{
+      "uid": "_:simpleminds",
+      "name": "Simple Minds",
+      "article": "Rock and roll musical combination."
+    },{
+      "uid": "_:jesusjones",
+      "name": "Jesus Jones",
+      "article": "Rock and roll musical combination."
+    },
+    {
       "uid": "_:radiocity",
       "name": "Radio City Music Hall",
       "article": "Radio City Music Hall is a legendary performance space in New York City."

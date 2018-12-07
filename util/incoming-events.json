@@ -1,13 +1,317 @@
 {
   "set": [
     {
+      "uid": "_:cactustonyleaveshome",
+      "name": "Cactus Tony Leaves Home",
+      "article": "At 11 years old, while digging a hole to China, Cactus Tony assisted his aunt into the pit and covered her up, ostensibly murdering her. He then left home never to return.",
+      "timestamp": "1982-05-05T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#200 - CT was 11 in 1982",
+      "participants": [
+        {"uid":"_:cactustony"}
+        ,{"uid":"_:aunteileen"}
+      ]
+    },
+    {
+      "uid": "_:dondimellosfindstony",
+      "name": "Don DiMello Meets Cactus Tony",
+      "article": "Don DiMello noticed Cactus Tony 'beating the shit out of an old lady' at a bus stop.",
+      "timestamp": "2000-06-06T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#161",
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:cactustony"}
+      ]
+    },
+    {
+      "uid": "_:dondimellosdisneyspeterpan",
+      "name": "Don DiMello's 'Disney\'s Peter Pan' is Staged in Pasadena",
+      "article": "Don DiMello's 'Disney\'s Peter Pan' opened June 6 2011 (off-hours) at the Pasadena Fairytale Theatre. The show featured quadruple-cast Rottweilers and, basically, beastiality. The show failed to reach denouement.",
+      "timestamp": "2011-06-06T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#200",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:pasadenafairytaletheatre"
+      },
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:cactustony"}
+      ]
+    },
+    {
+      "uid": "_:dondimellosdisneyswizardofoz",
+      "name": "Don DiMello's 'Disney\'s Wizard of Oz' is Staged in Pasadena",
+      "article": "Don DiMello's 'Disney\'s Wizard of Oz' opened June 8 2012 (off-hours) at the Pasadena Fairytale Theatre. The show took several liberties with the original narrative and, during production, under the childcare of Cactus Tony, an unnamed 8-year-old boy was ripped apart by several lactating Rottweilers. The show failed to reach denouement.",
+      "timestamp": "2012-06-08T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#161 & CBB#200",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:pasadenafairytaletheatre"
+      },
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:cactustony"}
+      ]
+    },{
+      "uid": "_:stephaniegoldbergismurdered",
+      "name": "Stephanie Goldberg is Murdered",
+      "article": "According to an uncited article Jason Mantzoukas read on-air in #CBB148, Stephanie Goldberg was murdered six months before 2012.March.",
+      "timestamp": "2011-09-09T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#148",
+      "participants": [
+        {"uid":"_:daltonwilcox"}
+        ,{"uid":"_:stephaniegoldberg"}
+      ]
+    },{
+      "uid": "_:daltonwilcoxlastride",
+      "name": "Dalton Wilcox' Last Ride",
+      "article": "According to #CBB148, the last time Dalton Wilcox rode a horse was in 1988.",
+      "timestamp": "1988-06-06T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#148",
+      "participants": [
+        {"uid":"_:daltonwilcox"}
+      ]
+    },
+    {
+      "uid": "_:clivedundeeattemptssuicide",
+      "name": "Clive Dundee Attempts Suicide by Defenestration",
+      "article": "Clive Dundee jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:clivedundee"}
+      ]
+    },
+    {
+      "uid": "_:patrickmcmahonattemptssuicide",
+      "name": "Patrick McMahon Attempts Suicide by Defenestration",
+      "article": "Patrick McMahon jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:patrickmcmahon"}
+      ]
+    },
+    {
+      "uid": "_:billcarterattemptssuicide",
+      "name": "Bill Carter Attempts Suicide by Defenestration",
+      "article": "Bill Carter jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:billcarter"}
+      ]
+    },{
+      "uid": "_:dannymahoneyattemptssuicide",
+      "name": "Danny Mahoney Attempts Suicide by Defenestration",
+      "article": "Danny Mahoney jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:dannymahoney"}
+      ]
+    },
+    {
+      "uid": "_:augustlindtattemptssuicideatearwolf",
+      "name": "August Lindt Attempts Suicide by Defenestration",
+      "article": "August Lindt jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:augustlindt"}
+      ]
+    },
+    {
+      "uid": "_:hotdogattemptssuicide",
+      "name": "Hot Dog Attempts Suicide by Defenestration",
+      "article": "Hot Dog jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:hotdog"}
+      ]
+    },
+    {
+      "uid": "_:daltonwilcoxattemptssuicide",
+      "name": "Dalton Wilcox Attempts Suicide by Defenestration",
+      "article": "Dalton Wilcox jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:daltonwilcox"}
+      ]
+    },
+    {
+      "uid": "_:dondimelloattemptssuicide",
+      "name": "Don DiMello Attempts Suicide by Defenestration",
+      "article": "Don DiMello jumps out the window at Earwolf.",
+      "timestamp": "2012-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:dondimello"}
+      ]
+    },
+    {
+      "uid": "_:ceceliawilcoxismurdered",
+      "name": "Cecelia Wilcox is Murdered",
+      "article": "According to an uncited article Jason Mantzoukas read on-air in #CBB148, Cecelia Wilcox and her three daughters were killed a year before 2012.March.",
+      "timestamp": "2011-03-11T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#148",
+      "participants": [
+        {
+          "uid": "_:ceceliawilcox"
+        }
+        ,{"uid":"_:daltonwilcoxunnameddaughter1"}
+        ,{"uid":"_:daltonwilcoxunnameddaughter2"}
+        ,{"uid":"_:daltonwilcoxunnameddaughter3"}
+        ,{"uid":"_:daltonwilcox"}
+      ]
+    },
+    {
+      "uid": "_:chipgardnerappearsinlatimes",
+      "name": "Chip Gardner is Profiled by the L.A. Times",
+      "article": "In it, it is revealed that he had purchased ancient Victorian surgical instruments and was performing surgeries on schizophrenics and homeless people. Next to the piece was a mysterious article about the 28 contentants from the long-canceled game show 'Zap' who have disappeared.",
+      "timestamp": "2000-03-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - acc. to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+      ]
+    },
+    {
+      "uid": "_:chipgardnerhitsrockbottom",
+      "name": "Chip Gardner Hits Rock Bottom and Embraces Satan",
+      "article": "In approximately 1996 (well after his face was run over by a Jeep and at least a day after the airing of Friends episode s1e10) Chip Gardner hits rock bottom and embraces the Dark Lord Satan.",
+      "timestamp": "1996-02-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - after the jeep incident and after Marcel the monkey Friends episode acc. to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+      ]
+    },
+    {
+      "uid": "_:chipgardnerhostszap",
+      "name": "Chip Gardner Hosts the Live Gameshow 'Zap' from 2-3 AM",
+      "article": "Chip Gardner's show before his 'Catch a Predator' precursor was a kids education show called 'Zap' that featured 'real sleepy kids,' some of whom would later become famous but most of whom simply disappeared.",
+      "timestamp": "1987-05-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - after the jeep incident acc. to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+        ,{
+          "uid": "_:scottaukerman"
+        },{
+          "uid": "_:jasonmantzoukas"
+        }
+      ]
+    },{
+      "uid": "_:chipgardnerisrunoverbyajeep",
+      "name": "Chip Gardner's Face is Run Over by a Jeep on the PCH",
+      "article": "Chip Gardner was lying on the Pacific Coast Highway 'trying to get run over by something' in order to 'see what I could survive' when an oncoming Jeep (driven, coincidentally by Scott Aukerman and Jason Mantzoukas) ran over his face only. It was during reconstructive surgery that he was accidentally given sexual reassignment surgery and became a Side-by-Side named Gretchen.",
+      "timestamp": "1986-07-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - acc. to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+        ,{
+          "uid": "_:scottaukerman"
+        }
+        ,{
+          "uid": "_:jasonmantzoukas"
+        }
+      ]
+    },
+    {
+      "uid": "_:chipgardnerfollowssimpleminds",
+      "name": "Chip Gardner Follows Simple Minds on Tour",
+      "article": "Chip Gardner followed Simple Minds around on tour in ~1991 after the band had crested and ended up opening for Jesus Jones.",
+      "timestamp": "1991-05-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - some date after the release of Jesus Jones' Right Here Right Now acc. to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+        ,{
+          "uid": "_:simpleminds"
+        },{
+          "uid": "_:jesusjones"
+        }
+      ]
+    },
+    {
+      "uid": "_:chipgardnermovestohollywood",
+      "name": "Chip Gardner Moves to Hollywood",
+      "article": "Chip Gardner moved to Hollywood as a young man to become an actor and immediately got 'lost' in drugs and alcohol and streetfighting.",
+      "timestamp": "1980-01-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - some date in 1980 according to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+      ]
+    },
+    {
+      "uid": "_:cactustonyisborn",
+      "name": "Cactus Tony is Born",
+      "article": "Cactus Tony is born.",
+      "timestamp": "1971-01-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - some date in 1971 according to calculations based on CBB#200",
+      "participants": [
+        {
+          "uid": "_:cactustony"
+        }
+      ]
+    },{
+      "uid": "_:chipgardnerisborn",
+      "name": "Chip Gardner is Born",
+      "article": "Chip Gardner is born.",
+      "timestamp": "1968-01-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - some date in 1980 according to CBB#131",
+      "participants": [
+        {
+          "uid": "_:chipgardner"
+        }
+      ]
+    },{
+      "uid": "_:andicallahangetsanape",
+      "name": "Andi Callahan Gets His Hands on an Ape",
+      "article": "Andi Callahan, with the assistance of Cactus Tony, manages to gain stewardship of an ape. The experiments that ensued caused an interest in human experimentation to grow in both men, leading to Callahan's life and career in medicine and Tony's thwarted interest in pediatrics.",
+      "timestamp": "1993-06-18T19:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation - relative to Callahan's life story as told on CBB#119",
+      "participants": [
+        {
+          "uid": "_:andicallahanrn"
+        }
+        ,{
+          "uid": "_:cactustony"
+        }
+      ]
+    },{
+      "uid": "_:heatcuregoesawry",
+      "name": "Andi Callahan's Parents Die in a Fire",
+      "article": "During the course of a 'heat cure' administered by Andi Callahan and Cactus Tony, Andi's parents are burned alive in an abandoned house.",
+      "timestamp": "1997-01-11T19:00:00Z",
+      "nb_timestamp": "timestamp is a very loose approximation - relative to Callahan's life story as told on CBB#119",
+      "participants": [
+        {
+          "uid": "_:andicallahanrn"
+        }
+        ,{
+          "uid": "_:cactustony"
+        }
+      ]
+    },
+    {
       "uid": "_:dondimellostagescinderella",
       "name": "Don DiMello Stages 'Cinderella' at the Pasadena Fairytale Theatre",
       "article": "The show was 'not your typical garbage,' according to Mr. DiMello, and featured a number of liberties taken in the interpretation of the classic story including an extra sister and considerable nudity. Cinderella was triple-cast and spoke simultaneously. The show failed to reach denouement.",
       "timestamp": "2011-04-08T19:00:00Z",
       "geo_key": {
-        "type": "point",
-        "id": 6
+        "type": "uid",
+        "id": "_:pasadenafairytaletheatre"
       },
       "nb_timestamp": "timestamp is a tight approximation - 'next weekend' relative to CBB#99",
       "participants": [
