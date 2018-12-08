@@ -1,6 +1,15 @@
 {
   "set": [
     {
+      "uid": "_:arclightcinemas",
+      "name": "ArcLight Cinemas",
+      "article": "THe ArcLight Cinemas is a cinema where many things have happened.",
+      "geo_key": {
+        "type": "poly",
+        "id": 133
+      }
+    }
+    ,{
       "uid": "_:bergenregional",
       "name": "Bergen Regional Medical Center",
       "article": "Bergen Regional Medical Center.",
@@ -12,10 +21,18 @@
     ,{
       "uid": "_:pasadenafairytaletheatre",
       "name": "Pasadena Fairy Tale Theatre",
-      "article": "Legendary arts venue"
+      "article": "Legendary arts venue",
       "geo_key": {
         "type": "point",
         "id": 6
+      }
+    },{
+      "uid": "_:griffithobservatory",
+      "name": "Griffith Observatory",
+      "article": "Legendary science venue",
+      "geo_key": {
+        "type": "point",
+        "id": 250
       }
     },{
       "uid": "_:u2",
