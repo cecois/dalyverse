@@ -1,6 +1,38 @@
 {
   "set": [
     {
+      "uid": "_:hotdogswifepasses",
+      "name": "Hot Dog's Wife Passes",
+      "article": "Hot Dog's wife passes.",
+      "timestamp": "2013-01-01T19:00:00Z",
+      "nb_timestamp": "timestamp is very loose acc. to CBB#232",
+      "participants": [
+        {"uid":"_:hotdog"}
+        ,{"uid":"_:hotdogswife"}
+      ]
+    },
+    {
+      "uid": "_:hotdogisrescuedbythelizard",
+      "name": "Hot Dog is Rescued by The Lizard",
+      "article": "Having been cut from his towboat five years prior (possibly due to interference from a man named Hamburger), having bobbed in the water for 5 years, Hot Dog is rescued by a man named 'The Lizard.'",
+      "timestamp": "1969-06-06T19:00:00Z",
+      "nb_timestamp": "timestamp is very loose acc. to CBB#232",
+      "participants": [
+        {"uid":"_:hotdog"}
+        ,{"uid":"_:thelizard"}
+      ]
+    },
+    {
+      "uid": "_:hotdogsearchessanddiegoforshanana",
+      "name": "Hot Dog Checks the San Diego House of Blues for Sha Na Na",
+      "article": "Having failed to find Sha Na Na playing the San Diego Convention Center (Metallica was), Hot Dog checked the House of Blues and found only a Comedy Bang! Bang! taping.",
+      "timestamp": "2013-07-13T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#232",
+      "participants": [
+        {"uid":"_:hotdog"}
+      ]
+    },
+    {
       "uid": "_:cactustonyleaveshome",
       "name": "Cactus Tony Leaves Home",
       "article": "At 11 years old, while digging a hole to China, Cactus Tony assisted his aunt into the pit and covered her up, ostensibly murdering her. He then left home never to return.",
@@ -358,8 +390,8 @@
     {
       "uid": "_:hotdogeatshisskiis",
       "name": "Hot Dog Becomes the First Person Ever to Ski on Edible Water Skiis",
-      "timestamp": "1967-07-04T14:00:00Z",
-      "nb_timestamp": "timestamp is a loose approximation",
+      "timestamp": "1963-07-04T14:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232",
       "participants": [
         {
           "uid": "_:hotdog"
@@ -368,8 +400,8 @@
     },{
       "uid": "_:hotdogintroducesfirearms",
       "name": "Hot Dog Becomes the First Person Ever to Introduce Firearms into Water Skiing",
-      "timestamp": "1966-07-04T14:00:00Z",
-      "nb_timestamp": "timestamp is a loose approximation",
+      "timestamp": "1963-08-04T14:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232",
       "participants": [
         {
           "uid": "_:hotdog"
@@ -378,8 +410,8 @@
     },{
       "uid": "_:hotdogwaterskiisonamotorcycle",
       "name": "Hot Dog Becomes the First Person Ever to Water Ski on a Motorcycle",
-      "timestamp": "1965-07-04T14:00:00Z",
-      "nb_timestamp": "timestamp is a loose approximation",
+      "timestamp": "1963-09-04T14:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232",
       "participants": [
         {
           "uid": "_:hotdog"
@@ -388,8 +420,8 @@
     },{
       "uid": "_:hotdogchangeshisname",
       "name": "Hot Dog Changes His Name to Hot Dog",
-      "timestamp": "1970-08-01T12:00:00Z",
-      "nb_timestamp": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27",
+      "timestamp": "1963-10-10T12:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27 but 'in the 60s'  - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232",
       "participants": [
         {
           "uid": "_:hotdog"

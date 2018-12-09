@@ -167,7 +167,7 @@
     {
       "uid": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. Also wherever you could arguably say his legs end - that's where his shorts begin.",
+      "article": "Hot Dog (b. 1954) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He has accidentally shot and killed three speed boat captains with a rifle and has practiced human taxidermy. Also wherever you could arguably say his legs end - that's where his shorts begin.",
       "has_children": [
         {
           "uid": "_:hotdogsson"
@@ -182,6 +182,11 @@
           "label": "CBB Wikia"
         }
       ]
+    }
+    ,{
+      "uid": "_:thelizard",
+      "name": "The Lizard",
+      "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire."
     }
     ,{
       "uid": "_:dondimellosanimalguy",
@@ -203,6 +208,11 @@
       "uid": "_:hotdogsson",
       "name": "Hot Dog's Son",
       "article": "Hot Dog's unnamed son (b. 1986) is a young man who fairly frequently is kidnapped.",
+    }
+    ,{
+      "uid": "_:hotdogswife",
+      "name": "Hot Dog's Wife",
+      "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger.",
     }
     ,{
       "uid": "_:dondimello",
