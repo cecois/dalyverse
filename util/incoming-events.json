@@ -1,6 +1,26 @@
 {
   "set": [
     {
+      "uid": "_:byrondennistonrevealstoomuch",
+      "name": "Byron Denniston Reveals His Scheme",
+      "article": "On a broadcast of Comedy Bang! Bang! on 2013.Jul.21, Denniston, lying low due to criminal heat in the UK, admitted a plan to kidnap the forthcoming royal child.",
+      "timestamp": "2013-07-14T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#233 - prior to the epside and to the birth of the royal baby",
+      "participants": [
+        {"uid":"_:byrondenniston"}
+      ]
+    },
+    {
+      "uid": "_:byrondennistongetsthescoop",
+      "name": "Byron Denniston Gets the Scoop on Royal Baby Names",
+      "article": "By virtue of his position perched outside of Kensington Palace, Byron Denniston reveals that the potential baby names for Kate Middleton's forthcoming child are Millicent, Victoria, Penelope, Laura, Marion (for girls); and Dilbert, Garfield, Beetle Bailey, Dagwood (for boys).",
+      "timestamp": "2013-07-14T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#233 - prior to the epside and to the birth of the royal baby",
+      "participants": [
+        {"uid":"_:byrondenniston"}
+      ]
+    },
+    {
       "uid": "_:dondimmelopresentsdisneyshanselandgretel",
       "name": "Don DiMello Presents 'Disney\'s Hansel and Gretel'",
       "article": "The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and she doesn't really know what's happening. The show failed to reach denouement.",
