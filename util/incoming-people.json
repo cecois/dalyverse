@@ -1,15 +1,51 @@
 {
   "set": [
     {
+      "uid": "_:jackfitzgerald",
+      "name": "Jack Fitzgerald",
+      "article": "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment. He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes. Most of his income is from not doing things he said he would do - $100/per. He attended the United College of Arts & Sciences & Knowledge and later founded a college in his back yard, primarily attended by a couple of girls and assisted by one Cactus Tony. Jack owns a coat hanger made of the human remains of his former student body. He makes many decisions by laying out the entrails of former college students and intuiting cosmic advice.",
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Jack_Fitzgerald",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:byrondenniston",
+      "name": "Byron Denniston",
+      "article": "Byron Denniston is a Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom, where 'watching' entails perching outside of Kensington Palace in a treehouse built by a magician. He was, nonetheless, able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013 at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia.",
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Byron_Denniston",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
       "uid": "_:cactustony",
       "name": "Cactus Tony",
-      "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit,' he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.'",
-      "works_for":[
-        {"uid":"_:dondimello"}
+      "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' and formerly both a prisoner and a prison guard, he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit,' he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.' He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn as well as Jack Fitzgerald's backyard college, for which he serves as an admissions officer.",
+      "works_for": [
+        {
+          "uid": "_:dondimello"
+        },
+        {
+          "uid": "_:arclightcinemas"
+        }
       ],
-      "worked_for":[
-        {"uid":"_:andicallahanrn"}
-        ,{"uid":"_:billcarter"}
+      "worked_for": [
+        {
+          "uid": "_:andicallahanrn"
+        },
+        {
+          "uid": "_:billcarter"
+        },
+        {
+          "uid": "_:jackfitzgerald"
+        }
       ],
       "links": [
         {
@@ -22,132 +58,142 @@
       "uid": "_:zippy",
       "name": "Zippy",
       "article": "Zippy is evidently a speed and/or cocaine dealer to at least Cactus Tony, probably others.",
-      "links": [
-      ]
-    },{
+      "links": []
+    },
+    {
       "uid": "_:chipgardner",
       "name": "Chip Gardner",
       "article": "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host of such game shows as 'Electrified or Burning Hot'; 'Zap'; and 'See if You Can Hold This for Half an Hour.' In 2011 Gardner launched a campaign to become the next Honorary Mayor of Hollywood. He is significantly younger than he looks 'for several reasons,' which includes certainly his face having been run over by a Jeep leading him to wear masks for a considerable run of his career including his stint hosting SIYCHTFHAH during which he wore a mask that constantly dripped blood. He lives in a home in the Hollywood Hills that operates not unlike a high security asylum and experimental operating room for captured transients and former contentants on the television game show 'Zap,' the former of whom he has been labotomizing and stitching together to become a vessel for Satan should he return to earth.",
       "had_spouses": [
-        {"uid":"_:chipgardnersunnamedwife"}
+        {
+          "uid": "_:chipgardnersunnamedwife"
+        }
       ],
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:daltonwilcox",
       "name": "Dalton Wilcox",
       "article": "Dalton Wilcox is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the wild West to the extent that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)'. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters.",
-      "had_spouses": [
-      ],
+      "had_spouses": [],
       "has_spouses": [
-        {"uid":"_:daltonwilcoxunnamedwife"}
+        {
+          "uid": "_:daltonwilcoxunnamedwife"
+        }
       ],
       "has_children": [
-        {"uid":"_:daltonwilcoxunnameddaughter1"}
-        ,{"uid":"_:daltonwilcoxunnameddaughter2"}
-        ,{"uid":"_:daltonwilcoxunnameddaughter3"}
+        {
+          "uid": "_:daltonwilcoxunnameddaughter1"
+        },
+        {
+          "uid": "_:daltonwilcoxunnameddaughter2"
+        },
+        {
+          "uid": "_:daltonwilcoxunnameddaughter3"
+        }
       ],
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:stephaniegoldberg",
       "name": "Stephanie Goldberg",
       "article": "Stephanie Goldberg was an NYU student and, in 2011, the girlfriend of Cowboy Poet Dalton Wilcox. She was murdered in September of that same year.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:aunteileen",
       "name": "Cactus Tony's Aunt Eileen",
       "article": "Cactus Tony's Aunt Eileen met an unfortunate end when she was pushed into a hole he was digging to China and then 'covered up.' Her body was later exhumed.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:daltonwilcoxunnameddaughter1",
       "name": "Dalton Wilcox' Unnamed Daughter #1 of 3",
       "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed.",
-      "links": [
-      ]
-    },{
+      "links": []
+    },
+    {
       "uid": "_:daltonwilcoxunnameddaughter2",
       "name": "Dalton Wilcox' Unnamed Daughter #2 of 3",
       "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed.",
-      "links": [
-      ]
-    },{
+      "links": []
+    },
+    {
       "uid": "_:daltonwilcoxunnameddaughter3",
       "name": "Dalton Wilcox' Unnamed Daughter #3 of 3",
       "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:chipgardnersunnamedwife",
       "name": "Chip Gardner's Unnamed Wife",
       "article": "Chip Gardner's Unnamed Wife lost a game of 'Houdini' in the family pool and subsequently passed.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:ceceliawilcox",
       "name": "Cecelia Wilcox",
       "article": "Cecelia Wilcox was too fat to get out of bed for some time and was then killed.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:jasonmantzoukas",
       "name": "Jason Mantzoukas",
       "article": "Jason Mantkoukas is not on Twitter.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:clivedundeeswife",
       "name": "Clive Dundee's Unnamed Wife",
       "article": "She is barren.",
       "has_spouses": [
-        {"uid":"_:clivedundee"}
+        {
+          "uid": "_:clivedundee"
+        }
       ],
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:bergenregionalbernard",
       "name": "Bernard",
       "article": "Bernard was a patient at Bergen Regional Medical Center who had his sheets stolent by another patient. They were later found balled up in a toilet alongside a #2.",
-      "links": [
-      ]
-    },{
+      "links": []
+    },
+    {
       "uid": "_:bergenregionalrosa",
       "name": "Rosa",
       "article": "Rosa was a patient at Bergen Regional Medical Center in New Jersey who was found uncontrollably crying one night by floor staff at Bergen. When no number of comedy bits and impressions and magic tricks would cure it she was wheeled down to a vacant room at the end of the hallway and was found dead the next morning with a defunct nurse's call button in her hand.",
-      "links": [
-      ]
+      "links": []
     },
     {
       "uid": "_:andicallahanrn",
       "name": "Andi Callahan, RN",
       "article": "Andi Callahan is an uncredentialed medical professional and documented tax evader who enjoys frailty, has a history of experimenting on stray animals and transients out of an abandoned house, and now works at the Long-Term Care Floor of Bergen Regional Medical Center in New Jersey where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. He is sensitive to bigotry in the nursing profession and at times has gotten physical about it. His interest in human medicine began when he got his hands on an ape that could beg for its life. In 2011 he wrote a comedic memoir about his adventures as an RN, primarily featuring the crazy things said and done by his patients. He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins.",
-      "works_at":[
-        {"uid":"_:bergenregional"}],
-      "cares_for":[
-        {"uid":"_:bergenregionalbernard"},
-        {"uid":"bergenregionalrosa"}],
+      "works_at": [
+        {
+          "uid": "_:bergenregional"
+        }
+      ],
+      "cares_for": [
+        {
+          "uid": "_:bergenregionalbernard"
+        },
+        {
+          "uid": "bergenregionalrosa"
+        }
+      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Andi_Callahan",
           "label": "CBB Wikia"
         }
       ]
-    },{
+    },
+    {
       "uid": "_:clivedundee",
       "name": "Clive Dundee",
       "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit.",
-      "born":1963,
+      "born": 1963,
       "worked_at": {
         "uid": "_:u2"
       },
@@ -173,27 +219,29 @@
           "uid": "_:hotdogsson"
         }
       ],
-      "worked_at":[
-        {"uid":"_:unnamedbedandbreakfast"}
-      ]
-      ,"links": [
+      "worked_at": [
+        {
+          "uid": "_:unnamedbedandbreakfast"
+        }
+      ],
+      "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Hot_Dog",
           "label": "CBB Wikia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:thelizard",
       "name": "The Lizard",
       "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire."
-    }
-    ,{
+    },
+    {
       "uid": "_:dondimellosanimalguy",
       "name": "Don DiMello's Animal Guy",
       "article": "Don DiMello's Animal Guy is, in effect, a technical advisor to Mr. DiMello's theatre productions."
-    }
-    ,{
+    },
+    {
       "uid": "_:shanana",
       "name": "Sha Na Na",
       "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
@@ -203,121 +251,142 @@
           "label": "Wikipedia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:hotdogsson",
       "name": "Hot Dog's Son",
-      "article": "Hot Dog's unnamed son (b. 1986) is a young man who fairly frequently is kidnapped.",
-    }
-    ,{
+      "article": "Hot Dog's unnamed son (b. 1986) is a young man who fairly frequently is kidnapped."
+    },
+    {
       "uid": "_:hotdogswife",
       "name": "Hot Dog's Wife",
-      "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger.",
-    }
-    ,{
+      "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger."
+    },
+    {
       "uid": "_:dondimello",
       "name": "Don DiMello",
-      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.'",
+      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles.",
       "worked_at": [
-        {"uid":"_:radiocity"}
-        ,{"uid":"_:unnamedmidtownpeeptheatre"}
+        {
+          "uid": "_:radiocity"
+        },
+        {
+          "uid": "_:unnamedmidtownpeeptheatre"
+        }
       ],
-      "has_family": []
+      "works_for": [
+        {
+          "uid": "_:arclightcinemas"
+        }
+      ],
+      "has_family": [],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Don_DiMello",
           "label": "CBB Wikia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:patrickmcmahon",
       "name": "Patrick McMahon",
       "article": "Patrick McMahon is a traditional Irish storyteller from Limerick, Ireland. Born in 1960, he wrote limericks for the first 50 years of his life, then transitioned to prose in Fall, 2010. He formerly played tambourine for Dexys Midnight Runners and worked at a medical packaging plant.",
       "worked_at": [
-        {"uid": "_:dexysmidnightrunners"}
-        ,{"uid": "_:unnamedmedicalpackagingplant"}
-        ,{"uid": "_:unnamedmechanicbusiness"}
+        {
+          "uid": "_:dexysmidnightrunners"
+        },
+        {
+          "uid": "_:unnamedmedicalpackagingplant"
+        },
+        {
+          "uid": "_:unnamedmechanicbusiness"
+        }
       ],
       "has_family": [
         {
           "uid": "_:shamusmcmahon"
-        }
-        ,{
+        },
+        {
           "uid": "_:tommcmahon"
         }
-      ]
+      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Patrick_McMahon",
           "label": "CBB Wikia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:shamusmcmahon",
       "name": "Shamus McMahon",
       "article": "Shamus McMahon is a wealthy and successful traditional Irish storyteller from Limerick, Ireland.",
       "has_family": [
         {
           "uid": "_:patrickmcmahon"
-        }
-        ,{
+        },
+        {
           "uid": "_:tommcmahon"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:tommcmahon",
       "name": "Tom McMahon",
       "article": "Tom McMahon is a mechanic.",
       "worked_at": [
-        {"uid": "_:unnamedmechanicbusiness"}
+        {
+          "uid": "_:unnamedmechanicbusiness"
+        }
       ],
       "has_family": [
         {
           "uid": "_:patrickmcmahon"
-        }
-        ,{
+        },
+        {
           "uid": "_:shamusmcmahon"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:billcarter",
       "name": "Bill Carter",
       "article": "Bill Carter is a personal trainer born in 1922. He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant). At least as recently as 2010 he works at Bally's in Hollywood. Sort of. He is also riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed. He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business. He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group). He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.",
-      "works_at": [{
-        "uid": "_:trainerforthestarsseekingstars"
-      }],
-      "worked_at": [{
-        "uid": "_:ballyshollywood"
-      }],
+      "works_at": [
+        {
+          "uid": "_:trainerforthestarsseekingstars"
+        }
+      ],
+      "worked_at": [
+        {
+          "uid": "_:ballyshollywood"
+        }
+      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Bill_Carter",
           "label": "CBB Wikia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:rochelletheelf",
       "name": "Rochelle the Elf",
-      "article": :"Rochelle the Elf is a former nurse practitioner but now mostly spends her time in the woods performing Satanic rituals. She once tested Bill Carter for AIDS (negative).",
-      "links": [
-      ]
-    }
-    ,{
+      "article": "Rochelle the Elf is a former nurse practitioner but now mostly spends her time in the woods performing Satanic rituals. She once tested Bill Carter for AIDS (negative).",
+      "links": []
+    },
+    {
       "uid": "_:victor",
       "name": "Victor",
-      "article": :"Victor is Bill Carter's Strongman and camera man. He is also a certified giant.",
-      "works_at": [{
-        "uid": "_:trainerforthestarsseekingstars"
-      }],
-      "links": [
-      ]
-    }
-    ,{
+      "article": "Victor is Bill Carter's Strongman and camera man. He is also a certified giant.",
+      "works_at": [
+        {
+          "uid": "_:trainerforthestarsseekingstars"
+        }
+      ],
+      "links": []
+    },
+    {
       "uid": "_:carygrant",
       "name": "Cary Grant",
       "article": "Cary Grant was an actor.",
@@ -327,34 +396,42 @@
           "label": "CBB Wikia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:augustlindt",
       "name": "August Lindt",
       "article": "August Lindt is a maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler and in 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide.",
-      "works_at": [{
-        "uid": "_:unnameddusseldorfpretzelcompany"
-      }],
+      "works_at": [
+        {
+          "uid": "_:unnameddusseldorfpretzelcompany"
+        }
+      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/August_Lindt",
           "label": "CBB Wikia"
         }
       ]
-    }
-    ,{
+    },
+    {
       "uid": "_:dannymahoney",
       "name": "Danny Mahoney",
       "article": "Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following his failed suicide attempt in the Pacific Ocean. Prior to that (~2008) he owned and operated a plumbing business with his nephew, Bertrand until that nephew 'grew weary of [Danny's] personality' and executed a hostile takeover. Danny \"didn't get into drugs or join a Russian Roullette club\" and instead, in the winter of 2008, bought a heavy coat from Nordstrom's Hollywood. In the water, about to drown, he invented LotP. He left the coat on the beach.",
-      "worked_at": [{
-        "uid": "_:unnamedplumbingco"
-      }],
-      "works_at": [{
-        "uid": "_:lotpcinc"
-      }],
-      "has_family": [{
-        "uid": "_:bertmahoney"
-      }],
+      "worked_at": [
+        {
+          "uid": "_:unnamedplumbingco"
+        }
+      ],
+      "works_at": [
+        {
+          "uid": "_:lotpcinc"
+        }
+      ],
+      "has_family": [
+        {
+          "uid": "_:bertmahoney"
+        }
+      ],
       "links": [
         {
           "uri": "http://comedybangbang.wikia.com/wiki/Danny_Mahoney",
@@ -483,7 +560,9 @@
       "death_by": "unk.",
       "links": [],
       "worked_at": [
-        {"uid":"_:radiocity"}
+        {
+          "uid": "_:radiocity"
+        }
       ],
       "article": "Irene the Rockette was kicked off of the Rockettes team due to a leg rash and later died."
     },
@@ -528,9 +607,11 @@
         "geo_key": null,
         "type": "point"
       },
-      "works_at": [{
-        "uid": "_:thelotionshop"
-      }],
+      "works_at": [
+        {
+          "uid": "_:thelotionshop"
+        }
+      ],
       "has_friends": [
         {
           "uid": "_:benalterman"

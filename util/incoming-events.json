@@ -31,6 +31,73 @@
       "participants": [
         {"uid":"_:hotdog"}
       ]
+    }
+    ,{
+      "uid": "_:byrondennistonrevealstoomuch",
+      "name": "Byron Denniston Reveals His Scheme",
+      "article": "On a broadcast of Comedy Bang! Bang! on 2013.Jul.21, Denniston, lying low due to criminal heat in the UK, admitted a plan to kidnap the forthcoming royal child.",
+      "timestamp": "2013-07-14T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#233 - prior to the epside and to the birth of the royal baby",
+      "participants": [
+        {"uid":"_:byrondenniston"}
+      ]
+    },
+    {
+      "uid": "_:byrondennistongetsthescoop",
+      "name": "Byron Denniston Gets the Scoop on Royal Baby Names",
+      "article": "By virtue of his position perched outside of Kensington Palace, Byron Denniston reveals that the potential baby names for Kate Middleton's forthcoming child are Millicent, Victoria, Penelope, Laura, Marion (for girls); and Dilbert, Garfield, Beetle Bailey, Dagwood (for boys).",
+      "timestamp": "2013-07-14T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#233 - prior to the epside and to the birth of the royal baby",
+      "participants": [
+        {"uid":"_:byrondenniston"}
+      ]
+    },
+    {
+      "uid": "_:dondimmelopresentsdisneyshanselandgretel",
+      "name": "Don DiMello Presents 'Disney\'s Hansel and Gretel'",
+      "article": "The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and she doesn't really know what's happening. The show failed to reach denouement.",
+      "timestamp": "2013-02-11T19:00:00Z",
+      "nb_timestamp": "timestamp is solid acc. to CBB#200 - upcoming plug",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:pasadenafairytaletheatre"
+      },
+      "participants": [
+        {"uid":"_:dondimello"}
+      ]
+    },
+    {
+      "uid": "_:dondimmelopresentscdisneysomeondownandgetfuckedattheplanetarium",
+      "name": "Don DiMello Presents 'Disney\'s Come on Down and Get Fucked at the Planetarium'",
+      "article": "Held at the Griffith Observatory planetarium, the show consists of A) Don DiMello talking bullshit about the stars as a cover, and B) prostitutes fucking men in their chairs.",
+      "timestamp": "2013-02-15T19:00:00Z",
+      "nb_timestamp": "timestamp is solid acc. to CBB#200 - next weekend",
+      "geo_key":{"type":"uid","id":"_:griffithobservatory"},
+      "participants": [
+        {"uid":"_:dondimello"}
+      ]
+    },
+    {
+      "uid": "_:cactustonyisinterrogated1",
+      "name": "Cactus Tony is Interrogated and Cracks",
+      "article": "",
+      "timestamp": "2013-02-04T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#200 - '2nd time in as many weeks 'CT cracked under interrogation",
+      "participants": [
+        {"uid":"_:cactustony"}
+      ]
+    },
+    {
+      "uid": "_:cactustonyisinterrogated2",
+      "name": "Cactus Tony Goes on Comedy Bang! Bang! and Cracks Under Croatian Special Forces Interrogation Techniques",
+      "article": "In order to garner good press for Don DiMello, who was laying low at Griffith Observatory, Cactus Tony appears on the Comedy Bang! Bang! podcast, only to attempt suicide by defenestration.",
+      "timestamp": "2013-02-10T19:00:00Z",
+      "participants": [
+        {"uid":"_:cactustony"}
+        ,{"uid":"_:dondimello"}
+        ,{"uid":"_:scottaukerman"}
+        ,{"uid":"_:jasonmantzoukas"}
+      ]
     },
     {
       "uid": "_:cactustonyleaveshome",
