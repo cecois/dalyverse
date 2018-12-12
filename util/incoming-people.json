@@ -1,6 +1,32 @@
 {
   "set": [
     {
+      "uid": "_:gil",
+      "name": "Gil",
+      "article": "Gil is former Dean Martin lookalike and current ventriloquist. Roped into a Murder Club on a boat in International Waters in his 20s, he was beckoned by a fish, his future persistent ventriloquist dummy, to safety. He habitually carries out the temper tantrums of his dummy, Golly. He carries a beeper that looks like a toothbrush and wears Kleenex boxes with Nike swooshes painted on them for shoes.",
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:golly",
+      "name": "Golly",
+      "article": "Golly is a ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper.",
+      "works_for": [
+{"uid":"_:golly"}
+      ],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
       "uid": "_:jackfitzgerald",
       "name": "Jack Fitzgerald",
       "article": "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment. He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes.",
@@ -24,10 +50,17 @@
         }
       ]
     },
+        {
+      "uid": "_:unnamedbookingagent",
+      "name": "Unnamed Male Booking Agent",
+      "article": "Unnamed Booking Agent had his phone stolen (following a likely murder) and is probably dead.",
+      "worked_for": [],
+      "links": []
+    },
     {
       "uid": "_:cactustony",
       "name": "Cactus Tony",
-      "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' and formerly both a prisoner and a prison guard, he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit,' he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.' He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn.",
+      "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' and formerly both a prisoner and a prison guard, he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit,' he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.' He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn. Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent.",
       "works_for": [{ "uid": "_:dondimello" }, { "uid": "_:arclightcinemas" }],
       "worked_for": [{ "uid": "_:andicallahanrn" }, { "uid": "_:billcarter" }],
       "links": [
@@ -149,7 +182,7 @@
     {
       "uid": "_:clivedundee",
       "name": "Clive Dundee",
-      "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit.",
+      "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
       "born": 1963,
       "worked_at": {
         "uid": "_:u2"
@@ -170,7 +203,7 @@
     {
       "uid": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. Also wherever you could arguably say his legs end - that's where his shorts begin.",
+      "article": "Hot Dog (b. 1954) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
       "has_children": [
         {
           "uid": "_:hotdogsson"
