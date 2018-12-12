@@ -1,6 +1,42 @@
 {
   "set": [
     {
+      "uid": "_:gil",
+      "name": "Gil",
+      "article": "Gil has been in show business since the day he ended up back on shore following an incident with a Murder Club out in International Waters. He is former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist. Roped into a Murder Club on a boat in International Waters in his 20s, he was beckoned by a fish, his future persistent ventriloquist dummy, to safety. He habitually carries out the temper tantrums of his dummy, Golly. He carries a beeper that looks like a toothbrush and wears Kleenex boxes with Nike swooshes painted on them for shoes. He's 'always been a blinker.' Also he is the supreme commander of Satan on Earth.",
+      "has_friends": [
+        {
+          "uid": "_:chipgardner"
+        }
+        ,{
+          "uid": "_:dondimello"
+        }
+      ],
+      "worked_for": [{
+        "uid": "_:arclightcinemas"
+      }],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:golly",
+      "name": "Golly",
+      "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
+      "works_for": [
+        {"uid":"_:golly"}
+      ],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
       "uid": "_:jackfitzgerald",
       "name": "Jack Fitzgerald",
       "article": "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment. He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes. Most of his income is from not doing things he said he would do - $100/per. He attended the United College of Arts & Sciences & Knowledge and later founded a college in his back yard, primarily attended by a couple of girls and assisted by one Cactus Tony. Jack owns a coat hanger made of the human remains of his former student body. He makes many decisions by laying out the entrails of former college students and intuiting cosmic advice.",
@@ -15,8 +51,11 @@
     {
       "uid": "_:byrondenniston",
       "name": "Byron Denniston",
-      "article": "Byron Denniston is a Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom, where 'watching' entails perching outside of Kensington Palace in a treehouse built by a magician. He was, nonetheless, able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013 at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia.",
+      "article": "Byron Denniston is a Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom, where 'watching' entails perching outside of Kensington Palace in a treehouse built by a magician. He was, nonetheless, able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013 at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia. As of CBB#300 in July 2014, the former part of the plan at least appeared successful.",
       "worked_for": [],
+      "has_children": [
+        {"uid":"_:princegeorgeofcambridge"}
+      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Byron_Denniston",
@@ -25,9 +64,23 @@
       ]
     },
     {
+      "uid": "_:unnamedbookingagent",
+      "name": "Unnamed Male Booking Agent",
+      "article": "Unnamed Booking Agent had his phone stolen (following a likely murder) and is probably dead.",
+      "worked_for": [],
+      "links": []
+    },
+    {
+      "uid": "_:princegeorgeofcambridge",
+      "name": "Beetle Bailey",
+      "article": "Formerly Prince George of Cambridge, Beetle Bailey was kidnapped sometime between July 2013 and July 2014 by Byron Denniston and promptly renamed.",
+      "worked_for": [],
+      "links": []
+    },
+    {
       "uid": "_:cactustony",
       "name": "Cactus Tony",
-      "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' and formerly both a prisoner and a prison guard, he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit,' he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.' He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn as well as Jack Fitzgerald's backyard college, for which he serves as an admissions officer.",
+      "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' and formerly both a prisoner and a prison guard, he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit' (where the Car Circuit is a cadre of homeless who sleep in unlocked cars in and around Los Angeles), he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.' He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn as well as Jack Fitzgerald's backyard college, for which he serves as an admissions officer. Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent.",
       "works_for": [
         {
           "uid": "_:dondimello"
@@ -35,6 +88,9 @@
         {
           "uid": "_:arclightcinemas"
         }
+      ],
+      "has_friends":[
+        {"uid":"_:gretchen"}
       ],
       "worked_for": [
         {
@@ -61,12 +117,48 @@
       "links": []
     },
     {
+      "uid": "_:michaeljackson",
+      "name": "Michael Jackson",
+      "article": "Famous entertainer.",
+      "links": []
+    },{
+      "uid": "_:jimmorrison",
+      "name": "Jim Morrison",
+      "article": "Famous entertainer.",
+      "links": []
+    },{
+      "uid": "_:gretchen",
+      "name": "Gretchen",
+      "see_also": [{"uid":"_:chipgardner"}],
+      "article": "Gretchen is the Side-by-Side alter ego of Chip Gardner. She has a both a vagina that can be flipped through and a penis that can be stroked to the point of ejaculation.",
+      "links": []
+    },
+    {
+      "uid": "_:drspeedboat",
+      "name": "Dr. Speedboat",
+      "article": "Dr. Speedboat is a plastic surgeon who works out of a speedboat.",
+      "has_clients":[
+        {"uid":"_:chipgardner"}
+        ,{"uid":"_:michaeljackson"}
+      ]
+      "links": []
+    },
+    {
       "uid": "_:chipgardner",
       "name": "Chip Gardner",
-      "article": "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host of such game shows as 'Electrified or Burning Hot'; 'Zap'; and 'See if You Can Hold This for Half an Hour.' In 2011 Gardner launched a campaign to become the next Honorary Mayor of Hollywood. He is significantly younger than he looks 'for several reasons,' which includes certainly his face having been run over by a Jeep leading him to wear masks for a considerable run of his career including his stint hosting SIYCHTFHAH during which he wore a mask that constantly dripped blood. He lives in a home in the Hollywood Hills that operates not unlike a high security asylum and experimental operating room for captured transients and former contentants on the television game show 'Zap,' the former of whom he has been labotomizing and stitching together to become a vessel for Satan should he return to earth.",
+      "article": "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host of such game shows as 'Electrified or Burning Hot'; 'Zap'; and 'See if You Can Hold This for Half an Hour.' In 2011 Gardner launched a campaign to become the next Honorary Mayor of Hollywood. He is significantly younger than he looks 'for several reasons,' which includes certainly his face having been run over by a Jeep leading him to wear masks for a considerable run of his career including his stint hosting SIYCHTFHAH during which he wore a mask that constantly dripped blood. He lives in a home in the Hollywood Hills that operates not unlike a high security asylum and experimental operating room for captured transients and former contentants on the television game show 'Zap,' the former of whom he has been labotomizing and stitching together to become a vessel for Satan should he return to Earth. He has been known to captain vessels which host Murder Clubs in International Waters. He may have perished in a Murder Club and become a living vessel for Satan himself. Either way, an appearance on Comedy Bang! Bang! #300 revealed that subsequent plastic surgeries have left him looking Vincent d'Onofrio's alien character from the film 'Men in Black.' Chip is also known as the Side-by-Side Gretchen and has been sued more than once by the Jim Morrison estate.",
+      "see_also": {"uid":"_:gretchen"},
       "had_spouses": [
         {
           "uid": "_:chipgardnersunnamedwife"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:gil"
+        }
+        ,{
+          "uid": "_:dondimello"
         }
       ],
       "links": []
@@ -74,11 +166,15 @@
     {
       "uid": "_:daltonwilcox",
       "name": "Dalton Wilcox",
-      "article": "Dalton Wilcox is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the wild West to the extent that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)'. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters.",
-      "had_spouses": [],
+      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the wild West to the extent that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)'. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake.",
+      "had_spouses": [{
+        "uid": "_:daltonwilcoxunnamedwife"
+      }],
       "has_spouses": [
+      ],
+      "has_friends": [
         {
-          "uid": "_:daltonwilcoxunnamedwife"
+          "uid": "_:billcarter"
         }
       ],
       "has_children": [
@@ -169,6 +265,7 @@
       "uid": "_:andicallahanrn",
       "name": "Andi Callahan, RN",
       "article": "Andi Callahan is an uncredentialed medical professional and documented tax evader who enjoys frailty, has a history of experimenting on stray animals and transients out of an abandoned house, and now works at the Long-Term Care Floor of Bergen Regional Medical Center in New Jersey where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. He is sensitive to bigotry in the nursing profession and at times has gotten physical about it. His interest in human medicine began when he got his hands on an ape that could beg for its life. In 2011 he wrote a comedic memoir about his adventures as an RN, primarily featuring the crazy things said and done by his patients. He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins.",
+      "see_also":[{"uid":"god"}],
       "works_at": [
         {
           "uid": "_:bergenregional"
@@ -192,7 +289,7 @@
     {
       "uid": "_:clivedundee",
       "name": "Clive Dundee",
-      "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit.",
+      "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
       "born": 1963,
       "worked_at": {
         "uid": "_:u2"
@@ -213,11 +310,14 @@
     {
       "uid": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He has accidentally shot and killed three speed boat captains with a rifle and has practiced human taxidermy. Also wherever you could arguably say his legs end - that's where his shorts begin.",
+      "article": "Hot Dog (b. 1954 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
       "has_children": [
         {
           "uid": "_:hotdogsson"
         }
+      ],
+      "works_for":[
+        {"uid":"_:nashasha"}
       ],
       "worked_at": [
         {
@@ -234,23 +334,21 @@
     {
       "uid": "_:thelizard",
       "name": "The Lizard",
-      "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire."
+      "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire. (He is Chip Gardner).",
+      "see_also": [{"uid":"_:chipgardner"}]
+    },
+    {
+      "uid": "_:zowber",
+      "name": "Zowber",
+      "article": "Zowber is a member of rock n' roll cover bang Na Sha Sha whose signature move is putting his mouth in his fist.",
+      "works_for":[
+        {"uid":"_:nashasha"}
+      ]
     },
     {
       "uid": "_:dondimellosanimalguy",
       "name": "Don DiMello's Animal Guy",
       "article": "Don DiMello's Animal Guy is, in effect, a technical advisor to Mr. DiMello's theatre productions."
-    },
-    {
-      "uid": "_:shanana",
-      "name": "Sha Na Na",
-      "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
-      "links": [
-        {
-          "uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
-          "label": "Wikipedia"
-        }
-      ]
     },
     {
       "uid": "_:hotdogsson",
@@ -265,13 +363,21 @@
     {
       "uid": "_:dondimello",
       "name": "Don DiMello",
-      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles.",
+      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. Also he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth.",
       "worked_at": [
         {
           "uid": "_:radiocity"
         },
         {
           "uid": "_:unnamedmidtownpeeptheatre"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:gil"
+        }
+        ,{
+          "uid": "_:chipgardner"
         }
       ],
       "works_for": [
@@ -351,7 +457,7 @@
     {
       "uid": "_:billcarter",
       "name": "Bill Carter",
-      "article": "Bill Carter is a personal trainer born in 1922. He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant). At least as recently as 2010 he works at Bally's in Hollywood. Sort of. He is also riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed. He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business. He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group). He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.",
+      "article": "Bill Carter is a personal trainer born in 1922. He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant). At least as recently as 2010 he works at Bally's in Hollywood. Sort of. He is also riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed. He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business. He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group). He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.  In 2014 it was revealed he had been training with Dalton Wilcox for years in anticipation of an epic battle between good and evil.",
       "works_at": [
         {
           "uid": "_:trainerforthestarsseekingstars"
@@ -360,6 +466,11 @@
       "worked_at": [
         {
           "uid": "_:ballyshollywood"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:daltonwilcox"
         }
       ],
       "links": [
@@ -466,6 +577,12 @@
       ]
     },
     {
+      "uid": "_:god",
+      "name": "God",
+      "article": "God",
+      "links": []
+    },
+    {
       "uid": "_:shooter",
       "name": "Shooter",
       "links": [
@@ -517,7 +634,7 @@
           "label": "CBB Wikia"
         }
       ],
-      "article": "Ben Alterman is an older gentleman (b. 1922) who had never been on the radio before his appearance on Comedy Bang! Bang! episode 46 on March 25, 2010. He has been known to Vogue when alone at home."
+      "article": "Ben Alterman is an older gentleman (b. 1922) who had never been on the radio before his appearance on Comedy Bang! Bang! episode 46 on March 25, 2010. He has been known to Vogue when alone at home. He later (~2014) became Hot Dog's life coach."
     },
     {
       "uid": "_:crystalalterman",

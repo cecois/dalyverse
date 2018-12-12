@@ -1,6 +1,120 @@
 {
   "set": [
     {
+      "uid": "_:gilmeetsgolly",
+      "name": "Gil & Golly's Meet Cute at a Murder Club in International Waters",
+      "article": "In International Waters off the coast of San Diego, Gil had been roped into a Murder Club in his mid-20s by Golly and Chip Gardner. He was beckoned by a fish to safety who turned out later to be Golly, who then became his permanent ventriloquist's dummy. Mr. Gardner did not make it to shore, having been occupied forevermore by Satan himself.",
+      "timestamp": "1981-04-22T13:10:00Z",
+      "nb_timestamp": "timestamp is extremely approximate acc. to contradictory details from CBB#274 and CBB#300",
+      "geo_key": {
+        "type": "line",
+        "id": 11
+      },
+      "participants": [
+        {"uid":"_:gil"}
+        ,{"uid":"_:golly"}
+        ,{"uid":"_:chipgardner"}
+        ,{"uid":"_:scottaukerman"}
+        ,{"uid":"_:jasonmantzoukas"}
+      ]
+    },{
+      "uid": "_:dannymahoneybuysaboombox",
+      "name": "Danny Mahoney Buys a Boombox that Serves Him Well into 2014",
+      "article": "You can go from CD to cassette on this thing.",
+      "timestamp": "1986-08-08T13:10:00Z",
+      "nb_timestamp": "timestamp is extremely approximate - relative to when cd players first appeared commercially in portable boxes acc. to wikipedia",
+      "participants": [
+        {"uid":"_:dannymahoney"}
+      ]
+    },{
+      "uid": "_:chipgardnertriestoexhumejimmorrison",
+      "name": "Chip Gardner Attempts to Exhume Jim Morrison",
+      "article": "For unknown reasons, Chip Gardner traveled to Paris and attempted to exhume Jim Morrison.",
+      "timestamp": "1998-08-08T13:10:00Z",
+      "nb_timestamp": "timestamp is extremely approximate",
+      "geo_key": {
+        "type": "point",
+        "id": 319
+      },
+      "participants": [
+        {"uid":"_:chipgardner"}
+        ,{"uid":"_:jimmorrison"}
+      ]
+    },
+    {
+      "uid": "_:daltonwilcoxisborn",
+      "name": "Dalton Wilcox is Born",
+      "article": "Dalton Wilcox is born.",
+      "timestamp": "1956-03-03T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#300 - some time before July 1956",
+      "participants": [
+        {
+          "uid": "_:daltonwilcox"
+        }
+      ]
+    },{
+      "uid": "_:patrickmcmahonisnamedpersonoftheyear",
+      "name": "Patrick McMahon is Named Irish Person of the Year",
+      "article": "Patrick McMahon is named irish person of the year by the Ancient Order of the Iberians.",
+      "timestamp": "2014-03-26T13:10:00Z",
+      "nb_timestamp": "timestamp is ADPPP#8",
+      "participants": [
+        {
+          "uid": "_:daltonwilcox"
+        }
+      ]
+    },
+    {
+      "uid": "_:billcarterisborn",
+      "name": "Bill Carter is Born",
+      "article": "Bill Carter is born.",
+      "timestamp": "1922-06-14:10:00Z",
+      "nb_timestamp": "timestamp is middle of 1922",
+      "participants": [
+        {
+          "uid": "_:billcarter"
+        }
+      ]
+    },
+    {
+      "uid": "_:gilgetsaspotoncbb",
+      "name": "Gil & Golly Get a Spot on the Comedy Bang! Bang! Podcast",
+      "article": "Presumably due to a guest dropout for Comedy Bang! Bang! episode 274 (but really in angry retaliation on Jason Mantzoukas), Scott Aukerman called a booking agent. The man who had stolen the booking agent's phone and was with Gil, scavenging for food behind a restaurant, notified Gil. Gil immediately found a ventriloquest dummy there (a cardboard box) and rushed to the studio.",
+      "timestamp": "2014-03-02T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#274",
+      "participants": [
+        {"uid":"_:gil"}
+        ,{"uid":"_:golly"}
+        ,{"uid":"_:cactustony"}
+        ,{"uid":"_:unnamedbookingagent"}
+      ]
+    },
+    {
+      "uid": "_:hotdogmoveson",
+      "name": "Hot Dog Moves on from an Unhealthy Obsession with Sha Na Na",
+      "article": "Thanks largely to his new life coach, in the middle of 2014 Hot Dog appeared on CBB#300 and announced he had moved on from his obsession with Sha Na Na and decided instead to start his own band called Na Sha Sha.",
+      "timestamp": "2014-05-05T13:10:00Z",
+      "nb_timestamp": "timestamp is a loose approx acc. to CBB#300",
+      "participants": [
+        {"uid":"_:hotdog"}
+        ,{"uid":"_:benalterman"}
+        ,{"uid":"_:shanana"}
+        ,{"uid":"_:nashasha"}
+      ]
+    },{
+      "uid": "_:bookingagentismurdered",
+      "name": "Unnamed Booking Agent is Murdered",
+      "article": "In order for Gil (and Golly) to later appear on #CBB274, an unnamed booking agent had to be murdered by (or at the behest of) Cactus Tony.",
+      "timestamp": "2014-01-01T13:10:00Z",
+      "nb_timestamp": "timestamp is very approximate -- some time priot to CBB#274",
+      "participants": [
+        {"uid":"_:gil"}
+        ,{"uid":"_:golly"}
+        ,{"uid":"_:cactustony"}
+        ,{"uid":"_:unnamedbookingagent"}
+      ]
+    },
+    {
       "uid": "_:hotdogswifepasses",
       "name": "Hot Dog's Wife Passes",
       "article": "Hot Dog's wife passes.",
@@ -181,6 +295,16 @@
       ]
     },
     {
+      "uid": "_:daltonwilcoxkillsjekyll",
+      "name": "Dalton Wilcox Murders a Mr. Hyde on the Arizona London Bridge",
+      "article": "Dalton Wilcox kills a Mr. Hyde on the London Bridge replica in Arizona.",
+      "timestamp": "2005-05-05T19:00:00Z",
+      "nb_timestamp": "timestamp is extremely approximate",
+      "participants": [
+        {"uid":"_:daltonwilcox"}
+      ]
+    },
+    {
       "uid": "_:patrickmcmahonattemptssuicide",
       "name": "Patrick McMahon Attempts Suicide by Defenestration",
       "article": "Patrick McMahon jumps out the window at Earwolf.",
@@ -191,11 +315,21 @@
       ]
     },
     {
-      "uid": "_:billcarterattemptssuicide",
+      "uid": "_:billcarterattemptssuicide1",
       "name": "Bill Carter Attempts Suicide by Defenestration",
       "article": "Bill Carter jumps out the window at Earwolf.",
       "timestamp": "2012-03-11T19:00:00Z",
       "nb_timestamp": "timestamp *is* CBB#148",
+      "participants": [
+        {"uid":"_:billcarter"}
+      ]
+    },
+    {
+      "uid": "_:billcarterattemptssuicide2",
+      "name": "Bill Carter Attempts Suicide by Car",
+      "article": "Bill Carter sets a car on fire and drives it off a cliff.",
+      "timestamp": "2013-07-07T19:00:00Z",
+      "nb_timestamp": "timestamp is sometime after CBB#148 and before CBB#300",
       "participants": [
         {"uid":"_:billcarter"}
       ]
@@ -361,6 +495,18 @@
       "participants": [
         {
           "uid": "_:cactustony"
+        }
+      ]
+    },
+    {
+      "uid": "_:hotdogisborn",
+      "name": "Hot Dog is Born",
+      "article": "Hot Dog is born.",
+      "timestamp": "1946-01-01T19:00:00Z",
+      "nb_timestamp": "timestamp is a vary loose approximation - CBB#300 conflicts with earlier reports but is a more direct statement by Hot Dog himself",
+      "participants": [
+        {
+          "uid": "_:hotdog"
         }
       ]
     },{

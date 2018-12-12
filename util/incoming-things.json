@@ -48,6 +48,23 @@
       "article": "Rock and roll musical combination."
     },
     {
+      "uid": "_:shanana",
+      "name": "Sha Na Na",
+      "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
+      "links": [
+        {
+          "uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
+          "label": "Wikipedia"
+        }
+      ]
+    },
+    {
+      "uid": "_:nashasha",
+      "name": "Na Sha Sha",
+      "article": "Na Sha Sha is a classic American rock n' roll tribute band that does exist.",
+      "links": []
+    },
+    {
       "uid": "_:radiocity",
       "name": "Radio City Music Hall",
       "article": "Radio City Music Hall is a legendary performance space in New York City."
