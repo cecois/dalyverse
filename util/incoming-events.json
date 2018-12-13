@@ -27,6 +27,15 @@
         {"uid":"_:dannymahoney"}
       ]
     },{
+      "uid": "_:dannymahoneybuysaboombox",
+      "name": "Previews Begin for 'Don DiMello\'s Production of Disney\'s Frozen'",
+      "article": "The show must go on. This production of Frozen features a topless princess who turns things to ice and a guy covered in whipped cream - a snowman - and Canadian reindeer.",
+      "timestamp": "2014-07-01T13:10:00Z",
+      "nb_timestamp": "timestamp is approximate - relative to CBB#300",
+      "participants": [
+        {"uid":"_:dondimello"}
+      ]
+    },{
       "uid": "_:chipgardnertriestoexhumejimmorrison",
       "name": "Chip Gardner Attempts to Exhume Jim Morrison",
       "article": "For unknown reasons, Chip Gardner traveled to Paris and attempted to exhume Jim Morrison.",
