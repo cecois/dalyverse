@@ -1,6 +1,37 @@
 {
   "set": [
     {
+      "uid": "_:joebongo",
+      "name": "Joe Dunleavy",
+      "article": "Joe Dunleavy is better known as Joe Bongo. He is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH. Mr. Bongo commands a musical combination called Rosebush Red. He has openly admitted to flunking students in order to maintain a more stable lineup for that outfit.",
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Joe_Bongo",
+          "label": "CBB Wikia"
+        }
+      ]
+    },{
+      "uid": "_:santaclaus",
+      "name": "Santa Claus",
+      "article": "Père Noël",
+      "links": []
+    },{
+      "uid": "_:jeanclaudepepi",
+      "name": "Jean Claude Pepi",
+      "article": "Jean Claude Pepi (b. 1959) is a very famous French actor. He knew from an early age that he was destined to be Jean Claude Pepi and developed a long-standing fantasy to be ruled by bees.",
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Jean_Claude_Pepi",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:wernerherzog",
+      "name": "Werner Herzog",
+      "article": "Werner Herzog is a real person.",
+      "links": []
+    },{
       "uid": "_:gil",
       "name": "Gil",
       "article": "Gil has been in show business since the day he ended up back on shore following an incident with a Murder Club out in International Waters. He is former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist. Roped into a Murder Club on a boat in International Waters in his 20s, he was beckoned by a fish, his future persistent ventriloquist dummy, to safety. He habitually carries out the temper tantrums of his dummy, Golly. He carries a beeper that looks like a toothbrush and wears Kleenex boxes with Nike swooshes painted on them for shoes. He's 'always been a blinker.' Also he is the supreme commander of Satan on Earth.",
@@ -359,11 +390,85 @@
       "uid": "_:hotdogswife",
       "name": "Hot Dog's Wife",
       "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger."
+    },{
+      "uid": "_:jasonwu",
+      "name": "Jason Wu",
+      "article": "Jason Wu is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
+      "has_friends": []
+    },{
+      "uid": "_:kyledunforth",
+      "name": "Kyle Dunforth",
+      "article": "Kyle Dunforth is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
+      "has_friends": []
+    },{
+      "uid": "_:thechonger",
+      "name": "The Chonger",
+      "article": "The Chonger is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
+      "has_friends": []
+    },{
+      "uid": "_:marissawompler",
+      "name": "Marissa Wompler",
+      "article": "Marissa Wompler is a student at Marina del Rey High School and an intern at Comedy Bang! Bang! In Fall 2014 it was revealed that Don DiMello had been her entertainment mentor for some time.",
+      "has_friends": [
+        {
+          "uid": "_:dondimello"
+        }
+      ]
+    },{
+      "uid": "_:katy",
+      "name": "Katy",
+      "article": "Katy is Asian and demure.",
+    },{
+      "uid": "_:kimmy",
+      "name": "Kimmy",
+      "article": "Kimmy is Asian and demure.",
+    },
+    {
+      "uid": "_:tracirearden",
+      "name": "Traci Rearden",
+      "article": "Traci Rearden is teenager.",
+    },
+    {
+      "uid": "_:drsethwompler",
+      "name": "Dr. Seth Wompler",
+      "article": "Dr. Seth Wompler is a podietrist.",
+    },{
+      "uid": "_:daniellebartiromo",
+      "name": "Danielle Bartiromo",
+      "article": "Danielle Bartiromo is a teenager.",
+    },{
+      "uid": "_:charlottelistler",
+      "name": "Charlotte Listler",
+      "article": "Charlotte Listler is a former sniper, a current educator and educarer. She runs the Starz Academy at Marina del Rey High School in California, is 1/18th Native American, and has an exhaustive collection of soft rock n roll.",
+    },{
+      "uid": "_:ericgutterman",
+      "name": "Eric (Gutterballs) Gutterman",
+      "article": "Eric (Gutterballs) Gutterman is an amorous teenager.",
+    },{
+      "uid": "_:dabneycoleperson",
+      "name": "Dabney Coleperson",
+      "article": "Dabney Coleperson is a characiturist.",
+    },{
+      "uid": "_:lizmathers",
+      "name": "Liz Mathers",
+      "article": "Liz is a student and a caller into Marissa Wompler's birthday party.",
+    },{
+      "uid": "_:karim",
+      "name": "Karim",
+      "article": "Karim drives a pickuptruck full of chicken coops.",
+    },{
+      "uid": "_:felipe",
+      "name": "Felipe",
+      "article": "Felipe works a kitchen at George Washington University.",
+    },{
+      "uid": "_:birthdaygirl",
+      "name": "Birthday Girl",
+      "article": "Birthday Girl is a young child left behind after a showing of Don DiMello's Disney's Puff the Magic Dragon.",
     },
     {
       "uid": "_:dondimello",
       "name": "Don DiMello",
-      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. Also he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth.",
+      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. It turns out he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth. He is also a mentor to Marissa Wompler.",
       "worked_at": [
         {
           "uid": "_:radiocity"
@@ -378,6 +483,9 @@
         }
         ,{
           "uid": "_:chipgardner"
+        }
+        ,{
+          "uid": "_:marissawompler"
         }
       ],
       "works_for": [

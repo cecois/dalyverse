@@ -1,9 +1,14 @@
 {
   "set": [
     {
+      "uid": "_:rosebushred",
+      "name": "Rosebush Red",
+      "article": "Rosebush Red is a Marina del Rey High School-based rock band.",
+    }
+    ,{
       "uid": "_:arclightcinemas",
       "name": "ArcLight Cinemas",
-      "article": "THe ArcLight Cinemas is a cinema where many things have happened.",
+      "article": "The ArcLight Cinemas is a cinema where many things have happened.",
       "geo_key": {
         "type": "poly",
         "id": 133
@@ -16,6 +21,15 @@
       "geo_key": {
         "type": "point",
         "id": 202
+      }
+    }
+    ,{
+      "uid": "_:sixflagsmagicmountain",
+      "name": "Six Flags Magic Mountain",
+      "article": "Valencia, CA",
+      "geo_key": {
+        "type": "point",
+        "id": 7
       }
     }
     ,{
