@@ -2,6 +2,18 @@
   "set": [
     {
       "uid": "_:gilmeetsgolly",
+      "name": "Don DiMello Presents: Hey, Really Giger!",
+      "article": "Over the summer of 2011, Mr. DiMello teamed with H.R. Giger and Andrew Lloyd Webber to develop and produce a stage show, tentatively titled 'Hey, Really Giger!' about 'the eternal struggle between the darkness and the light.' The show was never produced due to disagreements over whether to feature premeditated murder of mouthy women during the show and whether to plagiarize an 'Annie Get Your Gun'/'Annie' mashup Giger himself had sketched.",
+      "timestamp": "2011-08-01T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to release date of SuperEgo 3.7",
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:andrewlloydwebber"}
+        ,{"uid":"_:hrgiger"}
+      ]
+    },
+    {
+      "uid": "_:gilmeetsgolly",
       "name": "Gil & Golly's Meet Cute at a Murder Club in International Waters",
       "article": "In International Waters off the coast of San Diego, Gil had been roped into a Murder Club in his mid-20s by Golly and Chip Gardner. He was beckoned by a fish to safety who turned out later to be Golly, who then became his permanent ventriloquist's dummy. Mr. Gardner did not make it to shore, having been occupied forevermore by Satan himself.",
       "timestamp": "1981-04-22T13:10:00Z",
@@ -17,7 +29,8 @@
         ,{"uid":"_:scottaukerman"}
         ,{"uid":"_:jasonmantzoukas"}
       ]
-    },{
+    },
+    {
       "uid": "_:dannymahoneybuysaboombox",
       "name": "Danny Mahoney Buys a Boombox that Serves Him Well into 2014",
       "article": "You can go from CD to cassette on this thing.",

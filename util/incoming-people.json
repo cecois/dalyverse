@@ -1,6 +1,32 @@
 {
   "set": [
     {
+      "uid": "_:andrewlloydwebber",
+      "name": "Andrew Lloyd Webber",
+      "article": "Dame Sir ALW is a Lord and peer of the British realm.",
+      "has_friends": [],
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Lord_Andrew_Lloyd_Webber",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:hrgiger",
+      "name": "H.R. Giger",
+      "article": "H.R. Giger is an obsidion sexsmith; and inky-hued dinky feud; and a visual artist.",
+      "has_friends": [],
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "http://www.gosuperego.com/h-r-giger/",
+          "label": "GoSuperEgo"
+        }
+      ]
+    },
+    {
       "uid": "_:gil",
       "name": "Gil",
       "article": "Gil has been in show business since the day he ended up back on shore following an incident with a Murder Club out in International Waters. He is former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist. Roped into a Murder Club on a boat in International Waters in his 20s, he was beckoned by a fish, his future persistent ventriloquist dummy, to safety. He habitually carries out the temper tantrums of his dummy, Golly. He carries a beeper that looks like a toothbrush and wears Kleenex boxes with Nike swooshes painted on them for shoes. He's 'always been a blinker.' Also he is the supreme commander of Satan on Earth.",
@@ -141,7 +167,6 @@
         {"uid":"_:chipgardner"}
         ,{"uid":"_:michaeljackson"}
       ]
-      "links": []
     },
     {
       "uid": "_:chipgardner",
@@ -363,7 +388,7 @@
     {
       "uid": "_:dondimello",
       "name": "Don DiMello",
-      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a bit of a drooler, wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. Also he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth.",
+      "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a 'bit of a drooler,' wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. Also he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth. He evidently signs his name accompanied by a tiny doodle of women's breasts.",
       "worked_at": [
         {
           "uid": "_:radiocity"
