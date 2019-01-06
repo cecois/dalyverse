@@ -1,7 +1,19 @@
 {
   "set": [
     {
-      "uid": "_:gilmeetsgolly",
+      "uid": "_:dondimellostruewest",
+      "name": "Don DiMello Presents: True West",
+      "article": "Over the fall of 2011, Mr. DiMello teamed with actors John C. Reilly and Nick Nolte to launch a production of Sam Shepard's 'True West' to be staged in a VFW hall in Death Valley, California. The show evidently never made it due to the actors' objections to some of Mr. DiMello's tactics -- kidnapping and cuckolding -- as well as his insistence that beautiful women do a sexy dance in a tandem horse costume, followed by a simulated live birth, followed by foreplay.",
+      "timestamp": "2011-10-01T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to release date of SuperEgo 3.8",
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:johncreilly"}
+        ,{"uid":"_:nicknolte"}
+      ]
+    },
+    {
+      "uid": "_:dondimellosheyreallygiger",
       "name": "Don DiMello Presents: Hey, Really Giger!",
       "article": "Over the summer of 2011, Mr. DiMello teamed with H.R. Giger and Andrew Lloyd Webber to develop and produce a stage show, tentatively titled 'Hey, Really Giger!' about 'the eternal struggle between the darkness and the light.' The show was never produced due to disagreements over whether to feature premeditated murder of mouthy women during the show and whether to plagiarize an 'Annie Get Your Gun'/'Annie' mashup Giger himself had sketched.",
       "timestamp": "2011-08-01T13:10:00Z",
