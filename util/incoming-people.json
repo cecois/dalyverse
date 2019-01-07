@@ -4,6 +4,9 @@
       "uid": "_:joebongo",
       "name": "Joe Dunleavy",
       "article": "Joe Dunleavy is better known as Joe Bongo. He is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH. Mr. Bongo commands a musical combination called Rosebush Red. He has openly admitted to flunking students in order to maintain a more stable lineup for that outfit.",
+      "member_of":{
+        "uid":"_:rosebushred"
+      },
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Joe_Bongo",
@@ -460,7 +463,7 @@
     },{
       "uid": "_:daniellebartiromo",
       "name": "Danielle Bartiromo",
-      "article": "Danielle Bartiromo is a teenager.",
+      "article": "Danielle Bartiromo is an amorous teenager.",
     },{
       "uid": "_:charlottelistler",
       "name": "Charlotte Listler",
