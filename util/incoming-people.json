@@ -3,10 +3,10 @@
     {
       "uid": "_:joebongo",
       "name": "Joe (Bongo) Dunleavy",
-      "article": "Joe Bongo wears a beautiful set of (fake) teeth; they make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. More than that, however, Mr. Dunleavy executes an atypical teaching style as the health teacher at Marina del Rey High School (MDRH) which encourages students to share with classmates intimate details about their lives. Mr. Bongo doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey) and as a parking lot attendant at MDRH.",
+      "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He has openly admitted to flunking students in order to maintain a more stable lineup for that outfit.",
       "has_friends": [],
       "worked_for": [],
-      "links": [
+"links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Joe_Bongo",
           "label": "CBB Wikia"
@@ -38,6 +38,20 @@
           "label": "IMDB"
         }
       ]
+    },{
+      "uid": "_:santaclaus",
+      "name": "Santa Claus",
+      "article": "Père Noël",
+      "links": []
+    },{
+      "uid": "_:jeanclaudepepi",
+      "name": "Jean Claude Pepi",
+      "article": "Jean Claude Pepi (b. 1959) is a very famous French actor. He knew from an early age that he was destined to be Jean Claude Pepi and developed a long-standing fantasy to be ruled by bees.",
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Jean_Claude_Pepi",
+        "label": "CBB Wikia"}
+      ]
     },
     {
       "uid": "_:andrewlloydwebber",
@@ -64,6 +78,12 @@
           "label": "GoSuperEgo"
         }
       ]
+    },
+    {
+      "uid": "_:wernerherzog",
+      "name": "Werner Herzog",
+      "article": "Werner Herzog is a real person.",
+      "links": []
     },
     {
       "uid": "_:gil",
@@ -355,7 +375,7 @@
       "name": "Clive Dundee",
       "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
       "born": 1963,
-      "worked_at": {
+      "worked_for": {
         "uid": "_:u2"
       },
       "has_spouses": {
@@ -423,6 +443,80 @@
       "uid": "_:hotdogswife",
       "name": "Hot Dog's Wife",
       "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger."
+    },{
+      "uid": "_:jasonwu",
+      "name": "Jason Wu",
+      "article": "Jason Wu is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
+      "has_friends": []
+    },{
+      "uid": "_:kyledunforth",
+      "name": "Kyle Dunforth",
+      "article": "Kyle Dunforth is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
+      "has_friends": []
+    },{
+      "uid": "_:thechonger",
+      "name": "The Chonger",
+      "article": "The Chonger is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
+      "has_friends": []
+    },{
+      "uid": "_:marissawompler",
+      "name": "Marissa Wompler",
+      "article": "Marissa Wompler is a student at Marina del Rey High School and an intern at Comedy Bang! Bang! In Fall 2014 it was revealed that Don DiMello had been her entertainment mentor for some time.",
+      "has_friends": [
+        {
+          "uid": "_:dondimello"
+        }
+      ]
+    },{
+      "uid": "_:katy",
+      "name": "Katy",
+      "article": "Katy is Asian and demure.",
+    },{
+      "uid": "_:kimmy",
+      "name": "Kimmy",
+      "article": "Kimmy is Asian and demure.",
+    },
+    {
+      "uid": "_:tracirearden",
+      "name": "Traci Rearden",
+      "article": "Traci Rearden is teenager.",
+    },
+    {
+      "uid": "_:drsethwompler",
+      "name": "Dr. Seth Wompler",
+      "article": "Dr. Seth Wompler is a podietrist.",
+    },{
+      "uid": "_:daniellebartiromo",
+      "name": "Danielle Bartiromo",
+      "article": "Danielle Bartiromo is a teenager.",
+    },{
+      "uid": "_:charlottelistler",
+      "name": "Charlotte Listler",
+      "article": "Charlotte Listler is a former sniper, a current educator and educarer. She runs the Starz Academy at Marina del Rey High School in California, is 1/18th Native American, and has an exhaustive collection of soft rock n roll.",
+    },{
+      "uid": "_:ericgutterman",
+      "name": "Eric (Gutterballs) Gutterman",
+      "article": "Eric (Gutterballs) Gutterman is an amorous teenager.",
+    },{
+      "uid": "_:dabneycoleperson",
+      "name": "Dabney Coleperson",
+      "article": "Dabney Coleperson is a characiturist.",
+    },{
+      "uid": "_:lizmathers",
+      "name": "Liz Mathers",
+      "article": "Liz is a student and a caller into Marissa Wompler's birthday party.",
+    },{
+      "uid": "_:karim",
+      "name": "Karim",
+      "article": "Karim drives a pickuptruck full of chicken coops.",
+    },{
+      "uid": "_:felipe",
+      "name": "Felipe",
+      "article": "Felipe works a kitchen at George Washington University.",
+    },{
+      "uid": "_:birthdaygirl",
+      "name": "Birthday Girl",
+      "article": "Birthday Girl is a young child left behind after a showing of Don DiMello's Disney's Puff the Magic Dragon.",
     },
     {
       "uid": "_:dondimello",
@@ -442,6 +536,9 @@
         }
         ,{
           "uid": "_:chipgardner"
+        }
+        ,{
+          "uid": "_:marissawompler"
         }
       ],
       "works_for": [

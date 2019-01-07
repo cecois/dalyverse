@@ -12,9 +12,8 @@
         ,{"uid":"_:nicknolte"}
       ]
     },
-    {
-      "uid": "_:dondimellosheyreallygiger",
-      "name": "Don DiMello Presents: Hey, Really Giger!",
+      
+    { "uid": "_:dondimellosheyreallygiger",     "name": "Don DiMello Presents: Hey, Really Giger!",
       "article": "Over the summer of 2011, Mr. DiMello teamed with H.R. Giger and Andrew Lloyd Webber to develop and produce a stage show, tentatively titled 'Hey, Really Giger!' about 'the eternal struggle between the darkness and the light.' The show was never produced due to disagreements over whether to feature premeditated murder of mouthy women during the show and whether to plagiarize an 'Annie Get Your Gun'/'Annie' mashup Giger himself had sketched.",
       "timestamp": "2011-08-01T13:10:00Z",
       "nb_timestamp": "timestamp is acc. to release date of SuperEgo 3.7",
@@ -22,6 +21,46 @@
         {"uid":"_:dondimello"}
         ,{"uid":"_:andrewlloydwebber"}
         ,{"uid":"_:hrgiger"}
+      ]},
+    {
+      "uid": "_:joebongoadvisesguttermanandbartiromo",
+      "name": "Gutterballs and Danielle Bartiromo Suffer a Pregnancy Scare",
+      "article": "Worried Danielle might be pregnant, Eric Gutterman and Ms. Bartiromo seek council from Joe Bongo, who gave them a sack of flour to treat as a newborn baby.",
+      "timestamp": "2014-12-12T10:10:00Z",
+      "nb_timestamp": "timestamp is extremely approximate - prior to WIU#0.8",
+      "participants": [
+        {"uid":"_:joebongo"}
+        ,{"uid":"_:ericgutterman"}
+        ,{"uid":"_:daniellebartiromo"}
+      ]
+    },
+    {
+      "uid": "_:joebongoteachessexunit",
+      "name": "Joe Bongo Teaches a Sex Ed at MDRH",
+      "article": "Joe Bongo interactively taught alternate methods of sexual intercourse to Marissa Wompler and other students, including but not limited to: The Figure 4.",
+      "timestamp": "2014-09-01T10:10:00Z",
+      "nb_timestamp": "timestamp is extremely approximate - two semesters prior to WIU#0.8",
+      "geo_key": {
+        "type": "point",
+        "id": 210
+      },
+      "participants": [
+        {"uid":"_:joebongo"}
+        ,{"uid":"_:marissawompler"}
+      ]
+    },{
+      "uid": "_:joebongoteachesdrugunit",
+      "name": "Joe Bongo Teaches a Drug Unit at MDRH",
+      "article": "In order to deter students from drug abuse, Joe Bongo demonstrated how to mix and cook a speedball in class using flour and sugar. Among the students who shot the substance was Marissa Wompler.",
+      "timestamp": "2015-02-02T10:10:00Z",
+      "nb_timestamp": "timestamp is extremely approximate - semester prior to WIU#0.8",
+      "geo_key": {
+        "type": "point",
+        "id": 210
+      },
+      "participants": [
+        {"uid":"_:joebongo"}
+        ,{"uid":"_:marissawompler"}
       ]
     },
     {
@@ -212,6 +251,62 @@
       },
       "participants": [
         {"uid":"_:dondimello"}
+      ]
+    },{
+      "uid": "_:dondimmelopresentsdisneyspuffthemagicdragon",
+      "name": "Don DiMello Presents 'Disney\'s Puff the Magic Dragon'",
+      "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
+      "timestamp": "2014-08-09T19:00:00Z",
+      "nb_timestamp": "timestamp is approximate acc. to CBB#304",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:pasadenafairytaletheatre"
+      },
+      "participants": [
+        {"uid":"_:dondimello"}
+      ]
+    },
+    {
+      "uid": "_:dondimmeloandcactustonyattendwomplersbirthday",
+      "name": "Don DiMello and Cactus Tony Attend Marissa Wompler's Birthday Party",
+      "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
+      "timestamp": "2014-08-10T19:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#304",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:sixflagsmagicmountain"
+      },
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:cactustony"}
+        ,{"uid":"_:marissawompler"}
+        ,{"uid": "_:katy"}
+        ,{"uid": "_:kimmy"}
+        ,{"uid": "_:tracirearden"}
+        ,{"uid": "_:drsethwompler"}
+        ,{"uid": "_:daniellebartiromo"}
+        ,{"uid": "_:charlottelistler"}
+        ,{"uid": "_:ericgutterman"}
+        ,{"uid": "_:dabneycoleperson"}
+        ,{"uid": "_:lizmathers"}
+        ,{"uid": "_:scottaukerman"}
+        ,{"uid": "_:karim"}
+        ,{"uid": "_:felipe"}
+        ,{"uid": "_:birthdaygirl"}
+      ]
+    },{
+      "uid": "_:dondimellofindsachild",
+      "name": "Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it.",
+      "timestamp": "2014-08-10T02:30:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#304",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:pasadenafairytaletheatre"
+      },
+      "participants": [
+        {"uid":"_:dondimello"}
+        ,{"uid":"_:cactustony"}
+        ,{"uid": "_:birthdaygirl"}
       ]
     },
     {
@@ -521,6 +616,42 @@
       ]
     },
     {
+      "uid": "_:jeanclaudepepiauditionsfornosferatu",
+      "name": "Jean Claude Pepi Auditions for 'Nosferatu the Vampyre'",
+      "article": "Jean Claude Pepi visits the United States to shoot for one day on an ad for Geico that mistakes for a feature film.",
+      "timestamp": "1978-05-15T09:00:00Z",
+      "nb_timestamp": "timestamp is acc. to imdb's filming date for nosferatu",
+      "participants": [
+        {
+          "uid": "_:jeanclaudepepi"
+        }
+        ,{
+          "uid": "_:wernerherzog"
+        }
+      ]
+    },{
+      "uid": "_:jeanclaudepepishootsageicospot",
+      "name": "Jean Claude Pepi Gets a Geico Spot",
+      "article": "Jean Claude Pepi visits the United States to shoot for one day on an ad for Geico that mistakes for a feature film.",
+      "timestamp": "2015-03-09T09:00:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB#338",
+      "participants": [
+        {
+          "uid": "_:jeanclaudepepi"
+        }
+      ]
+    },{
+      "uid": "_:jeanclaudepepiisborn",
+      "name": "Jean Claude Pepi is Born",
+      "article": "Jean Claude Pepi is born.",
+      "timestamp": "1959-08-08T19:00:00Z",
+      "nb_timestamp": "timestamp is a loose approximation - some date after March 55 years prior to CBB#338",
+      "participants": [
+        {
+          "uid": "_:jeanclaudepepi"
+        }
+      ]
+    },{
       "uid": "_:cactustonyisborn",
       "name": "Cactus Tony is Born",
       "article": "Cactus Tony is born.",
