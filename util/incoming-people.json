@@ -2,15 +2,43 @@
   "set": [
     {
       "uid": "_:joebongo",
-      "name": "Joe Dunleavy",
-      "article": "Joe Dunleavy is better known as Joe Bongo. He is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH. Mr. Bongo commands a musical combination called Rosebush Red. He has openly admitted to flunking students in order to maintain a more stable lineup for that outfit.",
       "member_of":{
         "uid":"_:rosebushred"
       },
+      "name": "Joe (Bongo) Dunleavy",
+      "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system.",
+      "has_friends": [],
+      "worked_for": [],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Joe_Bongo",
           "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:nicknolte",
+      "name": "Nick Nolte",
+      "article": "Nick Nolte is a respected theatrical and film actor known for being drunk and looking crazy and sounding 'like a sad tea kettle.'",
+      "has_friends": [],
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://www.imdb.com/name/nm0000560",
+          "label": "IMDB"
+        }
+      ]
+    },
+    {
+      "uid": "_:johncreilly",
+      "name": "John C. Reilly",
+      "article": "John C. Reilly is a respected theatrical and film actor known for saying the word 'awesome.' He knows seven people.",
+      "has_friends": [],
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://www.imdb.com/name/nm0000604/",
+          "label": "IMDB"
         }
       ]
     },{
@@ -315,6 +343,12 @@
       "links": []
     },
     {
+      "uid": "_:jimmypage",
+      "name": "Jimmy Page",
+      "article": "Jimmy Page is a legendary guitarist and thief of American blues.",
+      "links": []
+    },
+    {
       "uid": "_:bergenregionalrosa",
       "name": "Rosa",
       "article": "Rosa was a patient at Bergen Regional Medical Center in New Jersey who was found uncontrollably crying one night by floor staff at Bergen. When no number of comedy bits and impressions and magic tricks would cure it she was wheeled down to a vacant room at the end of the hallway and was found dead the next morning with a defunct nurse's call button in her hand.",
@@ -350,7 +384,7 @@
       "name": "Clive Dundee",
       "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
       "born": 1963,
-      "worked_at": {
+      "worked_for": {
         "uid": "_:u2"
       },
       "has_spouses": {
