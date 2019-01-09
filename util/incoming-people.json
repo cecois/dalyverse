@@ -1,13 +1,73 @@
 {
   "set": [
     {
+      "uid": "_:johnbanderson",
+      "name": "John B. Anderson",
+      "article": "John B. Anderson was a Republican senator and Independent presidential candidate from Illinois.",
+      "has_friends": [],
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://en.wikipedia.org/wiki/John_B._Anderson",
+          "label": "Wikipedia"
+        }
+      ]
+    },{
+      "uid": "_:jimmybongos",
+      "name": "Jimmy Bongos",
+      "article": "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos.",
+      "has_friends": [],
+      "worked_for": [],
+      "links": []
+    }
+    ,{
+      "uid": "_:neptuna",
+      "name": "Neptuna",
+      "article": "Neptuna is an underwater person and visitor to Comedy Bang! Bang!, once, from the lost city of Atlantis. His maternal grandmother might have been a tuna, which Neptuna disputes.",
+      "has_friends": [],
+      "worked_for": [],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Neptuna",
+          "label": "CBB Wikia"
+        }
+      ]
+    },
+    {
+      "uid": "_:motherofjoebongo",
+      "name": "Joe Bongo's Mother",
+      "article": "Joe Bongo's unnamed mother was a diabetic.",
+      "has_friends": [],
+      "worked_for": [],
+      "has_children": [
+        {
+          "uid": "_:jooebong"
+        }
+      ],
+      "links": []
+    },
+    {
+      "uid": "_:fatherofjoebongo",
+      "name": "Joe Bongo's Father",
+      "article": "Joe Bongo's unnamed father (b. 1929) suffered from a number of medical conditions, including diabetes; poor venous blood circulation; eustachian tube restrictions; chronic depression; alcoholism; fucked-up diaphragm. Up through 2015, at the age of 86, he continuously tried to serve in the U.S. Army.",
+      "has_friends": [],
+      "worked_for": [],
+      "has_children": [
+        {
+          "uid": "_:jooebong"
+        }
+      ],
+      "links": []
+    },
+    {
       "uid": "_:joebongo",
       "member_of":{
         "uid":"_:rosebushred"
       },
       "name": "Joe (Bongo) Dunleavy",
-      "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system.",
+      "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system. Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72. He is not an android and he's 'tired of the question.' Also he does own a rug made of human hair.",
       "has_friends": [],
+      "see_also":[{"uid":"_:jimmybongos"}],
       "worked_for": [],
       "links": [
         {
@@ -253,7 +313,7 @@
     {
       "uid": "_:daltonwilcox",
       "name": "Dalton Wilcox",
-      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the wild West to the extent that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)'. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake.",
+      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)' which, due to the incompetence of his publisher, is largely not available anywhere. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is the author of such poems as The Lonesome Cowboy and There's Other Things a Cowboy Can Also Fuck. He is a loyal customer of Alamo Rent A Car.",
       "had_spouses": [{
         "uid": "_:daltonwilcoxunnamedwife"
       }],
@@ -337,6 +397,18 @@
       "links": []
     },
     {
+      "uid": "_:abrahamappleby",
+      "name": "Abraham Appleby",
+      "article": "Abraham Appleby ('Double A') is a noted water skiier and the second man to ever have sexual intercourse on water skiis.",
+      "links": []
+    },
+    {
+      "uid": "_:abrahamapplebysgirlfriend",
+      "name": "Abraham Appleby's Girlfriend",
+      "article": "Abraham Appleby's girlfriend is the second woman to ever have sexual intercourse on water skiis.",
+      "links": []
+    },
+    {
       "uid": "_:bergenregionalbernard",
       "name": "Bernard",
       "article": "Bernard was a patient at Bergen Regional Medical Center who had his sheets stolent by another patient. They were later found balled up in a toilet alongside a #2.",
@@ -403,7 +475,7 @@
     {
       "uid": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
+      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis.",
       "has_children": [
         {
           "uid": "_:hotdogsson"

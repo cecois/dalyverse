@@ -1,6 +1,41 @@
 {
   "set": [
     {
+      "uid": "_:joebongofindsbongos",
+      "name": "Joe Bongo Finds Bongos",
+      "article": "Under the Santa Monica pier, with a 'guy sleeping next to them,' was a set of bongos that Joe Bongo (née Dunleavy) stole.",
+      "timestamp": "1993-06-01T13:10:00Z",
+      "nb_timestamp": "timestamp is very approximate acc. to CBB 365",
+      "geo_key": {
+        "type": "poly",
+        "id":221
+      },
+      "participants": [
+        {"uid":"_:joebongo"}
+      ]
+    },
+    {
+      "uid": "_:fatherofjoebongoisborn",
+      "name": "Joe Bongo's Father is Born",
+      "article": "Joe Bongo's father was born some time in 1929.",
+      "timestamp": "1929-06-01T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB 365",
+      "participants": [
+        {"uid":"_:fatherofjoebongo"}
+      ]
+    },
+    {
+      "uid": "_:joebongovotesforjohnbanderson",
+      "name": "Joe Bongo Votes for John B. Anderson in the General Election",
+      "article": "Joe Bongo Votes for John B. Anderson in the General Election.",
+      "timestamp": "1980-11-04T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB 365",
+      "participants": [
+        {"uid":"_:joebongo"}
+        ,{"uid":"_:johnbanderson"}
+      ]
+    },
+    {
       "uid": "_:dondimellostruewest",
       "name": "Don DiMello Presents: True West",
       "article": "Over the fall of 2011, Mr. DiMello teamed with actors John C. Reilly and Nick Nolte to launch a production of Sam Shepard's 'True West' to be staged in a VFW hall in Death Valley, California. The show evidently never made it due to the actors' objections to some of Mr. DiMello's tactics -- kidnapping and cuckolding -- as well as his insistence that beautiful women do a sexy dance in a tandem horse costume, followed by a simulated live birth, followed by foreplay.",
@@ -713,11 +748,26 @@
         "uid": "_:hotdogisborn",
         "name": "Hot Dog is Born",
         "article": "Hot Dog is born.",
-        "timestamp": "1946-01-01T19:00:00Z",
-        "nb_timestamp": "timestamp is a vary loose approximation - CBB#300 conflicts with earlier reports but is a more direct statement by Hot Dog himself",
+        "timestamp": "1955-12-03T19:00:00Z",
+        "nb_timestamp": "timestamp is a vary loose approximation - CBB#300 conflicts with earlier reports but is a more direct statement by Hot Dog himself; #CBB400 is later stated as direct fact, citing 1955 as the date",
         "participants": [
           {
             "uid": "_:hotdog"
+          }
+        ]
+      },
+      {
+        "uid": "_:hotdogbecomesthird",
+        "name": "Hot Dog Becomes the Third Man in History to Have Sex on Skiis",
+        "article": "Hot Dog Becomes the Third Man in History to Have Sex on Skiis.",
+        "timestamp": "1971-12-03T19:00:00Z",
+        "nb_timestamp": "timestamp is a vary loose approximation - CBB#400",
+        "participants": [
+          {
+            "uid": "_:hotdog"
+          }
+          ,{
+            "uid": "_:abrahamapplebysgirlfriend"
           }
         ]
       },{
@@ -821,7 +871,8 @@
             "uid": "_:hotdog"
           }
         ]
-      },{
+      },
+      {
         "uid": "_:hotdogintroducesfirearms",
         "name": "Hot Dog Becomes the First Person Ever to Introduce Firearms into Water Skiing",
         "timestamp": "1963-08-04T14:00:00Z",
@@ -844,8 +895,8 @@
       },{
         "uid": "_:hotdogchangeshisname",
         "name": "Hot Dog Changes His Name to Hot Dog",
-        "timestamp": "1963-10-10T12:00:00Z",
-        "nb_timestamp": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27 but 'in the 60s'  - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232",
+        "timestamp": "1969-10-10T12:00:00Z",
+        "nb_timestamp": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27 but 'in the 60s' and 'in his teens' acc to #CBB400; frm 1964-1969 he wz bobbing in the ocean acc to cbb#232 and if we take 1955 as his birth year, 69 fits best",
         "participants": [
           {
             "uid": "_:hotdog"
