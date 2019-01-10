@@ -1,9 +1,45 @@
 {
   "set": [
     {
+      "uid": "_:cameronmcgoniglesghosttoursthatarescary",
+      "name": "Cameron McGonigle's Ghost Tours That Are Scary",
+      "article": "Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland."
+      ,"geo_key":{
+        "type":"uid",
+        "id":null
+      }
+    },
+    {
       "uid": "_:rosebushred",
       "name": "Rosebush Red",
       "article": "Rosebush Red is a Marina del Rey High School-based rock band."
+    },
+    {
+      "uid": "_:necromance",
+      "name": "Necromance",
+      "article": "In March 1986, following the release of Russell Mulcahy's 'Highlander,' Hot Dog stole  a sword from a novelty and costume shop approximately 10 blocks from the ArcLight and then decapitates an unnamed Scottish guy with it.",
+      "geo_key": {
+        "type": "point",
+        "id": 582
+      }
+    },
+    {
+      "uid": "_:maunaloa",
+      "name": "Mauna Loa",
+      "article": "Mauna Loa is an Hawaiin volcano that maybe could be a decent spot for a Mars simulator.",
+      "geo_key": {
+        "type": "point",
+        "id": 769
+      }
+    },
+    {
+      "uid": "_:hiltonhotelhawaii",
+      "name": "Hilton Waikoloa Village",
+      "article": "Site of: Hot Dog's probable last audition for Sha Na Na.",
+      "geo_key": {
+        "type": "point",
+        "id": 580
+      }
     },
     {
       "uid": "_:arclightcinemas",
@@ -12,6 +48,15 @@
       "geo_key": {
         "type": "poly",
         "id": 133
+      }
+    },
+    {
+      "uid": "_:huntingtonbeach",
+      "name": "Huntington Beach",
+      "article": "Site of: a surfing world record; nothing else",
+      "geo_key": {
+        "type": "poly",
+        "id": null
       }
     },
     {
@@ -132,8 +177,8 @@
       }
     },
     {
-      "uid": "_:unnameddusseldorfpretzelcompany",
-      "name": "Unnamed Düsseldorf Pretzel Company",
+      "uid": "_:schneidermannpretzelcompany",
+      "name": "Schneidermann Pretzel Company",
       "article": "August Lindt's place of work.",
       "geo_key": {
         "type": "point",

@@ -1,6 +1,63 @@
 {
   "set": [
     {
+      "uid": "_:stuart",
+      "name": "Stuart",
+      "article": "Stuart works as an ankle biter at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
+      "works_at":[
+        {"uid":"_:cameronmcgoniglesghosttoursthatarescary"}
+      ]
+      ,"has_friends":[{"uid":"_:cameronmcgonigle"}]
+    },
+    {
+      "uid": "_:cameronmcgonigle",
+      "name": "Cameron McGonigle",
+      "article": "Cameron McGonigle is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club. He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
+      "works_at":[
+        {"uid":"_:cameronmcgoniglesghosttoursthatarescary"}
+      ]
+      ,"links":[
+        {"uri":"https://comedybangbang.fandom.com/wiki/Cameron_McGonigle","label":"CBB Wikia"}
+      ]
+      ,"has_friends":[{"uid":"_:stuart"}]
+    },
+    {
+      "uid": "_:unnamedmarssimulatorstowaway",
+      "name": "Unnamed Mars Simulator Stowaway",
+      "article": "One of the crew of August Lindt's Mars Simulator vacation, the Unnamed Stowaway did not survive the experiment due to a bludgeoning with a fire extinguisher."
+    },
+    {
+      "uid": "_:unnamedmarssimulatorbiomedicalscientist",
+      "name": "Unnamed Mars Simulator Biomed Scientist",
+      "article": "One of the surviving crew members from August Lindt's Mars Simulator vacation. The scientist did not survive the experiment."
+    },
+    {
+      "uid": "_:unnamedmarssimulatorentrepreneur",
+      "name": "Unnamed Mars Simulator Entrepreneur",
+      "article": "One of the surviving crew members from August Lindt's Mars Simulator vacation. The entrepreneur did not survive the experiment."
+    },
+    {
+      "uid": "_:unnamedmarssimulatornasarep",
+      "name": "Unnamed Mars Simulator NASA Rep",
+      "article": "One of the crew of August Lindt's Mars Simulator vacation, the Unnamed NASA Rep did not survive the experiment due to a multiple stabbing incident."
+    },
+    {
+      "uid": "_:unnamedmarssimulatordoctor",
+      "name": "Unnamed Mars Simulator Doctor",
+      "article": "One of the crew of August Lindt's Mars Simulator vacation, the Unnamed Doctor did not survive the experiment due to a multiple stabbing incident."
+    },
+    {
+      "uid": "_:elmeredwardsolly",
+      "name": "Elmer Edward Solly",
+      "article": "Edward Solly was a murderer who assumed the identity of former Sha Na Na guitarist Vinnie Taylor. For fifteen years he tutored and groomed Hot Dog to become a member of that band.",
+      "links": [
+        {
+          "uri": "https://en.wikipedia.org/wiki/Elmer_Edward_Solly",
+          "label": "Wikipedia"
+        }
+      ]
+    },
+    {
       "uid": "_:johnbanderson",
       "name": "John B. Anderson",
       "article": "John B. Anderson was a Republican senator and Independent presidential candidate from Illinois.",
@@ -11,6 +68,14 @@
           "uri": "https://en.wikipedia.org/wiki/John_B._Anderson",
           "label": "Wikipedia"
         }
+      ]
+    },
+    {
+      "uid": "_:oscarmeyer",
+      "name": "Oscar Meyer",
+      "article": "Oscar Meyer is a freshwater water skiier and possibly the son of Hot Dog.",
+      "isPossibleChildOf":[
+        {"uid":"_:hotdog"}
       ]
     },
     {
@@ -42,10 +107,15 @@
       "worked_for": [],
       "has_children": [
         {
-          "uid": "_:jooebong"
+          "uid": "_:joebongo"
         }
       ],
       "links": []
+    },
+    {
+      "uid": "_:unnamedscottishguy",
+      "name": "Unnamed Scottish Guy",
+      "article": "Unnamed Scottish Guy is a man who, shortly after a screening of Russell Mulcahy's Highlander in 1986, was decapitated with a stolen sword.",
     },
     {
       "uid": "_:fatherofjoebongo",
@@ -508,12 +578,15 @@
     {
       "uid": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times and C) frequently auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis.",
+      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times, C) doesn't know a lot about space, and D) frequently (50 times as of February 2016) auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis. Also he admitted on CBB400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
       "has_children": [
         {
-          "uid": "_:hotdogsson"
+          "uid": "_:hotdogsunnamedson"
         }
       ],
+      "isClientOf":[
+        {"uid":"_:elmeredwardsolly"}
+      ]
       "works_for": [
         {
           "uid": "_:nashasha"
@@ -557,8 +630,8 @@
       "article": "Don DiMello's Animal Guy is, in effect, a technical advisor to Mr. DiMello's theatre productions."
     },
     {
-      "uid": "_:hotdogsson",
-      "name": "Hot Dog's Son",
+      "uid": "_:hotdogsunnamedson",
+      "name": "Hot Dog's Unnamed Son",
       "article": "Hot Dog's unnamed son (b. 1986) is a young man who fairly frequently is kidnapped."
     },
     {
@@ -806,12 +879,23 @@
       ]
     },
     {
+      "uid": "_:theschneidermannmonkey1",
+      "name": "The Schneidermann Monkey #1",
+      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf."
+      "has_friends":[
+        {"uid":"_:augustlindt"}
+      ]
+    },
+    {
       "uid": "_:augustlindt",
       "name": "August Lindt",
-      "article": "August Lindt is a maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler and in 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide.",
+      "article": "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler. In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide. He is work friends with a monkey and has a purturbed family life. On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can see water in slow motion.",
+      "has_friends":[
+        {"uid":"_:theschneidermannmonkey1"}
+      ],
       "works_at": [
         {
-          "uid": "_:unnameddusseldorfpretzelcompany"
+          "uid": "_:schneidermannpretzelcompany"
         }
       ],
       "links": [
