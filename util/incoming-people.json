@@ -12,15 +12,16 @@
           "label": "Wikipedia"
         }
       ]
-    },{
+    },
+    {
       "uid": "_:jimmybongos",
       "name": "Jimmy Bongos",
       "article": "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos.",
       "has_friends": [],
       "worked_for": [],
       "links": []
-    }
-    ,{
+    },
+    {
       "uid": "_:neptuna",
       "name": "Neptuna",
       "article": "Neptuna is an underwater person and visitor to Comedy Bang! Bang!, once, from the lost city of Atlantis. His maternal grandmother might have been a tuna, which Neptuna disputes.",
@@ -61,13 +62,17 @@
     },
     {
       "uid": "_:joebongo",
-      "member_of":{
-        "uid":"_:rosebushred"
+      "member_of": {
+        "uid": "_:rosebushred"
       },
       "name": "Joe (Bongo) Dunleavy",
       "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system. Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72. He is not an android and he's 'tired of the question.' Also he does own a rug made of human hair.",
       "has_friends": [],
-      "see_also":[{"uid":"_:jimmybongos"}],
+      "see_also": [
+        {
+          "uid": "_:jimmybongos"
+        }
+      ],
       "worked_for": [],
       "links": [
         {
@@ -101,19 +106,22 @@
           "label": "IMDB"
         }
       ]
-    },{
+    },
+    {
       "uid": "_:santaclaus",
       "name": "Santa Claus",
       "article": "Père Noël",
       "links": []
-    },{
+    },
+    {
       "uid": "_:jeanclaudepepi",
       "name": "Jean Claude Pepi",
       "article": "Jean Claude Pepi (b. 1959) is a very famous French actor. He knew from an early age that he was destined to be Jean Claude Pepi and developed a long-standing fantasy to be ruled by bees.",
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Jean_Claude_Pepi",
-        "label": "CBB Wikia"}
+          "label": "CBB Wikia"
+        }
       ]
     },
     {
@@ -155,14 +163,16 @@
       "has_friends": [
         {
           "uid": "_:chipgardner"
-        }
-        ,{
+        },
+        {
           "uid": "_:dondimello"
         }
       ],
-      "worked_for": [{
-        "uid": "_:arclightcinemas"
-      }],
+      "worked_for": [
+        {
+          "uid": "_:arclightcinemas"
+        }
+      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
@@ -175,7 +185,9 @@
       "name": "Golly",
       "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
       "works_for": [
-        {"uid":"_:golly"}
+        {
+          "uid": "_:golly"
+        }
       ],
       "links": [
         {
@@ -202,7 +214,9 @@
       "article": "Byron Denniston is a Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom, where 'watching' entails perching outside of Kensington Palace in a treehouse built by a magician. He was, nonetheless, able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013 at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia. As of CBB#300 in July 2014, the former part of the plan at least appeared successful.",
       "worked_for": [],
       "has_children": [
-        {"uid":"_:princegeorgeofcambridge"}
+        {
+          "uid": "_:princegeorgeofcambridge"
+        }
       ],
       "links": [
         {
@@ -237,8 +251,10 @@
           "uid": "_:arclightcinemas"
         }
       ],
-      "has_friends":[
-        {"uid":"_:gretchen"}
+      "has_friends": [
+        {
+          "uid": "_:gretchen"
+        }
       ],
       "worked_for": [
         {
@@ -269,15 +285,21 @@
       "name": "Michael Jackson",
       "article": "Famous entertainer.",
       "links": []
-    },{
+    },
+    {
       "uid": "_:jimmorrison",
       "name": "Jim Morrison",
       "article": "Famous entertainer.",
       "links": []
-    },{
+    },
+    {
       "uid": "_:gretchen",
       "name": "Gretchen",
-      "see_also": [{"uid":"_:chipgardner"}],
+      "see_also": [
+        {
+          "uid": "_:chipgardner"
+        }
+      ],
       "article": "Gretchen is the Side-by-Side alter ego of Chip Gardner. She has a both a vagina that can be flipped through and a penis that can be stroked to the point of ejaculation.",
       "links": []
     },
@@ -285,16 +307,22 @@
       "uid": "_:drspeedboat",
       "name": "Dr. Speedboat",
       "article": "Dr. Speedboat is a plastic surgeon who works out of a speedboat.",
-      "has_clients":[
-        {"uid":"_:chipgardner"}
-        ,{"uid":"_:michaeljackson"}
+      "has_clients": [
+        {
+          "uid": "_:chipgardner"
+        },
+        {
+          "uid": "_:michaeljackson"
+        }
       ]
     },
     {
       "uid": "_:chipgardner",
       "name": "Chip Gardner",
       "article": "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host of such game shows as 'Electrified or Burning Hot'; 'Zap'; and 'See if You Can Hold This for Half an Hour.' In 2011 Gardner launched a campaign to become the next Honorary Mayor of Hollywood. He is significantly younger than he looks 'for several reasons,' which includes certainly his face having been run over by a Jeep leading him to wear masks for a considerable run of his career including his stint hosting SIYCHTFHAH during which he wore a mask that constantly dripped blood. He lives in a home in the Hollywood Hills that operates not unlike a high security asylum and experimental operating room for captured transients and former contentants on the television game show 'Zap,' the former of whom he has been labotomizing and stitching together to become a vessel for Satan should he return to Earth. He has been known to captain vessels which host Murder Clubs in International Waters. He may have perished in a Murder Club and become a living vessel for Satan himself. Either way, an appearance on Comedy Bang! Bang! #300 revealed that subsequent plastic surgeries have left him looking Vincent d'Onofrio's alien character from the film 'Men in Black.' Chip is also known as the Side-by-Side Gretchen and has been sued more than once by the Jim Morrison estate.",
-      "see_also": {"uid":"_:gretchen"},
+      "see_also": {
+        "uid": "_:gretchen"
+      },
       "had_spouses": [
         {
           "uid": "_:chipgardnersunnamedwife"
@@ -303,8 +331,8 @@
       "has_friends": [
         {
           "uid": "_:gil"
-        }
-        ,{
+        },
+        {
           "uid": "_:dondimello"
         }
       ],
@@ -314,11 +342,12 @@
       "uid": "_:daltonwilcox",
       "name": "Dalton Wilcox",
       "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)' which, due to the incompetence of his publisher, is largely not available anywhere. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is the author of such poems as The Lonesome Cowboy and There's Other Things a Cowboy Can Also Fuck. He is a loyal customer of Alamo Rent A Car.",
-      "had_spouses": [{
-        "uid": "_:daltonwilcoxunnamedwife"
-      }],
-      "has_spouses": [
+      "had_spouses": [
+        {
+          "uid": "_:daltonwilcoxunnamedwife"
+        }
       ],
+      "has_spouses": [],
       "has_friends": [
         {
           "uid": "_:billcarter"
@@ -430,7 +459,11 @@
       "uid": "_:andicallahanrn",
       "name": "Andi Callahan, RN",
       "article": "Andi Callahan is an uncredentialed medical professional and documented tax evader who enjoys frailty, has a history of experimenting on stray animals and transients out of an abandoned house, and now works at the Long-Term Care Floor of Bergen Regional Medical Center in New Jersey where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. He is sensitive to bigotry in the nursing profession and at times has gotten physical about it. His interest in human medicine began when he got his hands on an ape that could beg for its life. In 2011 he wrote a comedic memoir about his adventures as an RN, primarily featuring the crazy things said and done by his patients. He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins.",
-      "see_also":[{"uid":"god"}],
+      "see_also": [
+        {
+          "uid": "god"
+        }
+      ],
       "works_at": [
         {
           "uid": "_:bergenregional"
@@ -481,8 +514,10 @@
           "uid": "_:hotdogsson"
         }
       ],
-      "works_for":[
-        {"uid":"_:nashasha"}
+      "works_for": [
+        {
+          "uid": "_:nashasha"
+        }
       ],
       "worked_at": [
         {
@@ -500,14 +535,20 @@
       "uid": "_:thelizard",
       "name": "The Lizard",
       "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire. (He is Chip Gardner).",
-      "see_also": [{"uid":"_:chipgardner"}]
+      "see_also": [
+        {
+          "uid": "_:chipgardner"
+        }
+      ]
     },
     {
       "uid": "_:zowber",
       "name": "Zowber",
       "article": "Zowber is a member of rock n' roll cover bang Na Sha Sha whose signature move is putting his mouth in his fist.",
-      "works_for":[
-        {"uid":"_:nashasha"}
+      "works_for": [
+        {
+          "uid": "_:nashasha"
+        }
       ]
     },
     {
@@ -524,22 +565,26 @@
       "uid": "_:hotdogswife",
       "name": "Hot Dog's Wife",
       "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger."
-    },{
+    },
+    {
       "uid": "_:jasonwu",
       "name": "Jason Wu",
       "article": "Jason Wu is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
       "has_friends": []
-    },{
+    },
+    {
       "uid": "_:kyledunforth",
       "name": "Kyle Dunforth",
       "article": "Kyle Dunforth is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
       "has_friends": []
-    },{
+    },
+    {
       "uid": "_:thechonger",
       "name": "The Chonger",
       "article": "The Chonger is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
       "has_friends": []
-    },{
+    },
+    {
       "uid": "_:marissawompler",
       "name": "Marissa Wompler",
       "article": "Marissa Wompler is a student at Marina del Rey High School and an intern at Comedy Bang! Bang! In Fall 2014 it was revealed that Don DiMello had been her entertainment mentor for some time.",
@@ -548,56 +593,66 @@
           "uid": "_:dondimello"
         }
       ]
-    },{
+    },
+    {
       "uid": "_:katy",
       "name": "Katy",
-      "article": "Katy is Asian and demure.",
-    },{
+      "article": "Katy is Asian and demure."
+    },
+    {
       "uid": "_:kimmy",
       "name": "Kimmy",
-      "article": "Kimmy is Asian and demure.",
+      "article": "Kimmy is Asian and demure."
     },
     {
       "uid": "_:tracirearden",
       "name": "Traci Rearden",
-      "article": "Traci Rearden is teenager.",
+      "article": "Traci Rearden is teenager."
     },
     {
       "uid": "_:drsethwompler",
       "name": "Dr. Seth Wompler",
-      "article": "Dr. Seth Wompler is a podietrist.",
-    },{
+      "article": "Dr. Seth Wompler is a podietrist."
+    },
+    {
       "uid": "_:daniellebartiromo",
       "name": "Danielle Bartiromo",
-      "article": "Danielle Bartiromo is an amorous teenager.",
-    },{
+      "article": "Danielle Bartiromo is an amorous teenager."
+    },
+    {
       "uid": "_:charlottelistler",
       "name": "Charlotte Listler",
-      "article": "Charlotte Listler is a former sniper, a current educator and educarer. She runs the Starz Academy at Marina del Rey High School in California, is 1/18th Native American, and has an exhaustive collection of soft rock n roll.",
-    },{
+      "article": "Charlotte Listler is a former sniper, a current educator and educarer. She runs the Starz Academy at Marina del Rey High School in California, is 1/18th Native American, and has an exhaustive collection of soft rock n roll."
+    },
+    {
       "uid": "_:ericgutterman",
       "name": "Eric (Gutterballs) Gutterman",
-      "article": "Eric (Gutterballs) Gutterman is an amorous teenager.",
-    },{
+      "article": "Eric (Gutterballs) Gutterman is an amorous teenager."
+    },
+    {
       "uid": "_:dabneycoleperson",
       "name": "Dabney Coleperson",
-      "article": "Dabney Coleperson is a characiturist.",
-    },{
+      "article": "Dabney Coleperson is a characiturist."
+    },
+    {
       "uid": "_:lizmathers",
       "name": "Liz Mathers",
-      "article": "Liz is a student and a caller into Marissa Wompler's birthday party.",
-    },{
+      "article": "Liz is a student and a caller into Marissa Wompler's birthday party."
+    },
+    {
       "uid": "_:karim",
       "name": "Karim",
-      "article": "Karim drives a pickuptruck full of chicken coops.",
-    },{
+      "article": "Karim drives a pickuptruck full of chicken coops."
+    },
+    {
       "uid": "_:felipe",
       "name": "Felipe",
-      "article": "Felipe works a kitchen at George Washington University.",
-    },{
+      "article": "Felipe works a kitchen at George Washington University."
+    },
+    {
       "uid": "_:birthdaygirl",
       "name": "Birthday Girl",
-      "article": "Birthday Girl is a young child left behind after a showing of Don DiMello's Disney's Puff the Magic Dragon.",
+      "article": "Birthday Girl is a young child left behind after a showing of Don DiMello's Disney's Puff the Magic Dragon."
     },
     {
       "uid": "_:dondimello",
@@ -614,11 +669,11 @@
       "has_friends": [
         {
           "uid": "_:gil"
-        }
-        ,{
+        },
+        {
           "uid": "_:chipgardner"
-        }
-        ,{
+        },
+        {
           "uid": "_:marissawompler"
         }
       ],

@@ -3,9 +3,9 @@
     {
       "uid": "_:rosebushred",
       "name": "Rosebush Red",
-      "article": "Rosebush Red is a Marina del Rey High School-based rock band.",
-    }
-    ,{
+      "article": "Rosebush Red is a Marina del Rey High School-based rock band."
+    },
+    {
       "uid": "_:arclightcinemas",
       "name": "ArcLight Cinemas",
       "article": "The ArcLight Cinemas is a cinema where many things have happened.",
@@ -13,8 +13,8 @@
         "type": "poly",
         "id": 133
       }
-    }
-    ,{
+    },
+    {
       "uid": "_:bergenregional",
       "name": "Bergen Regional Medical Center",
       "article": "Bergen Regional Medical Center.",
@@ -22,8 +22,8 @@
         "type": "point",
         "id": 202
       }
-    }
-    ,{
+    },
+    {
       "uid": "_:sixflagsmagicmountain",
       "name": "Six Flags Magic Mountain",
       "article": "Valencia, CA",
@@ -31,8 +31,8 @@
         "type": "point",
         "id": 7
       }
-    }
-    ,{
+    },
+    {
       "uid": "_:pasadenafairytaletheatre",
       "name": "Pasadena Fairy Tale Theatre",
       "article": "Legendary arts venue",
@@ -40,7 +40,8 @@
         "type": "point",
         "id": 6
       }
-    },{
+    },
+    {
       "uid": "_:griffithobservatory",
       "name": "Griffith Observatory",
       "article": "Legendary science venue",
@@ -48,15 +49,18 @@
         "type": "point",
         "id": 250
       }
-    },{
+    },
+    {
       "uid": "_:u2",
       "name": "U2",
       "article": "Rock and roll musical combination."
-    },{
+    },
+    {
       "uid": "_:simpleminds",
       "name": "Simple Minds",
       "article": "Rock and roll musical combination."
-    },{
+    },
+    {
       "uid": "_:jesusjones",
       "name": "Jesus Jones",
       "article": "Rock and roll musical combination."
@@ -82,7 +86,8 @@
       "uid": "_:radiocity",
       "name": "Radio City Music Hall",
       "article": "Radio City Music Hall is a legendary performance space in New York City."
-    },{
+    },
+    {
       "uid": "_:dexysmidnightrunners",
       "name": "Dexys Midnight Runners",
       "article": "Dexys Midnight Runners are an English pop band with soul influences who achieved their major success in the early to mid-1980s."
@@ -91,19 +96,23 @@
       "uid": "_:unnamedmidtownpeeptheatre",
       "name": "Unnamed Peepshow/Theatre in Midtown NYC",
       "article": null
-    },{
+    },
+    {
       "uid": "_:unnamedmedicalpackagingplant",
       "name": "Unnamed Medical Packaging Plant",
       "article": null
-    },{
+    },
+    {
       "uid": "unnamed80sbedandbreakfast",
       "name": "Unnamed 80s-Themed Bed and Breakfast",
       "article": null
-    },{
+    },
+    {
       "uid": "unnamed50sbedandbreakfast",
       "name": "Unnamed 50s-Themed Bed and Breakfast",
       "article": null
-    },{
+    },
+    {
       "uid": "_:unnamedmechanicbusiness",
       "name": "Unnamed Mechanic Business",
       "article": null
