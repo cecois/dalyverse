@@ -4,18 +4,16 @@
       "uid": "_:edwardsollytutorshotdog",
       "name": "Hot Dog Enlists the Tutelage of Edward Solly",
       "article": "Hot Dog hears through the grapevine that former Sha Na Na guitarist Vinnie Taylor has faked his death and is living as Danny C. in St. Petersberg, Florida. Hot Dog claims to have been an apprentice to Solly 'in all things' until 2001, long after Mr. Solly had been made as an imposter and returned to prison in New Jersey for murdering a child.",
-      "timestamp":
-      {
+      "timestamp": {
         "start": "1974-06-22T10:10:00Z",
         "end": "2001-02-12T10:10:00Z"
-      }
-      ,
+      },
       "nb_timestamp": "timestamp is approximate acc. to CBB 400 and Solly's own irl timeline",
-      "participants":[
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:elmeredwardsolly"
         }
       ]
@@ -24,39 +22,47 @@
       "uid": "_:augustlindtvacationsinhawaii",
       "name": "August Lindt Vacations in a Mars Simulator",
       "article": "During his short 11-month vacation in 2016-2017, August Lindt lived in a Mars simulator where multiple stabbings happened to occur.",
-      "geo_key":{
-        "type":"uid",
-        "id":"_:maunaloa"
-      }
-      "timestamp":
-      {
+      "geo_key": {
+        "type": "uid",
+        "id": "_:maunaloa"
+      },
+      "timestamp": {
         "start": "2016-03-22T10:10:00Z",
         "end": "2017-02-12T10:10:00Z"
-      }
+      },
       "nb_timestamp": "timestamp is very approximate acc. to CBB 475",
-      "participants":[
+      "participants": [
         {
           "uid": "_:augustlindt"
         },
-        {"uid": "_:unnamedmarssimulatorstowaway"},
-        {"uid": "_:unnamedmarssimulatorbiomedicalscientist"},
-        {"uid": "_:unnamedmarssimulatorentrepreneur"},
-        {"uid": "_:unnamedmarssimulatornasarep"},
-        {"uid": "_:unnamedmarssimulatordoctor"}
+        {
+          "uid": "_:unnamedmarssimulatorstowaway"
+        },
+        {
+          "uid": "_:unnamedmarssimulatorbiomedicalscientist"
+        },
+        {
+          "uid": "_:unnamedmarssimulatorentrepreneur"
+        },
+        {
+          "uid": "_:unnamedmarssimulatornasarep"
+        },
+        {
+          "uid": "_:unnamedmarssimulatordoctor"
+        }
       ]
-    }
-    ,
+    },
     {
       "uid": "_:hotdoggetskickedoutofnashasha",
       "name": "Hot Dog is Kicked Out of Na Sha Sha",
       "article": "After another member wrote a song (called 'Heynong' something), the boys in Na Sha Sha got cocky and kicked Hot Dog out of the group. The group had, in fact, been holding secret rehearsals for some time and the true reason for Hot Dog's ouster was left somewhat mysterious.",
       "timestamp": "2016-01-01T13:10:00Z",
       "nb_timestamp": "timestamp is very approximate acc. to CBB 400",
-      "participants":[
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:nashasha"
         }
       ]
@@ -67,17 +73,17 @@
       "article": "Inspired by a screening of the film 'Highlander' by Russell Mulcahy, Hot Dog decapitates an unnamed Scottish guy in order to derive their powers.",
       "timestamp": "1986-03-07T22:00:00Z",
       "nb_timestamp": "timestamp is acc. to CBB 400",
-      "participants":[
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:unnamedscottishguy"
         }
-      ]
-      ,"geo_key":{
-        "type":"uid",
-        "id":"_:necromance"
+      ],
+      "geo_key": {
+        "type": "uid",
+        "id": "_:necromance"
       }
     },
     {
@@ -89,12 +95,12 @@
       "geo_key": {
         "type": "uid",
         "id": "_:hiltonhotelhawaii"
-      }
-      "participants":[
+      },
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:shanana"
         }
       ]
@@ -210,12 +216,10 @@
     {
       "uid": "_:joebongogoesonsabbatical1",
       "name": "Between Womp it Up episodes at Largo in 2018.Jan and 2018.Jul, Joe Bongo went on sabbatical by sleeping at Largo at the Coronet, drilling holes in the walls of the women's changing rooms, Porkies-style.",
-      "timestamp":
-      {
+      "timestamp": {
         "start": "2018-01-22T10:10:00Z",
         "end": "2018-12-12T10:10:00Z"
-      }
-      ,
+      },
       "geo_key": {
         "type": "point",
         "id": 976

@@ -3,23 +3,38 @@
     {
       "uid": "_:stuart",
       "name": "Stuart",
-      "article": "Stuart works as an ankle biter at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
-      "works_at":[
-        {"uid":"_:cameronmcgoniglesghosttoursthatarescary"}
+      "article": "Stuart works as an ankle biter at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
       ]
-      ,"has_friends":[{"uid":"_:cameronmcgonigle"}]
     },
     {
       "uid": "_:cameronmcgonigle",
       "name": "Cameron McGonigle",
-      "article": "Cameron McGonigle is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club. He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
-      "works_at":[
-        {"uid":"_:cameronmcgoniglesghosttoursthatarescary"}
+      "article": "Cameron McGonigle is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club. He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Cameron_McGonigle",
+          "label": "CBB Wikia"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:stuart"
+        }
       ]
-      ,"links":[
-        {"uri":"https://comedybangbang.fandom.com/wiki/Cameron_McGonigle","label":"CBB Wikia"}
-      ]
-      ,"has_friends":[{"uid":"_:stuart"}]
     },
     {
       "uid": "_:unnamedmarssimulatorstowaway",
@@ -74,8 +89,10 @@
       "uid": "_:oscarmeyer",
       "name": "Oscar Meyer",
       "article": "Oscar Meyer is a freshwater water skiier and possibly the son of Hot Dog.",
-      "isPossibleChildOf":[
-        {"uid":"_:hotdog"}
+      "isPossibleChildOf": [
+        {
+          "uid": "_:hotdog"
+        }
       ]
     },
     {
@@ -115,7 +132,7 @@
     {
       "uid": "_:unnamedscottishguy",
       "name": "Unnamed Scottish Guy",
-      "article": "Unnamed Scottish Guy is a man who, shortly after a screening of Russell Mulcahy's Highlander in 1986, was decapitated with a stolen sword.",
+      "article": "Unnamed Scottish Guy is a man who, shortly after a screening of Russell Mulcahy's Highlander in 1986, was decapitated with a stolen sword."
     },
     {
       "uid": "_:fatherofjoebongo",
@@ -584,9 +601,11 @@
           "uid": "_:hotdogsunnamedson"
         }
       ],
-      "isClientOf":[
-        {"uid":"_:elmeredwardsolly"}
-      ]
+      "isClientOf": [
+        {
+          "uid": "_:elmeredwardsolly"
+        }
+      ],
       "works_for": [
         {
           "uid": "_:nashasha"
@@ -881,17 +900,21 @@
     {
       "uid": "_:theschneidermannmonkey1",
       "name": "The Schneidermann Monkey #1",
-      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf."
-      "has_friends":[
-        {"uid":"_:augustlindt"}
+      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf.",
+      "has_friends": [
+        {
+          "uid": "_:augustlindt"
+        }
       ]
     },
     {
       "uid": "_:augustlindt",
       "name": "August Lindt",
       "article": "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler. In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide. He is work friends with a monkey and has a purturbed family life. On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can see water in slow motion.",
-      "has_friends":[
-        {"uid":"_:theschneidermannmonkey1"}
+      "has_friends": [
+        {
+          "uid": "_:theschneidermannmonkey1"
+        }
       ],
       "works_at": [
         {
