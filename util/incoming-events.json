@@ -1,6 +1,18 @@
 {
   "set": [
     {
+      "uid": "_:bobbysteemsmainventshitchinaride",
+      "name": "Bobby Steemsma Invents Hitchin a Ride",
+      "article": "Bobby Steemsma, a true legend of water skiing, invents the trick Hitchin' a Ride.",
+      "timestamp": "1978-06-11T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB 550",
+      "participants": [
+        {
+          "uid": "_:bobbysteemsma"
+        }
+      ]
+    },
+    {
       "uid": "_:edwardsollytutorshotdog",
       "name": "Hot Dog Enlists the Tutelage of Edward Solly",
       "article": "Hot Dog hears through the grapevine that former Sha Na Na guitarist Vinnie Taylor has faked his death and is living as Danny C. in St. Petersberg, Florida. Hot Dog claims to have been an apprentice to Solly 'in all things' until 2001, long after Mr. Solly had been made as an imposter and returned to prison in New Jersey for murdering a child.",
@@ -58,10 +70,10 @@
       "article": "After lobbying hard for years, Hot Dog is inducted into the Water Skiing Hall of Fame.",
       "timestamp": "2018-04-01T13:10:00Z",
       "nb_timestamp": "timestamp is a blind guess relative to CBB 550",
-            ,"geo_key": {
+            "geo_key": {
         "type": "uid",
         "id": "_:polkcityfl"
-      }
+      },
       "participants": [
         {"uid": "_:hotdog"}
       ]

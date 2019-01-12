@@ -1,6 +1,21 @@
 {
   "set": [
     {
+      "uid": "_:bobbysteemsma",
+      "name": "Bobby Steemsma",
+      "article": "Bobby Steemsma is a true legend of water skiing."
+    },
+    {
+      "uid": "_:aji",
+      "name": "Barry (Aji)",
+      "article": "Barry (Aji) is a true legend of water skiing who was very tragically bitten by a shark.",
+      "has_friends": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },
+    {
       "uid": "_:darbyquinn",
       "name": "Darby Quinn",
       "article": "Darby Quinn is an American cowboy who once made the mistake of exposing his young horse only to regular puppets and not marionettes. One day a marionette show came through town, spooking the horse and causing much havoc.",
@@ -512,7 +527,7 @@
     {
       "uid": "_:daltonwilcox",
       "name": "Dalton Wilcox",
-      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere. He has also authored such poems as 'The Lonesome Cowboy,' 'There\'s Other Things a Cowboy Can Also Fuck,' and 'I Have Been to Goddamned Europe.' He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is a loyal customer of Alamo Rent A Car; has been to Scotland; has had a tail surgically attached at one point that was later removed.",
+      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere. He has also authored such poems as 'The Lonesome Cowboy,' 'Theres Other Things a Cowboy Can Also Fuck,' and 'I Have Been to Goddamned Europe.' He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is a loyal customer of Alamo Rent A Car; has been to Scotland; has had a tail surgically attached at one point that was later removed.",
       "has_murdered":true,
       "had_spouses": [
         {
