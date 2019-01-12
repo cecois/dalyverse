@@ -79,6 +79,17 @@
       ]
     },
     {
+      "uid": "_:hotdogemailsscreaminscott",
+      "name": "Hot Dog Emails Screamin' Scott",
+      "article": "Bolstered by his success getting the Water Skiing Hall of Fame to allow him to squat with a booth in their parking lot (and having accidentally worked a day at a Hertz counter where he came across Screamin' Scott Simon's email address), Hot Dog emails Mr. Simon with a proposal.",
+      "timestamp": "2017-01-01T13:10:00Z",
+      "nb_timestamp": "timestamp is relative to '18 months' prior to CBB 550",
+      "participants": [
+        {"uid": "_:hotdog"}
+        ,{"uid": "_:screaminscottsimon"}
+      ]
+    },
+    {
       "uid": "_:hotdogloseshisjacket",
       "name": "Hot Dog's Leather Jacket is Stolen Out of His Car",
       "article": "In approximately April 2018, while Hot Dog was in between houses and living out of his car, somebody stole his leather jacket and his can of hair grease.",

@@ -6,9 +6,9 @@
       "article": "Bobby Steensma is a true legend of water skiing."
     },
     {
-      "uid": "_:aji",
-      "name": "Barry (Aji)",
-      "article": "Barry (Aji) is a true legend of water skiing who was very tragically bitten by a shark.",
+      "uid": "_:ahi",
+      "name": "Barry (Ahi)",
+      "article": "Barry (Ahi) is a true legend of water skiing who was very tragically bitten by a shark.",
       "has_friends": [
         {
           "uid": "_:hotdog"
@@ -150,6 +150,17 @@
       "uid": "_:unnamedmarssimulatordoctor",
       "name": "Unnamed Mars Simulator Doctor",
       "article": "One of the crew of August Lindt's Mars Simulator vacation, the Unnamed Doctor did not survive the experiment due to a multiple stabbing incident."
+    },
+    {
+      "uid": "_:screaminscottsimon",
+      "name": "Screamin' Scott Simon",
+      "article": "Screamin' Scott Simon is a member of interpretive Doo Wop group Sha Na Na.",
+      "links": [
+        {
+          "uri": "https://en.wikipedia.org/wiki/Screamin%27_Scott_Simon",
+          "label": "Wikipedia"
+        }
+      ]
     },
     {
       "uid": "_:elmeredwardsolly",
