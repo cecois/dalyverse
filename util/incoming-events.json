@@ -1,14 +1,14 @@
 {
   "set": [
     {
-      "uid": "_:bobbysteemsmainventshitchinaride",
-      "name": "Bobby Steemsma Invents Hitchin a Ride",
-      "article": "Bobby Steemsma, a true legend of water skiing, invents the trick Hitchin' a Ride.",
+      "uid": "_:bobbysteensmainventshitchinaride",
+      "name": "Bobby Steensma Invents Hitchin a Ride",
+      "article": "Bobby Steensma, a true legend of water skiing, invents the trick Hitchin' a Ride.",
       "timestamp": "1978-06-11T13:10:00Z",
       "nb_timestamp": "timestamp is acc. to CBB 550",
       "participants": [
         {
-          "uid": "_:bobbysteemsma"
+          "uid": "_:bobbysteensma"
         }
       ]
     },
