@@ -1,6 +1,24 @@
 {
   "set": [
     {
+      "uid": "_:byrondennistongoestoprison1",
+      "name": "Byron Denniston is Incarcerated in London",
+      "article": "Mr. Denniston was sent to HM Wandsworth Prison for some time in 2018.",
+            "timestamp": {
+        "start": "2018-02-02T10:10:00Z",
+        "end": "2001-08-02T10:10:00Z"
+      },
+      "nb_timestamp": "timestamp a rough guess acc. to CBB 564",
+      "geo_key":{
+        "type":"uid","id":"_:hmprisonwandsworth"
+      },
+      "participants": [
+        {
+          "uid": "_:byrondenniston"
+        }
+      ]
+    },
+    {
       "uid": "_:bobbysteensmainventshitchinaride",
       "name": "Bobby Steensma Invents Hitchin a Ride",
       "article": "Bobby Steensma, a true legend of water skiing, invents the trick Hitchin' a Ride.",
