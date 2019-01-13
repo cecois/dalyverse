@@ -1,0 +1,16 @@
+participatedIn
+locateAt
+hasFriend
+workedFor
+workedAt
+worksFor
+worksAt
+isChildOf
+seeAlso
+isClientOf
+isSpouseOf
+isFormerSpouseOf
+isCaredForBy
+isSiblingOf
+isPetOf
+
