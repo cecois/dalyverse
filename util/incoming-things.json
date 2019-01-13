@@ -1,6 +1,53 @@
 {
   "set": [
     {
+      "uid": "_:hmprisonwandsworth",
+      "name": "HM Prison Wandsworth",
+      "article": "HM Prison Wandsworth is a Category B men's prison at Wandsworth in the London Borough of Wandsworth, South West London, England. Among its notable inmates are or were: Gary Glitter, James Earl Ray, Julian Assange, and Byron Denniston."
+      ,"geo_key":{
+        "type":"point",
+        "id":938
+      }
+    },{
+      "uid": "_:polkcityfl",
+      "name": "Polk City, FL",
+      "article": "Polk City, Florida is home to the Water Skiing Hall of Fame."
+      ,"geo_key":{
+        "type":"poly",
+        "id":520
+      }
+    },
+    {
+      "uid": "_:lochnessmonster",
+      "name": "The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter.",
+      "article": ""
+      ,"geo_key":{
+        "type":"poly",
+        "id":null
+      }
+      "links":[
+        {"uri":"https://en.wikipedia.org/wiki/Loch_Ness_Monster","label":"Wikipedia"}
+      ]
+    },
+    {
+      "uid": "_:edinburghscotland",
+      "name": "Edinburgh, Scotland",
+      "article": "Edinburgh, Scotland, is in Scotland."
+      ,"geo_key":{
+        "type":"poly",
+        "id":null
+      }
+    },
+    {
+      "uid": "_:georgemackenzieofrosehaughmausoleum",
+      "name": "George Mackenzie of Rosehaugh Mausoleum",
+      "article": "George Mackenzie of Rosehaugh Mausoleum is a tourist attraction in Edinburgh."
+      ,"geo_key":{
+        "type":"point",
+        "id":840
+      }
+    },
+    {
       "uid": "_:cameronmcgoniglesghosttoursthatarescary",
       "name": "Cameron McGonigle's Ghost Tours That Are Scary",
       "article": "Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland."

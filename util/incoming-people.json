@@ -1,25 +1,130 @@
 {
   "set": [
     {
+      "uid": "_:bobbysteensma",
+      "name": "Bobby Steensma",
+      "article": "Bobby Steensma is a true legend of water skiing."
+    },
+    {
+      "uid": "_:ahi",
+      "name": "Barry (Ahi)",
+      "article": "Barry (Ahi) is a true legend of water skiing who was very tragically bitten by a shark.",
+      "has_friends": [
+        {
+          "uid": "_:hotdog"
+        }
+      ]
+    },
+    {
+      "uid": "_:darbyquinn",
+      "name": "Darby Quinn",
+      "article": "Darby Quinn is an American cowboy who once made the mistake of exposing his young horse only to regular puppets and not marionettes. One day a marionette show came through town, spooking the horse and causing much havoc.",
+      "has_friends": [
+        {
+          "uid": "_:daltonwilcox"
+        }
+      ]
+    },
+    {
+      "uid": "_:angus",
+      "name": "Angus",
+      "article": "Angus is very tall and works shit detail at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
+      ]
+    },
+    {
+      "uid": "_:laird",
+      "name": "Laird",
+      "article": "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses.",
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
+      ]
+    },
+    {
+      "uid": "_:bryan",
+      "name": "Bryan",
+      "article": "Bryan works as a costume retriever at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
+      ]
+    },
+    {
+      "uid": "_:dougie",
+      "name": "Dougie",
+      "article": "Dougie works as 'William Brody' at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
+      ]
+    },
+    {
       "uid": "_:stuart",
       "name": "Stuart",
-      "article": "Stuart works as an ankle biter at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
-      "works_at":[
-        {"uid":"_:cameronmcgoniglesghosttoursthatarescary"}
+      "article": "Stuart works as an ankle biter and shover at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "lives_at": {
+        "geo_key": "_:georgemackenzieofrosehaughmausoleum",
+        "type": "uid"
+      },
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
       ]
-      ,"has_friends":[{"uid":"_:cameronmcgonigle"}]
     },
     {
       "uid": "_:cameronmcgonigle",
       "name": "Cameron McGonigle",
-      "article": "Cameron McGonigle is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club. He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
-      "works_at":[
-        {"uid":"_:cameronmcgoniglesghosttoursthatarescary"}
+      "article": "Cameron McGonigle (b. 1979) is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club. He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
+      "has_murdered":null,
+      "works_at": [
+        {
+          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
+        }
+      ],
+      "links": [
+        {
+          "uri": "https://comedybangbang.fandom.com/wiki/Cameron_McGonigle",
+          "label": "CBB Wikia"
+        }
+      ],
+      "has_friends": [
+        {
+          "uid": "_:stuart"
+        }
       ]
-      ,"links":[
-        {"uri":"https://comedybangbang.fandom.com/wiki/Cameron_McGonigle","label":"CBB Wikia"}
-      ]
-      ,"has_friends":[{"uid":"_:stuart"}]
     },
     {
       "uid": "_:unnamedmarssimulatorstowaway",
@@ -45,6 +150,17 @@
       "uid": "_:unnamedmarssimulatordoctor",
       "name": "Unnamed Mars Simulator Doctor",
       "article": "One of the crew of August Lindt's Mars Simulator vacation, the Unnamed Doctor did not survive the experiment due to a multiple stabbing incident."
+    },
+    {
+      "uid": "_:screaminscottsimon",
+      "name": "Screamin' Scott Simon",
+      "article": "Screamin' Scott Simon is a member of interpretive Doo Wop group Sha Na Na.",
+      "links": [
+        {
+          "uri": "https://en.wikipedia.org/wiki/Screamin%27_Scott_Simon",
+          "label": "Wikipedia"
+        }
+      ]
     },
     {
       "uid": "_:elmeredwardsolly",
@@ -74,8 +190,10 @@
       "uid": "_:oscarmeyer",
       "name": "Oscar Meyer",
       "article": "Oscar Meyer is a freshwater water skiier and possibly the son of Hot Dog.",
-      "isPossibleChildOf":[
-        {"uid":"_:hotdog"}
+      "isPossibleChildOf": [
+        {
+          "uid": "_:hotdog"
+        }
       ]
     },
     {
@@ -115,7 +233,7 @@
     {
       "uid": "_:unnamedscottishguy",
       "name": "Unnamed Scottish Guy",
-      "article": "Unnamed Scottish Guy is a man who, shortly after a screening of Russell Mulcahy's Highlander in 1986, was decapitated with a stolen sword.",
+      "article": "Unnamed Scottish Guy is a man who, shortly after a screening of Russell Mulcahy's Highlander in 1986, was decapitated with a stolen sword."
     },
     {
       "uid": "_:fatherofjoebongo",
@@ -138,6 +256,7 @@
       "name": "Joe (Bongo) Dunleavy",
       "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system. Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72. He is not an android and he's 'tired of the question.' Also he does own a rug made of human hair.",
       "has_friends": [],
+      "has_murdered":true,
       "see_also": [
         {
           "uid": "_:jimmybongos"
@@ -238,6 +357,7 @@
           "uid": "_:dondimello"
         }
       ],
+      "has_murdered":null,
       "worked_for": [
         {
           "uid": "_:arclightcinemas"
@@ -254,6 +374,7 @@
       "uid": "_:golly",
       "name": "Golly",
       "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
+      "has_murdered":true,
       "works_for": [
         {
           "uid": "_:golly"
@@ -271,6 +392,7 @@
       "name": "Jack Fitzgerald",
       "article": "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment. He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes. Most of his income is from not doing things he said he would do - $100/per. He attended the United College of Arts & Sciences & Knowledge and later founded a college in his back yard, primarily attended by a couple of girls and assisted by one Cactus Tony. Jack owns a coat hanger made of the human remains of his former student body. He makes many decisions by laying out the entrails of former college students and intuiting cosmic advice.",
       "worked_for": [],
+      "has_murdered":true,
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Jack_Fitzgerald",
@@ -281,13 +403,9 @@
     {
       "uid": "_:byrondenniston",
       "name": "Byron Denniston",
-      "article": "Byron Denniston is a Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom, where 'watching' entails perching outside of Kensington Palace in a treehouse built by a magician. He was, nonetheless, able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013 at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia. As of CBB#300 in July 2014, the former part of the plan at least appeared successful.",
+      "article": "Byron Denniston (b.approx 1943) is an amateur Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom. He therefore lives in a treehouse built by a magician that is perched outside of Kensington Palace. As such, he was able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013, at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia. As of CBB#300 in July 2014, the former part of the plan at least appeared successful, however by CBB#564 in September of 2018 Mr. Denniston had already done a stint in HR Prison Wandsworth in London due to a misunderstanding with the guards at Kensington Palace. In Wandsworth, Mr. Denniston promoted himself to guard after the former guard drowned in a large pot of lukewarm soup, worked the remaining 3 hours of the shift, and then promptly escaped. Still, he has a remarkable success rate absconding with royal babies and interacting with them offsite before leaving them to be returned by passers-by. Daily he drinks one coffee and writes one letter to The Daily Mail. He is not a squirrel but he is stealthy and fleet of foot and therefore is able to share lunches with citizens in Hyde Park and, occasionally, steal their wallets. He also owns a collection of 'thousands upon thousands' of adult wigs, none of which fit a baby's head. He wears a vest full of small throwing knives and always carries a small bottle of Chloroform. He is possibly immortal, possibly a modern incarnation of the Wizard Merlin. Unproven. He has accidentally, from time to time, poisoned a baby with food.",
       "worked_for": [],
-      "has_children": [
-        {
-          "uid": "_:princegeorgeofcambridge"
-        }
-      ],
+      "has_murdered":true,
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Byron_Denniston",
@@ -321,6 +439,7 @@
           "uid": "_:arclightcinemas"
         }
       ],
+      "has_murdered":true,
       "has_friends": [
         {
           "uid": "_:gretchen"
@@ -390,9 +509,12 @@
       "uid": "_:chipgardner",
       "name": "Chip Gardner",
       "article": "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host of such game shows as 'Electrified or Burning Hot'; 'Zap'; and 'See if You Can Hold This for Half an Hour.' In 2011 Gardner launched a campaign to become the next Honorary Mayor of Hollywood. He is significantly younger than he looks 'for several reasons,' which includes certainly his face having been run over by a Jeep leading him to wear masks for a considerable run of his career including his stint hosting SIYCHTFHAH during which he wore a mask that constantly dripped blood. He lives in a home in the Hollywood Hills that operates not unlike a high security asylum and experimental operating room for captured transients and former contentants on the television game show 'Zap,' the former of whom he has been labotomizing and stitching together to become a vessel for Satan should he return to Earth. He has been known to captain vessels which host Murder Clubs in International Waters. He may have perished in a Murder Club and become a living vessel for Satan himself. Either way, an appearance on Comedy Bang! Bang! #300 revealed that subsequent plastic surgeries have left him looking Vincent d'Onofrio's alien character from the film 'Men in Black.' Chip is also known as the Side-by-Side Gretchen and has been sued more than once by the Jim Morrison estate.",
-      "see_also": {
+      "has_murdered":true,
+      "see_also": [{
         "uid": "_:gretchen"
-      },
+      },{
+        "uid": "_:thelizard"
+      }],
       "had_spouses": [
         {
           "uid": "_:chipgardnersunnamedwife"
@@ -411,7 +533,8 @@
     {
       "uid": "_:daltonwilcox",
       "name": "Dalton Wilcox",
-      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range)' which, due to the incompetence of his publisher, is largely not available anywhere. He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is the author of such poems as The Lonesome Cowboy and There's Other Things a Cowboy Can Also Fuck. He is a loyal customer of Alamo Rent A Car.",
+      "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere. He has also authored such poems as 'The Lonesome Cowboy,' 'Theres Other Things a Cowboy Can Also Fuck,' and 'I Have Been to Goddamned Europe.' He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is a loyal customer of Alamo Rent A Car; has been to Scotland; has had a tail surgically attached at one point that was later removed.",
+      "has_murdered":true,
       "had_spouses": [
         {
           "uid": "_:daltonwilcoxunnamedwife"
@@ -529,6 +652,7 @@
       "uid": "_:andicallahanrn",
       "name": "Andi Callahan, RN",
       "article": "Andi Callahan is an uncredentialed medical professional and documented tax evader who enjoys frailty, has a history of experimenting on stray animals and transients out of an abandoned house, and now works at the Long-Term Care Floor of Bergen Regional Medical Center in New Jersey where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. He is sensitive to bigotry in the nursing profession and at times has gotten physical about it. His interest in human medicine began when he got his hands on an ape that could beg for its life. In 2011 he wrote a comedic memoir about his adventures as an RN, primarily featuring the crazy things said and done by his patients. He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins.",
+      "has_murdered":true,
       "see_also": [
         {
           "uid": "god"
@@ -578,15 +702,18 @@
     {
       "uid": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times, C) doesn't know a lot about space, and D) frequently (50 times as of February 2016) auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis. Also he admitted on CBB400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
+      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times, C) doesn't know a lot about space, and D) frequently (50 times as of February 2016) auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. He used to own a classic car -- a 1988 Volvo -- but had to sell it. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis. Also he admitted on CBB400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
+      "has_murdered":true,
       "has_children": [
         {
           "uid": "_:hotdogsunnamedson"
         }
       ],
-      "isClientOf":[
-        {"uid":"_:elmeredwardsolly"}
-      ]
+      "isClientOf": [
+        {
+          "uid": "_:elmeredwardsolly"
+        }
+      ],
       "works_for": [
         {
           "uid": "_:nashasha"
@@ -695,6 +822,7 @@
     {
       "uid": "_:charlottelistler",
       "name": "Charlotte Listler",
+      "has_murdered":true,
       "article": "Charlotte Listler is a former sniper, a current educator and educarer. She runs the Starz Academy at Marina del Rey High School in California, is 1/18th Native American, and has an exhaustive collection of soft rock n roll."
     },
     {
@@ -729,6 +857,7 @@
     },
     {
       "uid": "_:dondimello",
+      "has_murdered":true,
       "name": "Don DiMello",
       "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a 'bit of a drooler,' wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. Also he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth. He evidently signs his name accompanied by a tiny doodle of women's breasts.",
       "worked_at": [
@@ -827,6 +956,7 @@
     {
       "uid": "_:billcarter",
       "name": "Bill Carter",
+      "has_murdered":null,
       "article": "Bill Carter is a personal trainer born in 1922. He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant). At least as recently as 2010 he works at Bally's in Hollywood. Sort of. He is also riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed. He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business. He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group). He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.  In 2014 it was revealed he had been training with Dalton Wilcox for years in anticipation of an epic battle between good and evil.",
       "works_at": [
         {
@@ -881,17 +1011,22 @@
     {
       "uid": "_:theschneidermannmonkey1",
       "name": "The Schneidermann Monkey #1",
-      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf."
-      "has_friends":[
-        {"uid":"_:augustlindt"}
+      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf.",
+      "has_friends": [
+        {
+          "uid": "_:augustlindt"
+        }
       ]
     },
     {
       "uid": "_:augustlindt",
       "name": "August Lindt",
+      "has_murdered":true,
       "article": "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler. In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide. He is work friends with a monkey and has a purturbed family life. On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can see water in slow motion.",
-      "has_friends":[
-        {"uid":"_:theschneidermannmonkey1"}
+      "has_friends": [
+        {
+          "uid": "_:theschneidermannmonkey1"
+        }
       ],
       "works_at": [
         {

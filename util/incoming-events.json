@@ -1,21 +1,61 @@
 {
   "set": [
     {
+      "uid": "_:byrondennistonisborn",
+      "name": "Byron Denniston is Born",
+      "article": "Approximately in 1943, Byron Denniston is born somewhere in the United Kingdom. Possibly.",
+      "timestamp": "1943-06-06T10:10:00Z",
+      "nb_timestamp": "timestamp a rough guess acc. to CBB 564",
+      "participants": [
+        {
+          "uid": "_:byrondenniston"
+        }
+      ]
+    },
+    {
+      "uid": "_:byrondennistongoestoprison1",
+      "name": "Byron Denniston is Incarcerated in London",
+      "article": "Mr. Denniston was sent to HM Wandsworth Prison for a maximum sentence of 3 months some time in 2018.",
+      "timestamp": {
+        "start": "2018-08-02T10:10:00Z",
+        "end": "2001-08-12T10:10:00Z"
+      },
+      "nb_timestamp": "timestamp a rough guess acc. to CBB 564",
+      "geo_key":{
+        "type":"uid","id":"_:hmprisonwandsworth"
+      },
+      "participants": [
+        {
+          "uid": "_:byrondenniston"
+        }
+      ]
+    },
+    {
+      "uid": "_:bobbysteensmainventshitchinaride",
+      "name": "Bobby Steensma Invents Hitchin a Ride",
+      "article": "Bobby Steensma, a true legend of water skiing, invents the trick Hitchin' a Ride.",
+      "timestamp": "1978-06-11T13:10:00Z",
+      "nb_timestamp": "timestamp is acc. to CBB 550",
+      "participants": [
+        {
+          "uid": "_:bobbysteensma"
+        }
+      ]
+    },
+    {
       "uid": "_:edwardsollytutorshotdog",
       "name": "Hot Dog Enlists the Tutelage of Edward Solly",
       "article": "Hot Dog hears through the grapevine that former Sha Na Na guitarist Vinnie Taylor has faked his death and is living as Danny C. in St. Petersberg, Florida. Hot Dog claims to have been an apprentice to Solly 'in all things' until 2001, long after Mr. Solly had been made as an imposter and returned to prison in New Jersey for murdering a child.",
-      "timestamp":
-      {
+      "timestamp": {
         "start": "1974-06-22T10:10:00Z",
         "end": "2001-02-12T10:10:00Z"
-      }
-      ,
+      },
       "nb_timestamp": "timestamp is approximate acc. to CBB 400 and Solly's own irl timeline",
-      "participants":[
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:elmeredwardsolly"
         }
       ]
@@ -24,39 +64,112 @@
       "uid": "_:augustlindtvacationsinhawaii",
       "name": "August Lindt Vacations in a Mars Simulator",
       "article": "During his short 11-month vacation in 2016-2017, August Lindt lived in a Mars simulator where multiple stabbings happened to occur.",
-      "geo_key":{
-        "type":"uid",
-        "id":"_:maunaloa"
-      }
-      "timestamp":
-      {
+      "geo_key": {
+        "type": "uid",
+        "id": "_:maunaloa"
+      },
+      "timestamp": {
         "start": "2016-03-22T10:10:00Z",
         "end": "2017-02-12T10:10:00Z"
-      }
+      },
       "nb_timestamp": "timestamp is very approximate acc. to CBB 475",
-      "participants":[
+      "participants": [
         {
           "uid": "_:augustlindt"
         },
-        {"uid": "_:unnamedmarssimulatorstowaway"},
-        {"uid": "_:unnamedmarssimulatorbiomedicalscientist"},
-        {"uid": "_:unnamedmarssimulatorentrepreneur"},
-        {"uid": "_:unnamedmarssimulatornasarep"},
-        {"uid": "_:unnamedmarssimulatordoctor"}
+        {
+          "uid": "_:unnamedmarssimulatorstowaway"
+        },
+        {
+          "uid": "_:unnamedmarssimulatorbiomedicalscientist"
+        },
+        {
+          "uid": "_:unnamedmarssimulatorentrepreneur"
+        },
+        {
+          "uid": "_:unnamedmarssimulatornasarep"
+        },
+        {
+          "uid": "_:unnamedmarssimulatordoctor"
+        }
       ]
-    }
-    ,
+    },
     {
+      "uid": "_:hotdogmakesthehalloffame",
+      "name": "Hot Dog is Inducted Into the Water Skiing Hall of Fame",
+      "article": "After lobbying hard for years, Hot Dog is inducted into the Water Skiing Hall of Fame.",
+      "timestamp": "2018-04-01T13:10:00Z",
+      "nb_timestamp": "timestamp is a blind guess relative to CBB 550",
+      "geo_key": {
+        "type": "uid",
+        "id": "_:polkcityfl"
+      },
+      "participants": [
+        {"uid": "_:hotdog"}
+      ]
+    },
+    {
+      "uid": "_:hotdogemailsscreaminscott",
+      "name": "Hot Dog Emails Screamin' Scott",
+      "article": "Bolstered by his success getting the Water Skiing Hall of Fame to allow him to squat with a booth in their parking lot (and having accidentally worked a day at a Hertz counter where he came across Screamin' Scott Simon's email address), Hot Dog emails Mr. Simon with a proposal.",
+      "timestamp": "2017-01-01T13:10:00Z",
+      "nb_timestamp": "timestamp is relative to '18 months' prior to CBB 550",
+      "participants": [
+        {"uid": "_:hotdog"}
+        ,{"uid": "_:screaminscottsimon"}
+      ]
+    },
+    {
+      "uid": "_:hotdogloseshisjacket",
+      "name": "Hot Dog's Leather Jacket is Stolen Out of His Car",
+      "article": "In approximately April 2018, while Hot Dog was in between houses and living out of his car, somebody stole his leather jacket and his can of hair grease.",
+      "timestamp": "2018-05-01T13:10:00Z",
+      "nb_timestamp": "timestamp is approximate relative to CBB 550",
+      "participants": [
+        {"uid": "_:hotdog"}
+      ]
+    },
+    {
+      "uid": "_:daltonwilcoxkillsthelochnessmonster",
+      "name": "Dalton Wilcox Kills the Loch Ness Monster",
+      "article": "Dalton Wilcox travels to Scotland and murders the shapeshifting Loch Ness Monster while in human form.",
+      "timestamp": "2017-08-01T13:10:00Z",
+      "nb_timestamp": "timestamp is approximate relative to CBB 529",
+      "participants": [
+        {"uid": "_:daltonwilcox"}
+        ,{"uid": "_:lochnessmonster"}
+      ]
+      ,"geo_key": {
+        "type": "uid",
+        "id": null
+      }
+    },
+    {
+      "uid": "_:cameronmcgonigleisborn",
+      "name": "Cameron McGonigle is Born",
+      "article": "Cameron McGonigle is born in Edinburgh, Scotland.",
+      "timestamp": "1979-06-01T13:10:00Z",
+      "nb_timestamp": "timestamp is to the year acc. to CBB 518",
+      "participants": [
+        {
+          "uid": "_:cameronmcgonigle"
+        }
+      ]
+      ,"geo_key": {
+        "type": "uid",
+        "id": null
+      }
+    },{
       "uid": "_:hotdoggetskickedoutofnashasha",
       "name": "Hot Dog is Kicked Out of Na Sha Sha",
       "article": "After another member wrote a song (called 'Heynong' something), the boys in Na Sha Sha got cocky and kicked Hot Dog out of the group. The group had, in fact, been holding secret rehearsals for some time and the true reason for Hot Dog's ouster was left somewhat mysterious.",
       "timestamp": "2016-01-01T13:10:00Z",
       "nb_timestamp": "timestamp is very approximate acc. to CBB 400",
-      "participants":[
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:nashasha"
         }
       ]
@@ -67,17 +180,17 @@
       "article": "Inspired by a screening of the film 'Highlander' by Russell Mulcahy, Hot Dog decapitates an unnamed Scottish guy in order to derive their powers.",
       "timestamp": "1986-03-07T22:00:00Z",
       "nb_timestamp": "timestamp is acc. to CBB 400",
-      "participants":[
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:unnamedscottishguy"
         }
-      ]
-      ,"geo_key":{
-        "type":"uid",
-        "id":"_:necromance"
+      ],
+      "geo_key": {
+        "type": "uid",
+        "id": "_:necromance"
       }
     },
     {
@@ -89,12 +202,12 @@
       "geo_key": {
         "type": "uid",
         "id": "_:hiltonhotelhawaii"
-      }
-      "participants":[
+      },
+      "participants": [
         {
           "uid": "_:hotdog"
-        }
-        ,{
+        },
+        {
           "uid": "_:shanana"
         }
       ]
@@ -210,12 +323,10 @@
     {
       "uid": "_:joebongogoesonsabbatical1",
       "name": "Between Womp it Up episodes at Largo in 2018.Jan and 2018.Jul, Joe Bongo went on sabbatical by sleeping at Largo at the Coronet, drilling holes in the walls of the women's changing rooms, Porkies-style.",
-      "timestamp":
-      {
+      "timestamp": {
         "start": "2018-01-22T10:10:00Z",
         "end": "2018-12-12T10:10:00Z"
-      }
-      ,
+      },
       "geo_key": {
         "type": "point",
         "id": 976
