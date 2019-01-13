@@ -1,12 +1,24 @@
 {
   "set": [
     {
+      "uid": "_:byrondennistonisborn",
+      "name": "Byron Denniston is Born",
+      "article": "Approximately in 1943, Byron Denniston is born somewhere in the United Kingdom. Possibly.",
+      "timestamp": "1943-06-06T10:10:00Z",
+      "nb_timestamp": "timestamp a rough guess acc. to CBB 564",
+      "participants": [
+        {
+          "uid": "_:byrondenniston"
+        }
+      ]
+    },
+    {
       "uid": "_:byrondennistongoestoprison1",
       "name": "Byron Denniston is Incarcerated in London",
-      "article": "Mr. Denniston was sent to HM Wandsworth Prison for some time in 2018.",
-            "timestamp": {
-        "start": "2018-02-02T10:10:00Z",
-        "end": "2001-08-02T10:10:00Z"
+      "article": "Mr. Denniston was sent to HM Wandsworth Prison for a maximum sentence of 3 months some time in 2018.",
+      "timestamp": {
+        "start": "2018-08-02T10:10:00Z",
+        "end": "2001-08-12T10:10:00Z"
       },
       "nb_timestamp": "timestamp a rough guess acc. to CBB 564",
       "geo_key":{
@@ -88,7 +100,7 @@
       "article": "After lobbying hard for years, Hot Dog is inducted into the Water Skiing Hall of Fame.",
       "timestamp": "2018-04-01T13:10:00Z",
       "nb_timestamp": "timestamp is a blind guess relative to CBB 550",
-            "geo_key": {
+      "geo_key": {
         "type": "uid",
         "id": "_:polkcityfl"
       },
