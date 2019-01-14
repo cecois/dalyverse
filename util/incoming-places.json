@@ -1,0 +1,330 @@
+[
+  {
+    "uid": "_:courtyardoldtown",
+    "name": "Courtyard Los Angeles Pasadena/Old Town",
+    "article": "site of: Quinceañeras",
+    "geo_id": {
+      "type": "point",
+      "id": 597
+    }
+  },
+  {
+    "uid": "_:nordstromsantamonica",
+    "name": "Nordstrom Santa Monica",
+    "article": "great coat selection",
+    "geo_id": {
+      "type": "point",
+      "id": 17
+    }
+  },
+  {
+    "uid": "_:thegrovela",
+    "name": "The Grove",
+    "article": "popular hangout",
+    "geo_id": {
+      "type": "point",
+      "id": 13
+    }
+  },{
+    "uid": "_:melroseatgower",
+    "name": "Melrose @ Gower",
+    "article": "intersection",
+    "geo_id": {
+      "type": "point",
+      "id": 902
+    }
+  },
+  {
+    "uid": "_:1031wilshire",
+    "name": "1031 Wilshire - Home of Indie 103.1",
+    "article": "not really",
+    "geo_id": {
+      "type": "point",
+      "id": 111
+    }
+  },
+  {
+    "uid": "_:thepinebarrensofnj",
+    "name": "The Pine Barrens of NJ",
+    "article": "best place in all of NJ",
+    "geo_id": {
+      "type": "poly",
+      "id": 27
+    }
+  },
+  {
+    "uid": "_:epcotcenter",
+    "name": "Epcot Center",
+    "article": "popular tourism site",
+    "geo_id": {
+      "type": "poly",
+      "id": 140
+    }
+  },
+  {
+    "uid": "_:gracelandelvis",
+    "name": "Elvis' Graceland",
+    "article": "popular tourism site",
+    "geo_id": {
+      "type": "point",
+      "id": 130
+    }
+  },
+  {
+    "uid": "_:hollywoodsign",
+    "name": "The Hollywood Sign",
+    "article": "site of: failed suicides",
+    "geo_id": {
+      "type": "point",
+      "id": 134
+    }
+  },
+  {
+    "uid": "_:ctusa",
+    "name": "Connecticut, USA",
+    "article": "home of: Yale, a Pantages Theatre",
+    "geo_id": {
+      "type": "poly",
+      "id": 2
+    }
+  },
+  {
+    "uid": "_:earwolfsunset",
+    "name": "Earwolf Studios - Sunset",
+    "article": "Site of: multiple defenestrations.",
+    "geo_id": {
+      "type": "point",
+      "id": 137
+    }
+  },
+  {
+    "uid": "_:londonbridgehavasu",
+    "name": "London Bridge (Lake Havasu City)",
+    "article": "Former site of: a Dr. Jekyll.",
+    "geo_id": {
+      "type": "point",
+      "id": 968
+    }
+  },
+  {
+    "uid": "_:tombofjimmorrison",
+    "name": "Jim Morrison's Tomb (Père-Lachaise)",
+    "article": "Hot graffiti spot.",
+    "geo_id": {
+      "type": "point",
+      "id": 319
+    }
+  },
+  {
+    "uid": "_:internationalwaters",
+    "name": "International Waters",
+    "article": "A marine frontier, of sorts.",
+    "geo_id": {
+      "type": "line",
+      "id": 11
+    }
+  },
+  {
+    "uid": "_:mdhs",
+    "name": "Venice High School (proxy for: Marina del Rey High School)",
+    "article": "Venice High School serves the MDR community.",
+    "geo_id": {
+      "type": "point",
+      "id": 210
+    }
+  },
+  {
+    "uid": "_:largo",
+    "name": "Largo at the Coronet",
+    "article": "Largo at the Coronet is a theatre space in Los Angeles.",
+    "geo_id": {
+      "type": "point",
+      "id": 977
+    }
+  },
+  {
+    "uid": "_:venicefishingpier",
+    "name": "Venice Fishing Pier",
+    "article": "Venice Fishing Pier is a pier for fishing in Venice.",
+    "geo_id": {
+      "type": "poly",
+      "id": 221
+    }
+  },
+  {
+    "uid": "_:lochness",
+    "name": "Loch Ness",
+    "article": "Loch Ness is a lake in the United Kingdom.",
+    "geo_id": {
+      "type": "poly",
+      "id": 250
+    }
+  },
+  {
+    "uid": "_:hmprisonwandsworth",
+    "name": "HM Prison Wandsworth",
+    "article": "HM Prison Wandsworth is a Category B men's prison at Wandsworth in the London Borough of Wandsworth, South West London, England. Among its notable inmates are or were: Gary Glitter, James Earl Ray, Julian Assange, and Byron Denniston.",
+    "geo_id": {
+      "type": "point",
+      "id": 938
+    }
+  },
+  {
+    "uid": "_:polkcityfl",
+    "name": "Polk City, FL",
+    "article": "Polk City, Florida is home to the Water Skiing Hall of Fame.",
+    "geo_id": {
+      "type": "poly",
+      "id": 520
+    }
+  },
+  {
+    "uid": "_:edinburghscotland",
+    "name": "Edinburgh, Scotland",
+    "article": "Edinburgh, Scotland, is in Scotland.",
+    "geo_id": {
+      "type": "poly",
+      "id": 465
+    }
+  },
+  {
+    "uid": "_:georgemackenzieofrosehaughmausoleum",
+    "name": "George Mackenzie of Rosehaugh Mausoleum",
+    "article": "George Mackenzie of Rosehaugh Mausoleum is a tourist attraction in Edinburgh.",
+    "geo_id": {
+      "type": "point",
+      "id": 840
+    }
+  },
+  {
+    "uid": "_:necromance",
+    "name": "Necromance",
+    "article": "In March 1986, following the release of Russell Mulcahy's 'Highlander,' Hot Dog stole  a sword from a novelty and costume shop approximately 10 blocks from the ArcLight and then decapitates an unnamed Scottish guy with it.",
+    "geo_id": {
+      "type": "point",
+      "id": 582
+    }
+  },
+  {
+    "uid": "_:maunaloa",
+    "name": "Mauna Loa",
+    "article": "Mauna Loa is an Hawaiin volcano that maybe could be a decent spot for a Mars simulator.",
+    "geo_id": {
+      "type": "point",
+      "id": 769
+    }
+  },
+  {
+    "uid": "_:hiltonhotelhawaii",
+    "name": "Hilton Waikoloa Village",
+    "article": "Site of: Hot Dog's probable last audition for Sha Na Na.",
+    "geo_id": {
+      "type": "point",
+      "id": 580
+    }
+  },
+  {
+    "uid": "_:arclightcinemas",
+    "name": "ArcLight Cinemas",
+    "article": "The ArcLight Cinemas is a cinema where many things have happened.",
+    "geo_id": {
+      "type": "poly",
+      "id": 133
+    }
+  },
+  {
+    "uid": "_:huntingtonbeach",
+    "name": "Huntington Beach",
+    "article": "Site of: a surfing world record; nothing else",
+    "geo_id": {
+      "type": "poly",
+      "id": null
+    }
+  },
+  {
+    "uid": "_:bergenregional",
+    "name": "Bergen Regional Medical Center",
+    "article": "Bergen Regional Medical Center.",
+    "geo_id": {
+      "type": "point",
+      "id": 202
+    }
+  },
+  {
+    "uid": "_:sixflagsmagicmountain",
+    "name": "Six Flags Magic Mountain",
+    "article": "Valencia, CA",
+    "geo_id": {
+      "type": "point",
+      "id": 7
+    }
+  },
+  {
+    "uid": "_:pasadenafairytaletheatre",
+    "name": "Pasadena Fairy Tale Theatre",
+    "article": "Legendary arts venue",
+    "geo_id": {
+      "type": "point",
+      "id": 6
+    }
+  },
+  {
+    "uid": "_:griffithobservatory",
+    "name": "Griffith Observatory",
+    "article": "Legendary science venue",
+    "geo_id": {
+      "type": "point",
+      "id": 250
+    }
+  },
+  {
+    "uid": "_:radiocity",
+    "name": "Radio City Music Hall",
+    "article": "Radio City Music Hall is a legendary performance space in New York City."
+  },
+  {
+    "uid": "_:ballyshollywood",
+    "name": "Bally's Hollywood",
+    "article": "Bill Carter's place of work.",
+    "geo_id": {
+      "type": "point",
+      "id": 149
+    }
+  },
+  {
+    "uid": "_:schneidermannpretzelcompany",
+    "name": "Schneidermann Pretzel Company",
+    "article": "August Lindt's place of work.",
+    "geo_id": {
+      "type": "point",
+      "id": 129
+    }
+  },
+  {
+    "uid": "_:lotpinc",
+    "name": "Life of the Party, Inc.",
+    "article": "Life of the Party, Inc., is a party-execution operation launched and owned by Danny Mahoney. The way it works is: if you're throwing a party -- any kind of a party, doesn't matter if it's a Baz Mitzvah, somebody's getting out of jail, or even a gay wedding -- you hire LOTPCInc and Danny will come to the party and make it fantastic by being the life of the party. Harmonica performances must be explicitly requested. The company can be reached at 1-800-CMONNOW.",
+    "geo_id": {
+      "type": "point",
+      "id": 111
+    }
+  },
+  {
+    "uid": "_:unnamedlotionshop",
+    "name": "Unnamed Lotion Shop",
+    "article": "Possibly only existing in the fantastical imagination of Jeff Garlin, this unnamed lotion shop supposedly sits on Boner Avenue and is staffed by, among others no doubt, 'Mr. Francisco,' the star of one of Ben Alterman's standup jokes.",
+    "geo_id": {
+      "type": "point",
+      "id": 111
+    }
+  },
+  {
+    "uid": "_:shadyviewboardandcare",
+    "name": "Shady View Board & Care",
+    "article": "Shady View Board & Care is an active retirement community east of Los Angeles.",
+    "geo_id": {
+      "type": "point",
+      "id": 598
+    }
+  }
+]

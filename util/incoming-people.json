@@ -8,121 +8,47 @@
     {
       "uid": "_:ahi",
       "name": "Barry (Ahi)",
-      "article": "Barry (Ahi) is a true legend of water skiing who was very tragically bitten by a shark.",
-      "has_friends": [
-        {
-          "uid": "_:hotdog"
-        }
-      ]
+      "article": "Barry (Ahi) is a true legend of water skiing who was very tragically bitten by a shark."
     },
     {
       "uid": "_:darbyquinn",
       "name": "Darby Quinn",
-      "article": "Darby Quinn is an American cowboy who once made the mistake of exposing his young horse only to regular puppets and not marionettes. One day a marionette show came through town, spooking the horse and causing much havoc.",
-      "has_friends": [
-        {
-          "uid": "_:daltonwilcox"
-        }
-      ]
+      "article": "Darby Quinn is an American cowboy who once made the mistake of exposing his young horse only to regular puppets and not marionettes. One day a marionette show came through town, spooking the horse and causing much havoc."
     },
     {
       "uid": "_:angus",
       "name": "Angus",
-      "article": "Angus is very tall and works shit detail at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
-      "works_at": [
-        {
-          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:cameronmcgonigle"
-        }
-      ]
+      "article": "Angus is very tall and works shit detail at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
     },
     {
       "uid": "_:laird",
       "name": "Laird",
-      "article": "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses.",
-      "works_at": [
-        {
-          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:cameronmcgonigle"
-        }
-      ]
+      "article": "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses."
     },
     {
       "uid": "_:bryan",
       "name": "Bryan",
-      "article": "Bryan works as a costume retriever at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
-      "works_at": [
-        {
-          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:cameronmcgonigle"
-        }
-      ]
+      "article": "Bryan works as a costume retriever at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
     },
     {
       "uid": "_:dougie",
       "name": "Dougie",
-      "article": "Dougie works as 'William Brody' at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
-      "works_at": [
-        {
-          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:cameronmcgonigle"
-        }
-      ]
+      "article": "Dougie works as 'William Brody' at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
     },
     {
       "uid": "_:stuart",
       "name": "Stuart",
-      "article": "Stuart works as an ankle biter and shover at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
-      "lives_at": {
-        "geo_key": "_:georgemackenzieofrosehaughmausoleum",
-        "type": "uid"
-      },
-      "works_at": [
-        {
-          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:cameronmcgonigle"
-        }
-      ]
+      "article": "Stuart works as an ankle biter and shover at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
     },
     {
       "uid": "_:cameronmcgonigle",
       "name": "Cameron McGonigle",
       "article": "Cameron McGonigle (b. 1979) is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club. He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland.",
       "has_murdered":null,
-      "works_at": [
-        {
-          "uid": "_:cameronmcgoniglesghosttoursthatarescary"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Cameron_McGonigle",
           "label": "CBB Wikia"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:stuart"
         }
       ]
     },
@@ -177,8 +103,6 @@
       "uid": "_:johnbanderson",
       "name": "John B. Anderson",
       "article": "John B. Anderson was a Republican senator and Independent presidential candidate from Illinois.",
-      "has_friends": [],
-      "worked_for": [],
       "links": [
         {
           "uri": "https://en.wikipedia.org/wiki/John_B._Anderson",
@@ -189,27 +113,17 @@
     {
       "uid": "_:oscarmeyer",
       "name": "Oscar Meyer",
-      "article": "Oscar Meyer is a freshwater water skiier and possibly the son of Hot Dog.",
-      "isPossibleChildOf": [
-        {
-          "uid": "_:hotdog"
-        }
-      ]
+      "article": "Oscar Meyer is a freshwater water skiier and possibly the son of Hot Dog."
     },
     {
       "uid": "_:jimmybongos",
       "name": "Jimmy Bongos",
-      "article": "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos.",
-      "has_friends": [],
-      "worked_for": [],
-      "links": []
+      "article": "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
     },
     {
       "uid": "_:neptuna",
       "name": "Neptuna",
       "article": "Neptuna is an underwater person and visitor to Comedy Bang! Bang!, once, from the lost city of Atlantis. His maternal grandmother might have been a tuna, which Neptuna disputes.",
-      "has_friends": [],
-      "worked_for": [],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Neptuna",
@@ -221,13 +135,6 @@
       "uid": "_:motherofjoebongo",
       "name": "Joe Bongo's Mother",
       "article": "Joe Bongo's unnamed mother was a diabetic.",
-      "has_friends": [],
-      "worked_for": [],
-      "has_children": [
-        {
-          "uid": "_:joebongo"
-        }
-      ],
       "links": []
     },
     {
@@ -239,30 +146,73 @@
       "uid": "_:fatherofjoebongo",
       "name": "Joe Bongo's Father",
       "article": "Joe Bongo's unnamed father (b. 1929) suffered from a number of medical conditions, including diabetes; poor venous blood circulation; eustachian tube restrictions; chronic depression; alcoholism; fucked-up diaphragm. Up through 2015, at the age of 86, he continuously tried to serve in the U.S. Army.",
-      "has_friends": [],
-      "worked_for": [],
-      "has_children": [
-        {
-          "uid": "_:jooebong"
-        }
-      ],
       "links": []
     },
     {
-      "uid": "_:joebongo",
-      "member_of": {
-        "uid": "_:rosebushred"
-      },
-      "name": "Joe (Bongo) Dunleavy",
-      "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees. He also does parking lot security and cafeteria duty at MDRH and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system. Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72. He is not an android and he's 'tired of the question.' Also he does own a rug made of human hair.",
-      "has_friends": [],
-      "has_murdered":true,
-      "see_also": [
+      "uid": "_:deanbuford",
+      "name": "Dean Buford",
+      "article": "Dean Buford is/was a student at Marina del Rey High School and a former member of Joe Bongo's band, Rosebush Red. He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
+    },
+    {
+      "uid": "_:philcollinsjr",
+      "name": "Phil Collins, Jr.",
+      "article": "Phil Collins, Jr. is/was a student at Marina del Rey High School and a member of Joe Bongo's band, Rosebush Red. He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
+    },
+    {
+      "uid": "_:garylee",
+      "name": "Gary Lee",
+      "article": "Gary Lee is/was a student at Marina del Rey High School and a member of Joe Bongo's band, Rosebush Red. He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
+    },
+    {
+      "uid": "_:ezrapalmer",
+      "name": "Ezra Palmer",
+      "article": "Ezra Palmer is/was a student at Marina del Rey High School and a member of Joe Bongo's band, Rosebush Red. He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
+    },
+    {
+      "uid": "_:carlpalmer",
+      "name": "Carl Palmer",
+      "article": "Carl Palmer is a member of prog-rock group Emerson, Lake & Palmer."
+    },
+    {
+      "uid": "_:billbuford",
+      "name": "Bill Buford",
+      "article": "Bill Buford is a member of prog-rock group Yes."
+    },
+    {
+      "uid": "_:philcollins",
+      "name": "Phil Collins",
+      "article": "Phil Collins is a member of prog-rock group Genesis."
+    },{
+      "uid": "_:geddylee",
+      "name": "Geddy Lee",
+      "article": "Geddy Lee is a member of prog-rock group Rush."
+    },
+    {
+      "uid": "_:emersonlakepalmer",
+      "name": "Emerson, Lake & Palmer",
+      "article": "Emerson, Lake & Palmer is a legendary English prog-rock band."
+    },
         {
-          "uid": "_:jimmybongos"
-        }
-      ],
-      "worked_for": [],
+      "uid": "_:yesband",
+      "name": "Yes",
+      "article": "Yes is a legendary English prog-rock band."
+    },
+    {
+      "uid": "_:rushband",
+      "name": "Rush",
+      "article": "Rush is a legendary Canadian prog-rock band."
+    },
+
+        {
+      "uid": "_:genesisband",
+      "name": "Genesis",
+      "article": "Genesis is a legendary English prog-rock band."
+    },
+    {
+      "uid": "_:joebongo",
+      "name": "Joe (Bongo) Dunleavy",
+      "article": "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class and encourages students to share with classmates intimate details about their lives. He also occasionally encourages his students to stand on their desks and call him 'Captain.' Mr. Bongo wears a beautiful set of (fake) teeth which make him salivate and spit in the classes he teaches, making the experience 'a little slushy' for the front row. He lives in a tent on a speedboat in Marina del Rey. He's 'pretty good at tricking people out onto the water' via fake whale watching tours. He believes he may be the father of a number of children who look like him and are proficient at playing the bongos as well. He considers himself a drug survivor, a designation with which not everybody agrees except perhaps his doctor who has determined that Mr. Bongo is operating on only two of the four quadrants of his brain. He does parking lot security and cafeteria duty at MDRHS and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey). Mr. Bongo commands a musical combination called Rosebush Red. He does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit. He gets into a lot of fights with charicaturists out on the Venice Fishing Pier. He writes one sexually-explicit letter a day to Ian Anderson of Jethro Tull. He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system. Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72. He is not an android and he's 'tired of the question.' Also he does own a rug made of human hair and has been 'brutally beaten on a number occasions' for not having his bongos with him.",
+      "has_murdered":true,
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Joe_Bongo",
@@ -274,8 +224,6 @@
       "uid": "_:nicknolte",
       "name": "Nick Nolte",
       "article": "Nick Nolte is a respected theatrical and film actor known for being drunk and looking crazy and sounding 'like a sad tea kettle.'",
-      "has_friends": [],
-      "worked_for": [],
       "links": [
         {
           "uri": "https://www.imdb.com/name/nm0000560",
@@ -287,8 +235,6 @@
       "uid": "_:johncreilly",
       "name": "John C. Reilly",
       "article": "John C. Reilly is a respected theatrical and film actor known for saying the word 'awesome.' He knows seven people.",
-      "has_friends": [],
-      "worked_for": [],
       "links": [
         {
           "uri": "https://www.imdb.com/name/nm0000604/",
@@ -317,8 +263,6 @@
       "uid": "_:andrewlloydwebber",
       "name": "Andrew Lloyd Webber",
       "article": "Dame Sir ALW is a Lord and peer of the British realm.",
-      "has_friends": [],
-      "worked_for": [],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Lord_Andrew_Lloyd_Webber",
@@ -330,8 +274,6 @@
       "uid": "_:hrgiger",
       "name": "H.R. Giger",
       "article": "H.R. Giger is an obsidion sexsmith; and inky-hued dinky feud; and a visual artist.",
-      "has_friends": [],
-      "worked_for": [],
       "links": [
         {
           "uri": "http://www.gosuperego.com/h-r-giger/",
@@ -349,20 +291,7 @@
       "uid": "_:gil",
       "name": "Gil",
       "article": "Gil has been in show business since the day he ended up back on shore following an incident with a Murder Club out in International Waters. He is former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist. Roped into a Murder Club on a boat in International Waters in his 20s, he was beckoned by a fish, his future persistent ventriloquist dummy, to safety. He habitually carries out the temper tantrums of his dummy, Golly. He carries a beeper that looks like a toothbrush and wears Kleenex boxes with Nike swooshes painted on them for shoes. He's 'always been a blinker.' Also he is the supreme commander of Satan on Earth.",
-      "has_friends": [
-        {
-          "uid": "_:chipgardner"
-        },
-        {
-          "uid": "_:dondimello"
-        }
-      ],
       "has_murdered":null,
-      "worked_for": [
-        {
-          "uid": "_:arclightcinemas"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
@@ -375,11 +304,6 @@
       "name": "Golly",
       "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
       "has_murdered":true,
-      "works_for": [
-        {
-          "uid": "_:golly"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Gil_%26_Golly",
@@ -391,7 +315,6 @@
       "uid": "_:jackfitzgerald",
       "name": "Jack Fitzgerald",
       "article": "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment. He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes. Most of his income is from not doing things he said he would do - $100/per. He attended the United College of Arts & Sciences & Knowledge and later founded a college in his back yard, primarily attended by a couple of girls and assisted by one Cactus Tony. Jack owns a coat hanger made of the human remains of his former student body. He makes many decisions by laying out the entrails of former college students and intuiting cosmic advice.",
-      "worked_for": [],
       "has_murdered":true,
       "links": [
         {
@@ -404,7 +327,6 @@
       "uid": "_:byrondenniston",
       "name": "Byron Denniston",
       "article": "Byron Denniston (b.approx 1943) is an amateur Royal Watcher and aspiring sorcerer and Practicer of Black Magic (prior to this a Kate Middleton Watcher) from the United Kingdom. He therefore lives in a treehouse built by a magician that is perched outside of Kensington Palace. As such, he was able to get a scoop on the potential baby names for the baby who would come to be known as His Royal Highness Prince Louis of Cambridge. He owns a hat made by a 'true, authentic African' and, in 2013, at least, intended to impersonate a doctor and kidnap the royal child and sit on the throne of Australia. As of CBB#300 in July 2014, the former part of the plan at least appeared successful, however by CBB#564 in September of 2018 Mr. Denniston had already done a stint in HR Prison Wandsworth in London due to a misunderstanding with the guards at Kensington Palace. In Wandsworth, Mr. Denniston promoted himself to guard after the former guard drowned in a large pot of lukewarm soup, worked the remaining 3 hours of the shift, and then promptly escaped. Still, he has a remarkable success rate absconding with royal babies and interacting with them offsite before leaving them to be returned by passers-by. Daily he drinks one coffee and writes one letter to The Daily Mail. He is not a squirrel but he is stealthy and fleet of foot and therefore is able to share lunches with citizens in Hyde Park and, occasionally, steal their wallets. He also owns a collection of 'thousands upon thousands' of adult wigs, none of which fit a baby's head. He wears a vest full of small throwing knives and always carries a small bottle of Chloroform. He is possibly immortal, possibly a modern incarnation of the Wizard Merlin. Unproven. He has accidentally, from time to time, poisoned a baby with food.",
-      "worked_for": [],
       "has_murdered":true,
       "links": [
         {
@@ -417,45 +339,17 @@
       "uid": "_:unnamedbookingagent",
       "name": "Unnamed Male Booking Agent",
       "article": "Unnamed Booking Agent had his phone stolen (following a likely murder) and is probably dead.",
-      "worked_for": [],
-      "links": []
     },
     {
       "uid": "_:princegeorgeofcambridge",
       "name": "Beetle Bailey",
       "article": "Formerly Prince George of Cambridge, Beetle Bailey was kidnapped sometime between July 2013 and July 2014 by Byron Denniston and promptly renamed.",
-      "worked_for": [],
-      "links": []
     },
     {
       "uid": "_:cactustony",
       "name": "Cactus Tony",
       "article": "Cactus (Anthony) Tony is a utility guy, mostly. Formerly a member of the Croatian Special Forces whose hands are 'registered weapons when combined with a shovel,' and formerly both a prisoner and a prison guard, he is described at times as a 'gadfly' and a 'man about town' and 'unencumbered by a sense of right and wrong' and 'up for anything' and 'good at digging holes,' and 'the Poet Laureate of the Car Circuit' (where the Car Circuit is a cadre of homeless who sleep in unlocked cars in and around Los Angeles), he is a known cohort of Don DiMello and Andi Callahan. He routinely files away Andi Callahan's fingerprints for him; he very likely was the 'Rapids Rapist' in rural Wisconsin; and everything he wears is made from a snake and he's terrific with kids. Tony left home at 11 years of age when 'shit went bad' and his parents asked him to leave. He didn't leave immediately, was then 'set-to with a hammer' while he read the funny papers and left. He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house. In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.' He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn as well as Jack Fitzgerald's backyard college, for which he serves as an admissions officer. Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent.",
-      "works_for": [
-        {
-          "uid": "_:dondimello"
-        },
-        {
-          "uid": "_:arclightcinemas"
-        }
-      ],
       "has_murdered":true,
-      "has_friends": [
-        {
-          "uid": "_:gretchen"
-        }
-      ],
-      "worked_for": [
-        {
-          "uid": "_:andicallahanrn"
-        },
-        {
-          "uid": "_:billcarter"
-        },
-        {
-          "uid": "_:jackfitzgerald"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Cactus_Tony",
@@ -467,28 +361,20 @@
       "uid": "_:zippy",
       "name": "Zippy",
       "article": "Zippy is evidently a speed and/or cocaine dealer to at least Cactus Tony, probably others.",
-      "links": []
     },
     {
       "uid": "_:michaeljackson",
       "name": "Michael Jackson",
       "article": "Famous entertainer.",
-      "links": []
     },
     {
       "uid": "_:jimmorrison",
       "name": "Jim Morrison",
       "article": "Famous entertainer.",
-      "links": []
     },
     {
       "uid": "_:gretchen",
       "name": "Gretchen",
-      "see_also": [
-        {
-          "uid": "_:chipgardner"
-        }
-      ],
       "article": "Gretchen is the Side-by-Side alter ego of Chip Gardner. She has a both a vagina that can be flipped through and a penis that can be stroked to the point of ejaculation.",
       "links": []
     },
@@ -496,38 +382,12 @@
       "uid": "_:drspeedboat",
       "name": "Dr. Speedboat",
       "article": "Dr. Speedboat is a plastic surgeon who works out of a speedboat.",
-      "has_clients": [
-        {
-          "uid": "_:chipgardner"
-        },
-        {
-          "uid": "_:michaeljackson"
-        }
-      ]
     },
     {
       "uid": "_:chipgardner",
       "name": "Chip Gardner",
       "article": "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host of such game shows as 'Electrified or Burning Hot'; 'Zap'; and 'See if You Can Hold This for Half an Hour.' In 2011 Gardner launched a campaign to become the next Honorary Mayor of Hollywood. He is significantly younger than he looks 'for several reasons,' which includes certainly his face having been run over by a Jeep leading him to wear masks for a considerable run of his career including his stint hosting SIYCHTFHAH during which he wore a mask that constantly dripped blood. He lives in a home in the Hollywood Hills that operates not unlike a high security asylum and experimental operating room for captured transients and former contentants on the television game show 'Zap,' the former of whom he has been labotomizing and stitching together to become a vessel for Satan should he return to Earth. He has been known to captain vessels which host Murder Clubs in International Waters. He may have perished in a Murder Club and become a living vessel for Satan himself. Either way, an appearance on Comedy Bang! Bang! #300 revealed that subsequent plastic surgeries have left him looking Vincent d'Onofrio's alien character from the film 'Men in Black.' Chip is also known as the Side-by-Side Gretchen and has been sued more than once by the Jim Morrison estate.",
       "has_murdered":true,
-      "see_also": [{
-        "uid": "_:gretchen"
-      },{
-        "uid": "_:thelizard"
-      }],
-      "had_spouses": [
-        {
-          "uid": "_:chipgardnersunnamedwife"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:gil"
-        },
-        {
-          "uid": "_:dondimello"
-        }
-      ],
       "links": []
     },
     {
@@ -535,142 +395,82 @@
       "name": "Dalton Wilcox",
       "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere. He has also authored such poems as 'The Lonesome Cowboy,' 'Theres Other Things a Cowboy Can Also Fuck,' and 'I Have Been to Goddamned Europe.' He is a self-declared vanquisher of mummies and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He lives in Manhattan in his college-aged girlfriend's NYU dorm. He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is a loyal customer of Alamo Rent A Car; has been to Scotland; has had a tail surgically attached at one point that was later removed.",
       "has_murdered":true,
-      "had_spouses": [
-        {
-          "uid": "_:daltonwilcoxunnamedwife"
-        }
-      ],
-      "has_spouses": [],
-      "has_friends": [
-        {
-          "uid": "_:billcarter"
-        }
-      ],
-      "has_children": [
-        {
-          "uid": "_:daltonwilcoxunnameddaughter1"
-        },
-        {
-          "uid": "_:daltonwilcoxunnameddaughter2"
-        },
-        {
-          "uid": "_:daltonwilcoxunnameddaughter3"
-        }
-      ],
-      "links": []
     },
     {
       "uid": "_:stephaniegoldberg",
       "name": "Stephanie Goldberg",
-      "article": "Stephanie Goldberg was an NYU student and, in 2011, the girlfriend of Cowboy Poet Dalton Wilcox. She was murdered in September of that same year.",
-      "links": []
+      "article": "Stephanie Goldberg was an NYU student and, in 2011, the girlfriend of Cowboy Poet Dalton Wilcox. She was murdered in September of that same year."
     },
     {
       "uid": "_:aunteileen",
       "name": "Cactus Tony's Aunt Eileen",
-      "article": "Cactus Tony's Aunt Eileen met an unfortunate end when she was pushed into a hole he was digging to China and then 'covered up.' Her body was later exhumed.",
-      "links": []
+      "article": "Cactus Tony's Aunt Eileen met an unfortunate end when she was pushed into a hole he was digging to China and then 'covered up.' Her body was later exhumed."
     },
     {
       "uid": "_:daltonwilcoxunnameddaughter1",
       "name": "Dalton Wilcox' Unnamed Daughter #1 of 3",
-      "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed.",
-      "links": []
+      "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed."
     },
     {
       "uid": "_:daltonwilcoxunnameddaughter2",
       "name": "Dalton Wilcox' Unnamed Daughter #2 of 3",
-      "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed.",
-      "links": []
+      "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed."
     },
     {
       "uid": "_:daltonwilcoxunnameddaughter3",
       "name": "Dalton Wilcox' Unnamed Daughter #3 of 3",
-      "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed.",
-      "links": []
+      "article": "Dalton Wilcox' Unnamed daughter was too fat to get out of bed for some time and was then killed."
     },
     {
       "uid": "_:chipgardnersunnamedwife",
       "name": "Chip Gardner's Unnamed Wife",
-      "article": "Chip Gardner's Unnamed Wife lost a game of 'Houdini' in the family pool and subsequently passed.",
-      "links": []
+      "article": "Chip Gardner's Unnamed Wife lost a game of 'Houdini' in the family pool and subsequently passed."
     },
     {
       "uid": "_:ceceliawilcox",
       "name": "Cecelia Wilcox",
-      "article": "Cecelia Wilcox was too fat to get out of bed for some time and was then killed.",
-      "links": []
+      "article": "Cecelia Wilcox was too fat to get out of bed for some time and was then killed."
     },
     {
       "uid": "_:jasonmantzoukas",
       "name": "Jason Mantzoukas",
-      "article": "Jason Mantkoukas is not on Twitter.",
-      "links": []
+      "article": "Jason Mantkoukas is not on Twitter."
     },
     {
       "uid": "_:clivedundeeswife",
       "name": "Clive Dundee's Unnamed Wife",
-      "article": "She is barren.",
-      "has_spouses": [
-        {
-          "uid": "_:clivedundee"
-        }
-      ],
-      "links": []
+      "article": "She is barren."
     },
     {
       "uid": "_:abrahamappleby",
       "name": "Abraham Appleby",
-      "article": "Abraham Appleby ('Double A') is a noted water skiier and the second man to ever have sexual intercourse on water skiis.",
-      "links": []
+      "article": "Abraham Appleby ('Double A') is a noted water skiier and the second man to ever have sexual intercourse on water skiis."
     },
     {
       "uid": "_:abrahamapplebysgirlfriend",
       "name": "Abraham Appleby's Girlfriend",
-      "article": "Abraham Appleby's girlfriend is the second woman to ever have sexual intercourse on water skiis.",
-      "links": []
+      "article": "Abraham Appleby's girlfriend is the second woman to ever have sexual intercourse on water skiis."
     },
     {
       "uid": "_:bergenregionalbernard",
       "name": "Bernard",
-      "article": "Bernard was a patient at Bergen Regional Medical Center who had his sheets stolent by another patient. They were later found balled up in a toilet alongside a #2.",
-      "links": []
+      "article": "Bernard was a patient at Bergen Regional Medical Center who had his sheets stolent by another patient. They were later found balled up in a toilet alongside a #2."
     },
     {
       "uid": "_:jimmypage",
       "name": "Jimmy Page",
-      "article": "Jimmy Page is a legendary guitarist and thief of American blues.",
-      "links": []
+      "article": "Jimmy Page is a legendary guitarist and thief of American blues."
     },
     {
       "uid": "_:bergenregionalrosa",
       "name": "Rosa",
-      "article": "Rosa was a patient at Bergen Regional Medical Center in New Jersey who was found uncontrollably crying one night by floor staff at Bergen. When no number of comedy bits and impressions and magic tricks would cure it she was wheeled down to a vacant room at the end of the hallway and was found dead the next morning with a defunct nurse's call button in her hand.",
-      "links": []
+      "article": "Rosa was a patient at Bergen Regional Medical Center in New Jersey who was found uncontrollably crying one night by floor staff at Bergen. When no number of comedy bits and impressions and magic tricks would cure it she was wheeled down to a vacant room at the end of the hallway and was found dead the next morning with a defunct nurse's call button in her hand."
     },
     {
       "uid": "_:andicallahanrn",
       "name": "Andi Callahan, RN",
       "article": "Andi Callahan is an uncredentialed medical professional and documented tax evader who enjoys frailty, has a history of experimenting on stray animals and transients out of an abandoned house, and now works at the Long-Term Care Floor of Bergen Regional Medical Center in New Jersey where many of the senior citizen patients are suffering from dementia and were committed against their will. He therefore laughs a lot. He is sensitive to bigotry in the nursing profession and at times has gotten physical about it. His interest in human medicine began when he got his hands on an ape that could beg for its life. In 2011 he wrote a comedic memoir about his adventures as an RN, primarily featuring the crazy things said and done by his patients. He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins.",
       "has_murdered":true,
-      "see_also": [
-        {
-          "uid": "god"
-        }
-      ],
-      "works_at": [
-        {
-          "uid": "_:bergenregional"
-        }
-      ],
-      "cares_for": [
-        {
-          "uid": "_:bergenregionalbernard"
-        },
-        {
-          "uid": "bergenregionalrosa"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Andi_Callahan",
@@ -682,16 +482,6 @@
       "uid": "_:clivedundee",
       "name": "Clive Dundee",
       "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony.",
-      "born": 1963,
-      "worked_for": {
-        "uid": "_:u2"
-      },
-      "has_spouses": {
-        "uid": "_:clivedundeeswife"
-      },
-      "has_friends": {
-        "uid": "_:dondimello"
-      },
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Clive_Dundee",
@@ -704,26 +494,6 @@
       "name": "Hot Dog",
       "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times, C) doesn't know a lot about space, and D) frequently (50 times as of February 2016) auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. He used to own a classic car -- a 1988 Volvo -- but had to sell it. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis. Also he admitted on CBB400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
       "has_murdered":true,
-      "has_children": [
-        {
-          "uid": "_:hotdogsunnamedson"
-        }
-      ],
-      "isClientOf": [
-        {
-          "uid": "_:elmeredwardsolly"
-        }
-      ],
-      "works_for": [
-        {
-          "uid": "_:nashasha"
-        }
-      ],
-      "worked_at": [
-        {
-          "uid": "_:unnamedbedandbreakfast"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Hot_Dog",
@@ -734,22 +504,12 @@
     {
       "uid": "_:thelizard",
       "name": "The Lizard",
-      "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire. (He is Chip Gardner).",
-      "see_also": [
-        {
-          "uid": "_:chipgardner"
-        }
-      ]
+      "article": "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire. (He is Chip Gardner)."
     },
     {
       "uid": "_:zowber",
       "name": "Zowber",
-      "article": "Zowber is a member of rock n' roll cover bang Na Sha Sha whose signature move is putting his mouth in his fist.",
-      "works_for": [
-        {
-          "uid": "_:nashasha"
-        }
-      ]
+      "article": "Zowber is a member of rock n' roll cover bang Na Sha Sha whose signature move is putting his mouth in his fist."
     },
     {
       "uid": "_:dondimellosanimalguy",
@@ -769,30 +529,22 @@
     {
       "uid": "_:jasonwu",
       "name": "Jason Wu",
-      "article": "Jason Wu is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
-      "has_friends": []
+      "article": "Jason Wu is a student at Marina del Rey High School and a member of musical combination Rosebush Red."
     },
     {
       "uid": "_:kyledunforth",
       "name": "Kyle Dunforth",
-      "article": "Kyle Dunforth is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
-      "has_friends": []
+      "article": "Kyle Dunforth is a student at Marina del Rey High School and a member of musical combination Rosebush Red."
     },
     {
       "uid": "_:thechonger",
       "name": "The Chonger",
-      "article": "The Chonger is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
-      "has_friends": []
+      "article": "The Chonger is a student at Marina del Rey High School and a member of musical combination Rosebush Red."
     },
     {
       "uid": "_:marissawompler",
       "name": "Marissa Wompler",
-      "article": "Marissa Wompler is a student at Marina del Rey High School and an intern at Comedy Bang! Bang! In Fall 2014 it was revealed that Don DiMello had been her entertainment mentor for some time.",
-      "has_friends": [
-        {
-          "uid": "_:dondimello"
-        }
-      ]
+      "article": "Marissa Wompler is a student at Marina del Rey High School and an intern at Comedy Bang! Bang! In Fall 2014 it was revealed that Don DiMello had been her entertainment mentor for some time."
     },
     {
       "uid": "_:katy",
@@ -860,31 +612,6 @@
       "has_murdered":true,
       "name": "Don DiMello",
       "article": "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California. He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show. He was community-raised in a brothel that was later burned to the ground in a likely case of arson. His earliest memory is witnessing a shooting of a prostitute at said brothel. He is a 'bit of a drooler,' wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011. He has been 'trying to get into heroin for years.' He sidelines as the night manager of ArcLight Cinemas in Los Angeles. Also he is the supreme commander -- the embodiment of all evil in the known and unknown universe throughout perpetuity and to the dawn of time and forever for all time -- of Gil the ventriloquist dummy who is in turn the supreme commander of Satan on Earth. He evidently signs his name accompanied by a tiny doodle of women's breasts.",
-      "worked_at": [
-        {
-          "uid": "_:radiocity"
-        },
-        {
-          "uid": "_:unnamedmidtownpeeptheatre"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:gil"
-        },
-        {
-          "uid": "_:chipgardner"
-        },
-        {
-          "uid": "_:marissawompler"
-        }
-      ],
-      "works_for": [
-        {
-          "uid": "_:arclightcinemas"
-        }
-      ],
-      "has_family": [],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Don_DiMello",
@@ -896,25 +623,6 @@
       "uid": "_:patrickmcmahon",
       "name": "Patrick McMahon",
       "article": "Patrick McMahon is a traditional Irish storyteller from Limerick, Ireland. Born in 1960, he wrote limericks for the first 50 years of his life, then transitioned to prose in Fall, 2010. He formerly played tambourine for Dexys Midnight Runners and worked at a medical packaging plant.",
-      "worked_at": [
-        {
-          "uid": "_:dexysmidnightrunners"
-        },
-        {
-          "uid": "_:unnamedmedicalpackagingplant"
-        },
-        {
-          "uid": "_:unnamedmechanicbusiness"
-        }
-      ],
-      "has_family": [
-        {
-          "uid": "_:shamusmcmahon"
-        },
-        {
-          "uid": "_:tommcmahon"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Patrick_McMahon",
@@ -925,54 +633,18 @@
     {
       "uid": "_:shamusmcmahon",
       "name": "Shamus McMahon",
-      "article": "Shamus McMahon is a wealthy and successful traditional Irish storyteller from Limerick, Ireland.",
-      "has_family": [
-        {
-          "uid": "_:patrickmcmahon"
-        },
-        {
-          "uid": "_:tommcmahon"
-        }
-      ]
+      "article": "Shamus McMahon is a wealthy and successful traditional Irish storyteller from Limerick, Ireland."
     },
     {
       "uid": "_:tommcmahon",
       "name": "Tom McMahon",
-      "article": "Tom McMahon is a mechanic.",
-      "worked_at": [
-        {
-          "uid": "_:unnamedmechanicbusiness"
-        }
-      ],
-      "has_family": [
-        {
-          "uid": "_:patrickmcmahon"
-        },
-        {
-          "uid": "_:shamusmcmahon"
-        }
-      ]
+      "article": "Tom McMahon is a mechanic."
     },
     {
       "uid": "_:billcarter",
       "name": "Bill Carter",
       "has_murdered":null,
       "article": "Bill Carter is a personal trainer born in 1922. He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant). At least as recently as 2010 he works at Bally's in Hollywood. Sort of. He is also riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed. He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business. He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group). He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.  In 2014 it was revealed he had been training with Dalton Wilcox for years in anticipation of an epic battle between good and evil.",
-      "works_at": [
-        {
-          "uid": "_:trainerforthestarsseekingstars"
-        }
-      ],
-      "worked_at": [
-        {
-          "uid": "_:ballyshollywood"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:daltonwilcox"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/Bill_Carter",
@@ -983,56 +655,28 @@
     {
       "uid": "_:rochelletheelf",
       "name": "Rochelle the Elf",
-      "article": "Rochelle the Elf is a former nurse practitioner but now mostly spends her time in the woods performing Satanic rituals. She once tested Bill Carter for AIDS (negative).",
-      "links": []
+      "article": "Rochelle the Elf is a former nurse practitioner but now mostly spends her time in the woods performing Satanic rituals. She once tested Bill Carter for AIDS (negative)."
     },
     {
       "uid": "_:victor",
       "name": "Victor",
-      "article": "Victor is Bill Carter's Strongman and camera man. He is also a certified giant.",
-      "works_at": [
-        {
-          "uid": "_:trainerforthestarsseekingstars"
-        }
-      ],
-      "links": []
+      "article": "Victor is Bill Carter's Strongman and camera man. He is also a certified giant."
     },
     {
       "uid": "_:carygrant",
       "name": "Cary Grant",
-      "article": "Cary Grant was an actor.",
-      "links": [
-        {
-          "uri": "https://comedybangbang.fandom.com/wiki/Bill_Carter",
-          "label": "CBB Wikia"
-        }
-      ]
+      "article": "Cary Grant was an actor."
     },
     {
       "uid": "_:theschneidermannmonkey1",
       "name": "The Schneidermann Monkey #1",
-      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf.",
-      "has_friends": [
-        {
-          "uid": "_:augustlindt"
-        }
-      ]
+      "article": "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf."
     },
     {
       "uid": "_:augustlindt",
       "name": "August Lindt",
       "has_murdered":true,
       "article": "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany. August is an avid traveler. In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide. He is work friends with a monkey and has a purturbed family life. On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can see water in slow motion.",
-      "has_friends": [
-        {
-          "uid": "_:theschneidermannmonkey1"
-        }
-      ],
-      "works_at": [
-        {
-          "uid": "_:schneidermannpretzelcompany"
-        }
-      ],
       "links": [
         {
           "uri": "https://comedybangbang.fandom.com/wiki/August_Lindt",
@@ -1044,21 +688,6 @@
       "uid": "_:dannymahoney",
       "name": "Danny Mahoney",
       "article": "Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following his failed suicide attempt in the Pacific Ocean. Prior to that (~2008) he owned and operated a plumbing business with his nephew, Bertrand until that nephew 'grew weary of [Danny's] personality' and executed a hostile takeover. Danny \"didn't get into drugs or join a Russian Roullette club\" and instead, in the winter of 2008, bought a heavy coat from Nordstrom's Hollywood. In the water, about to drown, he invented LotP. He left the coat on the beach.",
-      "worked_at": [
-        {
-          "uid": "_:unnamedplumbingco"
-        }
-      ],
-      "works_at": [
-        {
-          "uid": "_:lotpcinc"
-        }
-      ],
-      "has_family": [
-        {
-          "uid": "_:bertmahoney"
-        }
-      ],
       "links": [
         {
           "uri": "http://comedybangbang.wikia.com/wiki/Danny_Mahoney",
@@ -1069,17 +698,7 @@
     {
       "uid": "_:bertmahoney",
       "name": "Bertrand (Bert) Mahoney",
-      "article": "Bertrand Mahoney is the nephew of Danny Mahoney. He is the victim of physical abuse (by Danny and by Danny's own admission) and the successful executor in 2008 of a hostile takeover of the pair's plumbing business.",
-      "worked_at": [
-        {
-          "uid": "_:unnamedplumbingco"
-        }
-      ],
-      "has_family": [
-        {
-          "uid": "_:dannymahoney"
-        }
-      ]
+      "article": "Bertrand Mahoney is the nephew of Danny Mahoney. He is the victim of physical abuse (by Danny and by Danny's own admission) and the successful executor in 2008 of a hostile takeover of the pair's plumbing business."
     },
     {
       "uid": "_:scottaukerman",
@@ -1112,38 +731,6 @@
     {
       "uid": "_:benalterman",
       "name": "Ben Alterman",
-      "lives_at": {
-        "geo_key": null,
-        "type": "point"
-      },
-      "has_children": [
-        {
-          "uid": "_:crystalalterman"
-        }
-      ],
-      "has_grandchildren": [
-        {
-          "uid": "_:ashleypinto"
-        }
-      ],
-      "has_exspouses": [
-        {
-          "uid": "_:ingridalterman"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:thewidowfeeney"
-        },
-        {
-          "uid": "_:mrshakamora"
-        }
-      ],
-      "has_pets": [
-        {
-          "uid": "_:pietrothedog"
-        }
-      ],
       "links": [
         {
           "uri": "http://comedybangbang.wikia.com/wiki/Ben_Alterman",
@@ -1157,16 +744,6 @@
       "name": "Crystal Pinto",
       "death_by": "Ovarian Cancer",
       "links": [],
-      "has_spouse": [
-        {
-          "uid": "_:bigbob"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:littlebarnabus"
-        }
-      ],
       "article": "Crystal Pinto (b. 1966) is the daughter of Ben Alterman."
     },
     {
@@ -1180,109 +757,45 @@
       "name": "Ingrid Alterman",
       "death_by": "suicide",
       "links": [],
-      "has_exspouses": [
-        {
-          "uid": "_:benalterman"
-        }
-      ],
       "article": "Ingrid Alterman is the barren first wife of Ben Alterman."
     },
     {
       "uid": "_:irenetherockette",
       "name": "Irene the Rockette",
       "death_by": "unk.",
-      "links": [],
-      "worked_at": [
-        {
-          "uid": "_:radiocity"
-        }
-      ],
       "article": "Irene the Rockette was kicked off of the Rockettes team due to a leg rash and later died."
     },
     {
       "uid": "_:thewidowfeeney",
       "name": "The Widow Feeney",
-      "death_by": null,
       "links": [],
-      "lives_at": {
-        "geo_key": null,
-        "type": "point"
-      },
-      "has_friends": [
-        {
-          "uid": "_:benalterman"
-        }
-      ],
       "article": "The Widow Feeney is a very thin friend and buildingmate of Ben Alterman."
     },
     {
       "uid": "_:mrshakamora",
       "name": "Mrs. Hakamora",
-      "death_by": null,
       "links": [],
-      "lives_at": {
-        "geo_key": null,
-        "type": "point"
-      },
-      "has_friends": [
-        {
-          "uid": "_:benalterman"
-        }
-      ],
       "article": "Mrs. Hakamora is a friend and buildingmate of Ben Alterman."
     },
     {
       "uid": "_:mrfrancisco",
       "name": "Mr. Francisco",
-      "death_by": null,
-      "links": [],
-      "lives_at": {
-        "geo_key": null,
-        "type": "point"
-      },
-      "works_at": [
-        {
-          "uid": "_:thelotionshop"
-        }
-      ],
-      "has_friends": [
-        {
-          "uid": "_:benalterman"
-        }
-      ],
       "article": "Mr. Francisco is a friend of Ben Alterman's and works at 'the lotion shop.' He is, according to Ben, reliably unreliable. He also, according to the same source, gives great blowjobs."
     },
     {
       "uid": "_:pietrothedog",
       "name": "Pietro the Dog",
-      "death_by": null,
-      "links": [],
-      "lives_at": {
-        "geo_key": null,
-        "type": "point"
-      },
       "article": "Pietro the Dog is the illegal pet of Ben Alterman."
     },
     {
       "uid": "_:littlebarnabus",
       "name": "Little Barnabus",
       "links": [],
-      "has_friends": [
-        {
-          "uid": "_:crystalalterman"
-        }
-      ],
       "article": "Little Barnabus is a childhood boyfriend of Crystal Alterman."
     },
     {
       "uid": "_:bigbobpinto",
       "name": "Big Bob Pinto",
-      "links": [],
-      "has_spouse": [
-        {
-          "uid": "_:crystalalterman"
-        }
-      ],
       "article": "Big Bob Pinto (5'1\", 420) married Crystal Alterman."
     }
   ]
