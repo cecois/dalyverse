@@ -1,5 +1,14 @@
 [
   {
+    "uid": "_:laramiefeedandwesternsupply",
+    "name": "Laramie Feed and Western Supply",
+    "article": "LFWS is a supplier of western gear and other supplies to cowboys.",
+    "geo_key": {
+      "type": "point",
+      "id": null
+    }
+  },
+  {
     "uid": "_:courtyardoldtown",
     "name": "Courtyard Los Angeles Pasadena/Old Town",
     "article": "site of: Quinceañeras",
