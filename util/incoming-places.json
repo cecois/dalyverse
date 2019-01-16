@@ -1,5 +1,32 @@
 [
   {
+    "_key": "_:marktwainhotella",
+    "name": "Mark Twain Hotel - Los Angeles",
+    "article": "Questionable boutique hotel off of Wilcox.",
+    "geo_key": {
+      "type": "poly",
+      "id": null
+    }
+  },
+  {
+    "_key": "_:newmexicousa",
+    "name": "New Mexico, USA",
+    "article": "The __th state in the Union.",
+    "geo_key": {
+      "type": "poly",
+      "id": null
+    }
+  },
+  {
+    "_key": "_:dresdende",
+    "name": "Dresden, Germany",
+    "article": "Dresden is a significant site in World War II.",
+    "geo_key": {
+      "type": "point",
+      "id": null
+    }
+  },
+  {
     "_key": "_:laramiefeedandwesternsupply",
     "name": "Laramie Feed and Western Supply",
     "article": "LFWS is a supplier of western gear and other supplies to cowboys.",
