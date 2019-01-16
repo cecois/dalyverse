@@ -1,9 +1,8 @@
-{
-  "set": [
+[
     {
-      "uid": "_:lochnessmonster",
-      "name": "The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter.",
-      "article": "",
+      "_key": "_:lochnessmonster",
+      "article": "The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter.",
+      "name": "The Loch Ness Monster",
       "geo_key": {
         "type": "poly",
         "id": null
@@ -16,41 +15,41 @@
       ]
     },
     {
-      "uid": "_:cameronmcgoniglesghosttoursthatarescary",
+      "_key": "_:cameronmcgoniglesghosttoursthatarescary",
       "name": "Cameron McGonigle's Ghost Tours That Are Scary",
       "article": "Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland.",
       "geo_key": {
-        "type": "uid",
+        "type": "_key",
         "id": null
       }
     },
     {
-      "uid": "_:rosebushred",
+      "_key": "_:rosebushred",
       "name": "Rosebush Red",
       "article": "Rosebush Red is a Marina del Rey High School-based rock band."
     },
     {
-      "uid": "_:thejourneymen",
+      "_key": "_:thejourneymen",
       "name": "The Journeymen",
       "article": "Possibly the greatest purveyors of Country & Western music ever."
     },
     {
-      "uid": "_:u2",
+      "_key": "_:u2",
       "name": "U2",
       "article": "Rock and roll musical combination."
     },
     {
-      "uid": "_:simpleminds",
+      "_key": "_:simpleminds",
       "name": "Simple Minds",
       "article": "Rock and roll musical combination."
     },
     {
-      "uid": "_:jesusjones",
+      "_key": "_:jesusjones",
       "name": "Jesus Jones",
       "article": "Rock and roll musical combination."
     },
     {
-      "uid": "_:shanana",
+      "_key": "_:shanana",
       "name": "Sha Na Na",
       "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
       "links": [
@@ -61,50 +60,49 @@
       ]
     },
     {
-      "uid": "_:nashasha",
+      "_key": "_:nashasha",
       "name": "Na Sha Sha",
       "article": "Na Sha Sha is a classic American rock n' roll tribute band that does exist.",
       "links": []
     },
     {
-      "uid": "_:dexysmidnightrunners",
+      "_key": "_:dexysmidnightrunners",
       "name": "Dexys Midnight Runners",
       "article": "Dexys Midnight Runners are an English pop band with soul influences who achieved their major success in the early to mid-1980s."
     },
     {
-      "uid": "_:unnamedmidtownpeeptheatre",
+      "_key": "_:unnamedmidtownpeeptheatre",
       "name": "Unnamed Peepshow/Theatre in Midtown NYC",
       "article": null
     },
     {
-      "uid": "_:unnamedmedicalpackagingplant",
+      "_key": "_:unnamedmedicalpackagingplant",
       "name": "Unnamed Medical Packaging Plant",
       "article": null
     },
     {
-      "uid": "unnamed80sbedandbreakfast",
+      "_key": "unnamed80sbedandbreakfast",
       "name": "Unnamed 80s-Themed Bed and Breakfast",
       "article": null
     },
     {
-      "uid": "unnamed50sbedandbreakfast",
+      "_key": "unnamed50sbedandbreakfast",
       "name": "Unnamed 50s-Themed Bed and Breakfast",
       "article": null
     },
     {
-      "uid": "_:unnamedmechanicbusiness",
+      "_key": "_:unnamedmechanicbusiness",
       "name": "Unnamed Mechanic Business",
       "article": null
     },
     {
-      "uid": "_:trainerforthestarsseekingstars",
+      "_key": "_:trainerforthestarsseekingstars",
       "name": "Trainer for the Stars Seeking Stars",
       "article": "Bill Carter's personal training org."
     },
     {
-      "uid": "_:unnamedplumbingco",
+      "_key": "_:unnamedplumbingco",
       "name": "Unnamed Plumbing Company",
       "article": "Until late 2008, Danny and Bert Mahoney operated a as-yet unnamed plumbing business. In the winter of that year, Bertrand 'grew weary' of Danny's personality and executed a hostile takeover, plunging Danny into a short-lived emotional spiral that led to a failed suicide attempt."
     }
   ]
-}
