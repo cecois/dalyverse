@@ -1,5 +1,19 @@
 [
   {
+    "_key": "_:augustlindttoursthecongo",
+    "name": "August Lindt Vacations in The Congo",
+    "article": "Challenged by his boss to visit the 'worst place he could think of,' Mr. Lindt traveled to the Emergency Room of the Jason Sendwe Hospital in Lubumbashi in the war-torn Katanga province of the Democratic Republic of Congo.",
+    "timestamp": "2013-12-01T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-year","nb":"likely some time in the year prior to ADPPP#4"}
+  },
+  {
+    "_key": "_:augustlindttoursskokieil",
+    "name": "August Lindt travels to Skokie, Illinois.",
+    "article": "On ADPPP#4, during a round of 'How Close Have We Been to Skokie,' Mr. Lindt reveals that has, in fact, been to Skokie.",
+    "timestamp": "2000-08-08T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior-to","nb":"prior to ADPPP#4 is the only clue"}
+  },
+  {
     "_key": "_:billcarterschildplatoonindresden",
     "name": "Bill Carter's Platoon of Children is Caught in the Firebombing of Dresden",
     "article": "On ADPPP#3, Bill Carter reveals to Jesse Ventura that a platoon of children he trained in New Mexico was accidentally bunkered in Dresden during the Allied aerial attack.",

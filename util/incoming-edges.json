@@ -1,4 +1,8 @@
 [
+  {"_from": "events/_:augustlindttoursthecongo","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:augustlindttoursthecongo"},
+  {"_from": "events/_:augustlindttoursthecongo","_to": "places/_:hopitaljasonsendweer","type":"occurredAt","vertex":"_:augustlindttoursthecongo"},
+  {"_from": "events/_:augustlindttoursskokieil","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:augustlindttoursskokieil"},
+  {"_from": "events/_:augustlindttoursskokieil","_to": "places/_:tommybahamaskokie","type":"occurredAt","vertex":"_:augustlindttoursskokieil"},
   {"_from": "people/_:billcarter","_to": "places/_:marktwainhotella","type":"livesAt","vertex":"_:billcarter"},
   {"_from": "events/_:billcarterschildplatoon","_to": "places/_:newmexicousa","type":"occurredAt","vertex":"_:billcarterschildplatoon"},
   {"_from": "events/_:billcarterschildplatoonindresden","_to": "places/_:dresdende","type":"occurredAt","vertex":"_:billcarterschildplatoonindresden"},
