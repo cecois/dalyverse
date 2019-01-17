@@ -1,6 +1,6 @@
 [
   {
-  "_key": "_:newmexico",
+  "_key": "_:newmexicousa",
   "name": "New Mexico, USA",
   "article": "The 47th state in the Union.",
   "geo_key": {
@@ -26,6 +26,14 @@
     "id": 979
   }
 },
+    {"_key": "_:marktwainhotella",
+    "name": "Mark Twain Hotel - Los Angeles",
+    "article": "Questionable boutique hotel off of Wilcox.",
+    "geo_key": {
+      "type": "poly",
+      "id": 980
+    }
+  },
   {
     "_key": "_:courtyardoldtown",
     "name": "Courtyard Los Angeles Pasadena/Old Town",
