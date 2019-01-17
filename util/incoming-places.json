@@ -1,13 +1,31 @@
 [
   {
-    "_key": "_:laramiefeedandwesternsupply",
-    "name": "Laramie Feed and Western Supply",
-    "article": "LFWS is a supplier of western gear and other supplies to cowboys.",
-    "geo_key": {
-      "type": "point",
-      "id": null
-    }
-  },
+  "_key": "_:newmexico",
+  "name": "New Mexico, USA",
+  "article": "The 47th state in the Union.",
+  "geo_key": {
+    "type": "poly",
+    "id": 381
+  }
+},
+  {
+  "_key": "_:dresdende",
+  "name": "Dresden, Germany",
+  "article": "Dresden is a significant site in World War II.",
+  "geo_key": {
+    "type": "poly",
+    "id": 556
+  }
+},
+  {
+  "uid": "_:laramiefeedandwesternsupply",
+  "name": "Laramie Feed and Western Supply",
+  "article": "LFWS is a supplier of western gear and other supplies to cowboys.",
+  "geo_key": {
+    "type": "point",
+    "id": 979
+  }
+},
   {
     "_key": "_:courtyardoldtown",
     "name": "Courtyard Los Angeles Pasadena/Old Town",
