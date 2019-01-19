@@ -1,4 +1,15 @@
 [
+  {"_from": "events/_:dondimelloseeshomealonelines","_to": "people/_:dondimello","type":"hasParticipant","vertex":"_:dondimelloseeshomealonelines"},
+  {"_from": "events/_:kevinlindtsfirstwords","_to": "people/_:doulmanschmiedeberg","type":"hasParticipant","vertex":"_:kevinlindtsfirstwords"},
+  {"_from": "events/_:kevinlindtsfirstwords","_to": "people/_:gunterlindt","type":"hasParticipant","vertex":"_:kevinlindtsfirstwords"},
+  {"_from": "events/_:kevinlindtsfirstwords","_to": "people/_:gretalindt","type":"hasParticipant","vertex":"_:kevinlindtsfirstwords"},
+  {"_from": "events/_:kevinlindtsfirstwords","_to": "people/_:utalindt","type":"hasParticipant","vertex":"_:kevinlindtsfirstwords"},
+  {"_from": "events/_:kevinlindtsfirstwords","_to": "people/_:kevinlindt","type":"hasParticipant","vertex":"_:kevinlindtsfirstwords"},
+  {"_from": "events/_:kevinlindtsfirstwords","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:kevinlindtsfirstwords"},
+  {"_from": "events/_:augustlindtattemptssuicide2","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:augustlindtattemptssuicide2"},
+  {"_from": "events/_:augustlindtattemptssuicide2","_to": "places/_:seattlespaceneedle","type":"occurredAt","vertex":"_:augustlindtattemptssuicide2"},
+  {"_from": "events/_:augustlindtvisitsannefrankhuis","_to": "places/_:annefrankhuis","type":"occurredAt","vertex":"_:augustlindtvisitsannefrankhuis"},
+  {"_from": "events/_:augustlindtvisitsannefrankhuis","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:augustlindtvisitsannefrankhuis"},
   {"_from": "events/_:augustlindttoursthecongo","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:augustlindttoursthecongo"},
   {"_from": "events/_:augustlindttoursthecongo","_to": "places/_:hopitaljasonsendweer","type":"occurredAt","vertex":"_:augustlindttoursthecongo"},
   {"_from": "events/_:augustlindttoursskokieil","_to": "people/_:augustlindt","type":"hasParticipant","vertex":"_:augustlindttoursskokieil"},
@@ -282,10 +293,13 @@
   {"_from":"people/_:andicallahanrn","_to":"people/_:god","type":"seeAlso","vertex":"_:andicallahanrn"},
   {"_from":"people/_:andicallahanrn","_to":"things/_:bergenregional","type":"worksAt","vertex":"_:andicallahanrn"},
   {"_from":"people/_:angus","_to":"things/_:cameronmcgoniglesghosttoursthatarescary","type":"worksAt","vertex":"_:angus"},
+  {"_from":"people/_:kevinlindt","_to":"people/_:augustlindt","type":"isChildOf","vertex":"_:kevinlindt"},
+  {"_from":"people/_:gunterlindt","_to":"people/_:augustlindt","type":"isChildOf","vertex":"_:gunterlindt"},
+  {"_from":"people/_:gretalindt","_to":"people/_:augustlindt","type":"isChildOf","vertex":"_:gretalindt"},
   {"_from":"people/_:ashleypinto","_to":"people/_:crystalalterman","type":"isChildOf","vertex":"_:ashleypinto"},
-  {"_from":"people/_:augustlindt","_to":"people/_:theschneidermannmonkey1","type":"hasFriend","vertex":"_:augustlindt"},
-  {"_from":"people/_:augustlindt","_to":"people/_:theschneidermannmonkey1","type":"hasFriend","vertex":"_:augustlindt"},
-  {"_from":"people/_:augustlindt","_to":"places/_:schneidermannpretzelcompany","type":"worksAt","vertex":"_:augustlindt"},
+  {"_from":"people/_:augustlindt","_to":"people/_:theschmiedebergmonkey1","type":"hasFriend","vertex":"_:augustlindt"},
+  {"_from":"people/_:augustlindt","_to":"people/_:theschmiedebergmonkey1","type":"hasFriend","vertex":"_:augustlindt"},
+  {"_from":"people/_:augustlindt","_to":"places/_:schmiedebergpretzelcompany","type":"worksAt","vertex":"_:augustlindt"},
   {"_from":"people/_:benalterman","_to":"people/_:mrfrancisco","type":"hasFriend","vertex":"_:benalterman"},
   {"_from":"people/_:benalterman","_to":"people/_:mrshakamora","type":"hasFriend","vertex":"_:benalterman"},
   {"_from":"people/_:benalterman","_to":"people/_:mrshakamora","type":"hasFriend","vertex":"_:benalterman"},
@@ -399,9 +413,8 @@
   {"_from":"people/_:tommcmahon","_to":"people/_:patrickmcmahon","type":"isSiblingOf","vertex":"_:tommcmahon"},
   {"_from":"people/_:tommcmahon","_to":"things/_:unnamedmechanicbusiness","type":"hasWorkedAt","vertex":"_:tommcmahon"},
   {"_from":"people/_:victor","_to":"things/_:trainerforthestarsseekingstars","type":"worksAt","vertex":"_:victor"},
-  {"_from":"people/_:zowber","_to":"things/_:nashasha","type":"isMemberOf","vertex":"_:zowber"}
-
-  {"_from":"events/_:ionetimekilledafrankenstein","_to":"places/_:laramiefeedandwesternsupply","type":"occurredAt","vertex":"_:ionetimekilledafrankenstein"}
-  {"_from":"events/_:ionetimekilledafrankenstein","_to":"people/_:unnamedsecurityguardatlaramiesupply","type":"hasParticipant","vertex":"_:ionetimekilledafrankenstein"}
+  {"_from":"people/_:zowber","_to":"things/_:nashasha","type":"isMemberOf","vertex":"_:zowber"},
+  {"_from":"events/_:ionetimekilledafrankenstein","_to":"places/_:laramiefeedandwesternsupply","type":"occurredAt","vertex":"_:ionetimekilledafrankenstein"},
+  {"_from":"events/_:ionetimekilledafrankenstein","_to":"people/_:unnamedsecurityguardatlaramiesupply","type":"hasParticipant","vertex":"_:ionetimekilledafrankenstein"},
   {"_from":"events/_:ionetimekilledafrankenstein","_to":"people/_:daltonwilcox","type":"hasParticipant","vertex":"_:ionetimekilledafrankenstein"}
 ]

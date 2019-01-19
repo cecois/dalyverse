@@ -1,5 +1,41 @@
 [
   {
+  "_key": "_:seattlespaceneedle",
+  "name": "Seattle Space Needle",
+  "article": "site of: a failed August Lindt suicide attempt",
+  "geo_key": {
+    "type": "point",
+    "id": 516
+  }
+},
+{
+  "_key": "_:annefrankhuis",
+  "name": "Anne Frank Huis",
+  "article": "The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank (-- Wikipedia, 2019.Jan)",
+  "geo_key": {
+    "type": "poly",
+    "id": 560
+  }
+},
+{
+  "_key": "_:tommybahamaskokie",
+  "name": "Tommy Bahamas - Northbrook",
+  "article": "A proxy for Tommy Bahama - Skokie; site of: August Lindt buying a shirt",
+  "geo_key": {
+    "type": "point",
+    "id": 982
+  }
+},
+{
+  "_key": "_:hopitaljasonsendweer",
+  "name": "Hôpital Jason Sendwe Emergency Room, ",
+  "article": "Site of: August Lindt, on vacation.",
+  "geo_key": {
+    "type": "poly",
+    "id": 559
+  }
+},
+  {
   "_key": "_:newmexicousa",
   "name": "New Mexico, USA",
   "article": "The 47th state in the Union.",
@@ -327,8 +363,8 @@
     }
   },
   {
-    "_key": "_:schneidermannpretzelcompany",
-    "name": "Schneidermann Pretzel Company",
+    "_key": "_:schmiedebergpretzelcompany",
+    "name": "Schmiedeberg Pretzel Company",
     "article": "August Lindt's place of work.",
     "geo_id": {
       "type": "point",

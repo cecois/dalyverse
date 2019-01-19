@@ -1,5 +1,33 @@
 [
   {
+    "_key": "_:dondimelloseeshomealonelines",
+    "name": "Don DiMello Witnesses the Lines for 'Home Alone'",
+    "article": "Don DiMello witnessed the lines around the block for Home Alone and decided about childrens programming, \"kids' stuff is where it's at.\"",
+    "timestamp": "1990-11-16T16:10:00Z",
+    "nb_timestamp": {"class":"firm","nb":"Home Alone release"}
+  },
+  {
+    "_key": "_:kevinlindtsfirstwords",
+    "name": "Kevin Lindt's First Words",
+    "article": "During a remote into ADPPP#4, little Kevin spoke his first words: 'He has a penis you can see.'",
+    "timestamp": "2014-02-26T16:10:00Z",
+    "nb_timestamp": {"class":"firm","nb":"ADPPP#4"}
+  },
+  {
+    "_key": "_:kevinlindtsitsonacat2",
+    "name": "Kevin Lindt Sits on Another Cat",
+    "article": "On ADPPP#4 it was revealed that August Lindt's son had sat on yet another cat, whose 'brains came out its ears.'",
+    "timestamp": "2014-02-16T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"some time prior to (but likely near) ADPPP#4"}
+  },
+  {
+    "_key": "_:augustlindtvisitsannefrankhuis",
+    "name": "August Lindt Tours the Anne Frank House",
+    "article": "August Lindt vacations in Amsterdam 'one of a hundred times.'",
+    "timestamp": "2000-04-01T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"some time prior to ADPPP#4"}
+  },
+  {
     "_key": "_:augustlindttoursthecongo",
     "name": "August Lindt Vacations in The Congo",
     "article": "Challenged by his boss to visit the 'worst place he could think of,' Mr. Lindt traveled to the Emergency Room of the Jason Sendwe Hospital in Lubumbashi in the war-torn Katanga province of the Democratic Republic of Congo.",
@@ -872,6 +900,11 @@
     "_key": "_:augustlindtattemptssuicide1",
     "name": "August Lindt Ties Himself to the Hollywood sign and Sets it on Fire",
     "timestamp": "2010-06-24T16:00:00Z"
+  },
+    {
+    "_key": "_:augustlindtattemptssuicide2",
+    "name": "August Lindt Leaps from the Seattle Space Needle",
+    "timestamp": "2010-09-24T16:00:00Z"
   },
   {
     "_key": "_:augustlindtwinsbestandydalycharacter",
