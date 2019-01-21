@@ -1,5 +1,47 @@
 [
   {
+    "_key": "_:dondimelloscoresexcesssandwiches",
+    "name": "Don DiMello Scores Excess Sandwiches",
+    "article": "Don DiMello encounters a woman discarding sandwiches after a party, caters a podcast pilot with same.",
+    "timestamp": "2014-03-04T16:10:00Z",
+    "nb_timestamp": {"class":"firm","nb":"event is 1.5 days prior to ADPPP#5"}
+  },
+  {
+    "_key": "_:bachmananddimellospendtheweekendincorona",
+    "name": "Mal Bachman and Don DiMello Spend a Weekend in Corona",
+    "article": "Following a raid on Lilly Hellman's play Children's Hour, Mal Bachman and Don DiMello hopped a train that left them in Corona, CA.",
+    "timestamp": "2014-03-03T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-week","nb":"event is the week prior to ADPPP#5 (but after Glengarry and after Children's Hour)"}
+  },
+  {
+    "_key": "_:bachmananddimelloseeequus",
+    "name": "Mal Bachman and Don DiMello Take in Equus.",
+    "article": "Excited by the premise, Bachman and DiMello return from Corona, CA to see 'Equus.'",
+    "timestamp": "2014-03-04T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-week","nb":"event is the week prior to ADPPP#5 (but after Glengarry and after ChildrensHour)"}
+  },
+  {
+    "_key": "_:bachmananddimelloseethechildrenshour",
+    "name": "Mal Bachman and Don DiMello Take in Lillian Hellman's The Children's Hour (eventually storing the stage with a broken bottles and a sharpened broom handle when it's revealed there is no hot lesbian action in the show).",
+    "article": "Disappointed with the death of sexual provocation in Glengarry Glen Ross, Bachman and DiMello see another show in the same week.",
+    "timestamp": "2014-03-01T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-week","nb":"event is the week prior to ADPPP#5 (but after Glengarry)"}
+  },
+  {
+    "_key": "_:uclatheatrepresentsglengarryglenross",
+    "name": "Mal Bachman and Don DiMello Take in UCLA's Glengarry Glen Ross",
+    "article": "Bachman and DiMello are both unimpressed at how much of a sausage party the show is.",
+    "timestamp": "2014-02-28T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-week","nb":"event is the week prior to ADPPP#5"}
+  },
+  {
+    "_key": "_:malbachmanmovestoaltadena",
+    "name": "Mal Bachman Moves to Altadena",
+    "article": "Interested in reviewing somebody with a more 'incendiary' vision of theatre, Mal Bachman moves to California.",
+    "timestamp": "2012-04-04T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"prior to some of DiMello's more colorful productions but after at least a few"}
+  },
+  {
     "_key": "_:dondimelloseeshomealonelines",
     "name": "Don DiMello Witnesses the Lines for 'Home Alone'",
     "article": "Don DiMello witnessed the lines around the block for Home Alone and decided about childrens programming, \"kids' stuff is where it's at.\"",
@@ -339,11 +381,32 @@
     "nb_timestamp": {"class":"firm","nb":"timestamp is acc. to CBB#365 and the gen. election date"}
   },
   {
+    "_key": "_:multiplechildrenarerippedapartbyrottweilers",
+    "name": "Multiple Children are Ripped Apart by Rottweilers",
+    "article": "Under the care of Cactus Tony, several children fall prey to dogs at the Pasadena Fairy Tale Theatre day care facility.",
+    "timestamp": "2013-12-01T13:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is prior to ADPPP#5 and CBB#200"}
+  },
+  {
     "_key": "_:dondimellostruewest",
     "name": "Don DiMello Presents: True West",
     "article": "Over the fall of 2011, Mr. DiMello teamed with actors John C. Reilly and Nick Nolte to launch a production of Sam Shepard's 'True West' to be staged in a VFW hall in Death Valley, California. The show evidently never made it due to the actors' objections to some of Mr. DiMello's tactics -- kidnapping and cuckolding -- as well as his insistence that beautiful women do a sexy dance in a tandem horse costume, followed by a simulated live birth, followed by foreplay.",
     "timestamp": "2011-10-01T13:10:00Z",
     "nb_timestamp": {"class":null,"nb":"timestamp is acc. to release date of SuperEgo 3.8"}
+  },
+  {
+    "_key": "_:dondimellomeetsmarissawompler",
+    "name": "Don DiMello Meets Marissa Wompler",
+    "article": "In the women's bathroom at Marina del Rey High School (during a production of 'Grease'), Don DiMello eschewed the men's bathroom due to a funky smell and met Ms. Wompler in the ladies' room. Mr. DiMello slipped a note under the stall to the 16 year-old that read, 'Do you wanna have some fun?'",
+    "timestamp": "2012-06-01T13:10:00Z",
+    "nb_timestamp": {"class":"estimate-firm","nb":"timestamp is acc. to ADPPP#5, research shows a Grease event at Venice High (MDRHS) on June 1 2012 -- https://patch.com/california/venice/venice-high-school-aka-rydell-high-to-host-2nd-greasefd7aa4eef9"}
+  },
+  {
+    "_key": "_:dondimellossteelmagnolias",
+    "name": "Don DiMello Presents: Steel Magnolias",
+    "article": "In the winter of 2013, Don DiMello stages a production of Steel Magnolias that featured, mostly, topless women dancing around. He was subsequently sued.",
+    "timestamp": "2013-01-01T13:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is acc. to ADPPP#5"}
   },
   {
     "_key": "_:dondimellosheyreallygiger",
@@ -793,11 +856,46 @@
     "nb_timestamp": {"class":null,"nb":"timestamp is a tight approximation - 'next weekend' relative to CBB#99"}
   },
   {
+    "_key": "_:dondimelloaccidentallyjoinsthetaliban",
+    "name": "Don DiMello Accidentally Joins The Taliban",
+    "article": "In Bahrain studying safe decapitation techniques, Mr. DiMello 'got to talking to some guys' and accidentally joins a terrorist organization.",
+    "timestamp": "1994-01-08T19:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is a very loose approximation - 'years' prior to ADPPP#5"}
+  },
+  {
+    "_key": "_:talibantalentnight",
+    "name": "Taliban Talent Night",
+    "article": "During the annual Taliban talent show, Don DiMello's entry draws scorn due to scantily-clad girls.",
+    "timestamp": "1994-03-05T19:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is a very loose approximation - 'years' prior to ADPPP#5"}
+  },
+  {
+    "_key": "_:dondimelloburieswife1",
+    "name": "Don DiMello Buries His First Wife",
+    "article": "With the help of Falcon and an unnamed accomplice, Mr. DiMello lays to rest his first wife.",
+    "timestamp": "1998-07-07T19:00:00Z",
+    "nb_timestamp": {"class":"estimate-year","nb":"timestamp is '16-17 years' prior to ADPPP#5"}
+  },
+  {
     "_key": "_:dondimellostagesbeautyandthebeast",
     "name": "Don DiMello Stages 'Disneys Beauty and the Beast' in a Church Basement in Connecticut",
     "article": "The production featured live animals and failed to reach denouement. It ran 18 months and received 'scathing' reviews. Police were involved.",
     "timestamp": "1995-04-08T19:00:00Z",
     "nb_timestamp": {"class":null,"nb":"timestamp is a very loose approximation"}
+  },
+  {
+    "_key": "_:dondimellostagescamelot",
+    "name": "Don DiMello Stages 'Camelot'",
+    "article": "He put out the word that, out by the lake, there's going to be 1 wet girl and 8 dry girls (one of them in a fake beard).",
+    "timestamp": "1996-08-08T19:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is a very loose approximation - some time prior to ADPPP#5, possibly in DiMello's Connectucut days."}
+  },
+  {
+    "_key": "_:dondimelloamputatesrockettebeth",
+    "name": "Don DiMello Amputates Rockette Beth",
+    "article": "After finding her chewing on a candy cane, Don DiMello amputates Rockette Beth, in effect ending her tenure with the organization.",
+    "timestamp": "1996-12-18T19:00:00Z",
+    "nb_timestamp": {"class":"estimate-month","nb":"timestamp is a loose approximation - ADPPP#5 near Christmas"}
   },
   {
     "_key": "_:dondimellodirectstherockettes",

@@ -1,5 +1,23 @@
 [
   {
+  "_key": "_:bahrain",
+  "name": "Bahrain",
+  "article": "site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer",
+  "geo_key": {
+    "type": "poly",
+    "id": 562
+  }
+},
+{
+  "_key": "_:altadenaca",
+  "name": "Altadena, CA",
+  "article": "home of: Mal Bachman",
+  "geo_key": {
+    "type": "poly",
+    "id": 403
+  }
+},
+{
   "_key": "_:seattlespaceneedle",
   "name": "Seattle Space Needle",
   "article": "site of: a failed August Lindt suicide attempt",
@@ -56,7 +74,7 @@
   {
   "uid": "_:laramiefeedandwesternsupply",
   "name": "Laramie Feed and Western Supply",
-  "article": "LFWS is a supplier of western gear and other supplies to cowboys.",
+  "article": "LFWS is a purveyor of western gear and other supplies to cowboys.",
   "geo_key": {
     "type": "point",
     "id": 979

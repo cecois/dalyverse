@@ -1,18 +1,78 @@
-islocateAt
-hasFriend
-isCaredForBy
-isChildOf
-isClientOf
-isFormerSpouseOf
-isMemberOf
-isFormerMemberOf
-isPetOf
-isSiblingOf
-isSpouseOf
-workedAt
-workedFor
-worksAt
-worksFor
-participatedIn
-seeAlso
+### EDGES.type
 
+* islocateAt
+* hasFriend
+* isCaredForBy
+* isChildOf
+* isClientOf
+* isFormerSpouseOf
+* isMemberOf
+* isFormerMemberOf
+* isPetOf
+* isSiblingOf
+* isSpouseOf
+* workedAt
+* workedFor
+* worksAt
+* worksFor
+* participatedIn
+* seeAlso
+
+### TIMELINE
+
+* for e in events
+	** e.hasParticant(s)
+		for e in edges
+		filter e.type=='hasParticipant'
+		for ev in events
+		filter e._from==ev._id
+		for p in people
+		filter e._to==p._id
+		return {"evkey":ev._key,"p":p.name}
+	** e.occurredAt
+
+### MAP
+
+	* for e in places (no grouping)
+		for e in edges
+		filter e.type=='occurredAt'
+		for ev in events
+		filter e._from==ev._id
+		for pl in places
+		filter e._to==pl._id
+		return {"evkey":ev._key,"pl":pl.name}
+	
+	* for e in places (grouping)
+		for e in edges
+		filter e.type=='occurredAt'
+		for ev in events
+		filter e._from==ev._id
+		for pl in places
+		filter e._to==pl._id
+		collect placeid = pl._id,placename=pl.name INTO involved
+		return {"plid":placeid,"plname":placename,"participants":involved}
+
+### PEOPLE
+
+	* people.has_murdered==true
+	* people.attributes
+
+### GRAPH
+* livesAt
+* worksAt
+* caresFor
+* seeAlso
+* isChildOf
+* hasFriend
+* isSiblingOf
+* isSpouseOf
+* isMemberOf
+* hasWorkedAt
+* hasWorkedFor
+* worksFor
+* wasClientOf
+* isClientOf
+* wasSpouseOf
+* isFormerMemberOf
+* isPossibleChildOf
+* isPetOf

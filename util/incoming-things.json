@@ -15,6 +15,40 @@
       ]
     },
     {
+      "_key": "_:russianorthodoxchurch",
+      "name": "Russian Orthodox Church",
+      "article": "The Russian Orthodox Church (ROC)...is one of the autocephalous Eastern Orthodox Christian churches. -- Wikipedia"
+    },
+    {
+      "_key": "_:episcopalchurch",
+      "name": "Episcopal Church",
+      "article": "The Episcopal Church (TEC) is the member church of the worldwide Anglican Communion based in the United States with dioceses elsewhere. -- Wikipedia"
+    },
+    {
+      "_key": "_:bahai",
+      "name": "Bahá'í",
+      "article": "Bahá'í Faith is a religion teaching the essential worth of all religions, and the unity and equality of all people. -- Wikipedia"
+    },
+    {
+      "_key": "_:equus",
+      "name": "Equus",
+      "article": "Equus is a 1973 play by Peter Shaffer."
+    },{
+      "_key": "_:thefifthwall",
+      "name": "The Fifth Wall",
+      "article": "The Fifth Wall was a theatre review periodical with a particular bent toward innovation."
+    },
+    {
+      "_key": "_:thechildrenshour",
+      "name": "The Children's Hour",
+      "article": "The Children's Hour is a play by Lillian Hellman."
+    },
+    {
+      "_key": "_:glengarryglenross",
+      "name": "Glengarry Glen Ross",
+      "article": "Glengarry Glen Ross is a play by David Mamet"
+    },
+    {
       "_key": "_:cameronmcgoniglesghosttoursthatarescary",
       "name": "Cameron McGonigle's Ghost Tours That Are Scary",
       "article": "Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland.",
