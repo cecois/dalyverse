@@ -1,143 +1,148 @@
 [
-    {
-      "_key": "_:lochnessmonster",
-      "article": "The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter.",
-      "name": "The Loch Ness Monster",
-      "geo_key": {
-        "type": "poly",
-        "id": null
-      },
-      "links": [
-        {
-          "uri": "https://en.wikipedia.org/wiki/Loch_Ness_Monster",
-          "label": "Wikipedia"
-        }
-      ]
+  {
+    "_key": "_:lochnessmonster",
+    "article": "The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter.",
+    "name": "The Loch Ness Monster",
+    "geo_key": {
+      "type": "poly",
+      "id": null
     },
-    {
-      "_key": "_:russianorthodoxchurch",
-      "name": "Russian Orthodox Church",
-      "article": "The Russian Orthodox Church (ROC)...is one of the autocephalous Eastern Orthodox Christian churches. -- Wikipedia"
-    },
-    {
-      "_key": "_:episcopalchurch",
-      "name": "Episcopal Church",
-      "article": "The Episcopal Church (TEC) is the member church of the worldwide Anglican Communion based in the United States with dioceses elsewhere. -- Wikipedia"
-    },
-    {
-      "_key": "_:bahai",
-      "name": "Bahá'í",
-      "article": "Bahá'í Faith is a religion teaching the essential worth of all religions, and the unity and equality of all people. -- Wikipedia"
-    },
-    {
-      "_key": "_:equus",
-      "name": "Equus",
-      "article": "Equus is a 1973 play by Peter Shaffer."
-    },{
-      "_key": "_:thefifthwall",
-      "name": "The Fifth Wall",
-      "article": "The Fifth Wall was a theatre review periodical with a particular bent toward innovation."
-    },
-    {
-      "_key": "_:thechildrenshour",
-      "name": "The Children's Hour",
-      "article": "The Children's Hour is a play by Lillian Hellman."
-    },
-    {
-      "_key": "_:glengarryglenross",
-      "name": "Glengarry Glen Ross",
-      "article": "Glengarry Glen Ross is a play by David Mamet"
-    },
-    {
-      "_key": "_:cameronmcgoniglesghosttoursthatarescary",
-      "name": "Cameron McGonigle's Ghost Tours That Are Scary",
-      "article": "Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland.",
-      "geo_key": {
-        "type": "_key",
-        "id": null
+    "links": [
+      {
+        "uri": "https://en.wikipedia.org/wiki/Loch_Ness_Monster",
+        "label": "Wikipedia"
       }
-    },
-    {
-      "_key": "_:homealonefilm",
-      "name": "Home Alone",
-      "article": "Home Alone is a 1990 Chris Columbus film produced by John Hughes."
-    },
-
-    {
-      "_key": "_:thejourneymen",
-      "name": "The Journeymen",
-      "article": "Possibly the greatest purveyors of Country & Western music ever."
-    },
-    {
-      "_key": "_:u2",
-      "name": "U2",
-      "article": "Rock and roll musical combination."
-    },
-    {
-      "_key": "_:simpleminds",
-      "name": "Simple Minds",
-      "article": "Rock and roll musical combination."
-    },
-    {
-      "_key": "_:jesusjones",
-      "name": "Jesus Jones",
-      "article": "Rock and roll musical combination."
-    },
-    {
-      "_key": "_:shanana",
-      "name": "Sha Na Na",
-      "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
-      "links": [
-        {
-          "uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
-          "label": "Wikipedia"
-        }
-      ]
-    },
-    {
-      "_key": "_:nashasha",
-      "name": "Na Sha Sha",
-      "article": "Na Sha Sha is a classic American rock n' roll tribute band that does exist.",
-      "links": []
-    },
-    {
-      "_key": "_:dexysmidnightrunners",
-      "name": "Dexys Midnight Runners",
-      "article": "Dexys Midnight Runners are an English pop band with soul influences who achieved their major success in the early to mid-1980s."
-    },
-    {
-      "_key": "_:unnamedmidtownpeeptheatre",
-      "name": "Unnamed Peepshow/Theatre in Midtown NYC",
-      "article": null
-    },
-    {
-      "_key": "_:unnamedmedicalpackagingplant",
-      "name": "Unnamed Medical Packaging Plant",
-      "article": null
-    },
-    {
-      "_key": "unnamed80sbedandbreakfast",
-      "name": "Unnamed 80s-Themed Bed and Breakfast",
-      "article": null
-    },
-    {
-      "_key": "unnamed50sbedandbreakfast",
-      "name": "Unnamed 50s-Themed Bed and Breakfast",
-      "article": null
-    },
-    {
-      "_key": "_:unnamedmechanicbusiness",
-      "name": "Unnamed Mechanic Business",
-      "article": null
-    },
-    {
-      "_key": "_:trainerforthestarsseekingstars",
-      "name": "Trainer for the Stars Seeking Stars",
-      "article": "Bill Carter's personal training org."
-    },
-    {
-      "_key": "_:unnamedplumbingco",
-      "name": "Unnamed Plumbing Company",
-      "article": "Until late 2008, Danny and Bert Mahoney operated a as-yet unnamed plumbing business. In the winter of that year, Bertrand 'grew weary' of Danny's personality and executed a hostile takeover, plunging Danny into a short-lived emotional spiral that led to a failed suicide attempt."
+    ]
+  },
+  {
+    "_key": "_:russianorthodoxchurch",
+    "name": "Russian Orthodox Church",
+    "article": "The Russian Orthodox Church (ROC)...is one of the autocephalous Eastern Orthodox Christian churches. -- Wikipedia"
+  },
+  {
+    "_key": "_:takemywifekeys",
+    "name": "Take My Wife Keys",
+    "article": "Take My Wife Keys was a party entertainment business."
+  },
+  {
+    "_key": "_:episcopalchurch",
+    "name": "Episcopal Church",
+    "article": "The Episcopal Church (TEC) is the member church of the worldwide Anglican Communion based in the United States with dioceses elsewhere. -- Wikipedia"
+  },
+  {
+    "_key": "_:bahai",
+    "name": "Bahá'í",
+    "article": "Bahá'í Faith is a religion teaching the essential worth of all religions, and the unity and equality of all people. -- Wikipedia"
+  },
+  {
+    "_key": "_:equus",
+    "name": "Equus",
+    "article": "Equus is a 1973 play by Peter Shaffer."
+  },{
+    "_key": "_:thefifthwall",
+    "name": "The Fifth Wall",
+    "article": "The Fifth Wall was a theatre review periodical with a particular bent toward innovation."
+  },
+  {
+    "_key": "_:thechildrenshour",
+    "name": "The Children's Hour",
+    "article": "The Children's Hour is a play by Lillian Hellman."
+  },
+  {
+    "_key": "_:glengarryglenross",
+    "name": "Glengarry Glen Ross",
+    "article": "Glengarry Glen Ross is a play by David Mamet"
+  },
+  {
+    "_key": "_:cameronmcgoniglesghosttoursthatarescary",
+    "name": "Cameron McGonigle's Ghost Tours That Are Scary",
+    "article": "Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland.",
+    "geo_key": {
+      "type": "_key",
+      "id": null
     }
-  ]
+  },
+  {
+    "_key": "_:homealonefilm",
+    "name": "Home Alone",
+    "article": "Home Alone is a 1990 Chris Columbus film produced by John Hughes."
+  },
+
+  {
+    "_key": "_:thejourneymen",
+    "name": "The Journeymen",
+    "article": "Possibly the greatest purveyors of Country & Western music ever."
+  },
+  {
+    "_key": "_:u2",
+    "name": "U2",
+    "article": "Rock and roll musical combination."
+  },
+  {
+    "_key": "_:simpleminds",
+    "name": "Simple Minds",
+    "article": "Rock and roll musical combination."
+  },
+  {
+    "_key": "_:jesusjones",
+    "name": "Jesus Jones",
+    "article": "Rock and roll musical combination."
+  },
+  {
+    "_key": "_:shanana",
+    "name": "Sha Na Na",
+    "article": "Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase.",
+    "links": [
+      {
+        "uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
+        "label": "Wikipedia"
+      }
+    ]
+  },
+  {
+    "_key": "_:nashasha",
+    "name": "Na Sha Sha",
+    "article": "Na Sha Sha is a classic American rock n' roll tribute band that does exist.",
+    "links": []
+  },
+  {
+    "_key": "_:dexysmidnightrunners",
+    "name": "Dexys Midnight Runners",
+    "article": "Dexys Midnight Runners are an English pop band with soul influences who achieved their major success in the early to mid-1980s."
+  },
+  {
+    "_key": "_:unnamedmidtownpeeptheatre",
+    "name": "Unnamed Peepshow/Theatre in Midtown NYC",
+    "article": null
+  },
+  {
+    "_key": "_:unnamedmedicalpackagingplant",
+    "name": "Unnamed Medical Packaging Plant",
+    "article": null
+  },
+  {
+    "_key": "unnamed80sbedandbreakfast",
+    "name": "Unnamed 80s-Themed Bed and Breakfast",
+    "article": null
+  },
+  {
+    "_key": "unnamed50sbedandbreakfast",
+    "name": "Unnamed 50s-Themed Bed and Breakfast",
+    "article": null
+  },
+  {
+    "_key": "_:unnamedmechanicbusiness",
+    "name": "Unnamed Mechanic Business",
+    "article": null
+  },
+  {
+    "_key": "_:trainerforthestarsseekingstars",
+    "name": "Trainer for the Stars Seeking Stars",
+    "article": "Bill Carter's personal training org."
+  },
+  {
+    "_key": "_:unnamedplumbingco",
+    "name": "Unnamed Plumbing Company",
+    "article": "Until late 2008, Danny and Bert Mahoney operated a as-yet unnamed plumbing business. In the winter of that year, Bertrand 'grew weary' of Danny's personality and executed a hostile takeover, plunging Danny into a short-lived emotional spiral that led to a failed suicide attempt."
+  }
+]

@@ -1,5 +1,11 @@
 [
   {
+    "_key": "_:dannymahoneymeetsjimmyblades",
+    "name": "Danny Mahoney Meets Jimmy Blades",
+    "article": "Danny Mahoney meets Jimmy Blades at a gay wedding to which he (Mahoney) was not invited. Overwhelmed by carrying around and replacing and maintaining 8 D batteries, Mahoney hired Blades to play music live at LOTPC parties.",
+    "timestamp": "2013-12-12T16:10:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"event is some time prior to ADPPP#6"}
+  },{
     "_key": "_:dondimelloscoresexcesssandwiches",
     "name": "Don DiMello Scores Excess Sandwiches",
     "article": "Don DiMello encounters a woman discarding sandwiches after a party, caters a podcast pilot with same.",
@@ -695,7 +701,7 @@
     "nb_timestamp": {"class":null,"nb":"timestamp is sometime after CBB#148 and before CBB#300"}
   },
   {
-    "_key": "_:dannymahoneyattemptssuicide1",
+    "_key": "_:dannymahoneyattemptssuicide2",
     "name": "Danny Mahoney Attempts Suicide by Defenestration",
     "article": "Danny Mahoney jumps out the window at Earwolf.",
     "timestamp": "2012-03-11T19:00:00Z",
@@ -999,7 +1005,7 @@
     "name": "August Lindt Ties Himself to the Hollywood sign and Sets it on Fire",
     "timestamp": "2010-06-24T16:00:00Z"
   },
-    {
+  {
     "_key": "_:augustlindtattemptssuicide2",
     "name": "August Lindt Leaps from the Seattle Space Needle",
     "timestamp": "2010-09-24T16:00:00Z"
@@ -1035,10 +1041,24 @@
   },
   {
     "_key": "_:dannymahoneywalksintotheocean",
-    "class": "event",
+    "article": null,
     "name": "Danny Mahoney Wears a Heavy Coat Into the Ocean",
     "timestamp": "2009-12-01T10:00:00Z",
-    "nb_timestamp": {"class":null,"nb":"timestamp is approximate - winter prior to CBB##14"}
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is approximate - winter prior to CBB##14"}
+  },
+  {
+    "_key": "_:dannymahoneyimmunizeshisbrother",
+    "article": "As a method for building up tolerance to the material, Danny drove his brother around in an asbestos in increasingly long iterations. The brother eventually perished (of an 'insulated heart'), to be survived at least by his son Bertrand.",
+    "name": "Danny Mahoney Immunizes His Brother to Asbestos",
+    "timestamp": "2001-05-11T10:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is approximate - some time prior to the hostile takeover of the plumbing business"}
+  },
+  {
+    "_key": "_:dannymahoneyfallsasleep",
+    "article": "Danny Mahoney, drunk, falls asleep for three days in the back of a shipping container. Accounts later differ, but the event likely at least *contributed* to the hostile takeover, by Bertram Mahoney, of their shared plumbing business.",
+    "name": "Danny Mahoney Falls Asleep for Three Days",
+    "timestamp": "2009-10-01T10:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is approximate - winter prior to CBB##14"}
   },
   {
     "_key": "_:shooteratbuzzcoffeei",
@@ -1046,20 +1066,20 @@
   },
   {
     "_key": "_:dannymahoneybuysaheavycoat",
-    "class": "event",
+    "article": null,
     "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat",
-    "timestamp": "2008-12-01T09:00:00Z",
+    "timestamp": "2009-12-01T09:00:00Z",
     "nb_timestamp": {"class":null,"nb":"timestamp is approximate - winter prior to CBB##14"}
   },
   {
     "_key": "_:ashleypintossweetsixteen",
-    "class": "event",
+    "article": null,
     "name": "Ashley Pinto's Sweet Sixteen",
     "timestamp": "2010-03-27T16:00:00Z"
   },
   {
     "_key": "_:crystalaltermanmarriesbigbob",
-    "class": "event",
+    "article": null,
     "name": "Crystal Alterman Marries Big Bob Pinto",
     "article": "Against the wishes of father Ben Alterman, Crystal and Big Bob were married at an undisclosed location at an undisclosed time. In his toast, Ben revealed he'd watch his daughter fuck almost anyone but Big Bob."
   }

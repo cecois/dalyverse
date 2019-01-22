@@ -24,10 +24,15 @@
     "name": "Günter Lindt",
     "article": "Günter Lindt is one of several children to August Lindt."
   },
-    {
+  {
     "_key": "_:gretalindt",
     "name": "Greta Lindt",
     "article": "Greta Lindt is one of several children to August Lindt."
+  },
+  {
+    "_key": "_:jimmyblades",
+    "name": "Jimmy Blades",
+    "article": "Formerly of 'Take My Wife Keys,' as of ADPPP#6 at least, Mr. Blades is the lone employee of Danny Mahoney at Life of the Party, Inc."
   },
   {
     "_key": "_:kevinlindt",
@@ -805,15 +810,21 @@
   },
   {
     "_key": "_:dannymahoney",
-    "name": "Danny Mahoney",
-    "has_murdered": "unk",
-    "article": "Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following his failed suicide attempt in the Pacific Ocean. Prior to that (~2008) he owned and operated a plumbing business with his nephew, Bertrand until that nephew 'grew weary of [Danny's] personality' and executed a hostile takeover. Danny \"didn't get into drugs or join a Russian Roullette club\" and instead, in the winter of 2008, bought a heavy coat from Nordstrom's Hollywood. In the water, about to drown, he invented LotP. He left the coat on the beach.",
+    "name": "Danny Anthony Mahoney",
+    "has_murdered": "true",
+    "article": "Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following his failed suicide attempt in the Pacific Ocean. Prior to that (~2008) he owned and operated a plumbing business with his nephew, Bertrand until that nephew either found Danny asleep in the back of a shipping container for three days or 'grew weary of [Danny's] personality' (accounts differ) and executed a hostile takeover. Danny \"didn't get into drugs or join a Russian Roullette club\" and instead, in the winter of 2008, bought a heavy coat from Nordstrom's Hollywood. In the water, about to drown, he invented LotP. He left the coat on the beach.",
     "links": [
       {
         "uri": "http://comedybangbang.wikia.com/wiki/Danny_Mahoney",
         "label": "CBB Wikia"
       }
     ]
+  },
+  {
+    "_key": "_:dannymahoneysbrother",
+    "name": "Danny Mahoney's Unnamed Brother",
+    "has_murdered": "unk",
+    "article": "Danny Mahoney's Unnamed Brother was a colleague of Mr. Mahoney's charged with handling any asbestos-related labors met by Danny's plumbing company."
   },
   {
     "_key": "_:bertmahoney",
