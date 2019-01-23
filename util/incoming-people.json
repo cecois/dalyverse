@@ -42,8 +42,13 @@
     },
     {
       "_key": "_:ahi",
-      "name": "Barry (Ahi)",
-      "article": "Barry (Ahi) is a true legend of water skiing who was very tragically bitten by a shark."
+      "name": "Barry (Ahi Tappo) Livingston-Smythe",
+      "article": "Ahi is an Australiasian water skiing legend who, due to an accidental verbal chumming by his boat captain, was very tragically bitten by a Great White shark. He lost a kidney and a spleen and a forgotten third organ in the incident. He lives still (as of ADPPP#6) and has a tattoo of Hot Dog's foot in the exact spot on his shoulder where Hot Dog stepped up to reach the pinnacle of a human ski pyramid. The tattoo made it difficult to position him anywhere else in the structure but was no less honorific. He claims to have the 'sun tolerance of a tribesman and the intellect of a white man.' He also suffers from Psoriasis."
+    },
+    {
+      "_key": "_:ahiscousinpenny",
+      "name": "Ahi's Cousin and Wife",
+      "article": "Ahi's Cousin and Wife is from Indiana and serves as his caretaker following his shark bite and recovery. She is an avid fan of surfing, Laird Hamilton in particular."
     },
     {
       "_key": "_:darbyquinn",
@@ -542,7 +547,7 @@
     {
       "_key": "_:hotdog",
       "name": "Hot Dog",
-      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times, C) doesn't know a lot about space, and D) frequently (50 times as of February 2016) auditions to be a member of Sha Na Na. He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. He used to own a classic car -- a 1988 Volvo -- but had to sell it. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis. Also he admitted on CBB400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
+      "article": "Hot Dog (b. 1954 or 1956 or 1946) is a waterskiing hot dog who has A) always been a person, B) been to the Pantages Theatre many times, C) doesn't know a lot about space, and D) frequently (50 times as of February 2016) auditions to be a member of Sha Na Na. After moving to California he briefly wrote water skiing-themed spec scripts for TV sitcoms such as 'Alice.' He has owned and operated more than one haunted, themed bed and breakfast. His last will and testament requests he be turned into an *actual* hot dog upon death and he drives a classic 1986 Volvo. He sidelines at the Hertz desk at the Bob Hope Airport in Burbank, but has great difficulty pushing the supplemental insurance. He sidelines at Manhattan Beach selling sunglasses. Also wherever you could arguably say his legs end - that's where his shorts begin. He used to own a classic car -- a 1988 Volvo -- but had to sell it. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony. Also he claims he can strip a Triumph motorcycle down to its constituent pieces in about two and a half years and that he's the third man in history to have sexual intercourse on water skiis. Also he admitted on CBB400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
       "has_murdered":"true",
       "links": [
         {
@@ -575,6 +580,11 @@
       "_key": "_:hotdogswife",
       "name": "Hot Dog's Wife",
       "article": "Hot Dog's wife was seemingly unliked by Hot Dog. Soon after her marriage to Hot Dog she began sleeping with a surfer named Hamburger."
+    },
+    {
+      "_key": "_:hamburgersurfer",
+      "name": "Hamburger",
+      "article": "Hamburger was a surfer-nemesis to Hot Dog and Ahi during the tumultuous 60s and 70s. He not only changed his name to Hamburger to be 'intentionally inflammatory' but he also slept with Hot Dog's wife. By ADPPP#6 he had not been heard from in some time."
     },
     {
       "_key": "_:jasonwu",

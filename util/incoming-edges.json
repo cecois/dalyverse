@@ -1,4 +1,7 @@
 [
+  {"_from": "events/_:hotdogiscutfromhistowboat","_to": "people/_:hamburgersurfer","type":"hasParticipant","vertex":"_:hotdogiscutfromhistowboat"},
+  {"_from": "events/_:hotdogiscutfromhistowboat","_to": "people/_:hotdog","type":"hasParticipant","vertex":"_:hotdogiscutfromhistowboat"},
+  {"_from": "events/_:hotdoggetschewedoutbyhisbossathope","_to": "people/_:hotdog","type":"hasParticipant","vertex":"_:hotdoggetschewedoutbyhisbossathope"},
   {"_from": "events/_:multiplechildrenarerippedapartbyrottweilers","_to": "places/_:pasadenafairytaletheatre","type":"occurredAt","vertex":"_:multiplechildrenarerippedapartbyrottweilers"},
   {"_from": "events/_:multiplechildrenarerippedapartbyrottweilers","_to": "people/_:cactustony","type":"hasParticipant","vertex":"_:multiplechildrenarerippedapartbyrottweilers"},
   {"_from": "events/_:multiplechildrenarerippedapartbyrottweilers","_to": "people/_:dondimello","type":"hasParticipant","vertex":"_:multiplechildrenarerippedapartbyrottweilers"},
@@ -324,6 +327,8 @@
   {"_from": "events/_:dannymahoneymeetsjimmyblades","_to": "people/_:dannymahoney","type":"hasParticipant","vertex":"_:dannymahoneymeetsjimmyblades"},
   {"_from": "things/_:takemywifekeys","_to": "people/_:jimmyblades","type":"hasParticipant","vertex":"_:takemywifekeys"},
   {"_from": "people/_:jimmyblades","_to": "things/_:takemywifekeys","type":"hasWorkedAt","vertex":"_:jimmyblades"},
+  {"_from":"people/_:ahiscousinpenny","_to":"people/_:ahi","type":"isSpouseOf","vertex":"_:ahiscousinpenny"},
+  {"_from":"people/_:ahiscousinpenny","_to":"people/_:ahi","type":"caresFor","vertex":"_:ahiscousinpenny"},
   {"_from":"people/_:andicallahanrn","_to":"people/_:bergenregionalbernard","type":"caresFor","vertex":"_:andicallahanrn"},
   {"_from":"people/_:andicallahanrn","_to":"people/_:bergenregionalrosa","type":"caresFor","vertex":"_:andicallahanrn"},
   {"_from":"people/_:andicallahanrn","_to":"people/_:god","type":"seeAlso","vertex":"_:andicallahanrn"},

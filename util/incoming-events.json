@@ -1,5 +1,12 @@
 [
   {
+    "_key": "_:hotdoggetschewedoutbyhisbossathope",
+    "name": "Hot Dog Gets Chewed Out at Work",
+    "article": "Unable to sell supplemental insurance for the entire month of July 2013, Hot Dog is rebuked and reprimanded. The episode scars him such that the following March he incoroprates the event into a Sha Na Na-themed Dreams and Aspirations Journal, commissioned by a life coach."
+    "timestamp": {start:"2013-07-01T00:00:00Z",end:"2013-07-31T12:59:59Z",
+    "nb_timestamp": {"class":"estimate-month","nb":"event is estimated to be the july prior to ADPPP#7, tipped during a dream sequence, of a sort"}
+  },
+  {
     "_key": "_:dannymahoneymeetsjimmyblades",
     "name": "Danny Mahoney Meets Jimmy Blades",
     "article": "Danny Mahoney meets Jimmy Blades at a gay wedding to which he (Mahoney) was not invited. Overwhelmed by carrying around and replacing and maintaining 8 D batteries, Mahoney hired Blades to play music live at LOTPC parties.",
@@ -547,6 +554,20 @@
     "article": "Hot Dog's wife passes.",
     "timestamp": "2013-01-01T19:00:00Z",
     "nb_timestamp": {"class":null,"nb":"timestamp is very loose acc. to CBB#232"}
+  },
+  {
+    "_key": "_:hotdogandahiverballychumbodey",
+    "name": "Hot Dog and Ahi Indirectly Murder Bodey",
+    "article": "During the Water Skiing Wars of the late 60s and early 70s, Hot Dog and Ahi 
+    "timestamp": "1970-04-14T122:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is very loose acc. to ADPPP#6 but is meant to coincide with the period of the water skiing wars"}
+  },
+  {
+    "_key": "_:hotdogiscutfromhistowboat",
+    "name": "Hot Dog is Cut from His Towboat",
+    "article": "Possibly due to criminal mischief, Hot Dog is cut from his towboat and set adrift in the Pacific Ocean for five years."
+    "timestamp": "1964-08-08T19:00:00Z",
+    "nb_timestamp": {"class":"estimate-prior","nb":"timestamp is very loose acc. to CBB#232 w/ corroboration in ADPPP#6"}
   },
   {
     "_key": "_:hotdogisrescuedbythelizard",
