@@ -1,0 +1,33 @@
+Lake Superior, USA
+
+{
+  "_key": "_:lakesuperior",
+  "name": "Lake Superior, USA",
+  "article": "site of: an annual freshwater skiing competition, bombed in the early 1970s by saltwater skiiers",
+  "geo_key": {
+    "type": "poly",
+    "id":
+  }
+},
+
+Limerick Treaty Stone https://www.openstreetmap.org/node/2216957587#map=19/52.66965/-8.62813
+{
+  "_key": "_:limericktreatystone",
+  "name": "The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahone and Damien Fearnly would occasionally take shits on said stone for fun.",
+  "article": "",
+  "geo_key": {
+    "type": "point",
+    "id":
+  }
+},
+
+Limerick Hunt Museum https://www.openstreetmap.org/node/2216957587#map=19/52.66965/-8.62813
+{
+  "_key": "_:limerickhuntmuseum",
+  "name": "The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mara from the Hunt and 'fucked on it for a year.'",
+  "article": "",
+  "geo_key": {
+    "type": "point",
+    "id":
+  }
+},
