@@ -38,7 +38,8 @@
     "_key": "_:equus",
     "name": "Equus",
     "article": "Equus is a 1973 play by Peter Shaffer."
-  },{
+  },
+  {
     "_key": "_:thefifthwall",
     "name": "The Fifth Wall",
     "article": "The Fifth Wall was a theatre review periodical with a particular bent toward innovation."
@@ -67,7 +68,6 @@
     "name": "Home Alone",
     "article": "Home Alone is a 1990 Chris Columbus film produced by John Hughes."
   },
-
   {
     "_key": "_:thejourneymen",
     "name": "The Journeymen",

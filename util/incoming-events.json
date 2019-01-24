@@ -1,25 +1,52 @@
 [
   {
+    "_key": "_:trumpcommissionstherockettes",
+    "name": "Donald Trump Commissions The Rockettes",
+    "article": "Booking a lineup for his 2017 Presidential Inauguration, Mr. Trump contacts Don DiMello and offers a spot for The Rockettes.",
+    "timestamp": "2016-12-19T00:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-quarter",
+      "nb": "estimate is fairly tight - post-election and pre-inauguration 2016-2017"
+    }
+  },
+  {
+    "_key": "_:margotchunkloseshervirginity",
+    "name": "Margot Chunk Loses Her Virginity",
+    "article": "At the same time as the Bombing of Hiroshima to effectively end World War II, Margot Chunk lost her virginity.",
+    "timestamp": "1945-08-06T00:00:00Z",
+    "nb_timestamp": {
+      "class": "firm",
+      "nb": "event coincides with the detonation of an atomic bomb over Hiroshima by U.S. armed forces"
+    }
+  },
+  {
+    "_key": "_:margotchunkisborn",
+    "name": "Margot Chunk is Born",
+    "article": "Margot Chunk was born long enough before 1912 that she remembers news coverage of the sinking of RMS Titanic.",
+    "timestamp": "1910-06-06T00:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "event is a loose estimate - some time prior to 1912.Apr.15"
+    }
+  },
+  {
     "_key": "_:patrickmcmahoncrashesaparty1",
     "name": "Johnny McGory (Patrick McMahon) Crashes a Party and Steals $33",
     "article": "Encountering a party to which he was not invited, Mr. McGory faked a mutual friend named 'Jackie' and stole $33 from the upstairs coatroom. He then got drunk waiting for a bus to the Morongo casinos and snorted an unknown white substance in the station bathroom. Then 'one thing led to another' and McGory ended up hijacking a bus and driving it into a ditch 'on purpose because of the fear'",
-    "timestamp": 
-      "2002-11-01T00:00:00Z",
+    "timestamp": "2002-11-01T00:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "event is a loose estimate - some time prior to ADPPP#8"
+      "nb": "event is a loose estimate - some time prior to ADPPP#S1.8"
     }
   },
   {
     "_key": "_:johnnymcgorrybreaksandenters",
     "name": "Johnny McGory (Patrick McMahon) Does a B&E",
     "article": "Booked on a doomed world tour by a booking agent that is, in reality, just 'a schizophrenic with a briefcase full of knives,' McGory developed a habit of breaking into presumed-empty homes for food and shelter. One morning he woke in the home of a bed-ridden elderly woman who was expecting her caretaker, Greta. McGory temporarily assumed the identity of Greta, fed her, then sat down to watch cartoons in his underwear. Greta then returned to the house and 'immediately gets violent.' A scuffle ensued in which Mr. McGory was pepper-sprayed. McGory then stumbled out to splash water on his face from a litter-strewn brook, where he stayed and 'cried and cried and cried.'",
-    "timestamp": 
-      "start": "2000-09-28T07:00:00Z"
-    ,
+    "timestamp": "2000-09-28T07:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "event is loose approximation - any time prior to ADPPP#8"
+      "nb": "event is loose approximation - any time prior to ADPPP#S1.8"
     }
   },
   {
@@ -32,7 +59,7 @@
     },
     "nb_timestamp": {
       "class": "estimate-month",
-      "nb": "event is estimated to be the july prior to ADPPP#7, tipped during a dream sequence, of a sort"
+      "nb": "event is estimated to be the july prior to ADPPP#S1.7, tipped during a dream sequence, of a sort"
     }
   },
   {
@@ -42,7 +69,7 @@
     "timestamp": "2013-12-12T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "event is some time prior to ADPPP#6"
+      "nb": "event is some time prior to ADPPP#S1.6"
     }
   },
   {
@@ -52,7 +79,7 @@
     "timestamp": "2014-03-04T16:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "event is 1.5 days prior to ADPPP#5"
+      "nb": "event is 1.5 days prior to ADPPP#S1.5"
     }
   },
   {
@@ -62,7 +89,7 @@
     "timestamp": "2014-03-03T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-week",
-      "nb": "event is the week prior to ADPPP#5 (but after Glengarry and after Children's Hour)"
+      "nb": "event is the week prior to ADPPP#S1.5 (but after Glengarry and after Children's Hour)"
     }
   },
   {
@@ -72,7 +99,7 @@
     "timestamp": "2014-03-04T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-week",
-      "nb": "event is the week prior to ADPPP#5 (but after Glengarry and after ChildrensHour)"
+      "nb": "event is the week prior to ADPPP#S1.5 (but after Glengarry and after ChildrensHour)"
     }
   },
   {
@@ -82,7 +109,7 @@
     "timestamp": "2014-03-01T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-week",
-      "nb": "event is the week prior to ADPPP#5 (but after Glengarry)"
+      "nb": "event is the week prior to ADPPP#S1.5 (but after Glengarry)"
     }
   },
   {
@@ -92,7 +119,7 @@
     "timestamp": "2014-02-28T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-week",
-      "nb": "event is the week prior to ADPPP#5"
+      "nb": "event is the week prior to ADPPP#S1.5"
     }
   },
   {
@@ -118,21 +145,21 @@
   {
     "_key": "_:kevinlindtsfirstwords",
     "name": "Kevin Lindt's First Words",
-    "article": "During a remote into ADPPP#4, little Kevin spoke his first words: 'He has a penis you can see.'",
+    "article": "During a remote into ADPPP#S1.4, little Kevin spoke his first words: 'He has a penis you can see.'",
     "timestamp": "2014-02-26T16:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "ADPPP#4"
+      "nb": "ADPPP#S1.4"
     }
   },
   {
     "_key": "_:kevinlindtsitsonacat2",
     "name": "Kevin Lindt Sits on Another Cat",
-    "article": "On ADPPP#4 it was revealed that August Lindt's son had sat on yet another cat, whose 'brains came out its ears.'",
+    "article": "On ADPPP#S1.4 it was revealed that August Lindt's son had sat on yet another cat, whose 'brains came out its ears.'",
     "timestamp": "2014-02-16T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "some time prior to (but likely near) ADPPP#4"
+      "nb": "some time prior to (but likely near) ADPPP#S1.4"
     }
   },
   {
@@ -142,7 +169,7 @@
     "timestamp": "2000-04-01T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "some time prior to ADPPP#4"
+      "nb": "some time prior to ADPPP#S1.4"
     }
   },
   {
@@ -152,23 +179,23 @@
     "timestamp": "2013-12-01T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
-      "nb": "likely some time in the year prior to ADPPP#4"
+      "nb": "likely some time in the year prior to ADPPP#S1.4"
     }
   },
   {
     "_key": "_:augustlindttoursskokieil",
     "name": "August Lindt travels to Skokie, Illinois.",
-    "article": "On ADPPP#4, during a round of 'How Close Have We Been to Skokie,' Mr. Lindt reveals that has, in fact, been to Skokie.",
+    "article": "On ADPPP#S1.4, during a round of 'How Close Have We Been to Skokie,' Mr. Lindt reveals that has, in fact, been to Skokie.",
     "timestamp": "2000-08-08T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "prior to ADPPP#4 is the only clue"
+      "nb": "prior to ADPPP#S1.4 is the only clue"
     }
   },
   {
     "_key": "_:billcarterschildplatoonindresden",
     "name": "Bill Carter's Platoon of Children is Caught in the Firebombing of Dresden",
-    "article": "On ADPPP#3, Bill Carter reveals to Jesse Ventura that a platoon of children he trained in New Mexico was accidentally bunkered in Dresden during the Allied aerial attack.",
+    "article": "On ADPPP#S1.3, Bill Carter reveals to Jesse Ventura that a platoon of children he trained in New Mexico was accidentally bunkered in Dresden during the Allied aerial attack.",
     "timestamp": {
       "start": "1945-02-12T10:10:00Z",
       "end": "1945-02-15T10:10:00Z"
@@ -181,7 +208,7 @@
   {
     "_key": "_:billcarterschildplatoon",
     "name": "Bill Carter Trains a Platoon of Children",
-    "article": "On ADPPP#3, Bill Carter reveals to Jesse Ventura that he trained a platoon of children in New Mexico meant to combat The Hitler Youth in World War II.",
+    "article": "On ADPPP#S1.3, Bill Carter reveals to Jesse Ventura that he trained a platoon of children in New Mexico meant to combat The Hitler Youth in World War II.",
     "timestamp": {
       "start": "1941-12-10T10:10:00Z",
       "end": "1945-02-15T10:10:00Z"
@@ -194,7 +221,7 @@
   {
     "_key": "_:billcarterdoestopsecretbusiness",
     "name": "Bill Carter Does Top Secret Business in World War II",
-    "article": "On ADPPP#3, Bill Carter reveals to Jesse Ventura that he had done 'Top Secret business' back in World War II that is, as yet, still classified. He goes on to reveal that the work was primarily training an army of children in knife play and artillery as preparation for their expected battles with The Hitler Youth in Germany.",
+    "article": "On ADPPP#S1.3, Bill Carter reveals to Jesse Ventura that he had done 'Top Secret business' back in World War II that is, as yet, still classified. He goes on to reveal that the work was primarily training an army of children in knife play and artillery as preparation for their expected battles with The Hitler Youth in Germany.",
     "timestamp": {
       "start": "1939-09-01T10:10:00Z",
       "end": "1945-09-02T10:10:00Z"
@@ -221,7 +248,7 @@
     "timestamp": "1979-05-22T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
-      "nb": "timestamp is acc. to ADPPP#2"
+      "nb": "timestamp is acc. to ADPPP#S1.2"
     }
   },
   {
@@ -231,27 +258,27 @@
     "timestamp": "2014-02-12T11:30:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp is firm - ADPPP#2"
+      "nb": "timestamp is firm - ADPPP#S1.2"
     }
   },
   {
     "_key": "_:trynottogethitbythesehammers",
     "name": "Try Not to Get Hit by These Hammers",
-    "article": "TNTGHBTH was a Chip Gardner production, staged live on ADPPP#2 in February 2014. Multiple victims were unable to avoid being, indeed, hit by hammers.",
+    "article": "TNTGHBTH was a Chip Gardner production, staged live on ADPPP#S1.2 in February 2014. Multiple victims were unable to avoid being, indeed, hit by hammers.",
     "timestamp": "2014-02-12T10:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp is firm - ADPPP#2"
+      "nb": "timestamp is firm - ADPPP#S1.2"
     }
   },
   {
     "_key": "_:areyousmarterthanaroomfulofpoisonoussnakes",
     "name": "Are You Smarter than a Room Full of Poisonous Snakes?",
-    "article": "AYSTARFOPS was a Chip Gardner production, staged live on ADPPP#2 in February 2014. Multiple victims were unable to answer a question about the office of Vice President.",
+    "article": "AYSTARFOPS was a Chip Gardner production, staged live on ADPPP#S1.2 in February 2014. Multiple victims were unable to answer a question about the office of Vice President.",
     "timestamp": "2014-02-12T10:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp is firm - ADPPP#2"
+      "nb": "timestamp is firm - ADPPP#S1.2"
     }
   },
   {
@@ -261,7 +288,7 @@
     "timestamp": "1991-09-19T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a very loose estimate acc. to ADPPP#2 - after the jeep incident, long enough to have had at least a couple facial reconstructions"
+      "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.2 - after the jeep incident, long enough to have had at least a couple facial reconstructions"
     }
   },
   {
@@ -271,7 +298,7 @@
     "timestamp": "1984-07-17T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a very loose estimate acc. to ADPPP#2 - prior to being run over by a jeep in 1986"
+      "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.2 - prior to being run over by a jeep in 1986"
     }
   },
   {
@@ -281,7 +308,7 @@
     "timestamp": "1995-04-14T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a very loose estimate acc. to ADPPP#2"
+      "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.2"
     }
   },
   {
@@ -291,17 +318,17 @@
     "timestamp": "2018-01-16T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a loose estimate acc. to ADPPP#9"
+      "nb": "timestamp is a loose estimate acc. to ADPPP#S1.1"
     }
   },
   {
     "_key": "_:daltonwilcoxvsaninvisibleman",
     "name": "Dalton Wilcox Slays an Invisible Man",
-    "article": "Walking home from his local watering hole, Mr. Wilcox passed by a darkened alleyway. Hearing footsteps on the pavement, he was unable to see anybody. Knowing full well that it meant the steps belonged to 'a goddamned invisible man,' Wilcox pulled out his six-guns and shouted. As Wilcox approached, the invisible man put on a visible man disguise. Asked if he was an invisible man, the man 'basically confirmed it,' according to Wilcox who, on ADPPP#9, notes that \"you won't *not* be seeing him anymore.\"",
+    "article": "Walking home from his local watering hole, Mr. Wilcox passed by a darkened alleyway. Hearing footsteps on the pavement, he was unable to see anybody. Knowing full well that it meant the steps belonged to 'a goddamned invisible man,' Wilcox pulled out his six-guns and shouted. As Wilcox approached, the invisible man put on a visible man disguise. Asked if he was an invisible man, the man 'basically confirmed it,' according to Wilcox who, on ADPPP#S1.1, notes that \"you won't *not* be seeing him anymore.\"",
     "timestamp": "2018-03-06T10:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp is firm acc. to ADPPP#9"
+      "nb": "timestamp is firm acc. to ADPPP#S1.1"
     }
   },
   {
@@ -311,7 +338,7 @@
     "timestamp": "2010-06-01T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a very loose estimate, any time prior to ADPPP#1"
+      "nb": "timestamp is a very loose estimate, any time prior to ADPPP#S1.1"
     }
   },
   {
@@ -321,7 +348,7 @@
     "timestamp": "2013-01-01T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a very loose estimate, any time prior to ADPPP#1"
+      "nb": "timestamp is a very loose estimate, any time prior to ADPPP#S1.1"
     }
   },
   {
@@ -331,17 +358,17 @@
     "timestamp": "1975-07-30T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
-      "nb": "timestamp is a loose estimate acc. to ADPPP#1"
+      "nb": "timestamp is a loose estimate acc. to ADPPP#S1.1"
     }
   },
   {
     "_key": "_:russelsheinswifedisappears",
     "name": "Russel Shein's Wife Disappears",
-    "article": "Some time in the night 13 years before ADPPP#1, Russel Shein's wife disappeared. Mr. Shein maintains she was abducted by skillful kidnappers who left behind almost no evidence (save her wedding ring on the bathroom sink).",
+    "article": "Some time in the night 13 years before ADPPP#S1.1, Russel Shein's wife disappeared. Mr. Shein maintains she was abducted by skillful kidnappers who left behind almost no evidence (save her wedding ring on the bathroom sink).",
     "timestamp": "2000-11-09T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
-      "nb": "timestamp is a loose estimate acc. to ADPPP#1"
+      "nb": "timestamp is a loose estimate acc. to ADPPP#S1.1"
     }
   },
   {
@@ -351,7 +378,7 @@
     "timestamp": "2014-02-04T10:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp firm acc. to ADPPP#1"
+      "nb": "timestamp firm acc. to ADPPP#S1.1"
     }
   },
   {
@@ -361,7 +388,7 @@
     "timestamp": "2014-02-05T10:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp firm acc. to ADPPP#1"
+      "nb": "timestamp firm acc. to ADPPP#S1.1"
     }
   },
   {
@@ -371,7 +398,7 @@
     "timestamp": "2018-03-07T10:10:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp firm acc. to ADPPP#9"
+      "nb": "timestamp firm acc. to ADPPP#S1.S1.1"
     }
   },
   {
@@ -387,11 +414,11 @@
   {
     "_key": "_:joebongoisinvolvedinacaraccident",
     "name": "Joe Bongo is Involved in a Car Accident",
-    "article": "Joe Bongo is involved in the most expensive car accident in the history of Marina del Rey. Listed among the destroyed properties is the historic lighthouse (rendering the Marina particularly dangerous); the dog run at Burton Chace Park; Mr. Bongo's car; the dashcam therein. The incident cost him his position as Driver's Ed instructor at MDRHS.",
-    "timestamp": "2018-06-16T10:10:00Z",
+    "article": "Joe Bongo is involved in the most expensive car accident in the history of Marina del Rey. Listed among the destroyed properties are the historic lighthouse (rendering the Marina particularly dangerous); the dog run at Burton Chace Park; Mr. Bongo's car; the dashcam therein; the Ritz-Carlton (Marina del Rey) Parking Ramp; Tony P's Dockside Grill; a Tiki Mermaid Charters Harbor Cruise Boat; and Mr. Bongo's thumb, which was sprained in the mélée. The incident cost him his position as Driver's Ed instructor at MDRHS.",
+    "timestamp": "2018-01-11T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
-      "nb": "timestamp a rough guess acc. to CBB#576"
+      "nb": "timestamp has to be prior to (but near) CBB#576 and ADPPP#S2.2"
     }
   },
   {
@@ -540,7 +567,7 @@
     "timestamp": "1973-08-19T00:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
-      "nb": "timestamp is a very loose estimate acc. to ADPPP#6 - some time certainly prior to the joint treaty of 1974 with the surfers and at a time when Lake Superior would have been amenable to skiing competitions"
+      "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.6 - some time certainly prior to the joint treaty of 1974 with the surfers and at a time when Lake Superior would have been amenable to skiing competitions"
     }
   },
   {
@@ -550,7 +577,7 @@
     "timestamp": "1974-08-09T00:00:00Z",
     "nb_timestamp": {
       "class": "firm",
-      "nb": "timestamp is firm (nixon resignation) acc. to ADPPP#6"
+      "nb": "timestamp is firm (nixon resignation) acc. to ADPPP#S1.6"
     }
   },
   {
@@ -610,7 +637,7 @@
     "timestamp": "2013-12-01T13:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is prior to ADPPP#5 and CBB#200"
+      "nb": "timestamp is prior to ADPPP#S1.5 and CBB#200"
     }
   },
   {
@@ -630,7 +657,7 @@
     "timestamp": "2012-06-01T13:10:00Z",
     "nb_timestamp": {
       "class": "estimate-firm",
-      "nb": "timestamp is acc. to ADPPP#5, research shows a Grease event at Venice High (MDRHS) on June 1 2012 -- https://patch.com/california/venice/venice-high-school-aka-rydell-high-to-host-2nd-greasefd7aa4eef9"
+      "nb": "timestamp is acc. to ADPPP#S1.5, research shows a Grease event at Venice High (MDRHS) on June 1 2012 -- https://patch.com/california/venice/venice-high-school-aka-rydell-high-to-host-2nd-greasefd7aa4eef9"
     }
   },
   {
@@ -640,7 +667,7 @@
     "timestamp": "2013-01-01T13:10:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is acc. to ADPPP#5"
+      "nb": "timestamp is acc. to ADPPP#S1.5"
     }
   },
   {
@@ -715,6 +742,16 @@
     }
   },
   {
+    "_key": "_:joebongossexunitlosesaprop",
+    "name": "Joe Bongo's Health Class Misplaces a Ping Pong Ball",
+    "article": "During a round of 'Find The Ping Pong Ball' in Joe Bongo's Health class sex unit at Marina del Rey High School, a ping pong ball was misplaced by Bonnie Ramirez upon the misguided advice from Mr. Bongo that her tampon would 'dissolve' on its own.",
+    "timestamp": "2014-09-01T10:10:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "timestamp is extremely approximate - two semesters prior to WIU#0.8, some time prior to ADPPP#S2.2; must be consistent with at least one of the bongo sex ed units"
+    }
+  },
+  {
     "_key": "_:joebongoteachesdrugunit",
     "name": "Joe Bongo Teaches a Drug Unit at MDRHS",
     "article": "In order to deter students from drug abuse, Joe Bongo demonstrated how to mix and cook a speedball in class using flour and sugar. Among the students who shot the substance was Marissa Wompler.",
@@ -781,7 +818,7 @@
     "timestamp": "2014-03-26T13:10:00Z",
     "nb_timestamp": {
       "class": null,
-      "nb": "timestamp is ADPPP#8"
+      "nb": "timestamp is ADPPP#S1.8"
     }
   },
   {
@@ -841,7 +878,7 @@
     "timestamp": "1970-04-14T122:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is very loose acc. to ADPPP#6 but is meant to coincide with the period of the water skiing wars"
+      "nb": "timestamp is very loose acc. to ADPPP#S1.6 but is meant to coincide with the period of the water skiing wars"
     }
   },
   {
@@ -851,7 +888,7 @@
     "timestamp": "1964-08-08T19:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is very loose acc. to CBB#232 w/ corroboration in ADPPP#6"
+      "nb": "timestamp is very loose acc. to CBB#232 w/ corroboration in ADPPP#S1.6"
     }
   },
   {
@@ -1290,6 +1327,16 @@
     }
   },
   {
+    "_key": "_:dondimellostagesjewmanji",
+    "name": "Don DiMello Stages 'Jewmanji' at the Pasadena Fairytale Theatre",
+    "article": "The show is produced in association with 'a guy who has crushing gambling debts and works at the L.A. Zoo' and, according to Mr. DiMello, 'has been popular with a surprising subset of the population.'",
+    "timestamp": "2018-03-11T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-month",
+      "nb": "timestamp is a relatively tight approximation - show is 'up now' relative to ADPPP#S2.3"
+    }
+  },
+  {
     "_key": "_:dondimellostagescinderella",
     "name": "Don DiMello Stages 'Cinderella' at the Pasadena Fairytale Theatre",
     "article": "The show was 'not your typical garbage,' according to Mr. DiMello, and featured a number of liberties taken in the interpretation of the classic story including an extra sister and considerable nudity. Cinderella was triple-cast and spoke simultaneously. The show failed to reach denouement.",
@@ -1306,7 +1353,7 @@
     "timestamp": "1994-01-08T19:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is a very loose approximation - 'years' prior to ADPPP#5"
+      "nb": "timestamp is a very loose approximation - 'years' prior to ADPPP#S1.5"
     }
   },
   {
@@ -1316,7 +1363,7 @@
     "timestamp": "1994-03-05T19:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is a very loose approximation - 'years' prior to ADPPP#5"
+      "nb": "timestamp is a very loose approximation - 'years' prior to ADPPP#S1.5"
     }
   },
   {
@@ -1326,7 +1373,7 @@
     "timestamp": "1998-07-07T19:00:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
-      "nb": "timestamp is '16-17 years' prior to ADPPP#5"
+      "nb": "timestamp is '16-17 years' prior to ADPPP#S1.5"
     }
   },
   {
@@ -1346,7 +1393,7 @@
     "timestamp": "1996-08-08T19:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior",
-      "nb": "timestamp is a very loose approximation - some time prior to ADPPP#5, possibly in DiMello's Connectucut days."
+      "nb": "timestamp is a very loose approximation - some time prior to ADPPP#S1.5, possibly in DiMello's Connectucut days."
     }
   },
   {
@@ -1356,7 +1403,7 @@
     "timestamp": "1996-12-18T19:00:00Z",
     "nb_timestamp": {
       "class": "estimate-month",
-      "nb": "timestamp is a loose approximation - ADPPP#5 near Christmas"
+      "nb": "timestamp is a loose approximation - ADPPP#S1.5 near Christmas"
     }
   },
   {

@@ -1,111 +1,132 @@
 [
   {
-  "_key": "_:lakesuperior",
-  "name": "Lake Superior, USA",
-  "article": "site of: an annual freshwater skiing competition, bombed in the early 1970s by saltwater skiiers",
-  "geo_key": {
-    "type": "poly",
-    "id":566
-  }
-},{
-  "_key": "_:limericktreatystone",
-  "name": "The Treaty Stone",
-  "article": "The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahone and Damien Fearnly would occasionally take shits on said stone for fun.",
-  "geo_key": {
-    "type": "point",
-    "id": 983
-  }
-},{
-  "_key": "_:limerickhuntmuseum",
-  "name": "Hunt Museum",
-  "article": "The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mara from the Hunt and 'fucked on it for a year.'",
-  "geo_key": {
-    "type": "poly",
-    "id": 567
-  }
-},
+    "_key": "_:historicmarinadelreylighthouse",
+    "name": "Historic Marina del Rey Lighthouse",
+    "article": "Historic Marina del Rey Lighthouse was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The lighthouse was tipped into the water and rests on the floor of the harbor to this day.",
+    "geo_key": {
+      "type": "point",
+      "id": 958
+    }
+  },
   {
-  "_key": "_:bahrain",
-  "name": "Bahrain",
-  "article": "site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer",
-  "geo_key": {
-    "type": "poly",
-    "id": 562
-  }
-},
-{
-  "_key": "_:altadenaca",
-  "name": "Altadena, CA",
-  "article": "home of: Mal Bachman",
-  "geo_key": {
-    "type": "poly",
-    "id": 403
-  }
-},
-{
-  "_key": "_:seattlespaceneedle",
-  "name": "Seattle Space Needle",
-  "article": "site of: a failed August Lindt suicide attempt",
-  "geo_key": {
-    "type": "point",
-    "id": 516
-  }
-},
-{
-  "_key": "_:annefrankhuis",
-  "name": "Anne Frank Huis",
-  "article": "The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank (-- Wikipedia, 2019.Jan)",
-  "geo_key": {
-    "type": "poly",
-    "id": 560
-  }
-},
-{
-  "_key": "_:tommybahamaskokie",
-  "name": "Tommy Bahamas - Northbrook",
-  "article": "A proxy for Tommy Bahama - Skokie; site of: August Lindt buying a shirt",
-  "geo_key": {
-    "type": "point",
-    "id": 982
-  }
-},
-{
-  "_key": "_:hopitaljasonsendweer",
-  "name": "Hôpital Jason Sendwe Emergency Room, ",
-  "article": "Site of: August Lindt, on vacation.",
-  "geo_key": {
-    "type": "poly",
-    "id": 559
-  }
-},
+    "_key": "_:burtonchacepark",
+    "name": "Burton Chace Park",
+    "article": "Burton Chace Park was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The park incurred $18M worth of damages.",
+    "geo_key": {
+      "type": "poly",
+      "id": 548
+    }
+  },
   {
-  "_key": "_:newmexicousa",
-  "name": "New Mexico, USA",
-  "article": "The 47th state in the Union.",
-  "geo_key": {
-    "type": "poly",
-    "id": 381
-  }
-},
+    "_key": "_:lakesuperior",
+    "name": "Lake Superior, USA",
+    "article": "site of: an annual freshwater skiing competition, bombed in the early 1970s by saltwater skiiers",
+    "geo_key": {
+      "type": "poly",
+      "id": 566
+    }
+  },
   {
-  "_key": "_:dresdende",
-  "name": "Dresden, Germany",
-  "article": "Dresden is a significant site in World War II.",
-  "geo_key": {
-    "type": "poly",
-    "id": 556
-  }
-},
+    "_key": "_:limericktreatystone",
+    "name": "The Treaty Stone",
+    "article": "The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahone and Damien Fearnly would occasionally take shits on said stone for fun.",
+    "geo_key": {
+      "type": "point",
+      "id": 983
+    }
+  },
   {
-  "uid": "_:laramiefeedandwesternsupply",
-  "name": "Laramie Feed and Western Supply",
-  "article": "LFWS is a purveyor of western gear and other supplies to cowboys.",
-  "geo_key": {
-    "type": "point",
-    "id": 979
-  }
-},
-    {"_key": "_:marktwainhotella",
+    "_key": "_:limerickhuntmuseum",
+    "name": "Hunt Museum",
+    "article": "The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mara from the Hunt and 'fucked on it for a year.'",
+    "geo_key": {
+      "type": "poly",
+      "id": 567
+    }
+  },
+  {
+    "_key": "_:bahrain",
+    "name": "Bahrain",
+    "article": "site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer",
+    "geo_key": {
+      "type": "poly",
+      "id": 562
+    }
+  },
+  {
+    "_key": "_:altadenaca",
+    "name": "Altadena, CA",
+    "article": "home of: Mal Bachman",
+    "geo_key": {
+      "type": "poly",
+      "id": 403
+    }
+  },
+  {
+    "_key": "_:seattlespaceneedle",
+    "name": "Seattle Space Needle",
+    "article": "site of: a failed August Lindt suicide attempt",
+    "geo_key": {
+      "type": "point",
+      "id": 516
+    }
+  },
+  {
+    "_key": "_:annefrankhuis",
+    "name": "Anne Frank Huis",
+    "article": "The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank (-- Wikipedia, 2019.Jan)",
+    "geo_key": {
+      "type": "poly",
+      "id": 560
+    }
+  },
+  {
+    "_key": "_:tommybahamaskokie",
+    "name": "Tommy Bahamas - Northbrook",
+    "article": "A proxy for Tommy Bahama - Skokie; site of: August Lindt buying a shirt",
+    "geo_key": {
+      "type": "point",
+      "id": 982
+    }
+  },
+  {
+    "_key": "_:hopitaljasonsendweer",
+    "name": "Hôpital Jason Sendwe Emergency Room, ",
+    "article": "Site of: August Lindt, on vacation.",
+    "geo_key": {
+      "type": "poly",
+      "id": 559
+    }
+  },
+  {
+    "_key": "_:newmexicousa",
+    "name": "New Mexico, USA",
+    "article": "The 47th state in the Union.",
+    "geo_key": {
+      "type": "poly",
+      "id": 381
+    }
+  },
+  {
+    "_key": "_:dresdende",
+    "name": "Dresden, Germany",
+    "article": "Dresden is a significant site in World War II.",
+    "geo_key": {
+      "type": "poly",
+      "id": 556
+    }
+  },
+  {
+    "uid": "_:laramiefeedandwesternsupply",
+    "name": "Laramie Feed and Western Supply",
+    "article": "LFWS is a purveyor of western gear and other supplies to cowboys.",
+    "geo_key": {
+      "type": "point",
+      "id": 979
+    }
+  },
+  {
+    "_key": "_:marktwainhotella",
     "name": "Mark Twain Hotel - Los Angeles",
     "article": "Questionable boutique hotel off of Wilcox.",
     "geo_key": {
@@ -139,7 +160,8 @@
       "type": "point",
       "id": 13
     }
-  },{
+  },
+  {
     "_key": "_:melroseatgower",
     "name": "Melrose @ Gower",
     "article": "intersection",
