@@ -78,8 +78,9 @@
 * isPetOf
 
 
-##### Arango Notes
+#### Arango Notes
 
+##### Docker
 9696  arangoimp --file ~/Downloads/airports.csv --collection airports --create-collection true --type csv
  9700  arangoimp --file ~/Downloads/airports.csv --collection airports --create-collection true --type csv
  9702  brew search arango
@@ -103,3 +104,11 @@
 10156  history | grep arang
 10157  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --create-collection true
 10159  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --overwrite --create-collection true
+
+##### Query
+
+curl -X POST --header 'accept: application/json' --data-binary @- --dump - http://localhost:8529/_api/query <<EOF
+{ 
+  "query" : "for e in edges filter e.type=='hasParticipant' for ev in events filter e._from==ev._id for p in people filter e._to==p._id return {evkey:ev._key,p:p.name}" 
+}
+EOF

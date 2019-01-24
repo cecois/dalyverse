@@ -1,5 +1,30 @@
 [
   {
+  "_key": "_:lakesuperior",
+  "name": "Lake Superior, USA",
+  "article": "site of: an annual freshwater skiing competition, bombed in the early 1970s by saltwater skiiers",
+  "geo_key": {
+    "type": "poly",
+    "id":566
+  }
+},{
+  "_key": "_:limericktreatystone",
+  "name": "The Treaty Stone",
+  "article": "The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahone and Damien Fearnly would occasionally take shits on said stone for fun.",
+  "geo_key": {
+    "type": "point",
+    "id": 983
+  }
+},{
+  "_key": "_:limerickhuntmuseum",
+  "name": "Hunt Museum",
+  "article": "The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mara from the Hunt and 'fucked on it for a year.'",
+  "geo_key": {
+    "type": "poly",
+    "id": 567
+  }
+},
+  {
   "_key": "_:bahrain",
   "name": "Bahrain",
   "article": "site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer",
