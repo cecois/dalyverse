@@ -1,9 +1,11 @@
 <template>
 <div>
-  <h5>timeline</h5>
-<p><code>{{console.msg}}</code></p>
-<p><code>{{windows.time.begin}}</code></p>
-<p><code>{{windows.time.end}}</code></p>
+  <h1 class="is-size-1">timeline</h1>
+<p>console.msg:<code>{{console.msg}}</code></p>
+<p>console.throb:<code>{{console.throb}}</code></p>
+<p>windows.time.begin:<code>{{windows.time.begin}}</code></p>
+<p>windows.time.end:<code>{{windows.time.end}}</code></p>
+<p>windows.space:<code>{{windows.space.bbox}}</code></p>
 </div>
 </template>
 
@@ -23,7 +25,10 @@ computed:{},//computed
 watch:{},//watch
 methods:{},//methods
 created() {
-  console.log(this.$route.params.tstart);
+  
+  this.windows.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:null;
+  this.windows.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:null;
+
   return null;
   },//created
   mounted: function () {}//mounted
