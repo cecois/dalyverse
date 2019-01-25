@@ -1,4 +1,9 @@
 [
+  {"_from": "events/_:gollymurdersafamilyonmaricopastreet","_to": "people/_:golly","type":"hasParticipant","vertex":"_:gollymurdersafamilyonmaricopastreet"},
+  {"_from": "events/_:gollymurdersafamilyonmaricopastreet","_to": "places/_:phoneixaz","type":"occurredAt","vertex":"_:gollymurdersafamilyonmaricopastreet"},
+  {"_from": "people/_:gil","_to": "places/_:toweringpinespsychiatric","type":"livesAt","vertex":"_:gil"},
+  {"_from": "people/_:golly","_to": "places/_:toweringpinespsychiatric","type":"livesAt","vertex":"_:golly"},
+  {"_from": "people/_:chocolatepudding","_to": "places/_:toweringpinespsychiatric","type":"livesAt","vertex":"_:chocolatepudding"},
   {"_from": "people/_:gil","_to": "people/_:marcorenaldo","type":"hasFriend","vertex":"_:gil"},
   {"_from": "people/_:weebrucediesatedinburghcastle","_to": "people/_:weebruce","type":"hasParticipant","vertex":"_:weebrucediesatedinburghcastle"},
   {"_from": "people/_:weebrucediesatedinburghcastle","_to": "places/_:edinburghcastle","type":"occurredAt","vertex":"_:weebrucediesatedinburghcastle"},

@@ -1,5 +1,15 @@
 [
   {
+    "_key": "_:gollymurdersafamilyonmaricopastreet",
+    "name": "Gil Murders a Phoenix Family",
+    "article": "In a song on ADPPP#S2.5, Golly the dummy admits that he 'murdered that family on Maricopa Street in Phoenix in 1987.' He is quickly hushed by his operator, Gil, but listeners are led to trust the veracity of the doll's claim.",
+    "timestamp": "1987-04-04T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is '1987' acc. to ADPPP#S2.5"
+    }
+  },
+  {
     "_key": "_:weebrucediesatedinburghcastle",
     "name": "Wee Bruce Falls to His Death",
     "article": "Wee Bruce, guarding the Edinburgh Castle ramparts but fearing the rising lava below, leaps from the castle walls, is struck by lightning, and died of a broken heart before he hits the ground.",

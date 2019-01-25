@@ -1,5 +1,15 @@
 [
   {
+    "_key": "_:lronhubbard",
+    "name": "Lafayette Ronald Hubbard",
+    "article": "L. Ron Hubbard was a science fiction writer and commodore to a fleet of personal paramilitary ships that traveled the world until too many ports-of-call refused entry. At one point his 'back was broken in 28 places' and, additionally there was 'something wrong' with his feet. Following a bout with a comprimised sexual prowess that was repaired by testosterone injections and ritualistic group scenarios, his doctors recommended he expect a future characterized by 'dependency and sex magic.' Under nitrous oxide, later, he 'glimpsed the infinite' and was holistically repaired, from feet to spine to sexual performance. According to Hubbard, his prior lives include, but are not limited to: a Carthaginian sailor; a race car driver on Venus; a marshal to Joan of Arc; mayor of Pangea; a disgraced priest; and a contemporary of Machiaveli."
+  },
+  {
+    "_key": "_:chocolatepudding",
+    "name": "Chocolate Pudding",
+    "article": "Chocolate Pudding calls himself Chocolate Pudding because he likes it so much. He suffers from head trauma, does whatever the fuck he wants, and is a fan of David Bowie's music and lifestyle."
+  },
+  {
     "_key": "_:marcorenaldo",
     "name": "Marco Renaldo",
     "article": "Marco Renaldo was a fine puppeteer whom Gil commissioned, once, for his puppet, Golly. Golly claims Marco 'used to kiss' him, but he claims remain unsubstantiated."
@@ -430,7 +440,7 @@
   {
     "_key": "_:golly",
     "name": "Golly",
-    "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottl; a tin can; a boot; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
+    "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottl; a tin can; a boot; Gil's hand; a turtle; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife) and prefers to be called a gentleman. He likes beautiful ladies with big hips and is a 'proponent of murder in all of its forms.' He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
     "has_murdered": "true",
     "links": [
       {

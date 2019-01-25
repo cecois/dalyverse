@@ -1,5 +1,28 @@
-Hotel du Vin - -3.190085,55.946033
+Maricopa Street, Phoenix, AZ
+site of: the murder of a family by a ventriloquist's dummy
+{
+  "_key": "_:phoneixaz",
+  "name": "",
+  "article": "",
+  "geo_key": {
+    "type": "point",
+    "id":
+  }
+},
 
+Gateway Hospital and Mental Health Center - 3455 Percy St, Los Angeles, CA 90023
+proxy for: Towering Pines Psychiatric & Long-Term Care Facility
+{
+  "_key": "_:toweringpinespsychiatric",
+  "name": "",
+  "article": "",
+  "geo_key": {
+    "type": "point",
+    "id":
+  }
+},
+
+Hotel du Vin - -3.190085,55.946033
 {
   "_key": "_:hotelduvin",
   "name": "Hotel du Vin",

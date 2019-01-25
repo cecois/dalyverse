@@ -1,3 +1,7 @@
+20:00
+magic spectacles buried in 1800s in Miami
+
+
 ### EDGES.type
 
 * islocateAt
@@ -41,7 +45,7 @@
 		for pl in places
 		filter e._to==pl._id
 		return {"evkey":ev._key,"pl":pl.name}
-	
+
 	* for e in places (grouping)
 		for e in edges
 		filter e.type=='occurredAt'
@@ -108,7 +112,7 @@
 ##### Query
 
 curl -X POST --header 'accept: application/json' --data-binary @- --dump - http://localhost:8529/_api/query <<EOF
-{ 
-  "query" : "for e in edges filter e.type=='hasParticipant' for ev in events filter e._from==ev._id for p in people filter e._to==p._id return {evkey:ev._key,p:p.name}" 
+{
+  "query" : "for e in edges filter e.type=='hasParticipant' for ev in events filter e._from==ev._id for p in people filter e._to==p._id return {evkey:ev._key,p:p.name}"
 }
 EOF

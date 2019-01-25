@@ -1,5 +1,41 @@
 [
   {
+    "_key": "_:ritzcarltonmdrparking",
+    "name": "Ritz-Carlton (Marina del Rey) Parking Ramp",
+    "article": "The Ritz-Carlton (Marina del Rey) Parking Ramp was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history.",
+    "geo_key": {
+      "type": "point",
+      "id": 984
+    }
+  },
+  {
+    "_key": "_:tonypsdocksidemdr",
+    "name": "Tony P's Dockside Grill",
+    "article": "Tony P's Dockside Grill in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history.",
+    "geo_key": {
+      "type": "point",
+      "id": 985
+    }
+  },
+  {
+    "_key": "_:tikimermaidchartersharborcruiseboat",
+    "name": "Tiki Mermaid Charters Harbor Cruise Boat",
+    "article": "The Tiki Mermaid Charters Harbor Cruise Boat in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The ship sank under weight of Joe Bongo's automobile and remains on the floor of the harbor to this day.",
+    "geo_key": {
+      "type": "point",
+      "id": 986
+    }
+  },
+  {
+    "_key": "_:bajacantinamdr",
+    "name": "Baja Cantina - Marina del Rey",
+    "article": "Baja Cantina - Marina del Rey is a restaurant near the harbor in Marina del Rey, California, above which live all of the school-aged members of the rock group Rosebush Red.",
+    "geo_key": {
+      "type": "point",
+      "id": 987
+    }
+  },
+  {
     "_key": "_:historicmarinadelreylighthouse",
     "name": "Historic Marina del Rey Lighthouse",
     "article": "Historic Marina del Rey Lighthouse was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The lighthouse was tipped into the water and rests on the floor of the harbor to this day.",
