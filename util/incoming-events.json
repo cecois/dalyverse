@@ -1,5 +1,45 @@
 [
   {
+    "_key": "_:weebrucediesatedinburghcastle",
+    "name": "Wee Bruce Falls to His Death",
+    "article": "Wee Bruce, guarding the Edinburgh Castle ramparts but fearing the rising lava below, leaps from the castle walls, is struck by lightning, and died of a broken heart before he hits the ground.",
+    "timestamp": "1392-09-01T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is '1392' acc. to ADPPP#S2.4"
+    }
+  },
+  {
+    "_key": "_:stuartcambridgegoesmissing",
+    "name": "Stuart Cambridge Goes Missing",
+    "article": "Much-beloved bagpiper Stuart Cambridge goes missing in Edinburgh, Scotland.",
+    "timestamp": "1853-05-15T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is 'one night in 1853' acc. to ADPPP#S2.4"
+    }
+  },
+  {
+    "_key": "_:amandadies",
+    "name": "Amanda Dies",
+    "article": "Amanda dies from a fall in a coffee shop in Edinburgh, becoming a ghost.",
+    "timestamp": "2018-03-24T09:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-week",
+      "nb": "estimate is 'the other day' rel. to ADPPP#S2.4"
+    }
+  },
+  {
+    "_key": "_:thirstiestghosteverisborn",
+    "name": "The Thirstiest Ghost Ever is Born",
+    "article": "Thirsty from her work cleaning boots and chimneys, an unnamed Edinburgh woman was bludgeoned to death with a coach iron and became The Thirstiest Ghost Ever.",
+    "timestamp": "1837-06-06T00:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is to the year - some time in 1837 acc to ADPPP#S2.4"
+    }
+  },
+  {
     "_key": "_:trumpcommissionstherockettes",
     "name": "Donald Trump Commissions The Rockettes",
     "article": "Booking a lineup for his 2017 Presidential Inauguration, Mr. Trump contacts Don DiMello and offers a spot for The Rockettes.",

@@ -1,5 +1,45 @@
 [
   {
+    "_key": "_:marcorenaldo",
+    "name": "Marco Renaldo",
+    "article": "Marco Renaldo was a fine puppeteer whom Gil commissioned, once, for his puppet, Golly. Golly claims Marco 'used to kiss' him, but he claims remain unsubstantiated."
+  },
+  {
+    "_key": "_:weebruce",
+    "name": "Wee Bruce - Teenaged Guard of the Ramparts",
+    "article": "Wee Bruce - Teenaged Guard of the Ramparts is a ghost who haunts Edinburgh Castle and features at the climax in Cameron McGonigle's Ghost Tours That Are Scary with a remarkably easy test of riddles."
+  },
+  {
+    "_key": "_:thetrowofdumbiedykesroad",
+    "name": "Plaxicon - The Trow of Dumbiedykes Road",
+    "article": "Plaxicon is accused of vanquishing Stuart Cambridge in 1853. In fact, he may be not be a Trow at all but either an extraterrestrial traveler from Zaltan 3 or a Scot who got drunk, saw a drone, and lost his pants. His favorite candies are Minstrels and Maltesers."
+  },
+  {
+    "_key": "_:stuartcambridge",
+    "name": "Stuart Cambridge",
+    "article": "Stuart Cambridge was a much-beloved bagpipe player in Edinburgh who went missing in 1853, likely by alien abduction."
+  },
+  {
+    "_key": "_:sawneybean",
+    "name": "Alexander (Sawney) Bean",
+    "article": "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland. He lives in a cave in the Scottish Highlands with his giant, incestual family where he murders and eats weary travelers. During the day he plays board games and haunts the Tolbooth Tavern by moving tableware around and toggling windows."
+  },
+  {
+    "_key": "_:sawneybean",
+    "name": "Alexander (Sawney) Bean",
+    "article": "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland. He lives in a cave in the Scottish Highlands with his giant, incestual family where he murders and eats weary travelers. During the day he plays board games and haunts the Tolbooth Tavern by moving tableware around and toggling windows."
+  },
+  {
+    "_key": "_:ghostofthebrewlab",
+    "name": "Amanda (The Ghost of the Brew Lab)",
+    "article": "Amanda is a deceased 19 year-old American woman who got her hair done and then promptly fell down the stairs of a coffee café and impaled her eye on a cappucino machine, spilling her brains through the chasm. Since, she haunts the café by disrupting the staff when they count out change, purturbing the books."
+  },
+  {
+    "_key": "_:thirstiestghostever",
+    "name": "The Thirstiest Ghost Ever",
+    "article": "The Thirstiest Ghost Ever is a nameless, deceased woman who cleaned boots and fireplaces at the private home that later became Edinburgh's Hotel du Vin. Having grown extremely thirsty from the work (and denied a drink by her employer), she was curbed to death on a bucket of water by a coach iron."
+  },
+  {
     "_key": "_:donaldjtrump",
     "article": "Donald Trump was a president of the United States.",
     "name": "Donald J. Trump"
@@ -390,7 +430,7 @@
   {
     "_key": "_:golly",
     "name": "Golly",
-    "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
+    "article": "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottl; a tin can; a boot; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife) and prefers to be called a gentleman. He likes beautiful ladies with big hips. He has a temper and once participated (successfully) in a Murder Club out in International Waters.",
     "has_murdered": "true",
     "links": [
       {

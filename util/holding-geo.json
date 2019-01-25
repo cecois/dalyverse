@@ -1,45 +1,55 @@
-Ritz-Carlton (Marina del Rey) Parking Ramp - 33.984490, -118.450887
+Hotel du Vin - -3.190085,55.946033
 
 {
-  "_key": "_:ritzcarltonmdrparking",
-  "name": "Ritz-Carlton (Marina del Rey) Parking Ramp",
-  "article": "The Ritz-Carlton (Marina del Rey) Parking Ramp was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history.",
+  "_key": "_:hotelduvin",
+  "name": "Hotel du Vin",
+  "article": "Hotel du Vin is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
   "geo_key": {
-    "type": "",
+    "type": "point",
     "id":
   }
 },
 
-
-Tony P's Dockside Grill - 33.983623, -118.448029
+Brew Lab Coffee - -3.186637,55.947023
 {
-  "_key": "_:tonypsdocksidemdr",
-  "name": "Tony P's Dockside Grill",
-  "article": "Tony P's Dockside Grill in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history.",
+  "_key": "_:brewlabcoffeeedinburgh",
+  "name": "Brew Lab Coffee - Edinburgh",
+  "article": "Brew Lab Coffee is a haunted stop on Cameron McGonigle's tour of Edinburgh - use the Tour discount!",
   "geo_key": {
-    "type": "",
+    "type": "point",
     "id":
   }
 },
 
-Tony P's Dockside Grill - 33.972993, -118.446402
+Tolbooth Tavern - -3.180127,55.951412
 {
-  "_key": "_:tikimermaidchartersharborcruiseboat",
-  "name": "Tiki Mermaid Charters Harbor Cruise Boat",
-  "article": "The Tiki Mermaid Charters Harbor Cruise Boat in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The ship sank under weight of Joe Bongo's automobile and remains on the floor of the harbor to this day.",
+  "_key": "_:tolboothtavern",
+  "name": "Tolbooth Tavern - Edinburgh",
+  "article": "Tolbooth Tavern is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
   "geo_key": {
-    "type": "",
+    "type": "point",
     "id":
   }
 },
 
-Baja Cantina - Marina del Rey - 33.980819, -118.464659
+Edinburgh Castle - -3.200327,55.948822
 {
-  "_key": "_:bajacantinamdr",
-  "name": "Baja Cantina - Marina del Rey",
-  "article": "Baja Cantina - Marina del Rey is a restaurant near the harbor in Marina del Rey, California, above which live all of the school-aged members of the rock group Rosebush Red.",
+  "_key": "_:edinburghcastle",
+  "name": "Edinburgh Castle",
+  "article": "Edinburgh Castle is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
   "geo_key": {
-    "type": "",
+    "type": "point",
+    "id":
+  }
+},
+
+The Braidwood Centre - -3.177871,55.948535
+{
+  "_key": "_:braidwoodcentre",
+  "name": "The Braidwood Centre",
+  "article": "The Braidwood Centre, former home of a much-beloved bagpiper named Stuart Cambridge, is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
+  "geo_key": {
+    "type": "point",
     "id":
   }
 },
