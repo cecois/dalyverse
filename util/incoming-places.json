@@ -1,5 +1,68 @@
 [
   {
+  "_key": "_:braidwoodcentre",
+  "name": "The Braidwood Centre",
+  "article": "The Braidwood Centre, former home of a much-beloved bagpiper named Stuart Cambridge, is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
+  "geo_key": {
+    "type": "point",
+    "id":994
+  }
+},
+  {
+  "_key": "_:edinburghcastle",
+  "name": "Edinburgh Castle",
+  "article": "Edinburgh Castle is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
+  "geo_key": {
+    "type": "point",
+    "id":993
+  }
+},
+  {
+  "_key": "_:tolboothtavern",
+  "name": "Tolbooth Tavern - Edinburgh",
+  "article": "Tolbooth Tavern is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
+  "geo_key": {
+    "type": "point",
+    "id":992
+  }
+},
+  {
+  "_key": "_:brewlabcoffeeedinburgh",
+  "name": "Brew Lab Coffee - Edinburgh",
+  "article": "Brew Lab Coffee is a haunted stop on Cameron McGonigle's tour of Edinburgh - use the Tour discount!",
+  "geo_key": {
+    "type": "point",
+    "id":991
+  }
+},
+  {
+  "_key": "_:hotelduvin",
+  "name": "Hotel du Vin",
+  "article": "Hotel du Vin is a haunted stop on Cameron McGonigle's tour of Edinburgh.",
+  "geo_key": {
+    "type": "point",
+    "id":990
+  }
+},
+  {
+  "_key": "_:toweringpinespsychiatric",
+  "name": "",
+  "article": "",
+  "geo_key": {
+    "type": "point",
+    "id":989
+  }
+},
+{
+  "_key": "_:phoneixaz",
+  "name": "",
+  "article": "",
+  "geo_key": {
+    "type": "point",
+    "id":988
+  }
+},
+  {
     "_key": "_:ritzcarltonmdrparking",
     "name": "Ritz-Carlton (Marina del Rey) Parking Ramp",
     "article": "The Ritz-Carlton (Marina del Rey) Parking Ramp was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history.",
