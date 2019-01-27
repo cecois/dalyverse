@@ -1,5 +1,35 @@
 [
   {
+    "_key": "_:cactustonyisconvictedofliveburial",
+    "name": "Cactus Tony is Convicted of Live Burial",
+    "article": "Despite only having photographs and witness testimony, Cactus Tony is convicted of \"ending somebody's life by way of putting them in a hole and covering them over with dirt.\" Don DiMello, having attended a portion of the trial, was unconvinced of Tony's guilt, convinced instead of an elaborate and complicated conspiracy by a Freemason's cabal, and pledged to free him.",
+    "timestamp": "2017-10-18T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior",
+      "nb": "estimate is prior to ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:pnptgreviewsadondimelloshow",
+    "name": "Pasadena News Press Times-Gazette Reviews a Don DiMello Show",
+    "article": "For the first and last time, the PNPTG reviews a Don DiMello production. The reviewer never published the piece, however, and disappeared immediately into a convent.",
+    "timestamp": "1997-08-18T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior",
+      "nb": "estimate is 'about twenty years ago' rel. to ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:ahppublishesaparkingticketstory",
+    "name": "Alexandra Higgs Portman Publishes an Article in the PNPTG",
+    "article": "Alexandra Higgs Portman publishes a piece in the PNPTG about contesting parking tickets. Amongst the feedback from the piece was a hand-written letter postmarked to the Pasadena Fairytale Theatre, written by a theatrical director on behalf of a friend who, the author felt, had been accused of a minor crime he did not commit.",
+    "timestamp": "2017-06-30T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-quarter",
+      "nb": "estimate is 'last summer' acc. to ADPPP#S2.7"
+    }
+  },
+  {
     "_key": "_:lronhubbardplaysstumptheclear1",
     "name": "L. Ron Hubbard Plays Stump the Clear",
     "article": "L. Ron Hubbard, in an effort to demonstrate the extraordinary virtues of becoming a clear under the auspices of Scientology, plays 'Stump the Clear.' It does not go well.",
@@ -748,6 +778,16 @@
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is prior to ADPPP#S1.5 and CBB#200"
+    }
+  },
+  {
+    "_key": "_:dondimellostageshanselandgretel",
+    "name": "Don DiMello Presents: Hansel and Gretel",
+    "article": "Some time prior to Spring 2018, Don DiMello stages a production of the classic 'Hansel and Gretel' which results in, possibly among other legalities, a flurry of letters from a cast member named Alexandra, all of which were summarily ignored.",
+    "timestamp": "2017-10-18T13:10:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior",
+      "nb": "timestamp is approximate - some time prior to ADPPP#S2.7"
     }
   },
   {
