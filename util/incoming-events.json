@@ -1,5 +1,65 @@
 [
   {
+    "_key": "_:lronhubbardplaysstumptheclear1",
+    "name": "L. Ron Hubbard Plays Stump the Clear",
+    "article": "L. Ron Hubbard, in an effort to demonstrate the extraordinary virtues of becoming a clear under the auspices of Scientology, plays 'Stump the Clear.' It does not go well.",
+    "timestamp": "1950-04-21T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is '1950' acc. to ADPPP#S2.6"
+    }
+  },
+  {
+    "_key": "_:lronhubbardsunderpantsarefound",
+    "name": "L. Ron Hubbard's Hospital-Grade Underpants are Recovered",
+    "article": "Hidden in the 17th century by a former life of L. Ron Hubbard's, the 5th Hunchback of Notre Dame, a pair of hospital-grade underpants is recovered amongst a pile of medical waste in Paris by Marion Grapes.",
+    "timestamp": "1970-02-01T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is some time before and nearish to the setting of ADPPP#S2.6"
+    }
+  },
+  {
+    "_key": "_:lronhubbardsmarkersarefound",
+    "name": "L. Ron Hubbard's Magic Markers are Recovered",
+    "article": "Buried long before by inventor Neill Sharpie, a former life of L. Ron Hubbard, a set of Magic Markers is recovered from a lawn in Madison, WI by Marion Grapes.",
+    "timestamp": "1970-02-23T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is some time before and nearish to the setting of ADPPP#S2.6"
+    }
+  },
+  {
+    "_key": "_:lronhubbardsspectaclesarefound",
+    "name": "L. Ron Hubbard's Spectacles are Recovered",
+    "article": "Buried centuries prior by a former life of L. Ron Hubbard, a pair of glasses is recovered from under an 19th-century beach towel on a beach in 20th-century Miami by Marion Grapes.",
+    "timestamp": "1970-02-22T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is some time before and nearish to the setting of ADPPP#S2.6"
+    }
+  },
+  {
+    "_key": "_:lronhubbardburiesspectacles",
+    "name": "L. Ron Hubbard Buries Spectacles Under a Beach Towel in Miami",
+    "article": "Meant for discovery by future selves, Mr. Hubbard, a disgraced priest at the time, hides a pair of glasses under a beach towel. The treasure persisted into the late quarter of the 20th century.",
+    "timestamp": "1870-04-24T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-century",
+      "nb": "estimate is 'the 1800s' acc. to ADPPP#S2.6"
+    }
+  },
+  {
+    "_key": "_:lronhubbardhidesunderpants",
+    "name": "L. Ron Hubbard Hides Underpants in Paris",
+    "article": "Meant for discovery by future selves, Mr. Hubbard, the 5th Hunchback of Notre Dame at the time, plants a pair of underpants outside of a hospital in Paris. The treasure persisted into the late 20th century.",
+    "timestamp": "1670-04-24T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-century",
+      "nb": "estimate is 'the 1600s' acc. to ADPPP#S2.6"
+    }
+  },
+  {
     "_key": "_:gollymurdersafamilyonmaricopastreet",
     "name": "Gil Murders a Phoenix Family",
     "article": "In a song on ADPPP#S2.5, Golly the dummy admits that he 'murdered that family on Maricopa Street in Phoenix in 1987.' He is quickly hushed by his operator, Gil, but listeners are led to trust the veracity of the doll's claim.",

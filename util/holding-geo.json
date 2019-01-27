@@ -1,0 +1,32 @@
+a beach in Miami
+{
+  "_key": "_:miamibeach",
+  "name": "Miami Beach",
+  "article": "Miami Beach is a popular vacation spot in Florida as well as the location of one of L. Ron Hubbard's hidden future treasures.",
+  "geo_key": {
+    "type": "",
+    "id":
+  }
+},
+
+Madison, WI
+{
+  "_key": "_:madisonwi",
+  "name": "Madison, WI",
+  "article": "Madison, Wisconsin is the capitol city of Wisconsin, USA.",
+  "geo_key": {
+    "type": "",
+    "id":
+  }
+},
+
+Paris, France
+{
+  "_key": "_:parisfr",
+  "name": "Paris, France",
+  "article": "Paris, France, is a major metropolis in France.",
+  "geo_key": {
+    "type": "",
+    "id":
+  }
+},
