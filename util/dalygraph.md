@@ -1,8 +1,22 @@
-20:00
-magic spectacles buried in 1800s in Miami
+# VUE
 
+## EVENTS
 
-### EDGES.type
+### URL
+	tstart,tend,activetimelineitem
+
+### EVENTS.events
+	move(url start/end update)	
+	activate/deactivate item(url update; event edges queried, participant and places returned)	
+
+		"hasParticipant"
+		"occurredAt"
+
+# GRAPH
+
+## EDGES
+
+### type
 
 * islocateAt
 * hasFriend
@@ -21,6 +35,56 @@ magic spectacles buried in 1800s in Miami
 * worksFor
 * participatedIn
 * seeAlso
+
+## PEOPLE
+
+livesAt
+hasFriend
+hasParticipant
+worksFor
+worksAt
+hasWorkedAt
+isMemberOf
+hasWorkedFor
+isSpouseOf
+caresFor
+seeAlso
+isChildOf
+isSiblingOf
+wasClientOf
+isClientOf
+wasSpouseOf
+isFormerMemberOf
+isPossibleChildOf
+isPetOf
+
+	* people.has_murdered==true
+	* people.attributes
+
+
+
+### ALL:GRAPH
+* livesAt
+* worksAt
+* caresFor
+* seeAlso
+* isChildOf
+* hasFriend
+* isSiblingOf
+* isSpouseOf
+* isMemberOf
+* hasWorkedAt
+* hasWorkedFor
+* worksFor
+* wasClientOf
+* isClientOf
+* wasSpouseOf
+* isFormerMemberOf
+* isPossibleChildOf
+* isPetOf
+
+
+#### Arango Notes
 
 ### EVENTS:TIMELINE
 
@@ -56,33 +120,7 @@ magic spectacles buried in 1800s in Miami
 		collect placeid = pl._id,placename=pl.name INTO involved
 		return {"plid":placeid,"plname":placename,"participants":involved}
 
-### PEOPLE:GRAPH
 
-	* people.has_murdered==true
-	* people.attributes
-
-### ALL:GRAPH
-* livesAt
-* worksAt
-* caresFor
-* seeAlso
-* isChildOf
-* hasFriend
-* isSiblingOf
-* isSpouseOf
-* isMemberOf
-* hasWorkedAt
-* hasWorkedFor
-* worksFor
-* wasClientOf
-* isClientOf
-* wasSpouseOf
-* isFormerMemberOf
-* isPossibleChildOf
-* isPetOf
-
-
-#### Arango Notes
 
 ##### Docker
 9696  arangoimp --file ~/Downloads/airports.csv --collection airports --create-collection true --type csv

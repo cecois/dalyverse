@@ -1,6 +1,5 @@
 <template>
 <div>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css'><link rel='stylesheet' href="https://visjs.org/dist/vis-timeline-graph2d.min.css">
   <h1 class="is-size-1">timeline</h1>
 <p>console.msg:<code>{{console.msg}}</code></p>
 <p>console.throb:<code>{{console.throb}}</code></p>
@@ -19,16 +18,6 @@
   // DOM element where the Timeline will be attached
 var container = document.getElementById("line");
 
-// Create a DataSet (allows two way data-binding)
-var items = new vis.DataSet([
-  { id: 1, content: "item 1", start: "2017-04-20" },
-  { id: 2, content: "item 2", start: "2017-04-14" },
-  { id: 3, content: "item 3", start: "2017-04-18" },
-  { id: 4, content: "item 4", start: "2017-04-16", end: "2017-04-19" },
-  { id: 5, content: "item 5", start: "2017-04-25" },
-  { id: 6, content: "item 6", start: "2017-04-27", type: "point" }
-]);
-
 // Configuration for the Timeline
 var options = {};
 
@@ -36,13 +25,9 @@ export default {
 name:'Timeline',
 data() {
 return {
-  times:[
-  { id: 1, content: "time.1", start: "1912-04-20" },
-  { id: 2, content: "time.2", start: "2017-04-14" },
-  { id: 3, content: "time.3", start: "2017-04-18" },
-  { id: 4, content: "time.4", start: "2017-04-16", end: "2017-04-19" },
-  { id: 5, content: "time.5", start: "2017-04-25" },
-  { id: 6, content: "time.6", start: "2019-01-27", type: "point" }
+  timetimes:[
+  { id: 1, content: "time.1", start: "2016-04-20" },
+  { id: 4, content: "time.4", start: "2017-04-16", end: "2017-09-19" }
 ],
   filter:null,
   windows:{
@@ -52,7 +37,11 @@ return {
 console:{msg:null,throb:false}
 }//return
 },//data
-computed:{},//computed
+computed:{
+  query: function () {
+      return "start:"+windows.time.begin+" AND end:"+windows.time.end
+    }
+},//computed
 watch:{},//watch
 methods:{},//methods
 created() {
@@ -71,7 +60,10 @@ this.$nextTick(() => {
        // get the element
        const el = this.$el.querySelector('#line')
        // create the Timeline
-       this.timeline = new vis.Timeline(el, this.times, options);
+       this.timeline = new vis.Timeline(el, this.timetimes, options);
+       this.timeline.on('select',(properties)=>{
+  console.info('selected items: ' + JSON.stringify(properties));
+});
      })
 
 /* ---------------------------------- /TIMELINE */
@@ -86,9 +78,15 @@ this.$nextTick(() => {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-#mynetwork {
-    width: 600px;
-    height: 400px;
-    border: 1px solid lightgray;
-}
+.vis-item {
+    background-color:rgba(91,53,23,1);
+    color:#d8b422;
+    border-color:#d8b422;
+    border-radius:3px;
+    font-weight:800;
+  }
+  .vis-item.vis-point.vis-selected, .vis-item.vis-selected{
+    background-color:orange;
+    color:rgba(91,53,23,1);
+  }
 </style>
