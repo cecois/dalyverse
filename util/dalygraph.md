@@ -1,9 +1,32 @@
+# TMP
+
+cactus tony visited tommy's chili burgers (two weeks prior to murder)
+week of the murder:
+cactus tony remembers nothing
+except:
+	cactus tony visited 21 choices in old town
+
+Cactus Tony is Incarcerated at San Quentin
+date: post-trial
+Cactus Tony is sent to San Quentin, where he settles in nicely, playing checkers and Twister all day long and 'sometimes just get down on the floor and tangle up and just laugh and giggle.'
+
+
+
 # VUE
 
 ## EVENTS
 
 ### URL
 	tstart,tend,activetimelineitem
+### ONLOAD
+	console.msg
+	fetch items in range
+	map places
+### ACTIVATEITEM
+	render participants
+	zoom place
+	highlight place
+
 
 ### EVENTS.events
 	move(url start/end update)	

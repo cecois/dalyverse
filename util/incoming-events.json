@@ -1,5 +1,35 @@
 [
   {
+    "_key": "_:cactustonyisarrested",
+    "name": "Cactus Tony is Arrested",
+    "article": "On suspicion of burying people alive and attempted buyrying of people alive, Cactus Tony is arrested at the ArcLight.",
+    "timestamp": "2017-12-08T22:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "estimate is some time prior to ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:cactustonyburieshendrixmurphy",
+    "name": "Cactus Tony Buries Hendrix Murphy",
+    "article": "Outside of a bait and tackle in Pasadena, a man presumed to be Cactus Tony tricked Hendrix Murphy into a hole in the ground. According to Mr. Murphy, Tony then tried to cover him over with dirt but did not fully do so, allowing his escape.",
+    "timestamp": "2016-08-28T16:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "estimate is some time prior to an interview aired on ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:hendrixmurphyisborn",
+    "name": "Hendrix Murphy is Born",
+    "article": "In approximately 1961, Hendrix Murphy - a future potential victim of Cactus Tony - is born in 'Lake Pontchartrain' (New Orleans), Louisiana.",
+    "timestamp": "1961-10-18T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is 57 years prior to an interview aired on ADPPP#S2.7"
+    }
+  },
+  {
     "_key": "_:cactustonyisconvictedofliveburial",
     "name": "Cactus Tony is Convicted of Live Burial",
     "article": "Despite only having photographs and witness testimony, Cactus Tony is convicted of \"ending somebody's life by way of putting them in a hole and covering them over with dirt.\" Don DiMello, having attended a portion of the trial, was unconvinced of Tony's guilt, convinced instead of an elaborate and complicated conspiracy by a Freemason's cabal, and pledged to free him.",
@@ -782,7 +812,7 @@
   },
   {
     "_key": "_:dondimellostageshanselandgretel",
-    "name": "Don DiMello Presents: Hansel and Gretel",
+    "name": "Don DiMello Presents: Disney's Hansel and Gretel",
     "article": "Some time prior to Spring 2018, Don DiMello stages a production of the classic 'Hansel and Gretel' which results in, possibly among other legalities, a flurry of letters from a cast member named Alexandra, all of which were summarily ignored.",
     "timestamp": "2017-10-18T13:10:00Z",
     "nb_timestamp": {
@@ -792,7 +822,7 @@
   },
   {
     "_key": "_:dondimellostruewest",
-    "name": "Don DiMello Presents: True West",
+    "name": "Don DiMello Presents: Disney's True West",
     "article": "Over the fall of 2011, Mr. DiMello teamed with actors John C. Reilly and Nick Nolte to launch a production of Sam Shepard's 'True West' to be staged in a VFW hall in Death Valley, California. The show evidently never made it due to the actors' objections to some of Mr. DiMello's tactics -- kidnapping and cuckolding -- as well as his insistence that beautiful women do a sexy dance in a tandem horse costume, followed by a simulated live birth, followed by foreplay.",
     "timestamp": "2011-10-01T13:10:00Z",
     "nb_timestamp": {
@@ -812,7 +842,7 @@
   },
   {
     "_key": "_:dondimellossteelmagnolias",
-    "name": "Don DiMello Presents: Steel Magnolias",
+    "name": "Don DiMello Presents: Disney's Steel Magnolias",
     "article": "In the winter of 2013, Don DiMello stages a production of Steel Magnolias that featured, mostly, topless women dancing around. He was subsequently sued.",
     "timestamp": "2013-01-01T13:10:00Z",
     "nb_timestamp": {
@@ -1488,7 +1518,7 @@
   },
   {
     "_key": "_:dondimellostagescinderella",
-    "name": "Don DiMello Stages 'Cinderella' at the Pasadena Fairytale Theatre",
+    "name": "Don DiMello Presents Disney's Cinderella at the Pasadena Fairytale Theatre",
     "article": "The show was 'not your typical garbage,' according to Mr. DiMello, and featured a number of liberties taken in the interpretation of the classic story including an extra sister and considerable nudity. Cinderella was triple-cast and spoke simultaneously. The show failed to reach denouement.",
     "timestamp": "2011-04-08T19:00:00Z",
     "nb_timestamp": {
@@ -1538,7 +1568,7 @@
   },
   {
     "_key": "_:dondimellostagescamelot",
-    "name": "Don DiMello Stages 'Camelot'",
+    "name": "Don DiMello Stages \"Disney's Camelot\"",
     "article": "He put out the word that, out by the lake, there's going to be 1 wet girl and 8 dry girls (one of them in a fake beard).",
     "timestamp": "1996-08-08T19:00:00Z",
     "nb_timestamp": {
