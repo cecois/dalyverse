@@ -4,6 +4,7 @@
   {"_from": "events/_:cactustonyburieshendrixmurphy","_to": "people/_:hendrixmurphy","type":"hasParticipant","vertex":"_:cactustonyburieshendrixmurphy"},
   {"_from": "events/_:cactustonyburieshendrixmurphy","_to": "people/_:cactustony","type":"hasParticipant","vertex":"_:cactustonyburieshendrixmurphy"},
   {"_from": "events/_:cactustonyburieshendrixmurphy","_to": "places/_:johnnyssportshop","type":"worksAt","vertex":"_:cactustonyburieshendrixmurphy"},
+  {"_from": "people/_:cactustony","_to": "people/_:cactusirene","type":"hasFriend","vertex":"_:cactustony"},
   {"_from": "people/_:hendrixmurphy","_to": "places/_:johnnyssportshop","type":"worksAt","vertex":"_:hendrixmurphy"},
   {"_from": "events/_:hendrixmurphyisborn","_to": "people/_:hendrixmurphy","type":"hasParticipant","vertex":"_:hendrixmurphyisborn"},
   {"_from": "people/_:alexandrahiggsportman","_to": "places/_:sanrafaelhills","type":"livesAt","vertex":"_:alexandrahiggsportman"},

@@ -26,8 +26,8 @@ name:'Timeline',
 data() {
 return {
   timetimes:[
-  { id: 1, content: "time.1", start: "2016-04-20" },
-  { id: 4, content: "time.4", start: "2017-04-16", end: "2017-09-19" }
+  { id: 1, content: "time.1", start: "2016-04-20",article:"articlecopy1" },
+  { id: 4, content: "time.4", start: "2017-04-16", end: "2017-09-19",article:"articlecopy4" }
 ],
   filter:null,
   windows:{
@@ -45,7 +45,7 @@ computed:{
 watch:{},//watch
 methods:{},//methods
 created() {
-  
+
   this.windows.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:null;
   this.windows.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:null;
   this.filter=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:null;
@@ -61,8 +61,10 @@ this.$nextTick(() => {
        const el = this.$el.querySelector('#line')
        // create the Timeline
        this.timeline = new vis.Timeline(el, this.timetimes, options);
-       this.timeline.on('select',(properties)=>{
-  console.info('selected items: ' + JSON.stringify(properties));
+       var that = this;
+       this.timeline.on('select',function (properties){
+  let item = that.$_.findWhere(that.timetimes, {id:properties.items[0]})
+  console.info("item.article",item.article)
 });
      })
 

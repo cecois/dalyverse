@@ -1,14 +1,22 @@
 # TMP
 
-cactus tony visited tommy's chili burgers (two weeks prior to murder)
+2002 - cactustonyscoloradoarson
+
 week of the murder:
 cactus tony remembers nothing
 except:
-	cactus tony visited 21 choices in old town
+  cactus tony visited tommy's chili burgers (two weeks prior to murder)
+  cactus tony visited 21 choices in old town (@colorado) (9 days after the murder)
+
+Trial of Cactus Tony
+  miltonanddupree
 
 Cactus Tony is Incarcerated at San Quentin
-date: post-trial
-Cactus Tony is sent to San Quentin, where he settles in nicely, playing checkers and Twister all day long and 'sometimes just get down on the floor and tangle up and just laugh and giggle.'
+  date: post-trial
+  Cactus Tony is sent to San Quentin, where he settles in nicely, playing checkers and Twister all day long and 'sometimes just get down on the floor and tangle up and just laugh and giggle.'
+
+Interview w/ Cactus Irene (at a peter cetera concert)
+  she remembers (from the week of the murder) only that they visited an all-you-can-eat crab shack; there she began suffering from crabsweats and had to be ushered out rapidly to lay down in an adjacent park
 
 
 
@@ -29,8 +37,8 @@ Cactus Tony is sent to San Quentin, where he settles in nicely, playing checkers
 
 
 ### EVENTS.events
-	move(url start/end update)	
-	activate/deactivate item(url update; event edges queried, participant and places returned)	
+	move(url start/end update)
+	activate/deactivate item(url update; event edges queried, participant and places returned)
 
 		"hasParticipant"
 		"occurredAt"
