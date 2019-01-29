@@ -1,0 +1,141 @@
+[
+  {
+    "_key": "_:hendrixmurphyisborn",
+    "name": "Hendrix Murphy is Born",
+    "article": "In approximately 1961, Hendrix Murphy - a future potential victim of Cactus Tony - is born in 'Lake Pontchartrain' (New Orleans), Louisiana.",
+    "timestamp": "1961-10-18T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "estimate is 57 years prior to an interview aired on ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:cactustonyisconvictedofliveburial",
+    "name": "Cactus Tony is Convicted of Live Burial",
+    "article": "Despite only having photographs and witness testimony, Cactus Tony is convicted of \"ending somebody's life by way of putting them in a hole and covering them over with dirt.\" Don DiMello, having attended a portion of the trial, was unconvinced of Tony's guilt, convinced instead of an elaborate and complicated conspiracy by a Freemason's cabal, and pledged to free him.",
+    "timestamp": "2017-10-18T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior",
+      "nb": "estimate is prior to ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:pnptgreviewsadondimelloshow",
+    "name": "Pasadena News Press Times-Gazette Reviews a Don DiMello Show",
+    "article": "For the first and last time, the PNPTG reviews a Don DiMello production. The reviewer never published the piece, however, and disappeared immediately into a convent.",
+    "timestamp": "1997-08-18T19:00:00Z",
+    "nb_timestamp": {
+      "class": "estimate-prior",
+      "nb": "estimate is 'about twenty years ago' rel. to ADPPP#S2.7"
+    }
+  },
+  {
+    "_key": "_:billcartervotesperot",
+    "name": "Bill Carter Votes for Ross Perot",
+    "article": "Bill Carter votes for Ross Perot in the 1992 U.S. General Election. In subsequent years, Carter writes in Perot's name.",
+    "timestamp": "1992-11-03T16:10:00Z",
+    "nb_timestamp": {
+      "class": "firm",
+      "nb": "92 general election"
+    }
+  },
+  {
+    "_key": "_:prisonbargeriotof79",
+    "name": "Prison Barge Riot of '79",
+    "article": "Due to an electrical grid blackout, all of the doors of the Int'l Waters Prison Barge swung open, causing mass casualties and escapes.",
+    "timestamp": "1979-05-22T10:10:00Z",
+    "nb_timestamp": {
+      "class": "estimate-year",
+      "nb": "timestamp is acc. to ADPPP#S1.2"
+    }
+  },
+  {
+    "_key": "_:chipgardnerdebatescarolchanning",
+    "name": "Chip Gardner Debates Carol Channing During the Hollywood Honorary Mayoral Race",
+    "article": "During the Hollywood Honorary Mayoral race in 2014, Mr. Gardner and Ms. Channing faced off on a number of issues presumably important to the citizens of Hollywood.",
+    "timestamp": "2014-02-12T11:30:00Z",
+    "nb_timestamp": {
+      "class": "firm",
+      "nb": "timestamp is firm - ADPPP#S1.2"
+    }
+  },
+  {
+    "_key": "_:trynottogethitbythesehammers",
+    "name": "Try Not to Get Hit by These Hammers",
+    "article": "TNTGHBTH was a Chip Gardner production, staged live on ADPPP#S1.2 in February 2014. Multiple victims were unable to avoid being, indeed, hit by hammers.",
+    "timestamp": "2014-02-12T10:10:00Z",
+    "nb_timestamp": {
+      "class": "firm",
+      "nb": "timestamp is firm - ADPPP#S1.2"
+    }
+  },
+  {
+    "_key": "_:dondimmelopresentsdisneyshanselandgretel",
+    "name": "Don DiMello Presents 'Disneys Hansel and Gretel'",
+    "article": "The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and she doesn't really know what's happening. The show failed to reach denouement.",
+    "timestamp": "2013-02-11T19:00:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is solid acc. to CBB#200 - upcoming plug"
+    }
+  },
+  {
+    "_key": "_:dondimmelopresentsdisneyspuffthemagicdragon",
+    "name": "Don DiMello Presents 'Disneys Puff the Magic Dragon'",
+    "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
+    "timestamp": "2014-08-09T19:00:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is approximate acc. to CBB#304"
+    }
+  },
+  {
+    "_key": "_:dondimelloandcactustonyattendwomplersbirthday",
+    "name": "Don DiMello and Cactus Tony Attend Marissa Wompler's Birthday Party",
+    "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
+    "timestamp": "2014-08-10T19:00:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is acc. to CBB#304"
+    }
+  },
+  {
+    "_key": "_:dondimellofindsachild",
+    "name": "Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it.",
+    "timestamp": "2014-08-10T02:30:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is acc. to CBB#304"
+    }
+  },
+  {
+    "_key": "_:clivedundeeisborn",
+    "name": "Clive Dundee is Born",
+    "article": "Clive Dundee is born.",
+    "timestamp": "1963-08-08T19:00:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is a loose approximation - some time in 1963"
+    }
+  },
+  {
+    "_key": "_:jeanclaudepepiisborn",
+    "name": "Jean Claude Pepi is Born",
+    "article": "Jean Claude Pepi is born.",
+    "timestamp": "1959-08-08T19:00:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is a loose approximation - some date after March 55 years prior to CBB#338"
+    }
+  },
+  {
+    "_key": "_:cactustonyisborn",
+    "name": "Cactus Tony is Born",
+    "article": "Cactus Tony is born.",
+    "timestamp": "1971-01-01T19:00:00Z",
+    "nb_timestamp": {
+      "class": null,
+      "nb": "timestamp is a loose approximation - some date in 1971 according to calculations based on CBB#200"
+    }
+  }
+]
