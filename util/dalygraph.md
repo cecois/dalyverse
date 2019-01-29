@@ -30,6 +30,7 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 ### ONLOAD
 	console.msg
 	fetch items in range
+	_.map timetimes
 	map places
 ### ACTIVATEITEM
 	render participants
