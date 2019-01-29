@@ -68,8 +68,8 @@ this.console={msg:"",throb:false}
 },//methods
 created() {
 
-  this.windows.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'20020101';
-  this.windows.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'20190101';
+  this.windows.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'2000-12-31';
+  this.windows.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'2019-05-05';
   this.filter=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:'*:*';
 
   return null;
@@ -112,9 +112,8 @@ this.setTimes();
 <style>
 .vis-item {
     background-color:rgba(91,53,23,1);
-    color:#d8b422;
+    color:#d8b425;
     border-color:#d8b422;
-    border-radius:3px;
     font-weight:800;
   }
   .vis-item.vis-point.vis-selected, .vis-item.vis-selected{
