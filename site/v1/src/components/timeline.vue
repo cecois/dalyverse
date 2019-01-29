@@ -1,6 +1,8 @@
 <template>
 <div>
-<p>console.msg:<code>{{console.msg}}</code></p>
+<p>console.msgs:
+<code v-for="msg in console.msgs">{{msg}}</code>
+</p>
 <p>console.throb:<code>{{console.throb}}</code></p>
 <p>filter,qyert:<code>{{filters.query}}</code></p>
 <hr/>
@@ -30,12 +32,12 @@ data() {
 return {
   timetimes:[],
   filters:{
-    time:{begin:null,end:null}
-    ,space:{bbox:null}
-    ,query:null
-    ,active:{key:null,item:{article:null}}
+    time:{begin:'',end:''}
+    ,space:{bbox:''}
+    ,query:''
+    ,active:{key:'',item:{article:''}}
   },
-console:{msg:null,throb:false}
+console:{msgs:[],msg:'',throb:false}
 }//return
 },//data
 computed:{
@@ -52,7 +54,11 @@ methods:{
 // if(this.filters.active.key==null || this.filters.active.key==''){
 //   this.filters.active.item=this.getNullItem();
 // } else {
-    this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
+  if(key!==null && (typeof key !== 'undefined')){
+      this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
+    } else {
+      this.filters.active={key:'',article:''}
+    }
   // }
   }//setactiveitem
   ,
@@ -60,26 +66,26 @@ methods:{
     return {key:null,article:null}
   },
   routize: function(){
-    console.log('routizing...')
     let rob = { params:{
   tstart:this.filters.time.begin,
   tend:this.filters.time.end,
   activeid:this.filters.active.key
 }}
-console.log(rob)
 this.$router.push(rob)
 
   },
   setTimeline:function(){
-    this.console={msg:"initting timeline w/ timetimes...",throb:true}
+    this.console.msgs.push("initting timeline w/ timetimes...")
        // get the element
        const el = this.$el.querySelector('#line')
        // create the Timeline
        this.timeline = new vis.Timeline(el, this.timetimes, options);
 
-this.timeline.setSelection(this.filters.active.key,{focus:true,animation:true})
+// this.timeline.setSelection(this.filters.active.key,{focus:true,animation:true})
 
        var that = this;
+// that.setActiveItem(this.filters.active.key)
+
        this.timeline.on('select',function (properties){
 
                 let itm = that.$_.findWhere(that.timetimes, {id:properties.items[0]})
@@ -90,12 +96,12 @@ this.timeline.setSelection(this.filters.active.key,{focus:true,animation:true})
                 // console.info(properties.items)
               } else {
                               this.setSelection(null);
-                              that.filters.active.key=null;
+                              that.setactiveitem(null);
                             }
 });
   },
   setTimes:function(){
-    this.console={msg:"getting timeline data...",throb:true}
+    this.console.msgs.push("getting timeline data...")
 
 //     this.timetimes = [
 //   { id: 19, content: "time.1", start: "2016-04-20",article:"articlecopy1" },
@@ -104,9 +110,10 @@ this.timeline.setSelection(this.filters.active.key,{focus:true,animation:true})
 
 axios.get('http://localhost:8000/events-fake.json')
     .then(response => {
-      console.log("raw axios response:",response.data)
+      // console.log("raw axios response:",response.data)
       // JSON response.datas are automatically parsed.
-    this.console={msg:"mapping timeline data...",throb:true}
+      // console.info(response.data)
+    this.console.msgs.push("mapping timeline data...")
     this.timetimes = this.$_.map(response.data,(ev)=>{
       return {
         id:ev._key,
@@ -115,14 +122,14 @@ axios.get('http://localhost:8000/events-fake.json')
         start:this.$MOMENT(ev.timestamp).format('YYYY-MM-DD')
       }
     })
-this.console={msg:"CHECK TIMTIMES",throb:false};
+this.console.msgs.push("CHECK TIMTIMES")
 
 this.$nextTick(() => this.setTimeline());
 
     })//axios.then
     .catch(e => {
-    this.console={msg:e,throb:false}
-      // this.errors.push(e)
+    // this.console={msg:e,throb:false}
+      console.error(e)
     })//axios.catch
 
   }
