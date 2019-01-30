@@ -4,8 +4,8 @@
 <p v-for="msg in console.msgs"><code>{{msg}}</code></p>
 </p>
 <hr/>
-<p>filters.active.key:<code>{{filters.active.key}}</code></p>
-<p>filters.active.item.article:<code>{{filters.active.item.article}}</code></p>
+<p>active.key:<code>{{active.key}}</code></p>
+<p>active.item.article:<code>{{active.item.article}}</code></p>
 <hr/>
 <p>filters.time.begin:<code>{{filters.time.begin}}</code></p>
 <p>filters.time.end:<code>{{filters.time.end}}</code></p>
@@ -34,15 +34,13 @@ return {
     time:{begin:'',end:''}
     ,space:{bbox:''}
     ,query:''
-    ,active:{key:null,itemx:{id:"id",article:"static article"}}
-  },
-console:{msgs:[],msg:'',throb:false}
+    ,activeog:{key:null,itemx:{id:"id",article:"static article"}}
+  }
+,active:{key:"placeholderid",item:this.getActiveItem()}
+,console:{msgs:[],msg:'',throb:false}
 }//return
 },//data
 computed:{
-  'filters.active.item': function(){
-    return {id:"staticid",article:"can I do getItem?"}
-  }
   // query: function () {
   //     return "start:"+filters.time.begin+" AND end:"+filters.time.end
   //   }
@@ -51,18 +49,26 @@ watch:{
 
 },//watch
 methods:{
-  getItemOG: function(key){
-return {id:"staticid",article:"can I do getItem?"}
+  getActiveItem: function(){
+
+// return {id:this.active.key,article:"can I do getactiveItem?"}
+return (typeof this.active.key !=='undefined')?this.$_.findWhere(this.timetimes, {id:this.active.key}):{id:null,article:"(no article found for key)"}
   }
   ,setActiveItem: function(key){
 
-console.log("in setactiveitem, key: ",key)
-console.log("in setactiveitem, item: ",this.$_.findWhere(this.timetimes, {id:key}))
+// console.log("in setactiveitem, key: ",key)
+// console.log("in setactiveitem, item: ",this.$_.findWhere(this.timetimes, {id:key}))
 // if(this.filters.active.key==null || this.filters.active.key==''){
 //   this.filters.active.item=this.getNullItem();
 // } else {
 
 switch (true) {
+
+  case (typeof key == 'undefined'):
+  this.console.msgs.push("this case firing:case (typeof key == 'undefined'), key:",key)
+  let key = this.filters.active.key;
+    this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
+  break;
   case (key==null):
   this.console.msgs.push("this case firing:case (key==null), key:",key)
     this.filters.active=this.getNullItem()
@@ -70,11 +76,6 @@ switch (true) {
     case (typeof key !== 'undefined'):
     this.console.msgs.push("this case firing:case (typeof key !== 'undefined'), key:",key)
     this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
-    break;
-    case (typeof key == 'undefined'):
-    this.console.msgs.push("this case firing:case (typeof key == 'undefined'), key:",key)
-    let key = this.filters.active.key;
-      this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
     break;
   default:
     this.filters.active=this.getNullItem()
@@ -88,12 +89,12 @@ switch (true) {
     return {key:'',item:{article:''}}
   },
   routize: function(){
-    let rob = { params:{
-  tstart:this.filters.time.begin,
-  tend:this.filters.time.end,
-  activeid:this.filters.active.key
-}}
-this.$router.push(rob)
+//     let rob = { params:{
+//   tstart:this.filters.time.begin,
+//   tend:this.filters.time.end,
+//   activeid:this.filters.active.key
+// }}
+// this.$router.push(rob)
 
   },
   setTimeline:function(){
@@ -105,14 +106,14 @@ this.$router.push(rob)
 
 // some incoming/default selection
 // if(typeof this.filters.active.key !== 'undefined' && this.filters.active.key !== null){this.timeline.setSelection(this.filters.active.key)}
-this.timeline.setSelection(this.filters.active.key)
+this.timeline.setSelection(this.active.key)
 // this.setActiveItem();
 
        var that = this;
 // now we wire up click-selection
        this.timeline.on('select',function (properties){
                 let itm = that.$_.findWhere(that.timetimes, {id:properties.items[0]})
-        if(that.filters.active.key!==itm.id){
+        if(that.active.key!==itm.id){
                 that.setActiveItem(itm.id)
               } else {
                               this.setSelection(null);
@@ -129,7 +130,7 @@ this.timeline.setSelection(this.filters.active.key)
 // ];
 
 // axios.get('http://localhost:8000/events-fake.json')
-axios.post('http://155.34.170.88:8529/_api/cursor',{
+axios.post('http://localhost:8529/_api/cursor',{
   query:"for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.end, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filters.time.begin+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filters.time.end+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
 })
     .then(response => {
@@ -155,8 +156,8 @@ created() {
   this.filters.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'1950-12-31';
   this.filters.query=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:'*';
 
-this.filters.active.key=this.$route.params.activeid;
-this.console.msgs.push("in created after activeid check, active.key:",this.filters.active.key);
+  this.active.key=(typeof this.$route.params.activeid !== 'undefined')?this.$route.params.activeid:'';
+this.console.msgs.push("in created after activeid check, active.key:",this.active.key);
 // if(typeof this.$route.params.activeid !== 'undefined'){
 //   this.setActiveItem(this.$route.params.activeid)
 // } else {
