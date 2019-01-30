@@ -128,16 +128,20 @@ RETURN peeps`
 
 ### EVENTS:TIMELINE
 
-* for e in events
-	** e.hasParticant(s)
-		`for e in edges
+`for e in events e.hasParticant(s)
+		for e in edges
 		filter e.type=='hasParticipant'
 		for ev in events
 		filter e._from==ev._id
 		for p in people
 		filter e._to==p._id
 		return {"evkey":ev._key,"p":p.name}`
-	** e.occurredAt
+
+`for event in events
+    for edge in edges filter(edge._from==event._id && edge.type=='hasParticipant')
+    for person in people filter(edge._to==person._id)
+    return {event:event._key,edge:edge._id,person:person.name}`
+
 
 ### PLACES:MAP
 
@@ -150,15 +154,7 @@ RETURN peeps`
 		filter e._to==pl._id
 		return {"evkey":ev._key,"pl":pl.name}
 
-	* for e in places (grouping)
-		for e in edges
-		filter e.type=='occurredAt'
-		for ev in events
-		filter e._from==ev._id
-		for pl in places
-		filter e._to==pl._id
-		collect placeid = pl._id,placename=pl.name INTO involved
-		return {"plid":placeid,"plname":placename,"participants":involved}
+	* for e in edges filter e.type=='occurredAt' for ev in events filter e._from==ev._id for pl in places filter e._to==pl._id collect placeid = pl._id,placename=pl.name INTO involved return {plid:placeid,plname:placename,participants:involved}
 
 
 
