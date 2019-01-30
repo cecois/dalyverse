@@ -1,16 +1,15 @@
 <template>
-<div>
+<div id="vue-root">
 <p>console.msgs:
-<code v-for="msg in console.msgs">{{msg}}</code>
+<p v-for="msg in console.msgs"><code>{{msg}}</code></p>
 </p>
-<p>console.throb:<code>{{console.throb}}</code></p>
-<p>filter,qyert:<code>{{filters.query}}</code></p>
 <hr/>
 <p>filters.active.key:<code>{{filters.active.key}}</code></p>
 <p>filters.active.item.article:<code>{{filters.active.item.article}}</code></p>
 <hr/>
 <p>filters.time.begin:<code>{{filters.time.begin}}</code></p>
 <p>filters.time.end:<code>{{filters.time.end}}</code></p>
+<p>filter.query:<code>{{filters.query}}</code></p>
 <p>filters.space:<code>{{filters.space.bbox}}</code></p>
 
 <div id="line"></div>
@@ -35,12 +34,15 @@ return {
     time:{begin:'',end:''}
     ,space:{bbox:''}
     ,query:''
-    ,active:{key:'',item:{article:''}}
+    ,active:{key:null,itemx:{id:"id",article:"static article"}}
   },
 console:{msgs:[],msg:'',throb:false}
 }//return
 },//data
 computed:{
+  'filters.active.item': function(){
+    return {id:"staticid",article:"can I do getItem?"}
+  }
   // query: function () {
   //     return "start:"+filters.time.begin+" AND end:"+filters.time.end
   //   }
@@ -49,21 +51,41 @@ watch:{
 
 },//watch
 methods:{
-  setActiveItem: function(key){
+  getItemOG: function(key){
+return {id:"staticid",article:"can I do getItem?"}
+  }
+  ,setActiveItem: function(key){
 
+console.log("in setactiveitem, key: ",key)
+console.log("in setactiveitem, item: ",this.$_.findWhere(this.timetimes, {id:key}))
 // if(this.filters.active.key==null || this.filters.active.key==''){
 //   this.filters.active.item=this.getNullItem();
 // } else {
-  if(key!==null && (typeof key !== 'undefined')){
+
+switch (true) {
+  case (key==null):
+  this.console.msgs.push("this case firing:case (key==null), key:",key)
+    this.filters.active=this.getNullItem()
+    break;
+    case (typeof key !== 'undefined'):
+    this.console.msgs.push("this case firing:case (typeof key !== 'undefined'), key:",key)
+    this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
+    break;
+    case (typeof key == 'undefined'):
+    this.console.msgs.push("this case firing:case (typeof key == 'undefined'), key:",key)
+    let key = this.filters.active.key;
       this.filters.active={key:key,item:this.$_.findWhere(this.timetimes, {id:key})}
-    } else {
-      this.filters.active={key:'',article:''}
-    }
-  // }
+    break;
+  default:
+    this.filters.active=this.getNullItem()
+    break;
+}
+
+
   }//setactiveitem
   ,
   getNullItem: function(){
-    return {key:null,article:null}
+    return {key:'',item:{article:''}}
   },
   routize: function(){
     let rob = { params:{
@@ -75,54 +97,47 @@ this.$router.push(rob)
 
   },
   setTimeline:function(){
-    this.console.msgs.push("initting timeline w/ timetimes...")
+    // this.console.msgs.push("initting timeline w/ timetimes...")
        // get the element
        const el = this.$el.querySelector('#line')
        // create the Timeline
        this.timeline = new vis.Timeline(el, this.timetimes, options);
 
-// this.timeline.setSelection(this.filters.active.key,{focus:true,animation:true})
+// some incoming/default selection
+// if(typeof this.filters.active.key !== 'undefined' && this.filters.active.key !== null){this.timeline.setSelection(this.filters.active.key)}
+this.timeline.setSelection(this.filters.active.key)
+// this.setActiveItem();
 
        var that = this;
-// that.setActiveItem(this.filters.active.key)
-
+// now we wire up click-selection
        this.timeline.on('select',function (properties){
-
                 let itm = that.$_.findWhere(that.timetimes, {id:properties.items[0]})
-
         if(that.filters.active.key!==itm.id){
-                // that.filters.active={key:itm.id};
                 that.setActiveItem(itm.id)
-                // console.info(properties.items)
               } else {
                               this.setSelection(null);
-                              that.setactiveitem(null);
+                              that.setActiveItem(null);
                             }
 });
   },
   setTimes:function(){
-    this.console.msgs.push("getting timeline data...")
+    // this.console.msgs.push("getting timeline data...")
 
 //     this.timetimes = [
 //   { id: 19, content: "time.1", start: "2016-04-20",article:"articlecopy1" },
 //   { id: 41, content: "time.4", start: "2017-04-16", end: "2017-09-19",article:"articlecopy4" }
 // ];
 
-axios.get('http://localhost:8000/events-fake.json')
+// axios.get('http://localhost:8000/events-fake.json')
+axios.post('http://155.34.170.88:8529/_api/cursor',{
+  query:"for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.end, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filters.time.begin+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filters.time.end+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
+})
     .then(response => {
-      // console.log("raw axios response:",response.data)
+      // if(response.error!==true){this.console.msgs.push("ERROR! Arango response errored out.")}
+        this.timetimes = response.data.result;
       // JSON response.datas are automatically parsed.
-      // console.info(response.data)
-    this.console.msgs.push("mapping timeline data...")
-    this.timetimes = this.$_.map(response.data,(ev)=>{
-      return {
-        id:ev._key,
-        content:ev.name,
-        article:ev.article+"("+ev.nb_timestamp.nb+")",
-        start:this.$MOMENT(ev.timestamp).format('YYYY-MM-DD')
-      }
-    })
-this.console.msgs.push("CHECK TIMTIMES")
+
+// this.console.msgs.push("CHECK TIMTIMES")
 
 this.$nextTick(() => this.setTimeline());
 
@@ -136,11 +151,17 @@ this.$nextTick(() => this.setTimeline());
 },//methods
 created() {
 
-  this.filters.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'2016-12-31';
-  this.filters.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'2017-12-31';
+  this.filters.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'1900-01-01';
+  this.filters.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'1950-12-31';
   this.filters.query=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:'*';
 
-  if(typeof this.$route.params.activeid !== 'undefined'){this.setActiveItem(this.$route.params.activeid)};
+this.filters.active.key=this.$route.params.activeid;
+this.console.msgs.push("in created after activeid check, active.key:",this.filters.active.key);
+// if(typeof this.$route.params.activeid !== 'undefined'){
+//   this.setActiveItem(this.$route.params.activeid)
+// } else {
+  // this.setActiveItem();
+// }
 
   this.setTimes()
 
@@ -174,6 +195,10 @@ created() {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+body{
+  background-color:rgba(0,0,0,1);
+}
+#vue-root{margin:0 1%;background-color:white;}
 .vis-panel{
   font-weight:800;font-size:.8em;
 }

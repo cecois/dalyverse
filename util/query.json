@@ -1,0 +1,3 @@
+{
+  "query" : "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id return distinct { id:ev._key, content:ev.name, article:ev.article, start:HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\"), end:HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.end, \"%yyyy-%mm-%dd\") : null}"
+  }

@@ -284,7 +284,7 @@
   },
   {
     "_key": "_:bachmananddimelloseeequus",
-    "name": "Mal Bachman and Don DiMello Take in Equus.",
+    "name": "Mal Bachman and Don DiMello Take in Equus",
     "article": "Excited by the premise, Bachman and DiMello return from Corona, CA to see 'Equus.'",
     "timestamp": "2014-03-04T16:10:00Z",
     "nb_timestamp": {
@@ -294,8 +294,8 @@
   },
   {
     "_key": "_:bachmananddimelloseethechildrenshour",
-    "name": "Mal Bachman and Don DiMello Take in Lillian Hellman's The Children's Hour (eventually storing the stage with a broken bottles and a sharpened broom handle when it's revealed there is no hot lesbian action in the show).",
-    "article": "Disappointed with the death of sexual provocation in Glengarry Glen Ross, Bachman and DiMello see another show in the same week.",
+    "name": "Mal Bachman and Don DiMello Take in Lillian Hellman's The Children's Hour",
+    "article": "Disappointed with the dearth of sexual provocation in Glengarry Glen Ross, Bachman and DiMello see another show in the same week. They eventually storm the stage with a broken bottle and a sharpened broom handle when it's revealed there is no hot lesbian action in the show.",
     "timestamp": "2014-03-01T16:10:00Z",
     "nb_timestamp": {
       "class": "estimate-week",
@@ -374,7 +374,7 @@
   },
   {
     "_key": "_:augustlindttoursskokieil",
-    "name": "August Lindt travels to Skokie, Illinois.",
+    "name": "August Lindt travels to Skokie, Illinois",
     "article": "On ADPPP#S1.4, during a round of 'How Close Have We Been to Skokie,' Mr. Lindt reveals that has, in fact, been to Skokie.",
     "timestamp": "2000-08-08T16:10:00Z",
     "nb_timestamp": {
@@ -892,7 +892,8 @@
   },
   {
     "_key": "_:joebongogoesonsabbatical1",
-    "name": "Between Womp it Up episodes at Largo in 2018.Jan and 2018.Jul, Joe Bongo went on sabbatical by sleeping at Largo at the Coronet, drilling holes in the walls of the women's changing rooms, Porkies-style.",
+    "name": "Joe Bongo Squats at Largo"
+    "article": "Between Womp it Up episodes at Largo in 2018.Jan and 2018.Jul, Joe Bongo went on sabbatical by sleeping at Largo at the Coronet, drilling holes in the walls of the women's changing rooms, Porkies-style.",
     "timestamp": {
       "start": "2018-01-22T10:10:00Z",
       "end": "2018-12-12T10:10:00Z"
@@ -914,7 +915,8 @@
   },
   {
     "_key": "_:joebongoisattackedbysnakes",
-    "name": "Somewhere in a desert, Joe Bongo is attacked by a pack of snakes while hiding from people in the spiritual world.",
+    "name": "Joe Bongo is Attacked by Snakes",
+    "article": "Somewhere in a desert, Joe Bongo is attacked by a pack of snakes while hiding from people in the spiritual world.",
     "timestamp": "1980-01-12T10:10:00Z",
     "nb_timestamp": {
       "class": null,
@@ -923,7 +925,7 @@
   },
   {
     "_key": "_:joebongoisfiredfromtheenglishdepartment",
-    "name": "Joe Bongo is Fired from the MDHS English Dept.",
+    "name": "Joe Bongo is Fired from the MDHS English Dept",
     "article": "Joe Bongo is fired from the English Department at Marina del Rey High School for not reading any books. He cannot be let go entirely and therefore becomes the Health teacher.",
     "timestamp": "2000-12-01T10:10:00Z",
     "nb_timestamp": {
@@ -1025,7 +1027,7 @@
     "_key": "_:billcarterisborn",
     "name": "Bill Carter is Born",
     "article": "Bill Carter is born.",
-    "timestamp": "1922-06-14:10:00Z",
+    "timestamp": "1922-06-14T10:10:00Z",
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is middle of 1922"
@@ -1163,7 +1165,8 @@
   },
   {
     "_key": "_:dondimellofindsachild",
-    "name": "Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it.",
+    "name": "Don DiMello Finds a Child",
+    "article": "Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it.",
     "timestamp": "2014-08-10T02:30:00Z",
     "nb_timestamp": {
       "class": null,
@@ -1182,8 +1185,8 @@
   },
   {
     "_key": "_:cactustonyisinterrogated1",
-    "name": "Cactus Tony is Interrogated and Cracks",
-    "article": "",
+    "name": "Cactus Tony is Interrogated and Cracks (1)",
+    "article": "For the first time in as many weeks, Cactus Tony cracks under the pressure of interrogation. The 2nd time would occur at Earwolf studios.",
     "timestamp": "2013-02-04T19:00:00Z",
     "nb_timestamp": {
       "class": null,
@@ -1192,8 +1195,8 @@
   },
   {
     "_key": "_:cactustonyisinterrogated2",
-    "name": "Cactus Tony Goes on Comedy Bang! Bang! and Cracks Under Croatian Special Forces Interrogation Techniques",
-    "article": "In order to garner good press for Don DiMello, who was laying low at Griffith Observatory, Cactus Tony appears on the Comedy Bang! Bang! podcast, only to attempt suicide by defenestration.",
+    "name": "Cactus Tony is Interrogated and Cracks (2",
+    "article": "In order to garner good press for Don DiMello, who was laying low at Griffith Observatory, Cactus Tony appears on the Comedy Bang! Bang! podcast, only to crack under Croatian Special Forces interrogation techniques and attempt suicide by defenestration.",
     "timestamp": "2013-02-10T19:00:00Z"
   },
   {
@@ -1717,7 +1720,7 @@
   },
   {
     "_key": "_:patrickmcmahonisaccused",
-    "name": "Johnny McGory (Patrick McMahon) is accused of sexual misconduct.",
+    "name": "Johnny McGory (Patrick McMahon) is Accused of Sexual Misconduct",
     "timestamp": "2009-01-01T16:00:00Z",
     "nb_timestamp": {
       "class": "estimate-prior-to",
@@ -1726,7 +1729,7 @@
   },
   {
     "_key": "_:patrickmcmahonisborn",
-    "name": "Patrick McMahon is born in Limerick, Ireland.",
+    "name": "Patrick McMahon is born in Limerick, Ireland",
     "timestamp": "1960-01-01T16:00:00Z",
     "nb_timestamp": {
       "class": null,
@@ -1735,7 +1738,8 @@
   },
   {
     "_key": "_:billcartercheersaraceriot",
-    "name": "Bill Carter Gets a Black Guy and a White Guy Together near La Cañada Flintridge to 'See What Happens,' is Arrested for Inciting a Riot",
+    "name": "Bill Carter Gets a Black Guy and a White Guy Together near La Cañada Flintridge",
+    "article": "Primarily and solely just 'to see what happens,' Bill Carter incites a race riot and is soon arrested for same."
     "timestamp": "1965-08-11T16:00:00Z",
     "nb_timestamp": {
       "class": null,
@@ -1744,7 +1748,8 @@
   },
   {
     "_key": "_:billcartertrainscarygrant",
-    "name": "Bill Carter Grows Disgusted by Cary Grant's Physique, Travels to Hollywood to Surreptitiously Train Him",
+    "name": "Bill Carter Grows Disgusted by Cary Grant's Physique",
+    "article": "Bill Carter finds himself disgusted with Cary Grant's physique and travels to Hollywood to surreptitiously train the actor. The incident marks the beginning of a career based upon clanedistine, but nonetheless threatening, technique.",
     "timestamp": "1945-06-24T16:00:00Z",
     "nb_timestamp": {
       "class": null,
@@ -1833,10 +1838,6 @@
     }
   },
   {
-    "_key": "_:shooteratbuzzcoffeei",
-    "name": "Shooter Hangs at Buzz Coffee I to Watch Women Let Out of Cardio Ballet"
-  },
-  {
     "_key": "_:dannymahoneybuysaheavycoat",
     "article": null,
     "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat",
@@ -1851,10 +1852,5 @@
     "article": null,
     "name": "Ashley Pinto's Sweet Sixteen",
     "timestamp": "2010-03-27T16:00:00Z"
-  },
-  {
-    "_key": "_:crystalaltermanmarriesbigbob",
-    "article": "Against the wishes of father Ben Alterman, Crystal and Big Bob were married at an undisclosed location at an undisclosed time. In his toast, Ben revealed he'd watch his daughter fuck almost anyone but Big Bob.",
-    "name": "Crystal Alterman Marries Big Bob Pinto"
   }
 ]

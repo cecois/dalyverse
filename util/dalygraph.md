@@ -119,12 +119,25 @@ isPetOf
 
 #### Arango Notes
 
-### PEOPLE
+### PEOPLE per EVENT
 
-for a given event, pull participants:
-`FOR edge IN ANY 'events/_:andicallahangetsanape' edges
-collect eventid=edge._from,pid=people._key INTO peeps
-RETURN peeps`
+for a given event (e.g. "events/_:andicallahangetsanape"), pull participants ARRAY:
+
+	`LET event = (for vertices, edges, paths in OUTBOUND "events/_:andicallahangetsanape" edges
+	return distinct {
+	name: FIRST(paths.vertices).name,
+	evid: FIRST(paths.edges)._from
+	})
+
+	LET people = (
+	for v in 1..1 OUTBOUND "events/_:andicallahangetsanape" edges
+	RETURN v
+	)
+
+	return {
+	event:event,
+	people:people
+	}`
 
 ### EVENTS:TIMELINE
 
@@ -160,14 +173,16 @@ RETURN peeps`
 
 ##### Docker
 
+https://docs.arangodb.com/3.4/Manual/Deployment/Docker/
+
 docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --batch-size 33554432 --create-collection true
 docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --overwrite --create-collection true
 docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --create-collection true
 
 ##### Query
 
-curl -X POST --header 'accept: application/json' --data-binary @- --dump - http://localhost:8529/_api/query <<EOF
+curl -X POST --header 'accept: application/json' --data-binary @- --dump - http://155.34.170.88:8529/_api/query <<EOF
 {
-  "query" : "for e in edges filter e.type=='hasParticipant' for ev in events filter e._from==ev._id for p in people filter e._to==p._id return {evkey:ev._key,p:p.name}"
+  "query" : "for e in edges filter e.type=='hasParticipant' for ev in events filter e._from==ev._id return { id:ev._key, content:ev.name, article:ev.article}"
 }
 EOF
