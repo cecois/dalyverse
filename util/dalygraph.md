@@ -119,17 +119,24 @@ isPetOf
 
 #### Arango Notes
 
+### PEOPLE
+
+for a given event, pull participants:
+`FOR edge IN ANY 'events/_:andicallahangetsanape' edges
+collect eventid=edge._from,pid=people._key INTO peeps
+RETURN peeps`
+
 ### EVENTS:TIMELINE
 
 * for e in events
 	** e.hasParticant(s)
-		for e in edges
+		`for e in edges
 		filter e.type=='hasParticipant'
 		for ev in events
 		filter e._from==ev._id
 		for p in people
 		filter e._to==p._id
-		return {"evkey":ev._key,"p":p.name}
+		return {"evkey":ev._key,"p":p.name}`
 	** e.occurredAt
 
 ### PLACES:MAP
@@ -156,29 +163,10 @@ isPetOf
 
 
 ##### Docker
-9696  arangoimp --file ~/Downloads/airports.csv --collection airports --create-collection true --type csv
- 9700  arangoimp --file ~/Downloads/airports.csv --collection airports --create-collection true --type csv
- 9702  brew search arango
- 9707  docker exec -it 7d7c2470953a arangoimp --file ~/Downloads/airports.csv --collection airports --create-collection true --type csv
- 9710  docker exec -it 7d7c2470953a arangoimp --file /tmp/airports.csv --collection airports --create-collection true --type csv
- 9712  docker exec -it 7d7c2470953a arangoimp --file /tmp/flights.csv --collection flights --create-collection true --type csv
- 9713  docker exec -it 7d7c2470953a arangoimp --file /tmp/flights.csv --collection flights --create-collection true --type csv --create-collection-type edge
-10019* history | grep arango
-10022* docker start arangodb
-10045  arangoimport --file "incoming-things.json" --type json --collection "things" --batch-size 33554432
-10060  docker exec 'arangoimport --file "/tmp/incoming-things.json" --type json --collection "things" --batch-size 33554432'
-10061  docker exec -d 7d7c2470953a arangoimport --file "/tmp/incoming-things.json" --type json --collection "things" --batch-size 33554432
-10062  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-things.json" --type json --collection "things" --batch-size 33554432
-10064  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-things.json" --type json --collection "things" --batch-size 33554432 --create-collection true
-10126  history | grep arang
-10127  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-people.json" --type json --collection "people" --batch-size 33554432 --create-collection true
-10129  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-people.json" --type json --collection "people" --batch-size 33554432 --create-collection true
-10130  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-events.json" --type json --collection "events" --batch-size 33554432 --create-collection true
-10131  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --batch-size 33554432 --create-collection true
-10133  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --batch-size 33554432 --create-collection true
-10156  history | grep arang
-10157  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --create-collection true
-10159  docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --overwrite --create-collection true
+
+docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --batch-size 33554432 --create-collection true
+docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --overwrite --create-collection true
+docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --create-collection true
 
 ##### Query
 
