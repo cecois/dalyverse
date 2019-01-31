@@ -1,19 +1,24 @@
 <template>
 <div id="vue-root">
-<p>console.msgs:
-<p v-for="msg in console.msgs"><code>{{msg}}</code></p>
-</p>
+  created->setTimes->axios.get.events->set timetimes->setTimeline->setSelection (timeline)->setActiveItem[->setActiveGraph]->wire timeline select
+
+  (setActiveItem last)
+
+  <span v-bind:class="{ throbber: console.throb }" class="icon">
+          <i :class="console.clazz" class="mdi"></i>
+        </span>
+  <p style="font-size:1.4em;"><code>{{console.msg}}</code></p>
 <hr/>
-<p>rob:<code>{{rob}}</code></p>
+<!-- <p>rob:<code>{{rob}}</code></p> -->
 <p>active.key:<code>{{active.key}}</code></p>
-<p>active.item.article:<code>{{active.item.article}}</code></p>
+<p v-if="active.item">active.item.article:<code>{{active.item.article}}</code></p>
 <p>active.graph.participants:<code>{{active.graph.participants}}</code></p>
 <p>active.graph.locations:<code>{{active.graph.locations}}</code></p>
 <hr/>
 <p>filters.time.begin:<code>{{filters.time.begin}}</code></p>
 <p>filters.time.end:<code>{{filters.time.end}}</code></p>
-<p>filter.query:<code>{{filters.query}}</code></p>
-<p>filters.space:<code>{{filters.space.bbox}}</code></p>
+<!-- <p>filter.query:<code>{{filters.query}}</code></p>
+<p>filters.space:<code>{{filters.space.bbox}}</code></p> -->
 
 <div id="line"/>
 
@@ -40,7 +45,11 @@ return {
     ,query:''
     ,activeog:{key:null,itemx:{id:"id",article:"static article"}}
   }
-,console:{msgs:[],msg:'',throb:false}
+,console:{
+  msg:''
+  ,clazz:null
+  ,throb:false
+}
 }//return
 },//data
 computed:{},//computed
@@ -50,7 +59,21 @@ watch:{
       }
 },//watch
 methods:{
-  setActiveGraph: function(q){
+  liveTest: function(){
+
+// test of activeitem is legit (found within timetimes array)
+if(typeof this.$_.findWhere(this.timetimes, {id:this.active.key}) == 'undefined'){
+this.console={clazz:"mdi-alert-circle-outline has-text-danger is-size-1 has-text-weight-bold",msg:"event ("+this.active.key+") not found in current set - check temporal filters",throb:false}
+} else {
+  this.console={
+    clazz:null
+    ,msg:null
+    ,throb:false
+  }
+}
+
+  }
+  ,setActiveGraph: function(q){
 
 if(typeof q == 'undefined'){this.console.msg="no graph query incoming, dying...";return}
 
@@ -60,6 +83,7 @@ axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
     .then(response => {
         this.active.graph = response.data.result[0];
       // JSON response.datas are automatically parsed.
+this.$nextTick(() => this.liveTest());
 
     })//axios.then
     .catch(e => {
@@ -69,10 +93,8 @@ axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
   },
   setActiveItem: function(){
 
-this.active.item=(typeof this.active !=='undefined' && this.active.key !== null)?this.$_.findWhere(this.timetimes, {id:this.active.key}):{id:null,article:"(no article found for key)"};
-
 let q='LET event = (for vertices, edges, paths in OUTBOUND "events/'+this.active.key+'" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/'+this.active.key+'" edges filter e.type==\'hasParticipant\' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND "events/'+this.active.key+'" edges filter e.type==\'occurredAt\' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }'
-this.console.msgs.push(q)
+
 this.setActiveGraph(q)
   }
   ,getNullItem: function(){
@@ -96,16 +118,26 @@ this.$router.push(rob)
        this.timeline = new vis.Timeline(el, this.timetimes, options);
 
 // some incoming/default selection
+
 this.timeline.setSelection(this.active.key)
 this.setActiveItem();
+
+// this.console.throb=false;this.console.clazz="";
+// this.console={msg:"",throb:false,clazz:""}
 
        var that = this;
 // now we wire up click-selection
        this.timeline.on('select',function (properties){
-                
+
+if(properties.items[0]==that.active.key){
+
+                that.active.key=null
+                              this.setSelection(null);
+} else {
+
                 that.active.key=properties.items[0]
-                console.log("that.active.key after set from select:",that.active.key)
                               this.setSelection(properties.items[0]);
+}//else itemselect matches active.key
                               that.setActiveItem();
   })
      },
@@ -130,12 +162,14 @@ this.$nextTick(() => this.setTimeline());
 },//methods
 created() {
 
+// this.console.throb=true;this.console.clazz="mdi-clock";
+this.console={msg:"loading...",throb:true,clazz:"mdi-clock"}
+
   this.filters.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'1900-01-01';
   this.filters.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'1950-12-31';
   this.filters.query=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:'*';
 
   this.active.key=(typeof this.$route.params.activeid !== 'undefined')?this.$route.params.activeid:'';
-this.console.msgs.push("in created after activeid check, active.key:",this.active.key);
 
   this.setTimes()
 
@@ -182,4 +216,44 @@ font-size:.8em;
     background-color:orange;
     color:rgba(91,53,23,1);
   }
+
+  /* ------------------ THROBBER -- */
+
+.throbber {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash 1.4s ease-in-out infinite,
+    colors (1.4s*4) ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% { stroke: #4285F4; }
+  25% { stroke: #DE3E35; }
+  50% { stroke: #F7C223; }
+  75% { stroke: #1B9A59; }
+  100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 187/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
+}
 </style>
