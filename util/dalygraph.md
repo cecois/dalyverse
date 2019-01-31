@@ -121,17 +121,25 @@ isPetOf
 
 ### PEOPLE per EVENT
 
-* for a given event (e.g. "events/_:andicallahangetsanape"), pull participants ARRAY:
-			LET event = (for vertices, edges, paths in OUTBOUND "events/_:andicallahangetsanape" edges
+* for a given event (e.g. "events/_:andicallahangetsanape"), pull participants ARRAY and places ARRAY:
+			LET event = (for vertices, edges, paths in OUTBOUND "events/_:thegreatminingoflakesuperior" edges
 			return distinct {
 			name: FIRST(paths.vertices).name,
 			evid: FIRST(paths.edges)._from
 			}) LET people = (
-			for v in 1..1 OUTBOUND "events/_:andicallahangetsanape" edges
+			for v,e,p in 1..1 OUTBOUND "events/_:thegreatminingoflakesuperior" edges
+			filter e.type=='hasParticipant'
 			RETURN {name:v.name,key:v._id}
-			) return {
+			)
+			LET places = (
+			for v,e,p in 1..1 OUTBOUND "events/_:thegreatminingoflakesuperior" edges
+			filter e.type=='occurredAt'
+			RETURN {name:v.name,key:v._id}
+			)
+			return {
 			event:event,
-			people:people
+			participants:people,
+			locations:places
 			}
 
 
@@ -171,9 +179,17 @@ isPetOf
 
 https://docs.arangodb.com/3.4/Manual/Deployment/Docker/
 
-docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --batch-size 33554432 --create-collection true
-docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --overwrite --create-collection true
-docker exec 7d7c2470953a arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --batch-size 33554432 --create-collection true
+docker cp incoming-edges.json arango:/tmp && docker cp incoming-events.json arango:/tmp && docker cp incoming-people.json arango:/tmp/ && docker cp incoming-places.json arango:/tmp/
+
+docker exec arango arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --create-collection true
+docker exec arango arangoimport --file "/tmp/incoming-people.json" --type json --collection "people" --create-collection true
+docker exec arango arangoimport --file "/tmp/incoming-events.json" --type json --collection "events" --create-collection true
+docker exec arango arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --create-collection true
+
+docker exec arango arangoimport --file "/tmp/incoming-places.json" --type json --collection "places" --overwrite true
+docker exec arango arangoimport --file "/tmp/incoming-people.json" --type json --collection "people" --overwrite true
+docker exec arango arangoimport --file "/tmp/incoming-events.json" --type json --collection "events" --overwrite true
+docker exec arango arangoimport --file "/tmp/incoming-edges.json" --type json --collection "edges" --overwrite true
 
 ##### Query
 

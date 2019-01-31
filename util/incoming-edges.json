@@ -533,6 +533,7 @@
   {"_from": "people/_:tommcmahon","_to":"things/_:unnamedmechanicbusiness","type":"hasWorkedAt","vertex":"_:tommcmahon"},
   {"_from": "people/_:victor","_to":"things/_:trainerforthestarsseekingstars","type":"worksAt","vertex":"_:victor"},
   {"_from": "people/_:zowber","_to":"things/_:nashasha","type":"isMemberOf","vertex":"_:zowber"},
+  {"_from":"events/_:margotchunkloseshervirginity","_to":"places/_:laramiefeedandwesternsupply","type":"occurredAt","vertex":"_:margotchunkloseshervirginity"},
   {"_from":"events/_:ionetimekilledafrankenstein","_to":"places/_:laramiefeedandwesternsupply","type":"occurredAt","vertex":"_:ionetimekilledafrankenstein"},
   {"_from":"events/_:ionetimekilledafrankenstein","_to":"people/_:unnamedsecurityguardatlaramiesupply","type":"hasParticipant","vertex":"_:ionetimekilledafrankenstein"},
   {"_from":"events/_:ionetimekilledafrankenstein","_to":"people/_:daltonwilcox","type":"hasParticipant","vertex":"_:ionetimekilledafrankenstein"}
