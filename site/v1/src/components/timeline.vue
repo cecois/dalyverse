@@ -120,8 +120,8 @@ this.slider = this.$NOUISLIDER.create(slider, {
     start: [this.$MOMENT(this.filters.time.begin, "YYYYMMDD").valueOf(), this.$MOMENT(this.filters.time.end, "YYYYMMDD").valueOf()],
     connect: true,
     range: {
-        'min': this.$MOMENT(this.filters.time.begin, "YYYYMMDD").subtract(1, 'year').valueOf()
-        ,'max': this.$MOMENT(this.filters.time.end, "YYYYMMDD").add(1, 'year').valueOf()
+        'min': this.$MOMENT(this.filters.time.begin, "YYYYMMDD").subtract(5, 'years').valueOf()
+        ,'max': this.$MOMENT(this.filters.time.end, "YYYYMMDD").add(5, 'years').valueOf()
     }
 })
 
@@ -130,6 +130,10 @@ this.slider.on('update', function(values,handle){
   console.log("values",values)
   that.filters.time.begin=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
   that.filters.time.end=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+});
+
+this.slider.on('end', function(values,handle){
+  that.routize()
 });
 
   }
