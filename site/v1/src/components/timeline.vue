@@ -6,6 +6,7 @@
 <hr/>
 <p>active.key:<code>{{active.key}}</code></p>
 <p>active.item.article:<code>{{active.item.article}}</code></p>
+<p>active.graph:<code>{{active.graph}}</code></p>
 <hr/>
 <p>filters.time.begin:<code>{{filters.time.begin}}</code></p>
 <p>filters.time.end:<code>{{filters.time.end}}</code></p>
@@ -29,7 +30,7 @@ export default {
 name:'Timeline',
 data() {
 return {
-  active:{key:null,item:{id:null,article:null}},
+  active:{key:null,item:{id:null,article:null},graph:{}},
   timetimes:[],
   filters:{
     time:{begin:'',end:''}
@@ -43,9 +44,28 @@ return {
 computed:{},//computed
 watch:{},//watch
 methods:{
+  setActiveGraph: function(q){
+
+if(typeof q == 'undefined'){this.console.msg="no graph query incoming, dying...";return}
+
+axios.post('http://10.0.0.150:8529/_api/cursor',{
+  query:q
+})
+    .then(response => {
+        this.active.graph = response.data.people;
+      // JSON response.datas are automatically parsed.
+
+    })//axios.then
+    .catch(e => {
+      console.error(e)
+    })//axios.catch
+
+  },
   setActiveItem: function(){
 
 this.active.item=(typeof this.active !=='undefined' && this.active.key !== null)?this.$_.findWhere(this.timetimes, {id:this.active.key}):{id:null,article:"(no article found for key)"};
+let q='LET event = (for vertices, edges, paths in OUTBOUND "events/_:andicallahangetsanape" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v in 1..1 OUTBOUND "events/_:andicallahangetsanape" edges RETURN {name:v.name,key:v._id} ) return { event:event, people:people }'
+this.setActiveGraph(q)
   }
   ,getNullItem: function(){
     return {key:null,item:null}

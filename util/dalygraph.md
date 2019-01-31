@@ -121,23 +121,19 @@ isPetOf
 
 ### PEOPLE per EVENT
 
-for a given event (e.g. "events/_:andicallahangetsanape"), pull participants ARRAY:
+* for a given event (e.g. "events/_:andicallahangetsanape"), pull participants ARRAY:
+			LET event = (for vertices, edges, paths in OUTBOUND "events/_:andicallahangetsanape" edges
+			return distinct {
+			name: FIRST(paths.vertices).name,
+			evid: FIRST(paths.edges)._from
+			}) LET people = (
+			for v in 1..1 OUTBOUND "events/_:andicallahangetsanape" edges
+			RETURN {name:v.name,key:v._id}
+			) return {
+			event:event,
+			people:people
+			}
 
-	`LET event = (for vertices, edges, paths in OUTBOUND "events/_:andicallahangetsanape" edges
-	return distinct {
-	name: FIRST(paths.vertices).name,
-	evid: FIRST(paths.edges)._from
-	})
-
-	LET people = (
-	for v in 1..1 OUTBOUND "events/_:andicallahangetsanape" edges
-	RETURN v
-	)
-
-	return {
-	event:event,
-	people:people
-	}`
 
 ### EVENTS:TIMELINE
 
