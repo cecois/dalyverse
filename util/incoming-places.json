@@ -1,4 +1,76 @@
 [
+  {
+  "_key": "_:parisfr",
+  "name": "Paris, France",
+  "article": "Paris, France, is a major metropolis in France.",
+  "geo_key": {
+    "type": "poly",
+    "id":409
+  }
+},
+  {
+  "_key": "_:madisonwi",
+  "name": "Madison, WI",
+  "article": "Madison, Wisconsin is the capitol city of Wisconsin, USA.",
+  "geo_key": {
+    "type": "poly",
+    "id":568
+  }
+},
+  {
+  "_key": "_:miamibeach",
+  "name": "Miami Beach",
+  "article": "Miami Beach is a popular vacation spot in Florida as well as the location of one of L. Ron Hubbard's hidden future treasures.",
+  "geo_key": {
+    "type": "point",
+    "id":999
+  }
+},
+  {
+  "_key": "_:sanrafaelhills",
+  "name": "San Rafael Hills",
+  "article": "San Rafael Hills is a neighborhood in Pasadena, California.",
+  "geo_key": {
+    "type": "point",
+    "id":998
+  }
+},
+  {
+  "_key": "_:johnnyssportshop",
+  "name": "Johnny's Sport Shop",
+  "article": "Johnny's Sport Shop is a bait and tackle shop in Pasadena and, according to one if its imployees, Hendrix Murphy, the location of an early attempt at live burial by Cactus Tony.",
+  "geo_key": {
+    "type": "point",
+    "id":997
+  }
+},
+  {
+  "_key": "_:tommyschiliburger",
+  "name": "Tommy's Chili Burger",
+  "article": "Tommy's Chili Burger is a restaurant that figured significantly in the murder trial of Cactus Tony.",
+  "geo_key": {
+    "type": "point",
+    "id":996
+  }
+},
+  {
+  "_key": "_:21choices",
+  "name": "21 Choices - Old Town",
+  "article": "21 Choices - Old Town is a restaurant that figured significantly in the murder trial of Cactus Tony.",
+  "geo_key": {
+    "type": "point",
+    "id":995
+  }
+},
+  {
+  "_key": "_:sanquentin",
+  "name": "San Quentin State Prison",
+  "article": "San Quentin State Prison is a legendary prison in Marin County, California.",
+  "geo_key": {
+    "type": "point",
+    "id":64
+  }
+},
 {
   "_key": "_:braidwoodcentre",
   "name": "The Braidwood Centre",
