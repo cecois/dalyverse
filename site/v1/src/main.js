@@ -5,7 +5,9 @@ import Vue from 'vue'
 // bulma stuff via buefy
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
+import 'nouislider/distribute/nouislider.min.css'
 import moment from 'moment'
+import nouislider from 'nouislider'
 import VTooltip from 'v-tooltip'
 
 
@@ -23,6 +25,7 @@ Vue.config.productionTip = false
 Vue.use(Buefy)
 
 Object.defineProperty(Vue.prototype, '$MOMENT', { value: moment })
+Object.defineProperty(Vue.prototype, '$NOUISLIDER', { value: nouislider })
 
 /* eslint-disable no-new */
 new Vue({

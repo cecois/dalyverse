@@ -20,6 +20,7 @@
 <!-- <p>filter.query:<code>{{filters.query}}</code></p>
 <p>filters.space:<code>{{filters.space.bbox}}</code></p> -->
 
+<div id="slider"/>
 <div id="line"/>
 
 </div>
@@ -27,10 +28,10 @@
 
 <script>
 
-var container = document.getElementById("line");
+// var container = document.getElementById("line");
 
 // Configuration for the Timeline
-var options = {};
+// var options = {};
 
 export default {
 name:'Timeline',
@@ -111,16 +112,38 @@ this.rob=rob;
 this.$router.push(rob)
 
   },
-  setTimeline:function(){
+  setSlider:function(){
+
+var slider = document.getElementById('slider');
+
+this.slider = this.$NOUISLIDER.create(slider, {
+    start: [this.$MOMENT(this.filters.time.begin, "YYYYMMDD").valueOf(), this.$MOMENT(this.filters.time.end, "YYYYMMDD").valueOf()],
+    connect: true,
+    range: {
+        'min': this.$MOMENT(this.filters.time.begin, "YYYYMMDD").subtract(1, 'year').valueOf()
+        ,'max': this.$MOMENT(this.filters.time.end, "YYYYMMDD").add(1, 'year').valueOf()
+    }
+})
+
+var that=this;
+this.slider.on('update', function(values,handle){
+  console.log("values",values)
+  that.filters.time.begin=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+  that.filters.time.end=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+});
+
+  }
+  ,setTimeline:function(){
        // get the element
        const el = this.$el.querySelector('#line')
        // create the Timeline
-       this.timeline = new vis.Timeline(el, this.timetimes, options);
+       this.timeline = new vis.Timeline(el, this.timetimes, {});
 
 // some incoming/default selection
 
 this.timeline.setSelection(this.active.key)
 this.setActiveItem();
+// this.setSlider()
 
 // this.console.throb=false;this.console.clazz="";
 // this.console={msg:"",throb:false,clazz:""}
@@ -152,6 +175,7 @@ axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
       // JSON response.datas are automatically parsed.
 
 this.$nextTick(() => this.setTimeline());
+this.$nextTick(() => this.setSlider());
 
     })//axios.then
     .catch(e => {
@@ -162,20 +186,22 @@ this.$nextTick(() => this.setTimeline());
 },//methods
 created() {
 
-// this.console.throb=true;this.console.clazz="mdi-clock";
 this.console={msg:"loading...",throb:true,clazz:"mdi-clock"}
 
-  this.filters.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'1900-01-01';
-  this.filters.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'1950-12-31';
+  this.filters.time.begin=(typeof this.$route.params.tstart !== 'undefined')?this.$route.params.tstart:'1989-01-01';
+  this.filters.time.end=(typeof this.$route.params.tend !== 'undefined')?this.$route.params.tend:'1999-12-31';
   this.filters.query=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:'*';
 
   this.active.key=(typeof this.$route.params.activeid !== 'undefined')?this.$route.params.activeid:'';
 
-  this.setTimes()
+
 
   return null;
   },//created
   mounted: function () {
+
+// this.setTimes()
+  this.setSlider()
 
   }//mounted
 
