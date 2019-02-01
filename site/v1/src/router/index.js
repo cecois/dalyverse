@@ -7,16 +7,15 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-  {
-    // path: '/:lot?/:slug?/:map?/:bbox?',
-    path: '/',
-    name: 'Default',
-    component: DEFAULT
-  }
-  ,{
-    path: '/events/:tstart?/:tend?/:filter?/:activeid?',
-    name: 'Timeline',
-    component: TIMELINE
-  }
+    {
+      path: '/',
+      name: 'Default',
+      component: DEFAULT
+    },
+    {
+      path: '/events/:tstart?/:tend?/:activeid?',
+      name: 'Timeline',
+      component: TIMELINE
+    }
   ]
 })

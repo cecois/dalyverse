@@ -9,17 +9,12 @@ import 'nouislider/distribute/nouislider.min.css'
 import moment from 'moment'
 import nouislider from 'nouislider'
 import VTooltip from 'v-tooltip'
-
-
 import App from './App'
 import router from './router'
 import underscore from 'vue-underscore'
 
 Vue.use(underscore)
 Vue.use(VTooltip)
-
-// Object.defineProperty(Vue.prototype, '$moment', { value: moment })
-
 Vue.config.productionTip = false
 
 Vue.use(Buefy)
