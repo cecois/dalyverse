@@ -193,7 +193,15 @@ this.slider.on('change', function(values,handle){
 }//slider no exist
 
   },
-  setTimeline:function(){
+  getGeoms: function () {
+
+// http://milleria.org:3030/geoms/cbb?q=poly:563,poly:563,poly:526,poly:564&callback=cwmccallback&_=1549133727972
+this.$_.each(this.timelinetimes,(t)=>{
+  console.log("t",t);
+})
+
+  }
+  ,setTimeline:function(){
 console.log('running setTimeline...')
 
       // old magic
@@ -238,6 +246,8 @@ console.log('running setTimes...')
   // axios.get('http://localhost:8000/events-fake.json')
   let q = "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
 
+  this.console.msg="setTimes query "+q;
+
   axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
     query:q
   })
@@ -261,6 +271,7 @@ console.log('running setTimes...')
     timelinetimes: function() {
           this.setTimeline();
            this.setSlider();
+           this.getGeoms();
         },
     filterz: function() {
           this.routize()
