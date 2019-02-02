@@ -4,26 +4,26 @@
 
   (setActiveItem last) -->
 
-<!--   <vue-headful
+  <vue-headful
             :title="page.title"
         description="Events Timeline and Graph from the Andy Dalyverse"
-        /> -->
-
+        />
+<code v-if="console">{{console.msg}}</code>
   <span v-bind:class="{ throbber: console.throb }" class="icon">
           <i :class="console.clazz" class="mdi"></i>
         </span>
   <p style="font-size:1.4em;"><code>{{console.msg}}</code></p>
 <hr/>
-<p>events found:<code>{{timelinetimes.length}}</code></p>
-<p>active.key:<code>{{active.key}}</code></p>
-<p>active.item.content:<code>{{active.item.content}}</code></p>
-<p>active.item.article:<code>{{active.item.article}}</code></p>
-<p>active.item.start:<code>{{active.item.start}}</code></p>
-<p>active.graph.participants:<code>{{active.graph.participants}}</code></p>
-<p>active.graph.locations:<code>{{active.graph.locations}}</code></p>
+<p v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></p>
+<p v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></p>
+<p v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></p>
+<p v-if="active.key">active.key:<code>{{active.key}}</code></p>
+<p v-if="active.item">active.item.content:<code>{{active.item.content}}</code></p>
+<p v-if="active.item">active.item.article:<code>{{active.item.article}}</code></p>
+<p v-if="active.item">active.item.start:<code>{{active.item.start}}</code></p>
+<p v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></p>
+<p v-if="active.graph">active.graph.locations:<code>{{active.graph.locations}}</code></p>
 <hr/>
-<!-- <p>filters.timeBegin:<code>{{filters.timeBegin}}</code></p>
-<p>filters.timeEnd:<code>{{filters.timeEnd}}</code></p> -->
 
 <div id="slider"/>
 <div id="line"/>
@@ -38,14 +38,17 @@ export default {
   data () {
     return {
       rob: null,
-      page: {title: this.getPageTitle()},
+      filterz: {
+        time: {
+          beginz: process.env.FILTER_TIME_BEGIN,
+          endz: process.env.FILTER_TIME_END
+        },
+        space: { bbox: null}
+  },
+      page: {title: null},
       active: {key: null, item: {id: null, article: null}, graph: {participants: null, locations: null}},
       timelinetimes: [],
-      filters: {
-        timeBegin: '1988-01-01',
-        timeEnd: '1999-12-31',
-        space_bbox: null
-  },
+      
   console: {
     msg: '',
     clazz: null,
@@ -53,41 +56,38 @@ export default {
   }
   }//return
   },//data
-  beforeCreate () {},//created
+  beforeCreate () {
+
+
+  },//beforeCreate
   created () {
 this.console={msg:"loading...",throb:true,clazz:"mdi-clock"}
 
-console.log("in created before params apply, filters.timeBegin",this.filters.timeBegin)
-console.log("in created before params apply, filters.timeEnd",this.filters.timeEnd)
-console.log("in created before params apply, this.console.msg",this.console.msg)
+if(this.filterz){
+    this.filterz.time.beginz=(this.$route.params.tstart)?this.$route.params.tstart:this.filterz.time.beginz;
+    console.log('this.filterz.time.beginz:',this.filterz.time.beginz)
+  this.filterz.time.endz=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
+  console.log('this.filterz.time.endz:',this.filterz.time.endz)
+}
+if(this.active){this.active.key=(typeof this.$route.params.activeid !== 'undefined')?this.$route.params.activeid:null;}
 
-  this.filters.timeBegin=(this.$route.params.tstart)?this.$route.params.tstart:this.filters.timeBegin;
-  this.filters.timeEnd=(this.filters.timeEnd)?this.$route.params.tend:this.filters.timeEnd;
-  // this.filters.query=(typeof this.$route.params.filter !== 'undefined')?this.$route.params.filter:'*';
-
-console.log("in created afer params apply, filters.timeBegin",this.filters.timeBegin)
-console.log("in created afer params apply, filters.timeEnd",this.filters.timeEnd)
-console.log("in created afer params apply, this.console.msg",this.console.msg)
-
-  this.active.key=(typeof this.$route.params.activeid !== 'undefined')?this.$route.params.activeid:null;
-  },
+  },//created
   mounted: function () {
 
-
+this.setPageTitle();
 this.setTimes()
 
   }, //mounted
   methods: {
-    getPageTitle: function () {
-
-return (this.filters.timeBegin && this.filters.timeEnd)?"Dalyverse : Events : "+this.filters.timeBegin+" - "+this.filters.timeEnd:"Dalyverse : Events";
+    setPageTitle: function () {
+this.page.title = (this.filterz.time.beginz && this.filterz.time.endz)?"Dalyverse : Events : "+this.filterz.time.beginz+" - "+this.filterz.time.endz:"Dalyverse : Events";
 
     },
     liveTest: function (){
 
     // test of activeitem is legit (found within timelinetimes array)
     if(typeof this.$_.findWhere(this.timelinetimes, {id:this.active.key}) == 'undefined'){
-    this.console={clazz:"mdi-alert-circle-outline has-text-danger is-size-1 has-text-weight-bold",msg:"event ("+this.active.key+") not found in current set - check temporal filters",throb:false}
+    this.console={clazz:"mdi-alert-circle-outline has-text-danger is-size-1 has-text-weight-bold",msg:"event ("+this.active.key+") not found in current set - check temporal filterz",throb:false}
     } else {
       this.console={
         clazz:null
@@ -126,7 +126,7 @@ return (this.filters.timeBegin && this.filters.timeEnd)?"Dalyverse : Events : "+
   },
   setActiveItem: function() {
     // set the active *item* based on the active key/trigger
-    this.active.item=(this.active.key !== null)?this.$_.findWhere(this.timelinetimes, {id:this.active.key}):{id:null, article:"(no article found for key)", start:null};
+    this.active.item=(this.active.key !== null)?this.$_.findWhere(this.timelinetimes, {id:this.active.key}):{id:null, article:null, start:null};
     // also throw that to timeline (if it's null nothing will be selected or selected will deselect)
     this.timeline.setSelection(this.active.key)
     // also set (or clear) any associated graphs
@@ -138,8 +138,8 @@ return (this.filters.timeBegin && this.filters.timeEnd)?"Dalyverse : Events : "+
   },
   routize: function(){
     let rob = { params:{
-  tstart:this.filters.timeBegin,
-  tend:this.filters.timeEnd,
+  tstart:this.filterz.time.beginz,
+  tend:this.filterz.time.endz,
   activeid:this.active.key
 }}
 this.rob=rob;
@@ -154,32 +154,40 @@ if(typeof this.slider == 'undefined'){
 var slider = document.getElementById('slider');
 
 this.slider = this.$NOUISLIDER.create(slider, {
-    start: [this.$MOMENT(this.filters.timeBegin, "YYYYMMDD").valueOf(), this.$MOMENT(this.filters.timeEnd, "YYYYMMDD").valueOf()],
+    start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
     connect: true,
     pips: {
         mode: 'range',
         density: 3
     },
     range: {
-        'min': this.$MOMENT(this.filters.timeBegin, "YYYYMMDD").subtract(5, 'years').valueOf()
-        ,'max': this.$MOMENT(this.filters.timeEnd, "YYYYMMDD").add(5, 'years').valueOf()
+        'min': this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").subtract(5, 'years').valueOf()
+        ,'max': this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").add(5, 'years').valueOf()
     }
 })
 
 var that=this;
-this.slider.on('set', function(values,handle){
+this.slider.on('update', function(values,handle){
 
-  that.filters.timeBegin=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
-  that.filters.timeEnd=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
-  that.routize()
-  that.setTimes();
+  that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+  that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+  // that.setTimes();
 });
 
-// this.slider.on('end', function(values,handle){
-//   console.log("slider end stuff:")
-//   console.log("values:",values)
-//   console.log('running setTimes...')
-//   // that.setTimes()
+this.slider.on('change', function(values,handle){
+  
+  that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+  that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+  that.routize()
+  that.setTimes()
+});
+
+// this.slider.on('change', function(values,handle){
+  // that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+  // that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+//   that.setTimes()
+//   that.setTimeline();
+//            that.setSlider();
 // });
 
 }//slider no exist
@@ -195,7 +203,8 @@ console.log('running setTimeline...')
       //first time here?
        const el = this.$el.querySelector('#line')
        // create the Timeline
-       this.timeline = new vis.Timeline(el, this.timelinetimes, {});
+       var titems = new vis.DataSet(this.timelinetimes);
+       this.timeline = new vis.Timeline(el, titems, {});
 
       // now we wire up click-selection
        this.timeline.on('select',function (properties){
@@ -213,15 +222,21 @@ console.log('running setTimeline...')
        that.setActiveItem()
     }//timeline.create and wireup
     else {
-      console.log("timeline exists already, active.key is:",that.active.key)
-          this.setSelection(that.active.key);
+      // timeline extant already
+      that.timeline.setItems(that.timelinetimes)
+          that.timeline.setSelection(that.active.key)
+
+          this.console.msg="redrawing timeline..."
+          that.timeline.redraw()
+          that.timeline.fit({ duration: 200, easingFunction: 'linear'});
+      // that.timeline.redraw();
     }
 
      },
   setTimes:function(){
 console.log('running setTimes...')
   // axios.get('http://localhost:8000/events-fake.json')
-  let q = "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.end, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filters.timeBegin+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filters.timeEnd+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
+  let q = "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
 
   axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
     query:q
@@ -246,6 +261,9 @@ console.log('running setTimes...')
     timelinetimes: function() {
           this.setTimeline();
            this.setSlider();
+        },
+    filterz: function() {
+          this.routize()
         }
   } //watch
 } //export.timeline
