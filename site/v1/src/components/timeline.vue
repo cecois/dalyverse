@@ -12,7 +12,6 @@
   <span v-bind:class="{ throbber: console.throb }" class="icon">
           <i :class="console.clazz" class="mdi"></i>
         </span>
-  <p style="font-size:1.4em;"><code>{{console.msg}}</code></p>
 <hr/>
 <p v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></p>
 <p v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></p>
@@ -22,7 +21,6 @@
 <p v-if="active.item">active.item.article:<code>{{active.item.article}}</code></p>
 <p v-if="active.item">active.item.start:<code>{{active.item.start}}</code></p>
 <p v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></p>
-<p v-if="active.graph">active.graph.locations:<code>{{active.graph.locations}}</code></p>
 <hr/>
 
 <div id="slider"/>
@@ -48,7 +46,7 @@ export default {
       page: {title: null},
       active: {key: null, item: {id: null, article: null}, graph: {participants: null, locations: null}},
       timelinetimes: [],
-      
+
   console: {
     msg: '',
     clazz: null,
@@ -175,7 +173,7 @@ this.slider.on('update', function(values,handle){
 });
 
 this.slider.on('change', function(values,handle){
-  
+
   that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
   that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
   that.routize()
@@ -196,10 +194,24 @@ this.slider.on('change', function(values,handle){
   getGeoms: function () {
 
 // http://milleria.org:3030/geoms/cbb?q=poly:563,poly:563,poly:526,poly:564&callback=cwmccallback&_=1549133727972
-this.$_.each(this.timelinetimes,(t)=>{
-  console.log("t",t);
-})
-
+// _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+// let geoms = this.$_.reject(this.$_.map(this.timelinetimes,(t)=>{
+//   return t.geo.length>0?t.geo:null;
+// }),(g)=>{
+//   return g==null;
+// })
+let geoms = this.$_.map(
+  this.$_.reject(this.timelinetimes,(t)=>{return t.geo.length<1})
+  ,(g)=>{
+    console.log("g",g);
+    return {
+      eid:g.id,
+      geokey:g.geo[0].geo_id.type+":"+g.geo[0].geo_id.id,
+      geoname:g.geo[0].name,
+      geoarticle:g.geo[0].article
+    }
+  })
+return geoms
   }
   ,setTimeline:function(){
 console.log('running setTimeline...')
@@ -244,7 +256,9 @@ console.log('running setTimeline...')
   setTimes:function(){
 console.log('running setTimes...')
   // axios.get('http://localhost:8000/events-fake.json')
-  let q = "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
+  // NO LOCS:
+  // let q = "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
+  let q = "for e in edges filter e.type==\"hasParticipant\" OR e.type==\"occurredAt\" for ev in events filter e._from==ev._id AND e.type==\"hasParticipant\" LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null LET geo=( for g in edges filter g._from==ev._id AND g.type==\"occurredAt\" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}"
 
   this.console.msg="setTimes query "+q;
 
