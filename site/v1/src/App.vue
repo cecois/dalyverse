@@ -7,6 +7,19 @@
 </template>
 
 <script>
+
+  window.map = new L.Map('map', {
+  zoomControl: false,
+  center: [51.505, -0.09],
+  attributionControl: false,
+  zoom: 2
+});
+
+
+var baseLayer = new L.TileLayer("https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png")
+
+map.addLayer(baseLayer);
+
 export default {
   name: 'App'
 }
@@ -18,7 +31,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color:rgba(255,255,255,.5);
 }
 </style>

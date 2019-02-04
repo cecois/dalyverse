@@ -1,5 +1,5 @@
 <template>
-<div id="vue-root">
+<div id="vue-root" class="container">
   <!-- created->setTimes->axios.get.events->set timelinetimes->setTimeline->setSelection (timeline)->setActiveItem[->setActiveGraph]->wire timeline select
 
   (setActiveItem last) -->
@@ -8,25 +8,29 @@
             :title="page.title"
         description="Events Timeline and Graph from the Andy Dalyverse"
         />
-<code v-if="console">{{console.msg}}</code>
-  <span v-bind:class="{ throbber: console.throb }" class="icon">
+<div class="columns">
+<div class="row"><code v-if="console">{{console.msg}}</code></div>
+
+  <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
           <i :class="console.clazz" class="mdi"></i>
         </span>
-<hr/>
-<p v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></p>
-<p v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></p>
-<p v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></p>
-<p v-if="active.key">active.key:<code>{{active.key}}</code></p>
-<p v-if="active.item">active.item.content:<code>{{active.item.content}}</code></p>
-<p v-if="active.item">active.item.article:<code>{{active.item.article}}</code></p>
-<p v-if="active.item">active.item.start:<code>{{active.item.start}}</code></p>
-<p v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></p>
-<hr/>
+<hr/> -->
+<!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div>
+<div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
+<div class="column" v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></div>
+<div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div>
+<!-- <div class="column" v-if="active.item">active.item.content:<code>{{active.item.content}}</code></div>
+<div class="column" v-if="active.item">active.item.article:<code>{{active.item.article}}</code></div>
+<div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div>
+<div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
+</div>
+<!-- ./.columns -->
 
 <div id="slider"/>
 <div id="line"/>
 
 </div>
+<!-- ./#vue-root -->
 </template>
 
 <script>
@@ -36,6 +40,8 @@ export default {
   data () {
     return {
       rob: null,
+      geom: null,
+      map_feature_group: new L.featureGroup().addTo(map),
       filterz: {
         time: {
           beginz: process.env.FILTER_TIME_BEGIN,
@@ -126,9 +132,14 @@ this.page.title = (this.filterz.time.beginz && this.filterz.time.endz)?"Dalyvers
     // set the active *item* based on the active key/trigger
     this.active.item=(this.active.key !== null)?this.$_.findWhere(this.timelinetimes, {id:this.active.key}):{id:null, article:null, start:null};
     // also throw that to timeline (if it's null nothing will be selected or selected will deselect)
-    this.timeline.setSelection(this.active.key)
+    if(this.timeline){
+    this.timeline.setSelection(this.active.key);
     // also set (or clear) any associated graphs
     this.setActiveGraph()
+  }
+    
+    // also revisit map and update feature styling/state
+    // this.setActiveMapFeature()
 
   },
   getNullItem: function(){
@@ -180,41 +191,217 @@ this.slider.on('change', function(values,handle){
   that.setTimes()
 });
 
-// this.slider.on('change', function(values,handle){
-  // that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
-  // that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
-//   that.setTimes()
-//   that.setTimeline();
-//            that.setSlider();
-// });
-
 }//slider no exist
 
   },
-  getGeoms: function () {
+  setActiveMapFeature(){
 
-// http://milleria.org:3030/geoms/cbb?q=poly:563,poly:563,poly:526,poly:564&callback=cwmccallback&_=1549133727972
-// _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
-// let geoms = this.$_.reject(this.$_.map(this.timelinetimes,(t)=>{
-//   return t.geo.length>0?t.geo:null;
-// }),(g)=>{
-//   return g==null;
-// })
+// get the keys for the active item
+let target_event_geo_key = (this.active.item)?this.active.item.geo[0].geo_key:null;
+console.log("in sAMF, target_event_geo_key",target_event_geo_key);
+
+if(target_event_geo_key){
+// shop it to the map layers - you want to find the feature that matches both the id and type
+// first some that/this tomfoolery
+var that = this;
+
+if(that.map_feature_group.getLayers().length>0){
+// get the layers of our map_feature_group
+let layers = that.map_feature_group.getLayers()[0]._layers;
+
+// now check which one matches the geokey of our activeitem
+var mfg_layer_active = that.$_.find(layers,(l)=>{
+
+if(that.geoTypeLaunder(l.feature.geometry.type)==that.geoTypeLaunder(target_event_geo_key.type) && l.feature.properties.cartodb_id==target_event_geo_key.id)
+{
+ console.log('l.feature.geometry.type:',that.geoTypeLaunder(l.feature.geometry.type))
+ console.log('target_event_geo_key.type:',that.geoTypeLaunder(target_event_geo_key.type))
+
+ console.log('l.feature.properties.cartodb_id:',l.feature.properties.cartodb_id);
+ console.log('target_event_geo_key.id:',target_event_geo_key.id);
+}
+
+  let mfgf = (that.geoTypeLaunder(l.feature.geometry.type)==that.geoTypeLaunder(target_event_geo_key.type) && l.feature.properties.cartodb_id==target_event_geo_key.id)?l:null;
+  console.log('mfgf:',mfgf)
+  return mfgf;
+
+});
+
+// if we found it, set the style
+if(mfg_layer_active){
+  mfg_layer_active.setStyle(that.getGeoStyle('active'))
+  .openPopup()
+} else {
+  that.console.msg='mfg_layer_active not found'
+}
+}
+else {this.console.msg='no map layers found to traverse'}
+}
+else {this.console.msg='no target_event_geo_key found'}
+
+
+  },
+  geoTypeLaunder(type){
+
+let t = null;
+switch(type.toLowerCase()) {
+  case 'multipolygon':
+    t='poly'
+    break;
+  case 'polygon':
+    t='poly'
+    break;
+  case 'multilinestring':
+    t='line'
+    break;
+  case 'linestring':
+    t='line'
+    break;
+  case 'point':
+    t='point'
+    break;
+  default:
+    // code block
+}
+return t
+  },
+  geoKeyGen(type,id){
+
+let t = this.geoTypeLaunder(type);
+
+// return (t+':'+id).toLowerCase()
+let key = {id:id,type:t}
+
+let trigger_event = this.$_.find(this.timelinetimes,(ev)=>{
+  return (ev.geo[0].geo_key.id==id && ev.geo[0].geo_key.type==t)
+})
+
+return (trigger_event)?trigger_event:null;
+
+  },
+  getGeoStyle: function(s){
+
+  switch (s) {
+    case 'active':
+    return {
+      radius: 18,
+      fillColor: "#fecd0b",
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 1,
+    };
+    break;
+    case 'seen':
+    return {
+      radius: 6,
+      fillColor: "#ffffff",
+      color: "#1288b9",
+      weight: 1,
+      opacity: .6,
+      fillOpacity: 1,
+    };
+    break;
+    case 'linenew':
+    return {
+      fillColor: "rgba(126, 223, 216, 100)",
+      color: "rgba(126, 223, 216, 100)",
+      weight: 6,
+      opacity: 1,
+    };
+    break;
+    case 'lineactive':
+    return {
+      fillColor: "#fecd0b",
+      color: "#fecd0b",
+      weight: 8,
+      opacity: 1,
+    };
+    break;
+    case 'lineseen':
+    return {
+      fillColor: "#ffffff",
+      color: "#ffffff",
+      weight: 6,
+      opacity: 1,
+    };
+    default:
+    return {
+      radius: 6,
+      // fillColor: "rgba(6, 6, 6, 50)",
+      fillColor: "rgb(255, 128, 0)",
+      fillOpacity: .8,
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+    };
+    break;
+}//switch
+
+},
+  map: function () {
+
+if(typeof this.map_feature_group !== 'undefined')
+    {
+      var that = this;
+      var stile = this.getGeoStyle();
+  this.map_feature_group.clearLayers()
+L.geoJSON(this.geom, {
+    style: stile,
+    pointToLayer: function(feature, latlng) {
+              return L.circleMarker(latlng, stile);
+            }
+}).bindPopup(function(layer){
+
+    return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5><div class="has-text-muted">'+ev_key.article+'['+ev_key.id+'])</div></div>'
+
+}).on('popupopen',function(feature){
+    // get eventkey (e.g. '_:lronhubbardsspectaclesarefound', set Vue.active.key)
+    let ev_key = that.geoKeyGen(layer.feature.geometry.type,layer.feature.properties.cartodb_id)
+  that.active.key=ev_key.id
+})
+.on("popupclose", function(p) {
+
+                    p.target.setStyle()
+                }) //.on
+.addTo(this.map_feature_group);
+map.fitBounds(this.map_feature_group.getBounds())
+  // var style = this.STYLE();
+
+    this.console.msg=this.geom.length+" items mapped"
+  }
+},
+  getGeo: function () {
+
 let geoms = this.$_.map(
   this.$_.reject(this.timelinetimes,(t)=>{return t.geo.length<1})
   ,(g)=>{
-    console.log("g",g);
     return {
       eid:g.id,
-      geokey:g.geo[0].geo_id.type+":"+g.geo[0].geo_id.id,
+      geokey:g.geo[0].geo_key.type+":"+g.geo[0].geo_key.id,
       geoname:g.geo[0].name,
       geoarticle:g.geo[0].article
     }
   })
-return geoms
+
+var u = "http://milleria.org:3030/geoms/cbb?q="+this.$_.pluck(geoms,'geokey').join(',')
+this.console.msg="fetching and mapping associated geometries...";
+
+  axios.get(u)
+    .then(response => {
+        this.geom = response.data
+
+        // we watch activeitem to do this normally but that's when we have map data onsite already
+        this.$nextTick(() => this.setActiveMapFeature());
+      // JSON response.datas are automatically parsed.
+    })//axios.then
+    .catch(e => {
+      console.error(e)
+    })//axios.catch
+
+
   }
   ,setTimeline:function(){
-console.log('running setTimeline...')
 
       // old magic
       var that = this;
@@ -260,8 +447,6 @@ console.log('running setTimes...')
   // let q = "for e in edges filter e.type==\"hasParticipant\" for ev in events filter e._from==ev._id LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend}"
   let q = "for e in edges filter e.type==\"hasParticipant\" OR e.type==\"occurredAt\" for ev in events filter e._from==ev._id AND e.type==\"hasParticipant\" LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null LET geo=( for g in edges filter g._from==ev._id AND g.type==\"occurredAt\" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}"
 
-  this.console.msg="setTimes query "+q;
-
   axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
     query:q
   })
@@ -282,13 +467,19 @@ console.log('running setTimes...')
           this.routize()
           this.setActiveItem()
         },
+    'active.item': function () {
+          this.setActiveMapFeature()
+        },
     timelinetimes: function() {
           this.setTimeline();
            this.setSlider();
-           this.getGeoms();
+           this.getGeo();
         },
     filterz: function() {
           this.routize()
+        },
+    geom: function() {
+          this.map()
         }
   } //watch
 } //export.timeline
@@ -297,7 +488,7 @@ console.log('running setTimes...')
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 body{
-  background-color:rgba(0,0,0,1);
+  /*background-color:rgba(0,0,0,1);*/
 }
 #vue-root{margin:0 1%;background-color:white;}
 .vis-panel{
