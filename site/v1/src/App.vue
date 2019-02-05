@@ -16,7 +16,8 @@
 });
 
 
-var baseLayer = new L.TileLayer("https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png")
+let blu = (process.env.MODE=='T')?"http://localhost:8000/2x.png":"https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png";
+var baseLayer = new L.TileLayer(blu)
 
 map.addLayer(baseLayer);
 

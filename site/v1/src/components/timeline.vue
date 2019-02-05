@@ -63,21 +63,22 @@ export default {
   beforeCreate () {
 
 
+
   },//beforeCreate
   created () {
+
 this.console={msg:"loading...",throb:true,clazz:"mdi-clock"}
 this.filterz.time.beginz=(this.$route.params.tstart)?this.$route.params.tstart:this.filterz.time.beginz;
 this.filterz.time.endz=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
 this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
 
-
+this.initData();
 
   },//created
   mounted: function () {
 this.console={msg:"mounted",throb:false,clazz:""}
 // this.setPageTitle();
 // this.setTimes()
-this.initData();
 
   }, //mounted
   methods: {
@@ -127,7 +128,7 @@ console.info('this.slidertime.max:',this.slidertime.max)
     }, //initslider
     fetchTimeMinMax: function () {
 
-    let q = "for ev in events filter ev.timestamp.start != null COLLECT AGGREGATE mintime = MIN(ev.timestamp.start),maxtime = MAX(ev.timestamp) return { minstart:mintime,maxstart:maxtime }"
+    let q = "for ev in events filter ev.timestamp.start != null COLLECT AGGREGATE mintime = MIN(ev.timestamp.start),maxtime = MAX(ev.timestamp.start) return { minstart:mintime,maxstart:maxtime }"
     console.info(q);
 
       axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
@@ -135,7 +136,7 @@ console.info('this.slidertime.max:',this.slidertime.max)
       })
         .then(response => {
           console.log("SETTING SLIDERTIMES!")
-          this.slidertime={min:'2018-01-01T00:00:01Z',max:response.data.result[0].maxstart.start}
+          this.slidertime={min:response.data.result[0].minstart.start,max:response.data.result[0].maxstart.start}
           // JSON response.datas are automatically parsed.
         })//axios.then
         .catch(e => {
