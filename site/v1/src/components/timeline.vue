@@ -106,6 +106,8 @@ this.console={msg:"mounted",throb:false,clazz:""}
     initSlider: function () {
       var slider = document.getElementById('slider');
 
+      var effer = (v)=>{return this.$MOMENT(v).format('YYYY.MMM.DD');}
+
       this.slider = this.$NOUISLIDER.create(slider, {
         start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
         connect: true,
@@ -113,7 +115,7 @@ this.console={msg:"mounted",throb:false,clazz:""}
             mode: 'range',
             density: 3
         },
-        tooltips: [({decimals: 1}), ({decimals: 1})],
+        tooltips: [{to: effer, from:Number}, {to: effer, from:Number}],
         range: {
             'min': this.$MOMENT(this.slidertime.min).subtract(2,'years').valueOf(),
             'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
@@ -204,9 +206,21 @@ this.slider.on('change', (values,handle)=>{
     setTimeline: function () {
 
       this.timeline.setItems(this.timelinetimes);
-      this.timeline.fit({ duration: 200, easingFunction: 'linear'});
+      this.timeline.fit({ duration: 400, easingFunction: 'linear'});
 
     }, //settimeline
+    brokerMap: function () {
+        console.log("brokering map...")
+      if(!window.map){
+        this.console.msg="Map init failed - please refresh the page"
+// this.initMap();
+      } //if.this.timeline
+      else {
+        console.log("fetchGeom...(then update map w/ em, then as with everything else check if active.key needs to filter though all the gills")
+        // this.fetchGeom();
+      }
+
+    }, //brokerTimeline
     brokerTimeline: function () {
 console.log("brokering timeline...")
       if(!this.timeline){
@@ -218,7 +232,7 @@ console.log("setTimeline...")
         this.setTimeline();
       }
 
-    }, //updatetimeline
+    }, //brokerTimeline
     routize: function(){
 
     this.$router.push({ params:{
@@ -237,6 +251,7 @@ console.log("setTimeline...")
         }, //watch.slidertime
     timelinetimes: function() {
           this.brokerTimeline();
+          this.brokerMap();
         } //watch.timelinetimes
   } //watch
 } //export.timeline
