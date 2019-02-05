@@ -3,7 +3,7 @@
     "_key": "_:cactustonyscoloradoarson",
     "name": "Cactus Tony Sets a Devastating Colorado Forest Fire",
     "article": "In a romantic gesture meant to portray his lover as a hero, Cactus Tony sets what would become one of the worst fires in the history of Colorado.",
-    "timestamp": "2002-06-20T12:00:00Z",
+    "timestamp": {"start":"2002-06-20T12:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is 'summer of 2002' acc. to ADPPP#S2.7"
@@ -13,7 +13,7 @@
     "_key": "_:thecactusesmeetcute",
     "name": "Cactus Tony and Cactus Irene Meet",
     "article": "In a club where men were dressing like ladies, Cactus Tony meets Cactus Irene. A 'beautiful romance' ensues.",
-    "timestamp": "1982-09-09T22:00:00Z",
+    "timestamp": {"start":"1982-09-09T22:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is '1982' acc. to ADPPP#S2.7"
@@ -23,7 +23,7 @@
     "_key": "_:cactustonyisarrested",
     "name": "Cactus Tony is Arrested",
     "article": "On suspicion of burying people alive and attempted burying of people alive (and due to a known history of doing same), Cactus Tony is arrested at the Hollywood ArcLight.",
-    "timestamp": "2017-12-08T22:00:00Z",
+    "timestamp": {"start":"2017-12-08T22:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "estimate is some time prior to ADPPP#S2.7"
@@ -33,7 +33,7 @@
     "_key": "_:cactustonyburieshendrixmurphy",
     "name": "Cactus Tony Buries Hendrix Murphy",
     "article": "Outside of a bait and tackle in Pasadena, a man presumed to be Cactus Tony tricked Hendrix Murphy into a hole in the ground. According to Mr. Murphy, Tony then tried to cover him over with dirt but did not fully do so, allowing his escape.",
-    "timestamp": "2016-08-28T16:00:00Z",
+    "timestamp": {"start":"2016-08-28T16:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "estimate is some time prior to an interview aired on ADPPP#S2.7"
@@ -43,7 +43,7 @@
     "_key": "_:hendrixmurphyisborn",
     "name": "Hendrix Murphy is Born",
     "article": "In approximately 1961, Hendrix Murphy - a future potential victim of Cactus Tony - is born in 'Lake Pontchartrain' (New Orleans), Louisiana.",
-    "timestamp": "1961-10-18T19:00:00Z",
+    "timestamp": {"start":"1961-10-18T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is 57 years prior to an interview aired on ADPPP#S2.7"
@@ -53,7 +53,7 @@
     "_key": "_:cactustonyisconvictedofliveburial",
     "name": "Cactus Tony is Convicted of Live Burial",
     "article": "Despite only having photographs and witness testimony, Cactus Tony is convicted of \"ending somebody's life by way of putting them in a hole and covering them over with dirt.\" Don DiMello, having attended a portion of the trial, was unconvinced of Tony's guilt, convinced instead of an elaborate and complicated conspiracy by a Freemason's cabal, and pledged to free him.",
-    "timestamp": "2017-10-18T19:00:00Z",
+    "timestamp": {"start":"2017-10-18T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "estimate is prior to ADPPP#S2.7"
@@ -63,7 +63,7 @@
     "_key": "_:pnptgreviewsadondimelloshow",
     "name": "Pasadena News Press Times-Gazette Reviews a Don DiMello Show",
     "article": "For the first and last time, the PNPTG reviews a Don DiMello production. The reviewer never published the piece, however, and disappeared immediately into a convent.",
-    "timestamp": "1997-08-18T19:00:00Z",
+    "timestamp": {"start":"1997-08-18T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "estimate is 'about twenty years ago' rel. to ADPPP#S2.7"
@@ -73,7 +73,7 @@
     "_key": "_:ahppublishesaparkingticketstory",
     "name": "Alexandra Higgs Portman Publishes an Article in the PNPTG",
     "article": "Alexandra Higgs Portman publishes a piece in the PNPTG about contesting parking tickets. Amongst the feedback from the piece was a hand-written letter postmarked to the Pasadena Fairytale Theatre, written by a theatrical director on behalf of a friend who, the author felt, had been accused of a minor crime he did not commit.",
-    "timestamp": "2017-06-30T19:00:00Z",
+    "timestamp": {"start":"2017-06-30T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-quarter",
       "nb": "estimate is 'last summer' acc. to ADPPP#S2.7"
@@ -83,7 +83,7 @@
     "_key": "_:lronhubbardplaysstumptheclear1",
     "name": "L. Ron Hubbard Plays Stump the Clear",
     "article": "L. Ron Hubbard, in an effort to demonstrate the extraordinary virtues of becoming a clear under the auspices of Scientology, plays 'Stump the Clear.' It does not go well.",
-    "timestamp": "1950-04-21T19:00:00Z",
+    "timestamp": {"start":"1950-04-21T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is '1950' acc. to ADPPP#S2.6"
@@ -93,7 +93,7 @@
     "_key": "_:lronhubbardsunderpantsarefound",
     "name": "L. Ron Hubbard's Hospital-Grade Underpants are Recovered",
     "article": "Hidden in the 17th century by a former life of L. Ron Hubbard's, the 5th Hunchback of Notre Dame, a pair of hospital-grade underpants is recovered amongst a pile of medical waste in Paris by Marion Grapes.",
-    "timestamp": "1970-02-01T19:00:00Z",
+    "timestamp": {"start":"1970-02-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is some time before and nearish to the setting of ADPPP#S2.6"
@@ -103,7 +103,7 @@
     "_key": "_:lronhubbardsmarkersarefound",
     "name": "L. Ron Hubbard's Magic Markers are Recovered",
     "article": "Buried long before by inventor Neill Sharpie, a former life of L. Ron Hubbard, a set of Magic Markers is recovered from a lawn in Madison, WI by Marion Grapes.",
-    "timestamp": "1970-02-23T19:00:00Z",
+    "timestamp": {"start":"1970-02-23T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is some time before and nearish to the setting of ADPPP#S2.6"
@@ -113,7 +113,7 @@
     "_key": "_:lronhubbardsspectaclesarefound",
     "name": "L. Ron Hubbard's Spectacles are Recovered",
     "article": "Buried centuries prior by a former life of L. Ron Hubbard, a pair of glasses is recovered from under an 19th-century beach towel on a beach in 20th-century Miami by Marion Grapes.",
-    "timestamp": "1970-02-22T19:00:00Z",
+    "timestamp": {"start":"1970-02-22T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is some time before and nearish to the setting of ADPPP#S2.6"
@@ -123,7 +123,7 @@
     "_key": "_:lronhubbardburiesspectacles",
     "name": "L. Ron Hubbard Buries Spectacles Under a Beach Towel in Miami",
     "article": "Meant for discovery by future selves, Mr. Hubbard, a disgraced priest at the time, hides a pair of glasses under a beach towel. The treasure persisted into the late quarter of the 20th century.",
-    "timestamp": "1870-04-24T19:00:00Z",
+    "timestamp": {"start":"1870-04-24T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-century",
       "nb": "estimate is 'the 1800s' acc. to ADPPP#S2.6"
@@ -133,7 +133,7 @@
     "_key": "_:lronhubbardhidesunderpants",
     "name": "L. Ron Hubbard Hides Underpants in Paris",
     "article": "Meant for discovery by future selves, Mr. Hubbard, the 5th Hunchback of Notre Dame at the time, plants a pair of underpants outside of a hospital in Paris. The treasure persisted into the late 20th century.",
-    "timestamp": "1670-04-24T19:00:00Z",
+    "timestamp": {"start":"1670-04-24T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-century",
       "nb": "estimate is 'the 1600s' acc. to ADPPP#S2.6"
@@ -143,7 +143,7 @@
     "_key": "_:gollymurdersafamilyonmaricopastreet",
     "name": "Gil Murders a Phoenix Family",
     "article": "In a song on ADPPP#S2.5, Golly the dummy admits that he 'murdered that family on Maricopa Street in Phoenix in 1987.' He is quickly hushed by his operator, Gil, but listeners are led to trust the veracity of the doll's claim.",
-    "timestamp": "1987-04-04T19:00:00Z",
+    "timestamp": {"start":"1987-04-04T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is '1987' acc. to ADPPP#S2.5"
@@ -153,7 +153,7 @@
     "_key": "_:weebrucediesatedinburghcastle",
     "name": "Wee Bruce Falls to His Death",
     "article": "Wee Bruce, guarding the Edinburgh Castle ramparts but fearing the rising lava below, leaps from the castle walls, is struck by lightning, and died of a broken heart before he hits the ground.",
-    "timestamp": "1392-09-01T19:00:00Z",
+    "timestamp": {"start":"1392-09-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is '1392' acc. to ADPPP#S2.4"
@@ -163,7 +163,7 @@
     "_key": "_:stuartcambridgegoesmissing",
     "name": "Stuart Cambridge Goes Missing",
     "article": "Much-beloved bagpiper Stuart Cambridge goes missing in Edinburgh, Scotland.",
-    "timestamp": "1853-05-15T19:00:00Z",
+    "timestamp": {"start":"1853-05-15T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is 'one night in 1853' acc. to ADPPP#S2.4"
@@ -173,7 +173,7 @@
     "_key": "_:amandadies",
     "name": "Amanda Dies",
     "article": "Amanda dies from a fall in a coffee shop in Edinburgh, becoming a ghost.",
-    "timestamp": "2018-03-24T09:00:00Z",
+    "timestamp": {"start":"2018-03-24T09:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-week",
       "nb": "estimate is 'the other day' rel. to ADPPP#S2.4"
@@ -183,7 +183,7 @@
     "_key": "_:thirstiestghosteverisborn",
     "name": "The Thirstiest Ghost Ever is Born",
     "article": "Thirsty from her work cleaning boots and chimneys, an unnamed Edinburgh woman was bludgeoned to death with a coach iron and became The Thirstiest Ghost Ever.",
-    "timestamp": "1837-06-06T00:00:00Z",
+    "timestamp": {"start":"1837-06-06T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "estimate is to the year - some time in 1837 acc to ADPPP#S2.4"
@@ -193,7 +193,7 @@
     "_key": "_:trumpcommissionstherockettes",
     "name": "Donald Trump Commissions The Rockettes",
     "article": "Booking a lineup for his 2017 Presidential Inauguration, Mr. Trump contacts Don DiMello and offers a spot for The Rockettes.",
-    "timestamp": "2016-12-19T00:00:00Z",
+    "timestamp": {"start":"2016-12-19T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-quarter",
       "nb": "estimate is fairly tight - post-election and pre-inauguration 2016-2017"
@@ -203,7 +203,7 @@
     "_key": "_:margotchunkloseshervirginity",
     "name": "Margot Chunk Loses Her Virginity",
     "article": "Coincidental to the Bombing of Hiroshima that effectively ended World War II, Margot Chunk lost her virginity.",
-    "timestamp": "1945-08-06T00:00:00Z",
+    "timestamp": {"start":"1945-08-06T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "event coincides with the detonation of an atomic bomb over Hiroshima by U.S. armed forces"
@@ -213,7 +213,7 @@
     "_key": "_:margotchunkisborn",
     "name": "Margot Chunk is Born",
     "article": "Margot Chunk was born long enough before 1912 that she remembers news coverage of the sinking of RMS Titanic.",
-    "timestamp": "1910-06-06T00:00:00Z",
+    "timestamp": {"start":"1910-06-06T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "event is a loose estimate - some time prior to 1912.Apr.15"
@@ -223,7 +223,7 @@
     "_key": "_:patrickmcmahoncrashesaparty1",
     "name": "Johnny McGory (Patrick McMahon) Crashes a Party and Steals $33",
     "article": "Encountering a party to which he was not invited, Mr. McGory faked a mutual friend named 'Jackie' and stole $33 from the upstairs coatroom. He then got drunk waiting for a bus to the Morongo casinos and snorted an unknown white substance in the station bathroom. Then 'one thing led to another' and McGory ended up hijacking a bus and driving it into a ditch 'on purpose because of the fear'",
-    "timestamp": "2002-11-01T00:00:00Z",
+    "timestamp": {"start":"2002-11-01T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "event is a loose estimate - some time prior to ADPPP#S1.8"
@@ -233,7 +233,7 @@
     "_key": "_:johnnymcgorrybreaksandenters",
     "name": "Johnny McGory (Patrick McMahon) Does a B&E",
     "article": "Booked on a doomed world tour by a booking agent that is, in reality, just 'a schizophrenic with a briefcase full of knives,' McGory developed a habit of breaking into presumed-empty homes for food and shelter. One morning he woke in the home of a bed-ridden elderly woman who was expecting her caretaker, Greta. McGory temporarily assumed the identity of Greta, fed her, then sat down to watch cartoons in his underwear. Greta then returned to the house and 'immediately gets violent.' A scuffle ensued in which Mr. McGory was pepper-sprayed. McGory then stumbled out to splash water on his face from a litter-strewn brook, where he stayed and 'cried and cried and cried.'",
-    "timestamp": "2000-09-28T07:00:00Z",
+    "timestamp": {"start":"2000-09-28T07:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "event is loose approximation - any time prior to ADPPP#S1.8"
@@ -256,7 +256,7 @@
     "_key": "_:dannymahoneymeetsjimmyblades",
     "name": "Danny Mahoney Meets Jimmy Blades",
     "article": "Danny Mahoney meets Jimmy Blades at a gay wedding to which he (Mahoney) was not invited. Overwhelmed by carrying around and replacing and maintaining 8 D batteries, Mahoney hired Blades to play music live at LOTPC parties.",
-    "timestamp": "2013-12-12T16:10:00Z",
+    "timestamp": {"start":"2013-12-12T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "event is some time prior to ADPPP#S1.6"
@@ -266,7 +266,7 @@
     "_key": "_:dondimelloscoresexcesssandwiches",
     "name": "Don DiMello Scores Excess Sandwiches",
     "article": "Don DiMello encounters a woman discarding sandwiches after a party, caters a podcast pilot with same.",
-    "timestamp": "2014-03-04T16:10:00Z",
+    "timestamp": {"start":"2014-03-04T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "event is 1.5 days prior to ADPPP#S1.5"
@@ -276,7 +276,7 @@
     "_key": "_:bachmananddimellospendtheweekendincorona",
     "name": "Mal Bachman and Don DiMello Spend a Weekend in Corona",
     "article": "Following a raid on Lilly Hellman's play Children's Hour, Mal Bachman and Don DiMello hopped a train that left them in Corona, CA.",
-    "timestamp": "2014-03-03T16:10:00Z",
+    "timestamp": {"start":"2014-03-03T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-week",
       "nb": "event is the week prior to ADPPP#S1.5 (but after Glengarry and after Children's Hour)"
@@ -286,7 +286,7 @@
     "_key": "_:bachmananddimelloseeequus",
     "name": "Mal Bachman and Don DiMello Take in Equus",
     "article": "Excited by the premise, Bachman and DiMello return from Corona, CA to see 'Equus.'",
-    "timestamp": "2014-03-04T16:10:00Z",
+    "timestamp": {"start":"2014-03-04T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-week",
       "nb": "event is the week prior to ADPPP#S1.5 (but after Glengarry and after ChildrensHour)"
@@ -296,7 +296,7 @@
     "_key": "_:bachmananddimelloseethechildrenshour",
     "name": "Mal Bachman and Don DiMello Take in Lillian Hellman's The Children's Hour",
     "article": "Disappointed with the dearth of sexual provocation in Glengarry Glen Ross, Bachman and DiMello see another show in the same week. They eventually storm the stage with a broken bottle and a sharpened broom handle when it's revealed there is no hot lesbian action in the show.",
-    "timestamp": "2014-03-01T16:10:00Z",
+    "timestamp": {"start":"2014-03-01T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-week",
       "nb": "event is the week prior to ADPPP#S1.5 (but after Glengarry)"
@@ -306,7 +306,7 @@
     "_key": "_:uclatheatrepresentsglengarryglenross",
     "name": "Mal Bachman and Don DiMello Take in UCLA's Glengarry Glen Ross",
     "article": "Bachman and DiMello are both unimpressed at how much of a sausage party the show is.",
-    "timestamp": "2014-02-28T16:10:00Z",
+    "timestamp": {"start":"2014-02-28T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-week",
       "nb": "event is the week prior to ADPPP#S1.5"
@@ -316,7 +316,7 @@
     "_key": "_:malbachmanmovestoaltadena",
     "name": "Mal Bachman Moves to Altadena",
     "article": "Interested in reviewing somebody with a more 'incendiary' vision of theatre, Mal Bachman moves to California.",
-    "timestamp": "2012-04-04T16:10:00Z",
+    "timestamp": {"start":"2012-04-04T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "prior to some of DiMello's more colorful productions but after at least a few"
@@ -326,7 +326,7 @@
     "_key": "_:dondimelloseeshomealonelines",
     "name": "Don DiMello Witnesses the Lines for 'Home Alone'",
     "article": "Don DiMello witnessed the lines around the block for Home Alone and decided about childrens programming, \"kids' stuff is where it's at.\"",
-    "timestamp": "1990-11-16T16:10:00Z",
+    "timestamp": {"start":"1990-11-16T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "Home Alone release"
@@ -336,7 +336,7 @@
     "_key": "_:kevinlindtsfirstwords",
     "name": "Kevin Lindt's First Words",
     "article": "During a remote into ADPPP#S1.4, little Kevin spoke his first words: 'He has a penis you can see.'",
-    "timestamp": "2014-02-26T16:10:00Z",
+    "timestamp": {"start":"2014-02-26T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "ADPPP#S1.4"
@@ -346,7 +346,7 @@
     "_key": "_:kevinlindtsitsonacat2",
     "name": "Kevin Lindt Sits on Another Cat",
     "article": "On ADPPP#S1.4 it was revealed that August Lindt's son had sat on yet another cat, whose 'brains came out its ears.'",
-    "timestamp": "2014-02-16T16:10:00Z",
+    "timestamp": {"start":"2014-02-16T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "some time prior to (but likely near) ADPPP#S1.4"
@@ -356,7 +356,7 @@
     "_key": "_:augustlindtvisitsannefrankhuis",
     "name": "August Lindt Tours the Anne Frank House",
     "article": "August Lindt vacations in Amsterdam 'one of a hundred times.'",
-    "timestamp": "2000-04-01T16:10:00Z",
+    "timestamp": {"start":"2000-04-01T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "some time prior to ADPPP#S1.4"
@@ -366,7 +366,7 @@
     "_key": "_:augustlindttoursthecongo",
     "name": "August Lindt Vacations in The Congo",
     "article": "Challenged by his boss to visit the 'worst place he could think of,' Mr. Lindt traveled to the Emergency Room of the Jason Sendwe Hospital in Lubumbashi in the war-torn Katanga province of the Democratic Republic of Congo.",
-    "timestamp": "2013-12-01T16:10:00Z",
+    "timestamp": {"start":"2013-12-01T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "likely some time in the year prior to ADPPP#S1.4"
@@ -376,7 +376,7 @@
     "_key": "_:augustlindttoursskokieil",
     "name": "August Lindt travels to Skokie, Illinois",
     "article": "On ADPPP#S1.4, during a round of 'How Close Have We Been to Skokie,' Mr. Lindt reveals that has, in fact, been to Skokie.",
-    "timestamp": "2000-08-08T16:10:00Z",
+    "timestamp": {"start":"2000-08-08T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "prior to ADPPP#S1.4 is the only clue"
@@ -425,7 +425,7 @@
     "_key": "_:billcartervotesperot",
     "name": "Bill Carter Votes for Ross Perot",
     "article": "Bill Carter votes for Ross Perot in the 1992 U.S. General Election. In subsequent years, Carter writes in Perot's name.",
-    "timestamp": "1992-11-03T16:10:00Z",
+    "timestamp": {"start":"1992-11-03T16:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "92 general election"
@@ -435,7 +435,7 @@
     "_key": "_:prisonbargeriotof79",
     "name": "Prison Barge Riot of '79",
     "article": "Due to an electrical grid blackout, all of the doors of the Int'l Waters Prison Barge swung open, causing mass casualties and escapes.",
-    "timestamp": "1979-05-22T10:10:00Z",
+    "timestamp": {"start":"1979-05-22T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is acc. to ADPPP#S1.2"
@@ -445,7 +445,7 @@
     "_key": "_:chipgardnerdebatescarolchanning",
     "name": "Chip Gardner Debates Carol Channing During the Hollywood Honorary Mayoral Race",
     "article": "During the Hollywood Honorary Mayoral race in 2014, Mr. Gardner and Ms. Channing faced off on a number of issues presumably important to the citizens of Hollywood.",
-    "timestamp": "2014-02-12T11:30:00Z",
+    "timestamp": {"start":"2014-02-12T11:30:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp is firm - ADPPP#S1.2"
@@ -455,7 +455,7 @@
     "_key": "_:trynottogethitbythesehammers",
     "name": "'Try Not to Get Hit by These Hammers'",
     "article": "TNTGHBTH was a Chip Gardner production, staged live on ADPPP#S1.2 in February 2014. Multiple victims were unable to avoid being, indeed, hit by hammers.",
-    "timestamp": "2014-02-12T10:10:00Z",
+    "timestamp": {"start":"2014-02-12T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp is firm - ADPPP#S1.2"
@@ -465,7 +465,7 @@
     "_key": "_:areyousmarterthanaroomfulofpoisonoussnakes",
     "name": "'Are You Smarter than a Room Full of Poisonous Snakes?'",
     "article": "AYSTARFOPS was a Chip Gardner production, staged live on ADPPP#S1.2 in February 2014. Multiple victims were unable to answer a question about the office of Vice President.",
-    "timestamp": "2014-02-12T10:10:00Z",
+    "timestamp": {"start":"2014-02-12T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp is firm - ADPPP#S1.2"
@@ -475,7 +475,7 @@
     "_key": "_:chipgardnerswifepasses",
     "name": "Chip Gardner's Wife Loses a Game of Houdini",
     "article": "During a game of 'Houdini' played in their swimming pool, Chip Gardner's unnamed wife passes accidentally.",
-    "timestamp": "1991-09-19T10:10:00Z",
+    "timestamp": {"start":"1991-09-19T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.2 - after the jeep incident, long enough to have had at least a couple facial reconstructions"
@@ -485,7 +485,7 @@
     "_key": "_:chipgardnersstreetfightingyears",
     "name": "Chip Gardner Enters a Dark Period",
     "article": "Chip Gardner's Street Fighting Years began during the fallout from the cancellation of his show 'Just Stand Over There and Be Quiet.'",
-    "timestamp": "1984-07-17T10:10:00Z",
+    "timestamp": {"start":"1984-07-17T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.2 - prior to being run over by a jeep in 1986"
@@ -495,7 +495,7 @@
     "_key": "_:wherediputmyjacketsuicide",
     "name": "A Contestant on \"Where'd I Put My Jacket\" Commits Suicide in the Parking Lot",
     "article": "A contestant on the Chip Gardner game show, coming in destitute and really needing a hand, lost the virtually unwinnable competition by guessing 'New York' rather than 'a van circling the isle of Manhattan' and shortly thereafter committed suicide in the parking lot outside the studio.",
-    "timestamp": "1995-04-14T10:10:00Z",
+    "timestamp": {"start":"1995-04-14T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.2"
@@ -505,7 +505,7 @@
     "_key": "_:daltonwilcoxdisruptscellularservicenearearwolf",
     "name": "Dalton Wilcox Disrupts Cellular Service to Earwolf",
     "article": "In order to ensure nobody (Russel Shein) can easily escape the Earwolf studios, Mr. Wilcox strapped dynamite to a nearby cellular tower and detonated.",
-    "timestamp": "2018-01-16T10:10:00Z",
+    "timestamp": {"start":"2018-01-16T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a loose estimate acc. to ADPPP#S1.1"
@@ -515,7 +515,7 @@
     "_key": "_:daltonwilcoxvsaninvisibleman",
     "name": "Dalton Wilcox Slays an Invisible Man",
     "article": "Walking home from his local watering hole, Mr. Wilcox passed by a darkened alleyway. Hearing footsteps on the pavement, he was unable to see anybody. Knowing full well that it meant the steps belonged to 'a goddamned invisible man,' Wilcox pulled out his six-guns and shouted. As Wilcox approached, the invisible man put on a visible man disguise. Asked if he was an invisible man, the man 'basically confirmed it,' according to Wilcox who, on ADPPP#S1.1, notes that \"you won't *not* be seeing him anymore.\"",
-    "timestamp": "2018-03-06T10:10:00Z",
+    "timestamp": {"start":"2018-03-06T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp is firm acc. to ADPPP#S1.1"
@@ -525,7 +525,7 @@
     "_key": "_:mrswilcoxismurdered",
     "name": "Dalton Wilcox' Wife Passes",
     "article": "Having turned into a werewolf, Mrs. Wilcox was shot dead with a silver bullet by Dalton himself.",
-    "timestamp": "2010-06-01T10:10:00Z",
+    "timestamp": {"start":"2010-06-01T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose estimate, any time prior to ADPPP#S1.1"
@@ -535,7 +535,7 @@
     "_key": "_:ionetimekilledafrankenstein",
     "name": "[Dalton], One Time, Killed a Frankenstein",
     "article": "As detailed in his poem, 'I One Time Killed a Frankenstein,' Dalton Wilcox murdered a security guard who was attempting to stop him from shoplifting at a western supply store.",
-    "timestamp": "2013-01-01T10:10:00Z",
+    "timestamp": {"start":"2013-01-01T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose estimate, any time prior to ADPPP#S1.1"
@@ -545,7 +545,7 @@
     "_key": "_:russelsheinmarrieshiswife",
     "name": "Russel Shein Marries",
     "article": "Twenty-five years prior to his wife's disappearance, Russel and Mrs. Shein were married.",
-    "timestamp": "1975-07-30T10:10:00Z",
+    "timestamp": {"start":"1975-07-30T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is a loose estimate acc. to ADPPP#S1.1"
@@ -555,7 +555,7 @@
     "_key": "_:russelsheinswifedisappears",
     "name": "Russel Shein's Wife Disappears",
     "article": "Some time in the night 13 years before ADPPP#S1.1, Russel Shein's wife disappeared. Mr. Shein maintains she was abducted by skillful kidnappers who left behind almost no evidence (save her wedding ring on the bathroom sink).",
-    "timestamp": "2000-11-09T10:10:00Z",
+    "timestamp": {"start":"2000-11-09T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is a loose estimate acc. to ADPPP#S1.1"
@@ -565,7 +565,7 @@
     "_key": "_:becklandryburial",
     "name": "Beck Landry is Laid to Rest",
     "article": "Succumbing -- supposedly -- to injuries sustained by a railroad spike in a fistfight, Mr. Landry was buried in February 2014 without his own, dear cowboy hat.",
-    "timestamp": "2014-02-04T10:10:00Z",
+    "timestamp": {"start":"2014-02-04T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp firm acc. to ADPPP#S1.1"
@@ -575,7 +575,7 @@
     "_key": "_:sheinistrickedontotheadppp1",
     "name": "Russel Shein is Tricked onto ADPPP #1",
     "article": "In February 2014, Dalton Wilcox baited Russel Shein onto his podcast pilot by promising information about the disappearance of his wife some 13 years prior.",
-    "timestamp": "2014-02-05T10:10:00Z",
+    "timestamp": {"start":"2014-02-05T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp firm acc. to ADPPP#S1.1"
@@ -585,7 +585,7 @@
     "_key": "_:sheinistrickedontotheadppp2",
     "name": "Russel Shein is Tricked onto ADPPP #9",
     "article": "In March 2018, Dalton Wilcox baited Russel Shein onto his podcast pilot by pretending to be a county coroner with a corpse that needed identifying.",
-    "timestamp": "2018-03-07T10:10:00Z",
+    "timestamp": {"start":"2018-03-07T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp firm acc. to ADPPP#S1.S1.1"
@@ -595,7 +595,7 @@
     "_key": "_:joebongoauditionsforfriends",
     "name": "Joe Bongo Auditions for the Role of Chandler",
     "article": "In 1994, Joe Bongo auditioned for what would become NBC's 'Friends' by delivering a Polaroid of himself to the casting office.",
-    "timestamp": "1994-03-22T10:10:00Z",
+    "timestamp": {"start":"1994-03-22T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-quarter",
       "nb": "timestamp a rough guess acc. to CBB#576"
@@ -605,7 +605,7 @@
     "_key": "_:joebongoisinvolvedinacaraccident",
     "name": "Joe Bongo is Involved in a Car Accident",
     "article": "Joe Bongo is involved in the most expensive car accident in the history of Marina del Rey. Listed among the destroyed properties are the historic lighthouse (rendering the Marina particularly dangerous); the dog run at Burton Chace Park; Mr. Bongo's car; the dashcam therein; the Ritz-Carlton (Marina del Rey) Parking Ramp; Tony P's Dockside Grill; a Tiki Mermaid Charters Harbor Cruise Boat; and Mr. Bongo's thumb, which was sprained in the mélée. The incident cost him his position as Driver's Ed instructor at MDRHS.",
-    "timestamp": "2018-01-11T10:10:00Z",
+    "timestamp": {"start":"2018-01-11T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp has to be prior to (but near) CBB#576 and ADPPP#S2.2"
@@ -615,7 +615,7 @@
     "_key": "_:joebongrequestspreventativecasts",
     "name": "Joe Bongo Requests Preventative Casts",
     "article": "In order to protect against fans that grow angry when he appears without his trademark bongos, Mr. Bongo visited an unnamed emergency room and requested preventative thigh-high casts put on both legs.",
-    "timestamp": "2018-11-16T10:10:00Z",
+    "timestamp": {"start":"2018-11-16T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp a rough guess acc. to CBB#576"
@@ -625,7 +625,7 @@
     "_key": "_:byrondennistonisborn",
     "name": "Byron Denniston is Born",
     "article": "Approximately in 1943, Byron Denniston is born somewhere in the United Kingdom. Possibly.",
-    "timestamp": "1943-06-06T10:10:00Z",
+    "timestamp": {"start":"1943-06-06T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp a rough guess acc. to CBB#564"
@@ -648,7 +648,7 @@
     "_key": "_:bobbysteensmainventshitchinaride",
     "name": "Bobby Steensma Invents Hitchin a Ride",
     "article": "Bobby Steensma, a true legend of water skiing, invents the trick Hitchin' a Ride.",
-    "timestamp": "1978-06-11T13:10:00Z",
+    "timestamp": {"start":"1978-06-11T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is acc. to CBB#550"
@@ -684,7 +684,7 @@
     "_key": "_:hotdogmakesthehalloffame",
     "name": "Hot Dog is Inducted Into the Water Skiing Hall of Fame",
     "article": "After lobbying hard for years, Hot Dog is inducted into the Water Skiing Hall of Fame.",
-    "timestamp": "2018-04-01T13:10:00Z",
+    "timestamp": {"start":"2018-04-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is a blind guess relative to CBB#550"
@@ -694,7 +694,7 @@
     "_key": "_:hotdogemailsscreaminscott",
     "name": "Hot Dog Emails Screamin' Scott",
     "article": "Bolstered by his success getting the Water Skiing Hall of Fame to allow him to squat with a booth in their parking lot (and having accidentally worked a day at a Hertz counter where he came across Screamin' Scott Simon's email address), Hot Dog emails Mr. Simon with a proposal.",
-    "timestamp": "2017-01-01T13:10:00Z",
+    "timestamp": {"start":"2017-01-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-quarter",
       "nb": "timestamp is relative to '18 months' prior to CBB#550"
@@ -704,7 +704,7 @@
     "_key": "_:hotdogloseshisjacket",
     "name": "Hot Dog's Leather Jacket is Stolen Out of His Car",
     "article": "In approximately April 2018, while Hot Dog was in between houses and living out of his car, somebody stole his leather jacket and his can of hair grease.",
-    "timestamp": "2018-05-01T13:10:00Z",
+    "timestamp": {"start":"2018-05-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-quarter",
       "nb": "timestamp is approximate relative to CBB#550"
@@ -714,7 +714,7 @@
     "_key": "_:daltonwilcoxkillsthelochnessmonster",
     "name": "Dalton Wilcox Kills the Loch Ness Monster",
     "article": "Dalton Wilcox travels to Scotland and murders the shapeshifting Loch Ness Monster while in human form.",
-    "timestamp": "2017-08-01T13:10:00Z",
+    "timestamp": {"start":"2017-08-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is approximate relative to CBB#529"
@@ -724,7 +724,7 @@
     "_key": "_:cameronmcgonigleisborn",
     "name": "Cameron McGonigle is Born",
     "article": "Cameron McGonigle is born in Edinburgh, Scotland.",
-    "timestamp": "1979-06-01T13:10:00Z",
+    "timestamp": {"start":"1979-06-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is to the year acc. to CBB#518"
@@ -734,7 +734,7 @@
     "_key": "_:hotdoggetskickedoutofnashasha",
     "name": "Hot Dog is Kicked Out of Na Sha Sha",
     "article": "After another member wrote a song (called 'Heynong' something), the boys in Na Sha Sha got cocky and kicked Hot Dog out of the group. The group had, in fact, been holding secret rehearsals for some time and the true reason for Hot Dog's ouster was left somewhat mysterious.",
-    "timestamp": "2016-01-01T13:10:00Z",
+    "timestamp": {"start":"2016-01-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is very approximate acc. to CBB#400"
@@ -744,7 +744,7 @@
     "_key": "_:hotdogdecapitatesastranger",
     "name": "Hot Dog Decapitates an Unnamed Scottish Man",
     "article": "Inspired by a screening of the film 'Highlander' by Russel Mulcahy, Hot Dog decapitates an unnamed Scottish guy in order to derive their powers.",
-    "timestamp": "1986-03-07T22:00:00Z",
+    "timestamp": {"start":"1986-03-07T22:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-month",
       "nb": "timestamp is acc. to CBB#400 and the film's release date"
@@ -754,7 +754,7 @@
     "_key": "_:thegreatminingoflakesuperior",
     "name": "The Great Mining of Lake Superior",
     "article": "In an escalation of the feud between fresh- and salt-water skiiers, a coalition including Hot Dog and Ahi secured about a dozen heavy artillery water mines and placed them in Lake Superior in an effort to sabotage a freshwater skiing competition.",
-    "timestamp": "1973-08-19T00:00:00Z",
+    "timestamp": {"start":"1973-08-19T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose estimate acc. to ADPPP#S1.6 - some time certainly prior to the joint treaty of 1974 with the surfers and at a time when Lake Superior would have been amenable to skiing competitions"
@@ -764,7 +764,7 @@
     "_key": "_:thewaterskiingtreatyof74",
     "name": "The Water Skiing Treaty of '74",
     "article": "Inspired by the cease-fires and troop drawdowns in Vietnam, Salt- and Fresh-water Skiiers across the land met in summit with surfers and buried their long conflict with a oft-unrecognized but nonetheless signed treaty that, according to Hot Dog, 'firmly established the superiority of water skiing over surfing.'",
-    "timestamp": "1974-08-09T00:00:00Z",
+    "timestamp": {"start":"1974-08-09T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp is firm (nixon resignation) acc. to ADPPP#S1.6"
@@ -774,7 +774,7 @@
     "_key": "_:hotdogbooksshananafraudulently",
     "name": "Hot Dog Books Sha Na Na at the Hawaii Hilton",
     "article": "In order to secure a final audition for Sha Na Na, Hot Dog lures the group to Hawaii by pretending to be a native Hawaiian, that Israel Ka'ano'i Kamakawiwo'ole would open the show, and that Don Ho would close.",
-    "timestamp": "2015-10-20T13:10:00Z",
+    "timestamp": {"start":"2015-10-20T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is very approximate acc. to CBB#400"
@@ -784,7 +784,7 @@
     "_key": "_:surferssetworldrecord",
     "name": "Surfers Set World Record",
     "article": "66 surfers set a surprise Guiness Record for most people on a surfboard at one time, shocking the water skiing community.",
-    "timestamp": "2015-12-20T13:10:00Z",
+    "timestamp": {"start":"2015-12-20T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is very approximate acc. to CBB#400"
@@ -794,7 +794,7 @@
     "_key": "_:joebongofindsbongos",
     "name": "Joe Bongo Finds Bongos",
     "article": "Under the Santa Monica pier, with a 'guy sleeping next to them,' was a set of bongos that Joe Bongo stole.",
-    "timestamp": "1993-06-01T13:10:00Z",
+    "timestamp": {"start":"1993-06-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is very approximate acc. to CBB#365"
@@ -804,7 +804,7 @@
     "_key": "_:fatherofjoebongoisborn",
     "name": "Joe Bongo's Father is Born",
     "article": "Joe Bongo's father was born some time in 1929.",
-    "timestamp": "1929-06-01T13:10:00Z",
+    "timestamp": {"start":"1929-06-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is acc. to CBB#365"
@@ -814,7 +814,7 @@
     "_key": "_:joebongovotesforjohnbanderson",
     "name": "Joe Bongo Votes for John B. Anderson in the General Election",
     "article": "Joe Bongo Votes for John B. Anderson in the General Election.",
-    "timestamp": "1980-11-04T13:10:00Z",
+    "timestamp": {"start":"1980-11-04T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "firm",
       "nb": "timestamp is acc. to CBB#365 and the gen. election date"
@@ -824,7 +824,7 @@
     "_key": "_:multiplechildrenarerippedapartbyrottweilers",
     "name": "Multiple Children are Ripped Apart by Rottweilers",
     "article": "Under the care of Cactus Tony, several children fall prey to dogs at the Pasadena Fairy Tale Theatre day care facility.",
-    "timestamp": "2013-12-01T13:10:00Z",
+    "timestamp": {"start":"2013-12-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is prior to ADPPP#S1.5 and CBB#200"
@@ -834,7 +834,7 @@
     "_key": "_:dondimellostageshanselandgretel",
     "name": "Don DiMello Presents: Disney's Hansel and Gretel",
     "article": "Some time prior to Spring 2018, Don DiMello stages a production of the classic 'Hansel and Gretel' which results in, possibly among other legalities, a flurry of letters from a cast member named Alexandra, all of which were summarily ignored.",
-    "timestamp": "2017-10-18T13:10:00Z",
+    "timestamp": {"start":"2017-10-18T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is approximate - some time prior to ADPPP#S2.7"
@@ -844,7 +844,7 @@
     "_key": "_:dondimellostruewest",
     "name": "Don DiMello Presents: Disney's True West",
     "article": "Over the fall of 2011, Mr. DiMello teamed with actors John C. Reilly and Nick Nolte to launch a production of Sam Shepard's 'True West' to be staged in a VFW hall in Death Valley, California. The show evidently never made it due to the actors' objections to some of Mr. DiMello's tactics -- kidnapping and cuckolding -- as well as his insistence that beautiful women do a sexy dance in a tandem horse costume, followed by a simulated live birth, followed by foreplay.",
-    "timestamp": "2011-10-01T13:10:00Z",
+    "timestamp": {"start":"2011-10-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to release date of SuperEgo 3.8"
@@ -854,7 +854,7 @@
     "_key": "_:dondimellomeetsmarissawompler",
     "name": "Don DiMello Meets Marissa Wompler",
     "article": "In the women's bathroom at Marina del Rey High School (during a production of 'Grease'), Don DiMello eschewed the men's bathroom due to a funky smell and met Ms. Wompler in the ladies' room. Mr. DiMello slipped a note under the stall to the 16 year-old that read, 'Do you wanna have some fun?'",
-    "timestamp": "2012-06-01T13:10:00Z",
+    "timestamp": {"start":"2012-06-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-firm",
       "nb": "timestamp is acc. to ADPPP#S1.5, research shows a Grease event at Venice High (MDRHS) on June 1 2012 -- https://patch.com/california/venice/venice-high-school-aka-rydell-high-to-host-2nd-greasefd7aa4eef9"
@@ -864,7 +864,7 @@
     "_key": "_:dondimellossteelmagnolias",
     "name": "Don DiMello Presents: Disney's Steel Magnolias",
     "article": "In the winter of 2013, Don DiMello stages a production of Steel Magnolias that featured, mostly, topless women dancing around. He was subsequently sued.",
-    "timestamp": "2013-01-01T13:10:00Z",
+    "timestamp": {"start":"2013-01-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is acc. to ADPPP#S1.5"
@@ -874,7 +874,7 @@
     "_key": "_:dondimellosheyreallygiger",
     "name": "Don DiMello Presents: Hey, Really Giger!",
     "article": "Over the summer of 2011, Mr. DiMello teamed with H.R. Giger and Andrew Lloyd Webber to develop and produce a stage show, tentatively titled 'Hey, Really Giger!' about 'the eternal struggle between the darkness and the light.' The show was never produced due to disagreements over whether to feature premeditated murder of mouthy women during the show and whether to plagiarize an 'Annie Get Your Gun'/'Annie' mashup Giger himself had sketched.",
-    "timestamp": "2011-08-01T13:10:00Z",
+    "timestamp": {"start":"2011-08-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to release date of SuperEgo 3.7"
@@ -884,7 +884,7 @@
     "_key": "_:joebongoadvisesguttermanandbartiromo",
     "name": "Gutterballs and Danielle Bartiromo Suffer a Pregnancy Scare",
     "article": "Worried Danielle might be pregnant, Eric Gutterman and Ms. Bartiromo seek council from Joe Bongo, who gave them a sack of flour to treat as a newborn baby along with advice to not confuse the flour with another bag of flour meant to stand in for an intraveneous drug.",
-    "timestamp": "2014-12-12T10:10:00Z",
+    "timestamp": {"start":"2014-12-12T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - prior to WIU#0.8"
@@ -907,7 +907,7 @@
     "_key": "_:joebongostealsshoes",
     "name": "Joe Bongo Steals Jimmy Page's Shoes",
     "article": "Somewhere in the Southwestern USA, Joe Bongo stole Jimmy Page's shoes.",
-    "timestamp": "1975-12-12T10:10:00Z",
+    "timestamp": {"start":"1975-12-12T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - acc. to WIU from 2015.Jun.14"
@@ -917,7 +917,7 @@
     "_key": "_:joebongoisattackedbysnakes",
     "name": "Joe Bongo is Attacked by Snakes",
     "article": "Somewhere in a desert, Joe Bongo is attacked by a pack of snakes while hiding from people in the spiritual world.",
-    "timestamp": "1980-01-12T10:10:00Z",
+    "timestamp": {"start":"1980-01-12T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - acc. to WIU from 2015.Jun.14"
@@ -927,7 +927,7 @@
     "_key": "_:joebongoisfiredfromtheenglishdepartment",
     "name": "Joe Bongo is Fired from the MDHS English Dept",
     "article": "Joe Bongo is fired from the English Department at Marina del Rey High School for not reading any books. He cannot be let go entirely and therefore becomes the Health teacher.",
-    "timestamp": "2000-12-01T10:10:00Z",
+    "timestamp": {"start":"2000-12-01T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - WIU#2018.01.22"
@@ -937,7 +937,7 @@
     "_key": "_:joebongoteachessexunit",
     "name": "Joe Bongo Teaches a Sex Ed at MDRHS",
     "article": "Joe Bongo interactively taught alternate methods of sexual intercourse to Marissa Wompler and other students, including but not limited to: The Figure 4.",
-    "timestamp": "2014-09-01T10:10:00Z",
+    "timestamp": {"start":"2014-09-01T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - two semesters prior to WIU#0.8"
@@ -947,7 +947,7 @@
     "_key": "_:joebongossexunitlosesaprop",
     "name": "Joe Bongo's Health Class Misplaces a Ping Pong Ball",
     "article": "During a round of 'Find The Ping Pong Ball' in Joe Bongo's Health class sex unit at Marina del Rey High School, a ping pong ball was misplaced by Bonnie Ramirez upon the misguided advice from Mr. Bongo that her tampon would 'dissolve' on its own.",
-    "timestamp": "2014-09-01T10:10:00Z",
+    "timestamp": {"start":"2014-09-01T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is extremely approximate - two semesters prior to WIU#0.8, some time prior to ADPPP#S2.2; must be consistent with at least one of the bongo sex ed units"
@@ -957,7 +957,7 @@
     "_key": "_:joebongoteachesdrugunit",
     "name": "Joe Bongo Teaches a Drug Unit at MDRHS",
     "article": "In order to deter students from drug abuse, Joe Bongo demonstrated how to mix and cook a speedball in class using flour and sugar. Among the students who shot the substance was Marissa Wompler.",
-    "timestamp": "2015-02-02T10:10:00Z",
+    "timestamp": {"start":"2015-02-02T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - semester prior to WIU#0.8"
@@ -967,7 +967,7 @@
     "_key": "_:gilmeetsgolly",
     "name": "Gil & Golly's Meet Cute at a Murder Club in International Waters",
     "article": "In International Waters off the coast of San Diego, Gil had been roped into a Murder Club in his mid-20s by Golly and Chip Gardner. He was beckoned by a fish to safety who turned out later to be Golly, who then became his permanent ventriloquist's dummy. Mr. Gardner did not make it to shore, having been occupied forevermore by Satan himself.",
-    "timestamp": "1981-04-22T13:10:00Z",
+    "timestamp": {"start":"1981-04-22T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate acc. to contradictory details from CBB#274 and CBB#300"
@@ -977,7 +977,7 @@
     "_key": "_:dannymahoneybuysaboombox",
     "name": "Danny Mahoney Buys a Boombox that Serves Him Well into 2014",
     "article": "You can go from CD to cassette on this thing.",
-    "timestamp": "1986-08-08T13:10:00Z",
+    "timestamp": {"start":"1986-08-08T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate - relative to when cd players first appeared commercially in portable boxes acc. to wikipedia"
@@ -987,7 +987,7 @@
     "_key": "_:dondimellopresentsdisneysfrozen",
     "name": "Previews Begin for 'Don DiMellos Production of Disneys Frozen'",
     "article": "The show must go on. This production of Frozen features a topless princess who turns things to ice and a guy covered in whipped cream - a snowman - and Canadian reindeer.",
-    "timestamp": "2014-07-01T13:10:00Z",
+    "timestamp": {"start":"2014-07-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate - relative to CBB#300"
@@ -997,7 +997,7 @@
     "_key": "_:chipgardnertriestoexhumejimmorrison",
     "name": "Chip Gardner Attempts to Exhume Jim Morrison",
     "article": "For unknown reasons, Chip Gardner traveled to Paris and attempted to exhume Jim Morrison.",
-    "timestamp": "1998-08-08T13:10:00Z",
+    "timestamp": {"start":"1998-08-08T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate"
@@ -1007,7 +1007,7 @@
     "_key": "_:daltonwilcoxisborn",
     "name": "Dalton Wilcox is Born",
     "article": "Dalton Wilcox is born.",
-    "timestamp": "1956-03-03T13:10:00Z",
+    "timestamp": {"start":"1956-03-03T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is acc. to CBB#300 - some time before July 1956"
@@ -1017,7 +1017,7 @@
     "_key": "_:patrickmcmahonisnamedpersonoftheyear",
     "name": "Patrick McMahon is Named Irish Person of the Year",
     "article": "Patrick McMahon is named Irish person of the year by the Ancient Order of Hibernians.",
-    "timestamp": "2014-03-26T13:10:00Z",
+    "timestamp": {"start":"2014-03-26T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is ADPPP#S1.8"
@@ -1027,7 +1027,7 @@
     "_key": "_:billcarterisborn",
     "name": "Bill Carter is Born",
     "article": "Bill Carter is born.",
-    "timestamp": "1922-06-14T10:10:00Z",
+    "timestamp": {"start":"1922-06-14T10:10:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is middle of 1922"
@@ -1037,7 +1037,7 @@
     "_key": "_:gilgetsaspotoncbb",
     "name": "Gil & Golly Get a Spot on the Comedy Bang! Bang! Podcast",
     "article": "Presumably due to a guest dropout for Comedy Bang! Bang! episode 274 (but really in angry retaliation on Jason Mantzoukas), Scott Aukerman called a booking agent. The man who had stolen the booking agent's phone and was with Gil, scavenging for food behind a restaurant, notified Gil. Gil immediately found a ventriloquest dummy there (a cardboard box) and rushed to the studio.",
-    "timestamp": "2014-03-02T13:10:00Z",
+    "timestamp": {"start":"2014-03-02T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#274"
@@ -1047,7 +1047,7 @@
     "_key": "_:hotdogmoveson",
     "name": "Hot Dog Moves on from an Unhealthy Obsession with Sha Na Na",
     "article": "Thanks largely to his new life coach, in the middle of 2014 Hot Dog appeared on CBB#300 and announced he had moved on from his obsession with Sha Na Na and decided instead to start his own band called Na Sha Sha.",
-    "timestamp": "2014-05-05T13:10:00Z",
+    "timestamp": {"start":"2014-05-05T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approx acc. to CBB#300"
@@ -1057,7 +1057,7 @@
     "_key": "_:bookingagentismurdered",
     "name": "Unnamed Booking Agent is Murdered",
     "article": "In order for Gil (and Golly) to later appear on #CBB274, an unnamed booking agent had to be murdered by (or at the behest of) Cactus Tony.",
-    "timestamp": "2014-01-01T13:10:00Z",
+    "timestamp": {"start":"2014-01-01T13:10:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is very approximate -- some time priot to CBB#274"
@@ -1067,7 +1067,7 @@
     "_key": "_:hotdogswifepasses",
     "name": "Hot Dog's Wife Passes",
     "article": "Hot Dog's wife passes, possibly strangled by a pair of legs.",
-    "timestamp": "2013-01-01T19:00:00Z",
+    "timestamp": {"start":"2013-01-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is very loose acc. to CBB#232"
@@ -1077,7 +1077,7 @@
     "_key": "_:hotdogandahiverballychumbodey",
     "name": "Hot Dog and Ahi Indirectly Murder Bodey",
     "article": "During the Water Skiing Wars of the late 60s and early 70s, Hot Dog and Ahi verbally chum an adversary named Bodey.",
-    "timestamp": "1970-04-14T122:00:00Z",
+    "timestamp": {"start":"1970-04-14T122:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is very loose acc. to ADPPP#S1.6 but is meant to coincide with the period of the water skiing wars"
@@ -1087,7 +1087,7 @@
     "_key": "_:hotdogiscutfromhistowboat",
     "name": "Hot Dog is Cut from His Towboat",
     "article": "Possibly due to criminal mischief, Hot Dog is cut from his towboat and set adrift in the Pacific Ocean for five years.",
-    "timestamp": "1964-08-08T19:00:00Z",
+    "timestamp": {"start":"1964-08-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is very loose acc. to CBB#232 w/ corroboration in ADPPP#S1.6"
@@ -1097,7 +1097,7 @@
     "_key": "_:hotdogisrescuedbythelizard",
     "name": "Hot Dog is Rescued by The Lizard",
     "article": "Having been cut from his towboat five years prior (possibly due to interference from a man named Hamburger), having bobbed in the water for 5 years, Hot Dog is rescued by a man named 'The Lizard.'",
-    "timestamp": "1969-06-06T19:00:00Z",
+    "timestamp": {"start":"1969-06-06T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is very loose acc. to CBB#232"
@@ -1107,7 +1107,7 @@
     "_key": "_:hotdogsearchessanddiegoforshanana",
     "name": "Hot Dog Checks the San Diego House of Blues for Sha Na Na",
     "article": "Having failed to find Sha Na Na playing the San Diego Convention Center (Metallica was), Hot Dog checked the House of Blues and found only a Comedy Bang! Bang! taping.",
-    "timestamp": "2013-07-13T19:00:00Z",
+    "timestamp": {"start":"2013-07-13T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#232"
@@ -1117,7 +1117,7 @@
     "_key": "_:byrondennistonrevealstoomuch",
     "name": "Byron Denniston Reveals His Scheme",
     "article": "On a broadcast of Comedy Bang! Bang! on 2013.Jul.21, Denniston, lying low due to criminal heat in the UK, admitted a plan to kidnap the forthcoming royal child.",
-    "timestamp": "2013-07-14T19:00:00Z",
+    "timestamp": {"start":"2013-07-14T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate acc. to CBB#233 - prior to the epside and to the birth of the royal baby"
@@ -1127,7 +1127,7 @@
     "_key": "_:byrondennistongetsthescoop",
     "name": "Byron Denniston Gets the Scoop on Royal Baby Names",
     "article": "By virtue of his position perched outside of Kensington Palace, Byron Denniston reveals that the potential baby names for Kate Middleton's forthcoming child are Millicent, Victoria, Penelope, Laura, Marion (for girls); and Dilbert, Garfield, Beetle Bailey, Dagwood (for boys).",
-    "timestamp": "2013-07-14T19:00:00Z",
+    "timestamp": {"start":"2013-07-14T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate acc. to CBB#233 - prior to the epside and to the birth of the royal baby"
@@ -1137,7 +1137,7 @@
     "_key": "_:dondimmelopresentsdisneyshanselandgretel",
     "name": "Don DiMello Presents 'Disneys Hansel and Gretel'",
     "article": "The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and she doesn't really know what's happening. The show failed to reach denouement.",
-    "timestamp": "2013-02-11T19:00:00Z",
+    "timestamp": {"start":"2013-02-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is solid acc. to CBB#200 - upcoming plug"
@@ -1147,7 +1147,7 @@
     "_key": "_:dondimmelopresentsdisneyspuffthemagicdragon",
     "name": "Don DiMello Presents 'Disneys Puff the Magic Dragon'",
     "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
-    "timestamp": "2014-08-09T19:00:00Z",
+    "timestamp": {"start":"2014-08-09T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate acc. to CBB#304"
@@ -1157,7 +1157,7 @@
     "_key": "_:dondimelloandcactustonyattendwomplersbirthday",
     "name": "Don DiMello and Cactus Tony Attend Marissa Wompler's Birthday Party",
     "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
-    "timestamp": "2014-08-10T19:00:00Z",
+    "timestamp": {"start":"2014-08-10T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#304"
@@ -1167,7 +1167,7 @@
     "_key": "_:dondimellofindsachild",
     "name": "Don DiMello Finds a Child",
     "article": "Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it.",
-    "timestamp": "2014-08-10T02:30:00Z",
+    "timestamp": {"start":"2014-08-10T02:30:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#304"
@@ -1177,7 +1177,7 @@
     "_key": "_:dondimmelopresentscdisneysomeondownandgetfuckedattheplanetarium",
     "name": "Don DiMello Presents 'Disneys Come on Down and Get Fucked at the Planetarium'",
     "article": "Held at the Griffith Observatory planetarium, the show consists of A) Don DiMello talking bullshit about the stars as a cover, and B) prostitutes fucking men in their chairs.",
-    "timestamp": "2013-02-15T19:00:00Z",
+    "timestamp": {"start":"2013-02-15T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is solid acc. to CBB#200 - next weekend"
@@ -1187,7 +1187,7 @@
     "_key": "_:cactustonyisinterrogated1",
     "name": "Cactus Tony is Interrogated and Cracks (1)",
     "article": "For the first time in as many weeks, Cactus Tony cracks under the pressure of interrogation. The 2nd time would occur at Earwolf studios.",
-    "timestamp": "2013-02-04T19:00:00Z",
+    "timestamp": {"start":"2013-02-04T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate acc. to CBB#200 - '2nd time in as many weeks 'CT cracked under interrogation"
@@ -1197,13 +1197,13 @@
     "_key": "_:cactustonyisinterrogated2",
     "name": "Cactus Tony is Interrogated and Cracks (2",
     "article": "In order to garner good press for Don DiMello, who was laying low at Griffith Observatory, Cactus Tony appears on the Comedy Bang! Bang! podcast, only to crack under Croatian Special Forces interrogation techniques and attempt suicide by defenestration.",
-    "timestamp": "2013-02-10T19:00:00Z"
+    "timestamp": {"start":"2013-02-10T19:00:00Z","end":null}
   },
   {
     "_key": "_:cactustonyleaveshome",
     "name": "Cactus Tony Leaves Home",
     "article": "At 11 years old, while digging a hole to China, Cactus Tony assisted his aunt into the pit and covered her up, ostensibly murdering her. He then left home never to return.",
-    "timestamp": "1982-05-05T19:00:00Z",
+    "timestamp": {"start":"1982-05-05T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate acc. to CBB#200 - CT was 11 in 1982"
@@ -1213,7 +1213,7 @@
     "_key": "_:dondimellosfindstony",
     "name": "Don DiMello Meets Cactus Tony",
     "article": "Don DiMello noticed Cactus Tony 'beating the shit out of an old lady' at a bus stop.",
-    "timestamp": "2000-06-06T19:00:00Z",
+    "timestamp": {"start":"2000-06-06T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#161"
@@ -1223,7 +1223,7 @@
     "_key": "_:dondimellosdisneyspeterpan",
     "name": "Don DiMello's 'Disneys Peter Pan' is Staged in Pasadena",
     "article": "Don DiMello's 'Disneys Peter Pan' opened June 6 2011 (off-hours) at the Pasadena Fairytale Theatre. The show featured quadruple-cast Rottweilers and, basically, beastiality. The show failed to reach denouement.",
-    "timestamp": "2011-06-06T19:00:00Z",
+    "timestamp": {"start":"2011-06-06T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#200"
@@ -1233,7 +1233,7 @@
     "_key": "_:dondimellosdisneyswizardofoz",
     "name": "Don DiMello's 'Disneys Wizard of Oz' is Staged in Pasadena",
     "article": "Don DiMello's 'Disneys Wizard of Oz' opened June 8 2012 (off-hours) at the Pasadena Fairytale Theatre. The show took several liberties with the original narrative and, during production, under the childcare of Cactus Tony, an unnamed 8-year-old boy was ripped apart by several lactating Rottweilers. The show failed to reach denouement.",
-    "timestamp": "2012-06-08T19:00:00Z",
+    "timestamp": {"start":"2012-06-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#161 & CBB#200"
@@ -1243,7 +1243,7 @@
     "_key": "_:stephaniegoldbergismurdered",
     "name": "Stephanie Goldberg is Murdered",
     "article": "According to an uncited article Jason Mantzoukas read on-air in #CBB148, Stephanie Goldberg was murdered six months before 2012.March.",
-    "timestamp": "2011-09-09T19:00:00Z",
+    "timestamp": {"start":"2011-09-09T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#148"
@@ -1253,7 +1253,7 @@
     "_key": "_:daltonwilcoxlastride",
     "name": "Dalton Wilcox' Last Ride",
     "article": "According to #CBB148, the last time Dalton Wilcox rode a horse was in 1988.",
-    "timestamp": "1988-06-06T19:00:00Z",
+    "timestamp": {"start":"1988-06-06T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#148"
@@ -1263,7 +1263,7 @@
     "_key": "_:clivedundeeattemptssuicide",
     "name": "Clive Dundee Attempts Suicide by Defenestration",
     "article": "Clive Dundee jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1273,7 +1273,7 @@
     "_key": "_:daltonwilcoxkillsjekyll",
     "name": "Dalton Wilcox Murders a Mr. Hyde on the Arizona London Bridge",
     "article": "On the London Bridge replica in Arizona, Mr. Wilcox was trying to park his car when he accidentally banged into the car behind him. Immediately the other driver -- a Dr. Jekyll and Mr. Hyde -- emerged, angry at the damage to his car. Mr. Wilcox quickly murdered the monster.",
-    "timestamp": "2005-05-05T19:00:00Z",
+    "timestamp": {"start":"2005-05-05T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is extremely approximate"
@@ -1283,7 +1283,7 @@
     "_key": "_:patrickmcmahonattemptssuicide1",
     "name": "Patrick McMahon Attempts Suicide by Defenestration",
     "article": "Patrick McMahon jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1293,7 +1293,7 @@
     "_key": "_:billcarterattemptssuicide1",
     "name": "Bill Carter Attempts Suicide by Defenestration",
     "article": "Bill Carter jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1303,7 +1303,7 @@
     "_key": "_:billcarterattemptssuicide2",
     "name": "Bill Carter Attempts Suicide by Car",
     "article": "Bill Carter sets a car on fire and drives it off a cliff.",
-    "timestamp": "2013-07-07T19:00:00Z",
+    "timestamp": {"start":"2013-07-07T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is sometime after CBB#148 and before CBB#300"
@@ -1313,7 +1313,7 @@
     "_key": "_:dannymahoneyattemptssuicide2",
     "name": "Danny Mahoney Attempts Suicide by Defenestration",
     "article": "Danny Mahoney jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1323,7 +1323,7 @@
     "_key": "_:augustlindtattemptssuicideatearwolf",
     "name": "August Lindt Attempts Suicide by Defenestration",
     "article": "August Lindt jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1333,7 +1333,7 @@
     "_key": "_:hotdogattemptssuicide1",
     "name": "Hot Dog Attempts Suicide by Defenestration",
     "article": "Hot Dog jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1343,7 +1343,7 @@
     "_key": "_:daltonwilcoxattemptssuicide1",
     "name": "Dalton Wilcox Attempts Suicide by Defenestration",
     "article": "Dalton Wilcox jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1353,7 +1353,7 @@
     "_key": "_:dondimelloattemptssuicide1",
     "name": "Don DiMello Attempts Suicide by Defenestration",
     "article": "Don DiMello jumps out the window at Earwolf.",
-    "timestamp": "2012-03-11T19:00:00Z",
+    "timestamp": {"start":"2012-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp *is* CBB#148"
@@ -1363,7 +1363,7 @@
     "_key": "_:ceceliawilcoxismurdered",
     "name": "Cecelia Wilcox is Murdered",
     "article": "According to an uncited article Jason Mantzoukas read on-air in #CBB148, Cecelia Wilcox and her three daughters were killed a year before 2012.March.",
-    "timestamp": "2011-03-11T19:00:00Z",
+    "timestamp": {"start":"2011-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#148"
@@ -1373,7 +1373,7 @@
     "_key": "_:chipgardnerappearsinlatimes",
     "name": "Chip Gardner is Profiled by the L.A. Times",
     "article": "In it, it is revealed that he had purchased ancient Victorian surgical instruments and was performing surgeries on schizophrenics and homeless people. Next to the piece was a mysterious article about the 28 contentants from the long-canceled game show 'Zap' who have disappeared.",
-    "timestamp": "2000-03-01T19:00:00Z",
+    "timestamp": {"start":"2000-03-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - acc. to CBB#131"
@@ -1383,7 +1383,7 @@
     "_key": "_:chipgardnerhitsrockbottom",
     "name": "Chip Gardner Hits Rock Bottom and Embraces Satan",
     "article": "In approximately 1996 (well after his face was run over by a Jeep and at least a day after the airing of Friends episode s1e10) Chip Gardner hits rock bottom and embraces the Dark Lord Satan.",
-    "timestamp": "1996-02-01T19:00:00Z",
+    "timestamp": {"start":"1996-02-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - after the jeep incident and after Marcel the monkey Friends episode acc. to CBB#131"
@@ -1393,7 +1393,7 @@
     "_key": "_:chipgardnerhostszap",
     "name": "Chip Gardner Hosts the Live Gameshow 'Zap' from 2-3 AM",
     "article": "Chip Gardner's show before his 'Catch a Predator' precursor was a kids education show called 'Zap' that featured 'real sleepy kids,' some of whom would later become famous but most of whom simply disappeared.",
-    "timestamp": "1987-05-01T19:00:00Z",
+    "timestamp": {"start":"1987-05-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - after the jeep incident acc. to CBB#131"
@@ -1403,7 +1403,7 @@
     "_key": "_:chipgardnerisrunoverbyajeep",
     "name": "Chip Gardner's Face is Run Over by a Jeep on the PCH",
     "article": "Chip Gardner was lying on the Pacific Coast Highway 'trying to get run over by something' (later he admitted he wanted it to be a Monto Carlo) in order to 'see what I could survive' when an oncoming Jeep (driven, coincidentally by Scott Aukerman and Jason Mantzoukas) ran over his face only. It was during reconstructive surgery that he was accidentally given sexual reassignment surgery and became a Side-by-Side named Gretchen.",
-    "timestamp": "1986-07-01T19:00:00Z",
+    "timestamp": {"start":"1986-07-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - acc. to CBB#131"
@@ -1413,7 +1413,7 @@
     "_key": "_:chipgardnerfollowssimpleminds",
     "name": "Chip Gardner Follows Simple Minds on Tour",
     "article": "Chip Gardner followed Simple Minds around on tour in ~1991 after the band had crested and ended up opening for Jesus Jones.",
-    "timestamp": "1991-05-01T19:00:00Z",
+    "timestamp": {"start":"1991-05-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - some date after the release of Jesus Jones' Right Here Right Now acc. to CBB#131"
@@ -1423,7 +1423,7 @@
     "_key": "_:chipgardnermovestohollywood",
     "name": "Chip Gardner Moves to Hollywood",
     "article": "Chip Gardner moved to Hollywood as a young man to become an actor and immediately got 'lost' in drugs and alcohol and streetfighting.",
-    "timestamp": "1980-01-01T19:00:00Z",
+    "timestamp": {"start":"1980-01-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - some date in 1980 according to CBB#131"
@@ -1433,7 +1433,7 @@
     "_key": "_:jeanclaudepepiauditionsfornosferatu",
     "name": "Jean Claude Pepi Auditions for 'Nosferatu the Vampyre'",
     "article": "Jean Claude Pepi visits the United States to shoot for one day on an ad for Geico that mistakes for a feature film.",
-    "timestamp": "1978-05-15T09:00:00Z",
+    "timestamp": {"start":"1978-05-15T09:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to imdb's filming date for nosferatu"
@@ -1443,7 +1443,7 @@
     "_key": "_:jeanclaudepepishootsageicospot",
     "name": "Jean Claude Pepi Gets a Geico Spot",
     "article": "Jean Claude Pepi visits the United States to shoot for one day on an ad for Geico that mistakes for a feature film.",
-    "timestamp": "2015-03-09T09:00:00Z",
+    "timestamp": {"start":"2015-03-09T09:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is acc. to CBB#338"
@@ -1453,7 +1453,7 @@
     "_key": "_:clivedundeeisborn",
     "name": "Clive Dundee is Born",
     "article": "Clive Dundee is born.",
-    "timestamp": "1963-08-08T19:00:00Z",
+    "timestamp": {"start":"1963-08-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - some time in 1963"
@@ -1463,7 +1463,7 @@
     "_key": "_:jeanclaudepepiisborn",
     "name": "Jean Claude Pepi is Born",
     "article": "Jean Claude Pepi is born.",
-    "timestamp": "1959-08-08T19:00:00Z",
+    "timestamp": {"start":"1959-08-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - some date after March 55 years prior to CBB#338"
@@ -1473,7 +1473,7 @@
     "_key": "_:cactustonyisborn",
     "name": "Cactus Tony is Born",
     "article": "Cactus Tony is born.",
-    "timestamp": "1971-01-01T19:00:00Z",
+    "timestamp": {"start":"1971-01-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - some date in 1971 according to calculations based on CBB#200"
@@ -1483,7 +1483,7 @@
     "_key": "_:hotdogisborn",
     "name": "Hot Dog is Born",
     "article": "Hot Dog is born.",
-    "timestamp": "1955-12-03T19:00:00Z",
+    "timestamp": {"start":"1955-12-03T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a vary loose approximation - CBB#300 conflicts with earlier reports but is a more direct statement by Hot Dog himself; #CBB400 is later stated as direct fact, citing 1955 as the date"
@@ -1493,7 +1493,7 @@
     "_key": "_:hotdogbecomesthird",
     "name": "Hot Dog Becomes the Third Man in History to Have Sex on Skiis",
     "article": "Hot Dog Becomes the Third Man in History to Have Sex on Skiis.",
-    "timestamp": "1971-12-03T19:00:00Z",
+    "timestamp": {"start":"1971-12-03T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a vary loose approximation - CBB#400"
@@ -1503,7 +1503,7 @@
     "_key": "_:chipgardnerisborn",
     "name": "Chip Gardner is Born",
     "article": "Chip Gardner is born.",
-    "timestamp": "1968-01-01T19:00:00Z",
+    "timestamp": {"start":"1968-01-01T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - some date in 1980 according to CBB#131"
@@ -1513,7 +1513,7 @@
     "_key": "_:andicallahangetsanape",
     "name": "Andi Callahan Gets His Hands on an Ape",
     "article": "Andi Callahan, with the assistance of Cactus Tony, manages to gain stewardship of an ape. The experiments that ensued caused an interest in human experimentation to grow in both men, leading to Callahan's life and career in medicine and Tony's thwarted interest in pediatrics.",
-    "timestamp": "1993-06-18T19:00:00Z",
+    "timestamp": {"start":"1993-06-18T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation - relative to Callahan's life story as told on CBB#119"
@@ -1523,7 +1523,7 @@
     "_key": "_:heatcuregoesawry",
     "name": "Andi Callahan's Parents Die in a Fire",
     "article": "During the course of a 'heat cure' administered by Andi Callahan and Cactus Tony, Andi's parents are burned alive in an abandoned house.",
-    "timestamp": "1997-01-11T19:00:00Z",
+    "timestamp": {"start":"1997-01-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation - relative to Callahan's life story as told on CBB#119"
@@ -1533,7 +1533,7 @@
     "_key": "_:dondimellostagesjewmanji",
     "name": "Don DiMello Stages 'Jewmanji' at the Pasadena Fairytale Theatre",
     "article": "The show is produced in association with 'a guy who has crushing gambling debts and works at the L.A. Zoo' and, according to Mr. DiMello, 'has been popular with a surprising subset of the population.'",
-    "timestamp": "2018-03-11T19:00:00Z",
+    "timestamp": {"start":"2018-03-11T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-month",
       "nb": "timestamp is a relatively tight approximation - show is 'up now' relative to ADPPP#S2.3"
@@ -1543,7 +1543,7 @@
     "_key": "_:dondimellostagescinderella",
     "name": "Don DiMello Presents Disney's Cinderella at the Pasadena Fairytale Theatre",
     "article": "The show was 'not your typical garbage,' according to Mr. DiMello, and featured a number of liberties taken in the interpretation of the classic story including an extra sister and considerable nudity. Cinderella was triple-cast and spoke simultaneously. The show failed to reach denouement.",
-    "timestamp": "2011-04-08T19:00:00Z",
+    "timestamp": {"start":"2011-04-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a tight approximation - 'next weekend' relative to CBB#99"
@@ -1553,7 +1553,7 @@
     "_key": "_:dondimelloaccidentallyjoinsthetaliban",
     "name": "Don DiMello Accidentally Joins The Taliban",
     "article": "In Bahrain studying safe decapitation techniques, Mr. DiMello 'got to talking to some guys' and accidentally joins a terrorist organization.",
-    "timestamp": "1994-01-08T19:00:00Z",
+    "timestamp": {"start":"1994-01-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is a very loose approximation - 'years' prior to ADPPP#S1.5"
@@ -1563,7 +1563,7 @@
     "_key": "_:talibantalentnight",
     "name": "Taliban Talent Night",
     "article": "During the annual Taliban talent show, Don DiMello's entry draws scorn due to scantily-clad girls.",
-    "timestamp": "1994-03-05T19:00:00Z",
+    "timestamp": {"start":"1994-03-05T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is a very loose approximation - 'years' prior to ADPPP#S1.5"
@@ -1573,7 +1573,7 @@
     "_key": "_:dondimelloburieswife1",
     "name": "Don DiMello Buries His First Wife",
     "article": "With the help of Falcon and an unnamed accomplice, Mr. DiMello lays to rest his first wife.",
-    "timestamp": "1998-07-07T19:00:00Z",
+    "timestamp": {"start":"1998-07-07T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-year",
       "nb": "timestamp is '16-17 years' prior to ADPPP#S1.5"
@@ -1583,7 +1583,7 @@
     "_key": "_:dondimellostagesbeautyandthebeast",
     "name": "Don DiMello Stages 'Disneys Beauty and the Beast' in a Church Basement in Connecticut",
     "article": "The production featured live animals and failed to reach denouement. It ran 18 months and received 'scathing' reviews. Police were involved.",
-    "timestamp": "1995-04-08T19:00:00Z",
+    "timestamp": {"start":"1995-04-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation"
@@ -1593,7 +1593,7 @@
     "_key": "_:dondimellostagescamelot",
     "name": "Don DiMello Stages \"Disney's Camelot\"",
     "article": "He put out the word that, out by the lake, there's going to be 1 wet girl and 8 dry girls (one of them in a fake beard).",
-    "timestamp": "1996-08-08T19:00:00Z",
+    "timestamp": {"start":"1996-08-08T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is a very loose approximation - some time prior to ADPPP#S1.5, possibly in DiMello's Connectucut days."
@@ -1603,7 +1603,7 @@
     "_key": "_:dondimelloamputatesrockettebeth",
     "name": "Don DiMello Amputates Rockette Beth",
     "article": "After finding her chewing on a candy cane, Don DiMello amputates Rockette Beth, in effect ending her tenure with the organization.",
-    "timestamp": "1996-12-18T19:00:00Z",
+    "timestamp": {"start":"1996-12-18T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-month",
       "nb": "timestamp is a loose approximation - ADPPP#S1.5 near Christmas"
@@ -1613,7 +1613,7 @@
     "_key": "_:dondimellodirectstherockettes",
     "name": "Don DiMello Stages His First of Many Rockettes Shows at Radio City",
     "article": "Signaling a major and significant run of the show, both for Radio City and for almost every girl who happened upon the production, Mr. DiMello moves a little uptown from the Times Square peep shows.",
-    "timestamp": "1992-12-24T19:00:00Z",
+    "timestamp": {"start":"1992-12-24T19:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is based on CBB#99 - 18 years"
@@ -1622,7 +1622,7 @@
   {
     "_key": "_:hotdogeatshisskiis",
     "name": "Hot Dog Becomes the First Person Ever to Ski on Edible Water Skiis",
-    "timestamp": "1963-07-04T14:00:00Z",
+    "timestamp": {"start":"1963-07-04T14:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232"
@@ -1631,7 +1631,7 @@
   {
     "_key": "_:hotdogintroducesfirearms",
     "name": "Hot Dog Becomes the First Person Ever to Introduce Firearms into Water Skiing",
-    "timestamp": "1963-08-04T14:00:00Z",
+    "timestamp": {"start":"1963-08-04T14:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232"
@@ -1640,7 +1640,7 @@
   {
     "_key": "_:hotdogwaterskiisonamotorcycle",
     "name": "Hot Dog Becomes the First Person Ever to Water Ski on a Motorcycle",
-    "timestamp": "1963-09-04T14:00:00Z",
+    "timestamp": {"start":"1963-09-04T14:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232"
@@ -1649,7 +1649,7 @@
   {
     "_key": "_:hotdogchangeshisname",
     "name": "Hot Dog Changes His Name to Hot Dog",
-    "timestamp": "1969-10-10T12:00:00Z",
+    "timestamp": {"start":"1969-10-10T12:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27 but 'in the 60s' and 'in his teens' acc to #CBB400; frm 1964-1969 he wz bobbing in the ocean acc to cbb#232 and if we take 1955 as his birth year, 69 fits best"
@@ -1658,7 +1658,7 @@
   {
     "_key": "_:hotdogaudition3",
     "name": "Hot Dog Auditions for Sha Na Na",
-    "timestamp": "2011-03-05T12:00:00Z",
+    "timestamp": {"start":"2011-03-05T12:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - 'next week' from 2011.Feb.27"
@@ -1667,7 +1667,7 @@
   {
     "_key": "_:classiccarnightbobsbigboytoluca",
     "name": "Classic Car Night at Bob's Big Boy in Toluca Lake",
-    "timestamp": "recurring",
+    "timestamp": {"start":"recurring","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "fridays"
@@ -1676,7 +1676,7 @@
   {
     "_key": "_:hotdogrunsan80sbedandbreakfast",
     "name": "Hot Dog Operates a Haunted 80s-Themed Bed and Breakfast",
-    "timestamp": "1985-06-01T12:00:00Z",
+    "timestamp": {"start":"1985-06-01T12:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - 'in the 80s' rel to 2011.Feb.27"
@@ -1685,7 +1685,7 @@
   {
     "_key": "_:hotdogrunsa50sbedandbreakfast",
     "name": "Hot Dog Operates a Haunted 50s-Themed Bed and Breakfast",
-    "timestamp": "1990-06-01T12:00:00Z",
+    "timestamp": {"start":"1990-06-01T12:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation - '20 years ago' from 2011.Feb.27"
@@ -1694,7 +1694,7 @@
   {
     "_key": "_:hotdogaudition1",
     "name": "Hot Dog Auditions for Sha Na Na",
-    "timestamp": "2008-06-04T11:00:00Z",
+    "timestamp": {"start":"2008-06-04T11:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation - 'a few years' before 2011.Feb"
@@ -1703,7 +1703,7 @@
   {
     "_key": "_:hotdogaudition2",
     "name": "Hot Dog Auditions for Sha Na Na",
-    "timestamp": "2010-07-11T12:00:00Z",
+    "timestamp": {"start":"2010-07-11T12:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation - some time before 2011.Feb"
@@ -1712,7 +1712,7 @@
   {
     "_key": "_:billcarterisaccomplicetoabande",
     "name": "Bill Carter Aids and Abets His Brother-in-law's Attack on a Woman",
-    "timestamp": "1970-04-14T16:00:00Z",
+    "timestamp": {"start":"1970-04-14T16:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation"
@@ -1721,7 +1721,7 @@
   {
     "_key": "_:patrickmcmahonisaccused",
     "name": "Johnny McGory (Patrick McMahon) is Accused of Sexual Misconduct",
-    "timestamp": "2009-01-01T16:00:00Z",
+    "timestamp": {"start":"2009-01-01T16:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior-to",
       "nb": "timestamp is a very loose approximation - prior to CBB#??"
@@ -1730,7 +1730,7 @@
   {
     "_key": "_:patrickmcmahonisborn",
     "name": "Patrick McMahon is born in Limerick, Ireland",
-    "timestamp": "1960-01-01T16:00:00Z",
+    "timestamp": {"start":"1960-01-01T16:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a loose approximation"
@@ -1740,7 +1740,7 @@
     "_key": "_:billcartercheersaraceriot",
     "name": "Bill Carter Gets a Black Guy and a White Guy Together near La Cañada Flintridge",
     "article": "Primarily and solely just 'to see what happens,' Bill Carter incites a race riot and is soon arrested for same.",
-    "timestamp": "1965-08-11T16:00:00Z",
+    "timestamp": {"start":"1965-08-11T16:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is proxied by the watts riots"
@@ -1750,7 +1750,7 @@
     "_key": "_:billcartertrainscarygrant",
     "name": "Bill Carter Grows Disgusted by Cary Grant's Physique",
     "article": "Bill Carter finds himself disgusted with Cary Grant's physique and travels to Hollywood to surreptitiously train the actor. The incident marks the beginning of a career based upon clandestine, but nonetheless threatening, technique.",
-    "timestamp": "1945-06-24T16:00:00Z",
+    "timestamp": {"start":"1945-06-24T16:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is a very loose approximation - some time after the end of world war ii"
@@ -1759,22 +1759,22 @@
   {
     "_key": "_:augustlindtattemptssuicide1",
     "name": "August Lindt Ties Himself to the Hollywood sign and Sets it on Fire",
-    "timestamp": "2010-06-24T16:00:00Z"
+    "timestamp": {"start":"2010-06-24T16:00:00Z","end":null}
   },
   {
     "_key": "_:augustlindtattemptssuicide2",
     "name": "August Lindt Leaps from the Seattle Space Needle",
-    "timestamp": "2010-09-24T16:00:00Z"
+    "timestamp": {"start":"2010-09-24T16:00:00Z","end":null}
   },
   {
     "_key": "_:augustlindtwinsbestandydalycharacter",
     "name": "August Lindt Wins Best Andy Daly Character at Comedy Bang! Bang! Best-of 2010",
-    "timestamp": "2010-12-25T16:00:00Z"
+    "timestamp": {"start":"2010-12-25T16:00:00Z","end":null}
   },
   {
     "_key": "_:augustlindtisarrestedatgraceland",
     "name": "August Lindt is Arrested for Sneaking into the Bathroom at Graceland",
-    "timestamp": "2010-05-09T00:00:00Z",
+    "timestamp": {"start":"2010-05-09T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate - april prior to CBB##59"
@@ -1783,7 +1783,7 @@
   {
     "_key": "_:augustlindtvisitsthepinebarrens",
     "name": "August Lindt Visits the Pine Barrens of New Jersey",
-    "timestamp": "2010-05-11T00:00:00Z",
+    "timestamp": {"start":"2010-05-11T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate - april prior to CBB##59"
@@ -1792,7 +1792,7 @@
   {
     "_key": "_:augustlindtvisitsepcot",
     "name": "August Lindt Visits Epcot Center",
-    "timestamp": "2010-05-29T00:00:00Z",
+    "timestamp": {"start":"2010-05-29T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate - april prior to CBB##59"
@@ -1801,7 +1801,7 @@
   {
     "_key": "_:dannymahoneymeetsscottaukerman",
     "name": "Danny Mahoney Meets Scott Aukerman",
-    "timestamp": "2009-07-29T00:00:00Z",
+    "timestamp": {"start":"2009-07-29T00:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "date is 'yesterday' relative to CBB##14"
@@ -1811,7 +1811,7 @@
     "_key": "_:dannymahoneywalksintotheocean",
     "article": null,
     "name": "Danny Mahoney Wears a Heavy Coat Into the Ocean",
-    "timestamp": "2009-12-01T10:00:00Z",
+    "timestamp": {"start":"2009-12-01T10:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is approximate - winter prior to CBB##14"
@@ -1821,7 +1821,7 @@
     "_key": "_:dannymahoneyimmunizeshisbrother",
     "article": "As a method for building up tolerance to the material, Danny drove his brother around in an asbestos in increasingly long iterations. The brother eventually perished (of an 'insulated heart'), to be survived at least by his son Bertrand.",
     "name": "Danny Mahoney Immunizes His Brother to Asbestos",
-    "timestamp": "2001-05-11T10:00:00Z",
+    "timestamp": {"start":"2001-05-11T10:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is approximate - some time prior to the hostile takeover of the plumbing business"
@@ -1831,7 +1831,7 @@
     "_key": "_:dannymahoneyfallsasleep",
     "article": "Danny Mahoney, drunk, falls asleep for three days in the back of a shipping container. Accounts later differ, but the event likely at least *contributed* to the hostile takeover, by Bertram Mahoney, of their shared plumbing business.",
     "name": "Danny Mahoney Falls Asleep for Three Days",
-    "timestamp": "2009-10-01T10:00:00Z",
+    "timestamp": {"start":"2009-10-01T10:00:00Z","end":null},
     "nb_timestamp": {
       "class": "estimate-prior",
       "nb": "timestamp is approximate - winter prior to CBB##14"
@@ -1841,7 +1841,7 @@
     "_key": "_:dannymahoneybuysaheavycoat",
     "article": null,
     "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat",
-    "timestamp": "2009-12-01T09:00:00Z",
+    "timestamp": {"start":"2009-12-01T09:00:00Z","end":null},
     "nb_timestamp": {
       "class": null,
       "nb": "timestamp is approximate - winter prior to CBB##14"
@@ -1851,6 +1851,6 @@
     "_key": "_:ashleypintossweetsixteen",
     "article": null,
     "name": "Ashley Pinto's Sweet Sixteen",
-    "timestamp": "2010-03-27T16:00:00Z"
+    "timestamp": {"start":"2010-03-27T16:00:00Z","end":null}
   }
 ]

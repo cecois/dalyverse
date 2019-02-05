@@ -41,6 +41,7 @@ export default {
   name: 'Timeline',
   data () {
     return {
+      slidertime:{min:null,max:null},
       filterz: {
         time: {
           beginz: process.env.FILTER_TIME_BEGIN,
@@ -76,79 +77,134 @@ this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
 this.console={msg:"mounted",throb:false,clazz:""}
 // this.setPageTitle();
 // this.setTimes()
-this.init();
+this.initData();
 
   }, //mounted
   methods: {
-    init: function () {
 
-      this.console.msg="initing..."
-      this.initSlider();
-      this.initTimeline();
+    initData: function () {
 
-    }, //init
-initSlider: function () {
-  var slider = document.getElementById('slider');
-  this.slider = this.$NOUISLIDER.create(slider, {
-    start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
-    connect: true,
-    pips: {
-        mode: 'range',
-        density: 3
-    },
-    range: {
-        'min': this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").subtract(5, 'years').valueOf()
-        ,'max': this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").add(5, 'years').valueOf()
-    }
-})
-}, //initslider
-initTimeline: function () {
+      this.console.msg="initing data..."
+      this.fetchTimeMinMax();
+      this.fetchEvents();
 
-      // old magic
-      var that = this;
+// now with some data in place we can default some app elements:
+      // this.$nextTick(function() {
+      //   this.initArchitecture();
+      // });
 
-       const el = this.$el.querySelector('#line')
-       // create the Timeline
-       var titems = new vis.DataSet(this.timelinetimes);
-       this.timeline = new vis.Timeline(el, titems, {});
+    }, //initData
+    // initArchitecture: function () {
 
-// and bootstrap data
-this.fetchEvents();
-      // now we wire up click-selection
-       // this.timeline.on('select',function (properties){
-        // if it's active alrady we deactivate
-        // if(properties.items[0]==that.active.key){
-                // that.active.key=null
-                              // this.setSelection(null);
-                              // that.setActiveItem();
-        // } else {
-                // that.active.key=properties.items[0]
-                // this.setSelection(properties.items[0]);
-          // }//else itemselect matches active.key
-          // that.setActiveItem();
-      // })//.on
-       // that.setActiveItem()
-    // }//timeline.create and wireup
+    //   this.console.msg="initing architecture..."
+    //   this.initSlider();
+    //   this.initTimeline();
 
-}, //inittimeline
-fetchEvents: function () {
 
-let q = "for e in edges filter e.type==\"hasParticipant\" OR e.type==\"occurredAt\" for ev in events filter e._from==ev._id AND e.type==\"hasParticipant\" LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null LET geo=( for g in edges filter g._from==ev._id AND g.type==\"occurredAt\" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}"
+    // }, //initArchitecture
+    initSlider: function () {
+      var slider = document.getElementById('slider');
 
-  axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
-    query:q
-  })
-    .then(response => {
-        this.timelinetimes = response.data.result;
-      // JSON response.datas are automatically parsed.
-    })//axios.then
-    .catch(e => {
-      console.error(e)
-    })//axios.catch
+      console.info('this.slidertime.min:',this.slidertime.min)
+console.info('this.slidertime.max:',this.slidertime.max)
 
-}//fetchEvents
-}, //methods
-  computed: {} //computed
+      this.slider = this.$NOUISLIDER.create(slider, {
+        start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
+        connect: true,
+        pips: {
+            mode: 'range',
+            density: 3
+        },
+        range: {
+            'min': this.$MOMENT(this.slidertime.min).subtract(2,'years').valueOf(),
+            'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
+        }
+        // range: {
+        //     'min': this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").subtract(5, 'years').valueOf()
+        //     ,'max': this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").add(5, 'years').valueOf()
+        // }
+    })
+    }, //initslider
+    fetchTimeMinMax: function () {
+
+    let q = "for ev in events filter ev.timestamp.start != null COLLECT AGGREGATE mintime = MIN(ev.timestamp.start),maxtime = MAX(ev.timestamp) return { minstart:mintime,maxstart:maxtime }"
+    console.info(q);
+
+      axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
+        query:q
+      })
+        .then(response => {
+          console.log("SETTING SLIDERTIMES!")
+          this.slidertime={min:'2018-01-01T00:00:01Z',max:response.data.result[0].maxstart.start}
+          // JSON response.datas are automatically parsed.
+        })//axios.then
+        .catch(e => {
+          console.error(e)
+        })//axios.catch
+
+    }, //timeminmax
+    initTimeline: function () {
+
+          // old magic
+          var that = this;
+
+           const el = this.$el.querySelector('#line')
+           // create the Timeline
+           var titems = new vis.DataSet(this.timelinetimes);
+           this.timeline = new vis.Timeline(el, titems, {});
+
+    // and bootstrap data
+          // now we wire up click-selection
+           // this.timeline.on('select',function (properties){
+            // if it's active alrady we deactivate
+            // if(properties.items[0]==that.active.key){
+                    // that.active.key=null
+                                  // this.setSelection(null);
+                                  // that.setActiveItem();
+            // } else {
+                    // that.active.key=properties.items[0]
+                    // this.setSelection(properties.items[0]);
+              // }//else itemselect matches active.key
+              // that.setActiveItem();
+          // })//.on
+           // that.setActiveItem()
+        // }//timeline.create and wireup
+
+    }, //inittimeline
+    fetchEvents: function () {
+
+    let q = "for e in edges filter e.type==\"hasParticipant\" OR e.type==\"occurredAt\" for ev in events filter e._from==ev._id AND e.type==\"hasParticipant\" LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null LET geo=( for g in edges filter g._from==ev._id AND g.type==\"occurredAt\" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}"
+
+      axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
+        query:q
+      })
+        .then(response => {
+            this.timelinetimes = response.data.result;
+          // JSON response.datas are automatically parsed.
+        })//axios.then
+        .catch(e => {
+          console.error(e)
+        })//axios.catch
+
+    }, //fetchEvents
+    updateTimeline: function () {
+
+      console.log("checking updatetimeline:");
+      console.log('typeof this.timeline:');
+      console.log(typeof this.timeline);
+
+    } //updatetimeline
+  }, //methods
+  computed: {}, //computed
+  watch: {
+    slidertime: function() {
+        // this should only happen once, btw
+          this.initSlider();
+        }, //watch.slidertime
+    timelinetimes: function() {
+          this.updateTimeline();
+        } //watch.timelinetimes
+  } //watch
 } //export.timeline
 </script>
 
