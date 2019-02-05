@@ -1665,15 +1665,6 @@
     }
   },
   {
-    "_key": "_:classiccarnightbobsbigboytoluca",
-    "name": "Classic Car Night at Bob's Big Boy in Toluca Lake",
-    "timestamp": {"start":"recurring","end":null},
-    "nb_timestamp": {
-      "class": null,
-      "nb": "fridays"
-    }
-  },
-  {
     "_key": "_:hotdogrunsan80sbedandbreakfast",
     "name": "Hot Dog Operates a Haunted 80s-Themed Bed and Breakfast",
     "timestamp": {"start":"1985-06-01T12:00:00Z","end":null},

@@ -106,9 +106,6 @@ this.console={msg:"mounted",throb:false,clazz:""}
     initSlider: function () {
       var slider = document.getElementById('slider');
 
-      console.info('this.slidertime.min:',this.slidertime.min)
-console.info('this.slidertime.max:',this.slidertime.max)
-
       this.slider = this.$NOUISLIDER.create(slider, {
         start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
         connect: true,
@@ -116,27 +113,42 @@ console.info('this.slidertime.max:',this.slidertime.max)
             mode: 'range',
             density: 3
         },
+        tooltips: [({decimals: 1}), ({decimals: 1})],
         range: {
             'min': this.$MOMENT(this.slidertime.min).subtract(2,'years').valueOf(),
             'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
         }
-        // range: {
-        //     'min': this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").subtract(5, 'years').valueOf()
-        //     ,'max': this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").add(5, 'years').valueOf()
-        // }
-    })
+        })
+
+/* ----------------------- WIRE/REWIRE ---------- */
+// var that=this;
+// this.slider.on('update', function(values,handle){
+//   that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+//   that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+// });
+
+this.slider.on('change', (values,handle)=>{
+
+  this.filterz.time.beginz=this.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+  this.filterz.time.endz=this.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+
+  this.fetchEvents()
+  this.routize();
+
+});
+
     }, //initslider
     fetchTimeMinMax: function () {
 
     let q = "for ev in events filter ev.timestamp.start != null COLLECT AGGREGATE mintime = MIN(ev.timestamp.start),maxtime = MAX(ev.timestamp.start) return { minstart:mintime,maxstart:maxtime }"
-    console.info(q);
 
       axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
         query:q
       })
         .then(response => {
-          console.log("SETTING SLIDERTIMES!")
-          this.slidertime={min:response.data.result[0].minstart.start,max:response.data.result[0].maxstart.start}
+          console.log("SETTING SLIDERTIMES frm:");
+
+          this.slidertime={min:response.data.result[0].minstart,max:response.data.result[0].maxstart}
           // JSON response.datas are automatically parsed.
         })//axios.then
         .catch(e => {
@@ -147,11 +159,12 @@ console.info('this.slidertime.max:',this.slidertime.max)
     initTimeline: function () {
 
           // old magic
-          var that = this;
+          // var that = this;
 
            const el = this.$el.querySelector('#line')
            // create the Timeline
-           var titems = new vis.DataSet(this.timelinetimes);
+           // var titems = new vis.DataSet(this.timelinetimes);
+           var titems = this.timelinetimes;
            this.timeline = new vis.Timeline(el, titems, {});
 
     // and bootstrap data
@@ -188,13 +201,33 @@ console.info('this.slidertime.max:',this.slidertime.max)
         })//axios.catch
 
     }, //fetchEvents
-    updateTimeline: function () {
+    setTimeline: function () {
 
-      console.log("checking updatetimeline:");
-      console.log('typeof this.timeline:');
-      console.log(typeof this.timeline);
+      this.timeline.setItems(this.timelinetimes);
+      this.timeline.fit({ duration: 200, easingFunction: 'linear'});
 
-    } //updatetimeline
+    }, //settimeline
+    brokerTimeline: function () {
+console.log("brokering timeline...")
+      if(!this.timeline){
+console.log("no timeline - you're the timeline (initting timeline)...")
+this.initTimeline();
+      } //if.this.timeline
+      else {
+console.log("setTimeline...")
+        this.setTimeline();
+      }
+
+    }, //updatetimeline
+    routize: function(){
+
+    this.$router.push({ params:{
+      tstart:this.filterz.time.beginz,
+      tend:this.filterz.time.endz,
+      activeid:this.active.key
+    }})//push
+
+  },
   }, //methods
   computed: {}, //computed
   watch: {
@@ -203,7 +236,7 @@ console.info('this.slidertime.max:',this.slidertime.max)
           this.initSlider();
         }, //watch.slidertime
     timelinetimes: function() {
-          this.updateTimeline();
+          this.brokerTimeline();
         } //watch.timelinetimes
   } //watch
 } //export.timeline
