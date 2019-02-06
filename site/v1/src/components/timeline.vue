@@ -41,6 +41,8 @@ export default {
   name: 'Timeline',
   data () {
     return {
+      geom: null,
+      map_feature_group: new L.featureGroup().addTo(map),
       slidertime:{min:null,max:null},
       filterz: {
         time: {
@@ -209,18 +211,78 @@ this.slider.on('change', (values,handle)=>{
       this.timeline.fit({ duration: 400, easingFunction: 'linear'});
 
     }, //settimeline
-    brokerMap: function () {
-        console.log("brokering map...")
-      if(!window.map){
-        this.console.msg="Map init failed - please refresh the page"
-// this.initMap();
-      } //if.this.timeline
-      else {
-        console.log("fetchGeom...(then update map w/ em, then as with everything else check if active.key needs to filter though all the gills")
-        // this.fetchGeom();
-      }
+    map: function () {
 
-    }, //brokerTimeline
+      if(this.geom.length<1){
+        this.console.msg="no geometries to map"
+      } else {
+
+ var stile = {
+      radius: 18,
+      fillColor: 'green',
+      color: "#000",
+      weight: 1,
+      opacity: .8,
+      fillOpacity: 1,
+    }
+
+  this.map_feature_group.clearLayers()
+
+L.geoJSON(this.geom, {
+    style: stile,
+    pointToLayer: function(feature, latlng) {
+              return L.circleMarker(latlng, stile);
+            }
+}).bindPopup(function(layer){
+
+    return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5><div class="has-text-muted">'+ev_key.article+'['+ev_key.id+'])</div></div>'
+
+}).on('popupopen',function(feature){
+    // get eventkey (e.g. '_:lronhubbardsspectaclesarefound', set Vue.active.key)
+    // let ev_key = that.geoKeyGen(layer.feature.geometry.type,layer.feature.properties.cartodb_id)
+  // that.active.key=ev_key.id
+})
+.on("popupclose", function(p) {
+
+                    // p.target.setStyle()
+                }) //.on
+.addTo(this.map_feature_group);
+
+map.fitBounds(this.map_feature_group.getBounds())
+
+    this.console.msg=this.geom.length+" items mapped"
+  } //else
+
+    }, //map
+    fetchGeo: function () {
+        
+let geoms = this.$_.map(
+  this.$_.reject(this.timelinetimes,(t)=>{return t.geo.length<1})
+  ,(g)=>{
+    return {
+      eid:g.id,
+      geokey:g.geo[0].geo_key.type+":"+g.geo[0].geo_key.id,
+      geoname:g.geo[0].name,
+      geoarticle:g.geo[0].article
+    }
+  })
+
+var u = "http://milleria.org:3030/geoms/cbb?q="+this.$_.pluck(geoms,'geokey').join(',')
+this.console.msg="fetching associated geometries...";
+
+  axios.get(u)
+    .then(response => {
+        this.geom = response.data
+
+        // we watch activeitem to do this normally but that's when we have map data onsite already
+        // this.$nextTick(() => this.setActiveMapFeature());
+      // JSON response.datas are automatically parsed.
+    })//axios.then
+    .catch(e => {
+      console.error(e)
+    })//axios.catch
+
+    }, //fetchGeo
     brokerTimeline: function () {
 console.log("brokering timeline...")
       if(!this.timeline){
@@ -241,7 +303,7 @@ console.log("setTimeline...")
       activeid:this.active.key
     }})//push
 
-  },
+  } //routize
   }, //methods
   computed: {}, //computed
   watch: {
@@ -251,8 +313,13 @@ console.log("setTimeline...")
         }, //watch.slidertime
     timelinetimes: function() {
           this.brokerTimeline();
-          this.brokerMap();
-        } //watch.timelinetimes
+          this.fetchGeo();
+        }, //watch.timelinetimes
+    geom: function () {
+
+      this.map();
+
+    } //geom
   } //watch
 } //export.timeline
 </script>

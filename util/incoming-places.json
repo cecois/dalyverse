@@ -1,5 +1,14 @@
 [
   {
+  "_key": "_:lacanadaflintridge",
+  "name": "La Cañada Flintridge, CA",
+  "article": "La Cañada Flintridge is a city in California's Crescenta Valley.",
+  "geo_key": {
+    "type": "point",
+    "id":148
+  }
+},
+{
   "_key": "_:parisfr",
   "name": "Paris, France",
   "article": "Paris, France, is a major metropolis in France.",
