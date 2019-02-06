@@ -9,7 +9,6 @@
 <div id="console">
 <div class="columns is-size-7">
 <div class="column"><code v-if="console">{{console.msg}}</code></div>
-<div class="column"><code v-if="active.key">{{active.key}}</code></div>
 </div>
 
   <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
@@ -21,7 +20,7 @@
 <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div>
 <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div>
 <!-- <div class="column" v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></div> -->
-<!-- <div class="column" v-if="active.item">active.item.content:<code>{{active.item.content}}</code></div> -->
+<div class="column" v-if="active.item">active.item.content:<code>{{active.item.content}}</code></div>
 <!-- <div class="column" v-if="active.item">active.item.article:<code>{{active.item.article}}</code></div> -->
 <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div>
 <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
@@ -49,10 +48,9 @@ export default {
         },
         space: { bbox: null}
       },
-      page: {title: null},
-      active: {key: null, feature: {id:null}, item: {id: null, article: null}, graph: {participants: null, locations: null}},
+      active: {key: null, item: this.nullItem(), graph: {participants: null, locations: null}},
       timelinetimes: [],
-
+page:{title:"Andy Dalyverse Events"},
   console: {
     msg: '',
     clazz: null,
@@ -76,6 +74,8 @@ this.initData();
 
   },//created
   mounted: function () {
+
+    console.log((process.env.VERBOSITY=='DEBUG')?"mounted":null);
 this.console={msg:"mounted",throb:false,clazz:""}
 // this.setPageTitle();
 // this.setTimes()
@@ -83,7 +83,14 @@ this.console={msg:"mounted",throb:false,clazz:""}
   }, //mounted
   methods: {
 
+    setPageTitle: function () {
+
+this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.item.content:"Dalyverse Events "+this.filterz.time.beginz+" - "+this.filterz.time.endz;
+
+    }, //setPageTitle
     initData: function () {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"initData()...":null);
 
       this.console.msg="initing data..."
       this.fetchTimeMinMax();
@@ -95,15 +102,10 @@ this.console={msg:"mounted",throb:false,clazz:""}
       // });
 
     }, //initData
-    // initArchitecture: function () {
 
-    //   this.console.msg="initing architecture..."
-    //   this.initSlider();
-    //   this.initTimeline();
-
-
-    // }, //initArchitecture
     initSlider: function () {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"initSlider()...":null)
       var slider = document.getElementById('slider');
 
       var effer = (v)=>{return this.$MOMENT(v).format('YYYY.MMM.DD');}
@@ -117,44 +119,36 @@ this.console={msg:"mounted",throb:false,clazz:""}
         },
         tooltips: [{to: effer, from:Number}, {to: effer, from:Number}],
         range: {
-            'min': this.$MOMENT(this.slidertime.min).subtract(2,'years').valueOf(),
+            'min': this.$MOMENT('1970-09-03').subtract(2,'years').valueOf(),
             'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
         }
         })
 
 
 
-/* ----------------------- WIRE/REWIRE ---------- */
-// var that=this;
-// this.slider.on('update', function(values,handle){
-//   that.filterz.time.beginz=that.$MOMENT(values[0],'x').format('YYYY-MM-DD');
-//   that.filterz.time.endz=that.$MOMENT(values[1],'x').format('YYYY-MM-DD');
-// });
+        /* ----------------------- WIRE/REWIRE ---------- */
 
-this.slider.on('change', (values,handle)=>{
+        this.slider.on('change', (values,handle)=>{
 
-  this.filterz.time.beginz=this.$MOMENT(values[0],'x').format('YYYY-MM-DD');
-  this.filterz.time.endz=this.$MOMENT(values[1],'x').format('YYYY-MM-DD');
+          this.filterz.time.beginz=this.$MOMENT(values[0],'x').format('YYYY-MM-DD');
+          this.filterz.time.endz=this.$MOMENT(values[1],'x').format('YYYY-MM-DD');
 
-  this.fetchEvents()
-  this.routize();
+          this.fetchEvents()
+          this.routize();
 
-});
+        });
 
 
     }, //initslider
     fetchTimeMinMax: function () {
 
-    let q = "for ev in events filter ev.timestamp.start != null COLLECT AGGREGATE mintime = MIN(ev.timestamp.start),maxtime = MAX(ev.timestamp.start) return { minstart:mintime,maxstart:maxtime }"
+      console.log((process.env.VERBOSITY=='DEBUG')?"fetchTimeMinMax()...":null)
 
       axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
-        query:q
+        query:"for ev in events filter ev.timestamp.start != null COLLECT AGGREGATE mintime = MIN(ev.timestamp.start),maxtime = MAX(ev.timestamp.start) return { minstart:mintime,maxstart:maxtime }"
       })
         .then(response => {
-          console.log("SETTING SLIDERTIMES frm:");
-
           this.slidertime={min:response.data.result[0].minstart,max:response.data.result[0].maxstart}
-          // JSON response.datas are automatically parsed.
         })//axios.then
         .catch(e => {
           console.error(e)
@@ -163,35 +157,44 @@ this.slider.on('change', (values,handle)=>{
     }, //timeminmax
     initTimeline: function () {
 
+      console.log((process.env.VERBOSITY=='DEBUG')?"initTimeline()...":null)
+
            const el = this.$el.querySelector('#line')
            // create the Timeline
            var titems = this.timelinetimes;
            this.timeline = new vis.Timeline(el, titems, {});
 
-// old magic
-            var that = this;
+            var that = this; // that old magic
 
           // now we wire up click-selection
            this.timeline.on('select',function (properties){
 
-console.info("in timeline.select event...")
-console.info('props.key:',properties.items[0])
-console.info('active.key:',that.active.key)
+// properties.event.preventDefault();
+//         properties.event.stopPropagation();
+
+console.info((process.env.VERBOSITY=='DEBUG')?"timeline.on.select":null)
+
             // // if it's active alrady we deactivate
-            // if(properties.items[0]==that.active.key){
-            //         that.active.key=null
-            //                       // this.setSelection(null);
+// if(properties.items[0]==that.active.key){
+// console.info((process.env.VERBOSITY=='DEBUG')?"key already active":null)
+// that.active.key=null
+                                  // this.setSelection(null);
+                                  // this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
             //                       // that.setActiveItem();
-            // } else {
-            //         that.active.key=properties.items[0]
+// } else {
+// console.info((process.env.VERBOSITY=='DEBUG')?"key not already, setting...":null)
+// that.active.key=properties.items[0]
             //         // this.setSelection(properties.items[0]);
-            //   }//else itemselect matches active.key
-              // that.setActiveItem();
+// }//else matches active.key
+
+// this.setSelection(that.active.key)
+
           })//.on
-           // that.setActiveItem()
 
     }, //inittimeline
     fetchEvents: function () {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"fetchEvents()...":null)
 
     let q = "for e in edges filter e.type==\"hasParticipant\" OR e.type==\"occurredAt\" for ev in events filter e._from==ev._id AND e.type==\"hasParticipant\" LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null LET geo=( for g in edges filter g._from==ev._id AND g.type==\"occurredAt\" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('"+this.filterz.time.beginz+"') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('"+this.filterz.time.endz+"')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}"
 
@@ -209,14 +212,18 @@ console.info('active.key:',that.active.key)
     }, //fetchEvents
     setTimeline: function () {
 
+      console.log((process.env.VERBOSITY=='DEBUG')?"setTimeline()...":null)
+
       this.timeline.setItems(this.timelinetimes);
       this.timeline.fit({ duration: 400, easingFunction: 'linear'});
 
     }, //settimeline
     map: function () {
 
+      console.log((process.env.VERBOSITY=='DEBUG')?"map()...":null)
+
       if(this.geom.length<1){
-        this.console.msg="no geometries to map"
+        this.console.msg="no geometries within range"
       } else {
 
  var stile = {
@@ -233,6 +240,7 @@ console.info('active.key:',that.active.key)
 L.geoJSON(this.geom, {
     style: stile,
     pointToLayer: function(feature, latlng) {
+
               return L.circleMarker(latlng, stile);
             }
 }).bindPopup(function(layer){
@@ -252,12 +260,14 @@ L.geoJSON(this.geom, {
 
 map.fitBounds(this.map_feature_group.getBounds())
 
-    this.console.msg=this.geom.length+" items mapped"
+    console.log((process.env.VERBOSITY=='DEBUG')?this.geom.length+" items mapped":null)
   } //else
 
     }, //map
     fetchGeo: function () {
-        
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"fetchGeo()...":null);
+
 let geoms = this.$_.map(
   this.$_.reject(this.timelinetimes,(t)=>{return t.geo.length<1})
   ,(g)=>{
@@ -269,26 +279,32 @@ let geoms = this.$_.map(
     }
   })
 
-var u = (process.env.MODE !== 'T')?"http://milleria.org:3030/geoms/cbb?q="+this.$_.pluck(geoms,'geokey').join(','):'http://localhost:8000/dalyverse-geoms-T.json'
+if(geoms.length>0){
+
 this.console.msg="fetching associated geometries...";
+
+var u = (process.env.MODE !== 'T')?"http://milleria.org:3030/geoms/cbb?q="+this.$_.pluck(geoms,'geokey').join(','):'http://localhost:8000/dalyverse-geoms-T.json'
+
 
   axios.get(u)
     .then(response => {
+      this.console.msg=null;
         this.geom = response.data
-
-        // we watch activeitem to do this normally but that's when we have map data onsite already
-        // this.$nextTick(() => this.setActiveMapFeature());
-      // JSON response.datas are automatically parsed.
     })//axios.then
     .catch(e => {
+      this.console.msg=null;
       console.error(e)
     })//axios.catch
+  } else {
+    // if there are no geoms to fetch, don't bother with the call, just zero out the map
+    this.map_feature_group.clearLayers();
+  }
 
     }, //fetchGeo
     brokerTimeline: function () {
-console.log("brokering timeline...")
+
       if(!this.timeline){
-console.log("no timeline - you're the timeline (initting timeline)...")
+        console.log((process.env.VERBOSITY=='DEBUG')?"no timeline - you're the timeline (initting timeline)...":null)
 this.initTimeline();
       } //if.this.timeline
       else {
@@ -296,9 +312,107 @@ this.initTimeline();
       }
 
     }, //brokerTimeline
-    propagateActive: function () {
+    launderGeoType: function (f) {
 
-      // take the active.key
+let t = null;
+switch(f.toLowerCase()) {
+  case 'multipolygon':
+    t='poly'
+    break;
+  case 'polygon':
+    t='poly'
+    break;
+  case 'multilinestring':
+    t='line'
+    break;
+  case 'linestring':
+    t='line'
+    break;
+  case 'point':
+    t='point'
+    break;
+  default:
+    // code block
+}
+return t
+
+    }, //launderGeo
+    nullItem: function (){
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"nulling item...":null)
+return {
+  "id":null,
+  "content":null,
+  "article":null,
+  "start":null,
+  "end":null,
+  "geo":[]
+}
+    }, //nullItem
+    setItem: function() {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"setItem()...":null)
+
+// is it still a viable key?
+if(this.active.key !== null && this.active.item.id!==this.active.key){
+
+    // yes? set the active item based on the active key found in events
+this.active.item=(this.$_.findWhere(this.timelinetimes, {id:this.active.key}))
+    }  else {
+        // no key? null it out
+        console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, nulling item...":null)
+        this.active.item = this.nullItem()
+      }
+    // if(this.active.item.id!==this.active.key){
+    //     ?this.$_.findWhere(this.timelinetimes, {id:this.active.key}):this.active.item;
+    //   }
+
+    // also throw that to timeline (if it's null nothing will be selected or selected will deselect)
+    // if(this.timeline){
+    // this.timeline.setSelection(this.active.key);
+    // also set (or clear) any associated graphs
+    // this.setActiveGraph()
+  }, //setitem
+      setGraph: function () {
+
+console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
+
+// if we have an active.key
+    if(this.active.key !== null){
+
+    axios.post('http://'+process.env.ARANGOIP+':8529/_api/cursor',{
+      query:'LET event = (for vertices, edges, paths in OUTBOUND "events/'+this.active.key+'" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/'+this.active.key+'" edges filter e.type==\'hasParticipant\' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND "events/'+this.active.    key+'" edges filter e.type==\'occurredAt\' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }'
+    })
+        .then(response => {
+            this.active.graph = response.data.result[0];
+        })//axios.then
+        .catch(e => {
+          console.error(e)
+        })//axios.catch
+      }//if key
+      else {
+        // no key? null it out
+        console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, nulling graph...":null)
+        this.active.graph = {event:null, participants:null, locations:null}
+      }
+
+    }, //setgraph
+    setMap: function () {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"setMap()...":null)
+
+// if we have an active.key
+    if(this.active.key !== null){
+      // take the active keys (id and geo)
+      let keyg = (this.active.item.geo.length>0)?{id:this.active.item.geo[0].geo_key.id,type:this.launderGeoType(this.active.item.geo[0].geo_key.type)}:null;
+      console.log("keyg",keyg)
+} else {
+        // no key? null it out
+        console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, resetting features...":null)
+
+      }
+
+
       // set the active.item (key shopped to arango graph)
       // shop (key) to timeline, activate found entry
       // shop (geo) to map (group layer), activate found entry (openpopup)
@@ -308,133 +422,50 @@ this.initTimeline();
     }, //propagateActive
     routize: function(){
 
-    this.$router.push({ params:{
+      console.log((process.env.VERBOSITY=='DEBUG')?"routize()...":null)
+
+    this.$router.replace({ params:{
       tstart:this.filterz.time.beginz,
       tend:this.filterz.time.endz,
       activeid:this.active.key
-    }})//push
+    }})//rejplace
 
   } //routize
   }, //methods
   computed: {}, //computed
   watch: {
+        // 'active.item.geo': function() {
+        //   // this.routize();
+        //   // this.setItem();
+        //   // this.setGraph();
+        //   this.propagateActive();
+        //   // this.setPageTitle();
+        // },
+        'active.key': function() {
+      console.log((process.env.VERBOSITY=='DEBUG')?"WATCH ACTIVE.KEY...":null)
+          this.setItem();
+          this.setGraph();
+          this.setMap();
+          this.setPageTitle();
+          // this.routize();
+        },
     slidertime: function() {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"watch slidertime...":null)
         // this should only happen once, btw
           this.initSlider();
         }, //watch.slidertime
     timelinetimes: function() {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"watch timelinetimes...":null)
           this.brokerTimeline();
           this.fetchGeo();
         }, //watch.timelinetimes
     geom: function () {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"watch geom...":null)
       this.map();
     } //geom
   } //watch
 } //export.timeline
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-body{
-  /*background-color:rgba(0,0,0,1);*/
-}
-#vue-root{margin:0 1%;background-color:white;}
-.vis-panel{
-  font-weight:800;font-size:.8em;
-}
-#console{
-  background-color:black;
-  color:white;
-}
-  /* ------------------ TIMELINE -- */
-.vis-even{
-  background-color:rgba(0,0,0,.01)
-}
-.vis-odd{
-  background-color:rgba(0,0,0,.05)
-}
-.vis-item {
-    background-color:rgba(91,53,23,1);
-    color:#d8b425;
-    border-color:#d8b422;
-  }
-  .vis-item.vis-box{
-    border-radius:3px;
-  }
-  .vis-item-content{
-    font-weight:800;
-font-size:.8em;
-  }
-  .vis-item.vis-point.vis-selected, .vis-item.vis-selected{
-    background-color:orange;
-    color:rgba(91,53,23,1);
-  }
-  .vis-text.vis-major{
-    font-weight:800;
-    font-size:1.7em;
-  }
-  .vis-text.vis-minor{
-    font-size:.9em;
-    color:rgba(5,5,5,.5);
-  }
-
-  /* ------------------ SLIDER -- */
-  .noUi-handle {
-    border: 2px solid rgba(43,43,43,.8);
-    border-radius: 50%;
-    background: #FFF;
-    cursor: default;
-}
-
-.noUi-handle:focus{
-  outline:none;
-}
-
-.noUi-tooltip {
-    display: none;
-}
-.noUi-active .noUi-tooltip {
-    display: block;
-}
-
-
-  /* ------------------ THROBBER -- */
-
-.throbber {
-  animation: rotator 1.4s linear infinite;
-}
-
-@keyframes rotator {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(270deg); }
-}
-
-.path {
-  stroke-dasharray: 187;
-  stroke-dashoffset: 0;
-  transform-origin: center;
-  animation:
-    dash 1.4s ease-in-out infinite,
-    colors (1.4s*4) ease-in-out infinite;
-}
-
-@keyframes colors {
-  0% { stroke: #4285F4; }
-  25% { stroke: #DE3E35; }
-  50% { stroke: #F7C223; }
-  75% { stroke: #1B9A59; }
-  100% { stroke: #4285F4; }
-}
-
-@keyframes dash {
- 0% { stroke-dashoffset: 187; }
- 50% {
-   stroke-dashoffset: 187/4;
-   transform:rotate(135deg);
- }
- 100% {
-   stroke-dashoffset: 187;
-   transform:rotate(450deg);
- }
-}
-</style>
