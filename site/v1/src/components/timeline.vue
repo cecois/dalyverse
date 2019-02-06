@@ -1,9 +1,6 @@
 <template>
 <div id="vue-root" class="">
     <div class="container">
-  <!-- created->setTimes->axios.get.events->set timelinetimes->setTimeline->setSelection (timeline)->setActiveItem[->setActiveGraph]->wire timeline select
-
-  (setActiveItem last) -->
 
   <vue-headful
             :title="page.title"
@@ -12,6 +9,7 @@
 <div id="console">
 <div class="columns is-size-7">
 <div class="column"><code v-if="console">{{console.msg}}</code></div>
+<div class="column"><code v-if="active.key">{{active.key}}</code></div>
 </div>
 
   <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
@@ -165,31 +163,32 @@ this.slider.on('change', (values,handle)=>{
     }, //timeminmax
     initTimeline: function () {
 
-          // old magic
-          // var that = this;
-
            const el = this.$el.querySelector('#line')
            // create the Timeline
-           // var titems = new vis.DataSet(this.timelinetimes);
            var titems = this.timelinetimes;
            this.timeline = new vis.Timeline(el, titems, {});
 
-    // and bootstrap data
+// old magic
+            var that = this;
+
           // now we wire up click-selection
-           // this.timeline.on('select',function (properties){
-            // if it's active alrady we deactivate
+           this.timeline.on('select',function (properties){
+
+console.info("in timeline.select event...")
+console.info('props.key:',properties.items[0])
+console.info('active.key:',that.active.key)
+            // // if it's active alrady we deactivate
             // if(properties.items[0]==that.active.key){
-                    // that.active.key=null
-                                  // this.setSelection(null);
-                                  // that.setActiveItem();
+            //         that.active.key=null
+            //                       // this.setSelection(null);
+            //                       // that.setActiveItem();
             // } else {
-                    // that.active.key=properties.items[0]
-                    // this.setSelection(properties.items[0]);
-              // }//else itemselect matches active.key
+            //         that.active.key=properties.items[0]
+            //         // this.setSelection(properties.items[0]);
+            //   }//else itemselect matches active.key
               // that.setActiveItem();
-          // })//.on
+          })//.on
            // that.setActiveItem()
-        // }//timeline.create and wireup
 
     }, //inittimeline
     fetchEvents: function () {
@@ -293,12 +292,11 @@ console.log("no timeline - you're the timeline (initting timeline)...")
 this.initTimeline();
       } //if.this.timeline
       else {
-console.log("setTimeline...")
         this.setTimeline();
       }
 
     }, //brokerTimeline
-    setActive: function () {
+    propagateActive: function () {
 
       // take the active.key
       // set the active.item (key shopped to arango graph)
@@ -307,7 +305,7 @@ console.log("setTimeline...")
       // if the key isn't already in the route (e.g. fresh click), add it (if it's there already we coming in from a url)
 
 
-    }, //setactive
+    }, //propagateActive
     routize: function(){
 
     this.$router.push({ params:{
