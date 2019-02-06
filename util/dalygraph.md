@@ -23,15 +23,14 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 
 # VUE
 
+## todo
+	* [?]indicate where along slider active item resides
+
 ## EVENTS
 
 ### URL
 	tstart,tend,activetimelineitem
-### ONLOAD
-	console.msg
-	fetch items in range
-	_.map timetimes
-	map places
+
 ### ACTIVATEITEM
 	render participants
 	zoom place
@@ -44,6 +43,10 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 
 		"hasParticipant"
 		"occurredAt"
+
+##### keys
+	* this.geom(each): {type:this.geoKeyLaunder(g.geometry.type),id:g.properties.cartodb_id)}
+	* this.timelinetimes(each): {type:t.geo[0].geo_key.type,id:t.geo[0].geo_key.id}
 
 # GRAPH
 

@@ -124,6 +124,8 @@ this.console={msg:"mounted",throb:false,clazz:""}
         }
         })
 
+
+
 /* ----------------------- WIRE/REWIRE ---------- */
 // var that=this;
 // this.slider.on('update', function(values,handle){
@@ -140,6 +142,7 @@ this.slider.on('change', (values,handle)=>{
   this.routize();
 
 });
+
 
     }, //initslider
     fetchTimeMinMax: function () {
@@ -235,7 +238,7 @@ L.geoJSON(this.geom, {
             }
 }).bindPopup(function(layer){
 
-    return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5><div class="has-text-muted">'+ev_key.article+'['+ev_key.id+'])</div></div>'
+    return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5><div class="has-text-muted"></div></div>'
 
 }).on('popupopen',function(feature){
     // get eventkey (e.g. '_:lronhubbardsspectaclesarefound', set Vue.active.key)
@@ -267,7 +270,7 @@ let geoms = this.$_.map(
     }
   })
 
-var u = "http://milleria.org:3030/geoms/cbb?q="+this.$_.pluck(geoms,'geokey').join(',')
+var u = (process.env.MODE !== 'T')?"http://milleria.org:3030/geoms/cbb?q="+this.$_.pluck(geoms,'geokey').join(','):'http://localhost:8000/dalyverse-geoms-T.json'
 this.console.msg="fetching associated geometries...";
 
   axios.get(u)
@@ -295,6 +298,16 @@ console.log("setTimeline...")
       }
 
     }, //brokerTimeline
+    setActive: function () {
+
+      // take the active.key
+      // set the active.item (key shopped to arango graph)
+      // shop (key) to timeline, activate found entry
+      // shop (geo) to map (group layer), activate found entry (openpopup)
+      // if the key isn't already in the route (e.g. fresh click), add it (if it's there already we coming in from a url)
+
+
+    }, //setactive
     routize: function(){
 
     this.$router.push({ params:{
@@ -316,9 +329,7 @@ console.log("setTimeline...")
           this.fetchGeo();
         }, //watch.timelinetimes
     geom: function () {
-
       this.map();
-
     } //geom
   } //watch
 } //export.timeline
@@ -379,6 +390,13 @@ font-size:.8em;
 
 .noUi-handle:focus{
   outline:none;
+}
+
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
 }
 
 
