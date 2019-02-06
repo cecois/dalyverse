@@ -97,9 +97,7 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
       this.fetchEvents();
 
 // now with some data in place we can default some app elements:
-      // this.$nextTick(function() {
-      //   this.initArchitecture();
-      // });
+      
 
     }, //initData
 
@@ -174,18 +172,31 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
 
 console.info((process.env.VERBOSITY=='DEBUG')?"timeline.on.select":null)
 
+
+console.log("that.active.key",that.active.key)
+console.log("properties.items[0]",properties.items[0])
+
+
             // // if it's active alrady we deactivate
-// if(properties.items[0]==that.active.key){
-// console.info((process.env.VERBOSITY=='DEBUG')?"key already active":null)
+if(properties.items[0]==that.active.key){
+console.info((process.env.VERBOSITY=='DEBUG')?"key already active":null)
 // that.active.key=null
-                                  // this.setSelection(null);
+// that.console.msg="woulda setsel null here"
+properties.event.preventDefault();
+                                  this.setSelection([]);
+
+                                  that.$nextTick(function() {
+                                    that.active.key=null;
+                                  });
+
                                   // this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
             //                       // that.setActiveItem();
-// } else {
-// console.info((process.env.VERBOSITY=='DEBUG')?"key not already, setting...":null)
-// that.active.key=properties.items[0]
-            //         // this.setSelection(properties.items[0]);
-// }//else matches active.key
+} else {
+properties.event.preventDefault();
+console.info((process.env.VERBOSITY=='DEBUG')?"key not already, setting...":null)
+that.active.key=properties.items[0]
+                    // this.setSelection(properties.items[0]);
+}//else matches active.key
 
 // this.setSelection(that.active.key)
 
