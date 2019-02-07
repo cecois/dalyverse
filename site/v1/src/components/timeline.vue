@@ -169,23 +169,32 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
 
 // properties.event.preventDefault();
 //         properties.event.stopPropagation();
+// console.log("properties in select:")
+// console.log(properties);
 
 console.info((process.env.VERBOSITY=='DEBUG')?"timeline.on.select":null)
 
 
-console.log("that.active.key",that.active.key)
-console.log("properties.items[0]",properties.items[0])
+// console.log("that.active.key",that.active.key)
+// console.log("properties.items[0]",properties.items[0])
 
 
-            // // if it's active alrady we deactivate
+// if(properties.items.length<1){
+
+// console.info((process.env.VERBOSITY=='DEBUG')?"no items - a click off an item?":null)
+
+//    that.$nextTick(function() {
+//                                     that.active.key=null;
+//                                   });
+
+// } else 
 if(properties.items[0]==that.active.key){
 console.info((process.env.VERBOSITY=='DEBUG')?"key already active":null)
-// that.active.key=null
-// that.console.msg="woulda setsel null here"
+
 properties.event.preventDefault();
                                   this.setSelection([]);
 
-                                  that.$nextTick(function() {
+                                     that.$nextTick(function() {
                                     that.active.key=null;
                                   });
 
@@ -458,7 +467,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
           this.setGraph();
           this.setMap();
           this.setPageTitle();
-          // this.routize();
+          this.routize();
         },
     slidertime: function() {
 
