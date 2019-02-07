@@ -1,5 +1,15 @@
 [
   {
+    "_key": "_:lavergnefamilydinner001",
+    "name": "Lavergne Family Dinner #1",
+    "article": "Lavergne Family Dinner #1 was an attempt by the Lavergne family in early 2016 to have dinner. The event did not make it through grace.",
+    "timestamp": {"start":"2016-02-01T19:00:00Z","end":null},
+    "nb_timestamp": {
+      "class": "estimate-week",
+      "nb": "estimate is rel. to SE#S3.5"
+    }
+  },
+  {
     "_key": "_:cactustonyscoloradoarson",
     "name": "Cactus Tony Sets a Devastating Colorado Forest Fire",
     "article": "In a romantic gesture meant to portray his lover as a hero, Cactus Tony sets what would become one of the worst fires in the history of Colorado.",

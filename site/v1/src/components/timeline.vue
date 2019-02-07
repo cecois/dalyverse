@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
 <div id="vue-root" class="">
     <div class="container">
@@ -99,7 +100,7 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
       this.fetchEvents();
 
 // now with some data in place we can default some app elements:
-      
+
 
     }, //initData
 
@@ -114,6 +115,7 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
 
       this.slider = this.$NOUISLIDER.create(slider, {
         start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
+        // start: [, ],
         connect: true,
         pips: {
             mode: 'range',
@@ -122,9 +124,11 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
         tooltips: [{to: effer, from:Number}, {to: effer, from:Number}],
         range: {
             // 'min': parseInt(this.$MOMENT('1970-09-03').subtract(2,'years').format('YYYY')),
-            'min': this.$MOMENT('1970-09-03').subtract(2,'years').valueOf(),
+            // 'min': this.$MOMENT('1970-09-03').subtract(2,'years').valueOf(),
+            'min': parseInt(this.$MOMENT('1970-09-03').subtract(2,'years').format('YYYY')),
             // 'max': parseInt(this.$MOMENT(this.slidertime.max).add(2,'years').format('YYYY'))
-            'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
+            // 'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
+            'max': parseInt(this.$MOMENT(this.slidertime.max).add(2,'years').format('YYYY'))
         },
         // format: {
         //   to: function (value) {
@@ -216,7 +220,7 @@ that.flightCheck();
                                                     that.active.key=null;
                                                   });
 
-                } else 
+                } else
                 if(properties.items[0]==that.active.key){
                 console.info((process.env.VERBOSITY=='DEBUG')?"this item already the active key - DESELECT AND SET ACTIVE KEY TO NULL.":null)
 
@@ -400,7 +404,7 @@ return {
 
     // yes? set the active item based on the active key found in events
     let ai = this.$_.findWhere(this.timelinetimes, {id:this.active.key});
-    
+
       console.log((process.env.VERBOSITY=='DEBUG')?ai:null)
 this.active.item=(ai)?ai:this.nullItem();
 

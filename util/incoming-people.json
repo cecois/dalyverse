@@ -1,4 +1,40 @@
 [
+  {"_key":"grandmotherpearlalavergne",
+    "name":"Grandmother Pearla",
+  "article": "Grandmother Pearla the matriarch of the Lavergne family."},
+  {"_key":"thomaslavergne",
+    "name":"Thomas Lavergne",
+  "article":,"Thomas Lavergne is a member of the Lavergne family."},
+  {"_key":"michaellavergne",
+    "name":"Michael Lavergne",
+  "article":,"Michael Lavergne is a member of the Lavergne family."},
+  {"_key":"arthurlavergne",
+    "name":"Arthur Lavergne",
+  "article":,"Arthur Lavergne is a member of the Lavergne family."},
+  {
+    "_key": "_:stevefaye",
+    "name": "Steve Faye",
+    "death_by": "unk.",
+    "article": "Steve Faye is a Hare Krishna from Hartford, CT, who was pre-med before he found Hare Krishna and suffers from A) Schizotypal Personality Disorder, B) occasional hunger before dinner, and C) an insatiable appetite for potatoes."
+  },
+  {
+    "_key": "_:forestcarlisle",
+    "name": "Forest Carlisle",
+    "death_by": "unk.",
+    "article": "Forest Carlisle was Mary Todd Lincoln's 'Mental Sickness Doctor.' In an effort to make Ms. Lincoln healthier and/or happier, he tried 'all of the modern techniques at the time' including 'poking her with fire'; 'dangling her out the window'; and 'threatening to bury her alive.'"
+  },
+  {
+    "_key": "_:marytoddlincoln",
+    "name": "Mary Todd Lincoln",
+    "death_by": "stroke",
+    "article": "First Lady of the United States from 1861 to 1865."
+    "links": [
+      {
+        "uri": "https://en.wikipedia.org/wiki/Mary_Todd_Lincoln",
+        "label": "Wikipedia"
+      }
+    ]
+  },
   {
     "_key": "_:irenetherockette",
     "name": "Irene the Rockette",
