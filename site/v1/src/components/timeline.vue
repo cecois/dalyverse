@@ -172,37 +172,37 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
 // console.log("properties in select:")
 // console.log(properties);
 
-console.info((process.env.VERBOSITY=='DEBUG')?"timeline.on.select":null)
+// console.info((process.env.VERBOSITY=='DEBUG')?"timeline.on.select":null)
 
 
 // console.log("that.active.key",that.active.key)
 // console.log("properties.items[0]",properties.items[0])
 
 
-// if(properties.items.length<1){
+if(properties.items.length<1){
 
-// console.info((process.env.VERBOSITY=='DEBUG')?"no items - a click off an item?":null)
+console.info((process.env.VERBOSITY=='DEBUG')?"no items - a click off an item? SET KEY TO NULL.":null)
 
-//    that.$nextTick(function() {
-//                                     that.active.key=null;
-//                                   });
-
-// } else 
-if(properties.items[0]==that.active.key){
-console.info((process.env.VERBOSITY=='DEBUG')?"key already active":null)
-
-properties.event.preventDefault();
-                                  this.setSelection([]);
-
-                                     // that.$nextTick(function() {
+   that.$nextTick(function() {
                                     that.active.key=null;
-                                  // });
+                                  });
 
-                                  // this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
+} else 
+if(properties.items[0]==that.active.key){
+console.info((process.env.VERBOSITY=='DEBUG')?"this item already the active key - DESELECT AND SET ACTIVE KEY TO NULL.":null)
+
+// properties.event.preventDefault();
+//                                   this.setSelection([]);
+
+                                  this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
+                                     that.$nextTick(function() {
+                                    that.active.key=null;
+                                  });
+
             //                       // that.setActiveItem();
 } else {
-properties.event.preventDefault();
-console.info((process.env.VERBOSITY=='DEBUG')?"key not already, setting...":null)
+// properties.event.preventDefault();
+console.info((process.env.VERBOSITY=='DEBUG')?"key doesn't match selected item (and items.length>0), setting...":null)
 that.active.key=properties.items[0]
                     // this.setSelection(properties.items[0]);
 }//else matches active.key
@@ -374,15 +374,19 @@ return {
       console.log((process.env.VERBOSITY=='DEBUG')?"setItem()...":null)
 
 // is it still a viable key?
-if(this.active.key !== null && this.active.item.id!==this.active.key){
+// if(this.active.key !== null && this.active.item.id!==this.active.key){
 
     // yes? set the active item based on the active key found in events
-this.active.item=(this.$_.findWhere(this.timelinetimes, {id:this.active.key}))
-    }  else {
-        // no key? null it out
-        console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, nulling item...":null)
-        this.active.item = this.nullItem()
-      }
+    let ai = this.$_.findWhere(this.timelinetimes, {id:this.active.key});
+    
+      console.log((process.env.VERBOSITY=='DEBUG')?ai:null)
+this.active.item=(ai)?ai:this.nullItem();
+
+    // }  else {
+    //     // no key? null it out
+    //     console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, nulling item...":null)
+    //     this.active.item = this.nullItem()
+    //   }
     // if(this.active.item.id!==this.active.key){
     //     ?this.$_.findWhere(this.timelinetimes, {id:this.active.key}):this.active.item;
     //   }
@@ -464,10 +468,9 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
         'active.key': function() {
       console.log((process.env.VERBOSITY=='DEBUG')?"WATCH ACTIVE.KEY...":null)
           this.setItem();
-          this.setGraph();
-          this.setMap();
-          this.setPageTitle();
-          console.log("route right before routize in key watch:");console.log(this.$route.params)
+          // this.setGraph();
+          // this.setMap();
+          // this.setPageTitle();
           this.routize();
         },
     slidertime: function() {

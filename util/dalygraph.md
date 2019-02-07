@@ -35,6 +35,7 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 	render participants
 	zoom place
 	highlight place
+	$vm0.$_.each($vm0.timeline.itemSet.items,(itm)=>{ let uu = (itm.selected)?itm:null;console.log(uu); });
 
 
 ### EVENTS.events
