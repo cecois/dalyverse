@@ -65,6 +65,8 @@ page:{title:"Andy Dalyverse Events"},
   },//beforeCreate
   created () {
 
+    console.log((process.env.VERBOSITY=='DEBUG')?"in CREATED, about to process incoming vars":null);
+
 this.console={msg:"loading...",throb:true,clazz:"mdi-clock"}
 this.filterz.time.beginz=(this.$route.params.tstart)?this.$route.params.tstart:this.filterz.time.beginz;
 this.filterz.time.endz=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
@@ -108,6 +110,8 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
 
       var effer = (v)=>{return this.$MOMENT(v).format('YYYY.MMM.DD');}
 
+      var that = this;
+
       this.slider = this.$NOUISLIDER.create(slider, {
         start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
         connect: true,
@@ -117,9 +121,28 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
         },
         tooltips: [{to: effer, from:Number}, {to: effer, from:Number}],
         range: {
+            // 'min': parseInt(this.$MOMENT('1970-09-03').subtract(2,'years').format('YYYY')),
             'min': this.$MOMENT('1970-09-03').subtract(2,'years').valueOf(),
+            // 'max': parseInt(this.$MOMENT(this.slidertime.max).add(2,'years').format('YYYY'))
             'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
-        }
+        },
+        // format: {
+        //   to: function (value) {
+        //     // console.log("DV: raw TO value",value)
+        //     // console.log("DV: moment TO value",that.$MOMENT.unix(value).format('YYYY'))
+        //               // return value;
+        //               // return that.$MOMENT.unix(value).format('YYYY');
+        //               return '';
+        //           },
+        //           from: function (value) {
+        //             // console.log("DV: raw FROM value",value)
+        //             // console.log("DV: moment FROM value",that.$MOMENT.unix(value).format('YYYY'))
+
+        //               // return value;
+        //               // return that.$MOMENT.unix(value).format('YYYY');
+        //               return '';
+        //           }
+        // }
         })
 
 
@@ -153,6 +176,17 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
         })//axios.catch
 
     }, //timeminmax
+    flightCheck: function () {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"this postcludes all inits (and pre- the map stuff)":null)
+      console.log((process.env.VERBOSITY=='DEBUG')?"flightCheck()...":null)
+
+      // check sliders match filterz
+      console.log(this.$MOMENT(this.slider.get('handles')[0]).format('YYYY-MM-DD'))
+      console.log(this.$MOMENT(this.slider.get('handles')[1]).format('YYYY-MM-DD'))
+      // check timeline selected
+
+    }, //flightCheck
     initTimeline: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"initTimeline()...":null)
@@ -164,50 +198,38 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
 
             var that = this; // that old magic
 
+this.$nextTick(function(){
+
+that.flightCheck();
+
+});
+            // this.setSelection(that.active.key)
+
           // now we wire up click-selection
            this.timeline.on('select',function (properties){
 
-// properties.event.preventDefault();
-//         properties.event.stopPropagation();
-// console.log("properties in select:")
-// console.log(properties);
+                if(properties.items.length<1){
 
-// console.info((process.env.VERBOSITY=='DEBUG')?"timeline.on.select":null)
+                console.info((process.env.VERBOSITY=='DEBUG')?"no items - a click off an item? SET KEY TO NULL.":null)
 
+                   that.$nextTick(function() {
+                                                    that.active.key=null;
+                                                  });
 
-// console.log("that.active.key",that.active.key)
-// console.log("properties.items[0]",properties.items[0])
+                } else 
+                if(properties.items[0]==that.active.key){
+                console.info((process.env.VERBOSITY=='DEBUG')?"this item already the active key - DESELECT AND SET ACTIVE KEY TO NULL.":null)
 
+                                                  this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
+                                                     that.$nextTick(function() {
+                                                    that.active.key=null;
+                                                  });
 
-if(properties.items.length<1){
-
-console.info((process.env.VERBOSITY=='DEBUG')?"no items - a click off an item? SET KEY TO NULL.":null)
-
-   that.$nextTick(function() {
-                                    that.active.key=null;
-                                  });
-
-} else 
-if(properties.items[0]==that.active.key){
-console.info((process.env.VERBOSITY=='DEBUG')?"this item already the active key - DESELECT AND SET ACTIVE KEY TO NULL.":null)
-
-// properties.event.preventDefault();
-//                                   this.setSelection([]);
-
-                                  this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
-                                     that.$nextTick(function() {
-                                    that.active.key=null;
-                                  });
-
-            //                       // that.setActiveItem();
-} else {
-// properties.event.preventDefault();
-console.info((process.env.VERBOSITY=='DEBUG')?"key doesn't match selected item (and items.length>0), setting...":null)
-that.active.key=properties.items[0]
-                    // this.setSelection(properties.items[0]);
-}//else matches active.key
-
-// this.setSelection(that.active.key)
+                            //                       // that.setActiveItem();
+                } else {
+                console.info((process.env.VERBOSITY=='DEBUG')?"key doesn't match selected item (and items.length>0), setting...":null)
+                that.active.key=properties.items[0]
+                }//else matches active.key
 
           })//.on
 
@@ -443,7 +465,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
       // if the key isn't already in the route (e.g. fresh click), add it (if it's there already we coming in from a url)
 
 
-    }, //propagateActive
+    }, //setMap
     routize: function(){
 
       console.log((process.env.VERBOSITY=='DEBUG')?"routize()...":null)
@@ -466,7 +488,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
         //   // this.setPageTitle();
         // },
         'active.key': function() {
-      console.log((process.env.VERBOSITY=='DEBUG')?"WATCH ACTIVE.KEY...":null)
+      console.log((process.env.VERBOSITY=='DEBUG')?"FIRING WATCH ACTIVE.KEY...":null)
           this.setItem();
           // this.setGraph();
           // this.setMap();
@@ -475,19 +497,19 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
         },
     slidertime: function() {
 
-      console.log((process.env.VERBOSITY=='DEBUG')?"watch slidertime...":null)
+      console.log((process.env.VERBOSITY=='DEBUG')?"firing watch slidertime...":null)
         // this should only happen once, btw
           this.initSlider();
         }, //watch.slidertime
     timelinetimes: function() {
 
-      console.log((process.env.VERBOSITY=='DEBUG')?"watch timelinetimes...":null)
+      console.log((process.env.VERBOSITY=='DEBUG')?"firing watch timelinetimes...":null)
           this.brokerTimeline();
           this.fetchGeo();
         }, //watch.timelinetimes
     geom: function () {
 
-      console.log((process.env.VERBOSITY=='DEBUG')?"watch geom...":null)
+      console.log((process.env.VERBOSITY=='DEBUG')?"firing watch geom...":null)
       this.map();
     } //geom
   } //watch
