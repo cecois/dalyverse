@@ -194,9 +194,9 @@ console.info((process.env.VERBOSITY=='DEBUG')?"key already active":null)
 properties.event.preventDefault();
                                   this.setSelection([]);
 
-                                     that.$nextTick(function() {
+                                     // that.$nextTick(function() {
                                     that.active.key=null;
-                                  });
+                                  // });
 
                                   // this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
             //                       // that.setActiveItem();
@@ -444,7 +444,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
 
       console.log((process.env.VERBOSITY=='DEBUG')?"routize()...":null)
 
-    this.$router.replace({ params:{
+    this.$router.push({ params:{
       tstart:this.filterz.time.beginz,
       tend:this.filterz.time.endz,
       activeid:this.active.key
@@ -467,6 +467,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
           this.setGraph();
           this.setMap();
           this.setPageTitle();
+          console.log("route right before routize in key watch:");console.log(this.$route.params)
           this.routize();
         },
     slidertime: function() {
