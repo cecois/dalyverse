@@ -1,16 +1,39 @@
 [
-  {"_key":"grandmotherpearlalavergne",
-    "name":"Grandmother Pearla",
-  "article": "Grandmother Pearla the matriarch of the Lavergne family."},
-  {"_key":"thomaslavergne",
-    "name":"Thomas Lavergne",
-  "article":,"Thomas Lavergne is a member of the Lavergne family."},
-  {"_key":"michaellavergne",
-    "name":"Michael Lavergne",
-  "article":,"Michael Lavergne is a member of the Lavergne family."},
-  {"_key":"arthurlavergne",
-    "name":"Arthur Lavergne",
-  "article":,"Arthur Lavergne is a member of the Lavergne family."},
+  {
+    "_key": "mrsbronson",
+    "name": "Mrs. Bronson",
+    "article": "Mrs. Bronson is a school teacher who, following a weekend spent with theatrical director Don DiMello, was on medical leave for 6-8 weeks."
+  },
+  {
+    "_key": "astormhendry",
+    "name": "Astor M. Hendry",
+    "article": "Astor M. Hendry is a passenger who openly admits to 'transporting monsters' on the Amtrak Heartland Flyer regional train."
+  },
+  {
+    "_key": "scottlavendar",
+    "name": "Scott Lavendar",
+    "article": "Scott Lavendar is a frequentor of the Amtrak Heartland Flyer regional passenger train, to the point that he believes he, in fact, my literally have never been off of it. His education is 'the kind of education you can get on a train,' which has possessed him of the following skills: finding mice; imagining there's been a murder. He doesn't recommend reading because 'books get in your head and make you do bad things.'"
+  },
+  {
+    "_key": "grandmotherpearlalavergne",
+    "name": "Grandmother Pearla",
+    "article": "Grandmother Pearla the matriarch of the Lavergne family."
+  },
+  {
+    "_key": "thomaslavergne",
+    "name": "Thomas Lavergne",
+    "article": "Thomas Lavergne is a member of the Lavergne family."
+  },
+  {
+    "_key": "michaellavergne",
+    "name": "Michael Lavergne",
+    "article": "Michael Lavergne is a member of the Lavergne family."
+  },
+  {
+    "_key": "arthurlavergne",
+    "name": "Arthur Lavergne",
+    "article": "Arthur Lavergne is a member of the Lavergne family."
+  },
   {
     "_key": "_:stevefaye",
     "name": "Steve Faye",
@@ -27,7 +50,7 @@
     "_key": "_:marytoddlincoln",
     "name": "Mary Todd Lincoln",
     "death_by": "stroke",
-    "article": "First Lady of the United States from 1861 to 1865."
+    "article": "First Lady of the United States from 1861 to 1865.",
     "links": [
       {
         "uri": "https://en.wikipedia.org/wiki/Mary_Todd_Lincoln",

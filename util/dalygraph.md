@@ -26,6 +26,15 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 ## todo
 	* [?]indicate where along slider active item resides
 
+## MAPSTYLIN
+
+	* $vm0.map_feature_group.eachLayer(function(L) {
+  let lg = L.toGeoJSON();
+  let lgtype = lg.features[0].geometry.type;
+  let lgid = lg.features[0].properties.cartodb_id;
+      console.log("LID:",lgtype+":"+lgid)
+    })
+
 ## EVENTS
 
 ### URL

@@ -9,14 +9,14 @@ body{
   /*background-color:rgba(0,0,0,1);*/
 }
 #vue-root{margin:0 1%;background-color:white;}
-.vis-panel{
-  font-weight:800;font-size:.8em;
-}
 #console{
   background-color:black;
   color:white;
 }
 /* ------------------ TIMELINE -- */
+.vis-panel{
+  font-weight:800;font-size:.8em;
+}
 .vis-even{
   background-color:rgba(0,0,0,.01)
 }

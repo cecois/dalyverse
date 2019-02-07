@@ -1,16 +1,14 @@
 /* eslint-disable */
 <template>
 <div id="vue-root" class="">
-    <div class="container">
+  <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
 
-  <vue-headful
-            :title="page.title"
-        description="Events Timeline and Graph from the Andy Dalyverse"
-        />
+    <div class="container">
 <div id="console">
 <div class="columns is-size-7">
 <div class="column"><code v-if="console">{{console.msg}}</code></div>
 </div>
+
 
   <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
           <i :class="console.clazz" class="mdi"></i>
@@ -20,12 +18,22 @@
 <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div>
 <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div>
 <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div>
-<!-- <div class="column" v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></div> -->
+<div class="column" v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></div>
 <div class="column" v-if="active.item">active.item.content:<code>{{active.item.content}}</code></div>
-<!-- <div class="column" v-if="active.item">active.item.article:<code>{{active.item.article}}</code></div> -->
 <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div>
 <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-</div></div>
+</div>
+
+<div class="columns is-size-7">
+  <div class="column" v-if="active.item">active.item.article:<code>{{active.item.article}}</code></div>
+</div>
+
+<div class="columns is-size-7">
+<div class="column" v-if="active.graph">active.graph.locations:<code>{{active.graph.locations}}</code></div>
+<div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div>
+</div>
+
+</div><!-- #console -->
 
 <div id="slider"/>
 <div id="line"/>
@@ -186,9 +194,15 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
       console.log((process.env.VERBOSITY=='DEBUG')?"flightCheck()...":null)
 
       // check sliders match filterz
-      console.log(this.$MOMENT(this.slider.get('handles')[0]).format('YYYY-MM-DD'))
-      console.log(this.$MOMENT(this.slider.get('handles')[1]).format('YYYY-MM-DD'))
       // check timeline selected
+
+      if(this.active.key){
+      console.log((process.env.VERBOSITY=='DEBUG')?"now we timeline.setSelection w/ "+this.active.key:null)
+
+this.timeline.setSelection(this.active.key)
+this.setItem()
+
+      }
 
     }, //flightCheck
     initTimeline: function () {
@@ -264,6 +278,36 @@ that.flightCheck();
       this.timeline.fit({ duration: 400, easingFunction: 'linear'});
 
     }, //settimeline
+    featureStyle: function (f) {
+
+let stile = {
+      radius: 10,
+      fillColor: 'purple',
+      color: "#000",
+      weight: 1,
+      opacity: .8,
+      fillOpacity: 1,
+    }
+
+switch (true) {
+  case (1==0):
+    // statements_1
+    break;
+  default:
+    stile = {
+      radius: 18,
+      fillColor: 'yellow',
+      color: "#000",
+      weight: 1,
+      opacity: .8,
+      fillOpacity: 1,
+    }
+    break;
+}
+
+return stile;
+
+    }, //featurestyle
     map: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"map()...":null)
@@ -272,19 +316,10 @@ that.flightCheck();
         this.console.msg="no geometries within range"
       } else {
 
- var stile = {
-      radius: 18,
-      fillColor: 'green',
-      color: "#000",
-      weight: 1,
-      opacity: .8,
-      fillOpacity: 1,
-    }
-
   this.map_feature_group.clearLayers()
 
 L.geoJSON(this.geom, {
-    style: stile,
+    style: this.featureStyle(feature),
     pointToLayer: function(feature, latlng) {
 
               return L.circleMarker(latlng, stile);
@@ -504,7 +539,12 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch slidertime...":null)
         // this should only happen once, btw
           this.initSlider();
-        }, //watch.slidertime
+        },
+    'active.item.id': function() {
+
+      console.log((process.env.VERBOSITY=='DEBUG')?"firing watch item.id...":null)
+          this.setGraph();
+        }, //watch.item.id
     timelinetimes: function() {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch timelinetimes...":null)

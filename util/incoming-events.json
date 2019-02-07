@@ -1,5 +1,15 @@
 [
   {
+    "_key": "_:mrsbronsongoesmissing",
+    "name": "Mrs. Bronson Goes on Medical Leave",
+    "article": "Following a weekend with Don DiMello that ended in 'frictions,' Mrs. Bronson was unable to teach her grade school class for 6-8 weeks, during which time Mr. DiMello himself substituted.",
+    "timestamp": {"start":"2016-03-28T08:00:00Z","end":"2016-05-14T08:00:00Z"},
+    "nb_timestamp": {
+      "class": "estimate-prior-to",
+      "nb": "estimate is rel. to SE#S4.2 - monday morning class assembles to find teacher missing since 'friday night'"
+    }
+  },
+  {
     "_key": "_:lavergnefamilydinner001",
     "name": "Lavergne Family Dinner #1",
     "article": "Lavergne Family Dinner #1 was an attempt by the Lavergne family in early 2016 to have dinner. The event did not make it through grace.",
