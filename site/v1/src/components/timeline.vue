@@ -280,6 +280,8 @@ that.flightCheck();
     }, //settimeline
     featureStyle: function (f) {
 
+console.log("f in featurestyle:",f);
+
 let stile = {
       radius: 10,
       fillColor: 'purple',
@@ -290,10 +292,7 @@ let stile = {
     }
 
 switch (true) {
-  case (1==0):
-    // statements_1
-    break;
-  default:
+  case (f.properties.cartodb_id==409):
     stile = {
       radius: 18,
       fillColor: 'yellow',
@@ -301,6 +300,16 @@ switch (true) {
       weight: 1,
       opacity: .8,
       fillOpacity: 1,
+    }
+    break;
+  default:
+    stile = {
+      radius: 12,
+      fillColor: 'purple',
+      color: "#000",
+      weight: 1,
+      opacity: .8,
+      fillOpacity: .7,
     }
     break;
 }
@@ -319,10 +328,15 @@ return stile;
   this.map_feature_group.clearLayers()
 
 L.geoJSON(this.geom, {
-    style: this.featureStyle(feature),
-    pointToLayer: function(feature, latlng) {
+    style: (feature)=>{
+      // console.log("featureStyle res:",this.featureStyle(feature));
+        return this.featureStyle(feature)
+    },
+    pointToLayer: (feature, latlng)=>{
 
-              return L.circleMarker(latlng, stile);
+// var stile = this.featureStyle(feature);
+// console.log("stile w/in pointtolayer",stile);
+              return L.circleMarker(latlng);
             }
 }).bindPopup(function(layer){
 
