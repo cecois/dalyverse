@@ -98,8 +98,8 @@ this.initData();
   },//created
   mounted: function () {
 
-    console.log((process.env.VERBOSITY=='DEBUG')?"mounted":null);
-this.console={msg:"mounted",throb:false,clazz:""}
+    // console.log((process.env.VERBOSITY=='DEBUG')?"mounted":null);
+// this.console={msg:"mounted",throb:false,clazz:""}
 // this.setPageTitle();
 // this.setTimes()
 
@@ -257,6 +257,7 @@ this.timeline.setSelection()
 
                                                     that.active.key=null;
                                                     // also manually deselect
+                                                    this.setSelection();
                 } else {
                 console.info((process.env.VERBOSITY=='DEBUG')?"clicked item id doesn't match current active.id, setting active.id to "+properties.item:null)
             that.active.key=properties.item
@@ -567,29 +568,29 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch slidertime...":null)
         // this should only happen once, btw
-          this.initSlider();
+          // this.initSlider();
         },
     'active.item.id': function() {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch item.id...":null)
-          this.setGraph();
-          this.setMap();
+          // this.setGraph();
+          // this.setMap();
 
-          this.$nextTick(function(){
-this.flightCheck();
-});
+//           this.$nextTick(function(){
+// this.flightCheck();
+// });
 
         }, //watch.item.id
     timelinetimes: function() {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch timelinetimes...":null)
-          this.brokerTimeline();
-          this.fetchGeo();
+          // this.brokerTimeline();
+          // this.fetchGeo();
         }, //watch.timelinetimes
     geom: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch geom...":null)
-      this.setMap();
+      // this.setMap();
     } //geom
   } //watch
 } //export.timeline
