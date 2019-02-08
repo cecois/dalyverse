@@ -4,6 +4,17 @@
   <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
 
     <div class="container">
+    <div class="section" style="padding-top:0;margin-top:0;">
+<!-- -------------------------------------------------------------- SLIDER -->
+<div id="slider"/>
+<!-- -------------------------------------------------------------- TIMELINE -->
+<div id="line"/>
+
+</div><!-- /.section -->
+
+
+<!-- -------------------------------------------------------------- CONSOLE -->
+    <div class="section" style="padding-top:0;margin-top:0;">
 <div id="console">
 <div class="columns is-size-7">
 <div class="column"><code v-if="console">{{console.msg}}</code></div>
@@ -14,29 +25,30 @@
           <i :class="console.clazz" class="mdi"></i>
         </span>
 <hr/> -->
-<div class="columns is-size-7">
+<div class="columns is-size-5">
 <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div>
-<div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div>
-<div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div>
+<!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div>
+<div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
 <div class="column" v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></div>
+
 <div class="column" v-if="active.item">active.item.content:<code>{{active.item.content}}</code></div>
 <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div>
+
 <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
 </div>
 
-<div class="columns is-size-7">
+<div class="columns is-size-5">
   <div class="column" v-if="active.item">active.item.article:<code>{{active.item.article}}</code></div>
 </div>
 
-<div class="columns is-size-7">
-<div class="column" v-if="active.graph">active.graph.locations:<code>{{active.graph.locations}}</code></div>
-<div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div>
+<div class="columns is-size-5">
+<div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div>
+<div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div>
 </div>
 
 </div><!-- #console -->
+</div><!-- /.section -->
 
-<div id="slider"/>
-<div id="line"/>
     </div><!-- /.container -->
 </div><!-- ./#vue-root -->
 </template>
@@ -122,7 +134,7 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
       var that = this;
 
       this.slider = this.$NOUISLIDER.create(slider, {
-        start: [this.$MOMENT(this.filterz.time.beginz, "YYYYMMDD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYYMMDD").valueOf()],
+        start: [this.$MOMENT(this.filterz.time.beginz, "YYYY-MM-DD").valueOf(), this.$MOMENT(this.filterz.time.endz, "YYYY-MM-DD").valueOf()],
         // start: [, ],
         connect: true,
         pips: {
@@ -133,10 +145,10 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
         range: {
             // 'min': parseInt(this.$MOMENT('1970-09-03').subtract(2,'years').format('YYYY')),
             // 'min': this.$MOMENT('1970-09-03').subtract(2,'years').valueOf(),
-            'min': parseInt(this.$MOMENT('1970-09-03').subtract(2,'years').format('YYYY')),
+            'min': parseInt(this.$MOMENT('1970-09-03').subtract(2,'years').valueOf()),
             // 'max': parseInt(this.$MOMENT(this.slidertime.max).add(2,'years').format('YYYY'))
             // 'max': this.$MOMENT(this.slidertime.max).add(2,'years').valueOf()
-            'max': parseInt(this.$MOMENT(this.slidertime.max).add(2,'years').format('YYYY'))
+            'max': parseInt(this.$MOMENT(this.slidertime.max).add(2,'years').valueOf())
         },
         // format: {
         //   to: function (value) {
@@ -280,46 +292,46 @@ that.flightCheck();
     }, //settimeline
     featureStyle: function (f) {
 
-console.log("f in featurestyle:",f);
+        let ftyp = this.launderGeoType(f.geometry.type)
+        let fid = f.properties.cartodb_id
 
-let stile = {
-      radius: 10,
-      fillColor: 'purple',
-      color: "#000",
-      weight: 1,
-      opacity: .8,
-      fillOpacity: 1,
-    }
+        let stile = {
+              radius: 10,
+              fillColor: 'purple',
+              color: "#000",
+              weight: 1,
+              opacity: .8,
+              fillOpacity: 1,
+              name:'default'
+            }
 
-switch (true) {
-  case (f.properties.cartodb_id==409):
-    stile = {
-      radius: 18,
-      fillColor: 'yellow',
-      color: "#000",
-      weight: 1,
-      opacity: .8,
-      fillOpacity: 1,
-    }
-    break;
-  default:
-    stile = {
-      radius: 12,
-      fillColor: 'purple',
-      color: "#000",
-      weight: 1,
-      opacity: .8,
-      fillOpacity: .7,
-    }
-    break;
-}
+        switch (true) {
+          case (this.active.item.geo.length==0):
+            stile = stile
+            break;
+          case (fid==this.active.item.geo[0].geo_key.id && ftyp==this.active.item.geo[0].geo_key.type):
+            stile = {
+              radius: 18,
+              fillColor: 'yellow',
+              color: "#000",
+              weight: 1,
+              opacity: .8,
+              fillOpacity: 1,
+              name:'active'
+            }
+            break;
+          default:
+            stile = stile
+            break;
+        }
 
-return stile;
+        return stile;
 
     }, //featurestyle
-    map: function () {
+    setMap: function () {
 
-      console.log((process.env.VERBOSITY=='DEBUG')?"map()...":null)
+var that = this;
+      console.log((process.env.VERBOSITY=='DEBUG')?"setMap()...":null)
 
       if(this.geom.length<1){
         this.console.msg="no geometries within range"
@@ -328,24 +340,33 @@ return stile;
   this.map_feature_group.clearLayers()
 
 L.geoJSON(this.geom, {
-    style: (feature)=>{
+    style: function(feature){
       // console.log("featureStyle res:",this.featureStyle(feature));
-        return this.featureStyle(feature)
+        return that.featureStyle(feature)
     },
-    pointToLayer: (feature, latlng)=>{
-
-// var stile = this.featureStyle(feature);
-// console.log("stile w/in pointtolayer",stile);
-              return L.circleMarker(latlng);
-            }
+    pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
+    onEachFeature: function(feature,layer){
+      // does this particular feature reconcile with current item?
+      if(that.item){
+            console.log('feature,item');
+            console.log(feature,that.active);
+                  console.log("352 in setmap.oneach:");
+                  console.info(feature
+              // ,(that.$_findWhere(that.item.geo[0].geo_key,{id: feature.properties.cartodb_id,type:that.launderGeoType(layer.feature.geometry.type)}))
+              );
+                }
+          }
 }).bindPopup(function(layer){
 
-    return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5><div class="has-text-muted"></div></div>'
+    return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5>'
+    +that.launderGeoType(layer.feature.geometry.type)+':'+layer.feature.properties.cartodb_id+
+    '</div>'
 
-}).on('popupopen',function(feature){
-    // get eventkey (e.g. '_:lronhubbardsspectaclesarefound', set Vue.active.key)
-    // let ev_key = that.geoKeyGen(layer.feature.geometry.type,layer.feature.properties.cartodb_id)
-  // that.active.key=ev_key.id
+}).on('popupopen',(parent)=>{
+    // console.info('feature.geometry.type',that.launderGeoType(feature.geometry.type))
+    
+    let tkey = this.findEventKeyByGeo({id:parent.propagatedFrom.feature.properties.cartodb_id,type:this.launderGeoType(parent.propagatedFrom.feature.geometry.type)});
+    console.log("tkey:",tkey);
 })
 .on("popupclose", function(p) {
 
@@ -359,6 +380,23 @@ map.fitBounds(this.map_feature_group.getBounds())
   } //else
 
     }, //map
+    findEventKeyByGeo: function (geob) {
+console.log("incoming geob",geob);
+
+let geos = this.$_.reject(this.timelinetimes,(ti)=>{return (typeof ti.geo.length==0)});
+console.log("geos.length",geos.length);
+
+let event = this.$_.find(
+  geos
+  ,(ti)=>{
+    console.log("ti in findEventKeyByGeo:",ti);
+  return (ti.geo[0].geo_key.id==geob.id && ti.geo[0].geo_key.type==geob.type)
+})
+
+console.log("found event?",event);
+return event;
+
+    }, //findbygeo
     fetchGeo: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"fetchGeo()...":null);
@@ -496,29 +534,29 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
       }
 
     }, //setgraph
-    setMap: function () {
+//     setMap: function () {
 
-      console.log((process.env.VERBOSITY=='DEBUG')?"setMap()...":null)
+//       console.log((process.env.VERBOSITY=='DEBUG')?"setMap()...":null)
 
-// if we have an active.key
-    if(this.active.key !== null){
-      // take the active keys (id and geo)
-      let keyg = (this.active.item.geo.length>0)?{id:this.active.item.geo[0].geo_key.id,type:this.launderGeoType(this.active.item.geo[0].geo_key.type)}:null;
-      console.log("keyg",keyg)
-} else {
-        // no key? null it out
-        console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, resetting features...":null)
+// // if we have an active.key
+//     if(this.active.key !== null){
+//       // take the active keys (id and geo)
+//       let keyg = (this.active.item.geo.length>0)?{id:this.active.item.geo[0].geo_key.id,type:this.launderGeoType(this.active.item.geo[0].geo_key.type)}:null;
+//       console.log("keyg",keyg)
+// } else {
+//         // no key? null it out
+//         console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, resetting features...":null)
 
-      }
-
-
-      // set the active.item (key shopped to arango graph)
-      // shop (key) to timeline, activate found entry
-      // shop (geo) to map (group layer), activate found entry (openpopup)
-      // if the key isn't already in the route (e.g. fresh click), add it (if it's there already we coming in from a url)
+//       }
 
 
-    }, //setMap
+//       // set the active.item (key shopped to arango graph)
+//       // shop (key) to timeline, activate found entry
+//       // shop (geo) to map (group layer), activate found entry (openpopup)
+//       // if the key isn't already in the route (e.g. fresh click), add it (if it's there already we coming in from a url)
+
+
+//     }, //setMap
     routize: function(){
 
       console.log((process.env.VERBOSITY=='DEBUG')?"routize()...":null)
@@ -558,6 +596,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch item.id...":null)
           this.setGraph();
+          this.setMap();
         }, //watch.item.id
     timelinetimes: function() {
 
@@ -568,7 +607,7 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
     geom: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch geom...":null)
-      this.map();
+      this.setMap();
     } //geom
   } //watch
 } //export.timeline
