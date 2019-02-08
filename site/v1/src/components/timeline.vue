@@ -16,7 +16,7 @@
 <!-- -------------------------------------------------------------- CONSOLE -->
     <div class="section" style="padding-top:0;margin-top:0;">
 <div id="console">
-<div class="columns is-size-7">
+<div class="columns is-size-5">
 <div class="column"><code v-if="console">{{console.msg}}</code></div>
 </div>
 
@@ -25,23 +25,23 @@
           <i :class="console.clazz" class="mdi"></i>
         </span>
 <hr/> -->
-<div class="columns is-size-5">
+<div class="columns is-size-7">
 <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div>
 <!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div>
 <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
 <div class="column" v-if="timelinetimes">events found:<code>{{timelinetimes.length}}</code></div>
 
-<div class="column" v-if="active.item">active.item.content:<code>{{active.item.content}}</code></div>
 <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div>
 
 <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
 </div>
 
-<div class="columns is-size-5">
-  <div class="column" v-if="active.item">active.item.article:<code>{{active.item.article}}</code></div>
+<div class="columns is-size-7">
+<div class="column" v-if="active.item">{{active.item.content}}</div>
+  <div class="column" v-if="active.item">{{active.item.article}}</div>
 </div>
 
-<div class="columns is-size-5">
+<div class="columns is-size-7">
 <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div>
 <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div>
 </div>
@@ -208,13 +208,24 @@ this.page.title = (this.active.item.content)?"Dalyverse Events: "+this.active.it
       // check sliders match filterz
       // check timeline selected
 
-      if(this.active.key){
+      // if(this.active.key){
       console.log((process.env.VERBOSITY=='DEBUG')?"now we timeline.setSelection w/ "+this.active.key:null)
 
+// there should be no actual difference between sending null straight but...
+console.log('this.active.key',this.active.key)
+if(this.active.key!==null){
+  console.log("216.setting timeline w/",this.active.key)
 this.timeline.setSelection(this.active.key)
-this.setItem()
+} else {
+  console.log("219.setting timeline w/ empty in following nextTick...")
+  this.$nextTick(function(){
+  console.log("222.and again?")
+this.timeline.setSelection()
+});
+}
+// this.setItem()
 
-      }
+      // }
 
     }, //flightCheck
     initTimeline: function () {
@@ -228,37 +239,27 @@ this.setItem()
 
             var that = this; // that old magic
 
-this.$nextTick(function(){
-
-that.flightCheck();
-
-});
-            // this.setSelection(that.active.key)
 
           // now we wire up click-selection
-           this.timeline.on('select',function (properties){
+           this.timeline.on('click',function (properties){
 
-                if(properties.items.length<1){
+// console.info('properties:',properties)
+// console.info('properties.item:',properties.item)
 
-                console.info((process.env.VERBOSITY=='DEBUG')?"no items - a click off an item? SET KEY TO NULL.":null)
+                if(properties.what=='background'){
 
-                   that.$nextTick(function() {
+                console.info((process.env.VERBOSITY=='DEBUG')?"click off an item - SET KEY TO NULL.":null)
+
                                                     that.active.key=null;
-                                                  });
 
-                } else
-                if(properties.items[0]==that.active.key){
-                console.info((process.env.VERBOSITY=='DEBUG')?"this item already the active key - DESELECT AND SET ACTIVE KEY TO NULL.":null)
+                } else if(properties.what=="item" && properties.item==that.active.key){
+                console.info((process.env.VERBOSITY=='DEBUG')?"clicked item id is already the active key - SET ACTIVE KEY TO NULL.":null)
 
-                                                  this.setSelection([],{duration: 300, easingFunction: 'easeOutQuart'})
-                                                     that.$nextTick(function() {
                                                     that.active.key=null;
-                                                  });
-
-                            //                       // that.setActiveItem();
+                                                    // also manually deselect
                 } else {
-                console.info((process.env.VERBOSITY=='DEBUG')?"key doesn't match selected item (and items.length>0), setting...":null)
-                that.active.key=properties.items[0]
+                console.info((process.env.VERBOSITY=='DEBUG')?"clicked item id doesn't match current active.id, setting active.id to "+properties.item:null)
+            that.active.key=properties.item
                 }//else matches active.key
 
           })//.on
@@ -330,15 +331,15 @@ that.flightCheck();
     }, //featurestyle
     setMap: function () {
 
-var that = this;
       console.log((process.env.VERBOSITY=='DEBUG')?"setMap()...":null)
 
-      if(this.geom.length<1){
+      if(this.geom == null){
         this.console.msg="no geometries within range"
       } else {
 
   this.map_feature_group.clearLayers()
 
+var that = this;
 L.geoJSON(this.geom, {
     style: function(feature){
       // console.log("featureStyle res:",this.featureStyle(feature));
@@ -364,7 +365,7 @@ L.geoJSON(this.geom, {
 
 }).on('popupopen',(parent)=>{
     // console.info('feature.geometry.type',that.launderGeoType(feature.geometry.type))
-    
+
     let tkey = this.findEventKeyByGeo({id:parent.propagatedFrom.feature.properties.cartodb_id,type:this.launderGeoType(parent.propagatedFrom.feature.geometry.type)});
     console.log("tkey:",tkey);
 })
@@ -376,7 +377,7 @@ L.geoJSON(this.geom, {
 
 map.fitBounds(this.map_feature_group.getBounds())
 
-    console.log((process.env.VERBOSITY=='DEBUG')?this.geom.length+" items mapped":null)
+    // console.log((process.env.VERBOSITY=='DEBUG')?this.geom.length+" items mapped":null)
   } //else
 
     }, //map
@@ -486,29 +487,12 @@ return {
 
       console.log((process.env.VERBOSITY=='DEBUG')?"setItem()...":null)
 
-// is it still a viable key?
-// if(this.active.key !== null && this.active.item.id!==this.active.key){
+    if(this.active.key!==null){
+        this.active.item=this.$_.findWhere(this.timelinetimes, {id:this.active.key});
+} else {
+    this.active.item=this.nullItem();
+  }
 
-    // yes? set the active item based on the active key found in events
-    let ai = this.$_.findWhere(this.timelinetimes, {id:this.active.key});
-
-      console.log((process.env.VERBOSITY=='DEBUG')?ai:null)
-this.active.item=(ai)?ai:this.nullItem();
-
-    // }  else {
-    //     // no key? null it out
-    //     console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, nulling item...":null)
-    //     this.active.item = this.nullItem()
-    //   }
-    // if(this.active.item.id!==this.active.key){
-    //     ?this.$_.findWhere(this.timelinetimes, {id:this.active.key}):this.active.item;
-    //   }
-
-    // also throw that to timeline (if it's null nothing will be selected or selected will deselect)
-    // if(this.timeline){
-    // this.timeline.setSelection(this.active.key);
-    // also set (or clear) any associated graphs
-    // this.setActiveGraph()
   }, //setitem
       setGraph: function () {
 
@@ -548,13 +532,6 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
 //         console.log((process.env.VERBOSITY=='DEBUG')?"no active.key, resetting features...":null)
 
 //       }
-
-
-//       // set the active.item (key shopped to arango graph)
-//       // shop (key) to timeline, activate found entry
-//       // shop (geo) to map (group layer), activate found entry (openpopup)
-//       // if the key isn't already in the route (e.g. fresh click), add it (if it's there already we coming in from a url)
-
 
 //     }, //setMap
     routize: function(){
@@ -597,6 +574,11 @@ console.log((process.env.VERBOSITY=='DEBUG')?"setGraph()...":null)
       console.log((process.env.VERBOSITY=='DEBUG')?"firing watch item.id...":null)
           this.setGraph();
           this.setMap();
+
+          this.$nextTick(function(){
+this.flightCheck();
+});
+
         }, //watch.item.id
     timelinetimes: function() {
 
