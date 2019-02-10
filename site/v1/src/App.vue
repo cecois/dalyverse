@@ -8,17 +8,17 @@
 
 <script>
 
-  window.map = new L.Map('map', {
+window.map = new L.Map('map', {
   zoomControl: false,
-  center: [51.505, -0.09],
+  center: [41.12410774245512, -41.6872787475586],
   attributionControl: false,
-  zoom: 2
-});
+  zoom: 3
+})
 
-let blu = (process.env.MODE=='T')?"http://localhost:8000/2x.png":"https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png";
-var baseLayer = new L.TileLayer(blu)
+const blu = (process.env.MODE === 'T') ? 'http://localhost:8000/2x.png' : 'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png'
+const baseLayer = new L.TileLayer(blu)
 
-map.addLayer(baseLayer);
+map.addLayer(baseLayer)
 
 export default {
   name: 'App'

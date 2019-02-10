@@ -8,11 +8,16 @@
 body{
   /*background-color:rgba(0,0,0,1);*/
 }
-#vue-root{margin:0 1%;background-color:white;}
+.container{margin:0;}
+#vue-root{margin:0;background-color:transparent;}
 #console{
   background-color:black;
-  color:white;
+  color:rgba(0,255,0,1);
+  margin:0;padding:0;
+  width:100%;
 }
+.tile{background-color:inherit;color:rgba(0,255,0,1);}
+.tile.is-child{background-color:inherit;}
 /* ------------------ TIMELINE -- */
 #line{
   padding-top:0;
