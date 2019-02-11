@@ -43,7 +43,7 @@
 <div class="tile is-ancestor">
   <div class="tile is-4 is-vertical is-parent">
     <div class="tile is-child box">
-      
+
       <div class="columns">
         <div class="column"><p class="title">EVENTS</p>
           <p class="is-size-3">{{(events.length)}}</p>
@@ -91,7 +91,7 @@ export default {
     // if(this.active.key !== null){
     //   console.info((process.env.VERBOSITY === 'DEBUG') ? 'active key so we gotta restyle' : null);
     // } //if.active.key
-            
+
     //     })
       ,
       times: {
@@ -124,7 +124,25 @@ export default {
   }, //mounted
   methods: {
 
-    setPageTitle: function () {this.page.title = (this.active.item.content)?'Dalyverse Events: '+this.active.item.content : 'Dalyverse Events '+this.times.line.begin+" - "+this.times.line.end;}, //setPageTitle
+    setPageTitle: function () {
+    // this.page.title = (this.active.item && this.active.item.content) ? 'Dalyverse Events: '+this.active.item.content : 'Dalyverse Events '+this.times.line.begin+" - "+this.times.line.end;
+let sub = null
+
+switch (true) {
+  case (typeof this.active.item == 'undefined'):
+    sub = this.times.line.begin+" - "+this.times.line.end
+    break;
+  case (this.active.item.content == null):
+    sub = this.times.line.begin+" - "+this.times.line.end
+    break;
+  default:
+    sub = this.active.item.content;
+    break;
+}
+
+this.page.title = 'Dalyverse Events: '+sub;
+
+    }, //setPageTitle
     nullGraph: function () {console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null graph...' : null);return {participants: null, locations: null};}, //nullGraph
     nullItem: function () {console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null item...' : null);return {"id" : null,"content" : null,"article" : null,"start" : null,"end" : null,"geo":[],"bounds":null}}, //nullItem
     fetchEvents: function () {
@@ -154,7 +172,7 @@ export default {
     console.info((process.env.VERBOSITY === 'DEBUG') ? 'fetchGeometries()...' : null)
 
     let eventswgeoms = this.$_.reject(this.events,(t)=>{return t.geo.length<1})
-        
+
     console.info((process.env.VERBOSITY === 'DEBUG') ? '  -> found '+eventswgeoms.length+' georeferenced events' : null)
 
     let eventgeoms = this.$_.map(
@@ -246,13 +264,55 @@ return {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)}
         // var that = this;
         L.geoJSON(this.geoms, {
             pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
-            style: (feature)=>{ 
+            style: (feature)=>{
               let tgkey = this.launderGeoKey(feature)
-              if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
-              return {radius: 10,fillColor: 'gold',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'} 
-                          } else {
-                                        return {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'} 
-                                      }
+
+// console.info('SETMAP:::this.active.item.geo.length:',this.active.item.geo.length)
+// console.info('SETMAP:::tgkey.id:',tgkey.id)
+// console.info('SETMAP:::this.active.item.geo[0].geo_key.id:',this.active.item.geo[0].geo_key.id)
+// console.info('SETMAP:::tgkey.type:',tgkey.type)
+// console.info('SETMAP:::this.active.item.geo[0].geo_key.type:',this.active.item.geo[0].geo_key.type)
+
+let sdef = {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'}
+let sact = {radius: 10,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .5,name:'default'}
+
+// alt style for active geoms
+// first there has to be an active.item.geo
+console.log('this.active.item before styl switch:',this.active.item)
+let styl = null;
+switch (true) {
+  case (this.active.key == null):
+    styl = sdef
+    break;
+  case (typeof this.active.item.geo == 'undefined'):
+    styl = sdef
+    break;
+  case (this.active.item.geo.length < 1):
+    styl = sdef
+    break;
+  case (tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
+    styl = sact
+    break;
+  default:
+    styl = sdef
+    break;
+}
+
+return styl
+// if(this.active.item.geo.length>0){
+
+// but also it has to match
+
+// }// if active.item.geo.length
+// else {
+
+// }
+              // if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
+              // return
+              //             } else {
+              //                           return {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'}
+              //                         }
+
             }, //style
             onEachFeature: (feature,layer)=>{
               // does this particular feature reconcile with current item?
@@ -265,6 +325,26 @@ return {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)}
                   this.active.item.bounds={type:'poly',coords:layer.getBounds()}
                   }
                   }
+//               switch (true) {
+//   case (this.active.key == null):
+//     let bo=this.map.getBounds()
+//     break;
+//   case (typeof this.active.item.geo == 'undefined'):
+//     let bo=this.map.getBounds()
+//     break;
+//   case (this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type && feature.geometry.type.toLowerCase()=='point'):
+//     let bo = layer.getLatLng()
+//     break;
+//   case (this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
+//     let bo = feature.getBounds()
+//     break;
+//   default:
+//     let bo = this.map.getBounds()
+//     break;
+// }
+
+// map.fitBounds(bo)
+
                 } //onEach
         })
         .bindPopup((layer)=>{
@@ -275,28 +355,48 @@ return {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)}
         })
         .on('popupopen',(parent)=>{
           console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this feature:' : null,parent.layer.feature)
+
           let tgkey = this.launderGeoKey(parent.layer.feature)
 
-if(tgkey.id !== this.active.item.geo[0].geo_key.id && tgkey.type !== this.active.item.geo[0].geo_key.type){
-  // clicked thing isn't the active, gotta set that now
-  let tevent = this.$._.findWhere(this.events,{geo[0].geo_key.id:tgkey.id,geo[0].geo_key.type:tgkey.type})
-console.log("tevent",tevent);
+          // if nothing is already active OR if the active thing isn't this one's, find the spawning event and activate with it
+          let tevent = null;
+
+switch (true) {
+  case (this.active.key==null):
+    tevent = this.$._.find(
+      // this.events,
+      this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
+      ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
+    break;
+  default:
+    // statements_def
+    break;
 }
+
+console.log("tevent frm popup")
+          // otherwise do nothing
+
+// if(tgkey.id !== this.active.item.geo[0].geo_key.id && tgkey.type !== this.active.item.geo[0].geo_key.type){
+  // clicked thing isn't the active, gotta set that now
+  // let tevent = this.$._.find(this.events,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
+
+// }
 
         })
         // .on("popupclose", function(p) {
         //                     // p.target.setStyle()
         //                 }) //.on
         .addTo(this.map_feature_group)
-  if(this.active.item.zoom.type=='point'){
-        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
-    map.setView(this.active.item.zoom.coords,11,{animate:true})
-  } else {
-        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
-          map.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : this.map_feature_group.getBounds() )
-        }
-
-          } //else
+        if(this.active.item.zoom){
+          if(this.active.item.zoom.type == 'point'){
+                console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
+            map.setView(this.active.item.zoom.coords,11,{animate:true})
+          } else {
+                console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
+                  map.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : this.map_feature_group.getBounds() )
+                }
+                  } //else
+                } // if active.item.zoom
 
     }, //setMap
     setGraph: function () {
@@ -330,7 +430,7 @@ console.log("tevent",tevent);
 
       console.info((process.env.VERBOSITY === 'DEBUG') ? "setRoute()..." : null)
 
-    this.$router.push({ params:{ 
+    this.$router.push({ params:{
       tstart:this.times.line.begin,
       tend:this.times.line.end,
       activeid:this.active.key
