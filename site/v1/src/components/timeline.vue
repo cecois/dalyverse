@@ -85,7 +85,15 @@ export default {
     return {
       page: { title: 'Andy Dalyverse Events' },
       geoms: [],
-      map_feature_group: new L.featureGroup().addTo(map),
+      map_feature_group: new L.featureGroup().addTo(map)
+    //   .on('layeradd',(levent)=>{
+    //       console.log('layer added:',levent);
+    // if(this.active.key !== null){
+    //   console.info((process.env.VERBOSITY === 'DEBUG') ? 'active key so we gotta restyle' : null);
+    // } //if.active.key
+            
+    //     })
+      ,
       times: {
         slider: { begin: process.env.SLIDER_TIME_BEGIN, end: process.env.SLIDER_TIME_END },
         line: { begin: process.env.LINE_TIME_BEGIN, end: process.env.LINE_TIME_END }
@@ -118,7 +126,7 @@ export default {
 
     setPageTitle: function () {this.page.title = (this.active.item.content)?'Dalyverse Events: '+this.active.item.content : 'Dalyverse Events '+this.times.line.begin+" - "+this.times.line.end;}, //setPageTitle
     nullGraph: function () {console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null graph...' : null);return {participants: null, locations: null};}, //nullGraph
-    nullItem: function () {console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null item...' : null);return {"id" : null,"content" : null,"article" : null,"start" : null,"end" : null,"geo":[]}}, //nullItem
+    nullItem: function () {console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null item...' : null);return {"id" : null,"content" : null,"article" : null,"start" : null,"end" : null,"geo":[],"bounds":null}}, //nullItem
     fetchEvents: function () {
 
       console.info((process.env.VERBOSITY === 'DEBUG') ? 'fetchEvents()...' : null)
@@ -188,10 +196,107 @@ export default {
         this.active.item = (this.active.key !== null) ? this.$_.findWhere( this.events, { id : this.active.key }) : this.nullItem();
 
     }, //setitem
+    map_FeatureStyle: function (f) {
+
+      console.info('in m_fs we have this to work with:',f)
+
+return {radius: 10,fillColor: 'brown',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'}
+
+    },
+    launderGeoType: function (f) {
+
+      let t = null;
+      switch(f.toLowerCase()) {
+        case 'multipolygon':
+          t='poly'
+          break;
+        case 'polygon':
+          t='poly'
+          break;
+        case 'multilinestring':
+          t='line'
+          break;
+        case 'linestring':
+          t='line'
+          break;
+        case 'point':
+          t='point'
+          break;
+        default:
+          // code block
+      }
+      return t
+    }, //launderGeoType
+    launderGeoKey: function (F) {
+
+return {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)}
+
+    }, //launderGeoKey
     setMap: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG') ? 'setMap()...' : null)
       console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> active.key is '+this.active.key+' all styles default...' : null)
+
+      if(this.geoms == null){
+        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
+      } else {
+
+        this.map_feature_group.clearLayers()
+
+        // var that = this;
+        L.geoJSON(this.geoms, {
+            pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
+            style: (feature)=>{ 
+              let tgkey = this.launderGeoKey(feature)
+              if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
+              return {radius: 10,fillColor: 'gold',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'} 
+                          } else {
+                                        return {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'} 
+                                      }
+            }, //style
+            onEachFeature: (feature,layer)=>{
+              // does this particular feature reconcile with current item?
+              let tgkey = this.launderGeoKey(feature)
+              if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
+                  // var keyBounds = layer.getBounds();
+                  if(feature.geometry.type.toLowerCase()=='point'){
+                    this.active.item.zoom={type:'point',coords:layer.getLatLng()}
+                  } else {
+                  this.active.item.bounds={type:'poly',coords:layer.getBounds()}
+                  }
+                  }
+                } //onEach
+        })
+        .bindPopup((layer)=>{
+
+            return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5>'+layer.feature.geometry.type+':'+layer.feature.properties.cartodb_id+
+            '</div>'
+
+        })
+        .on('popupopen',(parent)=>{
+          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this feature:' : null,parent.layer.feature)
+          let tgkey = this.launderGeoKey(parent.layer.feature)
+
+if(tgkey.id !== this.active.item.geo[0].geo_key.id && tgkey.type !== this.active.item.geo[0].geo_key.type){
+  // clicked thing isn't the active, gotta set that now
+  let tevent = this.$._.findWhere(this.events,{geo[0].geo_key.id:tgkey.id,geo[0].geo_key.type:tgkey.type})
+console.log("tevent",tevent);
+}
+
+        })
+        // .on("popupclose", function(p) {
+        //                     // p.target.setStyle()
+        //                 }) //.on
+        .addTo(this.map_feature_group)
+  if(this.active.item.zoom.type=='point'){
+        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
+    map.setView(this.active.item.zoom.coords,11,{animate:true})
+  } else {
+        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
+          map.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : this.map_feature_group.getBounds() )
+        }
+
+          } //else
 
     }, //setMap
     setGraph: function () {
