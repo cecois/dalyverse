@@ -64,8 +64,8 @@
     <div class="tile is-child box">
       <p class="title" v-if="active.key">ACTIVE</p>
       <p>{{active.key}}</p>
-      <p v-if="active.item.content">{{active.item.content}}</p>
-      <p v-if="active.item.article">{{active.item.article}}</p>
+      <p v-if="active.item">{{active.item.content}}</p>
+      <p v-if="active.item">{{active.item.article}}</p>
     </div>
   </div>
 </div>
@@ -85,15 +85,15 @@ export default {
     return {
       page: { title: 'Andy Dalyverse Events' },
       geoms: [],
-      map_feature_group: new L.featureGroup().addTo(map)
-    //   .on('layeradd',(levent)=>{
-    //       console.log('layer added:',levent);
-    // if(this.active.key !== null){
-    //   console.info((process.env.VERBOSITY === 'DEBUG') ? 'active key so we gotta restyle' : null);
-    // } //if.active.key
-
-    //     })
-      ,
+      map_feature_group: new L.featureGroup().addTo(map).on('layeradd',(parent)=>{ 
+        console.info('parent.layer.getLayers()[0].feature.properties.cartodb_id:',parent.layer.getLayers()[0].feature.properties.cartodb_id);
+        console.info('parent.layer.getLayers()[1].feature.properties.cartodb_id:',parent.layer.getLayers()[1].feature.properties.cartodb_id);
+        // if(parent.layer.getLayers()[0].feature.properties.cartodb_id==999){parent.layer.openPopup()} 
+        this.$_.each(parent.layer.getLayers(),(l)=>{ 
+          console.log('l.feature.properties:',l.feature.properties)
+          if(l.feature.properties.cartodb_id==999){l.openPopup()}
+        })
+      }),
       times: {
         slider: { begin: process.env.SLIDER_TIME_BEGIN, end: process.env.SLIDER_TIME_END },
         line: { begin: process.env.LINE_TIME_BEGIN, end: process.env.LINE_TIME_END }
@@ -205,6 +205,30 @@ this.page.title = 'Dalyverse Events: '+sub;
         }
 
     }, //fetchGeometries
+//     findHotPopup: function () {
+
+//       console.log((process.env.VERBOSITY=='DEBUG') ? 'findOpenPopup()...' : null)
+//       if(this.active.key !== null){
+
+// this.$_.each(this.map_feature_group.getLayers()[0],(l)=>{
+// this.$_.each(l.getLayers(),(els)=>{console.log(els)})
+// })
+// // .eachLayer((el)=>{ console.log('el in eachlayer:',el); })
+
+// //   [0].getLayers(),(L)=>{
+  
+// //         if(L.feature.properties.cartodb_id == this.active.item.geo[0].geo_key.id && this.launderGeoType(L.feature.geometry.type) == this.active.item.geo[0].geo_key.type)
+// //         {
+// //           console.log("opening popup for L:");
+// //           console.log(L);
+// //           L.openPopup();
+// //         }
+// // })
+        
+//       }
+      
+
+//     }, //findOpenPopup
     setItem: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG') ? 'setItem()...' : null)
@@ -214,13 +238,6 @@ this.page.title = 'Dalyverse Events: '+sub;
         this.active.item = (this.active.key !== null) ? this.$_.findWhere( this.events, { id : this.active.key }) : this.nullItem();
 
     }, //setitem
-    map_FeatureStyle: function (f) {
-
-      console.info('in m_fs we have this to work with:',f)
-
-return {radius: 10,fillColor: 'brown',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'}
-
-    },
     launderGeoType: function (f) {
 
       let t = null;
@@ -247,7 +264,8 @@ return {radius: 10,fillColor: 'brown',color: "#000",weight: 1,opacity: .8,fillOp
     }, //launderGeoType
     launderGeoKey: function (F) {
 
-return {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)}
+      let o = (F) ? {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)} : {id:null,type:null}
+      return o;
 
     }, //launderGeoKey
     setMap: function () {
@@ -267,83 +285,45 @@ return {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)}
             style: (feature)=>{
               let tgkey = this.launderGeoKey(feature)
 
-// console.info('SETMAP:::this.active.item.geo.length:',this.active.item.geo.length)
-// console.info('SETMAP:::tgkey.id:',tgkey.id)
-// console.info('SETMAP:::this.active.item.geo[0].geo_key.id:',this.active.item.geo[0].geo_key.id)
-// console.info('SETMAP:::tgkey.type:',tgkey.type)
-// console.info('SETMAP:::this.active.item.geo[0].geo_key.type:',this.active.item.geo[0].geo_key.type)
+              let sdef = {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'}
+              let sact = {radius: 10,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .5,name:'default'}
 
-let sdef = {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'}
-let sact = {radius: 10,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .5,name:'default'}
+              // alt style for active geoms
+              // first there has to be an active.item.geo
 
-// alt style for active geoms
-// first there has to be an active.item.geo
-console.log('this.active.item before styl switch:',this.active.item)
-let styl = null;
-switch (true) {
-  case (this.active.key == null):
-    styl = sdef
-    break;
-  case (typeof this.active.item.geo == 'undefined'):
-    styl = sdef
-    break;
-  case (this.active.item.geo.length < 1):
-    styl = sdef
-    break;
-  case (tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
-    styl = sact
-    break;
-  default:
-    styl = sdef
-    break;
-}
+              let styl = null;
+              switch (true) {
+                case (this.active.key == null):
+                  styl = sdef
+                  break;
+                case (typeof this.active.item.geo == 'undefined'):
+                  styl = sdef
+                  break;
+                case (this.active.item.geo.length < 1):
+                  styl = sdef
+                  break;
+                case (tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
+                  styl = sact
+                  break;
+                default:
+                  styl = sdef
+                  break;
+              }
 
-return styl
-// if(this.active.item.geo.length>0){
-
-// but also it has to match
-
-// }// if active.item.geo.length
-// else {
-
-// }
-              // if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
-              // return
-              //             } else {
-              //                           return {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: 1,name:'default'}
-              //                         }
+              return styl
 
             }, //style
             onEachFeature: (feature,layer)=>{
               // does this particular feature reconcile with current item?
               let tgkey = this.launderGeoKey(feature)
               if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
-                  // var keyBounds = layer.getBounds();
                   if(feature.geometry.type.toLowerCase()=='point'){
                     this.active.item.zoom={type:'point',coords:layer.getLatLng()}
                   } else {
                   this.active.item.bounds={type:'poly',coords:layer.getBounds()}
+                    }
+                    layer.openPopup();
                   }
-                  }
-//               switch (true) {
-//   case (this.active.key == null):
-//     let bo=this.map.getBounds()
-//     break;
-//   case (typeof this.active.item.geo == 'undefined'):
-//     let bo=this.map.getBounds()
-//     break;
-//   case (this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type && feature.geometry.type.toLowerCase()=='point'):
-//     let bo = layer.getLatLng()
-//     break;
-//   case (this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
-//     let bo = feature.getBounds()
-//     break;
-//   default:
-//     let bo = this.map.getBounds()
-//     break;
-// }
-
-// map.fitBounds(bo)
 
                 } //onEach
         })
@@ -361,19 +341,17 @@ return styl
           // if nothing is already active OR if the active thing isn't this one's, find the spawning event and activate with it
           let tevent = null;
 
-switch (true) {
-  case (this.active.key==null):
-    tevent = this.$._.find(
-      // this.events,
-      this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
-      ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
-    break;
-  default:
-    // statements_def
-    break;
-}
+          switch (true) {
+            case (this.active.key == null):
+              tevent = this.$._.find(
+                this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
+                ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
+              break;
+            default:
+              // statements_def
+              break;
+          }
 
-console.log("tevent frm popup")
           // otherwise do nothing
 
 // if(tgkey.id !== this.active.item.geo[0].geo_key.id && tgkey.type !== this.active.item.geo[0].geo_key.type){
