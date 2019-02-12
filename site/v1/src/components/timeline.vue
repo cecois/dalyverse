@@ -85,15 +85,7 @@ export default {
     return {
       page: { title: 'Andy Dalyverse Events' },
       geoms: [],
-      map_feature_group: new L.featureGroup().addTo(map).on('layeradd',(parent)=>{ 
-        console.info('parent.layer.getLayers()[0].feature.properties.cartodb_id:',parent.layer.getLayers()[0].feature.properties.cartodb_id);
-        console.info('parent.layer.getLayers()[1].feature.properties.cartodb_id:',parent.layer.getLayers()[1].feature.properties.cartodb_id);
-        // if(parent.layer.getLayers()[0].feature.properties.cartodb_id==999){parent.layer.openPopup()} 
-        this.$_.each(parent.layer.getLayers(),(l)=>{ 
-          console.log('l.feature.properties:',l.feature.properties)
-          if(l.feature.properties.cartodb_id==999){l.openPopup()}
-        })
-      }),
+      map_layer_group: new L.layerGroup().addTo(map),
       times: {
         slider: { begin: process.env.SLIDER_TIME_BEGIN, end: process.env.SLIDER_TIME_END },
         line: { begin: process.env.LINE_TIME_BEGIN, end: process.env.LINE_TIME_END }
@@ -201,7 +193,7 @@ this.page.title = 'Dalyverse Events: '+sub;
           })//axios.catch
         } else {
           // if there are no geoms to fetch, don't bother with the call, just zero out the map
-          this.map_feature_group.clearLayers();
+          this.map_layer_group.clearLayers();
         }
 
     }, //fetchGeometries
@@ -210,7 +202,7 @@ this.page.title = 'Dalyverse Events: '+sub;
 //       console.log((process.env.VERBOSITY=='DEBUG') ? 'findOpenPopup()...' : null)
 //       if(this.active.key !== null){
 
-// this.$_.each(this.map_feature_group.getLayers()[0],(l)=>{
+// this.$_.each(this.map_layer_group.getLayers()[0],(l)=>{
 // this.$_.each(l.getLayers(),(els)=>{console.log(els)})
 // })
 // // .eachLayer((el)=>{ console.log('el in eachlayer:',el); })
@@ -277,7 +269,7 @@ this.page.title = 'Dalyverse Events: '+sub;
         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
       } else {
 
-        this.map_feature_group.clearLayers()
+        this.map_layer_group.clearLayers()
 
         // var that = this;
         L.geoJSON(this.geoms, {
@@ -315,15 +307,15 @@ this.page.title = 'Dalyverse Events: '+sub;
             }, //style
             onEachFeature: (feature,layer)=>{
               // does this particular feature reconcile with current item?
-              let tgkey = this.launderGeoKey(feature)
-              if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
-                  if(feature.geometry.type.toLowerCase()=='point'){
-                    this.active.item.zoom={type:'point',coords:layer.getLatLng()}
-                  } else {
-                  this.active.item.bounds={type:'poly',coords:layer.getBounds()}
-                    }
-                    layer.openPopup();
-                  }
+              // let tgkey = this.launderGeoKey(feature)
+              // if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
+                  // if(feature.geometry.type.toLowerCase()=='point'){
+                    // this.active.item.zoom={type:'point',coords:layer.getLatLng()}
+                  // } else {
+                  // this.active.item.bounds={type:'poly',coords:layer.getBounds()}
+                    // }
+                    // layer.openPopup();
+                  // }
 
                 } //onEach
         })
@@ -333,8 +325,11 @@ this.page.title = 'Dalyverse Events: '+sub;
             '</div>'
 
         })
+        .on('add',(L)=>{
+          console.info("in on layeradd, L:",L)
+        })
         .on('popupopen',(parent)=>{
-          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this feature:' : null,parent.layer.feature)
+          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this obj:' : null,parent)
 
           let tgkey = this.launderGeoKey(parent.layer.feature)
 
@@ -343,7 +338,7 @@ this.page.title = 'Dalyverse Events: '+sub;
 
           switch (true) {
             case (this.active.key == null):
-              tevent = this.$._.find(
+              tevent = this.$_.find(
                 this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
                 ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
               break;
@@ -364,14 +359,14 @@ this.page.title = 'Dalyverse Events: '+sub;
         // .on("popupclose", function(p) {
         //                     // p.target.setStyle()
         //                 }) //.on
-        .addTo(this.map_feature_group)
+        .addTo(this.map_layer_group)
         if(this.active.item.zoom){
           if(this.active.item.zoom.type == 'point'){
                 console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
             map.setView(this.active.item.zoom.coords,11,{animate:true})
           } else {
                 console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
-                  map.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : this.map_feature_group.getBounds() )
+                  map.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : this.map_layer_group.getBounds() )
                 }
                   } //else
                 } // if active.item.zoom
