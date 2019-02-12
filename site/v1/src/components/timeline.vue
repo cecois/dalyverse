@@ -85,14 +85,48 @@ export default {
     return {
       page: { title: 'Andy Dalyverse Events' },
       geoms: [],
-      map_layer_group: new L.layerGroup().addTo(map),
+      seens: [],
       times: {
         slider: { begin: process.env.SLIDER_TIME_BEGIN, end: process.env.SLIDER_TIME_END },
         line: { begin: process.env.LINE_TIME_BEGIN, end: process.env.LINE_TIME_END }
       },
       active: { key: null, item: this.nullItem(), graph: this.nullGraph() },
       events: [],
-      console: {msg: '', clazz: null, throb: false}
+      console: {msg: '', clazz: null, throb: false},
+      l_json: L.geoJSON(this.geoms, {
+            pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
+            style: (feature)=>{return this.getGeoStyle(feature)}, //style
+            onEachFeature: (feature,layer)=>{} //onEach
+        })
+        .bindPopup((layer)=>{
+            return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5>'+layer.feature.geometry.type+':'+layer.feature.properties.cartodb_id+
+            '</div>'
+        })
+        .on('click',(parent)=>{
+          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on click, this obj:' : null,parent)
+          let tgkey = this.geoKeyGen(parent.layer.feature)
+
+          // now do we have an event with that key?
+          let neweventkey = this.$_.find(this.$_.reject(this.events,(ev)=>{return ev.geo.length<1}),(ev)=>{
+            return (ev.geo[0].geo_key.id == tgkey.id && ev.geo[0].geo_key.type == tgkey.type)
+          }).id
+
+                    console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on click, new event key:' : null,neweventkey)
+
+          if(neweventkey){
+            this.active.key=neweventkey;
+          }
+
+        }) //.on.click
+        .on('popupopen',(parent)=>{
+          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on popupopen, sending to seen list:' : null,parent)
+          let tgkey = this.geoKeyGen(parent.layer.feature)
+
+          this.seens.push(this.geoKeyStringGen(tgkey));
+
+        })
+        .addTo(MAP)
+
     }// return
   }, // data
   beforeCreate () {}, // beforeCreate
@@ -117,22 +151,21 @@ export default {
   methods: {
 
     setPageTitle: function () {
-    // this.page.title = (this.active.item && this.active.item.content) ? 'Dalyverse Events: '+this.active.item.content : 'Dalyverse Events '+this.times.line.begin+" - "+this.times.line.end;
-let sub = null
+      let sub = null
 
-switch (true) {
-  case (typeof this.active.item == 'undefined'):
-    sub = this.times.line.begin+" - "+this.times.line.end
-    break;
-  case (this.active.item.content == null):
-    sub = this.times.line.begin+" - "+this.times.line.end
-    break;
-  default:
-    sub = this.active.item.content;
-    break;
-}
+      switch (true) {
+        case (typeof this.active.item == 'undefined'):
+          sub = this.times.line.begin+" - "+this.times.line.end
+          break;
+        case (this.active.item.content == null):
+          sub = this.times.line.begin+" - "+this.times.line.end
+          break;
+        default:
+          sub = this.active.item.content;
+          break;
+      }
 
-this.page.title = 'Dalyverse Events: '+sub;
+      this.page.title = 'Dalyverse Events: '+sub;
 
     }, //setPageTitle
     nullGraph: function () {console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null graph...' : null);return {participants: null, locations: null};}, //nullGraph
@@ -193,34 +226,10 @@ this.page.title = 'Dalyverse Events: '+sub;
           })//axios.catch
         } else {
           // if there are no geoms to fetch, don't bother with the call, just zero out the map
-          this.map_layer_group.clearLayers();
+          // MAP.clearLayers();
         }
 
     }, //fetchGeometries
-//     findHotPopup: function () {
-
-//       console.log((process.env.VERBOSITY=='DEBUG') ? 'findOpenPopup()...' : null)
-//       if(this.active.key !== null){
-
-// this.$_.each(this.map_layer_group.getLayers()[0],(l)=>{
-// this.$_.each(l.getLayers(),(els)=>{console.log(els)})
-// })
-// // .eachLayer((el)=>{ console.log('el in eachlayer:',el); })
-
-// //   [0].getLayers(),(L)=>{
-  
-// //         if(L.feature.properties.cartodb_id == this.active.item.geo[0].geo_key.id && this.launderGeoType(L.feature.geometry.type) == this.active.item.geo[0].geo_key.type)
-// //         {
-// //           console.log("opening popup for L:");
-// //           console.log(L);
-// //           L.openPopup();
-// //         }
-// // })
-        
-//       }
-      
-
-//     }, //findOpenPopup
     setItem: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG') ? 'setItem()...' : null)
@@ -254,37 +263,31 @@ this.page.title = 'Dalyverse Events: '+sub;
       }
       return t
     }, //launderGeoType
-    launderGeoKey: function (F) {
+    geoKeyGen: function (F) {
 
       let o = (F) ? {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)} : {id:null,type:null}
       return o;
 
-    }, //launderGeoKey
-    setMap: function () {
+    }, //geoKeyGen
+    geoKeyStringGen: function (F) {
 
-      console.log((process.env.VERBOSITY=='DEBUG') ? 'setMap()...' : null)
-      console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> active.key is '+this.active.key+' all styles default...' : null)
+      // let o = (F) ? {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)} : {id:null,type:null}
+      let o = (F) ? F.properties.cartodb_id+':'+this.launderGeoType(F.geometry.type) : null+':'+null
+      return o;
 
-      if(this.geoms == null){
-        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
-      } else {
+    }, //geoKeyGen
+    getGeoStyle: function (f) {
 
-        this.map_layer_group.clearLayers()
+              let tgkey = this.geoKeyGen(f)
 
-        // var that = this;
-        L.geoJSON(this.geoms, {
-            pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
-            style: (feature)=>{
-              let tgkey = this.launderGeoKey(feature)
-
-              let sdef = {radius: 10,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'}
-              let sact = {radius: 10,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .5,name:'default'}
-
-              // alt style for active geoms
-              // first there has to be an active.item.geo
+              let sdef = {radius: 6,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .6,name:'default'}
+              let sact = {radius: 12,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'active'}
 
               let styl = null;
               switch (true) {
+                case (typeof this.active == 'undefined'):
+                  styl = sdef
+                  break;
                 case (this.active.key == null):
                   styl = sdef
                   break;
@@ -304,69 +307,57 @@ this.page.title = 'Dalyverse Events: '+sub;
 
               return styl
 
-            }, //style
-            onEachFeature: (feature,layer)=>{
-              // does this particular feature reconcile with current item?
-              // let tgkey = this.launderGeoKey(feature)
-              // if(this.active.item.geo.length>0 && tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type){
-                  // if(feature.geometry.type.toLowerCase()=='point'){
-                    // this.active.item.zoom={type:'point',coords:layer.getLatLng()}
-                  // } else {
-                  // this.active.item.bounds={type:'poly',coords:layer.getBounds()}
-                    // }
-                    // layer.openPopup();
-                  // }
+    }, //getstyle
+    setMap: function () {
 
-                } //onEach
-        })
-        .bindPopup((layer)=>{
+      console.log((process.env.VERBOSITY=='DEBUG') ? 'setMap()...' : null)
+      console.log((process.env.VERBOSITY=='DEBUG') ? '  -> clearing current' : null)
+      this.l_json.clearLayers()
+      console.log((process.env.VERBOSITY=='DEBUG') ? '  -> active.key is '+this.active.key+' in setMap...' : null)
 
-            return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5>'+layer.feature.geometry.type+':'+layer.feature.properties.cartodb_id+
-            '</div>'
+      if(this.geoms == null){
+        console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
+      } else {
 
-        })
-        .on('add',(L)=>{
-          console.info("in on layeradd, L:",L)
-        })
-        .on('popupopen',(parent)=>{
-          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this obj:' : null,parent)
+        // MAP.clearLayers()
+this.l_json.addData(this.geoms)
+        // var that = this;
+//         L.geoJSON(this.geoms, {
+//             pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
+//             style: this.getStyle(), //style
+//             onEachFeature: (feature,layer)=>{} //onEach
+//         })
+//         .bindPopup((layer)=>{
+//             return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5>'+layer.feature.geometry.type+':'+layer.feature.properties.cartodb_id+
+//             '</div>'
+//         })
+//         .on('popupopen',(parent)=>{
+//           console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this obj:' : null,parent)
 
-          let tgkey = this.launderGeoKey(parent.layer.feature)
+//           let tgkey = this.geoKeyGen(parent.layer.feature)
 
-          // if nothing is already active OR if the active thing isn't this one's, find the spawning event and activate with it
-          let tevent = null;
+//           // if nothing is already active OR if the active thing isn't this one's, find the spawning event and activate with it
+//           let tevent = null;
 
-          switch (true) {
-            case (this.active.key == null):
-              tevent = this.$_.find(
-                this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
-                ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
-              break;
-            default:
-              // statements_def
-              break;
-          }
-
-          // otherwise do nothing
-
-// if(tgkey.id !== this.active.item.geo[0].geo_key.id && tgkey.type !== this.active.item.geo[0].geo_key.type){
-  // clicked thing isn't the active, gotta set that now
-  // let tevent = this.$._.find(this.events,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
-
-// }
-
-        })
-        // .on("popupclose", function(p) {
-        //                     // p.target.setStyle()
-        //                 }) //.on
-        .addTo(this.map_layer_group)
+//           switch (true) {
+//             case (this.active.key == null):
+//               tevent = this.$_.find(
+//                 this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
+//                 ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
+//               break;
+//             default:
+//               // statements_def
+//               break;
+//           }
+// }) //.on.popupon
+        // .addTo(MAP)
         if(this.active.item.zoom){
           if(this.active.item.zoom.type == 'point'){
                 console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
-            map.setView(this.active.item.zoom.coords,11,{animate:true})
+            MAP.setView(this.active.item.zoom.coords,11,{animate:true})
           } else {
                 console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
-                  map.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : this.map_layer_group.getBounds() )
+                  MAP.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : MAP.getBounds() )
                 }
                   } //else
                 } // if active.item.zoom
@@ -445,7 +436,8 @@ this.page.title = 'Dalyverse Events: '+sub;
           this.setItem()
           this.setGraph()
           this.setRoute()
-          this.setPageTitle();
+          this.setPageTitle()
+          this.setMap()
         }
     }
   } //watch
