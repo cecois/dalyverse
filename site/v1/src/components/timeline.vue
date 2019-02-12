@@ -117,13 +117,18 @@ export default {
             this.active.key=neweventkey;
           }
 
-        }) //.on.click
-        .on('popupopen',(parent)=>{
+        })
+        .on('popupclose',(parent)=>{
           console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on popupopen, sending to seen list:' : null,parent)
           let tgkey = this.geoKeyGen(parent.layer.feature)
 
           this.seens.push(this.geoKeyStringGen(tgkey));
 
+        })
+        .on('layeradd',(parent)=>{
+          console.log("parent in added event:",parent)
+          let tgkey = this.getKeyGeo(parent.layer.feature)
+          console.log("tgkey:",tgkey)
         })
         .addTo(MAP)
 
@@ -236,7 +241,28 @@ export default {
       console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> active.key is '+this.active.key+' (NULL), nulling item...' : null)
       console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key !== null) ? '  -> active.key is '+this.active.key+' setting real item from '+this.events.length+' events...' : null)
 
+
+
         this.active.item = (this.active.key !== null) ? this.$_.findWhere( this.events, { id : this.active.key }) : this.nullItem();
+
+      /*
+      this.active.item.zoom.type == 'point'){
+                console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
+            MAP.setView(this.active.item.zoom.coords
+
+        if(this.active.key !== null){
+
+let AI = this.$_.findWhere( this.events, { id : this.active.key });
+
+if(AI){
+  if(AI.geo.length>0){
+
+  } // if.AI.length
+} // if AI
+
+        this.active.item=AI
+      } else {this.active.item=this.nullItem();}
+            */
 
     }, //setitem
     launderGeoType: function (f) {
@@ -271,37 +297,58 @@ export default {
     }, //geoKeyGen
     geoKeyStringGen: function (F) {
 
+// two differnet versions possible - prelaundered and straight frm the geom
+console.log(F);
+
+let o = null
       // let o = (F) ? {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)} : {id:null,type:null}
-      let o = (F) ? F.properties.cartodb_id+':'+this.launderGeoType(F.geometry.type) : null+':'+null
+      if(F.properties){
+            o = F.properties.cartodb_id+':'+this.launderGeoType(F.geometry.type)}
+            else {
+              o = F.id+':'+F.type
+            }
       return o;
 
     }, //geoKeyGen
     getGeoStyle: function (f) {
 
-              let tgkey = this.geoKeyGen(f)
+              let tgkey = (typeof f == 'object') ? this.geoKeyGen(f) : f;
 
-              let sdef = {radius: 6,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .6,name:'default'}
-              let sact = {radius: 12,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'active'}
+              let sdef = {}
+              let sact = {}
+              let seen = {}
+
+              let stylz = {
+                default:{radius: 6,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'},
+                active:{radius: 12,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .9,name:'active'},
+                seen:{radius: 6,fillColor: 'white',color: "aqua",weight: 1,opacity: 1,fillOpacity: .6,name:'seen'}
+              }
 
               let styl = null;
               switch (true) {
+                case (typeof f == 'string'):
+                  styl = stylz[f]
+                  break;
                 case (typeof this.active == 'undefined'):
-                  styl = sdef
+                  styl = stylz.default
                   break;
                 case (this.active.key == null):
-                  styl = sdef
+                  styl = stylz.default
                   break;
                 case (typeof this.active.item.geo == 'undefined'):
-                  styl = sdef
+                  styl = stylz.default
                   break;
                 case (this.active.item.geo.length < 1):
-                  styl = sdef
+                  styl = stylz.default
+                  break;
+                case (this.$_.contains(this.seens,this.geoKeyStringGen(tgkey))):
+                  styl = stylz.seen
                   break;
                 case (tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
-                  styl = sact
+                  styl = stylz.active
                   break;
                 default:
-                  styl = sdef
+                  styl = stylz.default
                   break;
               }
 
@@ -389,7 +436,7 @@ this.l_json.addData(this.geoms)
 
         // this.active.graph = (this.active.key !== null) ? this.$_.findWhere( this.events, { id : this.active.key }) : this.nullItem();
 
-  }, //setitem
+  }, //setgraph
     setRoute: function(){
 
       console.info((process.env.VERBOSITY === 'DEBUG') ? "setRoute()..." : null)
