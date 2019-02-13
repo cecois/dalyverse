@@ -376,6 +376,8 @@ let o = null
     }, //geoKeyGen
     getGeoStyle: function (f) {
 
+console.log((process.env.VERBOSITY=='DEBUG') ? 'f in getGeoStyle:'+JSON.stringify(f) : null)
+
               let tgkey = (typeof f == 'object') ? this.geoKeyGen(f) : f;
 
               let styl = null;
@@ -406,6 +408,7 @@ let o = null
                   break;
               }
 
+console.log((process.env.VERBOSITY=='DEBUG') ? '  --> resulting style:'+JSON.stringify(styl) : null)
               return styl
 
     }, //getgeostyle
@@ -420,7 +423,7 @@ let o = null
         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
       } else {
 
-        MAP.clearLayers()
+        this.l_json.clearLayers()
 this.l_json.addData(this.geoms)
         // var that = this;
 //         L.geoJSON(this.geoms, {
