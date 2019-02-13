@@ -8,12 +8,19 @@
 <div id="line"/>
 
 <!-- -------------------------------------------------------------- CONSOLE -->
-<nav class="navbar is-fixed-top">
+<nav v-if="state === 'filled'" class="navbar is-fixed-top">
 
 
 <!-- ************************************************************************************ #CONSOLE -->
 <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
 <div id="console" class=" is-size-7 has-text-weight-bold">
+
+<a class="button is-small" v-on:click="zoomToFullExtent">
+    <span class="icon is-small">
+      <i class="fab fa-github"></i>
+    </span>
+    <span>X</span>
+  </a>
 
 <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
 
@@ -47,6 +54,9 @@
       <div class="columns">
         <div class="column"><p class="title">EVENTS</p>
           <p class="is-size-3">{{(events.length)}}</p>
+          <p class="is-size-7">
+            <div style="font-size:.8em;" v-for="event in events">{{ event.id }}</div>
+          </p>
         </div>
         <div v-if="geoms" class="column"><p class="title">GEOMS</p>
           <p class="is-size-3">{{(geoms.length)}}</p>
@@ -84,8 +94,15 @@ export default {
   data () {
     return {
       page: { title: 'Andy Dalyverse Events' },
+      state: 'filled',
       geoms: [],
       seens: [],
+      styles: {
+        previous:null,
+        default:{radius: 6,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'},
+        active:{radius: 12,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .9,name:'active'},
+        seen:{radius: 6,fillColor: 'white',color: "aqua",weight: 1,opacity: 1,fillOpacity: .6,name:'seen'}
+      },
       times: {
         slider: { begin: process.env.SLIDER_TIME_BEGIN, end: process.env.SLIDER_TIME_END },
         line: { begin: process.env.LINE_TIME_BEGIN, end: process.env.LINE_TIME_END }
@@ -119,16 +136,33 @@ export default {
 
         })
         .on('popupclose',(parent)=>{
-          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on popupopen, sending to seen list:' : null,parent)
+          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on popupclose, sending to seen list:' : null,parent)
           let tgkey = this.geoKeyGen(parent.layer.feature)
 
+parent.layer.setStyle(this.styles.previous)
           this.seens.push(this.geoKeyStringGen(tgkey));
+          this.styles.previous=null
+
+        })
+        .on('popupopen',(parent)=>{
+          console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on popupopen, glowing:' : null,parent)
+
+          this.styles.previous = this.getStyle(parent.layer.options)
+          parent.layer.setStyle({color: "white",weight: 3})
 
         })
         .on('layeradd',(parent)=>{
-          console.log("parent in added event:",parent)
-          let tgkey = this.getKeyGeo(parent.layer.feature)
-          console.log("tgkey:",tgkey)
+          // console.log("parent in added event:",parent)
+          let tgkey = this.geoKeyGen(parent.layer.feature)
+          if(this.active.key !== null && this.active.item.geo.length>0){
+                    if(this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type){
+                      if(tgkey.type == 'point'){
+                        MAP.setView(parent.layer.getLatLng(),10,{animate:true})
+                      } else {
+                        MAP.fitBounds(parent.layer.getBounds())
+                      }
+                    }
+                  } 
         })
         .addTo(MAP)
 
@@ -145,6 +179,7 @@ export default {
     // this.times.slider.end=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
     // this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
     // this.initData();
+    window.addEventListener('keydown', this.onKey)
     console.info((process.env.VERBOSITY === 'DEBUG') ? 'end CREATED, initial state set' : null);
   }, // created
   mounted: function () {
@@ -155,6 +190,39 @@ export default {
   }, //mounted
   methods: {
 
+    getStyle: function (o) {
+
+return {
+radius: o.radius,
+fillColor: o.fillColor,
+color: o.color,
+weight: o.weight,
+opacity: o.opacity,
+fillOpacity: o.fillOpacity,
+name: o.name
+}
+
+    }, //getstyle
+    zoomToFullExtent: function () {
+
+MAP.fitBounds(this.l_json.getBounds());
+
+    }, //zoomToFullExtent
+    onKey: function (e) {
+
+       switch (true) {
+        case (e.keyCode == 18 && this.state == 'empty'):
+          this.state = 'filled'
+          break;
+        case (e.keyCode == 18 && this.state !== 'empty'):
+          this.state = 'empty'
+          break;
+        default:
+          this.state = this.state
+          break;
+      } 
+
+    }, //onkey
     setPageTitle: function () {
       let sub = null
 
@@ -222,7 +290,6 @@ export default {
 
         axios.get(u)
           .then(response => {
-            console.log("response",response);
               this.geoms = response.data
           })//axios.then
           .catch(e => {
@@ -231,7 +298,7 @@ export default {
           })//axios.catch
         } else {
           // if there are no geoms to fetch, don't bother with the call, just zero out the map
-          // MAP.clearLayers();
+          MAP.clearLayers();
         }
 
     }, //fetchGeometries
@@ -297,11 +364,8 @@ if(AI){
     }, //geoKeyGen
     geoKeyStringGen: function (F) {
 
-// two differnet versions possible - prelaundered and straight frm the geom
-console.log(F);
-
 let o = null
-      // let o = (F) ? {id:F.properties.cartodb_id,type:this.launderGeoType(F.geometry.type)} : {id:null,type:null}
+// two differnet versions possible - prelaundered and straight frm the geom
       if(F.properties){
             o = F.properties.cartodb_id+':'+this.launderGeoType(F.geometry.type)}
             else {
@@ -314,47 +378,37 @@ let o = null
 
               let tgkey = (typeof f == 'object') ? this.geoKeyGen(f) : f;
 
-              let sdef = {}
-              let sact = {}
-              let seen = {}
-
-              let stylz = {
-                default:{radius: 6,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'},
-                active:{radius: 12,fillColor: 'yellow',color: "#000",weight: 1,opacity: .8,fillOpacity: .9,name:'active'},
-                seen:{radius: 6,fillColor: 'white',color: "aqua",weight: 1,opacity: 1,fillOpacity: .6,name:'seen'}
-              }
-
               let styl = null;
               switch (true) {
                 case (typeof f == 'string'):
-                  styl = stylz[f]
+                  styl = this.styles[f]
                   break;
                 case (typeof this.active == 'undefined'):
-                  styl = stylz.default
+                  styl = this.styles.default
                   break;
                 case (this.active.key == null):
-                  styl = stylz.default
+                  styl = this.styles.default
                   break;
                 case (typeof this.active.item.geo == 'undefined'):
-                  styl = stylz.default
+                  styl = this.styles.default
                   break;
                 case (this.active.item.geo.length < 1):
-                  styl = stylz.default
+                  styl = this.styles.default
                   break;
                 case (this.$_.contains(this.seens,this.geoKeyStringGen(tgkey))):
-                  styl = stylz.seen
+                  styl = this.styles.seen
                   break;
                 case (tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
-                  styl = stylz.active
+                  styl = this.styles.active
                   break;
                 default:
-                  styl = stylz.default
+                  styl = this.styles.default
                   break;
               }
 
               return styl
 
-    }, //getstyle
+    }, //getgeostyle
     setMap: function () {
 
       console.log((process.env.VERBOSITY=='DEBUG') ? 'setMap()...' : null)
@@ -366,7 +420,7 @@ let o = null
         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
       } else {
 
-        // MAP.clearLayers()
+        MAP.clearLayers()
 this.l_json.addData(this.geoms)
         // var that = this;
 //         L.geoJSON(this.geoms, {
@@ -398,17 +452,17 @@ this.l_json.addData(this.geoms)
 //           }
 // }) //.on.popupon
         // .addTo(MAP)
-        if(this.active.item.zoom){
-          if(this.active.item.zoom.type == 'point'){
-                console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
-            MAP.setView(this.active.item.zoom.coords,11,{animate:true})
-          } else {
-                console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
-                  MAP.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : MAP.getBounds() )
-                }
-                  } //else
-                } // if active.item.zoom
-
+        // if(this.active.item.zoom){
+        //   if(this.active.item.zoom.type == 'point'){
+        //         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
+        //     MAP.setView(this.active.item.zoom.coords,11,{animate:true})
+        //   } else {
+        //         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
+        //           MAP.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : MAP.getBounds() )
+        //         }
+        //           } //else
+        //         } // if active.item.zoom
+} //if.geoms.null
     }, //setMap
     setGraph: function () {
 
