@@ -13,11 +13,10 @@
 
 <!-- ************************************************************************************ #CONSOLE -->
 <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
-<div id="console" class=" is-size-7 has-text-weight-bold">
-
+<div id="console" class="has-text-weight-bold">
 <a class="button is-small" v-on:click="zoomToFullExtent">
     <span class="icon is-small">
-      <i class="fab fa-github"></i>
+      <i class="mdi mdi-github"></i>
     </span>
     <span>X</span>
   </a>
@@ -61,14 +60,15 @@
         <div v-if="geoms" class="column"><p class="title">GEOMS</p>
           <p class="is-size-3">{{(geoms.length)}}</p>
         </div>
+        <div class="column">
+      <p class="title" v-if="active.key">GRPH</p>
+      <p v-if="active.graph.locations">{{active.graph.locations.length}} locations <a v-if="active.graph.locations.length>0" class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
+      <p v-if="active.graph.participants">{{active.graph.participants.length}} participants</p>
+    </div>
       </div><!-- /.columns -->
     </div><!-- /.tile -->
 
-    <div class="tile is-child box">
-      <p class="title" v-if="active.key">GRPH</p>
-      <p v-if="active.graph.locations">{{active.graph.locations.length}} locations</p>
-      <p v-if="active.graph.participants">{{active.graph.participants.length}} participants</p>
-    </div>
+    
   </div>
   <div class="tile is-parent">
     <div class="tile is-child box">
@@ -97,6 +97,10 @@ export default {
       state: 'filled',
       geoms: [],
       seens: [],
+      zooms: {
+        previous:[],
+        next:null,
+      },
       styles: {
         previous:null,
         default:{radius: 6,fillColor: 'orange',color: "#000",weight: 1,opacity: .8,fillOpacity: .8,name:'default'},
@@ -152,17 +156,17 @@ parent.layer.setStyle(this.styles.previous)
 
         })
         .on('layeradd',(parent)=>{
-          // console.log("parent in added event:",parent)
           let tgkey = this.geoKeyGen(parent.layer.feature)
           if(this.active.key !== null && this.active.item.geo.length>0){
                     if(this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type){
                       if(tgkey.type == 'point'){
                         MAP.setView(parent.layer.getLatLng(),10,{animate:true})
+                        this.zooms.next={type:'point',coords:parent.layer.getLatLng()}
                       } else {
-                        MAP.fitBounds(parent.layer.getBounds())
+                        this.zooms.next={type:'poly',coords:parent.layer.getBounds()}
                       }
                     }
-                  } 
+                  }
         })
         .addTo(MAP)
 
@@ -203,6 +207,10 @@ name: o.name
 }
 
     }, //getstyle
+    zoomToNext: function () {
+    console.info((process.env.VERBOSITY === 'DEBUG') ? "zoomToNext()..." : null);
+
+    }, //zoomtonext
     zoomToFullExtent: function () {
 
 MAP.fitBounds(this.l_json.getBounds());
