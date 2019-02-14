@@ -23,12 +23,11 @@ switch (process.env.MODE) {
     blu = 'http://mapproxy.libgeo2.llan.ll.mit.edu/wmts/l_mapbox_amazonia_grey/webmercator/{z}/{x}/{y}.png'
     break
   case '33':
-  blu = 'https://cartocdn_a.global.ssl.fastly.net/base-flatblue/{z}/{x}/{y}.png'
-  // blu = 'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png'
+    blu = 'https://cartocdn_a.global.ssl.fastly.net/base-flatblue/{z}/{x}/{y}.png'
   break
   default:
-  blu = 'http://localhost:8000/2x.png'
-    break
+    blu = 'http://localhost:8000/2x.png'
+  break
 }
 
 const baseLayer = new L.TileLayer(blu)

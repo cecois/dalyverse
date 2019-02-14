@@ -200,7 +200,14 @@ let feature_reduced = {
         })
         .on('click', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, this obj:' : null, parent)
-          let tgkey = this.geoKeyGen(parent.layer.feature)
+          
+
+// reduce potentially huge thing into just important bits
+let feature_reduced = {
+  properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
+  geometry:{type:parent.layer.feature.geometry.type}
+}
+          let tgkey = this.geoKeyGen(feature_reduced)
 
           // now do we have an event with that key?
           let neweventkey = this.$_.find(this.$_.reject(this.events, (ev) => {
@@ -216,24 +223,17 @@ let feature_reduced = {
           }
 
         })
-        .on('popupclose', (parent) => {
-          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupclose, sending to seen list:' : null, parent)
-
-// reduce potentially huge thing into just important bits
-let feature_reduced = {
-  properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-  geometry:{type:parent.layer.feature.geometry.type}
-}
-
-          let tgkey = this.geoKeyGen(feature_reduced)
-
-          parent.layer.setStyle(this.styles.previous)
-          this.seens.push(this.geoKeyStringGen(tgkey));
-          this.styles.previous = null
-
-        })
         .on('popupopen', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupopen, glowing:' : null, parent)
+
+          // reduce potentially huge thing into just important bits
+          let feature_reduced = {
+            properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
+            geometry:{type:parent.layer.feature.geometry.type}
+          }
+
+          let tgkey = this.geoKeyGen(feature_reduced)
+this.seens.push(this.geoKeyStringGen(tgkey));
 
           this.styles.previous = this.getStyle(parent.layer.options)
           parent.layer.setStyle({
@@ -242,7 +242,14 @@ let feature_reduced = {
           })
 
         })
+        .on('popupclose', (parent) => {
+          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupclose, sending to seen list:' : null, parent)
 
+
+          parent.layer.setStyle(this.styles.previous)
+          this.styles.previous = null
+
+        })
         .addTo(MAP)
 
     } // return
@@ -514,7 +521,9 @@ if(AI){
 
       let tgkey = (typeof f == 'object') ? this.geoKeyGen(f) : f;
 
-      console.log("tgkey in getGeoSTyle:",tgkey)
+      // console.log("=++++++++++++++++++++++++++++ TGKEY IN GETGEOSTYLE:",tgkey)
+      // console.log("=++++++++++++++++++++++++++++ TGKEYgenString IN GETGEOSTYLE:",this.geoKeyStringGen(tgkey))
+      // console.log("=++++++++++++++++++++++++++++ contains IN GETGEOSTYLE:",(this.$_.contains(this.seens, this.geoKeyStringGen(tgkey))))
 
       let styl = null;
       switch (true) {
@@ -553,6 +562,7 @@ if(AI){
       console.log((process.env.VERBOSITY == 'DEBUG') ? 'setMap()...' : null)
       console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> clearing current' : null)
       this.l_json.clearLayers()
+      alert("cleared?")
       console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> active.key is ' + this.active.key + ' in setMap...' : null)
 
       if (this.geoms == null) {
