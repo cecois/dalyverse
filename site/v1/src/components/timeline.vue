@@ -57,6 +57,7 @@
         </div>
         <div v-if="geoms" class="column"><p class="title">GEOMS</p>
           <p class="is-size-3">{{(geoms.length)}}</p>
+          <p class="is-size-7">across {{(l_json.getLayers().length)}} layers</p>
         </div>
         <div class="column">
       <p class="title" v-if="active.key">GRPH</p>
@@ -124,7 +125,7 @@ export default {
           radius: 6,
           fillColor: 'white',
           color: "aqua",
-          weight: 1,
+          weight: 2,
           opacity: 1,
           fillOpacity: .6,
           name: 'seen'
@@ -168,23 +169,24 @@ let feature_reduced = {
           onEachFeature: (feature, layer) => {} //onEach
         })
         .bindPopup((layer) => {
-          return '<div><h5 class="is-size-5">' + layer.feature.properties.name + '</h5>' + layer.feature.properties.anno +
-            '</div>'
+          return (process.env.VERBOSITY === 'DEBUG') ? '<h2 class="is-size-2">' + layer.feature.geometry.type + ':' + layer.feature.properties.cartodb_id + '</h2>' + '<div class="is-size-5">' + layer.feature.properties.name + '</div>' : '<div><h5 class="is-size-5">' + layer.feature.properties.name + '</h5>' + layer.feature.properties.anno + '</div>'
+          // return po
         })
         .on('layeradd', (parent) => {
+          console.log((process.env.VERBOSITY == 'DEBUG') ? 'on.layeradd...' : null, parent)
 
           // reduce potentially huge thing into just important bits
-let feature_reduced = {
-  properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-  geometry:{type:parent.layer.feature.geometry.type}
-}
+          let feature_reduced = {
+            properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
+            geometry:{type:parent.layer.feature.geometry.type}
+          }
 
           let tgkey = this.geoKeyGen(feature_reduced);
           // let tgkey = this.geoKeyGen(parent.layer.feature)
           if (this.active.key !== null && this.active.item.geo.length > 0) {
             if (this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type) {
               if (tgkey.type == 'point') {
-    // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
+                // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
                 this.zooms.next = {
                   type: 'point',
                   coords: parent.layer.getLatLng()
@@ -201,13 +203,18 @@ let feature_reduced = {
         .on('click', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, this obj:' : null, parent)
           
-
-// reduce potentially huge thing into just important bits
-let feature_reduced = {
-  properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-  geometry:{type:parent.layer.feature.geometry.type}
-}
+          // reduce potentially huge thing into just important bits
+          let feature_reduced = {
+            properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
+            geometry:{type:parent.layer.feature.geometry.type}
+          }
           let tgkey = this.geoKeyGen(feature_reduced)
+
+this.styles.previous = this.getStyle(parent.layer.options)
+          parent.layer.setStyle({
+            color: "white",
+            weight: 5
+          })
 
           // now do we have an event with that key?
           let neweventkey = this.$_.find(this.$_.reject(this.events, (ev) => {
@@ -226,27 +233,25 @@ let feature_reduced = {
         .on('popupopen', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupopen, glowing:' : null, parent)
 
+          
+
+        })
+        .on('popupclose', (event) => {
+          console.log('POPUPCLOSE.event:',event);
+          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupclose, sending to seen list:' : null, event)
+
+          // parent.layer.setStyle(this.styles.previous)
+          event.layer.setStyle(this.getGeoStyle('seen'))
+
           // reduce potentially huge thing into just important bits
           let feature_reduced = {
-            properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-            geometry:{type:parent.layer.feature.geometry.type}
+            properties:{cartodb_id:event.layer.feature.properties.cartodb_id},
+            geometry:{type:event.layer.feature.geometry.type}
           }
 
           let tgkey = this.geoKeyGen(feature_reduced)
-this.seens.push(this.geoKeyStringGen(tgkey));
+          this.seens.push(this.geoKeyStringGen(tgkey));
 
-          this.styles.previous = this.getStyle(parent.layer.options)
-          parent.layer.setStyle({
-            color: "white",
-            weight: 3
-          })
-
-        })
-        .on('popupclose', (parent) => {
-          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupclose, sending to seen list:' : null, parent)
-
-
-          parent.layer.setStyle(this.styles.previous)
           this.styles.previous = null
 
         })
