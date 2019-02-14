@@ -517,13 +517,9 @@ if(AI){
     }, //geoKeyStringGen
     getGeoStyle: function(f) {
 
-      console.log((process.env.VERBOSITY == 'DEBUG') ? 'f in getGeoStyle:' + JSON.stringify(f) : null)
+      console.log((process.env.VERBOSITY == 'DEBUG') ? 'getGeoStyle...' : null)
 
       let tgkey = (typeof f == 'object') ? this.geoKeyGen(f) : f;
-
-      // console.log("=++++++++++++++++++++++++++++ TGKEY IN GETGEOSTYLE:",tgkey)
-      // console.log("=++++++++++++++++++++++++++++ TGKEYgenString IN GETGEOSTYLE:",this.geoKeyStringGen(tgkey))
-      // console.log("=++++++++++++++++++++++++++++ contains IN GETGEOSTYLE:",(this.$_.contains(this.seens, this.geoKeyStringGen(tgkey))))
 
       let styl = null;
       switch (true) {
@@ -562,7 +558,6 @@ if(AI){
       console.log((process.env.VERBOSITY == 'DEBUG') ? 'setMap()...' : null)
       console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> clearing current' : null)
       this.l_json.clearLayers()
-      alert("cleared?")
       console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> active.key is ' + this.active.key + ' in setMap...' : null)
 
       if (this.geoms == null) {
@@ -571,46 +566,7 @@ if(AI){
 
         this.l_json.clearLayers()
         this.l_json.addData(this.geoms)
-        // var that = this;
-        //         L.geoJSON(this.geoms, {
-        //             pointToLayer: (feature, latlng)=>{return L.circleMarker(latlng);},
-        //             style: this.getStyle(), //style
-        //             onEachFeature: (feature,layer)=>{} //onEach
-        //         })
-        //         .bindPopup((layer)=>{
-        //             return '<div><h5 class="is-size-5">'+layer.feature.properties.name+'</h5>'+layer.feature.geometry.type+':'+layer.feature.properties.cartodb_id+
-        //             '</div>'
-        //         })
-        //         .on('popupopen',(parent)=>{
-        //           console.log((process.env.VERBOSITY=='DEBUG') ? '  -> on pop, this obj:' : null,parent)
 
-        //           let tgkey = this.geoKeyGen(parent.layer.feature)
-
-        //           // if nothing is already active OR if the active thing isn't this one's, find the spawning event and activate with it
-        //           let tevent = null;
-
-        //           switch (true) {
-        //             case (this.active.key == null):
-        //               tevent = this.$_.find(
-        //                 this.$_.reject(this.events,(ev)=>{return ev.geo.length<1})
-        //                 ,(E)=>{return (E.geo[0].geo_key.id == tgkey.id && E.geo[0].geo_key.type == tgkey.type)});
-        //               break;
-        //             default:
-        //               // statements_def
-        //               break;
-        //           }
-        // }) //.on.popupon
-        // .addTo(MAP)
-        // if(this.active.item.zoom){
-        //   if(this.active.item.zoom.type == 'point'){
-        //         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
-        //     MAP.setView(this.active.item.zoom.coords,11,{animate:true})
-        //   } else {
-        //         console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to active item extent' : null)
-        //           MAP.fitBounds( (this.active.item.bounds) ? this.active.item.bounds : MAP.getBounds() )
-        //         }
-        //           } //else
-        //         } // if active.item.zoom
       } //if.geoms.null
     }, //setMap
     setGraph: function() {
@@ -636,8 +592,6 @@ if(AI){
         console.log((process.env.VERBOSITY == 'DEBUG') ? 'no active.key, nulling graph...' : null)
         this.active.graph = this.nullGraph()
       }
-
-      // this.active.graph = (this.active.key !== null) ? this.$_.findWhere( this.events, { id : this.active.key }) : this.nullItem();
 
     }, //setgraph
     setRoute: function() {
