@@ -1,24 +1,22 @@
-/* eslint-disable */
 <template>
-<div id="vue-root" class="">
+<div id="vue-root" class="container">
   <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
-<!-- -------------------------------------------------------------- SLIDER -->
-<div id="slider"/>
-<!-- -------------------------------------------------------------- TIMELINE -->
+<!-- -------------------------------------------------------------- TIMELINE
 <div id="line"/>
+-->
 
-<!-- -------------------------------------------------------------- CONSOLE -->
-<nav v-if="state === 'filled'" class="navbar is-fixed-top">
+<!-- <nav v-if="state === 'filled'" class="navbar is-fixed-top"> -->
 
-<!-- ************************************************************************************ #CONSOLE -->
 <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
-<div id="console" class="has-text-weight-bold">
-<a class="button is-small" v-on:click="zoomToFullExtent">
+<!-- ************************************************************************************ #CONSOLE -->
+<div v-if="state === 'filled'" id="console" class="is-fixed-top has-text-weight-bold">
+<!-- <a class="button is-small" v-on:click="zoomToFullExtent">
     <span class="icon is-small">
       <i class="mdi mdi-github"></i>
     </span>
     <span>X</span>
-  </a>
+  </a> -->
+  <a class="" v-on:click="zoomToFullExtent"><b-icon icon="arrow-expand-all" size="is-small"></b-icon></a>
 
 <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
 
@@ -38,7 +36,7 @@
 <!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
 <div class="column is-3" v-if="active.item.content">TITL: {{active.item.content}}</div>
 <div class="column is-3" v-if="active.item.article">ART: {{active.item.article}}</div>
-<div class="column is-2 is-size-3">{{(events.length)}}</div> -->
+<div class="column is-2 is-size-7">{{(events.length)}}</div> -->
 
   <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
 
@@ -49,20 +47,20 @@
   <div class="tile is-4 is-vertical is-parent">
     <div class="tile is-child box">
       <div class="columns">
-        <div class="column"><p class="title">EVENTS</p>
-          <p class="is-size-3">{{(events.length)}}</p>
-          <p class="is-size-7">
-            <div style="font-size:.8em;" v-for="event in events">{{ event.id }}</div>
+        <div class="column"><p class="title is-size-7">EVENTS</p>
+          <p class="is-size-7">{{(events.length)}}</p>
+          <p class="">
+            <div style="font-size:.5em;" v-for="event in events">{{ event.id }}</div>
           </p>
         </div>
-        <div v-if="geoms" class="column"><p class="title">GEOMS</p>
-          <p class="is-size-3">{{(geoms.length)}}</p>
-          <p class="is-size-7">across {{(l_json.getLayers().length)}} layers</p>
+        <div v-if="geoms" class="column"><p class="title is-size-7">GEOMS</p>
+          <p class="is-size-7">{{(geoms.length)}}</p>
+          <p class="is-size-7">({{(l_json.getLayers().length)}}l)</p>
         </div>
         <div class="column">
-      <p class="title" v-if="active.key">GRPH</p>
-      <p v-if="active.graph.locations">{{active.graph.locations.length}} locations <a v-if="active.graph.locations.length>0" class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
-      <p v-if="active.graph.participants">{{active.graph.participants.length}} participants</p>
+      <p class="title is-size-7" v-if="active.key">GRPH</p>
+      <p v-if="active.graph.locations">loc:{{active.graph.locations.length}} <a v-if="active.graph.locations.length>0" class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
+      <p v-if="active.graph.participants">ppl:{{active.graph.participants.length}}</p>
     </div>
       </div><!-- /.columns -->
     </div><!-- /.tile -->
@@ -70,11 +68,11 @@
   </div>
   <div class="tile is-parent">
     <div class="tile is-child box">
-      <p class="title" v-if="active.key">ACTIVE</p>
-      <p>{{active.key}}</p>
-      <p v-if="active.item">{{active.item.content}}</p>
-      <p v-if="active.item">{{active.item.article}}</p>
-              <div v-if="seens" class="column"><p class="title">SEENS</p>
+      <p class="title is-size-7" v-if="active.key">ACTIVE</p>
+      <p class="is-size-7">{{active.key}}</p>
+      <p v-if="active.item" class=" is-size-7">{{active.item.content}}</p>
+      <p v-if="active.item" class="" style="font-size:.5em;">{{active.item.article}}</p>
+              <div v-if="seens" class="column"><p class="title is-size-7">SEENS</p>
           <p class="is-size-7">{{(seens.length)}}</p>
         </div>
     </div>
@@ -82,7 +80,13 @@
 </div>
 
 </div><!-- ************************************************************************************ /#CONSOLE -->
-</nav><!-- #.navbar -->
+<!-- #.navbar </nav> -->
+
+<div class="" id="container-main">
+  <!-- -------------------------------------------------------------- SLIDER -->
+<div id="slider"/>
+</div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
+
 </div><!-- ./#vue-root -->
 </template>
 
@@ -109,8 +113,8 @@ export default {
           color: "#000",
           weight: 1,
           opacity: .8,
-          fillOpacity: .8,
-          name: 'default'
+          fillOpacity: .8
+
         },
         active: {
           radius: 12,
@@ -118,28 +122,32 @@ export default {
           color: "#000",
           weight: 1,
           opacity: .8,
-          fillOpacity: .9,
-          name: 'active'
+          fillOpacity: .9
+
         },
         seen: {
           radius: 6,
           fillColor: 'white',
           color: "aqua",
-          weight: 2,
-          opacity: 1,
-          fillOpacity: .6,
-          name: 'seen'
+          weight: 1,
+          opacity: .8,
+          fillOpacity: .8
+
         }
       },
       times: {
-        slider: {
-          begin: process.env.SLIDER_TIME_BEGIN,
-          end: process.env.SLIDER_TIME_END
-        },
         line: {
           begin: process.env.LINE_TIME_BEGIN,
           end: process.env.LINE_TIME_END
-        }
+        },
+        slider: { range:{
+                  begin: process.env.SLIDER_RANGE_BEGIN,
+                  end: process.env.SLIDER_RANGE_END},
+                  handles:{
+                    begin:this.$MOMENT(process.env.SLIDER_RANGE_BEGIN).add(1, "year").format('YYYY-MM-DD'),
+                    end:this.$MOMENT(process.env.SLIDER_RANGE_BEGIN).subtract(1, "year").format('YYYY-MM-DD')
+                  }
+        },
       },
       active: {
         key: null,
@@ -169,7 +177,9 @@ let feature_reduced = {
           onEachFeature: (feature, layer) => {} //onEach
         })
         .bindPopup((layer) => {
-          return (process.env.VERBOSITY === 'DEBUG') ? '<h2 class="is-size-2">' + layer.feature.geometry.type + ':' + layer.feature.properties.cartodb_id + '</h2>' + '<div class="is-size-5">' + layer.feature.properties.name + '</div>' : '<div><h5 class="is-size-5">' + layer.feature.properties.name + '</h5>' + layer.feature.properties.anno + '</div>'
+          return (process.env.VERBOSITY === 'DEBUG')
+          ? '<h2 class="has-text-info is-size-2">' + layer.feature.geometry.type + ':' + layer.feature.properties.cartodb_id + '</h2>' + '<div class="has-text-grey-lighter is-size-5">' + layer.feature.properties.name + '</div>'
+          : '<div><h5 class="is-size-5">' + layer.feature.properties.name + '</h5>' + layer.feature.properties.anno + '</div>'
           // return po
         })
         .on('layeradd', (parent) => {
@@ -202,7 +212,7 @@ let feature_reduced = {
         })
         .on('click', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, this obj:' : null, parent)
-          
+
           // reduce potentially huge thing into just important bits
           let feature_reduced = {
             properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
@@ -210,18 +220,22 @@ let feature_reduced = {
           }
           let tgkey = this.geoKeyGen(feature_reduced)
 
-this.styles.previous = this.getStyle(parent.layer.options)
+          this.styles.previous = this.getStyle(parent.layer.options)
           parent.layer.setStyle({
             color: "white",
             weight: 5
           })
 
           // now do we have an event with that key?
-          let neweventkey = this.$_.find(this.$_.reject(this.events, (ev) => {
+          let neweventkeyob = this.$_.find(this.$_.reject(this.events, (ev) => {
             return ev.geo.length < 1
           }), (ev) => {
+            console.log("ev in neweventkey _find 226",ev)
+            console.log("tgkey in neweventkey _find 226",tgkey)
             return (ev.geo[0].geo_key.id == tgkey.id && ev.geo[0].geo_key.type == tgkey.type)
-          }).id
+          })
+
+          let neweventkey = (neweventkeyob) ? neweventkeyob.id : null;
 
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, new event key:' : null, neweventkey)
 
@@ -233,7 +247,7 @@ this.styles.previous = this.getStyle(parent.layer.options)
         .on('popupopen', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupopen, glowing:' : null, parent)
 
-          
+
 
         })
         .on('popupclose', (event) => {
@@ -270,9 +284,11 @@ this.styles.previous = this.getStyle(parent.layer.options)
     }
     if (this.$route.params.tstart) {
       this.times.line.begin = this.$route.params.tstart;
+      this.times.slider.handles.begin = this.$route.params.tstart;
     }
     if (this.$route.params.tend) {
       this.times.line.end = this.$route.params.tend;
+      this.times.slider.handles.end = this.$route.params.tend;
     }
     if (this.$route.params.activeid) {
       this.active.key = this.$route.params.activeid;
@@ -285,7 +301,8 @@ this.styles.previous = this.getStyle(parent.layer.options)
   }, // created
   mounted: function() {
 
-    console.info((process.env.VERBOSITY === 'DEBUG') ? "MOUNTED! Bootstrapping events..." : null);
+    console.info((process.env.VERBOSITY === 'DEBUG') ? "MOUNTED! Bootstrapping events and initting vizes..." : null);
+    this.setSlider()
     this.fetchEvents()
 
   }, //mounted
@@ -380,6 +397,62 @@ this.styles.previous = this.getStyle(parent.layer.options)
         "bounds": null
       }
     }, //nullItem
+    setSlider: function() {
+{
+  console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
+
+  if (!this.slider) {
+    // no slider - you're the slider
+    console.log(process.env.VERBOSITY == "DEBUG" ? "no slider - you're the slider" : null);
+
+    var slider = document.getElementById("slider");
+
+    const effer = v => {
+      return this.$MOMENT(v).format("YYYY.MMM.DD");
+    };
+
+    this.slider = this.$NOUISLIDER.create(slider, {
+      start: [
+      this.$MOMENT(this.times.slider.handles.begin, "YYYY-MM-DD").valueOf(),
+      this.$MOMENT(this.times.slider.handles.end, "YYYY-MM-DD").valueOf()
+      ],
+      connect: true,
+      pips: {
+        mode: "range",
+        density: 3
+      },
+      tooltips: [{ to: effer, from: Number }, { to: effer, from: Number }],
+      range: {
+        min: parseInt(
+          this.$MOMENT(this.times.slider.range.begin)
+          .subtract(2, "years")
+          .valueOf()
+          ),
+        max: parseInt(
+          this.$MOMENT(this.times.slider.range.end)
+          .add(2, "years")
+          .valueOf()
+          )
+      }
+    });
+  } //no slider
+  /* ----------------------- WIRE/REWIRE ---------- */
+
+  this.slider.on("change", (values, handle) => {
+    // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
+    //   "YYYY-MM-DD"
+    // );
+    // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
+    let to = {begin:this.$MOMENT(values[0], "x").format("YYYY-MM-DD")
+    ,end:this.$MOMENT(values[1], "x").format("YYYY-MM-DD")}
+    this.times.line = to
+    this.times.slider.handles = to
+    // this.fetchEvents();
+    // this.routize();
+  });
+}
+
+    }, //setSlider
     fetchEvents: function() {
 
       console.info((process.env.VERBOSITY === 'DEBUG') ? 'fetchEvents()...' : null)

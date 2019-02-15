@@ -34,7 +34,7 @@
   {"_from": "things/_:seaorg","_to": "people/_:lronhubbard","type":"isMemberOf","vertex":"_:seaorg"},
   {"_from": "things/_:seaorg","_to": "people/_:mariongrapes","type":"isMemberOf","vertex":"_:seaorg"},
   {"_from": "events/_:gollymurdersafamilyonmaricopastreet","_to": "people/_:golly","type":"hasParticipant","vertex":"_:gollymurdersafamilyonmaricopastreet"},
-  {"_from": "events/_:gollymurdersafamilyonmaricopastreet","_to": "places/_:phoneixaz","type":"occurredAt","vertex":"_:gollymurdersafamilyonmaricopastreet"},
+  {"_from": "events/_:gollymurdersafamilyonmaricopastreet","_to": "places/_:maricopastphoenix","type":"occurredAt","vertex":"_:gollymurdersafamilyonmaricopastreet"},
   {"_from": "people/_:gil","_to": "places/_:toweringpinespsychiatric","type":"livesAt","vertex":"_:gil"},
   {"_from": "people/_:golly","_to": "places/_:toweringpinespsychiatric","type":"livesAt","vertex":"_:golly"},
   {"_from": "people/_:chocolatepudding","_to": "places/_:toweringpinespsychiatric","type":"livesAt","vertex":"_:chocolatepudding"},
