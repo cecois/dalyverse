@@ -4,7 +4,7 @@ import Vue from 'vue'
 
 // bulma stuff via buefy
 import Buefy from 'buefy'
-import 'buefy/lib/buefy.css'
+// import 'buefy/lib/buefy.css'
 import 'nouislider/distribute/nouislider.min.css'
 import moment from 'moment'
 import nouislider from 'nouislider'
@@ -13,8 +13,6 @@ import App from './App'
 import router from './router'
 import underscore from 'vue-underscore'
 import vueHeadful from 'vue-headful'
-
-require('./styles/style.scss')
 
 Vue.component('vue-headful', vueHeadful)
 

@@ -122,6 +122,15 @@ export default {
           color: "#000",
           weight: 1,
           opacity: .8,
+          fillOpacity: .6
+
+        },
+        clicked: {
+          radius: 12,
+          fillColor: 'yellow',
+          color: "white",
+          weight: 5,
+          opacity: 1,
           fillOpacity: .9
 
         },
@@ -132,7 +141,6 @@ export default {
           weight: 1,
           opacity: .8,
           fillOpacity: .8
-
         }
       },
       times: {
@@ -221,10 +229,7 @@ let feature_reduced = {
           let tgkey = this.geoKeyGen(feature_reduced)
 
           this.styles.previous = this.getStyle(parent.layer.options)
-          parent.layer.setStyle({
-            color: "white",
-            weight: 5
-          })
+          parent.layer.setStyle(this.getGeoStyle('clicked'))
 
           // now do we have an event with that key?
           let neweventkeyob = this.$_.find(this.$_.reject(this.events, (ev) => {
@@ -330,7 +335,7 @@ let feature_reduced = {
       if (zoomto.type === 'point') {
 
         console.log(((process.env.VERBOSITY == 'DEBUG')) ? '   -> zooming to type:' + zoomto.type : null)
-        MAP.setView(zoomto.coords, 11, {
+        MAP.setView(zoomto.coords, 12, {
           animate: true
         })
       } else {
@@ -497,7 +502,7 @@ let feature_reduced = {
 
       if (eventgeoms.length > 0) {
 
-        var u = (process.env.MODE !== 'T') ? "http://milleria.org:3030/geoms/cbb?q=" + this.$_.pluck(eventgeoms, 'milleriakey').join(',') : 'http://localhost:8000/dalyverse-geoms-T.json'
+        var u = (process.env.MODE == '33') ? "http://milleria.org:3030/geoms/cbb?q=" + this.$_.pluck(eventgeoms, 'milleriakey').join(',') : 'http://localhost:8000/dalyverse-geoms-T.json'
 
         axios.get(u)
           .then(response => {

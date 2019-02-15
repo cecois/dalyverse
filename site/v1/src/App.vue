@@ -39,6 +39,12 @@ export default {
 }
 </script>
 
-<style>
-  /* @import './assets/style.css'; */
+<style lang="scss">
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+// Import custom shiz
+@import "@/sass/style.scss";
 </style>

@@ -4,7 +4,6 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const DOTENV = require('dotenv-webpack')
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
 ;
 
 
@@ -21,7 +20,6 @@ module.exports = {
     app: './src/main.js'
   },
   plugins: [
-  new ExtractTextPlugin('css/mystyles.css'),
   new DOTENV()
   ],
   output: {
@@ -41,16 +39,6 @@ module.exports = {
   module: {
     rules: [
     // ...(config.dev.useEslint ? [createLintingRule()] : []),
-    {
-      test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          'css-loader',
-          'sass-loader'
-        ]
-      })
-    },
     {
       test: /\.vue$/,
       loader: 'vue-loader',
