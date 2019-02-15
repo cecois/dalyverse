@@ -14,6 +14,8 @@ import router from './router'
 import underscore from 'vue-underscore'
 import vueHeadful from 'vue-headful'
 
+require('./styles/style.scss')
+
 Vue.component('vue-headful', vueHeadful)
 
 Vue.use(underscore)
