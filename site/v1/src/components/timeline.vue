@@ -1,5 +1,5 @@
 <template>
-<div id="vue-root" class="container">
+<div id="vue-root" class="container is-fixed-top">
   <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
 <!-- -------------------------------------------------------------- TIMELINE
 <div id="line"/>
@@ -9,7 +9,7 @@
 
 <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
 <!-- ************************************************************************************ #CONSOLE -->
-<div v-if="state === 'filled'" id="console" class="is-fixed-top has-text-weight-bold">
+<div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
 <!-- <a class="button is-small" v-on:click="zoomToFullExtent">
     <span class="icon is-small">
       <i class="mdi mdi-github"></i>
@@ -85,6 +85,9 @@
 <div class="" id="container-main">
   <!-- -------------------------------------------------------------- SLIDER -->
 <div id="slider"/>
+</div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
+
+<div id="timeline"/>
 </div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
 
 </div><!-- ./#vue-root -->
@@ -309,7 +312,6 @@ let feature_reduced = {
     console.info((process.env.VERBOSITY === 'DEBUG') ? "MOUNTED! Bootstrapping events and initting vizes..." : null);
     this.setSlider()
     this.fetchEvents()
-
   }, //mounted
   methods: {
 
@@ -402,8 +404,68 @@ let feature_reduced = {
         "bounds": null
       }
     }, //nullItem
+    setTimeline: function() {
+
+  console.log(process.env.VERBOSITY == "DEBUG" ? "initTimeline()..." : null);
+
+if(!this.timeline){
+  console.log(process.env.VERBOSITY == "DEBUG" ? " :no timeline - you're the timeline" : null);
+  const el = this.$el.querySelector("#timeline");
+  // create the Timeline
+
+  this.timeline = new vis.Timeline(el, this.events, {});
+
+  // now we wire up click-selection
+  this.timeline.on("select", (properties) => {
+
+    console.log("properties",properties)
+
+    if (properties.what == "background") {
+      console.info(
+        process.env.VERBOSITY == "DEBUG"
+          ? " :timeline:click off an item - SET KEY TO NULL."
+          : null
+      );
+
+this.timeline.setSelection();
+      this.active.key = null;
+    } else if (
+      properties.what == "item" &&
+      properties.item == this.active.key
+    ) {
+      console.info(
+        process.env.VERBOSITY == "DEBUG"
+          ? " :timeline:clicked item id is already the active key - SET ACTIVE KEY TO NULL."
+          : null
+      );
+this.timeline.setSelection();
+      this.active.key = null;
+      // also manually deselect
+      // this.timeline.setSelection();
+    } else {
+      console.info(
+        process.env.VERBOSITY == "DEBUG"
+          ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
+              properties.item
+          : null
+      );
+      this.timeline.setSelection(properties.item);
+      this.active.key = properties.item;
+    } //else matches active.key
+  }); //.on
+} //if.timeline
+else {
+console.info(
+        process.env.VERBOSITY == "DEBUG"
+          ? " timeline extant, doing other, setting selection to "+this.active.key
+          : null
+      );
+this.timeline.setSelection(this.active.key)
+} //else.timeline
+
+    }, //settimeline
     setSlider: function() {
-{
+// {
   console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
 
   if (!this.slider) {
@@ -455,7 +517,7 @@ let feature_reduced = {
     // this.fetchEvents();
     // this.routize();
   });
-}
+// }
 
     }, //setSlider
     fetchEvents: function() {
@@ -707,6 +769,7 @@ if(AI){
     'events': {
       handler: function(vnew, vold) {
         console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:events:old/new:' + vold.length + '/' + vnew.length : null)
+        this.setTimeline()
         this.fetchGeometries()
       }
     }, //events
@@ -722,10 +785,11 @@ if(AI){
     'active.key': {
       handler: function(vnew, vold) {
         console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:ACTIVE.KEY:old/new:' + vold + '/' + vnew : null)
-        this.setItem()
-        this.setGraph()
         this.setRoute()
         this.setPageTitle()
+        this.setItem()
+        this.setGraph()
+        this.setTimeline()
         this.setMap()
       }
     }

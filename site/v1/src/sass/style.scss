@@ -1,5 +1,5 @@
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Set your brand colors
 $purple: #8A4D76;
@@ -9,7 +9,7 @@ $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+// $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
@@ -17,13 +17,30 @@ $link: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
-.title{color:'pink';}
-
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++ local ++ */
+/* +++++++++++++++++++++++++++++++++++++++ noui ++ */
+
+.noUi-pips-horizontal{height:auto;}
+
+#app{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color:rgba(255,255,255,0);
+  a{font-weight:800;color:rgba(36,255,239,.8);}
+}
+#vue-root{
+  margin:0;
+  max-width:100%;
+  width:100%;
+}
 
 #console{
   background-color:rgba(0,0,0,.8);
@@ -33,4 +50,42 @@ $input-shadow: none;
 .tile{
   background-color:transparent;
   color:inherit;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++ timeline ++ */
+#timeline{
+  padding-top:0;
+}
+.vis-panel{
+  font-weight:800;font-size:.8em;
+}
+.vis-even{
+  background-color:rgba(0,0,0,.01)
+}
+.vis-odd{
+  background-color:rgba(0,0,0,.05)
+}
+.vis-item {
+  background-color:rgba(91,53,23,1);
+  color:#d8b425;
+  border-color:#d8b422;
+}
+.vis-item.vis-box{
+  border-radius:3px;
+}
+.vis-item-content{
+  font-weight:800;
+  font-size:.8em;
+}
+.vis-item.vis-point.vis-selected, .vis-item.vis-selected{
+  background-color:orange;
+  color:rgba(91,53,23,1);
+}
+.vis-text.vis-major{
+  font-weight:800;
+  font-size:1.7em;
+}
+.vis-text.vis-minor{
+  font-size:.9em;
+  color:rgba(5,5,5,.5);
 }
