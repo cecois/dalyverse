@@ -16,6 +16,7 @@
     </span>
     <span>X</span>
   </a> -->
+  <a href="http://localhost:8181/#/events"><b-icon icon="link" size="is-small"></b-icon></a>
   <a class="" v-on:click="zoomToFullExtent"><b-icon icon="arrow-expand-all" size="is-small"></b-icon></a>
 
 <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
@@ -59,7 +60,6 @@
         </div>
         <div class="column">
       <p class="title is-size-7" v-if="active.key">GRPH</p>
-      <p v-if="active.graph.locations">loc:{{active.graph.locations.length}} <a v-if="active.graph.locations.length>0" class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
       <p v-if="active.graph.participants">ppl:{{active.graph.participants.length}}</p>
     </div>
       </div><!-- /.columns -->
@@ -72,6 +72,7 @@
       <p class="is-size-7">{{active.key}}</p>
       <p v-if="active.item" class=" is-size-7">{{active.item.content}}</p>
       <p v-if="active.item" class="" style="font-size:.5em;">{{active.item.article}}</p>
+      <p v-if="active.item.geo.length>0"><a class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
               <div v-if="seens" class="column"><p class="title is-size-7">SEENS</p>
           <p class="is-size-7">{{(seens.length)}}</p>
         </div>
@@ -112,8 +113,8 @@ export default {
         previous: null,
         default: {
           radius: 6,
-          fillColor: 'orange',
-          color: "#000",
+          fillColor: '#df04a3',
+          color: '#fc00b5',
           weight: 1,
           opacity: .8,
           fillOpacity: .8
@@ -121,8 +122,8 @@ export default {
         },
         active: {
           radius: 12,
-          fillColor: 'yellow',
-          color: "#000",
+          fillColor: '#e3e10b',
+          color: '#c9c70a',
           weight: 1,
           opacity: .8,
           fillOpacity: .6
@@ -130,7 +131,7 @@ export default {
         },
         clicked: {
           radius: 12,
-          fillColor: 'yellow',
+          fillColor: '#e3e10b',
           color: "white",
           weight: 5,
           opacity: 1,
@@ -177,11 +178,11 @@ export default {
           },
           style: (feature) => {
 
-// reduce potentially huge thing into just important bits
-let feature_reduced = {
-  properties:{cartodb_id:feature.properties.cartodb_id},
-  geometry:{type:feature.geometry.type}
-}
+            // reduce potentially huge thing into just important bits
+            let feature_reduced = {
+              properties:{cartodb_id:feature.properties.cartodb_id},
+              geometry:{type:feature.geometry.type}
+            }
 
             return this.getGeoStyle(feature_reduced)
           }, //style
@@ -196,30 +197,35 @@ let feature_reduced = {
         .on('layeradd', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? 'on.layeradd...' : null, parent)
 
-          // reduce potentially huge thing into just important bits
-          let feature_reduced = {
-            properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-            geometry:{type:parent.layer.feature.geometry.type}
-          }
+          // // reduce potentially huge thing into just important bits
+          // let FR = {
+          //   properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
+          //   geometry:{type:parent.layer.feature.geometry.type}
+          // }
 
-          let tgkey = this.geoKeyGen(feature_reduced);
-          // let tgkey = this.geoKeyGen(parent.layer.feature)
-          if (this.active.key !== null && this.active.item.geo.length > 0) {
-            if (this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type) {
-              if (tgkey.type == 'point') {
-                // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
-                this.zooms.next = {
-                  type: 'point',
-                  coords: parent.layer.getLatLng()
-                }
-              } else {
-                this.zooms.next = {
-                  type: 'poly',
-                  coords: parent.layer.getBounds()
-                }
-              }
-            }
-          }
+          // console.log('205:feature_reduced',feature_reduced);
+          // console.log('206:this.active.item',this.active.item);
+
+          // let tgkey = this.geoKeyGen(feature_reduced);
+          // // let tgkey = this.geoKeyGen(parent.layer.feature)
+          // if (this.active.key !== null && this.active.item.geo.length > 0) {
+          // console.log('this.active.key !== null && this.active.item.geo.length > 0');
+          //   if (this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type) {
+          //     console.log('this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type')
+          //     if (tgkey.type == 'point') {
+          //       // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
+          //       this.zooms.next = {
+          //         type: 'point',
+          //         coords: parent.layer.getLatLng()
+          //       }
+          //     } else {
+          //       this.zooms.next = {
+          //         type: 'poly',
+          //         coords: parent.layer.getBounds()
+          //       }
+          //     }
+          //   }
+          // }
         })
         .on('click', (parent) => {
           console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, this obj:' : null, parent)
@@ -331,18 +337,23 @@ let feature_reduced = {
     zoomToNext: function() {
       console.info((process.env.VERBOSITY === 'DEBUG') ? "zoomToNext()..." : null);
 
-      // grab target
+      // grab target key (it'll be the ol {id:<id>,type:<type>})
       let zoomto = (this.zooms.next) ? this.zooms.next : null;
+
+      // find map object
+      let mo = this.$_.find(this.l_json.getLayers(),(L)=>{ 
+
+        return L.feature.properties.cartodb_id===zoomto.id && his.launderGeoType(L.feature.geometry.type) == zoomto.type })
 
       if (zoomto.type === 'point') {
 
         console.log(((process.env.VERBOSITY == 'DEBUG')) ? '   -> zooming to type:' + zoomto.type : null)
-        MAP.setView(zoomto.coords, 12, {
+        MAP.setView(mo.getLatLng(), 12, {
           animate: true
         })
       } else {
         console.log(((process.env.VERBOSITY == 'DEBUG')) ? '   -> zooming to type:' + zoomto.type : null)
-        MAP.fitBounds((zoomto.coords) ? zoomto.coords : MAP.getBounds())
+        MAP.fitBounds(mo.getBounds())
       }
 
 
@@ -416,43 +427,39 @@ if(!this.timeline){
   this.timeline = new vis.Timeline(el, this.events, {});
 
   // now we wire up click-selection
-  this.timeline.on("select", (properties) => {
-
-    console.log("properties",properties)
-
-    if (properties.what == "background") {
+  this.timeline.on("click", (properties) => {
+  switch (true) {
+    case properties.what == "background":
       console.info(
         process.env.VERBOSITY == "DEBUG"
-          ? " :timeline:click off an item - SET KEY TO NULL."
+          ? " :timeline:click off any item - SET KEY TO NULL."
           : null
       );
-
-this.timeline.setSelection();
-      this.active.key = null;
-    } else if (
-      properties.what == "item" &&
-      properties.item == this.active.key
-    ) {
-      console.info(
-        process.env.VERBOSITY == "DEBUG"
-          ? " :timeline:clicked item id is already the active key - SET ACTIVE KEY TO NULL."
-          : null
-      );
-this.timeline.setSelection();
-      this.active.key = null;
-      // also manually deselect
       // this.timeline.setSelection();
-    } else {
+      this.active.key = null;
+      break;
+    case properties.what == "item" && properties.item == this.active.key:
+      console.info(
+        process.env.VERBOSITY == "DEBUG"
+          ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)."
+          : null
+      );
+      // this.timeline.setSelection();
+      this.active.key = null;
+      break;
+    default:
       console.info(
         process.env.VERBOSITY == "DEBUG"
           ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
               properties.item
           : null
       );
-      this.timeline.setSelection(properties.item);
+      // this.timeline.setSelection(properties.item);
       this.active.key = properties.item;
-    } //else matches active.key
-  }); //.on
+      break;
+  }
+}
+); //.on
 } //if.timeline
 else {
 console.info(
@@ -592,6 +599,20 @@ this.timeline.setSelection(this.active.key)
         id: this.active.key
       }) : this.nullItem();
 
+              // if (item.geo[0].geo_key.type == 'point') {
+              //   // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
+                this.zooms.next = (this.active.item.geo.length>0) ? this.active.item.geo[0].geo_key : null;
+              //     type: 'point',
+              //     coords: parent.layer.getLatLng()
+              //   }
+              // } else {
+              //   this.zooms.next = {
+              //     type: 'poly',
+              //     coords: parent.layer.getBounds()
+              //   }
+              // }
+
+
       /*
       this.active.item.zoom.type == 'point'){
                 console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
@@ -703,6 +724,8 @@ if(AI){
       console.log((process.env.VERBOSITY == 'DEBUG') ? 'setMap()...' : null)
       console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> clearing current' : null)
       this.l_json.clearLayers()
+
+      // this.l_json.closePopup()
       console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> active.key is ' + this.active.key + ' in setMap...' : null)
 
       if (this.geoms == null) {
@@ -786,11 +809,11 @@ if(AI){
       handler: function(vnew, vold) {
         console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:ACTIVE.KEY:old/new:' + vold + '/' + vnew : null)
         this.setRoute()
-        this.setPageTitle()
         this.setItem()
         this.setGraph()
         this.setTimeline()
         this.setMap()
+        this.setPageTitle()
       }
     }
   } //watch
