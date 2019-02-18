@@ -48,7 +48,7 @@
   <div class="tile is-4 is-vertical is-parent">
     <div class="tile is-child box">
       <div class="columns">
-        <div class="column"><p class="title is-size-7">EVENTS</p>
+        <div class="column"><p class="title is-size-7">EVENTS BT {{ times.line.begin }} - {{ times.line.end }}</p>
           <p class="is-size-7">{{(events.length)}}</p>
           <p class="">
             <div style="font-size:.5em;" v-for="event in events">{{ event.id }}</div>
@@ -70,9 +70,9 @@
     <div class="tile is-child box">
       <p class="title is-size-7" v-if="active.key">ACTIVE</p>
       <p class="is-size-7">{{active.key}}</p>
-      <p v-if="active.item" class=" is-size-7">{{active.item.content}}</p>
+      <p v-if="active.item" class=" is-size-7">{{active.item.content}} ({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}})</p>
       <p v-if="active.item" class="" style="font-size:.5em;">{{active.item.article}}</p>
-      <p v-if="active.item.geo.length>0"><a class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
+      <p v-if="(active.item && active.item.geo.length>0)"><a class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
               <div v-if="seens" class="column"><p class="title is-size-7">SEENS</p>
           <p class="is-size-7">{{(seens.length)}}</p>
         </div>
@@ -96,55 +96,52 @@
 
 <script>
 export default {
-  name: 'Timeline',
+  name: "Timeline",
   data() {
     return {
       page: {
-        title: 'Andy Dalyverse Events'
+        title: "Andy Dalyverse Events"
       },
-      state: 'filled',
+      state: "filled",
       geoms: [],
       seens: [],
       zooms: {
         previous: [],
-        next: null,
+        next: null
       },
       styles: {
         previous: null,
         default: {
           radius: 6,
-          fillColor: '#df04a3',
-          color: '#fc00b5',
+          fillColor: "#df04a3",
+          color: "#fc00b5",
           weight: 1,
-          opacity: .8,
-          fillOpacity: .8
-
+          opacity: 0.8,
+          fillOpacity: 0.8
         },
         active: {
           radius: 12,
-          fillColor: '#e3e10b',
-          color: '#c9c70a',
+          fillColor: "#e3e10b",
+          color: "#c9c70a",
           weight: 1,
-          opacity: .8,
-          fillOpacity: .6
-
+          opacity: 0.8,
+          fillOpacity: 0.6
         },
         clicked: {
           radius: 12,
-          fillColor: '#e3e10b',
+          fillColor: "#e3e10b",
           color: "white",
           weight: 5,
           opacity: 1,
-          fillOpacity: .9
-
+          fillOpacity: 0.9
         },
         seen: {
           radius: 6,
-          fillColor: 'white',
+          fillColor: "white",
           color: "aqua",
           weight: 1,
-          opacity: .8,
-          fillOpacity: .8
+          opacity: 0.8,
+          fillOpacity: 0.8
         }
       },
       times: {
@@ -152,14 +149,20 @@ export default {
           begin: process.env.LINE_TIME_BEGIN,
           end: process.env.LINE_TIME_END
         },
-        slider: { range:{
-                  begin: process.env.SLIDER_RANGE_BEGIN,
-                  end: process.env.SLIDER_RANGE_END},
-                  handles:{
-                    begin:this.$MOMENT(process.env.SLIDER_RANGE_BEGIN).add(1, "year").format('YYYY-MM-DD'),
-                    end:this.$MOMENT(process.env.SLIDER_RANGE_BEGIN).subtract(1, "year").format('YYYY-MM-DD')
-                  }
-        },
+        slider: {
+          range: {
+            begin: process.env.SLIDER_RANGE_BEGIN,
+            end: process.env.SLIDER_RANGE_END
+          },
+          handles: {
+            begin: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
+              .add(1, "year")
+              .format("YYYY-MM-DD"),
+            end: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
+              .subtract(1, "year")
+              .format("YYYY-MM-DD")
+          }
+        }
       },
       active: {
         key: null,
@@ -168,138 +171,137 @@ export default {
       },
       events: [],
       console: {
-        msg: '',
+        msg: "",
         clazz: null,
         throb: false
       },
       l_json: L.geoJSON(this.geoms, {
-          pointToLayer: (feature, latlng) => {
-            return L.circleMarker(latlng);
-          },
-          style: (feature) => {
-
-            // reduce potentially huge thing into just important bits
-            let feature_reduced = {
-              properties:{cartodb_id:feature.properties.cartodb_id},
-              geometry:{type:feature.geometry.type}
-            }
-
-            return this.getGeoStyle(feature_reduced)
-          }, //style
-          onEachFeature: (feature, layer) => {} //onEach
-        })
-        .bindPopup((layer) => {
-          return (process.env.VERBOSITY === 'DEBUG')
-          ? '<h2 class="has-text-info is-size-2">' + layer.feature.geometry.type + ':' + layer.feature.properties.cartodb_id + '</h2>' + '<div class="has-text-grey-lighter is-size-5">' + layer.feature.properties.name + '</div>'
-          : '<div><h5 class="is-size-5">' + layer.feature.properties.name + '</h5>' + layer.feature.properties.anno + '</div>'
-          // return po
-        })
-        .on('layeradd', (parent) => {
-          console.log((process.env.VERBOSITY == 'DEBUG') ? 'on.layeradd...' : null, parent)
-
-          // // reduce potentially huge thing into just important bits
-          // let FR = {
-          //   properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-          //   geometry:{type:parent.layer.feature.geometry.type}
-          // }
-
-          // console.log('205:feature_reduced',feature_reduced);
-          // console.log('206:this.active.item',this.active.item);
-
-          // let tgkey = this.geoKeyGen(feature_reduced);
-          // // let tgkey = this.geoKeyGen(parent.layer.feature)
-          // if (this.active.key !== null && this.active.item.geo.length > 0) {
-          // console.log('this.active.key !== null && this.active.item.geo.length > 0');
-          //   if (this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type) {
-          //     console.log('this.active.item.geo[0].geo_key.id == tgkey.id && this.active.item.geo[0].geo_key.type == tgkey.type')
-          //     if (tgkey.type == 'point') {
-          //       // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
-          //       this.zooms.next = {
-          //         type: 'point',
-          //         coords: parent.layer.getLatLng()
-          //       }
-          //     } else {
-          //       this.zooms.next = {
-          //         type: 'poly',
-          //         coords: parent.layer.getBounds()
-          //       }
-          //     }
-          //   }
-          // }
-        })
-        .on('click', (parent) => {
-          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, this obj:' : null, parent)
-
+        pointToLayer: (feature, latlng) => {
+          return L.circleMarker(latlng);
+        },
+        style: feature => {
           // reduce potentially huge thing into just important bits
           let feature_reduced = {
-            properties:{cartodb_id:parent.layer.feature.properties.cartodb_id},
-            geometry:{type:parent.layer.feature.geometry.type}
-          }
-          let tgkey = this.geoKeyGen(feature_reduced)
+            properties: { cartodb_id: feature.properties.cartodb_id },
+            geometry: { type: feature.geometry.type }
+          };
 
-          this.styles.previous = this.getStyle(parent.layer.options)
-          parent.layer.setStyle(this.getGeoStyle('clicked'))
+          return this.getGeoStyle(feature_reduced);
+        }, //style
+        onEachFeature: (feature, layer) => {} //onEach
+      })
+        // .on("layeradd", parent => {
+          // console.log(
+          //   process.env.VERBOSITY == "DEBUG" ? "on.layeradd..." : null,
+          //   parent
+          // );
+
+        // })
+        .on("click", parent => {
+          console.log(
+            process.env.VERBOSITY == "DEBUG"
+              ? "  -> on click, this obj:"
+              : null,
+            parent
+          );
+
+          // reduce potentially huge thing into just important bits
+          let FR = {
+            properties: {
+              cartodb_id: parent.layer.feature.properties.cartodb_id
+            },
+            geometry: { type: parent.layer.feature.geometry.type }
+          };
+          this.doPopupStuff(parent, "click");
+
+          let tgkey = this.geoKeyGen(FR);
+
+          this.styles.previous = this.getStyle(parent.layer.options);
+          parent.layer.setStyle(this.getGeoStyle("clicked"));
 
           // now do we have an event with that key?
-          let neweventkeyob = this.$_.find(this.$_.reject(this.events, (ev) => {
-            return ev.geo.length < 1
-          }), (ev) => {
-            console.log("ev in neweventkey _find 226",ev)
-            console.log("tgkey in neweventkey _find 226",tgkey)
-            return (ev.geo[0].geo_key.id == tgkey.id && ev.geo[0].geo_key.type == tgkey.type)
-          })
+          let neweventkeyob = this.$_.find(
+            this.$_.reject(this.events, ev => {
+              return ev.geo.length < 1;
+            }),
+            ev => {
+              console.log("ev in neweventkey _find 226", ev);
+              console.log("tgkey in neweventkey _find 226", tgkey);
+              return (
+                ev.geo[0].geo_key.id == tgkey.id &&
+                ev.geo[0].geo_key.type == tgkey.type
+              );
+            }
+          );
 
-          let neweventkey = (neweventkeyob) ? neweventkeyob.id : null;
+          let neweventkey = neweventkeyob ? neweventkeyob.id : null;
 
-          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on click, new event key:' : null, neweventkey)
+          console.log(
+            process.env.VERBOSITY == "DEBUG"
+              ? "  -> on click, new event key:"
+              : null,
+            neweventkey
+          );
 
           if (neweventkey) {
             this.active.key = neweventkey;
           }
-
         })
-        .on('popupopen', (parent) => {
-          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupopen, glowing:' : null, parent)
-
-
-
+        .on("popupopen", parent => {
+          console.log(
+            process.env.VERBOSITY == "DEBUG"
+              ? "  -> on popupopen, glowing:"
+              : null,
+            parent
+          );
         })
-        .on('popupclose', (event) => {
-          console.log('POPUPCLOSE.event:',event);
-          console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> on popupclose, sending to seen list:' : null, event)
+        .on("popupclose", event => {
+          console.log("POPUPCLOSE.event:", event);
+          console.log(
+            process.env.VERBOSITY == "DEBUG"
+              ? "  -> on popupclose, sending to seen list:"
+              : null,
+            event
+          );
 
           // parent.layer.setStyle(this.styles.previous)
-          event.layer.setStyle(this.getGeoStyle('seen'))
+          event.layer.setStyle(this.getGeoStyle("seen"));
 
           // reduce potentially huge thing into just important bits
           let feature_reduced = {
-            properties:{cartodb_id:event.layer.feature.properties.cartodb_id},
-            geometry:{type:event.layer.feature.geometry.type}
-          }
+            properties: {
+              cartodb_id: event.layer.feature.properties.cartodb_id
+            },
+            geometry: { type: event.layer.feature.geometry.type }
+          };
 
-          let tgkey = this.geoKeyGen(feature_reduced)
+          let tgkey = this.geoKeyGen(feature_reduced);
           this.seens.push(this.geoKeyStringGen(tgkey));
 
-          this.styles.previous = null
-
+          this.styles.previous = null;
         })
         .addTo(MAP)
-
-    } // return
+    }; // return
   }, // data
   beforeCreate() {}, // beforeCreate
   created() {
-    console.info((process.env.VERBOSITY === 'DEBUG') ? 'begin CREATED, processing incoming vars' : null);
+    console.info(
+      process.env.VERBOSITY === "DEBUG"
+        ? "begin CREATED, processing incoming vars"
+        : null
+    );
 
     this.console = {
-      msg: 'loading...',
+      msg: "loading...",
       throb: true,
-      clazz: 'mdi-clock'
-    }
+      clazz: "mdi-clock"
+    };
+    console.log("+++++++ 299:TIMES.LINE",JSON.stringify(this.times.line))
     if (this.$route.params.tstart) {
       this.times.line.begin = this.$route.params.tstart;
       this.times.slider.handles.begin = this.$route.params.tstart;
     }
+    console.log("+++++++ 304:TIMES.LINE",JSON.stringify(this.times.line))
     if (this.$route.params.tend) {
       this.times.line.end = this.$route.params.tend;
       this.times.slider.handles.end = this.$route.params.tend;
@@ -310,19 +312,24 @@ export default {
     // this.times.slider.end=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
     // this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
     // this.initData();
-    window.addEventListener('keydown', this.onKey)
-    console.info((process.env.VERBOSITY === 'DEBUG') ? 'end CREATED, initial state set' : null);
+    window.addEventListener("keydown", this.onKey);
+    console.info(
+      process.env.VERBOSITY === "DEBUG"
+        ? "end CREATED, initial state set"
+        : null
+    );
   }, // created
   mounted: function() {
-
-    console.info((process.env.VERBOSITY === 'DEBUG') ? "MOUNTED! Bootstrapping events and initting vizes..." : null);
-    this.setSlider()
-    this.fetchEvents()
+    console.info(
+      process.env.VERBOSITY === "DEBUG"
+        ? "MOUNTED! Bootstrapping events and initting vizes..."
+        : null
+    );
+    this.setSlider();
+    this.fetchEvents();
   }, //mounted
   methods: {
-
     getStyle: function(o) {
-
       return {
         radius: o.radius,
         fillColor: o.fillColor,
@@ -331,213 +338,315 @@ export default {
         opacity: o.opacity,
         fillOpacity: o.fillOpacity,
         name: o.name
-      }
-
+      };
     }, //getstyle
+    zeroOut: function () {
+
+this.l_json.clearLayers();
+(this.timeline)?this.timeline.setSelection():null;
+
+    }, // zeroOut
     zoomToNext: function() {
-      console.info((process.env.VERBOSITY === 'DEBUG') ? "zoomToNext()..." : null);
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "zoomToNext()..." : null
+      );
 
       // grab target key (it'll be the ol {id:<id>,type:<type>})
-      let zoomto = (this.zooms.next) ? this.zooms.next : null;
+      let zoomto = this.zooms.next ? this.zooms.next : null;
 
       // find map object
-      let mo = this.$_.find(this.l_json.getLayers(),(L)=>{ 
+      let mo = this.$_.find(this.l_json.getLayers(), L => {
+        return (
+          L.feature.properties.cartodb_id === zoomto.id &&
+          this.launderGeoType(L.feature.geometry.type) == zoomto.type
+        );
+      });
 
-        return L.feature.properties.cartodb_id===zoomto.id && his.launderGeoType(L.feature.geometry.type) == zoomto.type })
-
-      if (zoomto.type === 'point') {
-
-        console.log(((process.env.VERBOSITY == 'DEBUG')) ? '   -> zooming to type:' + zoomto.type : null)
+      if (zoomto.type === "point") {
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "   -> zooming to type:" + zoomto.type
+            : null
+        );
         MAP.setView(mo.getLatLng(), 12, {
           animate: true
-        })
+        });
       } else {
-        console.log(((process.env.VERBOSITY == 'DEBUG')) ? '   -> zooming to type:' + zoomto.type : null)
-        MAP.fitBounds(mo.getBounds())
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "   -> zooming to type:" + zoomto.type
+            : null
+        );
+        MAP.fitBounds(mo.getBounds());
       }
-
-
     }, //zoomtonext
     zoomToFullExtent: function() {
-
       MAP.fitBounds(this.l_json.getBounds());
-
     }, //zoomToFullExtent
-    onKey: function(e) {
+    doPopupStuff: function(p, e) {
+      console.log(
+        process.env.VERBOSITY == "DEBUG" ? "doPopupStuff()..." : null
+      );
 
+      let copy =
+        process.env.VERBOSITY === "DEBUG"
+          ? '<h2 class="has-text-info is-size-2">' +
+            p.layer.feature.properties.cartodb_id +
+            "</h2>" +
+            '<div class="has-text-grey-lighter is-size-5">' +
+            p.layer.feature.properties.name +
+            "</div>"
+          : '<div><h5 class="is-size-5">real h5</h5>real subhead</div>';
+
+      let po = L.popup()
+        .setLatLng(
+          p.layer.feature.geometry.type == "Point"
+            ? p.layer.getLatLng()
+            : p.layer.getCenter()
+        )
+        .setContent(copy);
+
+      // if it's a click event we popup no questions asked
+      if (e) {
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "  -> event so we just do wut we told"
+            : null
+        );
+        po.openOn(MAP);
+      } else {
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "  -> not event so we check against active.key"
+            : null
+        );
+        if ((p.layer.properties.cartodb_id = 999)) {
+          po.openOn(MAP);
+        }
+        // get this one's key
+        // otherwise we might be calling this ex post facto cuzza incoming active.key, so...
+        // does it match active?
+        // yes popup
+      }
+    }, //doPopupStuff
+    onKey: function(e) {
       switch (true) {
-        case (e.keyCode == 18 && this.state == 'empty'):
-          this.state = 'filled'
+        case e.keyCode == 18 && this.state == "empty":
+          this.state = "filled";
           break;
-        case (e.keyCode == 18 && this.state !== 'empty'):
-          this.state = 'empty'
+        case e.keyCode == 18 && this.state !== "empty":
+          this.state = "empty";
           break;
         default:
-          this.state = this.state
+          this.state = this.state;
           break;
       }
-
     }, //onkey
     setPageTitle: function() {
-      let sub = null
+      let sub = null;
 
       switch (true) {
-        case (typeof this.active.item == 'undefined'):
-          sub = this.times.line.begin + " - " + this.times.line.end
+        case typeof this.active.item == "undefined":
+          sub = this.times.line.begin + " - " + this.times.line.end;
           break;
-        case (this.active.item.content == null):
-          sub = this.times.line.begin + " - " + this.times.line.end
+        case this.active.item.content == null:
+          sub = this.times.line.begin + " - " + this.times.line.end;
           break;
         default:
           sub = this.active.item.content;
           break;
       }
 
-      this.page.title = 'Dalyverse Events: ' + sub;
-
+      this.page.title = "Dalyverse Events: " + sub;
     }, //setPageTitle
     nullGraph: function() {
-      console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null graph...' : null);
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
+      );
       return {
         participants: null,
         locations: null
       };
     }, //nullGraph
     nullItem: function() {
-      console.info((process.env.VERBOSITY === 'DEBUG') ? 'returning null item...' : null);
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
+      );
       return {
-        "id": null,
-        "content": null,
-        "article": null,
-        "start": null,
-        "end": null,
-        "geo": [],
-        "bounds": null
-      }
+        id: null,
+        content: null,
+        article: null,
+        start: null,
+        end: null,
+        geo: [],
+        bounds: null
+      };
     }, //nullItem
     setTimeline: function() {
-
-  console.log(process.env.VERBOSITY == "DEBUG" ? "initTimeline()..." : null);
-
-if(!this.timeline){
-  console.log(process.env.VERBOSITY == "DEBUG" ? " :no timeline - you're the timeline" : null);
-  const el = this.$el.querySelector("#timeline");
-  // create the Timeline
-
-  this.timeline = new vis.Timeline(el, this.events, {});
-
-  // now we wire up click-selection
-  this.timeline.on("click", (properties) => {
-  switch (true) {
-    case properties.what == "background":
-      console.info(
-        process.env.VERBOSITY == "DEBUG"
-          ? " :timeline:click off any item - SET KEY TO NULL."
-          : null
+      console.log(
+        process.env.VERBOSITY == "DEBUG" ? "initTimeline()..." : null
       );
-      // this.timeline.setSelection();
-      this.active.key = null;
-      break;
-    case properties.what == "item" && properties.item == this.active.key:
-      console.info(
-        process.env.VERBOSITY == "DEBUG"
-          ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)."
-          : null
-      );
-      // this.timeline.setSelection();
-      this.active.key = null;
-      break;
-    default:
-      console.info(
-        process.env.VERBOSITY == "DEBUG"
-          ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
-              properties.item
-          : null
-      );
-      // this.timeline.setSelection(properties.item);
-      this.active.key = properties.item;
-      break;
-  }
-}
-); //.on
-} //if.timeline
-else {
-console.info(
-        process.env.VERBOSITY == "DEBUG"
-          ? " timeline extant, doing other, setting selection to "+this.active.key
-          : null
-      );
-this.timeline.setSelection(this.active.key)
-} //else.timeline
 
+      if (!this.timeline) {
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? " :no timeline - you're the timeline"
+            : null
+        );
+        const el = this.$el.querySelector("#timeline");
+        // create the Timeline
+
+        this.timeline = new vis.Timeline(el, this.events, {});
+
+        // now we wire up click-selection
+        this.timeline.on("click", properties => {
+          switch (true) {
+            case properties.what == "background":
+              console.info(
+                process.env.VERBOSITY == "DEBUG"
+                  ? " :timeline:click off any item - SET KEY TO NULL."
+                  : null
+              );
+              // this.timeline.setSelection();
+              this.active.key = null;
+              break;
+            case properties.what == "item" &&
+              properties.item == this.active.key:
+              console.info(
+                process.env.VERBOSITY == "DEBUG"
+                  ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)."
+                  : null
+              );
+              // this.timeline.setSelection();
+              this.active.key = null;
+              break;
+            default:
+              console.info(
+                process.env.VERBOSITY == "DEBUG"
+                  ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
+                      properties.item
+                  : null
+              );
+              // this.timeline.setSelection(properties.item);
+              this.active.key = properties.item;
+              break;
+          }
+        }); //.on
+      } //if.timeline
+      else {
+        console.info(
+          process.env.VERBOSITY == "DEBUG"
+            ? " timeline extant, doing other, setting selection to " +
+                this.active.key
+            : null
+        );
+        this.timeline.setItems(this.events)
+        this.timeline.setSelection(this.active.key)
+        this.timeline.fit();
+      } //else.timeline
     }, //settimeline
     setSlider: function() {
-// {
-  console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
+      // {
+      console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
 
-  if (!this.slider) {
-    // no slider - you're the slider
-    console.log(process.env.VERBOSITY == "DEBUG" ? "no slider - you're the slider" : null);
+      if (!this.slider) {
+        // no slider - you're the slider
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "no slider - you're the slider"
+            : null
+        );
 
-    var slider = document.getElementById("slider");
+        var slider = document.getElementById("slider");
 
-    const effer = v => {
-      return this.$MOMENT(v).format("YYYY.MMM.DD");
-    };
+        const effer = v => {
+          return this.$MOMENT(v).format("YYYY.MMM.DD");
+        };
 
-    this.slider = this.$NOUISLIDER.create(slider, {
-      start: [
-      this.$MOMENT(this.times.slider.handles.begin, "YYYY-MM-DD").valueOf(),
-      this.$MOMENT(this.times.slider.handles.end, "YYYY-MM-DD").valueOf()
-      ],
-      connect: true,
-      pips: {
-        mode: "range",
-        density: 3
-      },
-      tooltips: [{ to: effer, from: Number }, { to: effer, from: Number }],
-      range: {
-        min: parseInt(
-          this.$MOMENT(this.times.slider.range.begin)
-          .subtract(2, "years")
-          .valueOf()
-          ),
-        max: parseInt(
-          this.$MOMENT(this.times.slider.range.end)
-          .add(2, "years")
-          .valueOf()
-          )
+        this.slider = this.$NOUISLIDER.create(slider, {
+          start: [
+            this.$MOMENT(
+              process.env.LINE_TIME_BEGIN,
+              "YYYY-MM-DD"
+            ).valueOf(),
+            this.$MOMENT(
+              process.env.LINE_TIME_END,
+               "YYYY-MM-DD").valueOf()
+          ],
+          connect: true,
+          behaviour: 'drag',
+          pips: {
+            mode: 'range',
+            density: 3
+          },
+          tooltips: [{ to: effer, from: Number }, { to: effer, from: Number }],
+          range: {
+            min: parseInt(
+              this.$MOMENT(this.times.slider.range.begin)
+                .valueOf()
+            ),
+            max: parseInt(
+              this.$MOMENT(this.times.slider.range.end)
+                .valueOf()
+            )
+          }
+        });
+      /* ----------------------- WIRE/REWIRE ---------- */
+
+      this.slider.on("change", (values, handle) => {
+        // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
+        //   "YYYY-MM-DD"
+        // );
+        // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
+        let to = {
+          begin: this.$MOMENT(values[0], "x").format("YYYY-MM-DD"),
+          end: this.$MOMENT(values[1], "x").format("YYYY-MM-DD")
+        };
+        this.times.line = to;
+        this.times.slider.handles = to;
+        // this.fetchEvents();
+        // this.routize();
+      });
+      } //if.slider
+      else {
+        console.info(
+        process.env.VERBOSITY === "DEBUG" ? "slider extant, auditing handles..." : null
+      );
+        this.slider.set([
+            this.$MOMENT(
+              this.times.line.begin,
+              "YYYY-MM-DD"
+            ).valueOf(),
+            this.$MOMENT(
+              this.times.line.end,
+               "YYYY-MM-DD").valueOf()
+          ])
       }
-    });
-  } //no slider
-  /* ----------------------- WIRE/REWIRE ---------- */
 
-  this.slider.on("change", (values, handle) => {
-    // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
-    //   "YYYY-MM-DD"
-    // );
-    // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
-    let to = {begin:this.$MOMENT(values[0], "x").format("YYYY-MM-DD")
-    ,end:this.$MOMENT(values[1], "x").format("YYYY-MM-DD")}
-    this.times.line = to
-    this.times.slider.handles = to
-    // this.fetchEvents();
-    // this.routize();
-  });
-// }
-
+      // }
     }, //setSlider
     fetchEvents: function() {
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "fetchEvents()..." : null
+      );
 
-      console.info((process.env.VERBOSITY === 'DEBUG') ? 'fetchEvents()...' : null)
+      let q =
+        'for e in edges filter e.type=="hasParticipant" OR e.type=="occurredAt" for ev in events filter e._from==ev._id AND e.type=="hasParticipant" LET tstart = HAS(ev.timestamp, "start")==true ? DATE_FORMAT(ev.timestamp.start, "%yyyy-%mm-%dd") : DATE_FORMAT(ev.timestamp, "%yyyy-%mm-%dd") LET tend = HAS(ev.timestamp, "end")==true ? DATE_FORMAT(ev.timestamp.endz, "%yyyy-%mm-%dd") : null LET geo=( for g in edges filter g._from==ev._id AND g.type=="occurredAt" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP(\'' +
+        this.times.line.begin +
+        "') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('" +
+        this.times.line.end +
+        "')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}";
 
-      let q = "for e in edges filter e.type==\"hasParticipant\" OR e.type==\"occurredAt\" for ev in events filter e._from==ev._id AND e.type==\"hasParticipant\" LET tstart = HAS(ev.timestamp, \"start\")==true ? DATE_FORMAT(ev.timestamp.start, \"%yyyy-%mm-%dd\") : DATE_FORMAT(ev.timestamp, \"%yyyy-%mm-%dd\") LET tend = HAS(ev.timestamp, \"end\")==true ? DATE_FORMAT(ev.timestamp.endz, \"%yyyy-%mm-%dd\") : null LET geo=( for g in edges filter g._from==ev._id AND g.type==\"occurredAt\" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP('" + this.times.line.begin + "') && DATE_TIMESTAMP(tstart)<=DATE_TIMESTAMP('" + this.times.line.end + "')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}"
-
-      axios.post('http://' + process.env.ARANGOIP + ':8529/_api/cursor', {
+      axios
+        .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
           query: q
         })
         .then(response => {
-          console.info((process.env.VERBOSITY === 'DEBUG') ? 'setting events w/ axios response...' : null)
+          console.info(
+            process.env.VERBOSITY === "DEBUG"
+              ? "setting events w/ axios response..."
+              : null
+          );
           this.events = response.data.result;
           this.$nextTick(function() {
             // events in place, item can be set therefrom...
@@ -545,226 +654,239 @@ this.timeline.setSelection(this.active.key)
           });
         }) //axios.then
         .catch(e => {
-          console.error(e)
-        }) //axios.catch
-
+          console.error(e);
+        }); //axios.catch
     }, //fetchEvents
     fetchGeometries: function() {
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "fetchGeometries()..." : null
+      );
 
-      console.info((process.env.VERBOSITY === 'DEBUG') ? 'fetchGeometries()...' : null)
+      let eventswgeoms = this.$_.reject(this.events, t => {
+        return t.geo.length < 1;
+      });
 
-      let eventswgeoms = this.$_.reject(this.events, (t) => {
-        return t.geo.length < 1
-      })
+      console.info(
+        process.env.VERBOSITY === "DEBUG"
+          ? "  -> found " + eventswgeoms.length + " georeferenced events"
+          : null
+      );
 
-      console.info((process.env.VERBOSITY === 'DEBUG') ? '  -> found ' + eventswgeoms.length + ' georeferenced events' : null)
-
-      let eventgeoms = this.$_.map(
-        eventswgeoms, (g) => {
-          return {
-            eid: g.id,
-            milleriakey: g.geo[0].geo_key.type + ":" + g.geo[0].geo_key.id,
-            geoname: g.geo[0].name,
-            geoarticle: g.geo[0].article
-          }
-        })
+      let eventgeoms = this.$_.map(eventswgeoms, g => {
+        return {
+          eid: g.id,
+          milleriakey: g.geo[0].geo_key.type + ":" + g.geo[0].geo_key.id,
+          geoname: g.geo[0].name,
+          geoarticle: g.geo[0].article
+        };
+      });
 
       if (eventgeoms.length > 0) {
+        var u =
+          process.env.MODE == "33"
+            ? "http://milleria.org:3030/geoms/cbb?q=" +
+              this.$_.pluck(eventgeoms, "milleriakey").join(",")
+            : "http://localhost:8000/dalyverse-geoms-T.json";
 
-        var u = (process.env.MODE == '33') ? "http://milleria.org:3030/geoms/cbb?q=" + this.$_.pluck(eventgeoms, 'milleriakey').join(',') : 'http://localhost:8000/dalyverse-geoms-T.json'
-
-        axios.get(u)
+        axios
+          .get(u)
           .then(response => {
-            this.geoms = response.data
+            this.geoms = response.data;
           }) //axios.then
           .catch(e => {
             this.console.msg = null;
-            console.error(e)
-          }) //axios.catch
-      } else {
-        // if there are no geoms to fetch, don't bother with the call, just zero out the map
-        MAP.clearLayers();
+            console.error(e);
+          }); //axios.catch
       }
-
     }, //fetchGeometries
     setItem: function() {
+      console.log(process.env.VERBOSITY == "DEBUG" ? "setItem()..." : null);
+      console.log(
+        process.env.VERBOSITY == "DEBUG" && this.active.key == null
+          ? "  -> active.key is " + this.active.key + " (NULL), nulling item..."
+          : null
+      );
+      console.log(
+        process.env.VERBOSITY == "DEBUG" && this.active.key !== null
+          ? "  -> active.key is " +
+              this.active.key +
+              " setting real item from " +
+              this.events.length +
+              " events..."
+          : null
+      );
 
-      console.log((process.env.VERBOSITY == 'DEBUG') ? 'setItem()...' : null)
-      console.log(((process.env.VERBOSITY == 'DEBUG') && this.active.key == null) ? '  -> active.key is ' + this.active.key + ' (NULL), nulling item...' : null)
-      console.log(((process.env.VERBOSITY == 'DEBUG') && this.active.key !== null) ? '  -> active.key is ' + this.active.key + ' setting real item from ' + this.events.length + ' events...' : null)
+      this.active.item =
+        this.active.key !== null
+          ? this.$_.findWhere(this.events, {
+              id: this.active.key
+            })
+          : this.nullItem();
 
-
-
-      this.active.item = (this.active.key !== null) ? this.$_.findWhere(this.events, {
-        id: this.active.key
-      }) : this.nullItem();
-
-              // if (item.geo[0].geo_key.type == 'point') {
-              //   // MAP.setView(parent.layer.getLatLng(), 10, {animate: true})
-                this.zooms.next = (this.active.item.geo.length>0) ? this.active.item.geo[0].geo_key : null;
-              //     type: 'point',
-              //     coords: parent.layer.getLatLng()
-              //   }
-              // } else {
-              //   this.zooms.next = {
-              //     type: 'poly',
-              //     coords: parent.layer.getBounds()
-              //   }
-              // }
-
-
-      /*
-      this.active.item.zoom.type == 'point'){
-                console.log(((process.env.VERBOSITY=='DEBUG') && this.active.key == null) ? '   -> zooming to point' : null)
-            MAP.setView(this.active.item.zoom.coords
-
-        if(this.active.key !== null){
-
-let AI = this.$_.findWhere( this.events, { id : this.active.key });
-
-if(AI){
-  if(AI.geo.length>0){
-
-  } // if.AI.length
-} // if AI
-
-        this.active.item=AI
-      } else {this.active.item=this.nullItem();}
-            */
-
+if(this.active.item){
+      this.zooms.next =
+        this.active.item.geo.length > 0
+          ? this.active.item.geo[0].geo_key
+          : null;
+        }
     }, //setitem
     launderGeoType: function(f) {
-
       let t = null;
       switch (f.toLowerCase()) {
-        case 'multipolygon':
-          t = 'poly'
+        case "multipolygon":
+          t = "poly";
           break;
-        case 'polygon':
-          t = 'poly'
+        case "polygon":
+          t = "poly";
           break;
-        case 'multilinestring':
-          t = 'line'
+        case "multilinestring":
+          t = "line";
           break;
-        case 'linestring':
-          t = 'line'
+        case "linestring":
+          t = "line";
           break;
-        case 'point':
-          t = 'point'
+        case "point":
+          t = "point";
           break;
         default:
-          // code block
+        // code block
       }
-      return t
+      return t;
     }, //launderGeoType
     geoKeyGen: function(F) {
-
-      let o = (F) ? {
-        id: F.properties.cartodb_id,
-        type: this.launderGeoType(F.geometry.type)
-      } : {
-        id: null,
-        type: null
-      }
+      let o = F
+        ? {
+            id: F.properties.cartodb_id,
+            type: this.launderGeoType(F.geometry.type)
+          }
+        : {
+            id: null,
+            type: null
+          };
       return o;
-
     }, //geoKeyGen
     geoKeyStringGen: function(F) {
-
-      let o = null
+      let o = null;
       // two differnet versions possible - prelaundered and straight frm the geom
       if (F.properties) {
-        o = F.properties.cartodb_id + ':' + this.launderGeoType(F.geometry.type)
+        o =
+          F.properties.cartodb_id + ":" + this.launderGeoType(F.geometry.type);
       } else {
-        o = F.id + ':' + F.type
+        o = F.id + ":" + F.type;
       }
       return o;
-
     }, //geoKeyStringGen
     getGeoStyle: function(f) {
+      console.log(process.env.VERBOSITY == "DEBUG" ? "getGeoStyle..." : null);
 
-      console.log((process.env.VERBOSITY == 'DEBUG') ? 'getGeoStyle...' : null)
-
-      let tgkey = (typeof f == 'object') ? this.geoKeyGen(f) : f;
+      let tgkey = typeof f == "object" ? this.geoKeyGen(f) : f;
 
       let styl = null;
       switch (true) {
-        case (typeof f == 'string'):
-          styl = this.styles[f]
+        case typeof f == "string":
+          styl = this.styles[f];
           break;
-        case (typeof this.active == 'undefined'):
-          styl = this.styles.default
+        case typeof this.active == "undefined":
+          styl = this.styles.default;
           break;
-        case (this.active.key == null):
-          styl = this.styles.default
+        case this.active.key == null:
+          styl = this.styles.default;
           break;
-        case (typeof this.active.item.geo == 'undefined'):
-          styl = this.styles.default
+        case typeof this.active.item.geo == "undefined":
+          styl = this.styles.default;
           break;
-        case (this.active.item.geo.length < 1):
-          styl = this.styles.default
+        case this.active.item.geo.length < 1:
+          styl = this.styles.default;
           break;
-        case (this.$_.contains(this.seens, this.geoKeyStringGen(tgkey))):
-          styl = this.styles.seen
+        case this.$_.contains(this.seens, this.geoKeyStringGen(tgkey)):
+          styl = this.styles.seen;
           break;
-        case (tgkey.id == this.active.item.geo[0].geo_key.id && tgkey.type == this.active.item.geo[0].geo_key.type):
-          styl = this.styles.active
+        case tgkey.id == this.active.item.geo[0].geo_key.id &&
+          tgkey.type == this.active.item.geo[0].geo_key.type:
+          styl = this.styles.active;
           break;
         default:
-          styl = this.styles.default
+          styl = this.styles.default;
           break;
       }
 
-      console.log((process.env.VERBOSITY == 'DEBUG') ? '  --> resulting style:' + JSON.stringify(styl) : null)
-      return styl
-
+      console.log(
+        process.env.VERBOSITY == "DEBUG"
+          ? "  --> resulting style:" + JSON.stringify(styl)
+          : null
+      );
+      return styl;
     }, //getgeostyle
     setMap: function() {
+      console.log(process.env.VERBOSITY == "DEBUG" ? "setMap()..." : null);
+      console.log(
+        process.env.VERBOSITY == "DEBUG" ? "  -> clearing current" : null
+      );
+      this.l_json.clearLayers();
 
-      console.log((process.env.VERBOSITY == 'DEBUG') ? 'setMap()...' : null)
-      console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> clearing current' : null)
-      this.l_json.clearLayers()
+      console.log(
+        process.env.VERBOSITY == "DEBUG"
+          ? "  -> active.key is " + this.active.key + " in setMap..."
+          : null
+      );
 
-      // this.l_json.closePopup()
-      console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> active.key is ' + this.active.key + ' in setMap...' : null)
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "  -> -> testing this.geoms for null"
+            : null
+        );
 
       if (this.geoms == null) {
-        console.log(((process.env.VERBOSITY == 'DEBUG') && this.active.key == null) ? '  -> but anyway, this.geoms is null' : null)
+        console.log(
+          process.env.VERBOSITY == "DEBUG" && this.active.key == null
+            ? "  -> but anyway, this.geoms is null"
+            : null
+        );
       } else {
-
-        this.l_json.clearLayers()
-        this.l_json.addData(this.geoms)
-
+        this.l_json.clearLayers();
+        this.l_json.addData(this.geoms);
       } //if.geoms.null
     }, //setMap
     setGraph: function() {
-
-      console.log((process.env.VERBOSITY == 'DEBUG') ? 'setGraph()...' : null)
-      console.log((process.env.VERBOSITY == 'DEBUG') ? '  -> active.key is ' + this.active.key : null)
+      console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
+      console.log(
+        process.env.VERBOSITY == "DEBUG"
+          ? "  -> active.key is " + this.active.key
+          : null
+      );
 
       // if we have an active.key
       if (this.active.key !== null) {
-
-        axios.post('http://' + process.env.ARANGOIP + ':8529/_api/cursor', {
-            query: 'LET event = (for vertices, edges, paths in OUTBOUND "events/' + this.active.key + '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' + this.active.key + '" edges filter e.type==\'hasParticipant\' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND "events/' + this.active.key + '" edges filter e.type==\'occurredAt\' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }'
+        axios
+          .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
+            query:
+              'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
+              this.active.key +
+              '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' +
+              this.active.key +
+              "\" edges filter e.type=='hasParticipant' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND \"events/" +
+              this.active.key +
+              "\" edges filter e.type=='occurredAt' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }"
           })
           .then(response => {
             this.active.graph = response.data.result[0];
           }) //axios.then
           .catch(e => {
-            console.error(e)
-          }) //axios.catch
+            console.error(e);
+          }); //axios.catch
       } //if key
       else {
         // no key? null it out
-        console.log((process.env.VERBOSITY == 'DEBUG') ? 'no active.key, nulling graph...' : null)
-        this.active.graph = this.nullGraph()
+        console.log(
+          process.env.VERBOSITY == "DEBUG"
+            ? "no active.key, nulling graph..."
+            : null
+        );
+        this.active.graph = this.nullGraph();
       }
-
     }, //setgraph
     setRoute: function() {
-
-      console.info((process.env.VERBOSITY === 'DEBUG') ? "setRoute()..." : null)
+      console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
       this.$router.push({
         params: {
@@ -772,50 +894,79 @@ if(AI){
           tend: this.times.line.end,
           activeid: this.active.key
         }
-      }) //rejplace
-
+      }); //rejplace
     } //setRoute
   }, //methods
   computed: {}, //computed
   watch: {
-    'item': {
+    item: {
       handler: function(vnew, vold) {
-        console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:ITEM:old/new:' + JSON.stringify(vold) + '/' + JSON.stringify(vnew) : null)
+        console.info(
+          process.env.VERBOSITY === "DEBUG"
+            ? "WATCH:ITEM:old/new:" +
+                JSON.stringify(vold) +
+                "/" +
+                JSON.stringify(vnew)
+            : null
+        );
       }
     }, //item
-    'geoms': {
+    geoms: {
       handler: function(vnew, vold) {
-        console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:GEOMS:old/new:' + vold.length + '/' + vnew.length : null)
-        this.setMap()
+        console.info(
+          process.env.VERBOSITY === "DEBUG"
+            ? "WATCH:GEOMS:old/new:" + vold.length + "/" + vnew.length
+            : null
+        );
+        this.setMap();
       }
     }, //item
-    'events': {
+    events: {
       handler: function(vnew, vold) {
-        console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:events:old/new:' + vold.length + '/' + vnew.length : null)
-        this.setTimeline()
-        this.fetchGeometries()
+        console.info(
+          process.env.VERBOSITY === "DEBUG"
+            ? "WATCH:events:old/new:" + vold.length + "/" + vnew.length
+            : null
+        );
+        this.zeroOut();
+        this.setSlider();
+        this.setTimeline();
+        this.fetchGeometries();
       }
     }, //events
-    'times.line': {
+    "times.line": {
       handler: function(vnew, vold) {
-        console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:times.line:old/new:' + JSON.stringify(vold) + '/' + JSON.stringify(vnew) : null)
-        this.fetchEvents()
-        this.setRoute()
+        console.info(
+          process.env.VERBOSITY === "DEBUG"
+            ? "WATCH:times.line:old/new:" +
+                JSON.stringify(vold) +
+                "/" +
+                JSON.stringify(vnew)
+            : null
+        );
+        console.log("TIMES OB",JSON.stringify(this.times))
+        this.fetchEvents();
+        this.setRoute();
         this.setPageTitle();
       },
       deep: true
     }, //times.line
-    'active.key': {
+    "active.key": {
       handler: function(vnew, vold) {
-        console.info((process.env.VERBOSITY === 'DEBUG') ? 'WATCH:ACTIVE.KEY:old/new:' + vold + '/' + vnew : null)
-        this.setRoute()
-        this.setItem()
-        this.setGraph()
-        this.setTimeline()
-        this.setMap()
-        this.setPageTitle()
+        console.info(
+          process.env.VERBOSITY === "DEBUG"
+            ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew
+            : null
+        );
+        this.setRoute();
+        this.setItem();
+        this.setGraph();
+        this.setTimeline();
+        this.setMap();
+        this.setPageTitle();
       }
     }
   } //watch
-} //export.timeline
+}; //export.timeline
+
 </script>
