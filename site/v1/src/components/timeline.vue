@@ -49,7 +49,8 @@
     <div class="tile is-child box">
       <div class="columns">
         <div class="column"><p class="title is-size-7">EVENTS BT {{ times.line.begin }} - {{ times.line.end }}</p>
-          <p class="is-size-7">{{(events.length)}}</p>
+          <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p>
+          <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p>
           <p class="">
             <div style="font-size:.5em;" v-for="event in events">{{ event.id }}</div>
           </p>
@@ -103,6 +104,7 @@ export default {
         title: "Andy Dalyverse Events"
       },
       state: "filled",
+      fittable: true,
       geoms: [],
       seens: [],
       zooms: {
@@ -149,6 +151,10 @@ export default {
           begin: process.env.LINE_TIME_BEGIN,
           end: process.env.LINE_TIME_END
         },
+        future: {
+          begin: null,
+          end: null
+        },
         slider: {
           range: {
             begin: process.env.SLIDER_RANGE_BEGIN,
@@ -170,6 +176,7 @@ export default {
         graph: this.nullGraph()
       },
       events: [],
+      events_total: 0,
       console: {
         msg: "",
         clazz: null,
@@ -291,20 +298,24 @@ export default {
         : null
     );
 
+  this.$once('hook:fitArrest', function () {
+    this.fittable = false;
+  })
+
+    this.fetchTotalEvents();
+
     this.console = {
       msg: "loading...",
       throb: true,
       clazz: "mdi-clock"
     };
-    console.log("+++++++ 299:TIMES.LINE",JSON.stringify(this.times.line))
     if (this.$route.params.tstart) {
       this.times.line.begin = this.$route.params.tstart;
-      this.times.slider.handles.begin = this.$route.params.tstart;
+      // this.times.slider.handles.begin = this.$route.params.tstart;
     }
-    console.log("+++++++ 304:TIMES.LINE",JSON.stringify(this.times.line))
     if (this.$route.params.tend) {
       this.times.line.end = this.$route.params.tend;
-      this.times.slider.handles.end = this.$route.params.tend;
+      // this.times.slider.handles.end = this.$route.params.tend;
     }
     if (this.$route.params.activeid) {
       this.active.key = this.$route.params.activeid;
@@ -325,10 +336,37 @@ export default {
         ? "MOUNTED! Bootstrapping events and initting vizes..."
         : null
     );
-    this.setSlider();
+    // this.setSlider();
     this.fetchEvents();
   }, //mounted
   methods: {
+    fetchTotalEvents: function () {
+
+          console.info(
+      process.env.VERBOSITY === "DEBUG"
+        ? "getTotalEvents()..."
+        : null
+    );
+
+               let q = 'RETURN LENGTH(events)'
+
+      axios
+        .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
+          query: q
+        })
+        .then(response => {
+          console.info(
+            process.env.VERBOSITY === "DEBUG"
+              ? "setting events_total w/ axios response..."
+              : null
+          );
+          this.events_total = response.data.result[0];
+        }) //axios.then
+        .catch(e => {
+          console.error(e);
+        }); //axios.catch
+
+    }, //getotalevents
     getStyle: function(o) {
       return {
         radius: o.radius,
@@ -483,9 +521,7 @@ this.l_json.clearLayers();
       };
     }, //nullItem
     setTimeline: function() {
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "initTimeline()..." : null
-      );
+      console.log(process.env.VERBOSITY == "DEBUG" ? "initTimeline()..." : null);
 
       if (!this.timeline) {
         console.log(
@@ -496,7 +532,36 @@ this.l_json.clearLayers();
         const el = this.$el.querySelector("#timeline");
         // create the Timeline
 
-        this.timeline = new vis.Timeline(el, this.events, {});
+        this.timeline = new vis.Timeline(el, this.events, {
+          zoomable: true,
+          moveable: true,
+          template: (item, element, data) => {
+            return item.geo.length > 0
+              ? '<h1 class="dv-time-item has-text-weight-bold" style="font-size:.9em;">' +
+                  item.content +
+                  '&nbsp;<span class="mdi mdi-map-marker-circle dv-time-item-w-geo"></span></h1>'
+              : '<h1 class="dv-time-item has-text-weight-bold" style="font-size:.9em;">' +
+                  item.content +
+                  "</h1>";
+          }
+        }); // new vis
+        this.timeline.on("rangechange", properties => {
+          this.times.future = {
+            begin: this.$MOMENT(properties.start).format("YYYY-MMM-DD"),
+            end: this.$MOMENT(properties.end).format("YYYY-MMM-DD")
+          };
+        });
+        this.timeline.on("rangechanged", properties => {
+          console.log(
+            process.env.VERBOSITY == "DEBUG" ? " :timeline:rangechanged..." : null
+          );
+
+          this.times.future = { begin: null, end: null };
+          this.times.line = {
+            begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
+            end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
+          };
+        }); // rangechanged
 
         // now we wire up click-selection
         this.timeline.on("click", properties => {
@@ -510,8 +575,7 @@ this.l_json.clearLayers();
               // this.timeline.setSelection();
               this.active.key = null;
               break;
-            case properties.what == "item" &&
-              properties.item == this.active.key:
+            case properties.what == "item" && properties.item == this.active.key:
               console.info(
                 process.env.VERBOSITY == "DEBUG"
                   ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)."
@@ -531,7 +595,7 @@ this.l_json.clearLayers();
               this.active.key = properties.item;
               break;
           }
-        }); //.on
+        }) //.on
       } //if.timeline
       else {
         console.info(
@@ -540,11 +604,14 @@ this.l_json.clearLayers();
                 this.active.key
             : null
         );
-        this.timeline.setItems(this.events)
-        this.timeline.setSelection(this.active.key)
+        this.timeline.setItems(this.events);
+        this.timeline.setSelection(this.active.key);
+
+        console.log('this.timeline.range',this.timeline.range);
         this.timeline.fit();
       } //else.timeline
-    }, //settimeline
+    }
+    , //settimeline
     setSlider: function() {
       // {
       console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
@@ -929,7 +996,7 @@ if(this.active.item){
             : null
         );
         this.zeroOut();
-        this.setSlider();
+        // this.setSlider();
         this.setTimeline();
         this.fetchGeometries();
       }
