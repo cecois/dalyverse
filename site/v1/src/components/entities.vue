@@ -59,6 +59,21 @@ export default {
         {from: 2, to: 4},
         {from: 2, to: 5}
     ]),
+    // nodes: new vis.DataSet([
+    //     {"id":"people/_:irenetherockette","label":"Irene the Rockette","article":"Irene the Rockette was kicked off of the Rockettes team due to a leg rash and later died."},
+    //     {"id":"people/_:cactusirene","label":"Cactus Irene","article":"Cactus Irene, named for her predilection for fighting cactuses, is a romantic acquaintance of Cactus Tony's for many years. A former and possibly current huffer of gasoline, she has a terrible memory."},
+    //     {id: 2, label: 'N2'},
+    //     {id: 3, label: 'N3'},
+    //     {id: 4, label: 'N4'},
+    //     {id: 5, label: 'N5'}
+    // ]),
+    //   edges: new vis.DataSet([
+    //     {from: "people/_:irenetherockette", to: 3},
+    //     {from: 1, to: 2},
+    //     {from: 4, to: "people/_:cactusirene"},
+    //     {from: 2, to: 4},
+    //     {from: 2, to: 5}
+    // ]),
       seens: [],
       styles: {
         previous: null,
@@ -146,7 +161,7 @@ export default {
         : null
     );
     // this.setSlider();
-    this.fetchPeople();
+    this.fetchEntities();
   }, //mounted
   methods: {
     setNetwork: function () {
@@ -248,13 +263,16 @@ article:null
         locations: null
       };
     }, //nullGraph
-    fetchPeople: function() {
+    fetchEntities: function() {
       console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fetchPeople()..." : null
+        process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
       );
 
       let q =
-        'for p in people return p';
+        'let entities = (let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})\
+        let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,tngs)))\
+        let edgees = (for ent in entities[0] FOR v, e, p IN 1..2 ANY ent edges RETURN {from:e._from,to:e._to,id:e._id})\
+        return {entitiez:unique(entities),edgez:unique(edgees)}'
 
       axios
         .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
@@ -263,15 +281,22 @@ article:null
         .then(response => {
           console.info(
             process.env.VERBOSITY === "DEBUG"
-              ? "setting people w/ axios response..."
+              ? "setting entities w/ axios response..."
               : null
           );
-          this.people = response.data.result;
+          console.info('response.data.result',response.data.result)
+
+let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{ console.info("n:",n);return {id:n._id,label:n.label,article:n.article}})
+          console.info('deeznodes',deeznodes)
+
+          this.nodes = deeznodes
+          this.edges = response.data.result[0].edgez
+          
         }) //axios.then
         .catch(e => {
           console.error(e);
         }); //axios.catch
-    }, //fetchpeople
+    }, //fetchEntities
     setGraph: function() {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
@@ -314,20 +339,7 @@ article:null
     } //setRoute
   }, //methods
   computed: {}, //computed
-  watch: {
-
-people: {
-      handler: function(vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:people:old/new:" + vold.length + "/" + vnew.length
-            : null
-        );
-        this.setNetwork();
-      }
-    }, //events
-
-  } //watch
+  watch: {} //watch
 }; //export.timeline
 
 </script>
