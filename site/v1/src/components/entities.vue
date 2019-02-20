@@ -20,7 +20,7 @@
   <div class="tile is-parent">
     <div class="tile is-child box">
       <p class="title is-size-7" v-if="active.key">ACTIVE</p>
-      
+
     </div>
   </div>
 </div>
@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: "People",
+  name: "Entities",
   data() {
     return {
       page: {
@@ -168,13 +168,7 @@ var container = document.getElementById('network');
     var data = {nodes: this.nodes,edges: this.edges};
 
     var options = {
-    layout:{improvedLayout: false},
-      edges:{
-    arrows: {
-      to:     {enabled: true, scaleFactor:1, type:'arrow'},
-      middle: {enabled: false, scaleFactor:1, type:'arrow'},
-      from:   {enabled: false, scaleFactor:1, type:'arrow'}
-    },
+    layout:{improvedLayout: true},
     physics:{
     enabled: true,
     barnesHut: {
@@ -219,11 +213,22 @@ var container = document.getElementById('network');
     },
     timestep: 0.5,
     adaptiveTimestep: true
-  }
+  },
+      edges:{
+    arrows: {
+      to:     {enabled: true, scaleFactor:1, type:'arrow'},
+      middle: {enabled: false, scaleFactor:1, type:'arrow'},
+      from:   {enabled: false, scaleFactor:1, type:'arrow'}
+    },
+
   }
     };
 
 this.network = new vis.Network(container, data, options);
+
+            this.network.on("stabilizationProgress", function(params) {
+                console.log('stabilz:',params)
+              });
 
 } else {
   console.info(';;;;;;;;;;;;---:NETWORK ALREADY');
@@ -317,12 +322,15 @@ article:null
 
       let q =
         'let entities = (\
-        let evts = (for ev in events return {_id:ev._id,label:ev.name,article:ev.article})\
-        let plcs = (for l in places return {_id:l._id,label:l.name,article:l.article})\
-        let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})\
-        let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(append(ppls,plcs),append(tngs,evts))))\
-        let edgees = (for ent in entities[0] FOR v, e, p IN 1..2 ANY ent edges RETURN {from:e._from,to:e._to,id:e._id})\
-        return {entitiez:unique(entities),edgez:unique(edgees)}'
+let plcs = (for l in places return {_id:l._id,label:l.name,article:l.article})\
+let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})\
+let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,plcs,tngs)))\
+let edgees = (\
+for ent in entities[0] \
+FOR v, e, p IN 1..2 ANY ent edges \
+FILTER e.type!=\'hasParticipant\'\
+RETURN {typ:e.type,from:e._from,to:e._to,id:e._id})\
+return {entitiez:unique(entities),edgez:unique(edgees)}'
 
       axios
         .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
@@ -339,7 +347,7 @@ article:null
 
           this.nodes = deeznodes
           this.edges = response.data.result[0].edgez
-          
+
         }) //axios.then
         .catch(e => {
           console.error(e);

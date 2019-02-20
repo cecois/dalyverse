@@ -53,7 +53,10 @@ $input-shadow: none;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++ network ++ */
-#network{height:80vh;}
+#network{
+  height:80vh;
+  background-color:#3f1a4f;
+}
 /* +++++++++++++++++++++++++++++++++++++++ timeline ++ */
 #timeline{
   padding-top:0;
