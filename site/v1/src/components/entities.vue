@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       page: {
-        title: "Andy Dalyverse People"
+        title: "Andy Dalyverse Entities Graph"
       },
       state: "filled",
       fittable: true,
@@ -59,21 +59,6 @@ export default {
         {from: 2, to: 4},
         {from: 2, to: 5}
     ]),
-    // nodes: new vis.DataSet([
-    //     {"id":"people/_:irenetherockette","label":"Irene the Rockette","article":"Irene the Rockette was kicked off of the Rockettes team due to a leg rash and later died."},
-    //     {"id":"people/_:cactusirene","label":"Cactus Irene","article":"Cactus Irene, named for her predilection for fighting cactuses, is a romantic acquaintance of Cactus Tony's for many years. A former and possibly current huffer of gasoline, she has a terrible memory."},
-    //     {id: 2, label: 'N2'},
-    //     {id: 3, label: 'N3'},
-    //     {id: 4, label: 'N4'},
-    //     {id: 5, label: 'N5'}
-    // ]),
-    //   edges: new vis.DataSet([
-    //     {from: "people/_:irenetherockette", to: 3},
-    //     {from: 1, to: 2},
-    //     {from: 4, to: "people/_:cactusirene"},
-    //     {from: 2, to: 4},
-    //     {from: 2, to: 5}
-    // ]),
       seens: [],
       styles: {
         previous: null,
@@ -115,8 +100,8 @@ export default {
         item: null,
         graph: null
       },
-      people: [],
-      people_total: 0,
+      entities_total: 0,
+      entities_added: 0,
       console: {
         msg: "",
         clazz: null,
@@ -132,9 +117,9 @@ export default {
         : null
     );
 
-      this.$once('hook:fitArrest', function () {
+      this.$once('hook:once', function () {
     this.fittable = false;
-    this.fetchTotalPeople();
+    this.fetchTotalEntities();
   })
 
     this.console = {
@@ -165,38 +150,100 @@ export default {
   }, //mounted
   methods: {
     setNetwork: function () {
-
+console.info(
+      process.env.VERBOSITY === "DEBUG"
+        ? "setNetwork()..."
+        : null
+    );
 if(!this.network){
+
+  console.info(
+    process.env.VERBOSITY === "DEBUG"
+      ? "no network - you're the network..."
+      : null
+  );
 
 var container = document.getElementById('network');
  // provide the data in the vis format
     var data = {nodes: this.nodes,edges: this.edges};
 
     var options = {
+    layout:{improvedLayout: false},
       edges:{
     arrows: {
       to:     {enabled: true, scaleFactor:1, type:'arrow'},
       middle: {enabled: false, scaleFactor:1, type:'arrow'},
       from:   {enabled: false, scaleFactor:1, type:'arrow'}
     },
-    physics: true
+    physics:{
+    enabled: true,
+    barnesHut: {
+      gravitationalConstant: -2000,
+      centralGravity: 0.3,
+      springLength: 95,
+      springConstant: 0.04,
+      damping: 0.09,
+      avoidOverlap: 0
+    },
+    forceAtlas2Based: {
+      gravitationalConstant: -50,
+      centralGravity: 0.01,
+      springConstant: 0.08,
+      springLength: 100,
+      damping: 0.4,
+      avoidOverlap: 0
+    },
+    repulsion: {
+      centralGravity: 0.2,
+      springLength: 200,
+      springConstant: 0.05,
+      nodeDistance: 100,
+      damping: 0.09
+    },
+    hierarchicalRepulsion: {
+      centralGravity: 0.0,
+      springLength: 100,
+      springConstant: 0.01,
+      nodeDistance: 120,
+      damping: 0.09
+    },
+    maxVelocity: 50,
+    minVelocity: 0.1,
+    solver: 'barnesHut',
+    stabilization: {
+      enabled: false,
+      iterations: 1000,
+      updateInterval: 100,
+      onlyDynamicEdges: false,
+      fit: false
+    },
+    timestep: 0.5,
+    adaptiveTimestep: true
+  }
   }
     };
 
-const network = new vis.Network(container, data, options);
+this.network = new vis.Network(container, data, options);
 
+} else {
+  console.info(';;;;;;;;;;;;---:NETWORK ALREADY');
 }
 
     }, //setNetwork
-    fetchTotalPeople: function () {
+    fetchTotalEntities: function () {
 
           console.info(
       process.env.VERBOSITY === "DEBUG"
-        ? "getTotalEvents()..."
+        ? "getTotalEntities()..."
         : null
     );
 
-               let q = 'RETURN LENGTH(people)'
+               let q = 'let entities = (let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})\
+let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article})\
+let plcs = (for l in things return {_id:l._id,label:l.name,article:l.article})\
+let evts = (for ev in events return {_id:ev._id,label:ev.name,article:ev.article})\
+ RETURN flatten(append(append(ppls,tngs),append(plcs,evts))))\
+return count(entities[0])'
 
       axios
         .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
@@ -205,10 +252,10 @@ const network = new vis.Network(container, data, options);
         .then(response => {
           console.info(
             process.env.VERBOSITY === "DEBUG"
-              ? "setting people_total w/ axios response..."
+              ? "setting entities_total w/ axios response..."
               : null
           );
-          this.people_total = response.data.result[0];
+          this.entities_total = response.data.result[0];
         }) //axios.then
         .catch(e => {
           console.error(e);
@@ -240,7 +287,7 @@ const network = new vis.Network(container, data, options);
           break;
       }
 
-      this.page.title = "Dalyverse Events: " + sub;
+      this.page.title = "Dalyverse Events Graph: " + sub;
     }, //setPageTitle
     nullItem: function() {
       console.info(
@@ -269,8 +316,11 @@ article:null
       );
 
       let q =
-        'let entities = (let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})\
-        let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,tngs)))\
+        'let entities = (\
+        let evts = (for ev in events return {_id:ev._id,label:ev.name,article:ev.article})\
+        let plcs = (for l in places return {_id:l._id,label:l.name,article:l.article})\
+        let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})\
+        let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(append(ppls,plcs),append(tngs,evts))))\
         let edgees = (for ent in entities[0] FOR v, e, p IN 1..2 ANY ent edges RETURN {from:e._from,to:e._to,id:e._id})\
         return {entitiez:unique(entities),edgez:unique(edgees)}'
 
@@ -284,10 +334,8 @@ article:null
               ? "setting entities w/ axios response..."
               : null
           );
-          console.info('response.data.result',response.data.result)
 
-let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{ console.info("n:",n);return {id:n._id,label:n.label,article:n.article}})
-          console.info('deeznodes',deeznodes)
+          let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n._id,label:n.label,article:n.article}})
 
           this.nodes = deeznodes
           this.edges = response.data.result[0].edgez
@@ -339,7 +387,18 @@ let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{ console.i
     } //setRoute
   }, //methods
   computed: {}, //computed
-  watch: {} //watch
+  watch: {
+    nodes: {
+      handler: function(vnew, vold) {
+        console.info(
+          process.env.VERBOSITY === "DEBUG"
+            ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length
+            : null
+        );
+        // this.setNetwork();
+      }
+    } //nodes
+  } //watch
 }; //export.timeline
 
 </script>
