@@ -21,46 +21,35 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 
 
 
-# VUE
-
-## todo
-	* [?]indicate where along slider active item resides
-
-## MAPSTYLIN
-
-	* $vm0.map_feature_group.eachLayer(function(L) {
-  let lg = L.toGeoJSON();
-  let lgtype = lg.features[0].geometry.type;
-  let lgid = lg.features[0].properties.cartodb_id;
-      console.log("LID:",lgtype+":"+lgid)
-    })
-
-## EVENTS
-
-### URL
-	tstart,tend,activetimelineitem
-
-### ACTIVATEITEM
-	render participants
-	zoom place
-	highlight place
-	$vm0.$_.each($vm0.timeline.itemSet.items,(itm)=>{ let uu = (itm.selected)?itm:null;console.log(uu); });
-
-
-### EVENTS.events
-	move(url start/end update)
-	activate/deactivate item(url update; event edges queried, participant and places returned)
-
-		"hasParticipant"
-		"occurredAt"
-
-##### keys
-	* this.geom(each): {type:this.geoKeyLaunder(g.geometry.type),id:g.properties.cartodb_id)}
-	* this.timelinetimes(each): {type:t.geo[0].geo_key.type,id:t.geo[0].geo_key.id}
-
 # GRAPH
 
-## EDGES
+### per person:
+
+'things' error probably due to missing graph chunks
+
+        for prsn in people
+        let g = (
+        FOR v, e, p IN 1..2 ANY 'people/_:russelshein' edges RETURN {
+        vid: v._id,
+        vna: v.name,
+        ety: e.type,
+        efr: e._from,
+        eto: e._to
+        }
+        )
+        return {person:{name:prsn.name,article:prsn.article,_id:prsn._id},graf:g}
+
+        or
+
+        for pp in people
+        filter pp._key == '_:jimmorrison'
+        FOR v, e, p IN 1..2 ANY pp 
+        edges
+        RETURN {v,e}
+
+        let ppls = (for p in people return {_id:p._id,name:p._name,article:p._article})
+let tngs = (for t in things return {_id:t._id,name:t._name,article:t._article})
+RETURN MERGE({ persons:ppls,things:tngs } )
 
 ### type
 

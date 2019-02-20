@@ -300,9 +300,9 @@ export default {
 
   this.$once('hook:fitArrest', function () {
     this.fittable = false;
+    this.fetchTotalEvents();
   })
 
-    this.fetchTotalEvents();
 
     this.console = {
       msg: "loading...",
@@ -521,7 +521,7 @@ this.l_json.clearLayers();
       };
     }, //nullItem
     setTimeline: function() {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "initTimeline()..." : null);
+      console.log(process.env.VERBOSITY == "DEBUG" ? "setTimeline()..." : null);
 
       if (!this.timeline) {
         console.log(
@@ -556,11 +556,20 @@ this.l_json.clearLayers();
             process.env.VERBOSITY == "DEBUG" ? " :timeline:rangechanged..." : null
           );
 
+if(properties.byUser==true){
+
           this.times.future = { begin: null, end: null };
           this.times.line = {
             begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
             end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
           };
+        }
+
+          // and one more thing - if we have an active key but it's not in view we deactivatee
+          if(this.active.key && !this.$_.contains(this.timeline.getVisibleItems(),this.active.key)){
+            this.active.key = null;
+            this.console.msg = "the selected event slid out of view, was deactivated"
+          }
         }); // rangechanged
 
         // now we wire up click-selection
