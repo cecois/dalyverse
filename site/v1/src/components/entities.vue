@@ -525,10 +525,10 @@ var svg = d3.select(parentDiv).append("svg");
     // var svg = d3.select("svg"),
     // var svg = d3.select(parentDiv).append("svg"),
     var svg = d3.select("#network > svg"),
-      // width = +svg.attr("width"),
-      // height = +svg.attr("height"),
-      width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
-      height = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
+      width = +svg.attr("width"),
+      height = +svg.attr("height"),
+      // width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
+      // height = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
       transform = d3.zoomIdentity; //zoom
 
             svg.attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 960 500")

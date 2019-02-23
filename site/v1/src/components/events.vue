@@ -203,6 +203,8 @@ export default {
         }, //style
         onEachFeature: (feature, layer) => {} //onEach
       })
+      // .addTo(this.MAP)
+
         // .on("layeradd", parent => {
           // console.log(
           //   process.env.VERBOSITY == "DEBUG" ? "on.layeradd..." : null,
@@ -342,16 +344,16 @@ export default {
         ? "MOUNTED! Bootstrapping events and initting vizes..."
         : null
     );
-    this.initMap();
+    this.initBaseMap();
     // this.setSlider();
     this.fetchEvents();
   }, //mounted
   methods: {
-    initMap: function () {
+    initBaseMap: function () {
 
     console.info(
       process.env.VERBOSITY === "DEBUG"
-        ? "initMap()..."
+        ? "initBaseMap()..."
         : null
     );
 
@@ -375,9 +377,9 @@ switch (process.env.MODE) {
 
 const baseLayer = new L.TileLayer(blu)
 console.log("baselayer:",blu);
-// this.MAP.addLayer(baseLayer)
+this.MAP.addLayer(baseLayer)
 
-    }, //initmap
+    }, //initBaseMap
     fetchTotalEvents: function () {
 
           console.info(
