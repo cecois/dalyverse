@@ -4,7 +4,6 @@
 <!-- -------------------------------------------------------------- TIMELINE
 <div id="line"/>
 -->
-
 <!-- <nav v-if="state === 'filled'" class="navbar is-fixed-top"> -->
 
 <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
@@ -96,10 +95,17 @@
 </template>
 
 <script>
+
 export default {
   name: "Timeline",
   data() {
     return {
+      MAP: new L.Map('map', {
+  zoomControl: false,
+  center: [41.12410774245512, -41.6872787475586],
+  attributionControl: false,
+  zoom: 3
+}),
       page: {
         title: "Andy Dalyverse Events"
       },
@@ -287,7 +293,7 @@ export default {
 
           this.styles.previous = null;
         })
-        .addTo(MAP)
+        // .addTo(this.MAP)
     }; // return
   }, // data
   beforeCreate() {}, // beforeCreate
@@ -336,10 +342,42 @@ export default {
         ? "MOUNTED! Bootstrapping events and initting vizes..."
         : null
     );
+    this.initMap();
     // this.setSlider();
     this.fetchEvents();
   }, //mounted
   methods: {
+    initMap: function () {
+
+    console.info(
+      process.env.VERBOSITY === "DEBUG"
+        ? "initMap()..."
+        : null
+    );
+
+// this.MAP = new L.Map('map', {
+// this.MAP = 
+
+// console.log('this.map:',this.MAP)
+
+let blu = null
+switch (process.env.MODE) {
+  case 'L':
+    blu = 'http://mapproxy.libgeo2.llan.ll.mit.edu/wmts/l_mapbox_amazonia_grey/webmercator/{z}/{x}/{y}.png'
+    break
+  case '33':
+    blu = 'https://cartocdn_a.global.ssl.fastly.net/base-flatblue/{z}/{x}/{y}.png'
+  break
+  default:
+    blu = 'http://localhost:8000/2x.png'
+  break
+}
+
+const baseLayer = new L.TileLayer(blu)
+console.log("baselayer:",blu);
+// this.MAP.addLayer(baseLayer)
+
+    }, //initmap
     fetchTotalEvents: function () {
 
           console.info(
@@ -406,7 +444,7 @@ this.l_json.clearLayers();
             ? "   -> zooming to type:" + zoomto.type
             : null
         );
-        MAP.setView(mo.getLatLng(), 12, {
+        this.MAP.setView(mo.getLatLng(), 12, {
           animate: true
         });
       } else {
@@ -415,11 +453,11 @@ this.l_json.clearLayers();
             ? "   -> zooming to type:" + zoomto.type
             : null
         );
-        MAP.fitBounds(mo.getBounds());
+        this.MAP.fitBounds(mo.getBounds());
       }
     }, //zoomtonext
     zoomToFullExtent: function() {
-      MAP.fitBounds(this.l_json.getBounds());
+      this.MAP.fitBounds(this.l_json.getBounds());
     }, //zoomToFullExtent
     doPopupStuff: function(p, e) {
       console.log(
@@ -451,7 +489,7 @@ this.l_json.clearLayers();
             ? "  -> event so we just do wut we told"
             : null
         );
-        po.openOn(MAP);
+        po.openOn(this.MAP);
       } else {
         console.log(
           process.env.VERBOSITY == "DEBUG"
@@ -459,7 +497,7 @@ this.l_json.clearLayers();
             : null
         );
         if ((p.layer.properties.cartodb_id = 999)) {
-          po.openOn(MAP);
+          po.openOn(this.MAP);
         }
         // get this one's key
         // otherwise we might be calling this ex post facto cuzza incoming active.key, so...

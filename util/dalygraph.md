@@ -27,29 +27,21 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 
 'things' error probably due to missing graph chunks
 
-        for prsn in people
-        let g = (
-        FOR v, e, p IN 1..2 ANY 'people/_:russelshein' edges RETURN {
-        vid: v._id,
-        vna: v.name,
-        ety: e.type,
-        efr: e._from,
-        eto: e._to
-        }
-        )
-        return {person:{name:prsn.name,article:prsn.article,_id:prsn._id},graf:g}
 
-        or
+    let entities = (let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})
+    let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,tngs)))//let entities
+    let edgees = (for ent in entities[0] FOR v, e, p IN 1..2 ANY ent edges RETURN {from:e._from,to:e._to,id:e._id})//let edges
+    return {entitiez:entities,edgez:edgees}
 
-        for pp in people
-        filter pp._key == '_:jimmorrison'
-        FOR v, e, p IN 1..2 ANY pp 
-        edges
-        RETURN {v,e}
+                            for pp in people
+                            filter pp._key == '_:jimmorrison'
+                            FOR v, e, p IN 1..2 ANY pp 
+                            edges
+                            RETURN {v,e}
 
-        let ppls = (for p in people return {_id:p._id,name:p._name,article:p._article})
-let tngs = (for t in things return {_id:t._id,name:t._name,article:t._article})
-RETURN MERGE({ persons:ppls,things:tngs } )
+                            let ppls = (for p in people return {_id:p._id,name:p._name,article:p._article})z
+                            let tngs = (for t in things return {_id:t._id,name:t._name,article:t._article})
+                            RETURN MERGE({ ppls,tngs })
 
 ### type
 
