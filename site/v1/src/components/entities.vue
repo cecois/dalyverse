@@ -30,7 +30,7 @@
 <div class="" id="container-main">
   <!-- -------------------------------------------------------------- SLIDER -->
 <div id="network">
-  <!-- <svg></svg> -->
+  <svg></svg>
 </div>
 </div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
 
@@ -487,7 +487,7 @@ export default {
     );
     // this.setSlider();
     // this.fetchEntities();
-    // this.d3ForceDirect();
+    this.d3ForceDirect();
   }, //mounted
   methods: {
     getClass: function (which,one) {
@@ -517,32 +517,39 @@ return clas
     d3ForceDirect: function () {
 
       console.log("setD3ForceDirect()...");
-
+    
 var parentDiv = document.getElementById("network");
-var svg = d3.select(parentDiv).append("svg");
-
-
-    // var svg = d3.select("svg"),
+// var svg = d3.select(parentDiv).append("svg"),
     // var svg = d3.select(parentDiv).append("svg"),
-    var svg = d3.select("#network > svg"),
-      width = +svg.attr("width"),
-      height = +svg.attr("height"),
-      // width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
-      // height = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
-      transform = d3.zoomIdentity; //zoom
+    var svg = d3.select("svg"),
+    // svg.select("#network > svg"),
+      // width = +svg.attr("width"),
+      // height = +svg.attr("height"),
+      width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
+      height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
 
-            svg.attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 960 500")
+      var G = svg.append('g')
+      ,transform = d3.zoomIdentity; //zoom
 
-            svg.call(d3.zoom()
-              .scaleExtent([1 / 2, 8])
-              .on("zoom", function() {svg.attr("transform", d3.event.transform);})
+            G.call(d3.zoom()
+              // .scaleExtent([1 / 2, 8])
+              .scaleExtent([1 / 2, Infinity])
+              // .scaleExtent([1, Infinity])
+              // .on("zoom", function() {
+              //   console.log("svg in zoom:",svg);
+              //   G.attr("transform", d3.event.transform);})
+              //   );
+                .on("zoom",()=>{
+                  G.attr("transform", d3.event.transform)
+                })
                 );
+
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().distance(10).strength(0.5))
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
-
+    
 d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
   if (error) throw error;
   
@@ -563,23 +570,23 @@ d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
     bilinks.push([s, i, t]);
   });
 
-  var link = svg.selectAll(".link")
+  var link = G.selectAll(".link")
     .data(bilinks)
     .enter().append("path")
       .attr("class", "link");
       // .attr("class",'edge')
       // .attr("class",this.getClass('edge','worksAt'))
 
-var node = svg.selectAll(".node")
+var node = G.selectAll(".node")
             .data(nodes.filter(function(d) { return d.id; }))
             .enter()
             .append("circle")
             // .append("g")
-                        .attr("r", "5")
-                        .attr("class", "node")
-            // .attr("class",(d)=>{
+                        // .attr("class",(d)=>{
             //                   return this.getClass('node',(d.daly==true)?'daly':'person')
             //                 })
+                        .attr("r", "5")
+                        .attr("class", "node")
             .call(d3.drag()
               .on("start", dragstarted)
               .on("drag", dragged)
@@ -597,7 +604,7 @@ var node = svg.selectAll(".node")
  // node.append("text")
  //    .attr("dx", 6)
  //    .text(function(d) { return d.id; });
-
+  
   simulation
       .nodes(nodes)
       .on("tick", ticked);
@@ -607,21 +614,22 @@ var node = svg.selectAll(".node")
 
       function mouseover() {
         console.log(' mouseover()')
-  d3.select(this).select("circle").transition()
+        d3.select(this).select("circle").transition()
       .duration(750)
       .attr("r", 16);
 }
 
 // function zoomed() {
-//   console.log(' zoomed()')
-//   console.log("zoom called?");
-//   svg.attr("transform", d3.event.transform);
+//   console.log(' zoomed()');svg.attr("transform", d3.event.transform);
 // }
 
-function zoomed() {
-    svg.attr('transform', 'translate(' + (d3.event.translate[0] + width / 2) +
-        ',' + (d3.event.translate[1] + height / 2) + ') scale(' + d3.event.scale + ')');
-}
+// function zoomed() {
+//   console.log('width:',);
+//   console.log('height:',);
+//     // svg.attr('transform', 'translate(' + (d3.event.translate[0] + width / 2) +
+//     //     ',' + (d3.event.translate[1] + height / 2) + ') scale(' + d3.event.scale + ')');
+//     svg.attr({viewBox: "" + (-width / 2) + " " + (-height / 2) + " " + width + " " + height})
+// }
 
 function mouseout() {
   console.log(' mouseout()')
@@ -647,18 +655,16 @@ function positionNode(d) {
 }
 
 function dragstarted(d) {
-  console.log(' dragstarted(d)')
+  console.log("dragsimulation",simulation);
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x, d.fy = d.y;
 }
 
 function dragged(d) {
-  console.log(' dragged(d)')
   d.fx = d3.event.x, d.fy = d3.event.y;
 }
 
 function dragended(d) {
-  console.log(' dragended(d)')
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }

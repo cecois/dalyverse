@@ -378,6 +378,8 @@ switch (process.env.MODE) {
 const baseLayer = new L.TileLayer(blu)
 console.log("baselayer:",blu);
 this.MAP.addLayer(baseLayer)
+this.MAP.addLayer(this.l_json)
+// this.l_json.addTo(this.MAP)
 
     }, //initBaseMap
     fetchTotalEvents: function () {
