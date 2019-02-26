@@ -111,7 +111,23 @@ export default {
         throb: false
       },
       miserables: {
-  "nodes": [
+        "nodes":[
+        {
+                        "_id": "things/_:u2",
+                        "label": "U2",
+                        "article": "Irish rock n' roll band."
+                    },{
+                        "_id": "people/_:clivedundeeswife",
+                        "label": "Clive Dundee's Unnamed Wife",
+                        "article": "She is barren."
+                    },
+{
+                        "_id": "people/_:clivedundee",
+                        "label": "Clive Dundee",
+                        "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony."
+                    }
+        ],
+  "nodesog": [
     {"id": "Myriel", "group": 1},
     {"id": "Napoleon", "group": 1},
     {"id": "Mlle.Baptistine", "group": 1},
@@ -191,6 +207,26 @@ export default {
     {"id": "Mme.Hucheloup", "group": 8}
   ],
   "links": [
+{
+                    "typ": "isSpouseOf",
+                    "from": "people/_:clivedundeeswife",
+                    "to": "people/_:clivedundee",
+                    "id": "edges/306076"
+                },
+                {
+                    "typ": "hasWorkedFor",
+                    "from": "people/_:clivedundee",
+                    "to": "things/_:u2",
+                    "id": "edges/306074"
+                },
+                {
+                    "typ": "isSpouseOf",
+                    "from": "people/_:clivedundee",
+                    "to": "people/_:clivedundeeswife",
+                    "id": "edges/306075"
+                }
+  ],
+  "linksog": [
     {"source": "Napoleon", "target": "Myriel", "value": 1},
     {"source": "Mlle.Baptistine", "target": "Myriel", "value": 8},
     {"source": "Mme.Magloire", "target": "Myriel", "value": 10},
@@ -547,23 +583,30 @@ d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
                 })
                 );
 
+      //       force
+      // .nodes(graph.nodes)
+      // .links(graph.links)
+      // .start();
+
   // set nodes and links var from data
   var nodes = graph.nodes,
-      nodeById = d3.map(nodes, function(d) { return d.id; }),
+      nodeById = d3.map(nodes, function(d) { return d._id; }),
       links = graph.links,
-      bilinks = [];
+      // bilinks = [];
+      bilinks = links;
 
+/*
 // loop through all edges from json
   links.forEach(function(link) {
     // get relationships represented by edge
-    var s = link.source = nodeById.get(link.source),
-        t = link.target = nodeById.get(link.target),
+    var s = link.from = nodeById.get(link.from),
+        t = link.to = nodeById.get(link.to),
         i = {}; // intermediate node
     nodes.push(i);
     links.push({source: s, target: i}, {source: i, target: t});
     bilinks.push([s, i, t]);
   });
-
+*/
   // var link = G.selectAll(".edge")
   //   .data(bilinks)
   //   .enter().append("path")
@@ -579,7 +622,7 @@ var link = G.append("g")
 var node = G.append('g')
                         // .attr("class", "node")
                         .selectAll("g")
-            .data(nodes.filter(function(d) { return d.id; }))
+            .data(nodes.filter(function(d) { return d._id; }))
             .enter()
             .append("g")
 
@@ -591,7 +634,7 @@ var node = G.append('g')
             // .append("g")
                         .attr("class",(d)=>{
                           console.log("d ob:",d);
-                              return this.getClass('node',(d.daly==true)?'daly':'person')
+                              return this.getClass('node',(d._id==true)?'daly':'person')
                             })
 
             .call(d3.drag()
@@ -603,13 +646,13 @@ var node = G.append('g')
 
     var lables = node.append("text")
       .text(function(d) {
-        return d.id;
+        return d._id;
       })
       .attr('x', 6)
       .attr('y', 3);
 
   node.append("title")
-      .text(function(d) { return d.id; });
+      .text(function(d) { return d._id; });
     // node.append("title")
     // .text(function(d){return '584';});
 // node now a group, append a circle      

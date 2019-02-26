@@ -1,5 +1,41 @@
 {
-  "nodes": [
+    "nodes":[
+        {
+                        "_id": "things/_:u2",
+                        "label": "U2",
+                        "article": "Irish rock n' roll band."
+                    },{
+                        "_id": "people/_:clivedundeeswife",
+                        "label": "Clive Dundee's Unnamed Wife",
+                        "article": "She is barren."
+                    },
+{
+                        "_id": "people/_:clivedundee",
+                        "label": "Clive Dundee",
+                        "article": "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks. He lives under a bridge in Manchester with a barren wife. He intends suicide regardless of the outcome of his lawsuit. In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony."
+                    }
+        ],
+    "links": [
+{
+                    "typ": "isSpouseOf",
+                    "from": "people/_:clivedundeeswife",
+                    "to": "people/_:clivedundee",
+                    "_id": "edges/306076"
+                },
+                {
+                    "typ": "hasWorkedFor",
+                    "from": "people/_:clivedundee",
+                    "to": "things/_:u2",
+                    "_id": "edges/306074"
+                },
+                {
+                    "typ": "isSpouseOf",
+                    "from": "people/_:clivedundee",
+                    "to": "people/_:clivedundeeswife",
+                    "_id": "edges/306075"
+                }
+  ],
+  "nodesog": [
     {"id": "Myriel", "group": 1,"daly":true},
     {"id": "Napoleon", "group": 1,"daly":true},
     {"id": "Mlle.Baptistine", "group": 1,"daly":true},
@@ -78,7 +114,7 @@
     {"id": "Brujon", "group": 4,"daly":true},
     {"id": "Mme.Hucheloup", "group": 8,"daly":true}
   ],
-  "links": [
+  "linksog": [
     {"source": "Napoleon", "target": "Myriel", "value": 1},
     {"source": "Mlle.Baptistine", "target": "Myriel", "value": 8},
     {"source": "Mme.Magloire", "target": "Myriel", "value": 10},
