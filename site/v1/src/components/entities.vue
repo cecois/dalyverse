@@ -527,6 +527,7 @@ var parentDiv = document.getElementById("network");
       // height = +svg.attr("height"),
       width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
       height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
+      var G = svg.append('g')
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().distance(10).strength(0.5))
@@ -536,17 +537,11 @@ var simulation = d3.forceSimulation()
 d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
   if (error) throw error;
 
-            var G = svg.append('g')
-      ,transform = d3.zoomIdentity; //zoom
+            // var G = svg.append('g')
+      var transform = d3.zoomIdentity; //zoom
 
             G.call(d3.zoom()
-              // .scaleExtent([1 / 2, 8])
-              .scaleExtent([1 / 2, Infinity])
-              // .scaleExtent([1, Infinity])
-              // .on("zoom", function() {
-              //   console.log("svg in zoom:",svg);
-              //   G.attr("transform", d3.event.transform);})
-              //   );
+              .scaleExtent([1 / 2, 8])
                 .on("zoom",()=>{
                   G.attr("transform", d3.event.transform)
                 })
@@ -569,27 +564,35 @@ d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
     bilinks.push([s, i, t]);
   });
 
-  var link = G.selectAll(".edge")
-    .data(bilinks)
-    .enter().append("path")
-      .attr("class", "edge");
-      // .attr("class",'edge')
-      // .attr("class",this.getClass('edge','worksAt'))
+  // var link = G.selectAll(".edge")
+  //   .data(bilinks)
+  //   .enter().append("path")
+  //     .attr("class", "edge");
 
-var node = G.selectAll(".node")
+var link = G.append("g")
+.attr("class","links")
+.selectAll("line")
+.data(bilinks)
+.enter().append("path")
+.attr("class",'edge')
+
+var node = G.append('g')
+                        // .attr("class", "node")
+                        .selectAll("g")
             .data(nodes.filter(function(d) { return d.id; }))
             .enter()
-            .append("circle")
+            .append("g")
+
+            var circles = node.append("circle")
+                        .attr("r", "5")
+    // .attr("dx", 6)
             // .append("text")
-    .attr("dx", 6)
     // .text(function(d) { return d.id; })
             // .append("g")
                         .attr("class",(d)=>{
                           console.log("d ob:",d);
                               return this.getClass('node',(d.daly==true)?'daly':'person')
                             })
-                        .attr("r", "5")
-                        // .attr("class", "node")
 
             .call(d3.drag()
               .on("start", dragstarted)
@@ -597,12 +600,22 @@ var node = G.selectAll(".node")
               .on("end", dragended)
             )
     
+
+    var lables = node.append("text")
+      .text(function(d) {
+        return d.id;
+      })
+      .attr('x', 6)
+      .attr('y', 3);
+
+  node.append("title")
+      .text(function(d) { return d.id; });
     // node.append("title")
     // .text(function(d){return '584';});
 // node now a group, append a circle      
 // node.append("circle")
 //   .attr("r", 5)
-  // .attr("data-target", function(d) { console.log("580d",d);return color(d.group); });
+//   .attr("data-target", function(d) { console.log("580d",d);return color(d.group); });
 
 // node now a group, append a circle      
  // node.append("text")
