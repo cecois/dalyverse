@@ -569,10 +569,10 @@ d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
     bilinks.push([s, i, t]);
   });
 
-  var link = G.selectAll(".link")
+  var link = G.selectAll(".edge")
     .data(bilinks)
     .enter().append("path")
-      .attr("class", "link");
+      .attr("class", "edge");
       // .attr("class",'edge')
       // .attr("class",this.getClass('edge','worksAt'))
 
@@ -580,15 +580,16 @@ var node = G.selectAll(".node")
             .data(nodes.filter(function(d) { return d.id; }))
             .enter()
             .append("circle")
-            .append("text")
+            // .append("text")
     .attr("dx", 6)
-    .text(function(d) { return d.id; })
+    // .text(function(d) { return d.id; })
             // .append("g")
-                        // .attr("class",(d)=>{
-            //                   return this.getClass('node',(d.daly==true)?'daly':'person')
-            //                 })
+                        .attr("class",(d)=>{
+                          console.log("d ob:",d);
+                              return this.getClass('node',(d.daly==true)?'daly':'person')
+                            })
                         .attr("r", "5")
-                        .attr("class", "node")
+                        // .attr("class", "node")
 
             .call(d3.drag()
               .on("start", dragstarted)
@@ -999,11 +1000,12 @@ width:100vw;
   stroke-width: 1.5px;
 }
 
-.link {
+.edge {
   fill: none;
   stroke: #bbb;
 }
 /*
+*/
 .node-edge-default{
   stroke: rgba(4,4,4,.4);
   fill:none;
@@ -1037,6 +1039,5 @@ text{
   fill: none;
   stroke: #aaa;
 }
-*/
 
 </style>
