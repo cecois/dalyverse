@@ -486,7 +486,7 @@ export default {
         : null
     );
     // this.setSlider();
-    // this.fetchEntities();
+    this.fetchEntities();
     this.d3ForceDirect();
   }, //mounted
   methods: {
@@ -528,7 +528,15 @@ var parentDiv = document.getElementById("network");
       width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
       height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
 
-      var G = svg.append('g')
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().distance(10).strength(0.5))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2));
+
+d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
+  if (error) throw error;
+
+            var G = svg.append('g')
       ,transform = d3.zoomIdentity; //zoom
 
             G.call(d3.zoom()
@@ -544,15 +552,6 @@ var parentDiv = document.getElementById("network");
                 })
                 );
 
-
-var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().distance(10).strength(0.5))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
-    
-d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
-  if (error) throw error;
-  
   // set nodes and links var from data
   var nodes = graph.nodes,
       nodeById = d3.map(nodes, function(d) { return d.id; }),
@@ -581,20 +580,24 @@ var node = G.selectAll(".node")
             .data(nodes.filter(function(d) { return d.id; }))
             .enter()
             .append("circle")
+            .append("text")
+    .attr("dx", 6)
+    .text(function(d) { return d.id; })
             // .append("g")
                         // .attr("class",(d)=>{
             //                   return this.getClass('node',(d.daly==true)?'daly':'person')
             //                 })
                         .attr("r", "5")
                         .attr("class", "node")
+
             .call(d3.drag()
               .on("start", dragstarted)
               .on("drag", dragged)
               .on("end", dragended)
             )
     
-    node.append("title")
-    .text(function(d){return '584';});
+    // node.append("title")
+    // .text(function(d){return '584';});
 // node now a group, append a circle      
 // node.append("circle")
 //   .attr("r", 5)
