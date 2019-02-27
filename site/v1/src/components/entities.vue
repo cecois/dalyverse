@@ -156,9 +156,6 @@ export default {
   methods: {
     getClass: function (which,one) {
 
-console.log('which and one in getclass');
-console.log(which,one);
-
 //which == node|edge
 //one == 'worksAt'|'hasFriend'|etc
 let clas = null;
@@ -201,8 +198,8 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-// d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
-//   if (error) throw error;
+d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
+  if (error) throw error;
 
             // var G = svg.append('g')
       var transform = d3.zoomIdentity; //zoom
@@ -221,40 +218,48 @@ var simulation = d3.forceSimulation()
 
   // set nodes and links var from data
   // var nodes = graph.result[0].entitiez[0],
-  // var nodes = graph.nodes,
+  // var graphnodes = graph.nodesog;
+  // var graphlinks = graph.linksog;
+
   var nodes = this.nodes,
       links = this.edges,
       // this.nodes = response.result[0].entitiez[0]
 // links = graph.result[0].edgez,
-      nodeById = d3.map(nodes, function(d) { return d.id; }),
+      // nodeById = d3.map(graphnodes, function(d) { return d.id; }),
 // links = graph.result[0].edgez,
       // links = graph.links,
-      bilinks = [];
-      badlinks = [];
+      bilinks = [],
+      badlinks = []
+      ;
       // bilinks = links;
-
 /*
 */
+// graphlinks.forEach((linkog)=>{
+//   console.log('querying for linkog.source',linkog.source)
+//   var sog = linkog.source = nodeById.get(linkog.source);
+//   console.log("SOG:",sog)
+// })
 // loop through all edges from json
-  links.forEach(function(link) {
-    // console.log('link.source:');console.log(link.source);
-    // console.log('link.target:');console.log(link.target);
+  // links.forEach(function(link) {
+  links.forEach((link)=>{
     // get relationships represented by edge
-    var s = link.source = nodeById.get(link.source),
-        t = link.target = nodeById.get(link.target),
+    // var s = link.source = nodeById.get(link.source),
+        // t = link.target = nodeById.get(link.target),
+        var so = this.$_.findWhere(this.nodes,{id:link.source}),
+ta = this.$_.findWhere(this.nodes,{id:link.target})
+        var s = link.source = {id:so.id,label:so.label,article:so.article},
+        t = link.target = {id:ta.id,label:ta.label,article:ta.article},
         i = {}; // intermediate node
-// console.log('link:',link);
-// console.log('s:',s);
-// console.log('t:',t);
-// console.log('i:',i);
-// return null;
 
-if(!s || !t){ badlinks.push({source:link.source,target:link.target}) }
+if(!s || !t){ badlinks.push({source:link.source,target:link.target}) 
+        console.log('ONE OF THESE FAILED:')
+        console.log({linktarget:link.target,linksource:link.source})
+}
 
 
     nodes.push(i);
     links.push({source: s, target: i}, {source: i, target: t});
-    bilinks.push([s, i, t]);
+    // bilinks.push([s, i, t]);
 });
 
   // var link = G.selectAll(".edge")
@@ -262,11 +267,11 @@ if(!s || !t){ badlinks.push({source:link.source,target:link.target}) }
   //   .enter().append("path")
   //     .attr("class", "edge");
 
-console.log('badlinks:',badlinks);
-break;
-process.exit();
-return null;
-// console.log("bilinks:",bilinks);
+console.log('badlinks samples:');
+console.info(badlinks[0])
+console.info(badlinks[9])
+
+/********************************************************************
 
 var link = G.append("g")
 .attr("class","links")
@@ -290,7 +295,6 @@ var node = G.append('g')
     // .text(function(d) { return d.id; })
             // .append("g")
                         .attr("class",(d)=>{
-                          console.log("d ob:",d);
                               return this.getClass('node',(1==1)?'daly':'person')
                             })
 
@@ -340,6 +344,7 @@ var node = G.append('g')
  //    .attr("dx", 6)
  //    .text(function(d) { return d.id; });
   
+********************************************************************/
   simulation
       .nodes(nodes)
       .on("tick", ticked);
@@ -353,10 +358,6 @@ var node = G.append('g')
       .duration(750)
       .attr("r", 16);
 }
-
-// function zoomed() {
-//   console.log(' zoomed()');svg.attr("transform", d3.event.transform);
-// }
 
 // function zoomed() {
 //   console.log('width:',);
@@ -374,9 +375,9 @@ function mouseout() {
 }
 
   function ticked() {
-    link.attr("d", positionLink);
-    node.attr("transform", positionNode);
-    
+    // link.attr("d", positionLink);
+    // node.attr("transform", positionNode);
+    console.log('tickd')
     // lables.forEach(function(o, j) {
     //             // The change in the position is proportional to the distance
     //             // between the label and the corresponding place (foci)
@@ -385,7 +386,7 @@ function mouseout() {
     //         });
 
   }
-// }); //d3.json
+}); //d3.json
 
 function positionLink(d) {
   return "M" + d[0].x + "," + d[0].y
@@ -545,8 +546,7 @@ let ppls = (for p in people return {_id:p._id})\
 let tngs = (for t in things return {_id:t._id}) RETURN flatten(append(ppls,plcs,tngs)))\
 let edgees = (\
 for ent in entities[0] \
-FOR v, e, p IN 1..2 ANY ent edges \
-FILTER e.type!=\'hasParticipant\'\
+FOR v, e, p IN 1..1 ANY ent edges \
 RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
 return count(entities[0])'
 
@@ -637,8 +637,7 @@ let ppls = (for p in people return {_id:p._id,id:p._id,label:p.name,article:p.ar
 let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,plcs,tngs)))\
 let edgees = (\
 for ent in entities[0] \
-FOR v, e, p IN 1..2 ANY ent edges \
-FILTER e.type!=\'hasParticipant\'\
+FOR v, e, p IN 1..1 ANY ent edges \
 RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
 return {entitiez:unique(entities),edgez:unique(edgees)}'
 
