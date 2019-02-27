@@ -151,7 +151,7 @@ export default {
     );
     // this.setSlider();
     this.fetchEntities();
-    this.d3ForceDirect();
+    // this.d3ForceDirect();
   }, //mounted
   methods: {
     getClass: function (which,one) {
@@ -201,8 +201,8 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
-  if (error) throw error;
+// d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
+//   if (error) throw error;
 
             // var G = svg.append('g')
       var transform = d3.zoomIdentity; //zoom
@@ -220,20 +220,25 @@ d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
       // .start();
 
   // set nodes and links var from data
-  var nodes = graph.nodes,
+  // var nodes = graph.result[0].entitiez[0],
+  // var nodes = graph.nodes,
+  var nodes = this.nodes,
+      links = this.edges,
+      // this.nodes = response.result[0].entitiez[0]
+// links = graph.result[0].edgez,
       nodeById = d3.map(nodes, function(d) { return d.id; }),
-      links = graph.links,
+// links = graph.result[0].edgez,
+      // links = graph.links,
       bilinks = [];
+      badlinks = [];
       // bilinks = links;
-
-// console.log('nodes:',nodes);
-// console.log('links:',links);
-// console.log('bilinks:',bilinks);
 
 /*
 */
 // loop through all edges from json
   links.forEach(function(link) {
+    // console.log('link.source:');console.log(link.source);
+    // console.log('link.target:');console.log(link.target);
     // get relationships represented by edge
     var s = link.source = nodeById.get(link.source),
         t = link.target = nodeById.get(link.target),
@@ -242,15 +247,25 @@ d3.json("http://localhost:8000/miserables.json", (error, graph)=>{
 // console.log('s:',s);
 // console.log('t:',t);
 // console.log('i:',i);
+// return null;
+
+if(!s || !t){ badlinks.push({source:link.source,target:link.target}) }
+
+
     nodes.push(i);
     links.push({source: s, target: i}, {source: i, target: t});
     bilinks.push([s, i, t]);
-  });
+});
+
   // var link = G.selectAll(".edge")
   //   .data(bilinks)
   //   .enter().append("path")
   //     .attr("class", "edge");
 
+console.log('badlinks:',badlinks);
+break;
+process.exit();
+return null;
 // console.log("bilinks:",bilinks);
 
 var link = G.append("g")
@@ -292,11 +307,26 @@ var node = G.append('g')
       .text(function(d) {
         return d.label;
       })
-      .attr('x', 6)
-      .attr('y', 3);
+      .attr('x', 8)
+      .attr('y', 3)
+            .attr('text-anchor', 'left')
 
-  node.append("title")
-      .text(function(d) { return d.id; });
+        // Append the place labels, setting their initial positions to
+        // the feature's centroid
+        // var placeLabels = svg.selectAll('.place-label')
+        //     .data(labels)
+        //     .enter()
+        //     .append('text')
+        //     .attr('class', 'place-label')
+        //     .attr('x', function(d) { return d.x; })
+        //     .attr('y', function(d) { return d.y; })
+        //     .attr('text-anchor', 'middle')
+        //     .text(function(d) { return d.label; });
+
+  // node.append("title")
+  //     .text(function(d) { return d.id; })
+  //     // .attr("transform", function(d) { return "translate(" + node.centroid(d) + ")"; })
+  //           .attr("dy", ".35em")
 
     // node.append("title")
     // .text(function(d){return '584';});
@@ -306,9 +336,9 @@ var node = G.append('g')
 //   .attr("data-target", function(d) { console.log("580d",d);return color(d.group); });
 
 // node now a group, append a circle      
- node.append("text")
-    .attr("dx", 6)
-    .text(function(d) { return d.id; });
+ // node.append("text")
+ //    .attr("dx", 6)
+ //    .text(function(d) { return d.id; });
   
   simulation
       .nodes(nodes)
@@ -346,9 +376,16 @@ function mouseout() {
   function ticked() {
     link.attr("d", positionLink);
     node.attr("transform", positionNode);
-    return null;
+    
+    // lables.forEach(function(o, j) {
+    //             // The change in the position is proportional to the distance
+    //             // between the label and the corresponding place (foci)
+    //             o.y += (foci[j].y - o.y) * k;
+    //             o.x += (foci[j].x - o.x) * k;
+    //         });
+
   }
-});
+// }); //d3.json
 
 function positionLink(d) {
   return "M" + d[0].x + "," + d[0].y
@@ -502,11 +539,15 @@ this.network = new vis.Network(container, data, options);
         : null
     );
 
-               let q = 'let entities = (let ppls = (for p in people return {_id:p.id,label:p.name,article:p.article})\
-let tngs = (for t in things return {_id:t.id,label:t.name,article:t.article})\
-let plcs = (for l in things return {_id:l.id,label:l.name,article:l.article})\
-let evts = (for ev in events return {_id:ev.id,label:ev.name,article:ev.article})\
- RETURN flatten(append(append(ppls,tngs),append(plcs,evts))))\
+               let q = 'let entities = (\
+let plcs = (for l in places return {_id:l._id})\
+let ppls = (for p in people return {_id:p._id})\
+let tngs = (for t in things return {_id:t._id}) RETURN flatten(append(ppls,plcs,tngs)))\
+let edgees = (\
+for ent in entities[0] \
+FOR v, e, p IN 1..2 ANY ent edges \
+FILTER e.type!=\'hasParticipant\'\
+RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
 return count(entities[0])'
 
       axios
@@ -591,14 +632,14 @@ if(process.env.VERBOSITY === 'DEBUG'){
 
       let q =
         'let entities = (\
-let plcs = (for l in places return {_id:l.id,label:l.name,article:l.article})\
-let ppls = (for p in people return {_id:p.id,label:p.name,article:p.article})\
-let tngs = (for t in things return {_id:t.id,label:t.name,article:t.article}) RETURN flatten(append(ppls,plcs,tngs)))\
+let plcs = (for l in places return {_id:l._id,id:l._id,label:l.name,article:l.article})\
+let ppls = (for p in people return {_id:p._id,id:p._id,label:p.name,article:p.article})\
+let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,plcs,tngs)))\
 let edgees = (\
 for ent in entities[0] \
 FOR v, e, p IN 1..2 ANY ent edges \
 FILTER e.type!=\'hasParticipant\'\
-RETURN {typ:e.type,from:e._from,to:e._to,id:e.id})\
+RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
 return {entitiez:unique(entities),edgez:unique(edgees)}'
 
       axios
@@ -612,7 +653,8 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
               : null
           );
 
-          let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n.id,label:n.label,article:n.article}})
+          // let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n.id,label:n.label,article:n.article}})
+          let deeznodes = response.data.result[0].entitiez[0]
 
           this.nodes = deeznodes
           this.edges = response.data.result[0].edgez
@@ -674,6 +716,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
+        this.d3ForceDirect()
       }
     } //nodes
   } //watch
