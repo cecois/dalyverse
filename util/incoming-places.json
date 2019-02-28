@@ -288,6 +288,14 @@
     }
   },
   {
+    "_key": "_:coronaca",
+    "name": "Corona, CA",
+    "article": "Corona, California is a town in California that once hosted a getaway weekend for Mal Bachman and Don DiMello.",
+    "geo_key": {
+      "type": "poly",
+      "id": 561
+    }
+  },{
     "_key": "_:dresdende",
     "name": "Dresden, Germany",
     "article": "Dresden is a significant site in World War II.",

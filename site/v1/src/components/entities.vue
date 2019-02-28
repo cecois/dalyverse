@@ -193,10 +193,13 @@ var parentDiv = document.getElementById("network");
       height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
       var G = svg.append('g')
 
-var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().distance(10).strength(0.5))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
+
+// var simulation = d3.forceSimulation()
+//     // .force("link", d3.forceLink().distance(10).strength(0.5))
+//     .force("charge", d3.forceManyBody())
+//     .force("center", d3.forceCenter(width / 2, height / 2))
+//     .stopSimulation()
+
 
 // d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
   // if (error) throw error;
@@ -389,20 +392,31 @@ var node = G.append('g')
  // node.append("text")
  //    .attr("dx", 6)
  //    .text(function(d) { return d.id; });
-  
+
+  // simulation
+  //     .nodes(nodes)
+  //     .on("tick", ticked);
+
+var simulation = d3.forceSimulation()
+    // .force("link", d3.forceLink().distance(10).strength(0.5))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .stop();
+
+  simulation.force("link")
+      .links(links);
+
   simulation
       .nodes(nodes)
       .on("tick", ticked);
 
-  simulation.force("link")
-      .links(links);
+simulation.start();
 
       function mouseover() {
         console.log(' mouseover()')
         d3.select(this).select("circle").transition()
       .duration(750)
-      .attr("r", 16);
-}
+      .attr("r", 16);}
 
 // function zoomed() {
 //   console.log('width:',);
@@ -420,9 +434,9 @@ function mouseout() {
 }
 
   function ticked() {
-    link.attr("d", positionLink);
-    node.attr("transform", positionNode);
-    // console.log('tickd')
+    // link.attr("d", positionLink);
+    // node.attr("transform", positionNode);
+    console.log('tickd')
     // lables.forEach(function(o, j) {
     //             // The change in the position is proportional to the distance
     //             // between the label and the corresponding place (foci)
@@ -434,6 +448,7 @@ function mouseout() {
  // }); // •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• d3.json
 
 function positionLink(d) {
+  console.log("d in positionLink:",d);
   return "M" + d[0].x + "," + d[0].y
        + "S" + d[1].x + "," + d[1].y
        + " " + d[2].x + "," + d[2].y;
@@ -453,6 +468,7 @@ function dragged(d) {
 }
 
 function dragended(d) {
+  console.log("d.dragended",d);
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }
