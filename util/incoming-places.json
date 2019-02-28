@@ -297,7 +297,7 @@
     }
   },
   {
-    "uid": "_:laramiefeedandwesternsupply",
+    "_key": "_:laramiefeedandwesternsupply",
     "name": "Laramie Feed and Western Supply",
     "article": "LFWS is a purveyor of western gear and other supplies to cowboys.",
     "geo_key": {
