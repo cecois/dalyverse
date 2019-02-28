@@ -434,26 +434,6 @@
     "article": "Geddy Lee is a member of prog-rock group Rush."
   },
   {
-    "_key": "_:emersonlakepalmer",
-    "name": "Emerson, Lake & Palmer",
-    "article": "Emerson, Lake & Palmer is a legendary English prog-rock band."
-  },
-  {
-    "_key": "_:yesband",
-    "name": "Yes",
-    "article": "Yes is a legendary English prog-rock band."
-  },
-  {
-    "_key": "_:rushband",
-    "name": "Rush",
-    "article": "Rush is a legendary Canadian prog-rock band."
-  },
-  {
-    "_key": "_:genesisband",
-    "name": "Genesis",
-    "article": "Genesis is a legendary English prog-rock band."
-  },
-  {
     "_key": "_:bonnieramirez",
     "name": "Bonnie Ramirez",
     "article": "Bonnie Ramirez was a student in Joe Bongo's Health class at Marina del Rey High School. Led astray by the misguided advice from Mr. Bongo that her tampon would 'dissolve' on its own, Ms. Ramirez lost a ping pong ball and missed considerable time in the Fall of 2014 due to toxic shock."
@@ -816,9 +796,9 @@
     "article": "Kimmy is Asian and demure."
   },
   {
-    "_key": "_:tracireardon",
-    "name": "Traci Reardon",
-    "article": "Traci Reardon is teenager."
+    "_key": "_:tracirearden",
+    "name": "Traci Rearden",
+    "article": "Traci Rearden is teenager."
   },
   {
     "_key": "_:drsethwompler",

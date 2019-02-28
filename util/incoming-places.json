@@ -617,15 +617,6 @@
     }
   },
   {
-    "_key": "_:lotpinc",
-    "name": "Life of the Party, Inc.",
-    "article": "Life of the Party, Inc., is a party-execution operation launched and owned by Danny Mahoney. The way it works is: if you're throwing a party -- any kind of a party, doesn't matter if it's a Baz Mitzvah, somebody's getting out of jail, or even a gay wedding -- you hire LOTPCInc and Danny will come to the party and make it fantastic by being the life of the party. Harmonica performances must be explicitly requested. The company can be reached at 1-800-CMONNOW.",
-    "geo_key": {
-      "type": "point",
-      "id": 111
-    }
-  },
-  {
     "_key": "_:unnamedlotionshop",
     "name": "Unnamed Lotion Shop",
     "article": "Possibly only existing in the fantastical imagination of Jeff Garlin, this unnamed lotion shop supposedly sits on Boner Avenue and is staffed by, among others no doubt, 'Mr. Francisco,' the star of one of Ben Alterman's standup jokes.",

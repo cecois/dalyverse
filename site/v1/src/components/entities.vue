@@ -198,7 +198,7 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
+// d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
   // if (error) throw error;
 
             // var G = svg.append('g')
@@ -431,7 +431,7 @@ function mouseout() {
     //         });
 
   }
- }); // •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• d3.json
+ // }); // •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• d3.json
 
 function positionLink(d) {
   return "M" + d[0].x + "," + d[0].y
@@ -585,15 +585,13 @@ this.network = new vis.Network(container, data, options);
         : null
     );
 
-               let q = 'let entities = (\
-let plcs = (for l in places return {_id:l._id})\
-let ppls = (for p in people return {_id:p._id})\
-let tngs = (for t in things return {_id:t._id}) RETURN flatten(append(ppls,plcs,tngs)))\
-let edgees = (\
-for ent in entities[0] \
-FOR v, e, p IN 1..1 ANY ent edges \
-filter v.type != \'hasParticipant\'\
-RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
+               let q = 'let plcs = (for l in places return {_id:l._id,id:l._id,label:l.name,article:l.article})\
+let ppls = (for p in people return {_id:p._id,id:p._id,label:p.name,article:p.article})\
+let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article})\
+let evnts = (for ev in events return {_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
+let pplsplcs = (flatten(append(ppls,plcs)))\
+let tngsevts = (flatten(append(tngs,evnts)))\
+let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
 return count(entities[0])'
 
       axios
@@ -677,14 +675,16 @@ if(process.env.VERBOSITY === 'DEBUG'){
       );
 
       let q =
-        'let entities = (\
-let plcs = (for l in places return {_id:l._id,id:l._id,label:l.name,article:l.article})\
+        'let plcs = (for l in places return {_id:l._id,id:l._id,label:l.name,article:l.article})\
 let ppls = (for p in people return {_id:p._id,id:p._id,label:p.name,article:p.article})\
-let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,plcs,tngs)))\
+let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article})\
+let evnts = (for ev in events return {_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
+let pplsplcs = (flatten(append(ppls,plcs)))\
+let tngsevts = (flatten(append(tngs,evnts)))\
+let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
 let edgees = (\
 for ent in entities[0] \
 FOR v, e, p IN 1..1 ANY ent edges \
-filter v.type != \'hasParticipant\'\
 RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
 return {entitiez:unique(entities),edgez:unique(edgees)}'
 
@@ -762,7 +762,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
-        this.d3ForceDirect()
+        // this.d3ForceDirect()
       }
     } //nodes
   } //watch

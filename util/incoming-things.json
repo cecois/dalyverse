@@ -118,10 +118,41 @@
       }
     ]
   },
+    {
+    "_key": "_:lotpinc",
+    "name": "Life of the Party, Inc.",
+    "article": "Life of the Party, Inc., is a party-execution operation launched and owned by Danny Mahoney. The way it works is: if you're throwing a party -- any kind of a party, doesn't matter if it's a Baz Mitzvah, somebody's getting out of jail, or even a gay wedding -- you hire LOTPCInc and Danny will come to the party and make it fantastic by being the life of the party. Harmonica performances must be explicitly requested. The company can be reached at 1-800-CMONNOW."
+  },
   {
     "_key": "_:nashasha",
     "name": "Na Sha Sha",
     "article": "Na Sha Sha is a classic American rock n' roll tribute band that does exist.",
+    "links": []
+  },
+    {
+    "_key": "_:emersonlakepalmer",
+    "name": "Emerson, Lake & Palmer",
+    "article": "Emerson, Lake & Palmer is a legendary English prog-rock band."
+  },
+  {
+    "_key": "_:yesband",
+    "name": "Yes",
+    "article": "Yes is a legendary English prog-rock band."
+  },
+  {
+    "_key": "_:rushband",
+    "name": "Rush",
+    "article": "Rush is a legendary Canadian prog-rock band."
+  },
+  {
+    "_key": "_:genesisband",
+    "name": "Genesis",
+    "article": "Genesis is a legendary English prog-rock band."
+  },
+    {
+    "_key": "_:rosebushred",
+    "name": "Rosebush Red",
+    "article": "Rosebush Red is a high school rock band at one point, at least, comprised entirely of the sons of Prog pioneers.",
     "links": []
   },
   {
