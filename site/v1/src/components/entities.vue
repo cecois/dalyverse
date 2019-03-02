@@ -200,6 +200,14 @@ var parentDiv = document.getElementById("network");
 //     .force("center", d3.forceCenter(width / 2, height / 2))
 //     .stopSimulation()
 
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().distance(10).strength(0.5))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    // .links(links)
+    // .stop()
+    ;
+
 
 // d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
   // if (error) throw error;
@@ -321,8 +329,8 @@ if(so && ta){
 
 
 var link = G.append("g")
-.attr("class","links")
-.selectAll("line")
+// .attr("class","links")
+// .selectAll("line")
 .data(bilinks)
 .enter().append("path")
 .attr("class",'edge')
@@ -344,7 +352,6 @@ var node = G.append('g')
                         .attr("class",(d)=>{
                               return this.getClass('node',(1==1)?'daly':'person')
                             })
-
             .call(d3.drag()
               .on("start", dragstarted)
               .on("drag", dragged)
@@ -377,7 +384,7 @@ var node = G.append('g')
         //     .text(function(d) { return d.label; });
 
   node.append("title")
-      .text(function(d) { return d.id; })
+      .text(function(d) { return d.id; });
   //     // .attr("transform", function(d) { return "translate(" + node.centroid(d) + ")"; })
   //           .attr("dy", ".35em")
 
@@ -397,11 +404,6 @@ var node = G.append('g')
   //     .nodes(nodes)
   //     .on("tick", ticked);
 
-var simulation = d3.forceSimulation()
-    // .force("link", d3.forceLink().distance(10).strength(0.5))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2))
-    .stop();
 
   simulation.force("link")
       .links(links);
