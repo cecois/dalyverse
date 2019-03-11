@@ -314,6 +314,14 @@
     }
   },
   {
+    "_key": "_:gowergulch",
+    "name": "Gower Gulch",
+    "article": "Corner of Gower@Sunset in Hollywood.",
+    "geo_key": {
+      "type": "point",
+      "id": 324
+    }
+  },{
     "_key": "_:marktwainhotella",
     "name": "Mark Twain Hotel - Los Angeles",
     "article": "Questionable boutique hotel off of Wilcox.",

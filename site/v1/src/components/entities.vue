@@ -1,6 +1,6 @@
 <template>
 <div id="vue-root" class="container is-fixed-top">
-  <vue-headful :title="page.title" description="People of the Andy Dalyverse" />
+  <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
 <!-- ************************************************************************************ #CONSOLE -->
 <div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
 
@@ -27,12 +27,63 @@
 </div><!-- ************************************************************************************ /#CONSOLE -->
 <!-- #.navbar </nav> -->
 
-<div class="" id="container-main">
+<!-- <div class="" id="container-main"> -->
   <!-- -------------------------------------------------------------- SLIDER -->
-<div id="network">
+
+<section class="hero is-primary is-medium is-fullheight-with-navbar">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+      <div id="network">
+  <svg></svg>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Overview</a></li>
+          <li><a>Modifiers</a></li>
+          <li><a>Grid</a></li>
+          <li><a>Elements</a></li>
+          <li><a>Components</a></li>
+          <li><a>Layout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<!-- <div id="network">
   <svg></svg>
 </div>
-</div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
+</div> 
+-->
+<!-- ************************************************************************************ /#CONTAINER-MAIN -->
 
 </div><!-- ./#vue-root -->
 </template>
@@ -180,44 +231,17 @@ return clas
     }, // getclass
     d3ForceDirect: function () {
 
-      console.log("setD3ForceDirect()...");
-    
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
-var parentDiv = document.getElementById("network");
-// var svg = d3.select(parentDiv).append("svg"),
-    // var svg = d3.select(parentDiv).append("svg"),
-    var svg = d3.select("svg"),
-    // svg.select("#network > svg"),
-      // width = +svg.attr("width"),
-      // height = +svg.attr("height"),
-      width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
-      height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
-      var G = svg.append('g')
-
-
-// var simulation = d3.forceSimulation()
-//     // .force("link", d3.forceLink().distance(10).strength(0.5))
-//     .force("charge", d3.forceManyBody())
-//     .force("center", d3.forceCenter(width / 2, height / 2))
-//     .stopSimulation()
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().distance(10).strength(0.5))
     .force("charge", d3.forceManyBody())
-    // .force("center", d3.forceCenter(width / 2, height / 2))
-    ;
-    .force("center", d3.forceCenter(width / 2, height / 2))
-    // .links(links)
-    // .stop()
-    ;
-
-
-// d3.json("http://localhost:8000/miserables-daly.json", (error, graph)=>{
-  // if (error) throw error;
+    .force("center", d3.forceCenter(width / 2, height / 2));
 
 // d3.json("miserables.json", function(error, graph) {
   // if (error) throw error;
@@ -234,13 +258,12 @@ var simulation = d3.forceSimulation()
     nodes.push(i);
     links.push({source: s, target: i}, {source: i, target: t});
     bilinks.push([s, i, t]);
-<<<<<<< HEAD
   });
 
   var link = svg.selectAll(".link")
     .data(bilinks)
     .enter().append("path")
-      .attr("class", "link");
+      .attr("class", "edge");
 
   var node = svg.selectAll(".node")
     .data(nodes.filter(function(d) { return d.id; }))
@@ -255,128 +278,6 @@ var simulation = d3.forceSimulation()
 
   node.append("title")
       .text(function(d) { return d.id; });
-=======
-
-}//if.so/ta
-
-// }//if.link
-
-})//each
-
-  // links.forEach(function(link) {
-  // links.forEach((link)=>{
-    // get relationships represented by edge
-    // var s = link.source = nodeById.get(link.source),
-        // t = link.target = nodeById.get(link.target),
-        // var so = this.$_.findWhere(this.nodes,{id:link.source}),
-// ta = this.$_.findWhere(this.nodes,{id:link.target})
-
-// if(!so || !ta){ badlinks.push({source:link.source,target:link.target}) 
-//         console.log('ONE OF THESE FAILED:')
-//         console.log({linktarget:link.target,ta:ta,so:so,linksource:link.source})
-// }
-
-//         var s = link.source = {id:so.id,label:so.label,article:so.article},
-//         t = link.target = {id:ta.id,label:ta.label,article:ta.article},
-//         i = {}; // intermediate node
-
-
-
-
-//     nodes.push(i);
-//     links.push({source: s, target: i}, {source: i, target: t});
-//     // bilinks.push([s, i, t]);
-// });
-
-  // var link = G.selectAll(".edge")
-  //   .data(bilinks)
-  //   .enter().append("path")
-  //     .attr("class", "edge");
-
-// console.log('badlinks samples:');
-// console.info(badlinks[0])
-// console.info(badlinks[9])
-
-
-var link = G.append("g")
-// .attr("class","links")
-// .selectAll("line")
-.data(bilinks)
-.enter().append("path")
-.attr("class",'edge')
-
-
-var node = G.append('g')
-                        // .attr("class", "node")
-                        .selectAll("g")
-            .data(nodes.filter(function(d) { return d.id; }))
-            .enter()
-            .append("g")
-
-            var circles = node.append("circle")
-                        .attr("r", "5")
-    // .attr("dx", 6)
-            // .append("text")
-    // .text(function(d) { return d.id; })
-            // .append("g")
-                        .attr("class",(d)=>{
-                              return this.getClass('node',(1==1)?'daly':'person')
-                            })
-            .call(d3.drag()
-              .on("start", dragstarted)
-              .on("drag", dragged)
-              .on("end", dragended)
-            )
-    
-
-
-
-    var lables = node.append("text")
-      .text(function(d) {
-        return d.id;
-      })
-      .attr('x', 8)
-      .attr('y', 3)
-            // .attr('text-anchor', 'left')
-
-/* *******************************************************************
-******************************************************************* */
-        // Append the place labels, setting their initial positions to
-        // the feature's centroid
-        // var placeLabels = svg.selectAll('.place-label')
-        //     .data(lables)
-        //     .enter()
-        //     .append('text')
-        //     .attr('class', 'place-label')
-        //     .attr('x', function(d) { return d.x; })
-        //     .attr('y', function(d) { return d.y; })
-        //     .attr('text-anchor', 'middle')
-        //     .text(function(d) { return d.label; });
-
-  node.append("title")
-      .text(function(d) { return d.id; });
-  //     // .attr("transform", function(d) { return "translate(" + node.centroid(d) + ")"; })
-  //           .attr("dy", ".35em")
-
-    // node.append("title")
-    // .text(function(d){return '584';});
-// node now a group, append a circle      
-// node.append("circle")
-//   .attr("r", 5)
-//   .attr("data-target", function(d) { console.log("580d",d);return color(d.group); });
-
-// node now a group, append a circle      
- // node.append("text")
- //    .attr("dx", 6)
- //    .text(function(d) { return d.id; });
-
-  // simulation
-  //     .nodes(nodes)
-  //     .on("tick", ticked);
-
-
-  simulation.force("link")
-      .links(links);
 
   simulation
       .nodes(nodes)
@@ -389,7 +290,7 @@ var node = G.append('g')
     link.attr("d", positionLink);
     node.attr("transform", positionNode);
   }
-//});  json
+// });
 
 function positionLink(d) {
   return "M" + d[0].x + "," + d[0].y
@@ -414,6 +315,8 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }
+
+
     }, // setd3force
     setD3HelloWorld: function () {
 
@@ -720,7 +623,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
-        this.d3ForceDirect()
+        // this.d3ForceDirect()
       }
     } //nodes
   } //watch
@@ -731,16 +634,16 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
 <style>
 
 #network {
-  position:relative;
-  height: 78vh; /** output container is small for display */ 
-  width: 100vw;
+  /*position:relative;*/
+  /*height: 100%;
+  width: 100%;*/
   background-color:rgba(55,244,244,.5);
   display: block;
 }
 
 #network > svg {
-height:100vh;
-width:100vw;
+/*height:50vh;
+width:50vw;*/
 }
 
 .node {
@@ -748,7 +651,7 @@ width:100vw;
   stroke-width: 1.5px;
 }
 
-.link {
+.edge {
   fill: none;
   stroke: #bbb;
 }
@@ -786,6 +689,11 @@ text{
   {
   fill: none;
   stroke: #aaa;
+}
+
+/* ---------------------------------- BULMA -- */
+.hero.is-medium > .hero-body{
+  padding:8px;
 }
 
 </style>

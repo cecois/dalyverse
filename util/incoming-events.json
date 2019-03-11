@@ -1,5 +1,15 @@
 [
   {
+    "_key": "_:daltonwilcoxmurdersacyclops",
+    "name": "Dalton Wilcox Kills a Cyclops",
+    "article": "Prior to appearing on CBB#589, Dalton Wilcox suffered a flat tire on his truck. A tow truck operator responded and repaired the tire, requesting from Mr. Wilcox \"fifty goddamned dollars\" for the service. Mr. Wilcox, seeing now that the eyepatch very certainly indicated the operator was a cyclops, fired a silver bullet into the man's heart.",
+    "timestamp": {"start":"2019-03-03T08:00:00Z","end":null},
+    "nb_timestamp": {
+      "class": "estimate-firm",
+      "nb": "estimate is rel. to CBB#589"
+    }
+  },
+  {
     "_key": "_:mrsbronsongoesmissing",
     "name": "Mrs. Bronson Goes on Medical Leave",
     "article": "Following a weekend with Don DiMello that ended in 'frictions,' Mrs. Bronson was unable to teach her grade school class for 6-8 weeks, during which time Mr. DiMello himself substituted.",
