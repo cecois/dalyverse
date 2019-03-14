@@ -1,39 +1,15 @@
 <template>
 <div id="vue-root" class="container is-fixed-top">
   <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
-<!-- ************************************************************************************ #CONSOLE -->
-<div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
-
-<div class="tile is-ancestor">
-  <div class="tile is-4 is-vertical is-parent">
-    <div class="tile is-child box">
-      <div class="columns">
-        <div class="column">
-        </div>
-        <div class="column">
-    </div>
-      </div><!-- /.columns -->
-    </div><!-- /.tile -->
-
-  </div>
-  <div class="tile is-parent">
-    <div class="tile is-child box">
-      <p class="title is-size-7" v-if="active.key">ACTIVE</p>
-
-    </div>
-  </div>
-</div>
-
-</div><!-- ************************************************************************************ /#CONSOLE -->
 <!-- #.navbar </nav> -->
 
 <!-- <div class="" id="container-main"> -->
   <!-- -------------------------------------------------------------- SLIDER -->
 
-<section class="hero is-primary is-medium is-fullheight-with-navbar">
+<section class="hero is-primary is-medium is-fullheight">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
-    <nav class="navbar">
+    <!-- <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item">
@@ -51,7 +27,7 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
   </div>
 
   <!-- Hero content: will be in the middle -->
@@ -63,18 +39,35 @@
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
-    <nav class="tabs">
+    <!-- <nav class="tabs">
       <div class="container">
-        <ul>
-          <li class="is-active"><a>Overview</a></li>
-          <li><a>Modifiers</a></li>
-          <li><a>Grid</a></li>
-          <li><a>Elements</a></li>
-          <li><a>Components</a></li>
-          <li><a>Layout</a></li>
-        </ul>
+        
+<div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
+
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <div class="columns">
+        <div class="column">
+        </div>
+        <div class="column">
+    </div>
       </div>
-    </nav>
+    </div>
+
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box">
+      <p class="title is-size-7" v-if="active.key">ACTIVE</p>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+      </div>
+    </nav> -->
   </div>
 </section>
 
@@ -229,12 +222,23 @@ let clas = null;
 return clas
 
     }, // getclass
+    activate: function (k) {
+console.log('actiavfe...')
+console.log('k',k)
+
+    },
     d3ForceDirect: function () {
 
+var parentDiv = document.getElementById("network");
 
 var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
+      height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
+    // width = +svg.attr("width"),
+    // height = +svg.attr("height");
+
+    console.log('width:',width)
+    console.log('heightwidth:',height)
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
@@ -265,6 +269,7 @@ var simulation = d3.forceSimulation()
     .enter().append("path")
       .attr("class", "edge");
 
+var that=this
   var node = svg.selectAll(".node")
     .data(nodes.filter(function(d) { return d.id; }))
     .enter().append("circle")
@@ -274,7 +279,7 @@ var simulation = d3.forceSimulation()
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));
+          .on("end", function(d){console.log(that.active.key);that.active.key=d.key}));
 
   node.append("title")
       .text(function(d) { return d.id; });
@@ -312,6 +317,7 @@ function dragged(d) {
 }
 
 function dragended(d) {
+
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }
@@ -632,18 +638,24 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
 </script>
 
 <style>
-
+body{height:100%;overflow:auto;}
 #network {
   /*position:relative;*/
-  /*height: 100%;
-  width: 100%;*/
+  height: 100vh;
+  width: 100%;
+  /*min-height: calc(100vh - #{$navbar-height});*/
+  /*height:auto;width:auto;*/
   background-color:rgba(55,244,244,.5);
-  display: block;
+  /*display: block;*/
+  overflow:hidden;
 }
 
 #network > svg {
-/*height:50vh;
-width:50vw;*/
+/*height:50vh;*/
+background-color:rgba(88,232,88,.7);
+height:80%;
+width:100%;
+  overflow:hidden;
 }
 
 .node {
@@ -693,7 +705,7 @@ text{
 
 /* ---------------------------------- BULMA -- */
 .hero.is-medium > .hero-body{
-  padding:8px;
+  padding:0px;
 }
 
 </style>
