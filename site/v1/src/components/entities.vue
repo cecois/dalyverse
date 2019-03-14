@@ -41,7 +41,8 @@
   <div class="hero-foot">
     <!-- <nav class="tabs">
       <div class="container">
-        
+        -->
+
 <div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
 
 <div class="tile is-ancestor">
@@ -59,16 +60,17 @@
   <div class="tile is-parent">
     <div class="tile is-child box">
       <p class="title is-size-7" v-if="active.key">ACTIVE</p>
-
+{{active.key}}
     </div>
   </div>
 </div>
 
-</div>
+</div note="/console">
 
       </div>
-    </nav> -->
+   <!-- </nav> 
   </div>
+   -->
 </section>
 
 <!-- <div id="network">
@@ -222,11 +224,6 @@ let clas = null;
 return clas
 
     }, // getclass
-    activate: function (k) {
-console.log('actiavfe...')
-console.log('k',k)
-
-    },
     d3ForceDirect: function () {
 
 var parentDiv = document.getElementById("network");
@@ -236,9 +233,6 @@ width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
       height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
     // width = +svg.attr("width"),
     // height = +svg.attr("height");
-
-    console.log('width:',width)
-    console.log('heightwidth:',height)
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
@@ -250,9 +244,17 @@ var simulation = d3.forceSimulation()
 // d3.json("miserables.json", function(error, graph) {
   // if (error) throw error;
 
-  var nodes = this.nodes,
+  let fakenodes = [
+  {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
+
+  let fakeedges = [
+{source:'people/_:daltonwilcox',target:'people/_:vampire'},
+{source:'people/_:daltonwilcox',target:'people/_:mummy'}
+  ]
+
+  var nodes = fakenodes,
       nodeById = d3.map(nodes, function(d) { return d.id; }),
-      links = this.edges,
+      links = fakeedges,
       bilinks = [];
 
   links.forEach(function(link) {
@@ -269,17 +271,17 @@ var simulation = d3.forceSimulation()
     .enter().append("path")
       .attr("class", "edge");
 
-var that=this
+// var that=this
   var node = svg.selectAll(".node")
     .data(nodes.filter(function(d) { return d.id; }))
     .enter().append("circle")
       .attr("class", "node")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      // .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", function(d){console.log(that.active.key);that.active.key=d.key}));
+          .on("end", (o)=>{this.active.key=o._id}));
 
   node.append("title")
       .text(function(d) { return d.id; });
@@ -317,133 +319,15 @@ function dragged(d) {
 }
 
 function dragended(d) {
-
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null, d.fy = null;
 }
 
 
     }, // setd3force
-    setD3HelloWorld: function () {
-
-d3.select("#network").append("h1")
-    .text("Hello, world!")
-    .style("text-align", "center")
-    .style("line-height", "320px")
-    .style("font-size", "100px")
-    .style("transform", "rotate(-180deg) scale(0.001, 0.001)")
-  .transition()
-    .duration(1500)
-    .style("transform", null);
-
-    }, // end of setD3HelloWorld()
-    setChartLine: function () {
-
-// make an svg canvas
-const svg = d3.select('#network')
-      .append('svg') // append an svg object to it
-      .attr('width', 500)
-      .attr('height', 270)
-      .append('g') // append a g to that
-      .attr('transform', 'translate(0, 10)');
-    const x = d3.scaleLinear().range([0, 430]);
-    const y = d3.scaleLinear().range([210, 0]);
-    d3.axisLeft().scale(x);
-    d3.axisTop().scale(y);
-    x.domain(d3.extent(this.chartvalues, (d, i) => i));
-    y.domain([0, d3.max(this.chartvalues, d => d)]);
-    const createPath = d3.line()
-      .x((d, i) => x(i))
-      .y(d => y(d));
-    svg.append('path').attr('d', createPath(this.chartvalues));
-
-    }, //setchart
-    setNetworkVisJS: function () {
-console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "setNetwork()..."
-        : null
-    );
-if(!this.network){
-
-  console.info(
-    process.env.VERBOSITY === "DEBUG"
-      ? "no network - you're the network..."
-      : null
-  );
-
-var container = document.getElementById('network');
- // provide the data in the vis format
-    var data = {nodes: this.nodes,edges: this.edges};
-
-    var options = {
-    layout:{improvedLayout: true},
-    physics:{
-    enabled: true,
-    barnesHut: {
-      gravitationalConstant: -2000,
-      centralGravity: 0.3,
-      springLength: 95,
-      springConstant: 0.04,
-      damping: 0.09,
-      avoidOverlap: 0
-    },
-    forceAtlas2Based: {
-      gravitationalConstant: -50,
-      centralGravity: 0.01,
-      springConstant: 0.08,
-      springLength: 100,
-      damping: 0.4,
-      avoidOverlap: 0
-    },
-    repulsion: {
-      centralGravity: 0.2,
-      springLength: 200,
-      springConstant: 0.05,
-      nodeDistance: 100,
-      damping: 0.09
-    },
-    hierarchicalRepulsion: {
-      centralGravity: 0.0,
-      springLength: 100,
-      springConstant: 0.01,
-      nodeDistance: 120,
-      damping: 0.09
-    },
-    maxVelocity: 50,
-    minVelocity: 0.1,
-    solver: 'barnesHut',
-    stabilization: {
-      enabled: false,
-      iterations: 1000,
-      updateInterval: 100,
-      onlyDynamicEdges: false,
-      fit: false
-    },
-    timestep: 0.5,
-    adaptiveTimestep: true
-  },
-      edges:{
-    arrows: {
-      to:     {enabled: true, scaleFactor:1, type:'arrow'},
-      middle: {enabled: false, scaleFactor:1, type:'arrow'},
-      from:   {enabled: false, scaleFactor:1, type:'arrow'}
-    },
-
-  }
-    };
-
-this.network = new vis.Network(container, data, options);
-
-            this.network.on("stabilizationProgress", function(params) {
-                console.log('stabilz:',params)
-              });
-
-} else {
-  console.info(';;;;;;;;;;;;---:NETWORK ALREADY');
-}
-
-    }, //setNetwork
+    setD3HelloWorld: function () {}, // end of setD3HelloWorld()
+    setChartLine: function () {}, //setchart
+    setNetworkVisJS: function () {}, //setNetwork
     fetchTotalEntities: function () {
 
           console.info(
@@ -620,7 +504,8 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
   }, //methods
   computed: {}, //computed
   watch: {
-    nodes: {
+    'active.key': {handler:function(){this.console.msg=this.active.key}} //active
+    ,nodes: {
       handler: function(vnew, vold) {
         console.info(
           process.env.VERBOSITY === "DEBUG"
@@ -629,7 +514,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
-        // this.d3ForceDirect()
+        this.d3ForceDirect()
       }
     } //nodes
   } //watch
