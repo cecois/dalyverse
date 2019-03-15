@@ -1,11 +1,42 @@
 <template>
-<div id="vue-root" class="columns is-fixed-top dv-vertical-columns">
+<div id="vue-root" class="">
   <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
 
-<div class="column is-half dv-column-left">
+<nav id="dv-nav-main" class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="dv-nav-menu" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Entities
+      </a>
+      <a class="navbar-item">
+        Events
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="columns dv-vertical-columns"><div class="column is-half dv-column-left">
   <div id="network"><svg></svg></div>
 </div>
-<div class="column is-half dv-column-right"></div>
+<div class="column is-half dv-column-right"></div></div>
 
 </div><!-- ./#vue-root -->
 </template>
@@ -100,7 +131,7 @@ export default {
   })
 
     this.console = {
-      msg: "loading...",
+      msg: new Date(),
       throb: true,
       clazz: "mdi-clock"
     };
@@ -452,28 +483,12 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
 </script>
 
 <style>
-body{height:100%;overflow:auto;}
-.dv-vertical-columns{height:100vh;}
+body{height:100%;overflow:hidden;}
+
+
 .dv-column-left{background-color:white;}
 .dv-column-right{background-color:black;}
-#network {
-  /*position:relative;*/
-  height: 100vh;
-  width: 100%;
-  /*min-height: calc(100vh - #{$navbar-height});*/
-  /*height:auto;width:auto;*/
-  background-color:rgba(55,244,244,.5);
-  /*display: block;*/
-  overflow:hidden;
-}
 
-#network > svg {
-/*height:50vh;*/
-background-color:rgba(88,232,88,.7);
-height:80%;
-width:100%;
-  overflow:hidden;
-}
 
 .node {
   stroke: #fff;
