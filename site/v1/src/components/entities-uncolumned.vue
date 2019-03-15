@@ -1,11 +1,85 @@
 <template>
-<div id="vue-root" class="columns is-fixed-top dv-vertical-columns">
+<div id="vue-root" class="container is-fixed-top">
   <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
+<!-- #.navbar </nav> -->
 
-<div class="column is-half dv-column-left">
-  <div id="network"><svg></svg></div>
+<!-- <div class="" id="container-main"> -->
+  <!-- -------------------------------------------------------------- SLIDER -->
+
+<section class="hero is-primary is-medium is-fullheight">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <!-- <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            
+          </div>
+        </div>
+      </div>
+    </nav> -->
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+      <div id="network">
+  <svg></svg>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <!-- <nav class="tabs">
+      <div class="container">
+        -->
+
+<div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
+
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <div class="columns">
+        <div class="column">
+        </div>
+        <div class="column">
+    </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box">
+      <p class="title is-size-7" v-if="active.key">ACTIVE</p>
+{{active.key}}
+{{active.item.article}}
+    </div>
+  </div>
 </div>
-<div class="column is-half dv-column-right"></div>
+
+</div note="/console">
+
+      </div>
+   <!-- </nav> 
+  </div>
+   -->
+</section>
+
+<!-- <div id="network">
+  <svg></svg>
+</div>
+</div> 
+-->
+<!-- ************************************************************************************ /#CONTAINER-MAIN -->
 
 </div><!-- ./#vue-root -->
 </template>
@@ -369,7 +443,7 @@ RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
 return {entitiez:unique(entities),edgez:unique(edgees)}'
 
       axios
-        .post("http://" + process.env.ARANGOIP + "/cursor", {
+        .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
           query: q
         })
         .then(response => {
@@ -400,7 +474,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
       // if we have an active.key
       if (this.active.key !== null) {
         axios
-          .post("http://" + process.env.ARANGOIP + "/cursor", {
+          .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
             query:
               'for p in people return p'
           })
@@ -453,9 +527,6 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
 
 <style>
 body{height:100%;overflow:auto;}
-.dv-vertical-columns{height:100vh;}
-.dv-column-left{background-color:white;}
-.dv-column-right{background-color:black;}
 #network {
   /*position:relative;*/
   height: 100vh;
