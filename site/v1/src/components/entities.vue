@@ -34,10 +34,14 @@
 </nav>
 
 <div class="columns dv-vertical-columns"><div class="column is-half dv-column-left">
-  <div id="network"><svg></svg></div>
+  <div id="network"><svg></svg></div note="/#network">
+</div note="/.dv-column-left">
+<div class="column is-half dv-column-right">
+  active.key: {{active.key}}<br/>
+      active.item.article: {{active.item.article}}<br/>
+      active.graph: {{active.graph}}<br/>
+</div note="/.dv-column-right">
 </div>
-<div class="column is-half dv-column-right"></div></div>
-
 </div><!-- ./#vue-root -->
 </template>
 
@@ -185,19 +189,39 @@ return clas
     d3ForceDirect: function () {
 
 var parentDiv = document.getElementById("network");
-
-var svg = d3.select("svg"),
-width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
+let width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
       height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
-    // width = +svg.attr("width"),
-    // height = +svg.attr("height");
 
-var color = d3.scaleOrdinal(d3.schemeCategory20);
+var svg = d3.select("svg");
+// .attr("width",width).attr("height",height)
+var G=svg.append('g')
+// .attr("width",width).attr("height",height)
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().distance(10).strength(0.5))
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
+
+var transform = d3.zoomIdentity;
+
+// var zoom = d3.behavior.zoom()
+// .scaleExtent([1,50])
+    svg.call(d3.zoom()
+               // .scaleExtent([1 / 2, Infinity])
+               .scaleExtent([0.1,7])
+               .on("zoom", ()=>{
+                // G.selectAll("circle").attr("r","5")
+                G.selectAll("circle").attr("r",(lg)=>{
+let sc = 5;
+return sc
+                }
+                  )//attr
+                G.attr("transform",d3.event.transform)
+               })
+               )
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
 
   let fakenodes = [
   {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
@@ -221,21 +245,29 @@ var simulation = d3.forceSimulation()
     bilinks.push([s, i, t]);
   });
 
-  var link = svg.selectAll(".link")
+  // var link = svg.selectAll(".link")
+  var link = G.append("g")
+      .attr("class", "links")
+      .selectAll("line")
     .data(bilinks)
     .enter().append("path")
       .attr("class", "edge");
 
-  var node = svg.selectAll(".node")
+  // var node = svg.selectAll(".node")
+  var node = G.append("g")
+  .selectAll("g")
     .data(nodes.filter(function(d) { return d.id; }))
-    .enter().append("circle")
+    .enter().append("g")
+
+    // var circles = node.append("circle").attr("r","5")
+    var circles = node.append("circle").attr("r",()=>{return "5"})
       .attr("class", "node")
-      .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      // .attr("r", 5)
+      // .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", (o)=>{this.active.key=o._id}));
+          .on("end", (o)=>{console.log(o);this.active.key=o._id}));
 
   node.append("title")
       .text(function(d) { return d.id; });
@@ -413,8 +445,8 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
           // let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n.id,label:n.label,article:n.article}})
           let deeznodes = response.data.result[0].entitiez[0]
 
-          this.nodes = deeznodes
           this.edges = response.data.result[0].edgez
+          this.nodes = deeznodes
 
         }) //axios.then
         .catch(e => {
@@ -487,7 +519,7 @@ body{height:100%;overflow:hidden;}
 
 
 .dv-column-left{background-color:white;}
-.dv-column-right{background-color:black;}
+.dv-column-right{background-color:black;color:#00eb11;}
 
 
 .node {
