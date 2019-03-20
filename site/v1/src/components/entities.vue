@@ -195,6 +195,7 @@ let width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
 var svg = d3.select("svg");
 // .attr("width",width).attr("height",height)
 var G=svg.append('g')
+console.log("G",G);
 // .attr("width",width).attr("height",height)
 
 var simulation = d3.forceSimulation()
@@ -231,9 +232,9 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 {source:'people/_:daltonwilcox',target:'people/_:mummy'}
   ]
 
-  var nodes = this.nodes,
+  var nodes = fakenodes,
       nodeById = d3.map(nodes, function(d) { return d.id; }),
-      links = this.edges,
+      links = fakeedges,
       bilinks = [];
 
   links.forEach(function(link) {
@@ -254,12 +255,15 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
       .attr("class", "edge");
 
   // var node = svg.selectAll(".node")
+  
   var node = G.append("g")
   .selectAll("g")
     .data(nodes.filter(function(d) { return d.id; }))
     .enter().append("g")
+    console.log('node:',node)
 
     // var circles = node.append("circle").attr("r","5")
+    
     var circles = node.append("circle").attr("r",()=>{return "5"})
       .attr("class", "node")
       // .attr("r", 5)
@@ -268,6 +272,7 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", (o)=>{console.log(o);this.active.key=o._id}));
+      console.log('circles:',circles)
 
   node.append("title")
       .text(function(d) { return d.id; });
@@ -506,7 +511,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
-        // this.d3ForceDirect()
+        this.d3ForceDirect()
       }
     } //nodes
   } //watch
