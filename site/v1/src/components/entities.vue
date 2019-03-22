@@ -210,14 +210,16 @@ var transform = d3.zoomIdentity;
     svg.call(d3.zoom()
                // .scaleExtent([1 / 2, Infinity])
                .scaleExtent([0.1,7])
-               .on("zoom", ()=>{
-                // G.selectAll("circle").attr("r","5")
-                G.selectAll("circle").attr("r",(lg)=>{
-let sc = 5;
-return sc
-                }
-                  )//attr
+               .on("zoom", (e)=>{
                 G.attr("transform",d3.event.transform)
+                // G.selectAll("circle").attr("r","5")
+// let k = d3.event.transform.k
+//                 G.selectAll("circle").attr("r",(lg)=>{
+// return 5
+                // }
+                  // )//attr
+                // .attr("r",5*.9)
+                // .attr("r",5*.9)
                })
                )
 
@@ -225,7 +227,7 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 
   let fakenodes = [
-  {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
+  {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","active":true,"label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","active":false,"label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","active":false,"label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
 
   let fakeedges = [
 {source:'people/_:daltonwilcox',target:'people/_:vampire'},
@@ -260,18 +262,19 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
   .selectAll("g")
     .data(nodes.filter(function(d) { return d.id; }))
     .enter().append("g")
-    console.log('node:',node)
+    // console.log('node:',node)
 
     // var circles = node.append("circle").attr("r","5")
     
-    var circles = node.append("circle").attr("r",()=>{return "5"})
+    // var circles = node.append("circle").attr("r",()=>{return "5"})
+    var circles = node.append("circle").attr("r",(d)=>{return (d.active===true)?9:5;})
       .attr("class", "node")
       // .attr("r", 5)
       // .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", (o)=>{console.log(o);this.active.key=o._id}));
+          .on("end", (o)=>{console.log(o);this.active.key=o._id;}));
       console.log('circles:',circles)
 
   node.append("title")
