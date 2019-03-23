@@ -23,10 +23,15 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 
 # GRAPH
 
+### forceDirect
+
+zoom+pan
+daly test style
+labels should show/hide on zoom
+drag/click pulls item and graph for that node
+filter by name
+
 ### per person:
-
-'things' error probably due to missing graph chunks
-
 
     let entities = (let ppls = (for p in people return {_id:p._id,label:p.name,article:p.article})
     let tngs = (for t in things return {_id:t._id,label:t.name,article:t.article}) RETURN flatten(append(ppls,tngs)))//let entities

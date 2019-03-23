@@ -1,5 +1,15 @@
 [
   {
+    "_key": "_:daltonwilcoxmurdersacyclops",
+    "name": "Dalton Wilcox Kills a Cyclops",
+    "article": "Prior to appearing on CBB#589, Dalton Wilcox suffered a flat tire on his truck. A tow truck operator responded and repaired the tire, requesting from Mr. Wilcox \"fifty goddamned dollars\" for the service. Mr. Wilcox, seeing now that the eyepatch very certainly indicated the operator was a cyclops, fired a silver bullet into the man's heart.",
+    "timestamp": {"start":"2019-03-03T08:00:00Z","end":null},
+    "nb_timestamp": {
+      "class": "estimate-firm",
+      "nb": "estimate is rel. to CBB#589"
+    }
+  },
+  {
     "_key": "_:mrsbronsongoesmissing",
     "name": "Mrs. Bronson Goes on Medical Leave",
     "article": "Following a weekend with Don DiMello that ended in 'frictions,' Mrs. Bronson was unable to teach her grade school class for 6-8 weeks, during which time Mr. DiMello himself substituted.",
@@ -1154,7 +1164,7 @@
     }
   },
   {
-    "_key": "_:dondimmelopresentsdisneyshanselandgretel",
+    "_key": "_:dondimellopresentsdisneyshanselandgretel",
     "name": "Don DiMello Presents 'Disneys Hansel and Gretel'",
     "article": "The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and she doesn't really know what's happening. The show failed to reach denouement.",
     "timestamp": {"start":"2013-02-11T19:00:00Z","end":null},
@@ -1164,7 +1174,7 @@
     }
   },
   {
-    "_key": "_:dondimmelopresentsdisneyspuffthemagicdragon",
+    "_key": "_:dondimellopresentsdisneyspuffthemagicdragon",
     "name": "Don DiMello Presents 'Disneys Puff the Magic Dragon'",
     "article": "The show features a dragon comprised of five girls, the front-most of which has a homemade flamethrower rigged to her face.",
     "timestamp": {"start":"2014-08-09T19:00:00Z","end":null},
@@ -1194,7 +1204,7 @@
     }
   },
   {
-    "_key": "_:dondimmelopresentscdisneysomeondownandgetfuckedattheplanetarium",
+    "_key": "_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium",
     "name": "Don DiMello Presents 'Disneys Come on Down and Get Fucked at the Planetarium'",
     "article": "Held at the Griffith Observatory planetarium, the show consists of A) Don DiMello talking bullshit about the stars as a cover, and B) prostitutes fucking men in their chairs.",
     "timestamp": {"start":"2013-02-15T19:00:00Z","end":null},

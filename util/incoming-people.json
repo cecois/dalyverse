@@ -1,46 +1,46 @@
 [
   {
-    "_key": "fredvasili",
+    "_key": "_:fredvasili",
     "name": "Fred Vasili",
     "article": "Fred Vasili is an American sailor from The Bronx who infiltrated the Red Beluga Harpoon Class Submarine Crew but couldn't maintain the accent and was outed."
   },
   {
-    "_key": "drbuddymann",
+    "_key": "_:drbuddymann",
     "name": "Dr. Buddy Mann",
     "article": "Dr. Buddy Mann is an anasthesiologist and anasthesia fiend at St. Judas Memorial Hospital who likes the part where he tells the family that the procedure didn't work out."
   },
   {
-    "_key": "mrsbronson",
+    "_key": "_:mrsbronson",
     "name": "Mrs. Bronson",
     "article": "Mrs. Bronson is a school teacher who, following a weekend spent with theatrical director Don DiMello, was on medical leave for 6-8 weeks."
   },
   {
-    "_key": "astormhendry",
+    "_key": "_:astormhendry",
     "name": "Astor M. Hendry",
     "article": "Astor M. Hendry is a passenger who openly admits to 'transporting monsters' on the Amtrak Heartland Flyer regional train."
   },
   {
-    "_key": "scottlavendar",
+    "_key": "_:scottlavendar",
     "name": "Scott Lavendar",
     "article": "Scott Lavendar is a frequentor of the Amtrak Heartland Flyer regional passenger train, to the point that he believes he, in fact, my literally have never been off of it. His education is 'the kind of education you can get on a train,' which has possessed him of the following skills: finding mice; imagining there's been a murder. He doesn't recommend reading because 'books get in your head and make you do bad things.'"
   },
   {
-    "_key": "grandmotherpearlalavergne",
+    "_key": "_:grandmotherpearlalavergne",
     "name": "Grandmother Pearla",
     "article": "Grandmother Pearla the matriarch of the Lavergne family."
   },
   {
-    "_key": "thomaslavergne",
+    "_key": "_:thomaslavergne",
     "name": "Thomas Lavergne",
     "article": "Thomas Lavergne is a member of the Lavergne family."
   },
   {
-    "_key": "michaellavergne",
+    "_key": "_:michaellavergne",
     "name": "Michael Lavergne",
     "article": "Michael Lavergne is a member of the Lavergne family."
   },
   {
-    "_key": "arthurlavergne",
+    "_key": "_:arthurlavergne",
     "name": "Arthur Lavergne",
     "article": "Arthur Lavergne is a member of the Lavergne family."
   },
@@ -357,6 +357,11 @@
     "article": "Oscar Meyer is a freshwater water skiier and possibly the son of Hot Dog."
   },
   {
+    "_key": "_:unnamedmotherofdaltonwilcox",
+    "name": "Dalton Wilcox' Unnamed Mother",
+    "article": "Dalton Wilcox' unnamed mother gave birth to the poet, supposedly, by cupping her hands under a ray of light."
+  },
+  {
     "_key": "_:jimmybongos",
     "name": "Jimmy Bongos",
     "article": "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
@@ -434,26 +439,6 @@
     "article": "Geddy Lee is a member of prog-rock group Rush."
   },
   {
-    "_key": "_:emersonlakepalmer",
-    "name": "Emerson, Lake & Palmer",
-    "article": "Emerson, Lake & Palmer is a legendary English prog-rock band."
-  },
-  {
-    "_key": "_:yesband",
-    "name": "Yes",
-    "article": "Yes is a legendary English prog-rock band."
-  },
-  {
-    "_key": "_:rushband",
-    "name": "Rush",
-    "article": "Rush is a legendary Canadian prog-rock band."
-  },
-  {
-    "_key": "_:genesisband",
-    "name": "Genesis",
-    "article": "Genesis is a legendary English prog-rock band."
-  },
-  {
     "_key": "_:bonnieramirez",
     "name": "Bonnie Ramirez",
     "article": "Bonnie Ramirez was a student in Joe Bongo's Health class at Marina del Rey High School. Led astray by the misguided advice from Mr. Bongo that her tampon would 'dissolve' on its own, Ms. Ramirez lost a ping pong ball and missed considerable time in the Fall of 2014 due to toxic shock."
@@ -529,6 +514,11 @@
         "label": "GoSuperEgo"
       }
     ]
+  },
+  {
+    "_key": "_:daltonwilcoxvaultguy",
+    "name": "Dalton Wilcox' Vault Guy",
+    "article": "Dalton Wilcox' Vault Guy is custom vault maker with dollar signs in his eyes."
   },
   {
     "_key": "_:gil",
@@ -641,7 +631,7 @@
   {
     "_key": "_:daltonwilcox",
     "name": "Dalton Wilcox",
-    "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere. His sequel to Buy Your Wife is called 'You Still Have to Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Even More Poems and Additional Observations, Humorous and Otherwise, from a Life Still Being Lived on the Range) by Dalton Wilcox, Who Also Wrote the Last Book.' He has also authored such poems as 'The Lonesome Cowboy,' 'The Lonesome Cowboy 2018,' 'Theres Other Things a Cowboy Can Also Fuck,' 'I Have Been to Goddamned Europe,' and 'Ben Cartwright Buried Three Wives'. He is plagued by -- and a self-declared vanquisher of -- mummies, Frankensteins, creatures from The Black Lagoon, and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He keeps a stake of wood down his pantleg at all times and he lives in Manhattan in his college-aged girlfriend's NYU dorm. He has, he says, 'changed several people's names.' He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is a loyal customer of Alamo Rent A Car; has been to Scotland; has had a tail surgically attached at one point that was later removed. Finally, while he doesn't like to admit it, preferring instead to be perceived as a respectable author, he does keep a cadre of girls out on a boat in international waters.",
+    "article": "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West (a fact encoded in \"The World Book\") that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter. He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere. His sequel to Buy Your Wife is called 'You Still Have to Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Even More Poems and Additional Observations, Humorous and Otherwise, from a Life Still Being Lived on the Range) by Dalton Wilcox, Who Also Wrote the Last Book.' He has also authored such poems as 'The Lonesome Cowboy,' 'The Lonesome Cowboy 2018,' 'Theres Other Things a Cowboy Can Also Fuck,' 'I Have Been to Goddamned Europe,' and 'Ben Cartwright Buried Three Wives'. He is plagued by -- and a self-declared vanquisher of -- mummies, Frankensteins, creatures from The Black Lagoon, and vampires but is occasionally suspected of vampirism himself. He knows how to hollow-out a horse and put a girl in there. He keeps a stake of wood down his pantleg at all times and he lives in Manhattan in his college-aged girlfriend's NYU dorm. He has, he says, 'changed several people's names.' He is also, evidently, a pimp in both New York City and in International Waters. In 2014 it was revealed he had been training with Bill Carter for years in anticipation of an epic battle between good and evil and that he has a teak penis that he whittled himself after an incident involving a Land Virginie and a rattlesnake. He is on the record stating that, if asked by a prostitute with whom he intends to be amorous to take a shower or remove his clothes, he will mostly comply. If asked to 'wear a frilly hat' by a prostitue, however, he will seek the services of a different woman. He is a loyal customer of Alamo Rent A Car; has been to Scotland; has had a tail surgically attached at one point that was later removed; and has destroyed his own collection of butterflies, wing by wing, when they themselves turned into monsters. In early 2019, Mr. Wilcox changed his name to Walton Dilcox and began driving Uber shifts in his truck, murdering 100% of his rides. Finally, while he doesn't like to admit it, preferring instead to be perceived as a respectable author, he does keep a cadre of girls out on a boat in international waters.",
     "has_murdered": "true"
   },
   {
@@ -816,9 +806,9 @@
     "article": "Kimmy is Asian and demure."
   },
   {
-    "_key": "_:tracireardon",
-    "name": "Traci Reardon",
-    "article": "Traci Reardon is teenager."
+    "_key": "_:tracirearden",
+    "name": "Traci Rearden",
+    "article": "Traci Rearden is teenager."
   },
   {
     "_key": "_:drsethwompler",
