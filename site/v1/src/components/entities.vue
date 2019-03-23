@@ -188,106 +188,137 @@ return clas
     }, // getclass
     d3ForceDirect: function () {
 
-var parentDiv = document.getElementById("network");
-let width = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
-      height = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
 
-var svg = d3.select("svg");
-// .attr("width",width).attr("height",height)
-var G=svg.append('g')
-console.log("G",G);
-// .attr("width",width).attr("height",height)
-
-var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().distance(10).strength(0.5))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
-
-var transform = d3.zoomIdentity;
-
-// var zoom = d3.behavior.zoom()
-// .scaleExtent([1,50])
-    svg.call(d3.zoom()
-               // .scaleExtent([1 / 2, Infinity])
-               .scaleExtent([0.1,7])
-               .on("zoom", (e)=>{
-                G.attr("transform",d3.event.transform)
-                // G.selectAll("circle").attr("r","5")
-// let k = d3.event.transform.k
-//                 G.selectAll("circle").attr("r",(lg)=>{
-// return 5
-                // }
-                  // )//attr
-                // .attr("r",5*.9)
-                // .attr("r",5*.9)
-               })
-               )
-
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-
-  let fakenodes = [
+let graph = {nodes: [
   {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","active":true,"label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","active":false,"label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","active":false,"label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
-
-  let fakeedges = [
+,links: [
 {source:'people/_:daltonwilcox',target:'people/_:vampire'},
 {source:'people/_:daltonwilcox',target:'people/_:mummy'}
-  ]
+  ]}
 
-  var nodes = fakenodes,
-      nodeById = d3.map(nodes, function(d) { return d.id; }),
-      links = fakeedges,
-      bilinks = [];
+var parentDiv = document.getElementById("network");
+let parentWidth = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
+      parentHeight = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
 
-  links.forEach(function(link) {
+var svg = d3.select('svg')
+    .attr('width', parentWidth)
+    .attr('height', parentHeight)
+
+// remove any previous graphs
+    svg.selectAll('.g-main').remove();
+
+    var gMain = svg.append('g')
+    .classed('g-main', true);
+
+    var rect = gMain.append('rect')
+    .attr('width', parentWidth)
+    .attr('height', parentHeight)
+    .style('fill', 'white')
+    .on('click', (d) => {
+        // node.each(function(d) {
+        //     d.selected = false;
+        //     d.previouslySelected = false;
+        // });
+        // node.classed("selected", false);
+        nodeSelect(d);
+    });
+
+    var gDraw = gMain.append('g');
+
+    var zoom = d3.zoom()
+    .on('zoom', zoomed)
+
+    gMain.call(zoom);
+
+
+    function zoomed() {
+        gDraw.attr('transform', d3.event.transform);
+    }
+
+    // var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+    if (! ("links" in graph)) {
+        console.log("Graph is missing links");
+        return;
+    }
+
+    var nodes = [];
+    var i;
+    // for (i = 0; i < graph.nodes.length; i++) {
+    //     nodes[graph.nodes[i].id] = graph.nodes[i];
+    //     graph.nodes[i].weight = 1.01;
+    // }
+    var nodeById = d3.map(graph.nodes, function(d) { return d.id; })
+    var bilinks=[];
+
+    graph.links.forEach(function(link) {
+    
     var s = link.source = nodeById.get(link.source),
         t = link.target = nodeById.get(link.target),
         i = {}; // intermediate node
-    nodes.push(i);
-    links.push({source: s, target: i}, {source: i, target: t});
+    graph.nodes.push(i);
+    graph.links.push({source: s, target: i}, {source: i, target: t});
     bilinks.push([s, i, t]);
   });
 
-  // var link = svg.selectAll(".link")
-  var link = G.append("g")
-      .attr("class", "links")
-      .selectAll("line")
-    .data(bilinks)
-    .enter().append("path")
-      .attr("class", "edge");
+    // the brush needs to go before the nodes so that it doesn't
+    // get called when the mouse is over a node
+    var gBrushHolder = gDraw.append('g');
+    var gBrush = null;
 
-  // var node = svg.selectAll(".node")
-  
-  var node = G.append("g")
-  .selectAll("g")
-    .data(nodes.filter(function(d) { return d.id; }))
-    .enter().append("g")
-    // console.log('node:',node)
+    var link = gDraw.append("g")
+        .attr("class", "edge")
+        .selectAll("line")
+        .data(bilinks)
+        .enter().append("path")
+        .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
 
-    // var circles = node.append("circle").attr("r","5")
-    
-    // var circles = node.append("circle").attr("r",()=>{return "5"})
-    var circles = node.append("circle").attr("r",(d)=>{return (d.active===true)?9:5;})
-      .attr("class", "node")
-      // .attr("r", 5)
-      // .attr("fill", function(d) { return color(d.group); })
-      .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", (o)=>{console.log(o);this.active.key=o._id;}));
-      console.log('circles:',circles)
+    var node = gDraw.append("g")
+        .attr("class", "node")
+        .selectAll("circle")
+        .data(graph.nodes)
+        .enter().append("circle")
+        .attr("r", 5)
+        .attr("fill", function(d) { 
+return (d._id)?'rgba(44,144,44,.5)':'rgba(255,255,255,0)'; 
+    })
+        .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
 
-  node.append("title")
-      .text(function(d) { return d.id; });
+      
+    // add titles for mouseover blurbs
+    node.append("title")
+        .text(function(d) { 
+            if ('name' in d)
+                return d.name;
+            else
+                return d.id; 
+        });
 
-  simulation
-      .nodes(nodes)
-      .on("tick", ticked);
+    var simulation = d3.forceSimulation()
+        .force("link", d3.forceLink()
+                .id(function(d) { return d.id; })
+                .distance(function(d) { 
+                    return 30;
 
-  simulation.force("link")
-      .links(links);
+                    return dist; 
+                })
+              )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(parentWidth / 2, parentHeight / 2))
+        .force("x", d3.forceX(parentWidth/2))
+        .force("y", d3.forceY(parentHeight/2));
 
-  function ticked() {
+    simulation
+        .nodes(graph.nodes)
+        .on("tick", ticked);
+
+    simulation.force("link")
+        .links(graph.links);
+
+        function ticked() {
     link.attr("d", positionLink);
     node.attr("transform", positionNode);
   }
@@ -302,25 +333,176 @@ function positionNode(d) {
   return "translate(" + d.x + "," + d.y + ")";
 }
 
-function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-  d.fx = d.x, d.fy = d.y;
+    function tickedog() {
+        // update node and line positions at every step of 
+        // the force simulation
+        link.attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        node.attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+    }
+
+    var brushMode = false;
+    var brushing = false;
+
+    var brush = d3.brush()
+        .on("start", brushstarted)
+        .on("brush", brushed)
+        .on("end", brushended);
+
+    function brushstarted() {
+        // keep track of whether we're actively brushing so that we
+        // don't remove the brush on keyup in the middle of a selection
+        brushing = true;
+
+        node.each(function(d) { 
+            d.previouslySelected = shiftKey && d.selected; 
+        });
+    }
+
+function nodeSelect(d,w){
+  if(!w){
+          node.each(function(d) {
+              d.selected = false;
+              d.previouslySelected = false;
+          });
+          node.classed("selected", false);
+        }
 }
 
-function dragged(d) {
-  d.fx = d3.event.x, d.fy = d3.event.y;
-}
+    rect.on('click', (d) => {
+      nodeSelect(d,null);
+        // node.each(function(d) {
+        //     d.selected = false;
+        //     d.previouslySelected = false;
+        // });
+        // node.classed("selected", false);
+    });
 
-function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
-  d.fx = null, d.fy = null;
-}
+    function brushed() {
+        if (!d3.event.sourceEvent) return;
+        if (!d3.event.selection) return;
+
+        var extent = d3.event.selection;
+
+        node.classed("selected", function(d) {
+            return d.selected = d.previouslySelected ^
+            (extent[0][0] <= d.x && d.x < extent[1][0]
+             && extent[0][1] <= d.y && d.y < extent[1][1]);
+        });
+    }
+
+    function brushended() {
+        if (!d3.event.sourceEvent) return;
+        if (!d3.event.selection) return;
+        if (!gBrush) return;
+
+        gBrush.call(brush.move, null);
+
+        if (!brushMode) {
+            // the shift key has been release before we ended our brushing
+            gBrush.remove();
+            gBrush = null;
+        }
+
+        brushing = false;
+    }
+
+    d3.select('body').on('keydown', keydown);
+    d3.select('body').on('keyup', keyup);
+
+    var shiftKey;
+
+    function keydown() {
+    //     shiftKey = d3.event.shiftKey;
+
+    //     if (shiftKey) {
+    //         // if we already have a brush, don't do anything
+    //         if (gBrush)
+    //             return;
+
+    //         brushMode = true;
+
+    //         if (!gBrush) {
+    //             gBrush = gBrushHolder.append('g');
+    //             gBrush.call(brush);
+    //         }
+    //     }
+    }
+
+    function keyup() {
+        shiftKey = false;
+        brushMode = false;
+
+        if (!gBrush)
+            return;
+
+        if (!brushing) {
+            // only remove the brush if we're not actively brushing
+            // otherwise it'll be removed when the brushing ends
+            gBrush.remove();
+            gBrush = null;
+        }
+    }
+
+    function dragstarted(d) {
+      if (!d3.event.active) simulation.alphaTarget(0.9).restart();
+
+// those hidden nodes we don't wanna show
+if(d._id){
+        if (!d.selected && !shiftKey) {
+            // if this node isn't selected, then we have to unselect every other node
+            node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
+        }
+
+        d3.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
+
+        node.filter(function(d) { return d.selected; })
+        .each(function(d) { //d.fixed |= 2; 
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+      }
+
+    }
+
+    function dragged(d) {
+      //d.fx = d3.event.x;
+      //d.fy = d3.event.y;
+            node.filter(function(d) { return d.selected; })
+            .each(function(d) { 
+                d.fx += d3.event.dx;
+                d.fy += d3.event.dy;
+            })
+    }
+
+    function dragended(d) {
+      if (!d3.event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+        node.filter(function(d) { return d.selected; })
+        .each(function(d) { //d.fixed &= ~6; 
+            d.fx = null;
+            d.fy = null;
+        })
+    }
+
+    var texts = ['Use the scroll wheel to zoom',
+                 'Hold the shift key to select nodes']
+
+    svg.selectAll('text')
+        .data(texts)
+        .enter()
+        .append('text')
+        .attr('x', 900)
+        .attr('y', function(d,i) { return 470 + i * 18; })
+        .text(function(d) { return d; });
 
 
-    }, // setd3force
-    setD3HelloWorld: function () {}, // end of setD3HelloWorld()
-    setChartLine: function () {}, //setchart
-    setNetworkVisJS: function () {}, //setNetwork
+    },
     fetchTotalEntities: function () {
 
           console.info(
@@ -530,6 +712,7 @@ body{height:100%;overflow:hidden;}
 .dv-column-right{background-color:black;color:#00eb11;}
 
 
+/*
 .node {
   stroke: #fff;
   stroke-width: 1.5px;
@@ -539,8 +722,6 @@ body{height:100%;overflow:hidden;}
   fill: none;
   stroke: #bbb;
 }
-/*
-*/
 .node-edge-default{
   stroke: rgba(4,4,4,.4);
   fill:none;
@@ -551,18 +732,6 @@ body{height:100%;overflow:hidden;}
   stroke: #3f0081;
   stroke-width: 1.5px;
 }
-
-text{
-    fill: #fff;
-    stroke: transparent;
-    font-size:.7em;
-}
-
-.node-pi{
-  stroke: #e300db;
-  stroke-width: 1.5px;
-}
-
 .edge-wa
   {
   fill: none;
@@ -574,6 +743,15 @@ text{
   fill: none;
   stroke: #aaa;
 }
+*/
+
+text{
+    fill: #fff;
+    stroke: transparent;
+    font-size:.7em;
+}
+
+
 
 /* ---------------------------------- BULMA -- */
 .hero.is-medium > .hero-body{

@@ -81,6 +81,18 @@ width:100%;
 }
 }
 
+.edge {
+  fill: none;
+  stroke: #bbb;
+}
+// circle{
+//   color:rgba(244,222,244,.5);
+// }
+circle{
+&.selected{
+  stroke:magenta;
+  stroke-width:3;
+}}
 
 /* +++++++++++++++++++++++++++++++++++++++ timeline ++ */
 #timeline{
