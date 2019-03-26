@@ -34,7 +34,8 @@
 </nav>
 
 <div class="columns dv-vertical-columns"><div class="column is-half dv-column-left">
-  <div id="network"><svg></svg></div note="/#network">
+  <!-- <div id="network"><svg></svg></div note="/#network"> -->
+    <Graph :akey="active.key" />
 </div note="/.dv-column-left">
 <div class="column is-half dv-column-right">
   active.key: {{active.key}}<br/>
@@ -46,32 +47,24 @@
 </template>
 
 <script>
-  import * as d3 from 'd3';
+  // import * as d3 from 'd3';
+  import Graph from "./graph.vue";
 
 export default {
   name: "Entities",
+  components:{Graph},
   data() {
     return {
-      chartvalues:[99, 71, 78, 25, 36, 92],
+      active: {
+        key: null,
+        item: {article:null},
+        graph: null
+      },
       page: {
         title: "Andy Dalyverse Entities Graph"
       },
       state: "filled",
       fittable: true,
-      nodes: new vis.DataSet([
-        {id: 1, label: 'N1'},
-        {id: 2, label: 'N2'},
-        {id: 3, label: 'N3'},
-        {id: 4, label: 'N4'},
-        {id: 5, label: 'N5'}
-    ]),
-      edges: new vis.DataSet([
-        {from: 1, to: 3},
-        {from: 1, to: 2},
-        {from: 2, to: 4},
-        {from: 2, to: 5}
-    ]),
-      seens: [],
       styles: {
         previous: null,
         default: {
@@ -107,94 +100,22 @@ export default {
           fillOpacity: 0.8
         }
       },
-      active: {
-        key: null,
-        item: {article:null},
-        graph: null
-      },
-      entities_total: 0,
-      console: {
-        msg: "",
-        clazz: null,
-        throb: false
-      },
-      miserables: {}
     }; // return
   }, // data
   beforeCreate() {}, // beforeCreate
   created() {
-    console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "begin CREATED, processing incoming vars"
-        : null
-    );
-
-      this.$once('hook:once', function () {
-    this.fittable = false;
-    this.fetchTotalEntities();
-  })
-
-    this.console = {
-      msg: new Date(),
-      throb: true,
-      clazz: "mdi-clock"
-    };
-
     if (this.$route.params.activeid) {
       this.active.key = this.$route.params.activeid;
     }
 
     window.addEventListener("keydown", this.onKey);
-    console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "end CREATED, initial state set"
-        : null
-    );
   }, // created
-  mounted: function() {
-    console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "MOUNTED! Bootstrapping events and initting vizes..."
-        : null
-    );
-    // this.setSlider();
-    this.fetchEntities();
-    // this.d3ForceDirect();
-  }, //mounted
+  mounted: function() {}, //mounted
   methods: {
-    getClass: function (which,one) {
-
-//which == node|edge
-//one == 'worksAt'|'hasFriend'|etc
-let clas = null;
-
-      switch (true) {
-        case (one == 'daly'):
-          clas = 'node node-pi'
-          break;
-        case (which == 'node' && one !== 'daly'):
-          clas = 'node node-pu'
-          break;
-      case (which == 'edge' && one == 'worksAt'):
-          clas = 'edge edge-wa'
-          break;
-        default:
-          clas = 'node-edge-default'
-          break;
-      }
-
-return clas
-
-    }, // getclass
     d3ForceDirect: function () {
 
 
-let graph = {nodes: [
-  {id:"people/_:daltonwilcox",_id:"people/_:daltonwilcox","active":true,"label":"Dalton Wilcox",article:"Dalton Wilcox is the Poet Laureate of the West"},{id:"people/_:vampire",_id:"people/_:vampire","active":false,"label":"Random Vampire",article:"Random Vampire is a random vampire vanquished by Dalton Wilcox"},{id:"people/_:mummy",_id:"people/_:mummy","active":false,"label":"Random Mummy",article:"Random Mummy is a random mummy vanquished by Dalton Wilcox"}]
-,links: [
-{source:'people/_:daltonwilcox',target:'people/_:vampire'},
-{source:'people/_:daltonwilcox',target:'people/_:mummy'}
-  ]}
+let graph = this.fakeg
 
 var parentDiv = document.getElementById("network");
 let parentWidth = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
@@ -449,6 +370,7 @@ function nodeSelect(d,w){
     }
 
     function dragstarted(d) {
+      this.active.key=d._id
       if (!d3.event.active) simulation.alphaTarget(0.9).restart();
 
 // those hidden nodes we don't wanna show
@@ -602,47 +524,6 @@ if(process.env.VERBOSITY === 'DEBUG'){
       console.log("DUMP:thing",thing)}
 
     }, //dump
-    fetchEntities: function() {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
-      );
-
-      let q =
-        'let plcs = (for l in places return {_id:l._id,id:l._id,label:l.name,article:l.article})\
-let ppls = (for p in people return {_id:p._id,id:p._id,label:p.name,article:p.article})\
-let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article})\
-let evnts = (for ev in events return {_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
-let pplsplcs = (flatten(append(ppls,plcs)))\
-let tngsevts = (flatten(append(tngs,evnts)))\
-let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
-let edgees = (\
-for ent in entities[0] \
-FOR v, e, p IN 1..1 ANY ent edges \
-RETURN {typ:e.type,source:e._from,target:e._to,id:e._id})\
-return {entitiez:unique(entities),edgez:unique(edgees)}'
-
-      axios
-        .post("http://" + process.env.ARANGOIP + "/cursor", {
-          query: q
-        })
-        .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG"
-              ? "setting entities w/ axios response..."
-              : null
-          );
-
-          // let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n.id,label:n.label,article:n.article}})
-          let deeznodes = response.data.result[0].entitiez[0]
-
-          this.edges = response.data.result[0].edgez
-          this.nodes = deeznodes
-
-        }) //axios.then
-        .catch(e => {
-          console.error(e);
-        }); //axios.catch
-    }, //fetchEntities
     setGraph: function() {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
@@ -696,7 +577,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
         );
         // this.setNetwork();
         // this.setChart()
-        this.d3ForceDirect()
+        // this.d3ForceDirect()
       }
     } //nodes
   } //watch
