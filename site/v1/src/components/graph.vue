@@ -22,25 +22,28 @@ export default {
             }},
   data () {
     return {
-      graph: null,
-      svg:null,
-      shiftKey:null,
-      entities_total: 0,
-      console: {
-        msg: "",
-        clazz: "mdi-clock",
-        throb: false
-      } //console
-      ,
-      graf: {
-        nodes: [
-          { id: "people/_:daltonwilcox", _id: "people/_:daltonwilcox", "active": true, "label": "Dalton Wilcox", article: "Dalton Wilcox is the Poet Laureate of the West" }, { id: "people/_:vampire", _id: "people/_:vampire", "active": false, "label": "Random Vampire", article: "Random Vampire is a random vampire vanquished by Dalton Wilcox" }, { id: "people/_:mummy", _id: "people/_:mummy", "active": false, "label": "Random Mummy", article: "Random Mummy is a random mummy vanquished by Dalton Wilcox" }
-        ],
-        edges: [
-          { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
-          { source: 'people/_:daltonwilcox', target: 'people/_:mummy' }
-        ]
-      }
+      shared: store.state,
+      private:{
+            graph: null,
+            svg:null,
+            shiftKey:null,
+            entities_total: 0,
+            console: {
+              msg: "",
+              clazz: "mdi-clock",
+              throb: false
+            } //console
+            ,
+            graf: {
+              nodes: [
+                { id: "people/_:daltonwilcox", _id: "people/_:daltonwilcox", "active": true, "label": "Dalton Wilcox", article: "Dalton Wilcox is the Poet Laureate of the West" }, { id: "people/_:vampire", _id: "people/_:vampire", "active": false, "label": "Random Vampire", article: "Random Vampire is a random vampire vanquished by Dalton Wilcox" }, { id: "people/_:mummy", _id: "people/_:mummy", "active": false, "label": "Random Mummy", article: "Random Mummy is a random mummy vanquished by Dalton Wilcox" }
+              ],
+              edges: [
+                { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
+                { source: 'people/_:daltonwilcox', target: 'people/_:mummy' }
+              ]
+            }
+          }//private
     } //return
   } //data
   ,
