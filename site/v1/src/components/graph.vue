@@ -16,7 +16,10 @@
 import * as d3 from 'd3';
 export default {
   name: "Graph",
-  props: ["akey"],
+  props: {akey: {
+                type: Object,
+                required: false
+            }},
   data () {
     return {
       graph: null,
@@ -52,15 +55,16 @@ export default {
           node.classed("selected", false);
         }
 },
-D3dragended(d,node) {
-      if (!d3.event.active) this.D3simulation.alphaTarget(0);
-      d.fx = null;
-      d.fy = null;
-        node.filter(function(d) { return d.selected; })
-        .each(function(d) { //d.fixed &= ~6; 
-            d.fx = null;
-            d.fy = null;
-        })
+    // updateActive: function (did) {
+    //   console.log("emitting "+did);
+    //   this.$emit('akey', did);
+    // },
+dragends(d) {
+      
+      console.log("this.graf.nodes",this.graf.nodes);
+      let actv={graph:null,key:d._id,item:this.$_.findWhere(this.graf.nodes,{id:d._id})}
+      this.$emit('active', actv);
+
     },
     D3init: function () {
 
@@ -132,9 +136,11 @@ D3dragended(d,node) {
         .attr("r", 5)
         .attr("fill", (d)=>{return this.D3getFill(d)})
         .call(d3.drag()
-        .on("start", (d,node)=>{return this.D3dragstarted(d,node)})
-        .on("drag", dragged)
-        .on("end", (d,node)=>{return this.D3dragended(d,node)}));
+        .on("start", dragstarted)
+        .on("end.native", dragged)
+        .on("end.vue", this.dragends)
+        .on("drag", dragged));
+        // .on("start", (d,node)=>{return this.D3dragstarted(d,node)})
 
 // add titles for mouseover blurbs
     node.append("title")
@@ -145,7 +151,7 @@ D3dragended(d,node) {
                 return d.id; 
         });
 
-    this.D3simulation = d3.forceSimulation()
+    var simulation = d3.forceSimulation()
         .force("link", d3.forceLink()
                 .id(function(d) { return d.id; })
                 .distance(function(d) { 
@@ -159,17 +165,57 @@ D3dragended(d,node) {
         .force("x", d3.forceX(parentWidth/2))
         .force("y", d3.forceY(parentHeight/2));
 
-    this.D3simulation
+    simulation
         .nodes(this.graf.nodes)
         .on("tick", ticked);
 
-    this.D3simulation.force("link")
+    simulation.force("link")
         .links(this.graf.edges);
 
         function ticked() {
     link.attr("d", positionLink);
     node.attr("transform", positionNode);
   }
+
+ function dragstarted(d) {
+      if (!d3.event.active) simulation.alphaTarget(0.9).restart();
+
+        if (!d.selected) {
+            // if this node isn't selected, then we have to unselect every other node
+            node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
+        }
+
+        d3.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
+
+        node.filter(function(d) { return d.selected; })
+        .each(function(d) { //d.fixed |= 2; 
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+
+    }
+
+    function dragged(d) {
+      //d.fx = d3.event.x;
+      //d.fy = d3.event.y;
+            node.filter(function(d) { return d.selected; })
+            .each(function(d) { 
+                d.fx += d3.event.dx;
+                d.fy += d3.event.dy;
+            })
+    }
+
+    function dragended(d) {
+      if (!d3.event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+        node.filter(function(d) { return d.selected; })
+        .each(function(d) { //d.fixed &= ~6; 
+            d.fx = null;
+            d.fy = null;
+        })
+    }
+
 
 function positionLink(d) {
   return "M" + d[0].x + "," + d[0].y
@@ -259,12 +305,24 @@ var brushMode = false;
     } // keyup
 
         function dragged(d) {
-      node.filter(function(d) { return d.selected; })
-            .each(function(d) { 
-                d.fx += d3.event.dx;
-                d.fy += d3.event.dy;
-            })
+      // node.filter(function(d) { return d.selected; })
+      //       .each(function(d) { 
+      //           d.fx += d3.event.dx;
+      //           d.fy += d3.event.dy;
+      //       })
     }
+
+    // function dragged(d) {
+    //   //d.fx = d3.event.x;
+    //   //d.fy = d3.event.y;
+    //         node.filter(function(d) { return d.selected; })
+    //         .each(function(d) { 
+    //             d.fx += d3.event.dx;
+    //             d.fy += d3.event.dy;
+    //         })
+    // }
+
+
 
     // function 
 
@@ -280,30 +338,25 @@ var brushMode = false;
         .text(function(d) { return d; });
 
     },
-    D3dragstarted: function(d,node){
-console.log("do we have dragstart d?",d);
-console.log("do we have dragstart node?",node);
-      this.console.msg=d._id
-      if (!d3.event.active) this.D3simulation.alphaTarget(0.9).restart();
+//     D3dragstarted: function(d){
+//       if (!d3.event.active) simulation.alphaTarget(0.9).restart();
 
-// those hidden nodes we don't wanna show
-if(d._id){
-        if (!d.selected && !this.shiftKey) {
-            // if this node isn't selected, then we have to unselect every other node
-            d3.select(d).classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
-        }
+// if(d._id){
+//         if (!d.selected) {
+//             // if this node isn't selected, then we have to unselect every other node
+//             node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
+//         }
 
-        d3.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
+//         d3.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
 
-        node.filter(function(d) { return d.selected; })
-        .each(function(d) { //d.fixed |= 2; 
-          d.fx = d.x;
-          d.fy = d.y;
-        })
-      }
+//         node.filter(function(d) { return d.selected; })
+//         .each(function(d) { //d.fixed |= 2; 
+//           d.fx = d.x;
+//           d.fy = d.y;
+//         })
+//       } //if d._id
 
-
-    }, //d3dragstarted
+//     }, //d3dragstarted
     D3getFill: function(d){
 // all fill logic here
     return (d._id)?'rgba(44,44,244,.5)':'rgba(255,255,255,0)';

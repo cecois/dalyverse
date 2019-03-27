@@ -35,7 +35,8 @@
 
 <div class="columns dv-vertical-columns"><div class="column is-half dv-column-left">
   <!-- <div id="network"><svg></svg></div note="/#network"> -->
-    <Graph :akey="active.key" />
+    <Graph :value="active"
+            @active="(newActive) => {active = newActive}" />
 </div note="/.dv-column-left">
 <div class="column is-half dv-column-right">
   active.key: {{active.key}}<br/>
@@ -276,7 +277,7 @@ function positionNode(d) {
 
     function brushstarted() {
         // keep track of whether we're actively brushing so that we
-        // don't remove the brush on keyup in the middle of a selection
+        // don't remove the brush on ke]\yup in the middle of a selection
         brushing = true;
 
         node.each(function(d) { 
@@ -488,9 +489,7 @@ return count(entities[0])'
     }, //setPageTitle
     setItem: function(q){
 
-this.active.item=this.$_.find(this.nodes,(no)=>{
-  return no._id==q
-})
+this.active.item=this.$_.findWhere(this.graph.nodes,{_id:q})
 
     },
     nullItem: function() {
@@ -567,7 +566,7 @@ if(process.env.VERBOSITY === 'DEBUG'){
   }, //methods
   computed: {}, //computed
   watch: {
-    'active.key': {handler:function(vnew){this.setItem(vnew)}} //active
+    'active': {handler:function(vnew){console.log("vnew:",vnew);}} //active
     ,nodes: {
       handler: function(vnew, vold) {
         console.info(
