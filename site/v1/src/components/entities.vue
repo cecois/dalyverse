@@ -35,7 +35,7 @@
 
 <div class="columns dv-vertical-columns"><div class="column is-half dv-column-left">
   <!-- <div id="network"><svg></svg></div note="/#network"> -->
-    <Graph :akey="active.key" />
+    <Graph :data="sourceOfTruth" />
 </div note="/.dv-column-left">
 <div class="column is-half dv-column-right">
   active.key: {{active.key}}<br/>
@@ -50,58 +50,12 @@
   // import * as d3 from 'd3';
   import Graph from "./graph.vue";
 
+const sourceOfTruth = {p1:"im p1",p2:"im p2"}
+
 export default {
   name: "Entities",
   components:{Graph},
-  data() {
-    return {
-      active: {
-        key: null,
-        item: {article:null},
-        graph: null
-      },
-      page: {
-        title: "Andy Dalyverse Entities Graph"
-      },
-      state: "filled",
-      fittable: true,
-      styles: {
-        previous: null,
-        default: {
-          radius: 6,
-          fillColor: "#df04a3",
-          color: "#fc00b5",
-          weight: 1,
-          opacity: 0.8,
-          fillOpacity: 0.8
-        },
-        active: {
-          radius: 12,
-          fillColor: "#e3e10b",
-          color: "#c9c70a",
-          weight: 1,
-          opacity: 0.8,
-          fillOpacity: 0.6
-        },
-        clicked: {
-          radius: 12,
-          fillColor: "#e3e10b",
-          color: "white",
-          weight: 5,
-          opacity: 1,
-          fillOpacity: 0.9
-        },
-        seen: {
-          radius: 6,
-          fillColor: "white",
-          color: "aqua",
-          weight: 1,
-          opacity: 0.8,
-          fillOpacity: 0.8
-        }
-      },
-    }; // return
-  }, // data
+  data:sourceOfTruth, // data
   beforeCreate() {}, // beforeCreate
   created() {
     if (this.$route.params.activeid) {
@@ -112,6 +66,10 @@ export default {
   }, // created
   mounted: function() {}, //mounted
   methods: {
+    saveTask: function() {
+      store.addTask(this.newTask)
+      this.newTask = ''
+    },
     d3ForceDirect: function () {
 
 
@@ -276,7 +234,7 @@ function positionNode(d) {
 
     function brushstarted() {
         // keep track of whether we're actively brushing so that we
-        // don't remove the brush on keyup in the middle of a selection
+        // don't remove the brush on ke]\yup in the middle of a selection
         brushing = true;
 
         node.each(function(d) { 
@@ -488,9 +446,7 @@ return count(entities[0])'
     }, //setPageTitle
     setItem: function(q){
 
-this.active.item=this.$_.find(this.nodes,(no)=>{
-  return no._id==q
-})
+this.active.item=this.$_.findWhere(this.graph.nodes,{_id:q})
 
     },
     nullItem: function() {
@@ -567,7 +523,7 @@ if(process.env.VERBOSITY === 'DEBUG'){
   }, //methods
   computed: {}, //computed
   watch: {
-    'active.key': {handler:function(vnew){this.setItem(vnew)}} //active
+    'active': {handler:function(vnew){console.log("vnew:",vnew);}} //active
     ,nodes: {
       handler: function(vnew, vold) {
         console.info(
@@ -575,9 +531,6 @@ if(process.env.VERBOSITY === 'DEBUG'){
             ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length
             : null
         );
-        // this.setNetwork();
-        // this.setChart()
-        // this.d3ForceDirect()
       }
     } //nodes
   } //watch
