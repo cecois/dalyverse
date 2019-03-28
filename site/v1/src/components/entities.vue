@@ -172,7 +172,8 @@ export default {
             d.selected = false;
             d.previouslySelected = false;
           });
-          node.classed("selected", false);
+          node.classed("selected", false)
+          .attr("r",process.env.GRAPH_NODE_SIZE_DEF)
         });
 
       var gDraw = gMain.append('g');
@@ -227,7 +228,7 @@ export default {
         .selectAll("circle")
         .data((this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes)
         .enter().append("circle")
-        .attr("r", 5)
+        .attr("r", process.env.GRAPH_NODE_SIZE_DEF)
         .attr("fill", (d) => {
           return this.D3getFill(d)
         })
@@ -281,7 +282,8 @@ export default {
           // if this node isn't selected, then we have to unselect every other node
           node.classed("selected", function (p) {
             return p.selected = p.previouslySelected = false;
-          });
+          })
+          .attr("r",process.env.GRAPH_NODE_SIZE_DEF)
         }
 
         d3.select(this).classed("selected", function (p) {
@@ -296,6 +298,7 @@ export default {
             d.fx = d.x;
             d.fy = d.y;
           })
+          .attr("r",process.env.GRAPH_NODE_SIZE_SEL)
 
       }
 
