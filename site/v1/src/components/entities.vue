@@ -1,280 +1,377 @@
 <template>
-<div id="vue-root" class="">
-  <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
-
-<nav id="dv-nav-main" class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="dv-nav-menu" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
+  <div id="vue-root" class="">
+    <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
+    <nav id="dv-nav-main" class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="dv-nav-menu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
         Home
       </a>
-
-      <a class="navbar-item">
+          <a class="navbar-item">
         Entities
       </a>
-      <a class="navbar-item">
+          <a class="navbar-item">
         Events
       </a>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+          </div>
+        </div>
       </div>
+    </nav>
+    <div class="columns dv-vertical-columns">
+      <div class="column is-half dv-column-left">
+        <!-- <div id="network"><svg></svg></div note="/#network"> -->
+        <ul>
+          <li>entities_total: {{entities_total}}</li>
+          <li><span v-bind:class="console.clazz" class="icon mdi"></span>{{console.msg}}</li>
+        </ul>
+        <div id="network">
+          <svg></svg>
+        </div note="/#network">
+      </div note="/.dv-column-left">
+      <div class="column is-half dv-column-right">
+        active.key: {{active.key}}
+        <br/> active.article: {{active.article}}
+        <br/> active.graph: {{active.graph}}
+        <br/>
+      </div note="/.dv-column-right">
     </div>
   </div>
-</nav>
-
-<div class="columns dv-vertical-columns"><div class="column is-half dv-column-left">
-  <!-- <div id="network"><svg></svg></div note="/#network"> -->
-    <Graph :data="sourceOfTruth" />
-</div note="/.dv-column-left">
-<div class="column is-half dv-column-right">
-  active.key: {{active.key}}<br/>
-      active.item.article: {{active.item.article}}<br/>
-      active.graph: {{active.graph}}<br/>
-</div note="/.dv-column-right">
-</div>
-</div><!-- ./#vue-root -->
+  <!-- ./#vue-root -->
 </template>
 
 <script>
-  // import * as d3 from 'd3';
-  import Graph from "./graph.vue";
+import * as d3 from 'd3';
+// import Graph from "./graph.vue";
 
-const sourceOfTruth = {p1:"im p1",p2:"im p2"}
+const sourceOfTruth = { p1: "im p1", p2: "im p2" }
 
 export default {
   name: "Entities",
-  components:{Graph},
-  data:sourceOfTruth, // data
-  beforeCreate() {}, // beforeCreate
-  created() {
+  // components:{Graph},
+  data () {
+    return {
+      CFG: { mode: 'T' },
+      graph: null,
+      page: {
+        title: "Andy Dalyverse Entities Graph"
+      },
+      state: "filled",
+      fittable: true,
+      svg: null,
+      shiftKey: null,
+      active: {
+        key: null,
+        item: { article: null },
+        graph: null
+      },
+      entities_total: 0,
+      console: {
+        msg: "",
+        clazz: null,
+        throb: false
+      },
+      graf: {
+        nodes: [
+          { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: "Dalton Wilcox is the Poet Laureate of the West" }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: "Random Vampire is a random vampire vanquished by Dalton Wilcox" }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: "Random Mummy is a random mummy vanquished by Dalton Wilcox" }
+        ],
+        edges: [
+          { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
+          { source: 'people/_:daltonwilcox', target: 'people/_:mummy' }
+        ]
+      }
+    }
+  }, // data
+  beforeCreate () {}, // beforeCreate
+  created () {
     if (this.$route.params.activeid) {
       this.active.key = this.$route.params.activeid;
     }
 
     window.addEventListener("keydown", this.onKey);
+
+
+    console.info(
+      process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
+    );
+
+    this.$once('hook:once', function () {
+      this.fittable = false;
+
+    })
+
+    this.console = {
+      msg: new Date(),
+      throb: true,
+      clazz: "mdi-clock"
+    };
+
   }, // created
-  mounted: function() {}, //mounted
+  mounted: function () {
+    this.D3init();
+    this.fetchTotalEntities();
+  }, //mounted
   methods: {
-    saveTask: function() {
-      store.addTask(this.newTask)
-      this.newTask = ''
+    setActive (_id) {
+
+      let ai = this.$_.findWhere(this.graf.nodes, { id: _id })
+
+      this.active = {
+        key: ai.id,
+        article: ai.article,
+        graph: null
+      }
+
     },
-    d3ForceDirect: function () {
+    unsetActive (_id) {
 
+      this.active = {
+        key: null,
+        article: null,
+        graph: null
+      }
 
-let graph = this.fakeg
+    },
+    dragends (d) {
 
-var parentDiv = document.getElementById("network");
-let parentWidth = parseInt(window.getComputedStyle(parentDiv).width.replace("px","")),
-      parentHeight = parseInt(window.getComputedStyle(parentDiv).height.replace("px",""))
+      this.setActive(d._id)
 
-var svg = d3.select('svg')
-    .attr('width', parentWidth)
-    .attr('height', parentHeight)
+    },
+    D3init: function () {
 
-// remove any previous graphs
-    svg.selectAll('.g-main').remove();
+      var parentDiv = document.getElementById("network");
+      let parentWidth = parseInt(window.getComputedStyle(parentDiv).width.replace("px", "")),
+        parentHeight = parseInt(window.getComputedStyle(parentDiv).height.replace("px", ""))
 
-    var gMain = svg.append('g')
-    .classed('g-main', true);
+      this.svg = d3.select('svg')
+        .attr('width', parentWidth)
+        .attr('height', parentHeight)
 
-    var rect = gMain.append('rect')
-    .attr('width', parentWidth)
-    .attr('height', parentHeight)
-    .style('fill', 'white')
-    .on('click', (d) => {
-        // node.each(function(d) {
-        //     d.selected = false;
-        //     d.previouslySelected = false;
-        // });
-        // node.classed("selected", false);
-        nodeSelect(d);
-    });
+      // remove any previous graphs
+      this.svg.selectAll('.g-main').remove();
 
-    var gDraw = gMain.append('g');
+      var gMain = this.svg.append('g')
+        .classed('g-main', true);
 
-    var zoom = d3.zoom()
-    .on('zoom', zoomed)
+      var rect = gMain.append('rect')
+        .attr('width', parentWidth)
+        .attr('height', parentHeight)
+        .style('fill', 'white')
+        .on('click.vue', this.unsetActive)
+        .on('click.native', () => {
+          node.each(function (d) {
+            d.selected = false;
+            d.previouslySelected = false;
+          });
+          node.classed("selected", false);
+        });
 
-    gMain.call(zoom);
+      var gDraw = gMain.append('g');
 
-
-    function zoomed() {
+      function zoomed() {
         gDraw.attr('transform', d3.event.transform);
-    }
+      }
 
-    // var color = d3.scaleOrdinal(d3.schemeCategory20);
+      var zoom = d3.zoom()
+        .on('zoom', zoomed)
 
-    if (! ("links" in graph)) {
-        console.log("Graph is missing links");
-        return;
-    }
+      gMain.call(zoom);
 
-    var nodes = [];
-    var i;
-    // for (i = 0; i < graph.nodes.length; i++) {
-    //     nodes[graph.nodes[i].id] = graph.nodes[i];
-    //     graph.nodes[i].weight = 1.01;
-    // }
-    var nodeById = d3.map(graph.nodes, function(d) { return d.id; })
-    var bilinks=[];
+      var nodes = [];
+      var i;
+      var nodeById = d3.map(
+        (this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes,
+        function (d) {
+          return d.id;
+        })
+      var bilinks = [];
 
-    graph.links.forEach(function(link) {
-    
-    var s = link.source = nodeById.get(link.source),
-        t = link.target = nodeById.get(link.target),
-        i = {}; // intermediate node
-    graph.nodes.push(i);
-    graph.links.push({source: s, target: i}, {source: i, target: t});
-    bilinks.push([s, i, t]);
-  });
+      (this.CFG.mode == "33") ? this.graph.edges: this.graf.edges.forEach((link) => {
+        // this.graf.edges.forEach((link) => {
 
-    // the brush needs to go before the nodes so that it doesn't
-    // get called when the mouse is over a node
-    var gBrushHolder = gDraw.append('g');
-    var gBrush = null;
+        var s = link.source = nodeById.get(link.source),
+          t = link.target = nodeById.get(link.target),
+          i = {}; // intermediate node
+        // this.graf.nodes.push(i);
+        (this.CFG.mode == "33") ? this.graph.nodes: this.graf.nodes.push(i);
+        // this.graf.edges.push({ source: s, target: i }, { source: i, target: t });
+        (this.CFG.mode == "33") ? this.graph.edges: this.graf.edges.push({ source: s, target: i }, { source: i, target: t });
+        bilinks.push([s, i, t]);
+      });
 
-    var link = gDraw.append("g")
+      // the brush needs to go before the nodes so that it doesn't
+      // get called when the mouse is over a node
+      var gBrushHolder = gDraw.append('g');
+      var gBrush = null;
+
+      var link = gDraw.append("g")
         .attr("class", "edge")
         .selectAll("line")
         .data(bilinks)
         .enter().append("path")
-        .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+        .attr("stroke-width", function (d) {
+          return Math.sqrt(d.value);
+        });
 
-    var node = gDraw.append("g")
+      var node = gDraw.append("g")
         .attr("class", "node")
         .selectAll("circle")
-        .data(graph.nodes)
+        .data((this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes)
         .enter().append("circle")
         .attr("r", 5)
-        .attr("fill", function(d) { 
-return (d._id)?'rgba(44,144,44,.5)':'rgba(255,255,255,0)'; 
-    })
+        .attr("fill", (d) => {
+          return this.D3getFill(d)
+        })
         .call(d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended));
+          .on("start", dragstarted)
+          .on("end.native", dragged)
+          .on("end.vue", this.dragends)
+          .on("drag", dragged));
+      // .on("start", (d,node)=>{return this.D3dragstarted(d,node)})
 
-      
-    // add titles for mouseover blurbs
-    node.append("title")
-        .text(function(d) { 
-            if ('name' in d)
-                return d.name;
-            else
-                return d.id; 
+      // add titles for mouseover blurbs
+      node.append("title")
+        .text(function (d) {
+          if ('name' in d)
+            return d.name;
+          else
+            return d.id;
         });
 
-    var simulation = d3.forceSimulation()
+      var simulation = d3.forceSimulation()
         .force("link", d3.forceLink()
-                .id(function(d) { return d.id; })
-                .distance(function(d) { 
-                    return 30;
+          .id(function (d) {
+            return d.id;
+          })
+          .distance(function (d) {
+            return 30;
 
-                    return dist; 
-                })
-              )
+            return dist;
+          })
+        )
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(parentWidth / 2, parentHeight / 2))
-        .force("x", d3.forceX(parentWidth/2))
-        .force("y", d3.forceY(parentHeight/2));
+        .force("x", d3.forceX(parentWidth / 2))
+        .force("y", d3.forceY(parentHeight / 2));
 
-    simulation
-        .nodes(graph.nodes)
+      simulation
+        .nodes((this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes)
         .on("tick", ticked);
 
-    simulation.force("link")
-        .links(graph.links);
+      simulation.force("link")
+        .links((this.CFG.mode == "33") ? this.graph.edges : this.graf.edges);
 
-        function ticked() {
-    link.attr("d", positionLink);
-    node.attr("transform", positionNode);
-  }
+      function ticked() {
+        link.attr("d", positionLink);
+        node.attr("transform", positionNode);
+      }
 
-function positionLink(d) {
-  return "M" + d[0].x + "," + d[0].y
-       + "S" + d[1].x + "," + d[1].y
-       + " " + d[2].x + "," + d[2].y;
-}
+      function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(0.9).restart();
+        if (!d.selected) {
+          // if this node isn't selected, then we have to unselect every other node
+          node.classed("selected", function (p) {
+            return p.selected = p.previouslySelected = false;
+          });
+        }
 
-function positionNode(d) {
-  return "translate(" + d.x + "," + d.y + ")";
-}
+        d3.select(this).classed("selected", function (p) {
+          d.previouslySelected = d.selected;
+          return d.selected = true;
+        });
 
-    function tickedog() {
-        // update node and line positions at every step of 
-        // the force simulation
-        link.attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
+        node.filter(function (d) {
+            return d.selected;
+          })
+          .each(function (d) { //d.fixed |= 2; 
+            d.fx = d.x;
+            d.fy = d.y;
+          })
 
-        node.attr("cx", function(d) { return d.x; })
-            .attr("cy", function(d) { return d.y; });
-    }
+      }
 
-    var brushMode = false;
-    var brushing = false;
+      function dragged(d) {
+        //d.fx = d3.event.x;
+        //d.fy = d3.event.y;
+        node.filter(function (d) {
+            return d.selected;
+          })
+          .each(function (d) {
+            d.fx += d3.event.dx;
+            d.fy += d3.event.dy;
+          })
+      }
 
-    var brush = d3.brush()
+      function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+        node.filter(function (d) {
+            return d.selected;
+          })
+          .each(function (d) { //d.fixed &= ~6; 
+            d.fx = null;
+            d.fy = null;
+          })
+      }
+
+
+      function positionLink(d) {
+        return "M" + d[0].x + "," + d[0].y + "S" + d[1].x + "," + d[1].y + " " + d[2].x + "," + d[2].y;
+      }
+
+      function positionNode(d) {
+        return "translate(" + d.x + "," + d.y + ")";
+      }
+
+      var brushMode = false;
+      var brushing = false;
+
+      var brush = d3.brush()
         .on("start", brushstarted)
-        .on("brush", brushed)
+        .on("brush", (d, node) => {
+          var extent = d3.event.selection;
+
+          node.classed("selected", function (d) {
+            return d.selected = d.previouslySelected ^
+              (extent[0][0] <= d.x && d.x < extent[1][0] && extent[0][1] <= d.y && d.y < extent[1][1]);
+          });
+        })
         .on("end", brushended);
 
-    function brushstarted() {
+      function brushstarted() {
         // keep track of whether we're actively brushing so that we
-        // don't remove the brush on ke]\yup in the middle of a selection
+        // don't remove the brush on keyup in the middle of a selection
         brushing = true;
 
-        node.each(function(d) { 
-            d.previouslySelected = shiftKey && d.selected; 
+        node.each(function (d) {
+          d.previouslySelected = this.shiftKey && d.selected;
         });
-    }
+      }
 
-function nodeSelect(d,w){
-  if(!w){
-          node.each(function(d) {
-              d.selected = false;
-              d.previouslySelected = false;
-          });
-          node.classed("selected", false);
-        }
-}
+      // function brushed() {
+      //     if (!d3.event.sourceEvent) return;
+      //     if (!d3.event.selection) return;
 
-    rect.on('click', (d) => {
-      nodeSelect(d,null);
-        // node.each(function(d) {
-        //     d.selected = false;
-        //     d.previouslySelected = false;
-        // });
-        // node.classed("selected", false);
-    });
+      //     var extent = d3.event.selection;
 
-    function brushed() {
-        if (!d3.event.sourceEvent) return;
-        if (!d3.event.selection) return;
+      //     node.classed("selected", function(d) {
+      //         return d.selected = d.previouslySelected ^
+      //         (extent[0][0] <= d.x && d.x < extent[1][0]
+      //          && extent[0][1] <= d.y && d.y < extent[1][1]);
+      //     });
+      // }
 
-        var extent = d3.event.selection;
-
-        node.classed("selected", function(d) {
-            return d.selected = d.previouslySelected ^
-            (extent[0][0] <= d.x && d.x < extent[1][0]
-             && extent[0][1] <= d.y && d.y < extent[1][1]);
-        });
-    }
-
-    function brushended() {
+      function brushended() {
         if (!d3.event.sourceEvent) return;
         if (!d3.event.selection) return;
         if (!gBrush) return;
@@ -282,142 +379,129 @@ function nodeSelect(d,w){
         gBrush.call(brush.move, null);
 
         if (!brushMode) {
-            // the shift key has been release before we ended our brushing
-            gBrush.remove();
-            gBrush = null;
+          // the shift key has been release before we ended our brushing
+          gBrush.remove();
+          gBrush = null;
         }
 
         brushing = false;
-    }
+      }
 
-    d3.select('body').on('keydown', keydown);
-    d3.select('body').on('keyup', keyup);
+      d3.select('body').on('keydown', keydown);
+      d3.select('body').on('keyup', keyup);
 
-    var shiftKey;
+      // var this.shiftKey=null;
 
-    function keydown() {
-    //     shiftKey = d3.event.shiftKey;
+      function keydown() {} //keydown
 
-    //     if (shiftKey) {
-    //         // if we already have a brush, don't do anything
-    //         if (gBrush)
-    //             return;
-
-    //         brushMode = true;
-
-    //         if (!gBrush) {
-    //             gBrush = gBrushHolder.append('g');
-    //             gBrush.call(brush);
-    //         }
-    //     }
-    }
-
-    function keyup() {
-        shiftKey = false;
+      function keyup() {
+        this.shiftKey = false;
         brushMode = false;
 
         if (!gBrush)
-            return;
+          return;
 
         if (!brushing) {
-            // only remove the brush if we're not actively brushing
-            // otherwise it'll be removed when the brushing ends
-            gBrush.remove();
-            gBrush = null;
+          // only remove the brush if we're not actively brushing
+          // otherwise it'll be removed when the brushing ends
+          gBrush.remove();
+          gBrush = null;
         }
-    }
+      } // keyup
 
-    function dragstarted(d) {
-      this.active.key=d._id
-      if (!d3.event.active) simulation.alphaTarget(0.9).restart();
-
-// those hidden nodes we don't wanna show
-if(d._id){
-        if (!d.selected && !shiftKey) {
-            // if this node isn't selected, then we have to unselect every other node
-            node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
-        }
-
-        d3.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
-
-        node.filter(function(d) { return d.selected; })
-        .each(function(d) { //d.fixed |= 2; 
-          d.fx = d.x;
-          d.fy = d.y;
-        })
+      function dragged(d) {
+        // node.filter(function(d) { return d.selected; })
+        //       .each(function(d) { 
+        //           d.fx += d3.event.dx;
+        //           d.fy += d3.event.dy;
+        //       })
       }
 
-    }
+      // function dragged(d) {
+      //   //d.fx = d3.event.x;
+      //   //d.fy = d3.event.y;
+      //         node.filter(function(d) { return d.selected; })
+      //         .each(function(d) { 
+      //             d.fx += d3.event.dx;
+      //             d.fy += d3.event.dy;
+      //         })
+      // }
 
-    function dragged(d) {
-      //d.fx = d3.event.x;
-      //d.fy = d3.event.y;
-            node.filter(function(d) { return d.selected; })
-            .each(function(d) { 
-                d.fx += d3.event.dx;
-                d.fy += d3.event.dy;
-            })
-    }
 
-    function dragended(d) {
-      if (!d3.event.active) simulation.alphaTarget(0);
-      d.fx = null;
-      d.fy = null;
-        node.filter(function(d) { return d.selected; })
-        .each(function(d) { //d.fixed &= ~6; 
-            d.fx = null;
-            d.fy = null;
-        })
-    }
 
-    var texts = ['Use the scroll wheel to zoom',
-                 'Hold the shift key to select nodes']
+      // function 
 
-    svg.selectAll('text')
+      var texts = ['Use the scroll wheel to zoom',
+        'Hold the shift key to select nodes'
+      ]
+
+      this.svg.selectAll('text')
         .data(texts)
         .enter()
         .append('text')
         .attr('x', 900)
-        .attr('y', function(d,i) { return 470 + i * 18; })
-        .text(function(d) { return d; });
+        .attr('y', function (d, i) {
+          return 470 + i * 18;
+        })
+        .text(function (d) {
+          return d;
+        });
 
+    },
+    D3getFill: function (d) {
+      // all fill logic here
+      let c = null
+      switch (true) {
+        case (!d._id):
+          c = 'rgba(255,255,255,0)'
+          break;
+        case (d.daly == true):
+          c = 'rgba(3,3,3,1)'
+          break;
+          // case (!d.daly):
+          //   c = 'rgba(44,44,44,1)'
+          //   break;
+        default:
+          c = 'rgba(55,155,155,1)'
+          break;
+      }
+
+      return c;
 
     },
     fetchTotalEntities: function () {
 
-          console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "getTotalEntities()..."
-        : null
-    );
-
-               let q = 'let plcs = (for l in places return {_id:l._id,id:l._id,label:l.name,article:l.article})\
-let ppls = (for p in people return {_id:p._id,id:p._id,label:p.name,article:p.article})\
-let tngs = (for t in things return {_id:t._id,id:t._id,label:t.name,article:t.article})\
-let evnts = (for ev in events return {_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "getTotalEntities()..." : null
+      );
+      if (this.CFG.mode == "33") {
+        let q = 'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,article:l.article})\
+let ppls = (for p in people return {daly:false,_id:p._id,id:p._id,label:p.name,article:p.article})\
+let tngs = (for t in things return {daly:false,_id:t._id,id:t._id,label:t.name,article:t.article})\
+let evnts = (for ev in events return {daly:false,_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
 let pplsplcs = (flatten(append(ppls,plcs)))\
 let tngsevts = (flatten(append(tngs,evnts)))\
 let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
 return count(entities[0])'
 
-      axios
-        .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
-          query: q
-        })
-        .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG"
-              ? "setting entities_total w/ axios response..."
-              : null
-          );
-          this.entities_total = response.data.result[0];
-        }) //axios.then
-        .catch(e => {
-          console.error(e);
-        }); //axios.catch
-
+        axios
+          .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
+            query: q
+          })
+          .then(response => {
+            console.info(
+              process.env.VERBOSITY === "DEBUG" ? "setting entities_total w/ axios response..." : null
+            );
+            // this.entities_total = response.data.result[0];
+            this.entities_total = response.data.result[0]
+          }) //axios.then
+          .catch(e => {
+            console.error(e);
+          }); //axios.catch
+      } //cfg.mode
+      else { this.entities_total = this.graf.nodes.length }
     }, //getotalevents
-    onKey: function(e) {
+    onKey: function (e) {
       switch (true) {
         case e.keyCode == 18 && this.state == "empty":
           this.state = "filled";
@@ -430,7 +514,7 @@ return count(entities[0])'
           break;
       }
     }, //onkey
-    setPageTitle: function() {
+    setPageTitle: function () {
       let sub = null;
 
       switch (true) {
@@ -444,24 +528,24 @@ return count(entities[0])'
 
       this.page.title = "Dalyverse Events Graph: " + sub;
     }, //setPageTitle
-    setItem: function(q){
+    setItem: function (q) {
 
-this.active.item=this.$_.findWhere(this.graph.nodes,{_id:q})
+      this.active.item = this.$_.findWhere(this.graph.nodes, { daly: false, _id: q })
 
     },
-    nullItem: function() {
+    nullItem: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
       );
       return {
-_key:null,
-_rev:null,
-name:null,
-has_murdered:null,
-article:null
+        _key: null,
+        _rev: null,
+        name: null,
+        has_murdered: null,
+        article: null
       };
     }, //nullItem
-        nullGraph: function() {
+    nullGraph: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
       );
@@ -472,27 +556,25 @@ article:null
     }, //nullGraph
     DUMP: function (thing) {
 
-console.info(
+      console.info(
         (process.env.VERBOSITY === "DEBUG" && (thing)) ? thing : null
       );
 
-if(process.env.VERBOSITY === 'DEBUG'){
-      console.log("DUMP:thing",thing)}
+      if (process.env.VERBOSITY === 'DEBUG') {
+        console.log("DUMP:thing", thing)
+      }
 
     }, //dump
-    setGraph: function() {
+    setGraph: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
-        process.env.VERBOSITY == "DEBUG"
-          ? "  -> active.key is " + this.active.key
-          : null
+        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
       );
       // if we have an active.key
       if (this.active.key !== null) {
         axios
           .post("http://" + process.env.ARANGOIP + "/cursor", {
-            query:
-              'for p in people return p'
+            query: 'for p in people return p'
           })
           .then(response => {
             this.active.graph = response.data.result[0];
@@ -504,46 +586,72 @@ if(process.env.VERBOSITY === 'DEBUG'){
       else {
         // no key? null it out
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "no active.key, nulling graph..."
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
         );
         this.active.graph = this.nullGraph();
       }
     }, //setgraph
-    setRoute: function() {
-      console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
+    setRoute: function () {
+        console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
-      this.$router.push({
-        params: {
-          activeid: this.active.key
-        }
-      }); //rejplace
-    } //setRoute
+        this.$router.push({
+          params: {
+            activeid: this.active.key
+          }
+        }); //rejplace
+      } //setRoute
+      ,
+    getClass: function (which, one) {
+      let clas = null;
+
+      switch (true) {
+        case (one == 'daly'):
+          clas = 'node node-pi'
+          break;
+        case (which == 'node' && one !== 'daly'):
+          clas = 'node node-pu'
+          break;
+        case (which == 'edge' && one == 'worksAt'):
+          clas = 'edge edge-wa'
+          break;
+        default:
+          clas = 'node-edge-default'
+          break;
+      }
+
+      return clas
+
+    }
   }, //methods
   computed: {}, //computed
   watch: {
-    'active': {handler:function(vnew){console.log("vnew:",vnew);}} //active
-    ,nodes: {
-      handler: function(vnew, vold) {
+    // 'active': { handler: function (vnew) { console.log("vnew:", vnew); } } //active // ,
+
+    nodes: {
+      handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length
-            : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length : null
         );
       }
     } //nodes
   } //watch
 }; //export.timeline
-
 </script>
 
 <style>
-body{height:100%;overflow:hidden;}
+body {
+  height: 100%;
+  overflow: hidden;
+}
 
+.dv-column-left {
+  background-color: white;
+}
 
-.dv-column-left{background-color:white;}
-.dv-column-right{background-color:black;color:#00eb11;}
+.dv-column-right {
+  background-color: black;
+  color: #00eb11;
+}
 
 
 /*
@@ -579,17 +687,16 @@ body{height:100%;overflow:hidden;}
 }
 */
 
-text{
-    fill: #fff;
-    stroke: transparent;
-    font-size:.7em;
+text {
+  fill: #fff;
+  stroke: transparent;
+  font-size: .7em;
 }
-
 
 
 /* ---------------------------------- BULMA -- */
-.hero.is-medium > .hero-body{
-  padding:0px;
-}
 
+.hero.is-medium > .hero-body {
+  padding: 0px;
+}
 </style>

@@ -90,8 +90,10 @@ width:100%;
 // }
 circle{
 &.selected{
-  stroke:magenta;
-  stroke-width:3;
+  stroke:black;
+  fill:black;
+  stroke-width:33;
+  
 }}
 
 /* +++++++++++++++++++++++++++++++++++++++ timeline ++ */
