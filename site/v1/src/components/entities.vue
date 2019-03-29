@@ -254,7 +254,7 @@ export default {
             return d.id;
           })
           .distance(function (d) {
-            return 30;
+            return 30;z
 
             return dist;
           })
@@ -264,17 +264,62 @@ export default {
         .force("x", d3.forceX(parentWidth / 2))
         .force("y", d3.forceY(parentHeight / 2));
 
+let counter = 0;
       simulation
         .nodes((this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes)
         .on("tick", ticked);
+        // .on("tick", (counter<6)?debugTick:()=>{console.log('forget it')});
 
       simulation.force("link")
         .links((this.CFG.mode == "33") ? this.graph.edges : this.graf.edges);
 
-      function ticked() {
-        link.attr("d", positionLink);
-        node.attr("transform", positionNode);
-      }
+      // function ticked() {
+      //   link.attr("d", positionLink);
+      //   node.attr("transform", positionNode);
+      // }
+//       function ticked() {
+//         // update node and line positions at every step of 
+//         // the force simulation
+
+// if(link){
+//   //       let so = ;
+//   // let ta = d.filter(dd => dd.index == 2);
+
+//         link.attr("x", function(d) { console.log('d',d); let xx = d[0].x;console.log('xx',xx);return xx; })
+//             .attr("y", function(d) { return d[0].y; })
+//             .attr("vx", function(d) { return d[2].x; })
+//             .attr("vy", function(d) { return d[2].y; });
+// }
+
+//         node.attr("vx", function(d) { return d.x; })
+//             .attr("vy", function(d) { return d.y; });
+//     }
+
+function ticked() {
+        // update node and line positions at every step of 
+        // the force simulation
+        link.attr("x1", function(d) { console.log('dlink',d);return d[0].x; })
+            .attr("y1", function(d) { console.log('dlink',d);return d[0].y; })
+            .attr("x2", function(d) { console.log('dlink',d);return d[2].x; })
+            .attr("y2", function(d) { console.log('dlink',d);return d[2].y; });
+
+        node.attr("cx", function(d) { console.log('dnode',d);return d.x; })
+            .attr("cy", function(d) { console.log('dnode',d);return d.y; });
+    }
+
+function debugTick(){
+  
+  // console.log("link",link);
+  if(link){
+    link.attr("x", function(d) { 
+  let so = d.filter(dd => dd.index == 0);
+  let ta = d.filter(dd => dd.index == 2);
+  console.log('source:',so)
+  console.log('target:',ta)
+     })
+  }
+  counter = counter+1;
+}
 
       function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.9).restart();
@@ -303,8 +348,6 @@ export default {
       }
 
       function dragged(d) {
-        //d.fx = d3.event.x;
-        //d.fy = d3.event.y;
         node.filter(function (d) {
             return d.selected;
           })
