@@ -146,27 +146,46 @@ export default {
       this.setActive(d._id)
 
     },
-    D3init: function () {
+    // D3init: function () {
 
-      var parentDiv = document.getElementById("network");
-      let parentWidth = parseInt(window.getComputedStyle(parentDiv).width.replace("px", "")),
-        parentHeight = parseInt(window.getComputedStyle(parentDiv).height.replace("px", ""))
+    //   var parentDiv = document.getElementById("network");
+    //   let parentWidth = parseInt(window.getComputedStyle(parentDiv).width.replace("px", "")),
+    //     parentHeight = parseInt(window.getComputedStyle(parentDiv).height.replace("px", ""))
 
-      this.svg = d3.select('svg')
-        .attr('width', parentWidth)
-        .attr('height', parentHeight)
+    //   this.svg = d3.select('svg')
+    //     .attr('width', parentWidth)
+    //     .attr('height', parentHeight)
 
-      // remove any previous graphs
-      this.svg.selectAll('.g-main').remove();
+            D3init: function () {
 
-      var gMain = this.svg.append('g')
-        .classed('g-main', true);
+    // if both d3v3 and d3v4 are loaded, we'll assume
+    // that d3v4 is called d3v4, otherwise we'll assume
+    // that d3v4 is the default (d3)
+    // if (typeof d3v4 == 'undefined')
+    const d3v4 = d3;
 
-      var rect = gMain.append('rect')
-        .attr('width', parentWidth)
-        .attr('height', parentHeight)
-        .style('fill', 'white')
-        .on('click.vue', this.unsetActive)
+var svg = d3.select('#network > svg')
+    var width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+    let parentWidth = d3v4.select('svg').node().parentNode.clientWidth;
+    let parentHeight = d3v4.select('svg').node().parentNode.clientHeight;
+
+    var svg = d3v4.select('svg')
+    .attr('width', parentWidth)
+    .attr('height', parentHeight)
+
+    // remove any previous graphs
+    svg.selectAll('.g-main').remove();
+
+    var gMain = svg.append('g')
+    .classed('g-main', true);
+
+    var rect = gMain.append('rect')
+    .attr('width', parentWidth)
+    .attr('height', parentHeight)
+    .style('fill', 'white')
+            .on('click.vue', this.unsetActive)
         .on('click.native', () => {
           node.each(function (d) {
             d.selected = false;
@@ -176,324 +195,297 @@ export default {
           .attr("r",process.env.GRAPH_NODE_SIZE_DEF)
         });
 
-      var gDraw = gMain.append('g');
+    var gDraw = gMain.append('g');
 
-      function zoomed() {
-        gDraw.attr('transform', d3.event.transform);
-      }
+    var zoom = d3v4.zoom()
+    .on('zoom', zoomed)
 
-      var zoom = d3.zoom()
-        .on('zoom', zoomed)
+    gMain.call(zoom);
 
-      gMain.call(zoom);
 
-      var nodes = [];
-      var i;
-      var nodeById = d3.map(
-        (this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes,
+    function zoomed() {
+        gDraw.attr('transform', d3v4.event.transform);
+    }
+
+    var color = d3v4.scaleOrdinal(d3v4.schemeCategory20);
+
+    var graph_nodes = (this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes;
+    var graph_edges = (this.CFG.mode == "33") ? this.graph.edges: this.graf.edges
+/*    var nodes = {};
+    var i;
+    for (i = 0; i < graph_nodes.length; i++) {
+        nodes[graph_nodes[i].id] = graph_nodes[i];
+        graph_nodes[i].weight = 1.01;
+    }
+*/
+
+/* ---------------------------- bezier hack: */
+
+var nodes = graph_nodes
+,nodeById = d3.map(
+        graph_nodes,
         function (d) {
           return d.id;
         })
-      var bilinks = [];
+      ,links = graph_edges
+      ,bilinks = [];
+      // var i;
 
-      (this.CFG.mode == "33") ? this.graph.edges: this.graf.edges.forEach((link) => {
+      //   var nodes = graph.nodes,
+      // nodeById = d3.map(nodes, function(d) { return d.id; }),
+      // bilinks = [];
+
+      links.forEach((link) => {
         // this.graf.edges.forEach((link) => {
 
         var s = link.source = nodeById.get(link.source),
           t = link.target = nodeById.get(link.target),
           i = {}; // intermediate node
         // this.graf.nodes.push(i);
-        (this.CFG.mode == "33") ? this.graph.nodes: this.graf.nodes.push(i);
+        nodes.push(i);
         // this.graf.edges.push({ source: s, target: i }, { source: i, target: t });
-        (this.CFG.mode == "33") ? this.graph.edges: this.graf.edges.push({ source: s, target: i }, { source: i, target: t });
+        links.push({ source: s, target: i }, { source: i, target: t });
         bilinks.push([s, i, t]);
       });
 
-      // the brush needs to go before the nodes so that it doesn't
-      // get called when the mouse is over a node
-      var gBrushHolder = gDraw.append('g');
-      var gBrush = null;
+/* /bezier hack */
 
-      var link = gDraw.append("g")
-        .attr("class", "edge")
+    // the brush needs to go before the nodes so that it doesn't
+    // get called when the mouse is over a node
+    var gBrushHolder = gDraw.append('g');
+    var gBrush = null;
+
+    var link = gDraw.append("g")
+        .attr("class", "link")
         .selectAll("line")
         .data(bilinks)
         .enter().append("path")
-        .attr("stroke-width", function (d) {
-          return Math.sqrt(d.value);
-        });
+        .attr("stroke-width", 1);
 
-      var node = gDraw.append("g")
+  // var link = gDraw.append("g")
+  // .attr("class","link")
+  //   .data(bilinks)
+  //   .enter().append("path")
+
+    var node = gDraw.append("g")
         .attr("class", "node")
         .selectAll("circle")
-        .data((this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes)
+        .data(nodes)
         .enter().append("circle")
         .attr("r", process.env.GRAPH_NODE_SIZE_DEF)
         .attr("fill", (d) => {
           return this.D3getFill(d)
         })
-        .call(d3.drag()
-          .on("start", dragstarted)
-          .on("end.native", dragged)
-          .on("end.vue", this.dragends)
-          .on("drag", dragged));
-      // .on("start", (d,node)=>{return this.D3dragstarted(d,node)})
+        .call(d3v4.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end.native", dragended)
+        .on("end.vue",this.dragends));
 
-      // add titles for mouseover blurbs
-      node.append("title")
-        .text(function (d) {
-          if ('name' in d)
-            return d.name;
-          else
-            return d.id;
+      
+    // add titles for mouseover blurbs
+    node.append("title")
+        .text(function(d) { 
+            if ('name' in d)
+                return d.name;
+            else
+                return d.id; 
         });
 
-      var simulation = d3.forceSimulation()
-        .force("link", d3.forceLink()
-          .id(function (d) {
-            return d.id;
-          })
-          .distance(function (d) {
-            return 30;z
+    var simulation = d3v4.forceSimulation()
+        .force("link", d3v4.forceLink()
+                .id(function(d) { return d.id; })
+                .distance(function(d) { 
+                    return 30;
+                    //var dist = 20 / d.value;
+                    //console.log('dist:', dist);
 
-            return dist;
-          })
-        )
-        .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(parentWidth / 2, parentHeight / 2))
-        .force("x", d3.forceX(parentWidth / 2))
-        .force("y", d3.forceY(parentHeight / 2));
+                    return dist; 
+                })
+              )
+        .force("charge", d3v4.forceManyBody())
+        .force("center", d3v4.forceCenter(parentWidth / 2, parentHeight / 2))
+        .force("x", d3v4.forceX(parentWidth/2))
+        .force("y", d3v4.forceY(parentHeight/2));
 
-let counter = 0;
-      simulation
-        .nodes((this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes)
+    simulation
+        .nodes(graph_nodes)
         .on("tick", ticked);
-        // .on("tick", (counter<6)?debugTick:()=>{console.log('forget it')});
 
-      simulation.force("link")
-        .links((this.CFG.mode == "33") ? this.graph.edges : this.graf.edges);
-
-      // function ticked() {
-      //   link.attr("d", positionLink);
-      //   node.attr("transform", positionNode);
-      // }
-//       function ticked() {
-//         // update node and line positions at every step of 
-//         // the force simulation
-
-// if(link){
-//   //       let so = ;
-//   // let ta = d.filter(dd => dd.index == 2);
-
-//         link.attr("x", function(d) { console.log('d',d); let xx = d[0].x;console.log('xx',xx);return xx; })
-//             .attr("y", function(d) { return d[0].y; })
-//             .attr("vx", function(d) { return d[2].x; })
-//             .attr("vy", function(d) { return d[2].y; });
-// }
-
-//         node.attr("vx", function(d) { return d.x; })
-//             .attr("vy", function(d) { return d.y; });
-//     }
+    simulation.force("link")
+        .links(graph_edges);
 
 function ticked() {
-        // update node and line positions at every step of 
-        // the force simulation
-        link.attr("x1", function(d) { console.log('dlink',d);return d[0].x; })
-            .attr("y1", function(d) { console.log('dlink',d);return d[0].y; })
-            .attr("x2", function(d) { console.log('dlink',d);return d[2].x; })
-            .attr("y2", function(d) { console.log('dlink',d);return d[2].y; });
-
-        node.attr("cx", function(d) { console.log('dnode',d);return d.x; })
-            .attr("cy", function(d) { console.log('dnode',d);return d.y; });
-    }
-
-function debugTick(){
-  
-  // console.log("link",link);
-  if(link){
-    link.attr("x", function(d) { 
-  let so = d.filter(dd => dd.index == 0);
-  let ta = d.filter(dd => dd.index == 2);
-  console.log('source:',so)
-  console.log('target:',ta)
-     })
+    link.attr("d", positionLink);
+    node.attr("transform", positionNode);
   }
-  counter = counter+1;
+
+  function positionLink(d) {
+  return "M" + d[0].x + "," + d[0].y
+       + "S" + d[1].x + "," + d[1].y
+       + " " + d[2].x + "," + d[2].y;
 }
 
-      function dragstarted(d) {
-        if (!d3.event.active) simulation.alphaTarget(0.9).restart();
-        if (!d.selected) {
-          // if this node isn't selected, then we have to unselect every other node
-          node.classed("selected", function (p) {
-            return p.selected = p.previouslySelected = false;
-          })
-          .attr("r",process.env.GRAPH_NODE_SIZE_DEF)
-        }
+function positionNode(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
 
-        d3.select(this).classed("selected", function (p) {
-          d.previouslySelected = d.selected;
-          return d.selected = true;
-        });
+    function tickedog() {
+        // update node and line positions at every step of 
+        // the force simulation
+        link.attr("x1", function(d) { return d[0].x; })
+            .attr("y1", function(d) { return d[0].y; })
+            .attr("x2", function(d) { return d[2].x; })
+            .attr("y2", function(d) { return d[2].y; });
 
-        node.filter(function (d) {
-            return d.selected;
-          })
-          .each(function (d) { //d.fixed |= 2; 
-            d.fx = d.x;
-            d.fy = d.y;
-          })
-          .attr("r",process.env.GRAPH_NODE_SIZE_SEL)
+        node.attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+    }
 
-      }
+    var brushMode = false;
+    var brushing = false;
 
-      function dragged(d) {
-        node.filter(function (d) {
-            return d.selected;
-          })
-          .each(function (d) {
-            d.fx += d3.event.dx;
-            d.fy += d3.event.dy;
-          })
-      }
-
-      function dragended(d) {
-        if (!d3.event.active) simulation.alphaTarget(0);
-        d.fx = null;
-        d.fy = null;
-        node.filter(function (d) {
-            return d.selected;
-          })
-          .each(function (d) { //d.fixed &= ~6; 
-            d.fx = null;
-            d.fy = null;
-          })
-      }
-
-
-      function positionLink(d) {
-        return "M" + d[0].x + "," + d[0].y + "S" + d[1].x + "," + d[1].y + " " + d[2].x + "," + d[2].y;
-      }
-
-      function positionNode(d) {
-        return "translate(" + d.x + "," + d.y + ")";
-      }
-
-      var brushMode = false;
-      var brushing = false;
-
-      var brush = d3.brush()
+    var brush = d3v4.brush()
         .on("start", brushstarted)
-        .on("brush", (d, node) => {
-          var extent = d3.event.selection;
-
-          node.classed("selected", function (d) {
-            return d.selected = d.previouslySelected ^
-              (extent[0][0] <= d.x && d.x < extent[1][0] && extent[0][1] <= d.y && d.y < extent[1][1]);
-          });
-        })
+        .on("brush", brushed)
         .on("end", brushended);
 
-      function brushstarted() {
+    function brushstarted() {
         // keep track of whether we're actively brushing so that we
         // don't remove the brush on keyup in the middle of a selection
         brushing = true;
 
-        node.each(function (d) {
-          d.previouslySelected = this.shiftKey && d.selected;
+        node.each(function(d) { 
+            d.previouslySelected = shiftKey && d.selected; 
         });
-      }
+    }
 
-      // function brushed() {
-      //     if (!d3.event.sourceEvent) return;
-      //     if (!d3.event.selection) return;
+    rect.on('click', () => {
+        node.each(function(d) {
+            d.selected = false;
+            d.previouslySelected = false;
+        });
+        node.classed("selected", false);
+    });
 
-      //     var extent = d3.event.selection;
+    function brushed() {
+        if (!d3v4.event.sourceEvent) return;
+        if (!d3v4.event.selection) return;
 
-      //     node.classed("selected", function(d) {
-      //         return d.selected = d.previouslySelected ^
-      //         (extent[0][0] <= d.x && d.x < extent[1][0]
-      //          && extent[0][1] <= d.y && d.y < extent[1][1]);
-      //     });
-      // }
+        var extent = d3v4.event.selection;
 
-      function brushended() {
-        if (!d3.event.sourceEvent) return;
-        if (!d3.event.selection) return;
+        node.classed("selected", function(d) {
+            return d.selected = d.previouslySelected ^
+            (extent[0][0] <= d.x && d.x < extent[1][0]
+             && extent[0][1] <= d.y && d.y < extent[1][1]);
+        });
+    }
+
+    function brushended() {
+        if (!d3v4.event.sourceEvent) return;
+        if (!d3v4.event.selection) return;
         if (!gBrush) return;
 
         gBrush.call(brush.move, null);
 
         if (!brushMode) {
-          // the shift key has been release before we ended our brushing
-          gBrush.remove();
-          gBrush = null;
+            // the shift key has been release before we ended our brushing
+            gBrush.remove();
+            gBrush = null;
         }
 
         brushing = false;
-      }
+    }
 
-      d3.select('body').on('keydown', keydown);
-      d3.select('body').on('keyup', keyup);
+    d3v4.select('body').on('keydown', keydown);
+    d3v4.select('body').on('keyup', keyup);
 
-      // var this.shiftKey=null;
+    var shiftKey;
 
-      function keydown() {} //keydown
+    function keydown() {
+        shiftKey = d3v4.event.shiftKey;
 
-      function keyup() {
-        this.shiftKey = false;
+        if (shiftKey) {
+            // if we already have a brush, don't do anything
+            if (gBrush)
+                return;
+
+            brushMode = true;
+
+            if (!gBrush) {
+                gBrush = gBrushHolder.append('g');
+                gBrush.call(brush);
+            }
+        }
+    }
+
+    function keyup() {
+        shiftKey = false;
         brushMode = false;
 
         if (!gBrush)
-          return;
+            return;
 
         if (!brushing) {
-          // only remove the brush if we're not actively brushing
-          // otherwise it'll be removed when the brushing ends
-          gBrush.remove();
-          gBrush = null;
+            // only remove the brush if we're not actively brushing
+            // otherwise it'll be removed when the brushing ends
+            gBrush.remove();
+            gBrush = null;
         }
-      } // keyup
+    }
 
-      function dragged(d) {
-        // node.filter(function(d) { return d.selected; })
-        //       .each(function(d) { 
-        //           d.fx += d3.event.dx;
-        //           d.fy += d3.event.dy;
-        //       })
-      }
+    function dragstarted(d) {
+      if (!d3v4.event.active) simulation.alphaTarget(0.9).restart();
 
-      // function dragged(d) {
-      //   //d.fx = d3.event.x;
-      //   //d.fy = d3.event.y;
-      //         node.filter(function(d) { return d.selected; })
-      //         .each(function(d) { 
-      //             d.fx += d3.event.dx;
-      //             d.fy += d3.event.dy;
-      //         })
-      // }
+        if (!d.selected && !shiftKey) {
+            // if this node isn't selected, then we have to unselect every other node
+            node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
+        }
 
+        d3v4.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
 
+        node.filter(function(d) { return d.selected; })
+        .each(function(d) { //d.fixed |= 2; 
+          d.fx = d.x;
+          d.fy = d.y;
+        })
 
-      // function 
+    }
 
-      var texts = ['Use the scroll wheel to zoom',
-        'Hold the shift key to select nodes'
-      ]
+    function dragged(d) {
+      //d.fx = d3v4.event.x;
+      //d.fy = d3v4.event.y;
+            node.filter(function(d) { return d.selected; })
+            .each(function(d) { 
+                d.fx += d3v4.event.dx;
+                d.fy += d3v4.event.dy;
+            })
+    }
 
-      this.svg.selectAll('text')
+    function dragended(d) {
+      if (!d3v4.event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+        node.filter(function(d) { return d.selected; })
+        .each(function(d) { //d.fixed &= ~6; 
+            d.fx = null;
+            d.fy = null;
+        })
+    }
+
+    var texts = ['Use the scroll wheel to zoom',
+                 'Hold the shift key to select nodes']
+
+    svg.selectAll('text')
         .data(texts)
         .enter()
         .append('text')
         .attr('x', 900)
-        .attr('y', function (d, i) {
-          return 470 + i * 18;
-        })
-        .text(function (d) {
-          return d;
-        });
+        .attr('y', function(d,i) { return 470 + i * 18; })
+        .text(function(d) { return d; });
 
-    },
+    return null;
+            }, //d3init
     D3getFill: function (d) {
       // all fill logic here
       let c = null
