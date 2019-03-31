@@ -125,42 +125,52 @@
   , "article": ["Marco Renaldo was a fine puppeteer whom Gil commissioned, once, for his puppet, Golly. Golly claims Marco 'used to kiss' him, but he claims remain unsubstantiated."]
 }, {
   "_key": "_:weebruce"
+  , "daly": false
   , "name": "Wee Bruce - Teenaged Guard of the Ramparts"
   , "article": ["Wee Bruce - Teenaged Guard of the Ramparts is a ghost who haunts Edinburgh Castle and features at the climax in Cameron McGonigle's Ghost Tours That Are Scary with a remarkably easy test of riddles."]
 }, {
   "_key": "_:thetrowofdumbiedykesroad"
+  , "daly": false
   , "name": "Plaxicon - The Trow of Dumbiedykes Road"
   , "article": ["Plaxicon is accused of vanquishing Stuart Cambridge in 1853. In fact, he may be not be a Trow at all but either an extraterrestrial traveler from Zaltan 3 or a Scot who got drunk, saw a drone, and lost his pants.", "His favorite candies are Minstrels and Maltesers."]
 }, {
   "_key": "_:stuartcambridge"
+  , "daly": false
   , "name": "Stuart Cambridge"
   , "article": ["Stuart Cambridge was a much-beloved bagpipe player in Edinburgh who went missing in 1853, likely by alien abduction."]
 }, {
   "_key": "_:sawneybean"
+  , "daly": false
   , "name": "Alexander (Sawney) Bean"
   , "article": ["Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland. He lives in a cave in the Scottish Highlands with his giant, incestual family where he murders and eats weary travelers.", "During the day he plays board games and haunts the Tolbooth Tavern by moving tableware around and toggling windows."]
 }, {
   "_key": "_:ghostofthebrewlab"
+  , "daly": false
   , "name": "Amanda (The Ghost of the Brew Lab)"
   , "article": ["Amanda is a deceased 19 year-old American woman who got her hair done and then promptly fell down the stairs of a coffee café, impaling her eye on a cappucino machine and spilling her brains through the chasm.", "Since, she haunts the café by disrupting the staff when they count out change, purturbing the books."]
 }, {
   "_key": "_:thirstiestghostever"
+  , "daly": false
   , "name": "The Thirstiest Ghost Ever"
   , "article": ["The Thirstiest Ghost Ever is a nameless, deceased woman who cleaned boots and fireplaces at the private home that later became Edinburgh's Hotel du Vin. Having grown extremely thirsty from the work (and denied a drink by her employer), she was curbed to death on a bucket of water by a coach iron."]
 }, {
   "_key": "_:donaldjtrump"
+  , "daly": false
   , "article": ["Donald Trump was a president of the United States.", ]
-  "name": "Donald J. Trump"
+  , "name": "Donald J. Trump"
 }, {
   "_key": "_:margotchunk"
+  , "daly": false
   , "article": ["Margot Chunk was summoned from retirement to be Joe Bongo's replacement as the driving instructor at Marina del Rey High School. She has tried and failed to make 'The Guiness Book of World Records' a number of times for, including but not limited to, walking the most amount of dog and drinking the most bleach.", ]
-  "name": "Margot Chunk"
+  , "name": "Margot Chunk"
 }, {
   "_key": "_:gretathecaretaker"
+  , "daly": false
   , "article": ["Greta the Caretaker is an American home nurse (credentials unknown) who once found Johnny McGory in her client's home, watching cartoons in his underwear.", ]
-  "name": "Greta the Caretaker"
+  , "name": "Greta the Caretaker"
 }, {
   "_key": "_:unnamedelderlywoman1"
+  , "daly": false
   , "name": "Unnamed Elderly Woman #1"
   , "article": ["Unnamed Elderly Woman #1 is a bedridden American homeowner whose caretaker, Greta, once had to fight away an Irish storytelling intruder."]
 }, {
