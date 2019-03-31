@@ -31,7 +31,10 @@
       <div class="column is-half dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->
         <ul>
-          <li>entities_total: {{entities_total}}</li>
+          <li>entities_total: 
+            <span v-if="entities_total.loading==true">1 sec...</span>
+          <span v-else>{{entities_total.v}}</span>
+        </li>
           <li><span v-bind:class="console.clazz" class="icon mdi"></span>{{console.msg}}</li>
         </ul>
         <div id="network">
@@ -40,7 +43,13 @@
       </div note="/.dv-column-left">
       <div class="column is-half dv-column-right">
         active.key: {{active.key}}
-        <br/> active.article: {{active.article}}
+        <br/> 
+        <!-- active.article: {{active.article}} -->
+        <ul>
+          <li v-for="articlechunk in active.article">
+            {{articlechunk}}
+          </li>
+        </ul>
         <br/> active.graph: {{active.graph}}
         <br/>
       </div note="/.dv-column-right">
@@ -60,21 +69,19 @@ export default {
   // components:{Graph},
   data () {
     return {
-      CFG: { mode: 'T' },
+      url_arango:"http://"+process.env.ARANGOIP+":"+process.env.ARANGOPORT+process.env.ARANGOCURSOR,
       graph: null,
       page: {
         title: "Andy Dalyverse Entities Graph"
       },
       state: "filled",
       fittable: true,
-      svg: null,
-      shiftKey: null,
       active: {
         key: null,
         item: { article: null },
         graph: null
       },
-      entities_total: 0,
+      entities_total: {v:0,loading:true},
       console: {
         msg: "",
         clazz: null,
@@ -82,7 +89,7 @@ export default {
       },
       graf: {
         nodes: [
-          { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: "Dalton Wilcox is the Poet Laureate of the West" }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: "Random Vampire is a random vampire vanquished by Dalton Wilcox" }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: "Random Mummy is a random mummy vanquished by Dalton Wilcox" }
+          { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: ["Dalton Wilcox is the Poet Laureate of the West"] }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: ["Random Vampire is a random vampire vanquished by Dalton Wilcox"] }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: ["Random Mummy is a random mummy vanquished by Dalton Wilcox"] }
         ],
         edges: [
           { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
@@ -117,23 +124,27 @@ export default {
 
   }, // created
   mounted: function () {
-    this.D3init();
-    this.fetchTotalEntities();
+    console.log("env.mode=",process.env.MODE)
+    // this.fetchTotalEntities();
+    if(process.env.MODE == "T"){this.fakeEntities();}else{this.fetchEntities();}
+    this.fetchEntities();
+    if(process.env.MODE == "T")this.D3init();
+            
   }, //mounted
   methods: {
     setActive (_id) {
-
-      let ai = this.$_.findWhere(this.graf.nodes, { id: _id })
+      console.info(
+      process.env.VERBOSITY === "DEBUG" ? "activating w _id:"+_id : null
+    );
+      let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: _id })
 
       this.active = {
         key: ai.id,
         article: ai.article,
         graph: null
       }
-
     },
     unsetActive (_id) {
-
       this.active = {
         key: null,
         article: null,
@@ -209,8 +220,12 @@ var svg = d3.select('#network > svg')
 
     var color = d3v4.scaleOrdinal(d3v4.schemeCategory20);
 
-    var graph_nodes = (this.CFG.mode == "33") ? this.graph.nodes : this.graf.nodes;
-    var graph_edges = (this.CFG.mode == "33") ? this.graph.edges: this.graf.edges
+    var graph_nodes = (process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes;
+    var graph_edges = (process.env.MODE == "33") ? this.graph.edges: this.graf.edges
+
+          console.info(
+        process.env.VERBOSITY === "DEBUG" ? "initing D3 w/ nodes, edges: "+graph_nodes.length+","+graph_edges.length : null
+      );
 /*    var nodes = {};
     var i;
     for (i = 0; i < graph_nodes.length; i++) {
@@ -238,14 +253,25 @@ var nodes = graph_nodes
       links.forEach((link) => {
         // this.graf.edges.forEach((link) => {
 
+if(link){
         var s = link.source = nodeById.get(link.source),
           t = link.target = nodeById.get(link.target),
           i = {}; // intermediate node
+          
+          // if(!s)console.log('this s notfound by nodeById:',link.source)
+          //   if(!t)console.log('this t notfound by nodeById:',link.target)
+          //     if(!s && !t){console.log("...and this is link ob:",link)}
+
         // this.graf.nodes.push(i);
         nodes.push(i);
+      
         // this.graf.edges.push({ source: s, target: i }, { source: i, target: t });
         links.push({ source: s, target: i }, { source: i, target: t });
         bilinks.push([s, i, t]);
+      }
+      else {
+        console.error("link ainta thing")
+      }
       });
 
 /* /bezier hack */
@@ -261,11 +287,6 @@ var nodes = graph_nodes
         .data(bilinks)
         .enter().append("path")
         .attr("stroke-width", 1);
-
-  // var link = gDraw.append("g")
-  // .attr("class","link")
-  //   .data(bilinks)
-  //   .enter().append("path")
 
     var node = gDraw.append("g")
         .attr("class", "node")
@@ -321,9 +342,11 @@ function ticked() {
   }
 
   function positionLink(d) {
-  return "M" + d[0].x + "," + d[0].y
-       + "S" + d[1].x + "," + d[1].y
-       + " " + d[2].x + "," + d[2].y;
+    if(d[0] && d[1] && d[2]){
+      return "M" + d[0].x + "," + d[0].y
+           + "S" + d[1].x + "," + d[1].y
+           + " " + d[2].x + "," + d[2].y;
+         } else {return null;}
 }
 
 function positionNode(d) {
@@ -437,9 +460,11 @@ function positionNode(d) {
     function dragstarted(d) {
       if (!d3v4.event.active) simulation.alphaTarget(0.9).restart();
 
+// if(d._id){
         if (!d.selected && !shiftKey) {
             // if this node isn't selected, then we have to unselect every other node
-            node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; });
+            node.classed("selected", function(p) { return p.selected =  p.previouslySelected = false; })
+            .attr("r",process.env.GRAPH_NODE_SIZE_DEF);
         }
 
         d3v4.select(this).classed("selected", function(p) { d.previouslySelected = d.selected; return d.selected = true; });
@@ -449,6 +474,8 @@ function positionNode(d) {
           d.fx = d.x;
           d.fy = d.y;
         })
+        .attr("r",process.env.GRAPH_NODE_SIZE_SEL)
+      // }//d._id
 
     }
 
@@ -493,52 +520,20 @@ function positionNode(d) {
         case (!d._id):
           c = 'rgba(255,255,255,0)'
           break;
-        case (d.daly == true):
+          case (d.daly == true):
           c = 'rgba(3,3,3,1)'
           break;
           // case (!d.daly):
           //   c = 'rgba(44,44,44,1)'
           //   break;
         default:
-          c = 'rgba(55,155,155,1)'
+          c = 'rgba(210,220,214,1)'
           break;
       }
 
       return c;
 
     },
-    fetchTotalEntities: function () {
-
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "getTotalEntities()..." : null
-      );
-      if (this.CFG.mode == "33") {
-        let q = 'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,article:l.article})\
-let ppls = (for p in people return {daly:false,_id:p._id,id:p._id,label:p.name,article:p.article})\
-let tngs = (for t in things return {daly:false,_id:t._id,id:t._id,label:t.name,article:t.article})\
-let evnts = (for ev in events return {daly:false,_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
-let pplsplcs = (flatten(append(ppls,plcs)))\
-let tngsevts = (flatten(append(tngs,evnts)))\
-let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
-return count(entities[0])'
-
-        axios
-          .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
-            query: q
-          })
-          .then(response => {
-            console.info(
-              process.env.VERBOSITY === "DEBUG" ? "setting entities_total w/ axios response..." : null
-            );
-            // this.entities_total = response.data.result[0];
-            this.entities_total = response.data.result[0]
-          }) //axios.then
-          .catch(e => {
-            console.error(e);
-          }); //axios.catch
-      } //cfg.mode
-      else { this.entities_total = this.graf.nodes.length }
-    }, //getotalevents
     onKey: function (e) {
       switch (true) {
         case e.keyCode == 18 && this.state == "empty":
@@ -608,10 +603,11 @@ return count(entities[0])'
       console.log(
         process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
       );
+        
       // if we have an active.key
       if (this.active.key !== null) {
         axios
-          .post("http://" + process.env.ARANGOIP + "/cursor", {
+          .post(this.url_arango, {
             query: 'for p in people return p'
           })
           .then(response => {
@@ -638,6 +634,57 @@ return count(entities[0])'
           }
         }); //rejplace
       } //setRoute
+      ,fakeEntities: function(){
+
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "process.env.mode:"+process.env.MODE : null
+      );
+this.entities_total.loading=false
+          this.entities_total.v=this.graf.nodes.length
+
+      }
+      ,fetchEntities: function () {
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
+      );
+
+      let q =
+        'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,article:l.article})\
+let ppls = (for p in people return {daly:p.daly,_id:p._id,id:p._id,label:p.name,article:p.article})\
+let tngs = (for t in things return {daly:false,_id:t._id,id:t._id,label:t.name,article:t.article})\
+let evnts = (for ev in events return {daly:false,_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
+let pplsplcs = (flatten(append(ppls,plcs)))\
+let tngsevts = (flatten(append(tngs,evnts)))\
+let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
+let edgees = (\
+for ent in entities[0] \
+FOR v, e, p IN 1..1 ANY ent edges \
+RETURN {typ:e.type,source:e._from,target:e._to,id:e._id,_id:e._id})\
+return {entitiez:unique(entities),edgez:unique(edgees)}'
+
+      axios
+        .post(this.url_arango, {
+          query: q
+        })
+        .then(response => {
+          console.info(
+            process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
+          );
+
+          // let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n.id,label:n.label,article:n.article}})
+          let deeznodes = response.data.result[0].entitiez[0]
+          this.entities_total.loading=false
+          this.entities_total.v=deeznodes.length
+          this.graph = {
+            edges: response.data.result[0].edgez,
+            nodes: deeznodes
+          }
+
+        }) //axios.then
+        .catch(e => {
+          console.error(e);
+        }); //axios.catch
+    } //fetchEntities
       ,
     getClass: function (which, one) {
       let clas = null;
