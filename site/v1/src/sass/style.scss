@@ -90,9 +90,11 @@ width:100%;
 //   color:rgba(244,222,244,.5);
 // }
 circle{
+  r:6;
 &.selected{
   stroke:yellow;
   stroke-width:3;
+  r:10;
   
 }}
 
