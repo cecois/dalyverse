@@ -81,9 +81,10 @@ width:100%;
 }
 }
 
-.edge {
+.link {
   fill: none;
-  stroke: #bbb;
+  stroke: rgba(0,0,0,.1);
+  stroke-width:1px;
 }
 // circle{
 //   color:rgba(244,222,244,.5);
