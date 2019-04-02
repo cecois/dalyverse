@@ -100,9 +100,7 @@ export default {
   }, // data
   beforeCreate () {}, // beforeCreate
   created () {
-    if (this.$route.params.activeid) {
-      this.active.key = this.$route.params.activeid;
-    }
+    
 
     window.addEventListener("keydown", this.onKey);
 
@@ -110,6 +108,13 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
     );
+
+    if (this.$route.params.activeid) {
+      this.active.key = decodeURIComponent(this.$route.params.activeid);
+    }
+    if(this.active.key) this.setActive(this.active.key)
+
+      console.log(this.$route.params.activeid);
 
     this.$once('hook:once', function () {
       this.fittable = false;
@@ -130,21 +135,28 @@ export default {
     this.fetchEntities();
     if (process.env.MODE == "T") this.D3init();
 
+// d3.select("#people\\/_\\:daltonwilcox").classed("selected",true)
+
   }, //mounted
   methods: {
-    setActive (_id) {
+    setActive (nak) {
       console.info(
-        process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + _id : null
+        process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nak : null
       );
-      let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: _id })
+
+      let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: nak })
+
+//       return id.replace(':', '•').replace('/', '*')
+let nakk="#"+nak.replace('/', "\\/").replace(':', '\\:')
+d3.select(nakk).classed("selected",true)
 
       this.active = {
-        key: ai.id,
-        article: ai.article,
+        key: (!ai)?null:ai.id,
+        article: (!ai)?null:ai.article,
         graph: null
       }
     },
-    unsetActive (_id) {
+    unsetActive (nak) {
       this.active = {
         key: null,
         article: null,
@@ -157,16 +169,16 @@ export default {
       this.setActive(d._id)
 
     },
-    vodeSelect (__id) {
+    // vodeSelect (__id) {
 
-      let s = this.$_.findWhere(this.graf.nodes, { id: "people*_•daltonwilcox" })
-      console.log("s", s);
-      // .classed("selected", function (p) {
-      //   return p.selected = p.previouslySelected = false;
-      // })
-      // .attr("r", process.env.GRAPH_NODE_SIZE_DEF);
+    //   let s = this.$_.findWhere(this.graf.nodes, { id: "people*_•daltonwilcox" })
+    //   console.log("s", s);
+    //   // .classed("selected", function (p) {
+    //   //   return p.selected = p.previouslySelected = false;
+    //   // })
+    //   // .attr("r", process.env.GRAPH_NODE_SIZE_DEF);
 
-    },
+    // },
     idMute: function (id, way) {
 
       if (way == 'forward') {
@@ -305,7 +317,7 @@ export default {
         })
         .attr("id", (d) => {
           if (d._id) {
-            return this.idMute(d._id, 'forward')
+            return d._id
           } else {
             return null;
           }
@@ -753,7 +765,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
   }, //methods
   computed: {}, //computed
   watch: {
-    // 'active': { handler: function (vnew) { console.log("vnew:", vnew); } } //active // ,
+    // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
 
     nodes: {
       handler: function (vnew, vold) {

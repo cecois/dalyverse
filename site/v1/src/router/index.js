@@ -19,7 +19,7 @@ export default new Router({
       component: EVENTS
     },
     {
-      path: '/entities/:collx?/:entity?',
+      path: '/entities/:activeid?',
       name: 'entities',
       component: ENTITIES
     }
