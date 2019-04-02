@@ -100,7 +100,7 @@ export default {
   }, // data
   beforeCreate () {}, // beforeCreate
   created () {
-    
+
 
     window.addEventListener("keydown", this.onKey);
 
@@ -108,13 +108,6 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
     );
-
-    if (this.$route.params.activeid) {
-      this.active.key = decodeURIComponent(this.$route.params.activeid);
-    }
-    if(this.active.key) this.setActive(this.active.key)
-
-      console.log(this.$route.params.activeid);
 
     this.$once('hook:once', function () {
       this.fittable = false;
@@ -129,13 +122,19 @@ export default {
 
   }, // created
   mounted: function () {
-    console.log("env.mode=", process.env.MODE)
-      // this.fetchTotalEntities();
+    console.info(
+      process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
+    );
+    // this.fetchTotalEntities();
     if (process.env.MODE == "T") { this.fakeEntities(); } else { this.fetchEntities(); }
     this.fetchEntities();
     if (process.env.MODE == "T") this.D3init();
 
-// d3.select("#people\\/_\\:daltonwilcox").classed("selected",true)
+    // d3.select("#people\\/_\\:daltonwilcox").classed("selected",true)
+    if (this.$route.params.activeid) {
+      this.active.key = decodeURIComponent(this.$route.params.activeid);
+    }
+    if (this.active.key) this.setActive(this.active.key)
 
   }, //mounted
   methods: {
@@ -144,15 +143,18 @@ export default {
         process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nak : null
       );
 
-      let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: nak })
+      let nakk = (nak) ? nak : this.active.key
 
-//       return id.replace(':', '•').replace('/', '*')
-let nakk="#"+nak.replace('/', "\\/").replace(':', '\\:')
-d3.select(nakk).classed("selected",true)
+      let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: nakk })
+
+      console.log("ai:", ai);
+      //       return id.replace(':', '•').replace('/', '*')
+      let nakki = "#" + nakk.replace('/', "\\/").replace(':', '\\:')
+      d3.select(nakki).classed("selected", true)
 
       this.active = {
-        key: (!ai)?null:ai.id,
-        article: (!ai)?null:ai.article,
+        key: (!ai) ? null : ai.id,
+        article: (!ai) ? null : ai.article,
         graph: null
       }
     },
@@ -613,7 +615,7 @@ d3.select(nakk).classed("selected",true)
           break;
       }
 
-      this.page.title = "Dalyverse Events Graph: " + sub;
+      this.page.title = "Dalyverse Entities Graph: " + sub;
     }, //setPageTitle
     setItem: function (q) {
 
@@ -684,7 +686,7 @@ d3.select(nakk).classed("selected",true)
 
         this.$router.push({
           params: {
-            activeid: this.active.key
+            activeid: encodeURIComponent(this.active.key)
           }
         }); //rejplace
       } //setRoute
@@ -692,7 +694,7 @@ d3.select(nakk).classed("selected",true)
     fakeEntities: function () {
 
       console.info(
-        process.env.VERBOSITY === "DEBUG" ? "process.env.mode:" + process.env.MODE : null
+        process.env.VERBOSITY === "DEBUG" ? "process.env.mode : " + process.env.MODE : null
       );
       this.entities_total.loading = false
       this.entities_total.v = this.graf.nodes.length
@@ -764,16 +766,29 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     }
   }, //methods
   computed: {}, //computed
+
   watch: {
     // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
-
-    nodes: {
+    "active.key": {
       handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew : null
         );
+        this.setRoute();
+        // this.setItem();
+        // this.setGraph();
+        // this.setTimeline();
+        // this.setMap();
+        this.setPageTitle();
       }
-    } //nodes
+    }
+    // ,nodes: {
+    //   handler: function (vnew, vold) {
+    //     console.info(
+    //       process.env.VERBOSITY === "DEBUG" ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length : null
+    //     );
+    //   }
+    // } //nodes
   } //watch
 }; //export.timeline
 </script>
