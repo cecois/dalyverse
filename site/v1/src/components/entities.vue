@@ -42,15 +42,48 @@
         </div note="/#network">
       </div note="/.dv-column-left">
       <div class="column is-half dv-column-right">
-        active.key: {{active.key}}
+        {{active.label}}
         <br/>
         <!-- active.article: {{active.article}} -->
-        <ul>
-          <li v-for="articlechunk in active.article">
+        <p class="is-italic">
+          {{$_.first(active.article)}}
+        </p>
+        <ul v-if="active.article">
+          <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1
+)))">
             {{articlechunk}}
           </li>
         </ul>
-        <br/> active.graph: {{active.graph}}
+        <br/>
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Tweets</p>
+              <p class="title">3,456</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Following</p>
+              <p class="title">123</p>
+            </div>
+          </div>
+        </nav>
+        <br/>
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Tweets</p>
+              <p class="title">3,456</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Following</p>
+              <p class="title">123</p>
+            </div>
+          </div>
+        </nav>
         <br/>
       </div note="/.dv-column-right">
     </div>
@@ -89,7 +122,7 @@ export default {
       },
       graf: {
         nodes: [
-          { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: ["Dalton Wilcox is the Poet Laureate of the West"] }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: ["Random Vampire is a random vampire vanquished by Dalton Wilcox"] }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: ["Random Mummy is a random mummy vanquished by Dalton Wilcox"] }
+          { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: ["Dalton Wilcox is the Poet Laureate of the West", "He is known to fashion \"land virginies\" while roaming the western range."] }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: ["Random Vampire is a random vampire vanquished by Dalton Wilcox"] }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: ["Random Mummy is a random mummy vanquished by Dalton Wilcox"] }
         ],
         edges: [
           { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
@@ -125,12 +158,10 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    // this.fetchTotalEntities();
     if (process.env.MODE == "T") { this.fakeEntities(); } else { this.fetchEntities(); }
     this.fetchEntities();
     if (process.env.MODE == "T") this.D3init();
 
-    // d3.select("#people\\/_\\:daltonwilcox").classed("selected",true)
     if (this.$route.params.activeid) {
       this.active.key = decodeURIComponent(this.$route.params.activeid);
     }
@@ -147,13 +178,12 @@ export default {
 
       let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: nakk })
 
-      console.log("ai:", ai);
-      //       return id.replace(':', '•').replace('/', '*')
       let nakki = "#" + nakk.replace('/', "\\/").replace(':', '\\:')
       d3.select(nakki).classed("selected", true)
 
       this.active = {
         key: (!ai) ? null : ai.id,
+        label: (!ai) ? null : ai.label,
         article: (!ai) ? null : ai.article,
         graph: null
       }
@@ -171,25 +201,6 @@ export default {
       this.setActive(d._id)
 
     },
-    // vodeSelect (__id) {
-
-    //   let s = this.$_.findWhere(this.graf.nodes, { id: "people*_•daltonwilcox" })
-    //   console.log("s", s);
-    //   // .classed("selected", function (p) {
-    //   //   return p.selected = p.previouslySelected = false;
-    //   // })
-    //   // .attr("r", process.env.GRAPH_NODE_SIZE_DEF);
-
-    // },
-    idMute: function (id, way) {
-
-      if (way == 'forward') {
-        return id.replace(':', '•').replace('/', '*')
-      } else {
-        return id.replace('•', ":").replace('*', '/')
-      }
-
-    }, //idmute
     D3init: function () {
 
       // if both d3v3 and d3v4 are loaded, we'll assume
@@ -226,7 +237,6 @@ export default {
             d.previouslySelected = false;
           });
           node.classed("selected", false)
-            // .attr("r", process.env.GRAPH_NODE_SIZE_DEF)
         });
 
       var gDraw = gMain.append('g');
@@ -249,13 +259,6 @@ export default {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "initing D3 w/ nodes, edges: " + graph_nodes.length + "," + graph_edges.length : null
       );
-      /*    var nodes = {};
-          var i;
-          for (i = 0; i < graph_nodes.length; i++) {
-              nodes[graph_nodes[i].id] = graph_nodes[i];
-              graph_nodes[i].weight = 1.01;
-          }
-      */
 
       /* ---------------------------- bezier hack: */
 
@@ -265,28 +268,16 @@ export default {
         })
 
       , links = graph_edges, bilinks = [];
-      // var i;
-
-      //   var nodes = graph.nodes,
-      // nodeById = d3.map(nodes, function(d) { return d.id; }),
-      // bilinks = [];
 
       links.forEach((link) => {
-        // this.graf.edges.forEach((link) => {
 
         if (link) {
           var s = link.source = nodeById.get(link.source),
             t = link.target = nodeById.get(link.target),
             i = {}; // intermediate node
 
-          // if(!s)console.log('this s notfound by nodeById:',link.source)
-          //   if(!t)console.log('this t notfound by nodeById:',link.target)
-          //     if(!s && !t){console.log("...and this is link ob:",link)}
-
-          // this.graf.nodes.push(i);
           nodes.push(i);
 
-          // this.graf.edges.push({ source: s, target: i }, { source: i, target: t });
           links.push({ source: s, target: i }, { source: i, target: t });
           bilinks.push([s, i, t]);
         } else {
@@ -313,7 +304,6 @@ export default {
         .selectAll("circle")
         .data(nodes)
         .enter().append("circle")
-        // .attr("r", process.env.GRAPH_NODE_SIZE_DEF)
         .attr("fill", (d) => {
           return this.D3getFill(d)
         })
@@ -347,8 +337,6 @@ export default {
           })
           .distance(function (d) {
             return 30;
-            //var dist = 20 / d.value;
-            //console.log('dist:', dist);
 
             return dist;
           })
@@ -500,13 +488,11 @@ export default {
       function dragstarted(d) {
         if (!d3v4.event.active) simulation.alphaTarget(0.9).restart();
 
-        // if(d._id){
         if (!d.selected && !shiftKey) {
           // if this node isn't selected, then we have to unselect every other node
           node.classed("selected", function (p) {
-              return p.selected = p.previouslySelected = false;
-            })
-            // .attr("r", process.env.GRAPH_NODE_SIZE_DEF);
+            return p.selected = p.previouslySelected = false;
+          })
         }
 
         d3v4.select(this).classed("selected", function (p) {
@@ -521,14 +507,10 @@ export default {
             d.fx = d.x;
             d.fy = d.y;
           })
-          // .attr("r", process.env.GRAPH_NODE_SIZE_SEL)
-          // }//d._id
 
       }
 
       function dragged(d) {
-        //d.fx = d3v4.event.x;
-        //d.fy = d3v4.event.y;
         node.filter(function (d) {
             return d.selected;
           })
@@ -579,9 +561,6 @@ export default {
         case (d.daly == true):
           c = 'rgba(3,3,3,1)'
           break;
-          // case (!d.daly):
-          //   c = 'rgba(44,44,44,1)'
-          //   break;
         default:
           c = 'rgba(210,220,214,1)'
           break;
@@ -643,17 +622,6 @@ export default {
         locations: null
       };
     }, //nullGraph
-    DUMP: function (thing) {
-
-      console.info(
-        (process.env.VERBOSITY === "DEBUG" && (thing)) ? thing : null
-      );
-
-      if (process.env.VERBOSITY === 'DEBUG') {
-        console.log("DUMP:thing", thing)
-      }
-
-    }, //dump
     setGraph: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
@@ -728,7 +696,6 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
               process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
             );
 
-            // let deeznodes = this.$_.map(response.data.result[0].entitiez[0],(n)=>{return {id:n.id,label:n.label,article:n.article}})
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length

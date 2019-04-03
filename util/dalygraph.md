@@ -25,11 +25,60 @@ Interview w/ Cactus Irene (at a peter cetera concert)
 
 ### forceDirect
 
-zoom+pan
+* zoom+pan
 daly test style
 labels should show/hide on zoom
-drag/click pulls item and graph for that node
+* drag/click pulls item and graph for that node
 filter by name
+
+Has Murdered
+* .has_murdered==true
+
+Friendships
+* hasFriend
+
+Memberships
+* isFormerMemberOf
+* isMemberOf
+
+Professional Partnerships
+* caresFor
+* isCaredForBy
+* isClientOf
+* wasClientOf
+
+Events Participated In
+* hasParticipant
+* participatedIn
+
+Owners
+* isPetOf
+
+Familial Relations
+* isChildOf
+* isPossibleChildOf
+* isSiblingOf
+
+Locations
+* islocateAt
+* livesAt
+
+Current and Former Spouses
+* isSpouseOf
+* wasSpouseOf
+* isFormerSpouseOf
+
+Current & Former Employers
+* hasWorkedAt
+* hasWorkedFor
+* workedAt
+* workedFor
+* worksAt
+* worksFor
+
+See Also
+* seeAlso
+
 
 ### per person:
 
