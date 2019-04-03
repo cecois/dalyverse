@@ -58,13 +58,13 @@
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
-              <p class="heading">Tweets</p>
+              <p class="heading">C1</p>
               <p class="title">3,456</p>
             </div>
           </div>
           <div class="level-item has-text-centered">
             <div>
-              <p class="heading">Following</p>
+              <p class="heading">C2</p>
               <p class="title">123</p>
             </div>
           </div>
@@ -73,13 +73,13 @@
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
-              <p class="heading">Tweets</p>
+              <p class="heading">C3</p>
               <p class="title">3,456</p>
             </div>
           </div>
           <div class="level-item has-text-centered">
             <div>
-              <p class="heading">Following</p>
+              <p class="heading">C4</p>
               <p class="title">123</p>
             </div>
           </div>
@@ -107,6 +107,7 @@ export default {
       page: {
         title: "Andy Dalyverse Entities Graph"
       },
+      meta: { graph: { loading: false } },
       state: "filled",
       fittable: true,
       active: {
@@ -120,15 +121,9 @@ export default {
         clazz: null,
         throb: false
       },
-      graf: {
-        nodes: [
-          { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: ["Dalton Wilcox is the Poet Laureate of the West", "He is known to fashion \"land virginies\" while roaming the western range."] }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: ["Random Vampire is a random vampire vanquished by Dalton Wilcox"] }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: ["Random Mummy is a random mummy vanquished by Dalton Wilcox"] }
-        ],
-        edges: [
-          { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
-          { source: 'people/_:daltonwilcox', target: 'people/_:mummy' }
-        ]
-      }
+      relationMap: [
+        { rel: "hasFriend", source: "Friendships", target: "Friendships", ver: "has friend" }, { rel: "isFormerMemberOf", source: "Memberships", target: "Current & Former Members", ver: "is former member of" }, { rel: "isMemberOf", source: "Memberships", target: "Current & Former Members", ver: "is member of" }, { rel: "caresFor", source: "Professional Partnerships", target: "Professional Partnerships", ver: "cares for" }, { rel: "isCaredForBy", source: "Professional Partnerships", target: "Professional Partnerships", ver: "is cared for by" }, { rel: "isClientOf", source: "Professional Partnerships", target: "Professional Partnerships", ver: "is client of" }, { rel: "wasClientOf", source: "Professional Partnerships", target: "Professional Partnerships", ver: "was client of" }, { rel: "hasParticipant", source: "Event Participants", target: "Events Participated In", ver: "has participant" }, { rel: "participatedIn", source: "Events Participated In", target: "Event Participants", ver: "participated in" }, { rel: "isPetOf", source: "Owners", target: "Owns Pet", ver: "is pet of" }, { rel: "isChildOf", source: "Familial Relations", target: "Familial Relations", ver: "is child of" }, { rel: "isPossibleChildOf", source: "Familial Relations", target: "Familial Relations", ver: "is possible child of" }, { rel: "isSiblingOf", source: "Familial Relations", target: "Familial Relations", ver: "is sibling of" }, { rel: "islocateAt", source: "Locations", target: "Locations", ver: "is located at" }, { rel: "livesAt", source: "Locations", target: "Locations", ver: "lives at" }, { rel: "isSpouseOf", source: "Current & Former Spouses", target: "Current & Former Spouses", ver: "is spouse of" }, { rel: "wasSpouseOf", source: "Current & Former Spouses", target: "Current & Former Spouses", ver: "was spouse of" }, { rel: "isFormerSpouseOf", source: "Current & Former Spouses", target: "Current & Former Spouses", ver: "is former spouse of" }, { rel: "hasWorkedAt", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked at" }, { rel: "hasWorkedFor", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked for" }, { rel: "workedAt", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked at" }, { rel: "workedFor", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked for" }, { rel: "worksAt", source: "Current & Former Positions", target: "Current & Former Employees", ver: "works at" }, { rel: "worksFor", source: "Current & Former Positions", target: "Current & Former Employees", ver: "works for" }, { rel: "seeAlso", source: "See Also", target: "See Also", ver: "see also" }
+      ]
     }
   }, // data
   beforeCreate () {}, // beforeCreate
@@ -158,17 +153,81 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    if (process.env.MODE == "T") { this.fakeEntities(); } else { this.fetchEntities(); }
-    this.fetchEntities();
-    if (process.env.MODE == "T") this.D3init();
+    if (process.env.MODE == "T") { this.fakeFetchEntities(); } else { this.fetchEntities(); }
+    // if (process.env.MODE == "T") this.D3init();
 
     if (this.$route.params.activeid) {
       this.active.key = decodeURIComponent(this.$route.params.activeid);
     }
     if (this.active.key) this.setActive(this.active.key)
 
+    console.log(
+      process.env.VERBOSITY === "DEBUG" ? this : null
+    );
+
   }, //mounted
   methods: {
+    prepGraph (G) {
+
+      /*
+      the raw graph is going to be so many hasWorkedAt|hasParticipatedIn|occuredAt relations etc.
+      the problem is the vector between the source and target: if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
+
+      So we first figure out what the typ of the node core is (person,place,thing,event) so we know whether to grab the "source" or "target" heading out of this.relationMap.
+
+      Then we'll group all relations by typ and sort them into buckets with that chosen heading, viz those.
+      */
+      // get the edges that have a typ and bucket em with it
+
+      // let typsample =
+      //   // this.$_.first(
+      //   this.$_.groupBy(this.$_.filter(G, (g) => {
+      //     return this.$_.has(g, 'typ')
+      //   }), 'typ')
+      // )
+
+      let sota = null;
+
+      // let keys = this.$_.keys(typsample),
+      //   keyfirst = this.$_.first(keys),
+      //   typfirst = typs[keyfirst],
+      // let sota = 
+
+      // console.log('typs:', typsample)
+      // console.log('keys:', keys) // console.log('keyfirst:', keyfirst) // console.log('typfirst:', typfirst)
+
+      console.log('akey:', this.active.key)
+      console.log('sota testbase:', this.$_.first(G))
+
+      switch (true) {
+        case (this.$_.first(G).source.id == this.active.key):
+          sota = 'source'
+          break;
+        case (this.$_.first(G).target.id == this.active.key):
+          sota = 'target'
+          break;
+        default:
+          sota = 'unfound'
+          break;
+      }
+
+
+      console.log("sota:", sota);
+      return 'onesec'
+
+    } //prepgraph
+    ,
+    getGraph (nid) {
+
+      this.meta.graph.loading = true
+      let ge = this.$_.filter(this.graph.edges, (e) => {
+        return e.source.id == this.active.key || e.target.id == this.active.key
+      })
+      this.meta.graph.loading = false
+      return ge
+
+    } //getgraph
+    ,
     setActive (nak) {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nak : null
@@ -176,10 +235,7 @@ export default {
 
       let nakk = (nak) ? nak : this.active.key
 
-      let ai = this.$_.findWhere((process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes, { id: nakk })
-
-      let nakki = "#" + nakk.replace('/', "\\/").replace(':', '\\:')
-      d3.select(nakki).classed("selected", true)
+      let ai = this.$_.findWhere(this.graph.nodes, { id: nakk })
 
       this.active = {
         key: (!ai) ? null : ai.id,
@@ -187,6 +243,7 @@ export default {
         article: (!ai) ? null : ai.article,
         graph: null
       }
+
     },
     unsetActive (nak) {
       this.active = {
@@ -253,8 +310,8 @@ export default {
 
       var color = d3v4.scaleOrdinal(d3v4.schemeCategory20);
 
-      var graph_nodes = (process.env.MODE == "33") ? this.graph.nodes : this.graf.nodes;
-      var graph_edges = (process.env.MODE == "33") ? this.graph.edges : this.graf.edges
+      var graph_nodes = this.$_.sortBy(this.graph.nodes, 'daly');
+      var graph_edges = this.graph.edges;
 
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "initing D3 w/ nodes, edges: " + graph_nodes.length + "," + graph_edges.length : null
@@ -622,35 +679,34 @@ export default {
         locations: null
       };
     }, //nullGraph
-    setGraph: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
-      );
+    // setGraph: function () {
+    //   console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
+    //   console.log(
+    //     process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
+    //   );
 
-      // if we have an active.key
-      if (this.active.key !== null) {
-        axios
-          .post(this.url_arango, {
-            query: 'for p in people return p'
-          })
-          .then(response => {
-            this.active.graph = response.data.result[0];
-          }) //axios.then
-          .catch(e => {
-            console.error(e);
-          }); //axios.catch
-      } //if key
-      else {
-        // no key? null it out
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
-        );
-        this.active.graph = this.nullGraph();
-      }
-    }, //setgraph
+    //   // if we have an active.key
+    //   if (this.active.key !== null) {
+    //     axios
+    //       .post(this.url_arango, {
+    //         query: 'for p in people return p'
+    //       })
+    //       .then(response => {
+    //         this.active.graph = response.data.result[0];
+    //       }) //axios.then
+    //       .catch(e => {
+    //         console.error(e);
+    //       }); //axios.catch
+    //   } //if key
+    //   else {
+    //     // no key? null it out
+    //     console.log(
+    //       process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
+    //     );
+    //     this.active.graph = this.nullGraph();
+    //   }
+    // }, //setgraph
     setRoute: function () {
-        console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
         this.$router.push({
           params: {
@@ -659,15 +715,49 @@ export default {
         }); //rejplace
       } //setRoute
       ,
-    fakeEntities: function () {
+    fakeFetchEntities: function (small) {
+
 
       console.info(
-        process.env.VERBOSITY === "DEBUG" ? "process.env.mode : " + process.env.MODE : null
+        process.env.VERBOSITY === "DEBUG" ? "fakeFetchEntities()..." : null
       );
-      this.entities_total.loading = false
-      this.entities_total.v = this.graf.nodes.length
 
-    },
+      if (small) {
+        this.graph = {
+          nodes: [
+            { id: "people/_:daltonwilcox", daly: true, _id: "people/_:daltonwilcox", "label": "Dalton Wilcox", article: ["Dalton Wilcox is the Poet Laureate of the West", "He is known to fashion \"land virginies\" while roaming the western range."] }, { id: "people/_:vampire", daly: false, _id: "people/_:vampire", "label": "Random Vampire", article: ["Random Vampire is a random vampire vanquished by Dalton Wilcox"] }, { id: "people/_:mummy", daly: false, _id: "people/_:mummy", "label": "Random Mummy", article: ["Random Mummy is a random mummy vanquished by Dalton Wilcox"] }
+          ],
+          edges: [
+            { source: 'people/_:daltonwilcox', target: 'people/_:vampire' },
+            { source: 'people/_:daltonwilcox', target: 'people/_:mummy' }
+          ]
+        }
+      } else {
+        // we'll pull a large fake set from local
+
+        axios
+          .get("http://localhost:8000/full-graph-fake.json")
+          .then(response => {
+            console.info(
+              process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
+            );
+
+            let deeznodes = response.data.result[0].entitiez[0]
+            this.entities_total.loading = false
+            this.entities_total.v = deeznodes.length
+            this.graph = {
+              edges: response.data.result[0].edgez,
+              nodes: deeznodes
+            }
+
+          }) //axios.then
+          .catch(e => {
+            console.error(e);
+          }); //axios.catch
+      }
+
+
+    }, //fakefetch
     fetchEntities: function () {
         console.info(
           process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
@@ -738,12 +828,10 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
     "active.key": {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew : null
-        );
+
         this.setRoute();
         // this.setItem();
-        // this.setGraph();
+        this.active.graph = this.prepGraph(this.getGraph());
         // this.setTimeline();
         // this.setMap();
         this.setPageTitle();
@@ -773,6 +861,7 @@ body {
 .dv-column-right {
   background-color: black;
   color: #00eb11;
+  overflow-y: scroll;
 }
 
 

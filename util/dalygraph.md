@@ -34,12 +34,17 @@ filter by name
 Has Murdered
 * .has_murdered==true
 
-Friendships
-* hasFriend
+Has Murdered (uni)
+* .has_murdered==true
+
+Friendships (uni)
+
 
 Memberships
 * isFormerMemberOf
 * isMemberOf
+
+
 
 Professional Partnerships
 * caresFor
@@ -47,26 +52,41 @@ Professional Partnerships
 * isClientOf
 * wasClientOf
 
+
+
+
+
 Events Participated In
 * hasParticipant
 * participatedIn
 
+
+
 Owners
 * isPetOf
+
 
 Familial Relations
 * isChildOf
 * isPossibleChildOf
 * isSiblingOf
 
+
+
+
 Locations
 * islocateAt
 * livesAt
+
+
 
 Current and Former Spouses
 * isSpouseOf
 * wasSpouseOf
 * isFormerSpouseOf
+
+
+
 
 Current & Former Employers
 * hasWorkedAt
@@ -76,8 +96,15 @@ Current & Former Employers
 * worksAt
 * worksFor
 
+
+
+
+
+
+
 See Also
 * seeAlso
+
 
 
 ### per person:
