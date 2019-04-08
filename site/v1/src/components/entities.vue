@@ -35,13 +35,21 @@
             <span v-if="entities_total.loading==true">1 sec...</span>
             <span v-else>{{entities_total.v}}</span>
           </li>
-          <li><span v-bind:class="console.clazz" class="icon mdi"></span>{{console.msg}}</li>
+          <li>filter form goes here</li>
         </ul>
         <div id="network">
           <svg></svg>
         </div note="/#network">
       </div note="/.dv-column-left">
       <div class="column is-half dv-column-right">
+        <div id="console" class="is-right breadcrumb">
+          <ul class="">
+            <li v-for="msg
+ in console.msgs">
+              <span v-bind:class="msg.severity">{{msg.msg}}</span>
+            </li>
+          </ul>
+        </div>
         {{active.label}}
         <br/>
         <!-- active.article: {{active.article}} -->
@@ -55,7 +63,17 @@
           </li>
         </ul>
         <br/>
-        <nav class="level">
+        <div v-if="active.graph">
+          <div v-for="bucket in active.graph" class="tile is-12">
+            <p class="heading">{{bucket.bucket_label}} ({{bucket.bucket_raw}})</p>
+            <ul>
+              <li v-for="node in bucket.nodes" class="title is-size-7">
+                <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
               <p class="heading">C1</p>
@@ -68,8 +86,8 @@
               <p class="title">123</p>
             </div>
           </div>
-        </nav>
-        <br/>
+        </nav> -->
+        <!--         <br/>
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
@@ -83,8 +101,8 @@
               <p class="title">123</p>
             </div>
           </div>
-        </nav>
         <br/>
+        </nav> -->
       </div note="/.dv-column-right">
     </div>
   </div>
@@ -117,13 +135,11 @@ export default {
       },
       entities_total: { v: 0, loading: true },
       console: {
-        msg: "",
+        msgs: [],
         clazz: null,
         throb: false
       },
-      relationMap: [
-        { rel: "hasFriend", source: "Friendships", target: "Friendships", ver: "has friend" }, { rel: "isFormerMemberOf", source: "Memberships", target: "Current & Former Members", ver: "is former member of" }, { rel: "isMemberOf", source: "Memberships", target: "Current & Former Members", ver: "is member of" }, { rel: "caresFor", source: "Professional Partnerships", target: "Professional Partnerships", ver: "cares for" }, { rel: "isCaredForBy", source: "Professional Partnerships", target: "Professional Partnerships", ver: "is cared for by" }, { rel: "isClientOf", source: "Professional Partnerships", target: "Professional Partnerships", ver: "is client of" }, { rel: "wasClientOf", source: "Professional Partnerships", target: "Professional Partnerships", ver: "was client of" }, { rel: "hasParticipant", source: "Event Participants", target: "Events Participated In", ver: "has participant" }, { rel: "participatedIn", source: "Events Participated In", target: "Event Participants", ver: "participated in" }, { rel: "isPetOf", source: "Owners", target: "Owns Pet", ver: "is pet of" }, { rel: "isChildOf", source: "Familial Relations", target: "Familial Relations", ver: "is child of" }, { rel: "isPossibleChildOf", source: "Familial Relations", target: "Familial Relations", ver: "is possible child of" }, { rel: "isSiblingOf", source: "Familial Relations", target: "Familial Relations", ver: "is sibling of" }, { rel: "islocateAt", source: "Locations", target: "Locations", ver: "is located at" }, { rel: "livesAt", source: "Locations", target: "Locations", ver: "lives at" }, { rel: "isSpouseOf", source: "Current & Former Spouses", target: "Current & Former Spouses", ver: "is spouse of" }, { rel: "wasSpouseOf", source: "Current & Former Spouses", target: "Current & Former Spouses", ver: "was spouse of" }, { rel: "isFormerSpouseOf", source: "Current & Former Spouses", target: "Current & Former Spouses", ver: "is former spouse of" }, { rel: "hasWorkedAt", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked at" }, { rel: "hasWorkedFor", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked for" }, { rel: "workedAt", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked at" }, { rel: "workedFor", source: "Current & Former Positions", target: "Current & Former Employees", ver: "has worked for" }, { rel: "worksAt", source: "Current & Former Positions", target: "Current & Former Employees", ver: "works at" }, { rel: "worksFor", source: "Current & Former Positions", target: "Current & Former Employees", ver: "works for" }, { rel: "seeAlso", source: "See Also", target: "See Also", ver: "see also" }
-      ]
+      relationMap: [{ "rel": "hasFriend", "source": "Friendships", "target": "Friendships", "ver": "has friend" }, { "rel": "isFormerMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is former member of" }, { "rel": "isMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is member of" }, { "rel": "caresFor", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "cares for" }, { "rel": "isCaredForBy", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is cared for by" }, { "rel": "isClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is client of" }, { "rel": "wasClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "was client of" }, { "rel": "hasParticipant", "source": "Event Participants", "target": "Events Participated In", "ver": "has participant" }, { "rel": "participatedIn", "source": "Events Participated In", "target": "Event Participants", "ver": "participated in" }, { "rel": "isPetOf", "source": "Owners", "target": "Owns Pet", "ver": "is pet of" }, { "rel": "isChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is child of" }, { "rel": "isPossibleChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is possible child of" }, { "rel": "isSiblingOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is sibling of" }, { "rel": "islocateAt", "source": "Locations", "target": "Locations", "ver": "is located at" }, { "rel": "livesAt", "source": "Home Locations, Current & Former", "target": "Home Of", "ver": "lives at" }, { "rel": "isSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is spouse of" }, { "rel": "wasSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "was spouse of" }, { "rel": "isFormerSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is former spouse of" }, { "rel": "hasWorkedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "hasWorkedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "workedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "workedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "worksAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works at" }, { "rel": "worksFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works for" }, { "rel": "occurredAt", "source": "Event Location", "target": "Events Here", "ver": "occurred at" }, { "rel": "seeAlso", "source": "See Also", "target": "See Also", "ver": "see also" }]
     }
   }, // data
   beforeCreate () {}, // beforeCreate
@@ -143,10 +159,12 @@ export default {
     })
 
     this.console = {
-      msg: new Date(),
+      msgs: [{ msg: "created", severity: "normal" }],
       throb: true,
       clazz: "mdi-clock"
     };
+
+    this.d3 = d3;
 
   }, // created
   mounted: function () {
@@ -161,61 +179,59 @@ export default {
     }
     if (this.active.key) this.setActive(this.active.key)
 
-    console.log(
-      process.env.VERBOSITY === "DEBUG" ? this : null
-    );
-
   }, //mounted
   methods: {
-    prepGraph (G) {
+    subGraph (G) {
 
       /*
       the raw graph is going to be so many hasWorkedAt|hasParticipatedIn|occuredAt relations etc.
-      the problem is the vector between the source and target: if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
+      the problem is the vector between the source and target: e.g. if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
 
-      So we first figure out what the typ of the node core is (person,place,thing,event) so we know whether to grab the "source" or "target" heading out of this.relationMap.
+      So we first figure out what the typ (source|target) of the node core is (person,place,thing,event) so we know whether to grab the "source" or "target" heading out of this.relationMap.
 
       Then we'll group all relations by typ and sort them into buckets with that chosen heading, viz those.
       */
-      // get the edges that have a typ and bucket em with it
 
-      // let typsample =
-      //   // this.$_.first(
-      //   this.$_.groupBy(this.$_.filter(G, (g) => {
-      //     return this.$_.has(g, 'typ')
-      //   }), 'typ')
-      // )
+      // get the edges that have a typ (by filtering) and bucket em with a concat of the edgetype and which of the node ends (' id) matches active.key
+      let buckets =
+        this.$_.groupBy(
+          this.$_.map(this.$_.filter(G, (g) => {
+            return this.$_.has(g, 'typ')
+          }), (lg) => {
+            let lgo = lg
+            let primary = (lg.source.id == this.active.key) ? 'source' : 'target'
+            lgo.edge_primary = lg.typ + '_for_' + primary
+            return lgo
+          }), 'edge_primary')
 
-      let sota = null;
+      let graf = this.$_.map(buckets, (Rs) => {
 
-      // let keys = this.$_.keys(typsample),
-      //   keyfirst = this.$_.first(keys),
-      //   typfirst = typs[keyfirst],
-      // let sota = 
+        // get bucket type - same for all, take first, bust it open for edgetype
+        // get bucket type - same for all, take first, bust it open for primary (driving) node
+        // shop btyp to relationMap for situational labels (we choose which later)
+        let btyp = this.$_.first(Rs).edge_primary.split('_for_')[0],
+          bprm = this.$_.first(Rs).edge_primary.split('_for_')[1],
+          brel = this.$_.findWhere(this.relationMap, { rel: btyp });
 
-      // console.log('typs:', typsample)
-      // console.log('keys:', keys) // console.log('keyfirst:', keyfirst) // console.log('typfirst:', typfirst)
+        // gather up all the entries of this bucket        
+        let entries = this.$_.map(Rs, (t) => {
+            let datanode = (t.source.id == this.active.key) ? t.target : t.source;
+            return datanode
+          }) //map
 
-      console.log('akey:', this.active.key)
-      console.log('sota testbase:', this.$_.first(G))
+        let o = {
+          bucket_raw: btyp,
+          bucket_label: (bprm == 'source') ? brel.source : brel.target,
+          nodes: entries
+        }
 
-      switch (true) {
-        case (this.$_.first(G).source.id == this.active.key):
-          sota = 'source'
-          break;
-        case (this.$_.first(G).target.id == this.active.key):
-          sota = 'target'
-          break;
-        default:
-          sota = 'unfound'
-          break;
-      }
+        return o
 
+      })
 
-      console.log("sota:", sota);
-      return 'onesec'
+      return graf
 
-    } //prepgraph
+    } //subgraph
     ,
     getGraph (nid) {
 
@@ -235,6 +251,8 @@ export default {
 
       let nakk = (nak) ? nak : this.active.key
 
+      console.log("nakk:", nakk);
+
       let ai = this.$_.findWhere(this.graph.nodes, { id: nakk })
 
       this.active = {
@@ -244,13 +262,37 @@ export default {
         graph: null
       }
 
+      console.log(this.d3.select(this.prepId(nak)));
+      this.d3.select(this.prepId(nak)).classed("selected", true)
+
     },
-    unsetActive (nak) {
-      this.active = {
-        key: null,
-        article: null,
-        graph: null
+    prepId (iak) {
+
+
+      let iakk = null;
+
+      if (iak) {
+        // switch (way) {
+        //   case 'escape':
+        //     iakk = iak.replace('/', '\\\\/').replace(':', '\\\\:')
+        //     break;
+        //   case 'unescape':
+        //     iakk = iak.replace('\\\\/', '/').replace('\\\\:', ':')
+        //     break;
+        //   default:
+        //     // code block
+        // }
+        iakk = "circle[id='" + iak + "']"
       }
+
+      return iakk
+
+    } //prepid
+    ,
+    unSetActive (nak) {
+
+      // this.nullGraph();
+      this.d3.select(this.prepId(nak)).classed("selected", false)
 
     },
     dragends (d) {
@@ -264,7 +306,8 @@ export default {
       // that d3v4 is called d3v4, otherwise we'll assume
       // that d3v4 is the default (d3)
       // if (typeof d3v4 == 'undefined')
-      const d3v4 = d3;
+      // const d3v4 = d3;
+      const d3v4 = this.d3;
 
       var svg = d3.select('#network > svg')
       var width = +svg.attr("width"),
@@ -287,7 +330,7 @@ export default {
         .attr('width', parentWidth)
         .attr('height', parentHeight)
         .style('fill', 'white')
-        .on('click.vue', this.unsetActive)
+        .on('click.vue', this.unSetActive)
         .on('click.native', () => {
           node.each(function (d) {
             d.selected = false;
@@ -545,7 +588,7 @@ export default {
       function dragstarted(d) {
         if (!d3v4.event.active) simulation.alphaTarget(0.9).restart();
 
-        if (!d.selected && !shiftKey) {
+        if (!d.selected && !shiftKey && d._id) {
           // if this node isn't selected, then we have to unselect every other node
           node.classed("selected", function (p) {
             return p.selected = p.previouslySelected = false;
@@ -674,10 +717,11 @@ export default {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
       );
-      return {
-        participants: null,
-        locations: null
-      };
+      this.active.key = null
+        // return {
+        //   participants: null,
+        //   locations: null
+        // };
     }, //nullGraph
     // setGraph: function () {
     //   console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
@@ -710,7 +754,7 @@ export default {
 
         this.$router.push({
           params: {
-            activeid: encodeURIComponent(this.active.key)
+            activeid: (this.active.key) ? encodeURIComponent(this.active.key) : ''
           }
         }); //rejplace
       } //setRoute
@@ -745,6 +789,8 @@ export default {
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length
+            let co = { msg: deeznodes.length + ' entities loaded', severity: "normal" }
+            this.console.msgs.push(co)
             this.graph = {
               edges: response.data.result[0].edgez,
               nodes: deeznodes
@@ -789,6 +835,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length
+            this.console.msgs.push({ msg: deeznodes.length + ' entities loaded', severity: normal })
             this.graph = {
               edges: response.data.result[0].edgez,
               nodes: deeznodes
@@ -829,21 +876,17 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     "active.key": {
       handler: function (vnew, vold) {
 
-        this.setRoute();
-        // this.setItem();
-        this.active.graph = this.prepGraph(this.getGraph());
-        // this.setTimeline();
-        // this.setMap();
+        // this.setRoute();
+        this.unSetActive(vold)
+        this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
       }
-    }
-    // ,nodes: {
-    //   handler: function (vnew, vold) {
-    //     console.info(
-    //       process.env.VERBOSITY === "DEBUG" ? "WATCH:nodes:old/new:" + vold.length + "/" + vnew.length : null
-    //     );
-    //   }
-    // } //nodes
+    },
+    graph: {
+      handler: function (vnew, vold) {
+        if (vnew !== null) this.D3init();
+      }
+    } //nodes
   } //watch
 }; //export.timeline
 </script>

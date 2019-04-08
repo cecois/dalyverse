@@ -121,7 +121,7 @@
 }, {
   "_key": "_:ahppublishesaparkingticketstory"
   , "name": "Alexandra Higgs Portman Publishes an Article in the PNPTG"
-  , "article": ["Alexandra Higgs Portman publishes a piece in the PNPTG about contesting parking tickets. Amongst the feedback from the piece is a hand-written letter postmarked to the Pasadena Fairytale Theatre, written by a theatrical director on behalf of a friend who, the author felt, had been accused of a minor crime he did not commit."]
+  , "article": ["The piece is about contesting parking tickets. Amongst the feedback from the piece is a hand-written letter postmarked to the Pasadena Fairytale Theatre, written by a theatrical director on behalf of a friend who, the author felt, had been accused of a minor crime he did not commit."]
   , "timestamp": {
     "start": "2017-06-30T19:00:00Z"
     , "end": null
@@ -1772,8 +1772,8 @@
   }
 }, {
   "_key": "_:hotdogbecomesthird"
-  , "name": "Hot Dog's Sex on Skiis"
-  , "article": ["Hot Dog becomes the third man in history to have sex on skiis."]
+  , "name": "Hot Dog's Sex on Skis"
+  , "article": ["Hot Dog becomes the third man in history to have sex on skis."]
   , "timestamp": {
     "start": "1971-12-03T19:00:00Z"
     , "end": null
@@ -1961,5 +1961,289 @@
   , "nb_timestamp": {
     "class": "estimate-prior"
     , "nb": "timestamp is approximate - winter prior to CBB##14"
+  }
+}, {
+  "_key": "_:dannymahoneybuysaheavycoat"
+  , "name": "Danny Mahoney Buys Nordstrom's Heaviest Coat"
+  , "article": ["In the winter of 2009-2010, Danny Mahoney decides to commit suicide by purchasing Nordstrom's heaviest coat and walking into the ocean. The coat cost $129.00 and the saleswoman did not care about Mr. Mahoney's intensions. When the plan failed and he returned to shore, the coat was discarded on the beach."]
+  , "timestamp": {
+    "start": "2009-12-01T09:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is approximate - winter prior to CBB##14"
+  }
+}, {
+  "_key": "_:ashleypintossweetsixteen"
+  , "name": "Ashley Pinto's Sweet Sixteen"
+  , "article": ["The party was meant to feature the comedy stylings of Ben Alterman."]
+  , "timestamp": {
+    "start": "2010-03-27T16:00:00Z"
+    , "end": null
+  }
+}, {
+  "_key": "_:dannymahoneywalksintotheocean"
+  , "name": "Danny Mahoney Wears a Heavy Coat Into the Ocean"
+  , "article": ["Fully intending to commit suicide by drowning, Danny Mahoney wears a heavy coat into the Pacific Ocean, only to self-inspire a new business and bail on the idea."]
+  , "timestamp": {
+    "start": "2009-12-01T10:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-prior"
+    , "nb": "timestamp is approximate - winter prior to CBB##14"
+  }
+}, {
+  "_key": "_:dannymahoneymeetsscottaukerman"
+  , "name": "Danny Mahoney Meets Scott Aukerman"
+  , "article": ["Overhearing Scott Aukerman out on Melrose, and recognizing the voice, Danny Mahoney approaches Aukerman and asks to plug his business on an episode of CBB."]
+  , "timestamp": {
+    "start": "2009-07-29T00:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "date is 'yesterday' relative to CBB##14"
+  }
+}, {
+  "_key": "_:dannymahoneyimmunizeshisbrother"
+  , "name": "Danny Mahoney Immunizes His Brother to Asbestos"
+  , "article": ["Declining to get certified in asbestos-handling and have to buy all those suits and \"bullshit like that,\" Danny drives his brother around in an asbestos van in increasingly long iterations in order to build up tolerance to the substance. The brother eventually perished (of an 'insulated heart'), to be survived at least by his son Bertrand."]
+  , "timestamp": {
+    "start": "2001-05-11T10:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-prior"
+    , "nb": "timestamp is approximate - some time prior to the hostile takeover of the plumbing business"
+  }
+}, {
+  "_key": "_:augustlindtisarrestedatgraceland"
+  , "name": "August Lindt is Arrested"
+  , "article": ["On vactation, visiting Elvis' Graceland estate, August sneaks upstairs, resulting in \"48 hours of nothing but jail.\""]
+  , "timestamp": {
+    "start": "2010-05-09T00:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is approximate - april prior to CBB##59"
+  }
+}, {
+  "_key": "_:augustlindtvisitsepcot"
+  , "name": "August Lindt Visits Epcot Center"
+  , "article": ["August Lindt executes a \"targeted strike\" on Epcot Center and doesn't fool around with Magic Kingdom or Pleasure Island or anything."]
+  , "timestamp": {
+    "start": "2010-05-29T00:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is approximate - april prior to CBB##59"
+  }
+}, {
+  "_key": "_:augustlindtvisitsthepinebarrens"
+  , "name": "August Lindt Visits the Pine Barrens of New Jersey"
+  , "article": ["Because it's \"nothing but pine trees all over the place,\" August visits New Jersey."]
+  , "timestamp": {
+    "start": "2010-05-11T00:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is approximate - april prior to CBB##59"
+  }
+}, {
+  "_key": "_:augustlindtattemptssuicide1"
+  , "name": "August Lindt Attempts Suicide (2010.June)"
+  , "article": ["In Los Angeles, August ties himself to the Hollywood sign and sets it on fire."]
+  , "timestamp": {
+    "start": "2010-06-24T16:00:00Z"
+    , "end": null
+  }
+}, {
+  "_key": "_:augustlindtattemptssuicide2"
+  , "name": "August Lindt Attempts Suicide (2010.Sep"
+  , "article": ["In Seattle, August leaps from the Space Needle."]
+  , "timestamp": {
+    "start": "2010-09-24T16:00:00Z"
+    , "end": null
+  }
+}, {
+  "_key": "_:hotdogaudition1"
+  , "name": "Hot Dog Auditions for Sha Na Na"
+  , "article": ["The first of many more auditions by Hot Dog for Sha Na Na."]
+  , "timestamp": {
+    "start": "2008-06-04T11:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a very loose approximation - 'a few years' before 2011.Feb"
+  }
+}, {
+  "_key": "_:hotdogaudition2"
+  , "name": "Hot Dog Auditions for Sha Na Na"
+  , "article": ["The second of many more auditions by Hot Dog for Sha Na Na."]
+  , "timestamp": {
+    "start": "2010-07-11T12:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a very loose approximation - some time before 2011.Feb"
+  }
+}, {
+  "_key": "_:hotdogaudition3"
+  , "name": "Hot Dog Auditions for Sha Na Na"
+  , "article": ["The third of many more auditions by Hot Dog for Sha Na Na."]
+  , "timestamp": {
+    "start": "2011-03-05T12:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - 'next week' from 2011.Feb.27"
+  }
+}, {
+  "_key": "_:augustlindtwinsbestandydalycharacter"
+  , "name": "August Lindt Wins 'Best Andy Daly Performance' on Comedy Bang! Bang! Best-of 2010"
+  , "article": ["August wins with 46.5% of the vote, defeating Ben Alterman, Bill Carter, Patrick McMahon."]
+  , "timestamp": {
+    "start": "2010-12-25T16:00:00Z"
+    , "end": null
+  }
+}, {
+  "_key": "_:billcarterisaccomplicetoabande"
+  , "name": "Bill Carter Aids and Abets"
+  , "article": ["Minding his own business while his brother-in-law attacks a woman who had looked at him awry, Bill Carter helps the assailant into the woman's home so he can 'take a pop at her.'"]
+  , "timestamp": {
+    "start": "1970-04-14T16:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a very loose approximation"
+  }
+}, {
+  "_key": "_:hotdogchangeshisname"
+  , "name": "Hot Dog Changes His Name"
+  , "article": ["Because he was 'hot dogging it all the time,' Hot Dog runs right down to the courthouse to change his name."]
+  , "timestamp": {
+    "start": "1969-10-10T12:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - '40 years' prior to 2011.Feb.27 but 'in the 60s' and 'in his teens' acc to #CBB400; frm 1964-1969 he wz bobbing in the ocean acc to cbb#232 and if we take 1955 as his birth year, 69 fits best"
+  }
+}, {
+  "_key": "_:hotdogintroducesfirearms"
+  , "name": "Hot Dog Introduces Firearms into Water Skiing"
+  , "article": ["Adding to his repertoire of hot dogging stunts, Hot Dog gets out on a pair of skis with a rifle and does some target shooting. His speed boat captains were shot three times during the course of his career."]
+  , "timestamp": {
+    "start": "1963-08-04T14:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232"
+  }
+}, {
+  "_key": "_:hotdogrunsan80sbedandbreakfast"
+  , "name": "Hot Dog Operates a Haunted 80s-Themed Bed & Breakfast"
+  , "article": ["Wanting to run a 50s-themed b&b some time in the 1980s, on the advice of a friend Hot Dog settled for an 80s theme. The theme, in effect, was 'cocaine.' Some years later his dream of a 50s theme would come true."]
+  , "timestamp": {
+    "start": "1985-06-01T12:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - 'in the 80s' rel to 2011.Feb.27"
+  }
+}, {
+  "_key": "_:hotdogrunsa50sbedandbreakfast"
+  , "name": "Hot Dog Operates a Haunted 50s-Themed Bed & Breakfast"
+  , "article": ["Part of the reason Hot Dog has seen ghosts before is that he operated a 50s-themed b&b some time in the early 90s."]
+  , "timestamp": {
+    "start": "1990-06-01T12:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - '20 years ago' from 2011.Feb.27"
+  }
+}, {
+  "_key": "_:hotdogwaterskisonamotorcycle"
+  , "name": "Hot Dog Skis on a Motorcycle"
+  , "article": ["Adding to his repertoire of hot dogging water skiing stunts, Hot Dog places a motorcycle on top of his skies and rides the whole rig. He sank due to the weight of the motorcycle."]
+  , "timestamp": {
+    "start": "1963-09-04T14:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232"
+  }
+}, {
+  "_key": "_:hotdogeatshisskis"
+  , "name": "Hot Dog Eats His Skis"
+  , "article": ["In a first, Hot Dog skied on salami skis, then returned to shore and ate them."]
+  , "timestamp": {
+    "start": "1963-07-04T14:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation - frm 1964-1969 he wz bobbing in the ocean acc to #cbb#232"
+  }
+}, {
+  "_key": "_:dondimelloandcactustonyattendwomplersbirthday"
+  , "name": "Don DiMello and Cactus Tony Attend Marissa Wompler's Birthday Party"
+  , "article": ["Tracked down online by Seth Wompler, Mr. DiMello attends the Six Flags birthday party of Marissa Wompler (at her request), accompanied by a young child who had abandoned at one of his shows the night prior."]
+  , "timestamp": {
+    "start": "2014-08-10T19:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is acc. to CBB#304"
+  }
+}, {
+  "_key": "_:patrickmcmahonisaccused"
+  , "name": "Johnny McGory (Patrick McMahon) is Accused of Sexual Misconduct"
+  , "article": ["Accused of inappropriate behavior by a coworker at a medical packaging plant, McGory sees a four-leaf clover, under which there was a leprechaun."]
+  , "timestamp": {
+    "start": "2009-01-01T16:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-prior-to"
+    , "nb": "timestamp is a very loose approximation - prior to CBB#??"
+  }
+}, {
+  "_key": "_:patrickmcmahonisborn"
+  , "name": "Patrick McMahon is born in Limerick, Ireland"
+  , "article": ["He eventually becomes a full-time Irish storyteller and part-time Limerician."]
+  , "timestamp": {
+    "start": "1960-01-01T16:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a loose approximation"
+  }
+}, {
+  "_key": "_:jeanclaudepepiauditionsfornosferatu"
+  , "name": "Jean Claude Pepi Auditions for 'Nosferatu the Vampyre'"
+  , "article": ["Despite it being very unusual for him to have to audition for a role at all, Mnsr. Pepi makes an exception for the Nosferatu vampire. The scene features, inexplicably, a popcorn delivery boy named 'Joseph.'"]
+  , "timestamp": {
+    "start": "1978-05-15T09:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is rel. to imdb's filming date for nosferatu"
   }
 }]

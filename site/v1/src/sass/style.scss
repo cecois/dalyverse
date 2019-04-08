@@ -47,9 +47,21 @@ $height-main:calc(100vh - #{$height-header});
 
 .dv-vertical-columns{height:$height-main;}
 
+.dv-trigger-active{color:red;cursor:pointer;}
+
 #console{
   background-color:rgba(0,0,0,.8);
-  color:#00eb11;
+  font-weight:800;
+  color:white;
+  font-size:.5em;
+  span{
+    &.warning{
+      color:orange;
+    }
+    &.error{
+      color:red;
+    }
+  }
 }
 
 .tile{
