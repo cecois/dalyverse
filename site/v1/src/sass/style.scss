@@ -18,7 +18,7 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: black;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
@@ -29,6 +29,8 @@ $input-shadow: none;
 $height-header:3vh;
 $height-main:calc(100vh - #{$height-header});
 
+body{color:white;background-color:$body-background-color;}
+
 .noUi-pips-horizontal{height:auto;}
 
 #app{
@@ -36,13 +38,14 @@ $height-main:calc(100vh - #{$height-header});
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color:rgba(255,255,255,0);
+  // background-color:rgba(255,255,255,0);
   a{font-weight:800;color:rgba(36,255,239,.8);}
 }
 #vue-root{
   margin:0;
   max-width:100%;
   width:100%;
+  .navbar{background-color:inherit;}
 }
 
 .dv-vertical-columns{height:$height-main;}
@@ -50,9 +53,9 @@ $height-main:calc(100vh - #{$height-header});
 .dv-trigger-active{color:red;cursor:pointer;}
 
 #console{
-  background-color:rgba(0,0,0,.8);
+  // background-color:rgba(0,0,0,1);
+  background-color:transparent;
   font-weight:800;
-  color:white;
   font-size:.5em;
   span{
     &.warning{
@@ -71,7 +74,8 @@ $height-main:calc(100vh - #{$height-header});
 
 /* +++++++++++++++++++++++++++++++++++++++ network ++ */
 #network{
-  background-color:rgba(55,235,255,.0);
+  // background-color:rgba(0,0,0,1);
+  // background-color:transparent;
   height:100%;
   width:100%;
     /*position:relative;*/
@@ -84,15 +88,16 @@ $height-main:calc(100vh - #{$height-header});
 
 svg {
 /*height:50vh;*/
-outline: black solid 1px;
+// outline: black solid 1px;
 position:relative;
-background-color:rgba(25,255,255,.0);
+background-color:pink;
 height:100%;
 width:100%;
   overflow:hidden;
 }
 }
 
+//graph edges
 .link {
   fill: none;
   stroke: rgba(0,0,0,.1);
@@ -103,6 +108,9 @@ width:100%;
 // }
 circle{
   r:6;
+  fill:rgba(255,255,255,.5);
+  &.invisible{fill:rgba(255,255,255,0);}
+  &.daly{fill:rgba(255,255,255,1);}
 &.selected{
   stroke:yellow;
   stroke-width:3;

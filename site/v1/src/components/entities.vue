@@ -1,6 +1,6 @@
 <template>
   <div id="vue-root" class="">
-    <vue-headful :title="page.title" description="People, Places, & Things in the Andy Dalyverse" />
+    <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
     <nav id="dv-nav-main" class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -171,13 +171,27 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    if (process.env.MODE == "T") { this.fakeFetchEntities(); } else { this.fetchEntities(); }
-    // if (process.env.MODE == "T") this.D3init();
+    if (process.env.MODE == "T") {
+      this.fakeFetchEntities()
 
-    if (this.$route.params.activeid) {
+    } else {
+      this.fetchEntities()
+
+    }
+
+    // this.$nextTick(() => {
+    if (this.$route.params
+      .activeid) {
       this.active.key = decodeURIComponent(this.$route.params.activeid);
     }
-    if (this.active.key) this.setActive(this.active.key)
+    // })
+    // if (process.env.MODE == "T") this.D3init();
+
+    //     if (this.$route.params
+    // .activeid) {
+    //       this.active.key = decodeURIComponent(this.$route.params.activeid);
+    //     }
+    // if (this.active.key) this.setActive(this.active.key)
 
   }, //mounted
   methods: {
@@ -329,7 +343,8 @@ export default {
       var rect = gMain.append('rect')
         .attr('width', parentWidth)
         .attr('height', parentHeight)
-        .style('fill', 'white')
+        .style('fill', "none
+")
         .on('click.vue', this.unSetActive)
         .on('click.native', () => {
           node.each(function (d) {
@@ -404,8 +419,11 @@ export default {
         .selectAll("circle")
         .data(nodes)
         .enter().append("circle")
-        .attr("fill", (d) => {
-          return this.D3getFill(d)
+        // .attr("fill", (d) => {
+        //   return this.D3getFill(d)
+        // })
+        .attr('class', (d) => {
+          return this.D3getClass(d);
         })
         .attr("id", (d) => {
           if (d._id) {
@@ -414,12 +432,13 @@ export default {
             return null;
           }
         })
+        .on("mouseover", mouseOver(.2))
+        .on("mouseout", mouseOut)
         .call(d3v4.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end.native", dragended)
           .on("end.vue", this.dragends));
-
 
       // add titles for mouseover blurbs
       node.append("title")
@@ -427,7 +446,7 @@ export default {
           if ('name' in d)
             return d.name;
           else
-            return d.id;
+            return d.label;
         });
 
       var simulation = d3v4.forceSimulation()
@@ -468,6 +487,50 @@ export default {
 
       function positionNode(d) {
         return "translate(" + d.x + "," + d.y + ")";
+      }
+
+      // build a dictionary of nodes that are linked
+      var linkedByIndex = {};
+      links.forEach(function (d) {
+        if (d._id) {
+          linkedByIndex[d.source.index + "," + d.target.index] = 1;
+        }
+      });
+
+      // check the dictionary to see if nodes are linked
+      function isConnected(a, b) {
+        return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+      }
+
+      // fade nodes on hover
+      function mouseOver(opacity) {
+        return function (d) {
+          // check all other nodes to see if they're connected
+          // to this one. if so, keep the opacity at 1, otherwise
+          // fade
+          node.style("stroke-opacity", function (o) {
+            let thisOpacity = isConnected(d, o) ? 1 : opacity;
+            return thisOpacity;
+          });
+          node.style("fill-opacity", function (o) {
+            let thisOpacity = isConnected(d, o) ? 1 : opacity;
+            return thisOpacity;
+          });
+          // also style link accordingly
+          link.style("stroke-opacity", function (o) {
+            return o.source === d || o.target === d ? 1 : opacity;
+          });
+          link.style("stroke", function (o) {
+            return o.source === d || o.target === d ? o.source.colour : "#ddd";
+          });
+        };
+      }
+
+      function mouseOut() {
+        node.style("stroke-opacity", 1);
+        node.style("fill-opacity", 1);
+        link.style("stroke-opacity", 1);
+        link.style("stroke", "#ddd");
       }
 
       function tickedog() {
@@ -651,6 +714,24 @@ export default {
 
       return null;
     }, //d3init
+    D3getClass: function (d) {
+      // all fill logic here
+      let c = null
+      switch (true) {
+        case (!d._id):
+          c = 'invisible'
+          break;
+        case (d.daly == true):
+          c = 'daly'
+          break;
+        default:
+          c = ''
+          break;
+      }
+
+      return c;
+
+    },
     D3getFill: function (d) {
       // all fill logic here
       let c = null
@@ -876,7 +957,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     "active.key": {
       handler: function (vnew, vold) {
 
-        // this.setRoute();
+        this.setRoute();
         this.unSetActive(vold)
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
@@ -897,12 +978,9 @@ body {
   overflow: hidden;
 }
 
-.dv-column-left {
-  background-color: white;
-}
+.dv-column-left {}
 
 .dv-column-right {
-  background-color: black;
   color: #00eb11;
   overflow-y: scroll;
 }
