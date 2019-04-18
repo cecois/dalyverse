@@ -23,6 +23,11 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+$dalyNode:rgba(255,255,255,1);
+$nondalyNode:rgba(125,125,125,1);
+$dalyLink:rgba(255,255,255,.5);
+$nondalyLink:rgba(25,25,25,.8);
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++ local ++ */
 /* +++++++++++++++++++++++++++++++++++++++ noui ++ */
 
@@ -49,6 +54,16 @@ body{color:white;background-color:$body-background-color;}
 }
 
 .dv-vertical-columns{height:$height-main;}
+
+.dv-column-left {
+  padding:0;
+}
+
+.dv-column-right {
+  color: #00eb11;
+  overflow-y: scroll;
+  // border-left:solid 1px white;
+}
 
 .dv-trigger-active{color:red;cursor:pointer;}
 
@@ -90,7 +105,7 @@ svg {
 /*height:50vh;*/
 // outline: black solid 1px;
 position:relative;
-background-color:pink;
+background-color:transparent;
 height:100%;
 width:100%;
   overflow:hidden;
@@ -100,23 +115,37 @@ width:100%;
 //graph edges
 .link {
   fill: none;
-  stroke: rgba(0,0,0,.1);
-  stroke-width:1px;
+  stroke: $dalyLink;
+  // stroke-opacity: .5;
+  stroke-width:2px;
+  
 }
-// circle{
-//   color:rgba(244,222,244,.5);
-// }
+
+.link > .muted{
+stroke-opacity:.2;
+  stroke-width:1px;
+  stroke-color:#333;
+}
+
 circle{
   r:6;
-  fill:rgba(255,255,255,.5);
+  fill:$nondalyNode;
   &.invisible{fill:rgba(255,255,255,0);}
-  &.daly{fill:rgba(255,255,255,1);}
+  &.daly{
+    fill:$dalyNode;r:8;
+    &.muted{
+fill-opacity:.1;
+}
+    }//daly
 &.selected{
   stroke:yellow;
   stroke-width:3;
   r:10;
-  
-}}
+}
+&.muted{
+fill-opacity:.1;
+}
+}
 
 /* +++++++++++++++++++++++++++++++++++++++ timeline ++ */
 #timeline{

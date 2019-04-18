@@ -31,11 +31,21 @@
       <div class="column is-half dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->
         <ul>
-          <li>entities_total:
-            <span v-if="entities_total.loading==true">1 sec...</span>
-            <span v-else>{{entities_total.v}}</span>
+          <!-- <li>entities_total:
+  <span v-if="entities_total.loading==true">1 sec...</span>
+  <span v-else>{{entities_total.v}}</span>
+</li>
+ -->
+          <li class="columns">
+            <div class="column is-3"></div>
+            <div class="field column">
+              <div class="control">
+                <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
+                <input v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
+                <div class="column is-3"></div>
+              </div note="./columns">
+            </div>
           </li>
-          <li>filter form goes here</li>
         </ul>
         <div id="network">
           <svg></svg>
@@ -172,7 +182,7 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
     if (process.env.MODE == "T") {
-      this.fakeFetchEntities()
+      this.fakeFetchEntities('small')
 
     } else {
       this.fetchEntities()
@@ -185,16 +195,61 @@ export default {
       this.active.key = decodeURIComponent(this.$route.params.activeid);
     }
     // })
-    // if (process.env.MODE == "T") this.D3init();
-
-    //     if (this.$route.params
-    // .activeid) {
-    //       this.active.key = decodeURIComponent(this.$route.params.activeid);
-    //     }
-    // if (this.active.key) this.setActive(this.active.key)
 
   }, //mounted
   methods: {
+    dvFind (q) {
+
+      // get valid nodes (not those intermediates)
+      let circlz = this.d3.selectAll('g.node > circle');
+
+      let nos =
+        this.$_.reject(
+          circlz.data(), (n) => {
+            return (!n.label)
+          })
+
+      // console.log("nos:", this.$_.first(nos, 44));
+
+      // get ids of matching
+      let yea = this.$_.pluck(this.$_.filter(nos, (n) => {
+        console.log("n:", n);
+        return (n.label.toLowerCase().indexOf(q.toLowerCase()) >= 0)
+      }), 'id');
+
+      console.log("yea:", yea);
+
+      this.$_.each(yea, (y) => {
+        // this.$_.findWhere(this.graph.nodes, { id: nakk })
+        this.d3.select(this.prepId(y)).classed("selected", true)
+
+      })
+
+
+      // this.active = {
+      //   key: (!ai) ? null : ai.id,
+      //   label: (!ai) ? null : ai.label,
+      //   article: (!ai) ? null : ai.article,
+      //   graph: null
+      // }
+
+      // console.log(this.d3.select(this.prepId(nak)));
+
+      // shop em against circles
+      // this.$_.each(this.$_.reject(circlz, (ci) => {
+      //   console.log("ci:", ci);
+      //   return (!ci.label)
+      // }), (c) => {
+      //   console.log("c:", c);
+      //   if (c.id.indexOf("mummy") < 0) {
+      //     console.log("c:", c);
+      //     c.classed("muted", true)
+      //   }
+      // })
+
+
+
+    },
     subGraph (G) {
 
       /*
@@ -276,7 +331,7 @@ export default {
         graph: null
       }
 
-      console.log(this.d3.select(this.prepId(nak)));
+      // console.log(this.d3.select(this.prepId(nak)));
       this.d3.select(this.prepId(nak)).classed("selected", true)
 
     },
@@ -343,8 +398,7 @@ export default {
       var rect = gMain.append('rect')
         .attr('width', parentWidth)
         .attr('height', parentHeight)
-        .style('fill', "none
-")
+        .style('fill', "none")
         .on('click.vue', this.unSetActive)
         .on('click.native', () => {
           node.each(function (d) {
@@ -411,8 +465,8 @@ export default {
         .attr("class", "link")
         .selectAll("line")
         .data(bilinks)
-        .enter().append("path")
-        .attr("stroke-width", 1);
+        .enter().append("path");
+      // .attr("stroke-width", 1);
 
       var node = gDraw.append("g")
         .attr("class", "node")
@@ -432,8 +486,8 @@ export default {
             return null;
           }
         })
-        .on("mouseover", mouseOver(.2))
-        .on("mouseout", mouseOut)
+        // .on("mouseover", mouseOver(.2))
+        // .on("mouseout", mouseOut)
         .call(d3v4.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -492,9 +546,9 @@ export default {
       // build a dictionary of nodes that are linked
       var linkedByIndex = {};
       links.forEach(function (d) {
-        if (d._id) {
-          linkedByIndex[d.source.index + "," + d.target.index] = 1;
-        }
+        // if (d._id) {
+        linkedByIndex[d.source.index + "," + d.target.index] = 1;
+        // }
       });
 
       // check the dictionary to see if nodes are linked
@@ -508,29 +562,50 @@ export default {
           // check all other nodes to see if they're connected
           // to this one. if so, keep the opacity at 1, otherwise
           // fade
-          node.style("stroke-opacity", function (o) {
-            let thisOpacity = isConnected(d, o) ? 1 : opacity;
-            return thisOpacity;
-          });
-          node.style("fill-opacity", function (o) {
-            let thisOpacity = isConnected(d, o) ? 1 : opacity;
-            return thisOpacity;
-          });
-          // also style link accordingly
-          link.style("stroke-opacity", function (o) {
-            return o.source === d || o.target === d ? 1 : opacity;
-          });
-          link.style("stroke", function (o) {
-            return o.source === d || o.target === d ? o.source.colour : "#ddd";
-          });
+          // node.style("stroke-opacity", function (o) {
+          //   let thisOpacity = isConnected(d, o) ? 1 : opacity;
+          //   return thisOpacity;
+          // });
+          // node.style("fill-opacity", function (o) {
+          //   let thisOpacity = isConnected(d, o) ? 1 : opacity;
+          //   return thisOpacity;
+          // });
+
+          // function (o) {let thisClass = isConnected(d, o) ? 'lit' : 'muted';return thisClass;}
+
+          node.classed("muted", function (o) {
+              //mute whatever is not connected
+              return !isConnected(d, o);
+            })
+            // also style link accordingly
+            // link.attr("class", function (o) {
+            //     let thisClass = o.source === d || o.target === d ? '' : 'muted';
+            //     return thisClass;
+            //   })
+          link.classed("muted", (o) => {
+              let oids = o.map(m => m['id'])
+                //mute whatever is not connected
+                // return (o.source !== d && o.target !== d);
+                // return !_.contains(_.pluck(o, 'id'), d.id);
+                // console.log("oids in test:", oids);
+                // console.log("did in test:", d.id);
+              return !oids.includes(d.id);
+            })
+            // link.style("stroke-opacity", function (o) {
+            //   return o.source === d || o.target === d ? 1 : opacity;
+            // });
+            // link.style("stroke", function (o) { // return o.source === d || o.target === d ? o.source.colour : "#ddd"; // });
+
         };
       }
 
       function mouseOut() {
-        node.style("stroke-opacity", 1);
-        node.style("fill-opacity", 1);
-        link.style("stroke-opacity", 1);
-        link.style("stroke", "#ddd");
+        node.classed('muted', false);
+        link.classed('muted', false);
+        // node.style("stroke-opacity", 1);
+        // node.style("fill-opacity", 1);
+        // link.style("stroke-opacity", 1);
+        // link.style("stroke", "#ddd");
       }
 
       function tickedog() {
@@ -977,47 +1052,6 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
-.dv-column-left {}
-
-.dv-column-right {
-  color: #00eb11;
-  overflow-y: scroll;
-}
-
-
-/*
-.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
-.edge {
-  fill: none;
-  stroke: #bbb;
-}
-.node-edge-default{
-  stroke: rgba(4,4,4,.4);
-  fill:none;
-  stroke-width: 2px;
-}
-
-.node-pu{
-  stroke: #3f0081;
-  stroke-width: 1.5px;
-}
-.edge-wa
-  {
-  fill: none;
-  stroke: #bbb;
-}
-
-.edge-hf
-  {
-  fill: none;
-  stroke: #aaa;
-}
-*/
 
 text {
   fill: #fff;
