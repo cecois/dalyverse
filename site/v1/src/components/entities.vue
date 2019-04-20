@@ -41,7 +41,7 @@
             <div class="field column">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
-                <input v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
+                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
                 <div class="column is-3"></div>
               </div note="./columns">
             </div>
@@ -138,6 +138,7 @@ export default {
       meta: { graph: { loading: false } },
       state: "filled",
       fittable: true,
+      query: null,
       active: {
         key: null,
         item: { article: null },
@@ -198,56 +199,30 @@ export default {
 
   }, //mounted
   methods: {
+    dvMute () {
+
+
+    },
     dvFind (q) {
 
-      // get valid nodes (not those intermediates)
+      // get valid nodes
       let circlz = this.d3.selectAll('g.node > circle');
 
-      let nos =
+
+      this.d3.selectAll('g.link').classed("muted", (q));
+
+
+      // validate them - only those with n.label
+      let yeas =
         this.$_.reject(
           circlz.data(), (n) => {
             return (!n.label)
           })
 
-      // console.log("nos:", this.$_.first(nos, 44));
-
-      // get ids of matching
-      let yea = this.$_.pluck(this.$_.filter(nos, (n) => {
-        console.log("n:", n);
-        return (n.label.toLowerCase().indexOf(q.toLowerCase()) >= 0)
-      }), 'id');
-
-      console.log("yea:", yea);
-
-      this.$_.each(yea, (y) => {
-        // this.$_.findWhere(this.graph.nodes, { id: nakk })
-        this.d3.select(this.prepId(y)).classed("selected", true)
-
-      })
-
-
-      // this.active = {
-      //   key: (!ai) ? null : ai.id,
-      //   label: (!ai) ? null : ai.label,
-      //   article: (!ai) ? null : ai.article,
-      //   graph: null
-      // }
-
-      // console.log(this.d3.select(this.prepId(nak)));
-
-      // shop em against circles
-      // this.$_.each(this.$_.reject(circlz, (ci) => {
-      //   console.log("ci:", ci);
-      //   return (!ci.label)
-      // }), (c) => {
-      //   console.log("c:", c);
-      //   if (c.id.indexOf("mummy") < 0) {
-      //     console.log("c:", c);
-      //     c.classed("muted", true)
-      //   }
-      // })
-
-
+      // shop the query against each to set muted class
+      this.$_.each(this.$_.filter(yeas, (n) => {
+        this.d3.select(this.prepId(n.id)).classed("muted", (n.label.toLowerCase().indexOf(q.toLowerCase()) < 0))
+      }));
 
     },
     subGraph (G) {
@@ -360,13 +335,18 @@ export default {
     ,
     unSetActive (nak) {
 
-      // this.nullGraph();
+      console.log("nak in unset active:", nak);
+      this.nullGraph();
       this.d3.select(this.prepId(nak)).classed("selected", false)
 
     },
     dragends (d) {
 
-      this.setActive(d._id)
+      if (this.active.key == d._id) {
+        this.unSetActive(d._id)
+      } else {
+        this.setActive(d._id)
+      }
 
     },
     D3init: function () {
@@ -399,14 +379,18 @@ export default {
         .attr('width', parentWidth)
         .attr('height', parentHeight)
         .style('fill', "none")
-        .on('click.vue', this.unSetActive)
+        // .on('click.vue', this.unSetActive)
+        .on('click.vue', (w) => { console.log("w in rect.click.vue", w); })
         .on('click.native', () => {
+          console.log("rect.click.native fired");
           node.each(function (d) {
             d.selected = false;
             d.previouslySelected = false;
           });
           node.classed("selected", false)
         });
+
+      console.log("rect exists:", rect);
 
       var gDraw = gMain.append('g');
 
@@ -874,6 +858,7 @@ export default {
         process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
       );
       this.active.key = null
+      this.active.graph = null
         // return {
         //   participants: null,
         //   locations: null
@@ -932,6 +917,9 @@ export default {
             { source: 'people/_:daltonwilcox', target: 'people/_:mummy' }
           ]
         }
+
+        this.entities_total.loading = false
+        this.entities_total.v = this.graph.nodes.length
       } else {
         // we'll pull a large fake set from local
 
@@ -942,8 +930,8 @@ export default {
               process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
             );
 
-            let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
+            let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.v = deeznodes.length
             let co = { msg: deeznodes.length + ' entities loaded', severity: "normal" }
             this.console.msgs.push(co)
@@ -1029,11 +1017,21 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
 
   watch: {
     // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
+    query: {
+      handler: function (vnew, vold) {
+
+        // this.setRoute();
+        // this.unSetActive(vold)
+        // this.active.graph = this.subGraph(this.getGraph());
+        // this.setPageTitle();
+        this.dvFind(vnew);
+      }
+    },
     "active.key": {
       handler: function (vnew, vold) {
 
         this.setRoute();
-        this.unSetActive(vold)
+        // this.unSetActive(vold)
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
       }
