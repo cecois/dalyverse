@@ -1,32 +1,6 @@
 <template>
   <div id="vue-root" class="">
     <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
-    <nav id="dv-nav-main" class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="dv-nav-menu" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-        Home
-      </a>
-          <a class="navbar-item">
-        Entities
-      </a>
-          <a class="navbar-item">
-        Events
-      </a>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-          </div>
-        </div>
-      </div>
-    </nav>
     <div class="columns dv-vertical-columns">
       <div class="column is-half dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->
@@ -54,19 +28,19 @@
       <div class="column is-half dv-column-right">
         <div id="console" class="is-right breadcrumb">
           <ul class="">
-            <li v-for="msg
- in console.msgs">
+            <li v-for="msg in console.msgs">
               <span v-bind:class="msg.severity">{{msg.msg}}</span>
             </li>
           </ul>
         </div>
-        {{active.label}}
-        <br/>
+        <div id="dv-graph-wrapper" v-if="active.key">
+          {{active.label}}
+          <br/>
+        </div note="/#dv-graph-wrapper">
         <!-- active.article: {{active.article}} -->
-        <p class="is-italic">
-          {{$_.first(active.article)}}
-        </p>
         <ul v-if="active.article">
+          <li>{{$_.first(active.article )}}
+          </li>
           <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1
 )))">
             {{articlechunk}}
@@ -122,8 +96,6 @@
 <script>
 import * as d3 from 'd3';
 // import Graph from "./graph.vue";
-
-const sourceOfTruth = { p1: "im p1", p2: "im p2" }
 
 export default {
   name: "Entities",
@@ -193,7 +165,10 @@ export default {
     // this.$nextTick(() => {
     if (this.$route.params
       .activeid) {
+      console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
       this.active.key = decodeURIComponent(this.$route.params.activeid);
+      console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
+      this.setActive()
     }
     // })
 
@@ -289,13 +264,12 @@ export default {
     } //getgraph
     ,
     setActive (nak) {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nak : null
-      );
-
       let nakk = (nak) ? nak : this.active.key
 
-      console.log("nakk:", nakk);
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nakk : null
+      );
+
 
       let ai = this.$_.findWhere(this.graph.nodes, { id: nakk })
 
@@ -307,7 +281,7 @@ export default {
       }
 
       // console.log(this.d3.select(this.prepId(nak)));
-      this.d3.select(this.prepId(nak)).classed("selected", true)
+      this.d3.select(this.prepId(nakk)).classed("selected", true)
 
     },
     prepId (iak) {
@@ -378,9 +352,11 @@ export default {
       var rect = gMain.append('rect')
         .attr('width', parentWidth)
         .attr('height', parentHeight)
-        .style('fill', "none")
-        // .on('click.vue', this.unSetActive)
-        .on('click.vue', (w) => { console.log("w in rect.click.vue", w); })
+        .style('fill', "black")
+        .on('click.vue', (w) => {
+          this.unSetActive();
+          console.log("w in rect.click.vue", w);
+        })
         .on('click.native', () => {
           console.log("rect.click.native fired");
           node.each(function (d) {
@@ -389,8 +365,6 @@ export default {
           });
           node.classed("selected", false)
         });
-
-      console.log("rect exists:", rect);
 
       var gDraw = gMain.append('g');
 
@@ -1030,8 +1004,8 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     "active.key": {
       handler: function (vnew, vold) {
 
-        this.setRoute();
-        // this.unSetActive(vold)
+        // this.setRoute();
+        // if(!vnew)this.nullGraph()
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
       }
