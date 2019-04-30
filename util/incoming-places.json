@@ -369,7 +369,7 @@
 }, {
   "_key": "_:ctusa"
   , "name": "Connecticut, USA"
-  , "article": ["home of: Yale, a Pantages Theatre"]
+  , "article": ["home of: Yale; a Pantages Theatre"]
   , "geo_key": {
     "type": "poly"
     , "id": 2

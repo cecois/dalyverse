@@ -140,6 +140,7 @@ circle{
     fill:$dalyNode;r:8;
     &.muted{
 fill-opacity:.1;
+stroke-opacity:.1;
 }
     }//daly
 &.selected{
@@ -149,6 +150,7 @@ fill-opacity:.1;
 }
 &.muted{
 fill-opacity:.1;
+stroke-opacity:.1;
 }
 }
 

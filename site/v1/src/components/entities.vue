@@ -155,7 +155,7 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
     if (process.env.MODE == "T") {
-      this.fakeFetchEntities('small')
+      this.fakeFetchEntities()
 
     } else {
       this.fetchEntities()
@@ -168,7 +168,7 @@ export default {
       console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
       this.active.key = decodeURIComponent(this.$route.params.activeid);
       console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
-      this.setActive()
+      // this.setActive()
     }
     // })
 
@@ -264,24 +264,29 @@ export default {
     } //getgraph
     ,
     setActive (nak) {
+      console.log('setting active w :nak:', nak);
       let nakk = (nak) ? nak : this.active.key
 
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nakk : null
-      );
+      if (nakk) {
+        let nakkf = (nakk.indexOf('%') >= 0) ? decodeURIComponent(nakk) : nakk
+
+        console.info(
+          process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nakkf : null
+        );
 
 
-      let ai = this.$_.findWhere(this.graph.nodes, { id: nakk })
+        let ai = this.$_.findWhere(this.graph.nodes, { id: nakkf })
 
-      this.active = {
-        key: (!ai) ? null : ai.id,
-        label: (!ai) ? null : ai.label,
-        article: (!ai) ? null : ai.article,
-        graph: null
-      }
+        this.active = {
+          key: (!ai) ? null : ai.id,
+          label: (!ai) ? null : ai.label,
+          article: (!ai) ? null : ai.article,
+          graph: null
+        }
 
-      // console.log(this.d3.select(this.prepId(nak)));
-      this.d3.select(this.prepId(nakk)).classed("selected", true)
+        this.d3.select('circle').classed("selected", false)
+        this.d3.select(this.prepId(nakkf)).classed("selected", true)
+      } //if nakk
 
     },
     prepId (iak) {
@@ -869,7 +874,7 @@ export default {
 
         this.$router.push({
           params: {
-            activeid: (this.active.key) ? encodeURIComponent(this.active.key) : ''
+            activeid: (this.active.key) ? this.active.key : ''
           }
         }); //rejplace
       } //setRoute
@@ -1004,7 +1009,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     "active.key": {
       handler: function (vnew, vold) {
 
-        // this.setRoute();
+        this.setRoute();
         // if(!vnew)this.nullGraph()
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
@@ -1012,7 +1017,11 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     },
     graph: {
       handler: function (vnew, vold) {
-        if (vnew !== null) this.D3init();
+        if (vnew !== null) this.D3init()
+        this.$nextTick(() => {
+          console.log("in next tick, setting active...");
+          this.setActive()
+        })
       }
     } //nodes
   } //watch
