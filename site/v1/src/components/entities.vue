@@ -155,22 +155,19 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
     if (process.env.MODE == "T") {
-      this.fakeFetchEntities()
+      this.fakeFetchEntities('small')
 
     } else {
       this.fetchEntities()
 
     }
 
-    // this.$nextTick(() => {
     if (this.$route.params
       .activeid) {
       console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
       this.active.key = decodeURIComponent(this.$route.params.activeid);
       console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
-      // this.setActive()
     }
-    // })
 
   }, //mounted
   methods: {
@@ -1010,7 +1007,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
       handler: function (vnew, vold) {
 
         this.setRoute();
-        // if(!vnew)this.nullGraph()
+        // this.unSetActive(vold)
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
       }
