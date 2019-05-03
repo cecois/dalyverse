@@ -357,10 +357,8 @@ export default {
         .style('fill', "black")
         .on('click.vue', (w) => {
           this.unSetActive();
-          console.log("w in rect.click.vue", w);
         })
         .on('click.native', () => {
-          console.log("rect.click.native fired");
           node.each(function (d) {
             d.selected = false;
             d.previouslySelected = false;
@@ -479,12 +477,16 @@ export default {
         .force("x", d3v4.forceX(parentWidth / 2))
         .force("y", d3v4.forceY(parentHeight / 2));
 
+      this.simulation = simulation
+
       simulation
         .nodes(graph_nodes)
         .on("tick", ticked);
 
       simulation.force("link")
         .links(graph_edges);
+
+      console.log("simulation:", simulation);
 
       function ticked() {
         link.attr("d", positionLink);
@@ -734,7 +736,6 @@ export default {
       var texts = ['Use the scroll wheel to zoom',
         'Hold the shift key to select nodes'
       ]
-
       svg.selectAll('text')
         .data(texts)
         .enter()
@@ -835,6 +836,7 @@ export default {
       );
       this.active.key = null
       this.active.graph = null
+      this.active.article = null
         // return {
         //   participants: null,
         //   locations: null
