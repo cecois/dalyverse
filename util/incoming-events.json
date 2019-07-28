@@ -1,4 +1,52 @@
 [{
+  "_key": "_:daltonwilcoxmurdersanallergic"
+  , "name": "Dalton Wilcox Murders an Allergic"
+  , "article": ["Mistaking the coughing and weezing of an allergic man as symptoms of werewolfism, Dalton Wilcox shoots dead a man in a Los Angeles parking lot."]
+  , "timestamp": {
+    "start": "2018-12-20T16:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "firm"
+    , "nb": "day of Peecast Blast 2018"
+  }
+},{
+  "_key": "_:themcgorrykidnappings"
+  , "name": "The McGorry Kidnappings"
+  , "article": ["Johnny McGorry takes hostage his brother Shamus with intent of forcing his more famous brother to write stories for him (Johnny, Patrick McMahon) to tell","Also abducted is Shamus' wife, who had come calling in search of the brother."]
+  , "timestamp": {
+    "start": "2019-01-05T10:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-prior-to"
+    , "nb": "estimate is rel. to CBB#600"
+  }
+},{
+  "_key": "_:woodstock99"
+  , "name": "Woodstock '99"
+  , "article": ["Woodstock '99 takes place in Rome, NY. The festival is marred by a number of unfortunate and/or untoward conditions and situations.","The festival was attended by none other than Dalton Wilcox, who admits to killing '19 vampires' over the course of the event."]
+  , "timestamp": {
+    "start": "1999-07-25T10:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "firm"
+    , "nb": "documented"
+  }
+},{
+  "_key": "_:shananasueshotdog"
+  , "name": "Sha Na Na Sues Hot Dog for His Water Skiis"
+  , "article": ["Some time prior to CBB#599, Sha Na Na sue Hot Dog 'specifically for' his water skiis over his trademarky tour with his own band Na Sha Sha. Hot Dog represents himself at trial."]
+  , "timestamp": {
+    "start": "2018-12-03T08:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-prior-to"
+    , "nb": "estimate is rel. to CBB#599"
+  }
+},{
   "_key": "_:daltonwilcoxmurdersacyclops"
   , "name": "Dalton Wilcox Kills a Cyclops"
   , "article": ["Prior to appearing on CBB#589, Dalton Wilcox suffers a flat tire on his truck. A tow truck operator responds and repairs the tire, requesting from Mr. Wilcox \"fifty goddamned dollars\" for the service. Mr. Wilcox, seeing now that the eyepatch very certainly indicates the operator is a cyclops, fires a silver bullet into the man's heart."]
@@ -300,8 +348,8 @@
   }
 }, {
   "_key": "_:patrickmcmahoncrashesaparty1"
-  , "name": "Johnny McGory (Patrick McMahon) Crashes a Party and Steals $33"
-  , "article": ["Encountering a party to which he was not invited, Mr. McGory fakes a mutual friend named 'Jackie' and steals $33 from the upstairs coatroom. He then gets drunk waiting for a bus to the Morongo casinos and snorts an unknown white substance in the station bathroom. Then 'one thing led to another' and McGory ends up hijacking a bus and driving it into a ditch 'on purpose because of the fear'"]
+  , "name": "Johnny McGorry (Patrick McMahon) Crashes a Party and Steals $33"
+  , "article": ["Encountering a party to which he was not invited, Mr. McGorry fakes a mutual friend named 'Jackie' and steals $33 from the upstairs coatroom. He then gets drunk waiting for a bus to the Morongo casinos and snorts an unknown white substance in the station bathroom. Then 'one thing led to another' and McGorry ends up hijacking a bus and driving it into a ditch 'on purpose because of the fear'"]
   , "timestamp": {
     "start": "2002-11-01T00:00:00Z"
     , "end": null
@@ -312,8 +360,8 @@
   }
 }, {
   "_key": "_:johnnymcgorrybreaksandenters"
-  , "name": "Johnny McGory (Patrick McMahon) Does a B&E"
-  , "article": ["Booked on a doomed world tour by a booking agent that was, in reality, just 'a schizophrenic with a briefcase full of knives,' McGory developed a habit of breaking into presumed-empty homes for food and shelter. One morning he wakes in the home of a bed-ridden elderly woman who was expecting her caretaker, Greta. McGory temporarily assumes the identity of Greta, feeds the woman, then sits down to watch cartoons in his underwear. The real Greta then returns to the house and 'immediately' gets violent. A scuffle ensues in which Mr. McGory is pepper-sprayed. McGory then stumbles out to splash water on his face from a litter-strewn brook, where he stays for some time, crying."]
+  , "name": "Johnny McGorry (Patrick McMahon) Does a B&E"
+  , "article": ["Booked on a doomed world tour by a booking agent that was, in reality, just 'a schizophrenic with a briefcase full of knives,' McGorry developed a habit of breaking into presumed-empty homes for food and shelter. One morning he wakes in the home of a bed-ridden elderly woman who was expecting her caretaker, Greta. McGorry temporarily assumes the identity of Greta, feeds the woman, then sits down to watch cartoons in his underwear. The real Greta then returns to the house and 'immediately' gets violent. A scuffle ensues in which Mr. McGorry is pepper-sprayed. McGorry then stumbles out to splash water on his face from a litter-strewn brook, where he stays for some time, crying."]
   , "timestamp": {
     "start": "2000-09-28T07:00:00Z"
     , "end": null
@@ -1029,6 +1077,18 @@
   , "nb_timestamp": {
     "class": null
     , "nb": "timestamp is acc. to release date of SuperEgo 3.8"
+  }
+}, {
+  "_key": "_:dondimellosdisneyszootopia"
+  , "name": "Don DiMello Presents: Don DiMello's Disney's Zootopia"
+  , "article": ["In fall 2016, Mr. DiMello stages 'an abomination' of a stage play, featuring girls dressed as animals and animals dressed as girls. The show often fails to reach denouement."]
+  , "timestamp": {
+    "start": "2016-09-06T13:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is acc. to release date of CBB from Now Hear This in Anaheim"
   }
 }, {
   "_key": "_:dondimellomeetsmarissawompler"
@@ -2212,8 +2272,8 @@
   }
 }, {
   "_key": "_:patrickmcmahonisaccused"
-  , "name": "Johnny McGory (Patrick McMahon) is Accused of Sexual Misconduct"
-  , "article": ["Accused of inappropriate behavior by a coworker at a medical packaging plant, McGory sees a four-leaf clover, under which there was a leprechaun."]
+  , "name": "Johnny McGorry (Patrick McMahon) is Accused of Sexual Misconduct"
+  , "article": ["Accused of inappropriate behavior by a coworker at a medical packaging plant, McGorry sees a four-leaf clover, under which there was a leprechaun."]
   , "timestamp": {
     "start": "2009-01-01T16:00:00Z"
     , "end": null

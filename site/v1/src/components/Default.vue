@@ -1,15 +1,19 @@
 <template>
-<div>
-default
-<code>{{console.msg}}</code>
-</div>
+  <div class="dv-app"
+ style="height:100%;">
+    dv - itj's a aan bl
+    <code>{{console.msg}}</code>
+  </div>
 </template>
+
 <script>
 export default {
   name: 'Default',
   data () {
     return {
-      console: {msg: '', throb: false
+      console: {
+        msg: '',
+        throb: false
       },
       computed: {},
       watch: {},
@@ -21,6 +25,6 @@ export default {
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
 
+<style>
 </style>

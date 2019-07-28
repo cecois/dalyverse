@@ -1,4 +1,13 @@
 [{
+  "_key": "_:romeny"
+  , "name": "Rome, NY"
+  , "article": ["Rome is a city in upstate New York. In 1999 a Woodstock revival festival was held there."]
+  , "geo_key": {
+    break here to get geom frm cbb
+    "type": "point"
+    , "id": 000
+  }
+},{
   "_key": "_:lacanadaflintridge"
   , "name": "La Cañada Flintridge, CA"
   , "article": ["La Cañada Flintridge is a city in California's Crescenta Valley."]

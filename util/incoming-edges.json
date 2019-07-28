@@ -1,4 +1,69 @@
 [{
+  "_from": "events/_:shamusmcmahon"
+  , "_to": "people/_:shamusmcmahonsunnamedwife"
+  , "type": "isSpouseOf"
+  , "vertex": "_:shamusmcmahon"
+},{
+  "_from": "events/_:daltonwilcoxmurdersanallergic"
+  , "_to": "people/_:daltonwilcox"
+  , "type": "hasParticipant"
+  , "vertex": "_:daltonwilcox"
+},{
+  "_from": "events/_:daltonwilcoxmurdersanallergic"
+  , "_to": "people/_:losangeleswerewolf1"
+  , "type": "hasParticipant"
+  , "vertex": "_:losangeleswerewolf1"
+},{
+  "_from": "events/_:shamusmcmahonsunnamedwife"
+  , "_to": "people/_:shamusmcmahon"
+  , "type": "isSpouseOf"
+  , "vertex": "_:shamusmcmahonsunnamedwife"
+},{
+  "_from": "events/_:matrickpahahon"
+  , "_to": "people/_:patrickmcmahon"
+  , "type": "seeAlso"
+  , "vertex": "_:matrickpahahon"
+},{
+  "_from": "events/_:johnnymcgorry"
+  , "_to": "people/_:patrickmcmahon"
+  , "type": "seeAlso"
+  , "vertex": "_:johnnymcgorry"
+},{
+  "_from": "events/_:themcgorykidnappings"
+  , "_to": "people/_:johnnymcgorry"
+  , "type": "hasParticipant"
+  , "vertex": "_:themcgorykidnappings"
+},{
+  "_from": "events/_:themcgorykidnappings"
+  , "_to": "people/_:shamusmcmahon"
+  , "type": "hasParticipant"
+  , "vertex": "_:themcgorykidnappings"
+},{
+  "_from": "events/_:themcgorykidnappings"
+  , "_to": "people/_:patrickmcmahon"
+  , "type": "hasParticipant"
+  , "vertex": "_:themcgorykidnappings"
+},{
+  "_from": "events/_:woodstock99"
+  , "_to": "places/_:romeny"
+  , "type": "occurredAt"
+  , "vertex": "_:woodstock99"
+},{
+  "_from": "events/_:woodstock99"
+  , "_to": "people/_:daltonwilcox"
+  , "type": "hasParticipant"
+  , "vertex": "_:woodstock99"
+},{
+  "_from": "events/_:shananasueshotdog"
+  , "_to": "things/_:shanana"
+  , "type": "hasParticipant"
+  , "vertex": "_:shananasueshotdog"
+},{
+  "_from": "events/_:shananasueshotdog"
+  , "_to": "people/_:hotdog"
+  , "type": "hasParticipant"
+  , "vertex": "_:shananasueshotdog"
+},{
   "_from": "events/_:daltonwilcoxmurdersacyclops"
   , "_to": "places/_:gowergulch"
   , "type": "occurredAt"
@@ -319,6 +384,11 @@
   , "type": "hasParticipant"
   , "vertex": "_:patrickmcmahoncrashesaparty1"
 }, {
+  "_from": "events/_:patrickmcmahoncrashesaparty1"
+  , "_to": "people/_:johnnymcgorry"
+  , "type": "hasParticipant"
+  , "vertex": "_:patrickmcmahoncrashesaparty1"
+}, {
   "_from": "events/_:johnnymcgorrybreaksandenters"
   , "_to": "people/_:unnamedelderlywoman1"
   , "type": "hasParticipant"
@@ -326,6 +396,11 @@
 }, {
   "_from": "events/_:johnnymcgorrybreaksandenters"
   , "_to": "people/_:gretathecaretaker"
+  , "type": "hasParticipant"
+  , "vertex": "_:johnnymcgorrybreaksandenters"
+}, {
+  "_from": "events/_:johnnymcgorrybreaksandenters"
+  , "_to": "people/_:johnnymcgorry"
   , "type": "hasParticipant"
   , "vertex": "_:johnnymcgorrybreaksandenters"
 }, {
@@ -1473,6 +1548,11 @@
   , "_to": "places/_:pasadenafairytaletheatre"
   , "type": "occurredAt"
   , "vertex": "_:dondimellostagescinderella"
+}, {
+  "_from": "events/_:dondimellosdisneyszootopia"
+  , "_to": "people/_:dondimello"
+  , "type": "hasParticipant"
+  , "vertex": "_:dondimellosdisneyszootopia"
 }, {
   "_from": "events/_:dondimellostruewest"
   , "_to": "people/_:dondimello"

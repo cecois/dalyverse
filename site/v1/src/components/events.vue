@@ -1,111 +1,111 @@
 <template>
-<div id="vue-root" class="container is-fixed-top">
-  <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
-<!-- -------------------------------------------------------------- TIMELINE
+  <div class="dv-app">
+    <div id="map" style="width: 100%;height: 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;"></div>
+    <div id="vue-root" class="container is-fixed-top">
+      <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
+      <!-- -------------------------------------------------------------- TIMELINE
 <div id="line"/>
 -->
-<!-- <nav v-if="state === 'filled'" class="navbar is-fixed-top"> -->
-
-<!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
-<!-- ************************************************************************************ #CONSOLE -->
-<div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
-<!-- <a class="button is-small" v-on:click="zoomToFullExtent">
+      <!-- <nav v-if="state === 'filled'" class="navbar is-fixed-top"> -->
+      <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
+      <!-- ************************************************************************************ #CONSOLE -->
+      <div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
+        <!-- <a class="button is-small" v-on:click="zoomToFullExtent">
     <span class="icon is-small">
       <i class="mdi mdi-github"></i>
     </span>
     <span>X</span>
   </a> -->
-  <a href="http://localhost:8181/#/events"><b-icon icon="link" size="is-small"></b-icon></a>
-  <a class="" v-on:click="zoomToFullExtent"><b-icon icon="arrow-expand-all" size="is-small"></b-icon></a>
-
-<!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
-
-  <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
+        <a href="http://localhost:8181/#/events">
+          <b-icon icon="link" size="is-small"></b-icon>
+        </a>
+        <a class="" v-on:click="zoomToFullExtent">
+          <b-icon icon="arrow-expand-all" size="is-small"></b-icon>
+        </a>
+        <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
+        <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
           <i :class="console.clazz" class="mdi"></i>
         </span>
 <hr/> -->
-<!-- <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div> -->
-<!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div> -->
-<!-- <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
-<!-- <div class="column" v-if="events">events found:<code>{{events.length}}</code></div> -->
-
-<!-- <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div> -->
-
-<!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-
-<!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
+        <!-- <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div> -->
+        <!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div> -->
+        <!-- <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
+        <!-- <div class="column" v-if="events">events found:<code>{{events.length}}</code></div> -->
+        <!-- <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div> -->
+        <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
+        <!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
 <div class="column is-3" v-if="active.item.content">TITL: {{active.item.content}}</div>
 <div class="column is-3" v-if="active.item.article">ART: {{active.item.article}}</div>
 <div class="column is-2 is-size-7">{{(events.length)}}</div> -->
-
-  <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
-
-<!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
-<!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-
-<div class="tile is-ancestor">
-  <div class="tile is-4 is-vertical is-parent">
-    <div class="tile is-child box">
-      <div class="columns">
-        <div class="column"><p class="title is-size-7">EVENTS BT {{ times.line.begin }} - {{ times.line.end }}</p>
-          <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p>
-          <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p>
-          <p class="">
-            <div style="font-size:.5em;" v-for="event in events">{{ event.id }}</div>
-          </p>
+        <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
+        <!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
+        <!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+              <div class="columns">
+                <div class="column">
+                  <p class="title is-size-7">EVENTS BT {{ times.line.begin }} - {{ times.line.end }}</p>
+                  <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p>
+                  <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p>
+                  <p class="">
+                    <div style="font-size:.5em;" v-for="event in events">{{ event.id }}</div>
+                  </p>
+                </div>
+                <div v-if="geoms" class="column">
+                  <p class="title is-size-7">GEOMS</p>
+                  <p class="is-size-7">{{(geoms.length)}}</p>
+                  <p class="is-size-7">({{(l_json.getLayers().length)}}l)</p>
+                </div>
+                <div class="column">
+                  <p class="title is-size-7" v-if="active.key">GRPH</p>
+                  <p v-if="active.graph.participants">ppl:{{active.graph.participants.length}}</p>
+                </div>
+              </div>
+              <!-- /.columns -->
+            </div>
+            <!-- /.tile -->
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title is-size-7" v-if="active.key">ACTIVE</p>
+              <p class="is-size-7">{{active.key}}</p>
+              <p v-if="active.item" class=" is-size-7">{{active.item.content}} ({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}})</p>
+              <p v-if="active.item" class="" style="font-size:.5em;">{{active.item.article}}</p>
+              <p v-if="(active.item && active.item.geo.length>0)">
+                <a class="" v-on:click="zoomToNext">
+                  <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
+                </a>
+              </p>
+              <div v-if="seens" class="column">
+                <p class="title is-size-7">SEENS</p>
+                <p class="is-size-7">{{(seens.length)}}</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div v-if="geoms" class="column"><p class="title is-size-7">GEOMS</p>
-          <p class="is-size-7">{{(geoms.length)}}</p>
-          <p class="is-size-7">({{(l_json.getLayers().length)}}l)</p>
-        </div>
-        <div class="column">
-      <p class="title is-size-7" v-if="active.key">GRPH</p>
-      <p v-if="active.graph.participants">ppl:{{active.graph.participants.length}}</p>
+      </div>
+      <!-- ************************************************************************************ /#CONSOLE -->
+      <!-- #.navbar </nav> -->
+      <div class="" id="container-main">
+        <!-- -------------------------------------------------------------- SLIDER -->
+        <div id="slider" />
+      </div>
+      <!-- ************************************************************************************ /#CONTAINER-MAIN -->
+      <div id="timeline" />
     </div>
-      </div><!-- /.columns -->
-    </div><!-- /.tile -->
-
+    <!-- ************************************************************************************ /#CONTAINER-MAIN -->
   </div>
-  <div class="tile is-parent">
-    <div class="tile is-child box">
-      <p class="title is-size-7" v-if="active.key">ACTIVE</p>
-      <p class="is-size-7">{{active.key}}</p>
-      <p v-if="active.item" class=" is-size-7">{{active.item.content}} ({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}})</p>
-      <p v-if="active.item" class="" style="font-size:.5em;">{{active.item.article}}</p>
-      <p v-if="(active.item && active.item.geo.length>0)"><a class="" v-on:click="zoomToNext"><b-icon icon="magnify-plus-outline" size="is-small"></b-icon></a></p>
-              <div v-if="seens" class="column"><p class="title is-size-7">SEENS</p>
-          <p class="is-size-7">{{(seens.length)}}</p>
-        </div>
-    </div>
+  <!-- ./#vue-root -->
   </div>
-</div>
-
-</div><!-- ************************************************************************************ /#CONSOLE -->
-<!-- #.navbar </nav> -->
-
-<div class="" id="container-main">
-  <!-- -------------------------------------------------------------- SLIDER -->
-<div id="slider"/>
-</div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
-
-<div id="timeline"/>
-</div><!-- ************************************************************************************ /#CONTAINER-MAIN -->
-
-</div><!-- ./#vue-root -->
 </template>
 
 <script>
-
 export default {
   name: "Timeline",
-  data() {
+  data () {
     return {
-      MAP: new L.Map('map', {
-  zoomControl: false,
-  center: [41.12410774245512, -41.6872787475586],
-  attributionControl: false,
-  zoom: 3
-}),
+      MAP: null,
       page: {
         title: "Andy Dalyverse Events"
       },
@@ -189,34 +189,32 @@ export default {
         throb: false
       },
       l_json: L.geoJSON(this.geoms, {
-        pointToLayer: (feature, latlng) => {
-          return L.circleMarker(latlng);
-        },
-        style: feature => {
-          // reduce potentially huge thing into just important bits
-          let feature_reduced = {
-            properties: { cartodb_id: feature.properties.cartodb_id },
-            geometry: { type: feature.geometry.type }
-          };
+          pointToLayer: (feature, latlng) => {
+            return L.circleMarker(latlng);
+          },
+          style: feature => {
+            // reduce potentially huge thing into just important bits
+            let feature_reduced = {
+              properties: { cartodb_id: feature.properties.cartodb_id },
+              geometry: { type: feature.geometry.type }
+            };
 
-          return this.getGeoStyle(feature_reduced);
-        }, //style
-        onEachFeature: (feature, layer) => {} //onEach
-      })
-      // .addTo(this.MAP)
+            return this.getGeoStyle(feature_reduced);
+          }, //style
+          onEachFeature: (feature, layer) => {} //onEach
+        })
+        // .addTo(this.MAP)
 
-        // .on("layeradd", parent => {
-          // console.log(
-          //   process.env.VERBOSITY == "DEBUG" ? "on.layeradd..." : null,
-          //   parent
-          // );
+      // .on("layeradd", parent => {
+      // console.log(
+      //   process.env.VERBOSITY == "DEBUG" ? "on.layeradd..." : null,
+      //   parent
+      // );
 
-        // })
+      // })
         .on("click", parent => {
           console.log(
-            process.env.VERBOSITY == "DEBUG"
-              ? "  -> on click, this obj:"
-              : null,
+            process.env.VERBOSITY == "DEBUG" ? "  -> on click, this obj:" : null,
             parent
           );
 
@@ -252,9 +250,7 @@ export default {
           let neweventkey = neweventkeyob ? neweventkeyob.id : null;
 
           console.log(
-            process.env.VERBOSITY == "DEBUG"
-              ? "  -> on click, new event key:"
-              : null,
+            process.env.VERBOSITY == "DEBUG" ? "  -> on click, new event key:" : null,
             neweventkey
           );
 
@@ -264,18 +260,14 @@ export default {
         })
         .on("popupopen", parent => {
           console.log(
-            process.env.VERBOSITY == "DEBUG"
-              ? "  -> on popupopen, glowing:"
-              : null,
+            process.env.VERBOSITY == "DEBUG" ? "  -> on popupopen, glowing:" : null,
             parent
           );
         })
         .on("popupclose", event => {
           console.log("POPUPCLOSE.event:", event);
           console.log(
-            process.env.VERBOSITY == "DEBUG"
-              ? "  -> on popupclose, sending to seen list:"
-              : null,
+            process.env.VERBOSITY == "DEBUG" ? "  -> on popupclose, sending to seen list:" : null,
             event
           );
 
@@ -298,18 +290,16 @@ export default {
         // .addTo(this.MAP)
     }; // return
   }, // data
-  beforeCreate() {}, // beforeCreate
-  created() {
+  beforeCreate () {}, // beforeCreate
+  created () {
     console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "begin CREATED, processing incoming vars"
-        : null
+      process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
     );
 
-  this.$once('hook:fitArrest', function () {
-    this.fittable = false;
-    this.fetchTotalEvents();
-  })
+    this.$once('hook:fitArrest', function () {
+      this.fittable = false;
+      this.fetchTotalEvents();
+    })
 
 
     this.console = {
@@ -333,17 +323,23 @@ export default {
     // this.initData();
     window.addEventListener("keydown", this.onKey);
     console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "end CREATED, initial state set"
-        : null
+      process.env.VERBOSITY === "DEBUG" ? "end CREATED, initial state set" : null
     );
   }, // created
-  mounted: function() {
+  mounted: function () {
     console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "MOUNTED! Bootstrapping events and initting vizes..."
-        : null
+      process.env.VERBOSITY === "DEBUG" ? "MOUNTED! Bootstrapping events and initting vizes..." : null
     );
+
+    if (this.MAP == null) {
+      new L.Map('map', {
+        zoomControl: false,
+        center: [41.12410774245512, -41.6872787475586],
+        attributionControl: false,
+        zoom: 3
+      })
+    }
+
     this.initBaseMap();
     // this.setSlider();
     this.fetchEvents();
@@ -351,46 +347,44 @@ export default {
   methods: {
     initBaseMap: function () {
 
-    console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "initBaseMap()..."
-        : null
-    );
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "initBaseMap()..." : null
+      );
 
-// this.MAP = new L.Map('map', {
-// this.MAP = 
+      // this.MAP = new L.Map('map', {
+      // this.MAP = 
 
-// console.log('this.map:',this.MAP)
+      // console.log('this.map:',this.MAP)
 
-let blu = null
-switch (process.env.MODE) {
-  case 'L':
-    blu = 'http://mapproxy.libgeo2.llan.ll.mit.edu/wmts/l_mapbox_amazonia_grey/webmercator/{z}/{x}/{y}.png'
-    break
-  case '33':
-    blu = 'https://cartocdn_a.global.ssl.fastly.net/base-flatblue/{z}/{x}/{y}.png'
-  break
-  default:
-    blu = 'http://localhost:8000/2x.png'
-  break
-}
+      let blu = null
+      switch (process.env.MODE) {
+        case 'L':
+          blu = 'http://mapproxy.libgeo2.llan.ll.mit.edu/wmts/l_mapbox_amazonia_grey/webmercator/{z}/{x}/{y}.png'
+          break
+        case '33':
+          blu = 'https://cartocdn_a.global.ssl.fastly.net/base-flatblue/{z}/{x}/{y}.png'
+          break
+        default:
+          blu = 'http://localhost:8000/2x.png'
+          break
+      }
 
-const baseLayer = new L.TileLayer(blu)
-console.log("baselayer:",blu);
-this.MAP.addLayer(baseLayer)
-this.MAP.addLayer(this.l_json)
-// this.l_json.addTo(this.MAP)
+
+
+      const baseLayer = new L.TileLayer(blu)
+      console.log("baselayer:", blu);
+      this.MAP.addLayer(baseLayer)
+      this.MAP.addLayer(this.l_json)
+        // this.l_json.addTo(this.MAP)
 
     }, //initBaseMap
     fetchTotalEvents: function () {
 
-          console.info(
-      process.env.VERBOSITY === "DEBUG"
-        ? "getTotalEvents()..."
-        : null
-    );
+      console.info(
+        process.env.VERBOSITY === "DEBUG" ? "getTotalEvents()..." : null
+      );
 
-               let q = 'RETURN LENGTH(events)'
+      let q = 'RETURN LENGTH(events)'
 
       axios
         .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
@@ -398,9 +392,7 @@ this.MAP.addLayer(this.l_json)
         })
         .then(response => {
           console.info(
-            process.env.VERBOSITY === "DEBUG"
-              ? "setting events_total w/ axios response..."
-              : null
+            process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
           );
           this.events_total = response.data.result[0];
         }) //axios.then
@@ -409,7 +401,7 @@ this.MAP.addLayer(this.l_json)
         }); //axios.catch
 
     }, //getotalevents
-    getStyle: function(o) {
+    getStyle: function (o) {
       return {
         radius: o.radius,
         fillColor: o.fillColor,
@@ -422,11 +414,11 @@ this.MAP.addLayer(this.l_json)
     }, //getstyle
     zeroOut: function () {
 
-this.l_json.clearLayers();
-(this.timeline)?this.timeline.setSelection():null;
+      this.l_json.clearLayers();
+      (this.timeline) ? this.timeline.setSelection(): null;
 
     }, // zeroOut
-    zoomToNext: function() {
+    zoomToNext: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "zoomToNext()..." : null
       );
@@ -444,61 +436,49 @@ this.l_json.clearLayers();
 
       if (zoomto.type === "point") {
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "   -> zooming to type:" + zoomto.type
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "   -> zooming to type:" + zoomto.type : null
         );
         this.MAP.setView(mo.getLatLng(), 12, {
           animate: true
         });
       } else {
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "   -> zooming to type:" + zoomto.type
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "   -> zooming to type:" + zoomto.type : null
         );
         this.MAP.fitBounds(mo.getBounds());
       }
     }, //zoomtonext
-    zoomToFullExtent: function() {
+    zoomToFullExtent: function () {
       this.MAP.fitBounds(this.l_json.getBounds());
     }, //zoomToFullExtent
-    doPopupStuff: function(p, e) {
+    doPopupStuff: function (p, e) {
       console.log(
         process.env.VERBOSITY == "DEBUG" ? "doPopupStuff()..." : null
       );
 
       let copy =
-        process.env.VERBOSITY === "DEBUG"
-          ? '<h2 class="has-text-info is-size-2">' +
-            p.layer.feature.properties.cartodb_id +
-            "</h2>" +
-            '<div class="has-text-grey-lighter is-size-5">' +
-            p.layer.feature.properties.name +
-            "</div>"
-          : '<div><h5 class="is-size-5">real h5</h5>real subhead</div>';
+        process.env.VERBOSITY === "DEBUG" ? '<h2 class="has-text-info is-size-2">' +
+        p.layer.feature.properties.cartodb_id +
+        "</h2>" +
+        '<div class="has-text-grey-lighter is-size-5">' +
+        p.layer.feature.properties.name +
+        "</div>" : '<div><h5 class="is-size-5">real h5</h5>real subhead</div>';
 
       let po = L.popup()
         .setLatLng(
-          p.layer.feature.geometry.type == "Point"
-            ? p.layer.getLatLng()
-            : p.layer.getCenter()
+          p.layer.feature.geometry.type == "Point" ? p.layer.getLatLng() : p.layer.getCenter()
         )
         .setContent(copy);
 
       // if it's a click event we popup no questions asked
       if (e) {
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "  -> event so we just do wut we told"
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "  -> event so we just do wut we told" : null
         );
         po.openOn(this.MAP);
       } else {
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "  -> not event so we check against active.key"
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "  -> not event so we check against active.key" : null
         );
         if ((p.layer.properties.cartodb_id = 999)) {
           po.openOn(this.MAP);
@@ -509,7 +489,7 @@ this.l_json.clearLayers();
         // yes popup
       }
     }, //doPopupStuff
-    onKey: function(e) {
+    onKey: function (e) {
       switch (true) {
         case e.keyCode == 18 && this.state == "empty":
           this.state = "filled";
@@ -522,7 +502,7 @@ this.l_json.clearLayers();
           break;
       }
     }, //onkey
-    setPageTitle: function() {
+    setPageTitle: function () {
       let sub = null;
 
       switch (true) {
@@ -539,7 +519,7 @@ this.l_json.clearLayers();
 
       this.page.title = "Dalyverse Events: " + sub;
     }, //setPageTitle
-    nullGraph: function() {
+    nullGraph: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
       );
@@ -548,7 +528,7 @@ this.l_json.clearLayers();
         locations: null
       };
     }, //nullGraph
-    nullItem: function() {
+    nullItem: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
       );
@@ -562,14 +542,12 @@ this.l_json.clearLayers();
         bounds: null
       };
     }, //nullItem
-    setTimeline: function() {
+    setTimeline: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setTimeline()..." : null);
 
       if (!this.timeline) {
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? " :no timeline - you're the timeline"
-            : null
+          process.env.VERBOSITY == "DEBUG" ? " :no timeline - you're the timeline" : null
         );
         const el = this.$el.querySelector("#timeline");
         // create the Timeline
@@ -578,13 +556,11 @@ this.l_json.clearLayers();
           zoomable: true,
           moveable: true,
           template: (item, element, data) => {
-            return item.geo.length > 0
-              ? '<h1 class="dv-time-item has-text-weight-bold" style="font-size:.9em;">' +
-                  item.content +
-                  '&nbsp;<span class="mdi mdi-map-marker-circle dv-time-item-w-geo"></span></h1>'
-              : '<h1 class="dv-time-item has-text-weight-bold" style="font-size:.9em;">' +
-                  item.content +
-                  "</h1>";
+            return item.geo.length > 0 ? '<h1 class="dv-time-item has-text-weight-bold" style="font-size:.9em;">' +
+              item.content +
+              '&nbsp;<span class="mdi mdi-map-marker-circle dv-time-item-w-geo"></span></h1>' : '<h1 class="dv-time-item has-text-weight-bold" style="font-size:.9em;">' +
+              item.content +
+              "</h1>";
           }
         }); // new vis
         this.timeline.on("rangechange", properties => {
@@ -598,17 +574,17 @@ this.l_json.clearLayers();
             process.env.VERBOSITY == "DEBUG" ? " :timeline:rangechanged..." : null
           );
 
-if(properties.byUser==true){
+          if (properties.byUser == true) {
 
-          this.times.future = { begin: null, end: null };
-          this.times.line = {
-            begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
-            end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
-          };
-        }
+            this.times.future = { begin: null, end: null };
+            this.times.line = {
+              begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
+              end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
+            };
+          }
 
           // and one more thing - if we have an active key but it's not in view we deactivatee
-          if(this.active.key && !this.$_.contains(this.timeline.getVisibleItems(),this.active.key)){
+          if (this.active.key && !this.$_.contains(this.timeline.getVisibleItems(), this.active.key)) {
             this.active.key = null;
             this.console.msg = "the selected event slid out of view, was deactivated"
           }
@@ -616,63 +592,52 @@ if(properties.byUser==true){
 
         // now we wire up click-selection
         this.timeline.on("click", properties => {
-          switch (true) {
-            case properties.what == "background":
-              console.info(
-                process.env.VERBOSITY == "DEBUG"
-                  ? " :timeline:click off any item - SET KEY TO NULL."
-                  : null
-              );
-              // this.timeline.setSelection();
-              this.active.key = null;
-              break;
-            case properties.what == "item" && properties.item == this.active.key:
-              console.info(
-                process.env.VERBOSITY == "DEBUG"
-                  ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)."
-                  : null
-              );
-              // this.timeline.setSelection();
-              this.active.key = null;
-              break;
-            default:
-              console.info(
-                process.env.VERBOSITY == "DEBUG"
-                  ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
-                      properties.item
-                  : null
-              );
-              // this.timeline.setSelection(properties.item);
-              this.active.key = properties.item;
-              break;
-          }
-        }) //.on
+            switch (true) {
+              case properties.what == "background":
+                console.info(
+                  process.env.VERBOSITY == "DEBUG" ? " :timeline:click off any item - SET KEY TO NULL." : null
+                );
+                // this.timeline.setSelection();
+                this.active.key = null;
+                break;
+              case properties.what == "item" && properties.item == this.active.key:
+                console.info(
+                  process.env.VERBOSITY == "DEBUG" ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)." : null
+                );
+                // this.timeline.setSelection();
+                this.active.key = null;
+                break;
+              default:
+                console.info(
+                  process.env.VERBOSITY == "DEBUG" ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
+                  properties.item : null
+                );
+                // this.timeline.setSelection(properties.item);
+                this.active.key = properties.item;
+                break;
+            }
+          }) //.on
       } //if.timeline
       else {
         console.info(
-          process.env.VERBOSITY == "DEBUG"
-            ? " timeline extant, doing other, setting selection to " +
-                this.active.key
-            : null
+          process.env.VERBOSITY == "DEBUG" ? " timeline extant, doing other, setting selection to " +
+          this.active.key : null
         );
         this.timeline.setItems(this.events);
         this.timeline.setSelection(this.active.key);
 
-        console.log('this.timeline.range',this.timeline.range);
+        console.log('this.timeline.range', this.timeline.range);
         this.timeline.fit();
       } //else.timeline
-    }
-    , //settimeline
-    setSlider: function() {
+    }, //settimeline
+    setSlider: function () {
       // {
       console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
 
       if (!this.slider) {
         // no slider - you're the slider
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "no slider - you're the slider"
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "no slider - you're the slider" : null
         );
 
         var slider = document.getElementById("slider");
@@ -689,7 +654,7 @@ if(properties.byUser==true){
             ).valueOf(),
             this.$MOMENT(
               process.env.LINE_TIME_END,
-               "YYYY-MM-DD").valueOf()
+              "YYYY-MM-DD").valueOf()
           ],
           connect: true,
           behaviour: 'drag',
@@ -701,49 +666,49 @@ if(properties.byUser==true){
           range: {
             min: parseInt(
               this.$MOMENT(this.times.slider.range.begin)
-                .valueOf()
+              .valueOf()
             ),
             max: parseInt(
               this.$MOMENT(this.times.slider.range.end)
-                .valueOf()
+              .valueOf()
             )
           }
         });
-      /* ----------------------- WIRE/REWIRE ---------- */
+        /* ----------------------- WIRE/REWIRE ---------- */
 
-      this.slider.on("change", (values, handle) => {
-        // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
-        //   "YYYY-MM-DD"
-        // );
-        // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
-        let to = {
-          begin: this.$MOMENT(values[0], "x").format("YYYY-MM-DD"),
-          end: this.$MOMENT(values[1], "x").format("YYYY-MM-DD")
-        };
-        this.times.line = to;
-        this.times.slider.handles = to;
-        // this.fetchEvents();
-        // this.routize();
-      });
+        this.slider.on("change", (values, handle) => {
+          // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
+          //   "YYYY-MM-DD"
+          // );
+          // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
+          let to = {
+            begin: this.$MOMENT(values[0], "x").format("YYYY-MM-DD"),
+            end: this.$MOMENT(values[1], "x").format("YYYY-MM-DD")
+          };
+          this.times.line = to;
+          this.times.slider.handles = to;
+          // this.fetchEvents();
+          // this.routize();
+        });
       } //if.slider
       else {
         console.info(
-        process.env.VERBOSITY === "DEBUG" ? "slider extant, auditing handles..." : null
-      );
+          process.env.VERBOSITY === "DEBUG" ? "slider extant, auditing handles..." : null
+        );
         this.slider.set([
-            this.$MOMENT(
-              this.times.line.begin,
-              "YYYY-MM-DD"
-            ).valueOf(),
-            this.$MOMENT(
-              this.times.line.end,
-               "YYYY-MM-DD").valueOf()
-          ])
+          this.$MOMENT(
+            this.times.line.begin,
+            "YYYY-MM-DD"
+          ).valueOf(),
+          this.$MOMENT(
+            this.times.line.end,
+            "YYYY-MM-DD").valueOf()
+        ])
       }
 
       // }
     }, //setSlider
-    fetchEvents: function() {
+    fetchEvents: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "fetchEvents()..." : null
       );
@@ -761,12 +726,10 @@ if(properties.byUser==true){
         })
         .then(response => {
           console.info(
-            process.env.VERBOSITY === "DEBUG"
-              ? "setting events w/ axios response..."
-              : null
+            process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
           );
           this.events = response.data.result;
-          this.$nextTick(function() {
+          this.$nextTick(function () {
             // events in place, item can be set therefrom...
             this.setItem();
           });
@@ -775,7 +738,7 @@ if(properties.byUser==true){
           console.error(e);
         }); //axios.catch
     }, //fetchEvents
-    fetchGeometries: function() {
+    fetchGeometries: function () {
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "fetchGeometries()..." : null
       );
@@ -785,9 +748,7 @@ if(properties.byUser==true){
       });
 
       console.info(
-        process.env.VERBOSITY === "DEBUG"
-          ? "  -> found " + eventswgeoms.length + " georeferenced events"
-          : null
+        process.env.VERBOSITY === "DEBUG" ? "  -> found " + eventswgeoms.length + " georeferenced events" : null
       );
 
       let eventgeoms = this.$_.map(eventswgeoms, g => {
@@ -801,10 +762,8 @@ if(properties.byUser==true){
 
       if (eventgeoms.length > 0) {
         var u =
-          process.env.MODE == "33"
-            ? "http://milleria.org:3030/geoms/cbb?q=" +
-              this.$_.pluck(eventgeoms, "milleriakey").join(",")
-            : "http://localhost:8000/dalyverse-geoms-T.json";
+          process.env.MODE == "33" ? "http://milleria.org:3030/geoms/cbb?q=" +
+          this.$_.pluck(eventgeoms, "milleriakey").join(",") : "http://localhost:8000/dalyverse-geoms-T.json";
 
         axios
           .get(u)
@@ -817,38 +776,30 @@ if(properties.byUser==true){
           }); //axios.catch
       }
     }, //fetchGeometries
-    setItem: function() {
+    setItem: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setItem()..." : null);
       console.log(
-        process.env.VERBOSITY == "DEBUG" && this.active.key == null
-          ? "  -> active.key is " + this.active.key + " (NULL), nulling item..."
-          : null
+        process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
       );
       console.log(
-        process.env.VERBOSITY == "DEBUG" && this.active.key !== null
-          ? "  -> active.key is " +
-              this.active.key +
-              " setting real item from " +
-              this.events.length +
-              " events..."
-          : null
+        process.env.VERBOSITY == "DEBUG" && this.active.key !== null ? "  -> active.key is " +
+        this.active.key +
+        " setting real item from " +
+        this.events.length +
+        " events..." : null
       );
 
       this.active.item =
-        this.active.key !== null
-          ? this.$_.findWhere(this.events, {
-              id: this.active.key
-            })
-          : this.nullItem();
+        this.active.key !== null ? this.$_.findWhere(this.events, {
+          id: this.active.key
+        }) : this.nullItem();
 
-if(this.active.item){
-      this.zooms.next =
-        this.active.item.geo.length > 0
-          ? this.active.item.geo[0].geo_key
-          : null;
-        }
+      if (this.active.item) {
+        this.zooms.next =
+          this.active.item.geo.length > 0 ? this.active.item.geo[0].geo_key : null;
+      }
     }, //setitem
-    launderGeoType: function(f) {
+    launderGeoType: function (f) {
       let t = null;
       switch (f.toLowerCase()) {
         case "multipolygon":
@@ -867,23 +818,21 @@ if(this.active.item){
           t = "point";
           break;
         default:
-        // code block
+          // code block
       }
       return t;
     }, //launderGeoType
-    geoKeyGen: function(F) {
-      let o = F
-        ? {
-            id: F.properties.cartodb_id,
-            type: this.launderGeoType(F.geometry.type)
-          }
-        : {
-            id: null,
-            type: null
-          };
+    geoKeyGen: function (F) {
+      let o = F ? {
+        id: F.properties.cartodb_id,
+        type: this.launderGeoType(F.geometry.type)
+      } : {
+        id: null,
+        type: null
+      };
       return o;
     }, //geoKeyGen
-    geoKeyStringGen: function(F) {
+    geoKeyStringGen: function (F) {
       let o = null;
       // two differnet versions possible - prelaundered and straight frm the geom
       if (F.properties) {
@@ -894,7 +843,7 @@ if(this.active.item){
       }
       return o;
     }, //geoKeyStringGen
-    getGeoStyle: function(f) {
+    getGeoStyle: function (f) {
       console.log(process.env.VERBOSITY == "DEBUG" ? "getGeoStyle..." : null);
 
       let tgkey = typeof f == "object" ? this.geoKeyGen(f) : f;
@@ -920,7 +869,7 @@ if(this.active.item){
           styl = this.styles.seen;
           break;
         case tgkey.id == this.active.item.geo[0].geo_key.id &&
-          tgkey.type == this.active.item.geo[0].geo_key.type:
+        tgkey.type == this.active.item.geo[0].geo_key.type:
           styl = this.styles.active;
           break;
         default:
@@ -929,13 +878,11 @@ if(this.active.item){
       }
 
       console.log(
-        process.env.VERBOSITY == "DEBUG"
-          ? "  --> resulting style:" + JSON.stringify(styl)
-          : null
+        process.env.VERBOSITY == "DEBUG" ? "  --> resulting style:" + JSON.stringify(styl) : null
       );
       return styl;
     }, //getgeostyle
-    setMap: function() {
+    setMap: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setMap()..." : null);
       console.log(
         process.env.VERBOSITY == "DEBUG" ? "  -> clearing current" : null
@@ -943,42 +890,33 @@ if(this.active.item){
       this.l_json.clearLayers();
 
       console.log(
-        process.env.VERBOSITY == "DEBUG"
-          ? "  -> active.key is " + this.active.key + " in setMap..."
-          : null
+        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key + " in setMap..." : null
       );
 
-        console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "  -> -> testing this.geoms for null"
-            : null
-        );
+      console.log(
+        process.env.VERBOSITY == "DEBUG" ? "  -> -> testing this.geoms for null" : null
+      );
 
       if (this.geoms == null) {
         console.log(
-          process.env.VERBOSITY == "DEBUG" && this.active.key == null
-            ? "  -> but anyway, this.geoms is null"
-            : null
+          process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> but anyway, this.geoms is null" : null
         );
       } else {
         this.l_json.clearLayers();
         this.l_json.addData(this.geoms);
       } //if.geoms.null
     }, //setMap
-    setGraph: function() {
+    setGraph: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
-        process.env.VERBOSITY == "DEBUG"
-          ? "  -> active.key is " + this.active.key
-          : null
+        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
       );
 
       // if we have an active.key
       if (this.active.key !== null) {
         axios
           .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
-            query:
-              'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
+            query: 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
               this.active.key +
               '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' +
               this.active.key +
@@ -996,55 +934,47 @@ if(this.active.item){
       else {
         // no key? null it out
         console.log(
-          process.env.VERBOSITY == "DEBUG"
-            ? "no active.key, nulling graph..."
-            : null
+          process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
         );
         this.active.graph = this.nullGraph();
       }
     }, //setgraph
-    setRoute: function() {
-      console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
+    setRoute: function () {
+        console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
-      this.$router.push({
-        params: {
-          tstart: this.times.line.begin,
-          tend: this.times.line.end,
-          activeid: this.active.key
-        }
-      }); //rejplace
-    } //setRoute
+        this.$router.push({
+          params: {
+            tstart: this.times.line.begin,
+            tend: this.times.line.end,
+            activeid: this.active.key
+          }
+        }); //rejplace
+      } //setRoute
   }, //methods
   computed: {}, //computed
   watch: {
     item: {
-      handler: function(vnew, vold) {
+      handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:ITEM:old/new:" +
-                JSON.stringify(vold) +
-                "/" +
-                JSON.stringify(vnew)
-            : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:ITEM:old/new:" +
+          JSON.stringify(vold) +
+          "/" +
+          JSON.stringify(vnew) : null
         );
       }
     }, //item
     geoms: {
-      handler: function(vnew, vold) {
+      handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:GEOMS:old/new:" + vold.length + "/" + vnew.length
-            : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:GEOMS:old/new:" + vold.length + "/" + vnew.length : null
         );
         this.setMap();
       }
     }, //item
     events: {
-      handler: function(vnew, vold) {
+      handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:events:old/new:" + vold.length + "/" + vnew.length
-            : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:events:old/new:" + vold.length + "/" + vnew.length : null
         );
         this.zeroOut();
         // this.setSlider();
@@ -1053,16 +983,14 @@ if(this.active.item){
       }
     }, //events
     "times.line": {
-      handler: function(vnew, vold) {
+      handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:times.line:old/new:" +
-                JSON.stringify(vold) +
-                "/" +
-                JSON.stringify(vnew)
-            : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:times.line:old/new:" +
+          JSON.stringify(vold) +
+          "/" +
+          JSON.stringify(vnew) : null
         );
-        console.log("TIMES OB",JSON.stringify(this.times))
+        console.log("TIMES OB", JSON.stringify(this.times))
         this.fetchEvents();
         this.setRoute();
         this.setPageTitle();
@@ -1070,11 +998,9 @@ if(this.active.item){
       deep: true
     }, //times.line
     "active.key": {
-      handler: function(vnew, vold) {
+      handler: function (vnew, vold) {
         console.info(
-          process.env.VERBOSITY === "DEBUG"
-            ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew
-            : null
+          process.env.VERBOSITY === "DEBUG" ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew : null
         );
         this.setRoute();
         this.setItem();
@@ -1086,5 +1012,4 @@ if(this.active.item){
     }
   } //watch
 }; //export.timeline
-
 </script>

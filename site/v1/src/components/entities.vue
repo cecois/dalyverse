@@ -11,14 +11,14 @@
 </li>
  -->
           <li class="columns">
-            <div class="column is-3"></div>
-            <div class="field column">
+            <div class="column is-1"></div>
+            <div class="field column" style="padding:5% 2%;">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
                 <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
-                <div class="column is-3"></div>
-              </div note="./columns">
+              </div note="./control">
             </div>
+            <div class="column is-1"></div>
           </li>
         </ul>
         <div id="network">
@@ -26,13 +26,14 @@
         </div note="/#network">
       </div note="/.dv-column-left">
       <div class="column is-half dv-column-right">
-        <div id="console" class="is-right breadcrumb">
-          <ul class="">
-            <li v-for="msg in console.msgs">
-              <span v-bind:class="msg.severity">{{msg.msg}}</span>
-            </li>
-          </ul>
-        </div>
+        <!-- <div id="console" class="is-right breadcrumb">
+  <ul class="">
+    <li v-for="msg in console.msgs">
+      <span v-bind:class="msg.severity">{{msg.msg}}</span>
+    </li>
+  </ul>
+</div>
+ -->
         <div id="dv-graph-wrapper" v-if="active.key">
           {{active.label}}
           <br/>
@@ -125,7 +126,11 @@ export default {
       relationMap: [{ "rel": "hasFriend", "source": "Friendships", "target": "Friendships", "ver": "has friend" }, { "rel": "isFormerMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is former member of" }, { "rel": "isMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is member of" }, { "rel": "caresFor", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "cares for" }, { "rel": "isCaredForBy", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is cared for by" }, { "rel": "isClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is client of" }, { "rel": "wasClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "was client of" }, { "rel": "hasParticipant", "source": "Event Participants", "target": "Events Participated In", "ver": "has participant" }, { "rel": "participatedIn", "source": "Events Participated In", "target": "Event Participants", "ver": "participated in" }, { "rel": "isPetOf", "source": "Owners", "target": "Owns Pet", "ver": "is pet of" }, { "rel": "isChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is child of" }, { "rel": "isPossibleChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is possible child of" }, { "rel": "isSiblingOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is sibling of" }, { "rel": "islocateAt", "source": "Locations", "target": "Locations", "ver": "is located at" }, { "rel": "livesAt", "source": "Home Locations, Current & Former", "target": "Home Of", "ver": "lives at" }, { "rel": "isSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is spouse of" }, { "rel": "wasSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "was spouse of" }, { "rel": "isFormerSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is former spouse of" }, { "rel": "hasWorkedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "hasWorkedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "workedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "workedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "worksAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works at" }, { "rel": "worksFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works for" }, { "rel": "occurredAt", "source": "Event Location", "target": "Events Here", "ver": "occurred at" }, { "rel": "seeAlso", "source": "See Also", "target": "See Also", "ver": "see also" }]
     }
   }, // data
-  beforeCreate () {}, // beforeCreate
+  beforeCreate () {
+    // some laziness to be fixed in the future
+    console.log(document.getElementById('map')
+)
+  }, // beforeCreate
   created () {
 
 

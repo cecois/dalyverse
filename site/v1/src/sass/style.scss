@@ -13,7 +13,7 @@ $beige-lighter: #EFF0EB;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
-$link: $pink;
+$A: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -34,17 +34,25 @@ $nondalyLink:rgba(25,25,25,.8);
 $height-header:3vh;
 $height-main:calc(100vh - #{$height-header});
 
-body{color:white;background-color:$body-background-color;}
+body{height:100%;color:white;background-color:$body-background-color;}
 
 .noUi-pips-horizontal{height:auto;}
 
-#app{
+.dv-app{
+  height:$height-main;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   // background-color:rgba(255,255,255,0);
-  a{font-weight:800;color:rgba(36,255,239,.8);}
+  a{font-weight:800;color:$A;}
+}
+
+#dv-nav-main{
+  background-color: black;
+  a.navbar-item{
+    &:hover{color:darken($A,22%);background-color:$body-background-color;}
+  }
 }
 #vue-root{
   margin:0;
