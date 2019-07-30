@@ -4,23 +4,23 @@
     <div class="columns dv-vertical-columns">
       <div class="column is-full dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->
-        <ul>
+        <!-- <ul style="border:none;background-color:black;"> -->
           <!-- <li>entities_total:
   <span v-if="entities_total.loading==true">1 sec...</span>
   <span v-else>{{entities_total.v}}</span>
 </li>
  -->
-          <li class="columns">
-            <div class="column is-1"></div>
-            <div class="field column" style="padding:1% 2%;">
+          <div class="columns">
+            <div class="column is-4"></div>
+            <div class="field column" style="padding:1% 2% 0 2%;margin-bottom:0;">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
-                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
+                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-large" type="text">
               </div note="./control">
             </div>
-            <div class="column is-1"></div>
-          </li>
-        </ul>
+            <div class="column is-4"></div>
+          </div>
+        <!-- </ul> -->
         <div id="network">
           <svg></svg>
         </div note="/#network">
@@ -28,7 +28,7 @@
 
             <div v-if="active.key" class="column is-one-third is-overlay dv-column-right">
               <div id="dv-graph-wrapper">
-                {{active.label}}
+                <h4 class="is-size-4 has-text-weight-bold">{{active.label}}</h4>
                 <br/>
               </div note="/#dv-graph-wrapper">
               <ul v-if="active.article">
@@ -704,17 +704,17 @@ export default {
       var texts = ['Use the scroll wheel to zoom',
         'Hold the shift key to select nodes'
       ]
-      svg.selectAll('text')
-        .data(texts)
-        .enter()
-        .append('text')
-        .attr('x', 900)
-        .attr('y', function (d, i) {
-          return 470 + i * 18;
-        })
-        .text(function (d) {
-          return d;
-        });
+      // svg.selectAll('text')
+      //   .data(texts)
+      //   .enter()
+      //   .append('text')
+      //   .attr('x', 900)
+      //   .attr('y', function (d, i) {
+      //     return 470 + i * 18;
+      //   })
+      //   .text(function (d) {
+      //     return d;
+      //   });
 
       return null;
     }, //d3init

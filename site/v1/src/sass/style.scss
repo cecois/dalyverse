@@ -32,9 +32,9 @@ $nondalyLink:rgba(25,25,25,.8);
 /* +++++++++++++++++++++++++++++++++++++++ noui ++ */
 
 $height-header:3vh;
-$height-main:calc(100vh - #{$height-header});
+$height-main:100vh;
 
-body{height:100%;color:white;background-color:$body-background-color;}
+body{width:100%;height:100%;color:white;background-color:$body-background-color;}
 
 .noUi-pips-horizontal{height:auto;}
 
@@ -64,12 +64,14 @@ body{height:100%;color:white;background-color:$body-background-color;}
 .dv-vertical-columns{height:$height-main;}
 
 .dv-column-left {
-  padding:0;
+  // padding:0;
+  padding:1em 0;
+  overflow-y: hidden;
 }
 
 .dv-column-right {
   color: #00eb11;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-top:5em;
   // background-color:$body-background-color;
   background-color:adjust-color($body-background-color, $alpha: -0.4);
@@ -101,9 +103,10 @@ body{height:100%;color:white;background-color:$body-background-color;}
 /* +++++++++++++++++++++++++++++++++++++++ network ++ */
 #network{
   // background-color:rgba(0,0,0,1);
-  // background-color:transparent;
+  background-color:transparent;
   height:100%;
   width:100%;
+  border:none;
     /*position:relative;*/
   // height: 100vh;
   // width: 100%;
