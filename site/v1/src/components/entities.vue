@@ -2,7 +2,7 @@
   <div id="vue-root" class="">
     <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
     <div class="columns dv-vertical-columns">
-      <div class="column is-half dv-column-left">
+      <div class="column is-full dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->
         <ul>
           <!-- <li>entities_total:
@@ -12,7 +12,7 @@
  -->
           <li class="columns">
             <div class="column is-1"></div>
-            <div class="field column" style="padding:5% 2%;">
+            <div class="field column" style="padding:1% 2%;">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
                 <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
@@ -25,70 +25,33 @@
           <svg></svg>
         </div note="/#network">
       </div note="/.dv-column-left">
-      <div class="column is-half dv-column-right">
-        <!-- <div id="console" class="is-right breadcrumb">
-  <ul class="">
-    <li v-for="msg in console.msgs">
-      <span v-bind:class="msg.severity">{{msg.msg}}</span>
-    </li>
-  </ul>
-</div>
- -->
-        <div id="dv-graph-wrapper" v-if="active.key">
-          {{active.label}}
-          <br/>
-        </div note="/#dv-graph-wrapper">
-        <!-- active.article: {{active.article}} -->
-        <ul v-if="active.article">
-          <li>{{$_.first(active.article )}}
-          </li>
-          <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1
-)))">
-            {{articlechunk}}
-          </li>
-        </ul>
-        <br/>
-        <div v-if="active.graph">
-          <div v-for="bucket in active.graph" class="tile is-12">
-            <p class="heading">{{bucket.bucket_label}} ({{bucket.bucket_raw}})</p>
-            <ul>
-              <li v-for="node in bucket.nodes" class="title is-size-7">
-                <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!--         <nav class="level">
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C1</p>
-              <p class="title">3,456</p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C2</p>
-              <p class="title">123</p>
-            </div>
-          </div>
-        </nav> -->
-        <!--         <br/>
-        <nav class="level">
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C3</p>
-              <p class="title">3,456</p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C4</p>
-              <p class="title">123</p>
-            </div>
-          </div>
-        <br/>
-        </nav> -->
-      </div note="/.dv-column-right">
+
+            <div v-if="active.key" class="column is-one-third is-overlay dv-column-right">
+              <div id="dv-graph-wrapper">
+                {{active.label}}
+                <br/>
+              </div note="/#dv-graph-wrapper">
+              <ul v-if="active.article">
+                <li>{{$_.first(active.article )}}
+                </li>
+                <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1
+      )))">
+                  {{articlechunk}}
+                </li>
+              </ul>
+              <br/>
+              <div v-if="active.graph">
+                <div v-for="bucket in active.graph" class="tile is-12">
+                  <p class="heading">{{bucket.bucket_label}} ({{bucket.bucket_raw}})</p>
+                  <ul>
+                    <li v-for="node in bucket.nodes" class="title is-size-7">
+                      <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div note="/.dv-column-right">
+
     </div>
   </div>
   <!-- ./#vue-root -->
@@ -762,7 +725,7 @@ export default {
         case (!d._id):
           c = 'invisible'
           break;
-        case (d.daly == true):
+        case (d.daly=='true'):
           c = 'daly'
           break;
         default:
@@ -962,7 +925,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length
-            this.console.msgs.push({ msg: deeznodes.length + ' entities loaded', severity: normal })
+            this.console.msgs.push({ msg: deeznodes.length + ' entities loaded', severity: 'normal' })
             this.graph = {
               edges: response.data.result[0].edgez,
               nodes: deeznodes

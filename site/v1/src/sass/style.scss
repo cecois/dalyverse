@@ -70,6 +70,9 @@ body{height:100%;color:white;background-color:$body-background-color;}
 .dv-column-right {
   color: #00eb11;
   overflow-y: scroll;
+  padding-top:5em;
+  // background-color:$body-background-color;
+  background-color:adjust-color($body-background-color, $alpha: -0.4);
   // border-left:solid 1px white;
 }
 
