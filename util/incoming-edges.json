@@ -1,2851 +1,3594 @@
-[{
-  "_from": "events/_:shamusmcmahon"
-  , "_to": "people/_:shamusmcmahonsunnamedwife"
-  , "type": "isSpouseOf"
-  , "vertex": "_:shamusmcmahon"
-},{
-  "_from": "events/_:daltonwilcoxmurdersanallergic"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcox"
-},{
-  "_from": "events/_:daltonwilcoxmurdersanallergic"
-  , "_to": "people/_:losangeleswerewolf1"
-  , "type": "hasParticipant"
-  , "vertex": "_:losangeleswerewolf1"
-},{
-  "_from": "events/_:shamusmcmahonsunnamedwife"
-  , "_to": "people/_:shamusmcmahon"
-  , "type": "isSpouseOf"
-  , "vertex": "_:shamusmcmahonsunnamedwife"
-},{
-  "_from": "events/_:matrickpahahon"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "seeAlso"
-  , "vertex": "_:matrickpahahon"
-},{
-  "_from": "events/_:johnnymcgorry"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "seeAlso"
-  , "vertex": "_:johnnymcgorry"
-},{
-  "_from": "events/_:themcgorykidnappings"
-  , "_to": "people/_:johnnymcgorry"
-  , "type": "hasParticipant"
-  , "vertex": "_:themcgorykidnappings"
-},{
-  "_from": "events/_:themcgorykidnappings"
-  , "_to": "people/_:shamusmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:themcgorykidnappings"
-},{
-  "_from": "events/_:themcgorykidnappings"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:themcgorykidnappings"
-},{
-  "_from": "events/_:woodstock99"
-  , "_to": "places/_:romeny"
-  , "type": "occurredAt"
-  , "vertex": "_:woodstock99"
-},{
-  "_from": "events/_:woodstock99"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:woodstock99"
-},{
-  "_from": "events/_:shananasueshotdog"
-  , "_to": "things/_:shanana"
-  , "type": "hasParticipant"
-  , "vertex": "_:shananasueshotdog"
-},{
-  "_from": "events/_:shananasueshotdog"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:shananasueshotdog"
-},{
-  "_from": "events/_:daltonwilcoxmurdersacyclops"
-  , "_to": "places/_:gowergulch"
-  , "type": "occurredAt"
-  , "vertex": "_:daltonwilcoxmurdersacyclops"
-}, {
-  "_from": "events/_:daltonwilcoxmurdersacyclops"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxmurdersacyclops"
-}, {
-  "_from": "events/_:mrsbronsongoesmissing"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:mrsbronsongoesmissing"
-}, {
-  "_from": "events/_:mrsbronsongoesmissing"
-  , "_to": "people/_:mrsbronson"
-  , "type": "hasParticipant"
-  , "vertex": "_:mrsbronsongoesmissing"
-}, {
-  "_from": "events/_:cactustonyisarrested"
-  , "_to": "places/_:arclightcinemas"
-  , "type": "occurredAt"
-  , "vertex": "_:cactustonyisarrested"
-}, {
-  "_from": "events/_:cactustonyisarrested"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisarrested"
-}, {
-  "_from": "events/_:cactustonyburieshendrixmurphy"
-  , "_to": "people/_:hendrixmurphy"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyburieshendrixmurphy"
-}, {
-  "_from": "events/_:cactustonyburieshendrixmurphy"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyburieshendrixmurphy"
-}, {
-  "_from": "events/_:cactustonyburieshendrixmurphy"
-  , "_to": "places/_:johnnyssportshop"
-  , "type": "worksAt"
-  , "vertex": "_:cactustonyburieshendrixmurphy"
-}, {
-  "_from": "events/_:thecactusesmeetcute"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:thecactusesmeetcute"
-}, {
-  "_from": "events/_:thecactusesmeetcute"
-  , "_to": "people/_:cactusirene"
-  , "type": "hasParticipant"
-  , "vertex": "_:thecactusesmeetcute"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:cactusirene"
-  , "type": "hasFriend"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:zippy"
-  , "type": "hasFriend"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:hendrixmurphy"
-  , "_to": "places/_:johnnyssportshop"
-  , "type": "worksAt"
-  , "vertex": "_:hendrixmurphy"
-}, {
-  "_from": "events/_:hendrixmurphyisborn"
-  , "_to": "people/_:hendrixmurphy"
-  , "type": "hasParticipant"
-  , "vertex": "_:hendrixmurphyisborn"
-}, {
-  "_from": "people/_:alexandrahiggsportman"
-  , "_to": "places/_:sanrafaelhills"
-  , "type": "livesAt"
-  , "vertex": "_:alexandrahiggsportman"
-}, {
-  "_from": "events/_:cactustonyisconvictedofliveburial"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisconvictedofliveburial"
-}, {
-  "_from": "events/_:cactustonyisconvictedofliveburial"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisconvictedofliveburial"
-}, {
-  "_from": "events/_:pnptgreviewsadondimelloshow"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:pnptgreviewsadondimelloshow"
-}, {
-  "_from": "events/_:pnptgreviewsadondimelloshow"
-  , "_to": "things/_:pasadenanewspresstimesgazette"
-  , "type": "hasParticipant"
-  , "vertex": "_:pnptgreviewsadondimelloshow"
-}, {
-  "_from": "events/_:ahppublishesaparkingticketstory"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:ahppublishesaparkingticketstory"
-}, {
-  "_from": "events/_:ahppublishesaparkingticketstory"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:ahppublishesaparkingticketstory"
-}, {
-  "_from": "events/_:ahppublishesaparkingticketstory"
-  , "_to": "people/_:alexandrahiggsportman"
-  , "type": "hasParticipant"
-  , "vertex": "_:ahppublishesaparkingticketstory"
-}, {
-  "_from": "people/_:lronhubbard"
-  , "_to": "people/_:amazingcriswell"
-  , "type": "hasFriend"
-  , "vertex": "_:lronhubbard"
-}, {
-  "_from": "events/_:lronhubbardplaysstumptheclear1"
-  , "_to": "people/_:lronhubbard"
-  , "type": "hasParticipant"
-  , "vertex": "_:lronhubbardplaysstumptheclear1"
-}, {
-  "_from": "events/_:lronhubbardhidesunderpants"
-  , "_to": "people/_:lronhubbard"
-  , "type": "hasParticipant"
-  , "vertex": "_:lronhubbardhidesunderpants"
-}, {
-  "_from": "events/_:lronhubbardsunderpantsarefound"
-  , "_to": "people/_:mariongrapes"
-  , "type": "hasParticipant"
-  , "vertex": "_:lronhubbardsunderpantsarefound"
-}, {
-  "_from": "events/_:lronhubbardhidesunderpants"
-  , "_to": "places/_:parisfr"
-  , "type": "occurredAt"
-  , "vertex": "_:lronhubbardhidesunderpants"
-}, {
-  "_from": "events/_:lronhubbardsunderpantsarefound"
-  , "_to": "places/_:parisfr"
-  , "type": "occurredAt"
-  , "vertex": "_:lronhubbardsunderpantsarefound"
-}, {
-  "_from": "events/_:lronhubbardsmarkersarefound"
-  , "_to": "people/_:mariongrapes"
-  , "type": "hasParticipant"
-  , "vertex": "_:lronhubbardsmarkersarefound"
-}, {
-  "_from": "events/_:lronhubbardsmarkersarefound"
-  , "_to": "places/_:madisonwi"
-  , "type": "occurredAt"
-  , "vertex": "_:lronhubbardsmarkersarefound"
-}, {
-  "_from": "events/_:lronhubbardsspectaclesarefound"
-  , "_to": "people/_:mariongrapes"
-  , "type": "hasParticipant"
-  , "vertex": "_:lronhubbardsspectaclesarefound"
-}, {
-  "_from": "events/_:lronhubbardsspectaclesarefound"
-  , "_to": "places/_:miamibeach"
-  , "type": "occurredAt"
-  , "vertex": "_:lronhubbardsspectaclesarefound"
-}, {
-  "_from": "events/_:lronhubbardburiesspectacles"
-  , "_to": "places/_:miamibeach"
-  , "type": "occurredAt"
-  , "vertex": "_:lronhubbardburiesspectacles"
-}, {
-  "_from": "events/_:lronhubbardburiesspectacles"
-  , "_to": "people/_:lronhubbard"
-  , "type": "hasParticipant"
-  , "vertex": "_:lronhubbardburiesspectacles"
-}, {
-  "_from": "people/_:julesmcmanon"
-  , "_to": "things/_:seaorg"
-  , "type": "isMemberOf"
-  , "vertex": "_:julesmcmanon"
-}, {
-  "_from": "people/_:heidicorporate"
-  , "_to": "things/_:seaorg"
-  , "type": "isMemberOf"
-  , "vertex": "_:heidicorporate"
-}, {
-  "_from": "people/_:lronhubbard"
-  , "_to": "things/_:seaorg"
-  , "type": "isMemberOf"
-  , "vertex": "_:lronhubbard"
-}, {
-  "_from": "people/_:mariongrapes"
-  , "_to": "things/_:seaorg"
-  , "type": "isMemberOf"
-  , "vertex": "_:mariongrapes"
-}, {
-  "_from": "events/_:gollymurdersafamilyonmaricopastreet"
-  , "_to": "people/_:golly"
-  , "type": "hasParticipant"
-  , "vertex": "_:gollymurdersafamilyonmaricopastreet"
-}, {
-  "_from": "events/_:gollymurdersafamilyonmaricopastreet"
-  , "_to": "places/_:maricopastphoenix"
-  , "type": "occurredAt"
-  , "vertex": "_:gollymurdersafamilyonmaricopastreet"
-}, {
-  "_from": "people/_:gil"
-  , "_to": "places/_:toweringpinespsychiatric"
-  , "type": "livesAt"
-  , "vertex": "_:gil"
-}, {
-  "_from": "people/_:golly"
-  , "_to": "places/_:toweringpinespsychiatric"
-  , "type": "livesAt"
-  , "vertex": "_:golly"
-}, {
-  "_from": "people/_:chocolatepudding"
-  , "_to": "places/_:toweringpinespsychiatric"
-  , "type": "livesAt"
-  , "vertex": "_:chocolatepudding"
-}, {
-  "_from": "people/_:gil"
-  , "_to": "people/_:marcorenaldo"
-  , "type": "hasFriend"
-  , "vertex": "_:gil"
-}, {
-  "_from": "events/_:weebrucediesatedinburghcastle"
-  , "_to": "people/_:weebruce"
-  , "type": "hasParticipant"
-  , "vertex": "_:weebrucediesatedinburghcastle"
-}, {
-  "_from": "events/_:weebrucediesatedinburghcastle"
-  , "_to": "places/_:edinburghcastle"
-  , "type": "occurredAt"
-  , "vertex": "_:weebrucediesatedinburghcastle"
-}, {
-  "_from": "people/_:weebruce"
-  , "_to": "places/_:edinburghcastle"
-  , "type": "livesAt"
-  , "vertex": "_:weebruce"
-}, {
-  "_from": "people/_:daltonwilcoxvaultguy"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "worksFor"
-  , "vertex": "_:daltonwilcoxvaultguy"
-}, {
-  "_from": "people/_:weebruce"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:weebruce"
-}, {
-  "_from": "people/_:thetrowofdumbiedykesroad"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:thetrowofdumbiedykesroad"
-}, {
-  "_from": "events/_:stuartcambridgegoesmissing"
-  , "_to": "people/_:stuartcambridge"
-  , "type": "hasParticipant"
-  , "vertex": "_:stuartcambridgegoesmissing"
-}, {
-  "_from": "people/_:thirstiestghostever"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:thirstiestghostever"
-}, {
-  "_from": "people/_:sawneybean"
-  , "_to": "places/_:tolboothtavern"
-  , "type": "worksAt"
-  , "vertex": "_:sawneybean"
-}, {
-  "_from": "people/_:thirstiestghostever"
-  , "_to": "places/_:hotelduvin"
-  , "type": "worksAt"
-  , "vertex": "_:thirstiestghostever"
-}, {
-  "_from": "people/_:ghostofthebrewlab"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:ghostofthebrewlab"
-}, {
-  "_from": "events/_:amandadies"
-  , "_to": "places/_:brewlabcoffeeedinburgh"
-  , "type": "occurredAt"
-  , "vertex": "_:amandadies"
-}, {
-  "_from": "events/_:thirstiestghosteverisborn"
-  , "_to": "places/_:hotelduvin"
-  , "type": "occurredAt"
-  , "vertex": "_:thirstiestghosteverisborn"
-}, {
-  "_from": "events/_:trumpcommissionstherockettes"
-  , "_to": "people/_:donaldjtrump"
-  , "type": "hasParticipant"
-  , "vertex": "_:trumpcommissionstherockettes"
-}, {
-  "_from": "events/_:trumpcommissionstherockettes"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:trumpcommissionstherockettes"
-}, {
-  "_from": "events/_:joebongossexunitlosesaprop"
-  , "_to": "people/_:bonnieramirez"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongossexunitlosesaprop"
-}, {
-  "_from": "events/_:margotchunkloseshervirginity"
-  , "_to": "people/_:margotchunk"
-  , "type": "hasParticipant"
-  , "vertex": "_:margotchunkloseshervirginity"
-}, {
-  "_from": "events/_:margotchunkisborn"
-  , "_to": "people/_:margotchunk"
-  , "type": "hasParticipant"
-  , "vertex": "_:margotchunkisborn"
-}, {
-  "_from": "events/_:patrickmcmahoncrashesaparty1"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:patrickmcmahoncrashesaparty1"
-}, {
-  "_from": "events/_:patrickmcmahoncrashesaparty1"
-  , "_to": "people/_:johnnymcgorry"
-  , "type": "hasParticipant"
-  , "vertex": "_:patrickmcmahoncrashesaparty1"
-}, {
-  "_from": "events/_:johnnymcgorrybreaksandenters"
-  , "_to": "people/_:unnamedelderlywoman1"
-  , "type": "hasParticipant"
-  , "vertex": "_:johnnymcgorrybreaksandenters"
-}, {
-  "_from": "events/_:johnnymcgorrybreaksandenters"
-  , "_to": "people/_:gretathecaretaker"
-  , "type": "hasParticipant"
-  , "vertex": "_:johnnymcgorrybreaksandenters"
-}, {
-  "_from": "events/_:johnnymcgorrybreaksandenters"
-  , "_to": "people/_:johnnymcgorry"
-  , "type": "hasParticipant"
-  , "vertex": "_:johnnymcgorrybreaksandenters"
-}, {
-  "_from": "events/_:johnnymcgorrybreaksandenters"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:johnnymcgorrybreaksandenters"
-}, {
-  "_from": "people/_:monsignordamienfearnly"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasFriend"
-  , "vertex": "_:monsignordamienfearnly"
-}, {
-  "_from": "people/_:slamminoliverrothwell"
-  , "_to": "things/_:shanana"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:slamminoliverrothwell"
-}, {
-  "_from": "events/_:thegreatminingoflakesuperior"
-  , "_to": "places/_:lakesuperior"
-  , "type": "occurredAt"
-  , "vertex": "_:thegreatminingoflakesuperior"
-}, {
-  "_from": "events/_:thegreatminingoflakesuperior"
-  , "_to": "people/_:ahi"
-  , "type": "hasParticipant"
-  , "vertex": "_:thegreatminingoflakesuperior"
-}, {
-  "_from": "events/_:thegreatminingoflakesuperior"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:thegreatminingoflakesuperior"
-}, {
-  "_from": "events/_:hotdogiscutfromhistowboat"
-  , "_to": "people/_:hamburgersurfer"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogiscutfromhistowboat"
-}, {
-  "_from": "events/_:hotdogiscutfromhistowboat"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogiscutfromhistowboat"
-}, {
-  "_from": "events/_:hotdoggetschewedoutbyhisbossathertz"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdoggetschewedoutbyhisbossathertz"
-}, {
-  "_from": "events/_:dondimellofindsachild"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellofindsachild"
-}, {
-  "_from": "events/_:multiplechildrenarerippedapartbyrottweilers"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:multiplechildrenarerippedapartbyrottweilers"
-}, {
-  "_from": "events/_:multiplechildrenarerippedapartbyrottweilers"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:multiplechildrenarerippedapartbyrottweilers"
-}, {
-  "_from": "events/_:dondimellomeetsmarissawompler"
-  , "_to": "people/_:marissawompler"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellomeetsmarissawompler"
-}, {
-  "_from": "events/_:dondimellomeetsmarissawompler"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellomeetsmarissawompler"
-}, {
-  "_from": "events/_:dondimelloaccidentallyjoinsthetaliban"
-  , "_to": "places/_:bahrain"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimelloaccidentallyjoinsthetaliban"
-}, {
-  "_from": "events/_:dondimellostagescamelot"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostagescamelot"
-}, {
-  "_from": "events/_:talibantalentnight"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:talibantalentnight"
-}, {
-  "_from": "events/_:dondimelloburieswife1"
-  , "_to": "people/_:falcon"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloburieswife1"
-}, {
-  "_from": "events/_:dondimelloburieswife1"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloburieswife1"
-}, {
-  "_from": "events/_:dondimelloaccidentallyjoinsthetaliban"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloaccidentallyjoinsthetaliban"
-}, {
-  "_from": "people/_:alexandrahiggsportman"
-  , "_to": "things/_:pasadenanewspresstimesgazette"
-  , "type": "worksFor"
-  , "vertex": "_:alexandrahiggsportman"
-}, {
-  "_from": "events/_:dondimelloamputatesrockettebeth"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloamputatesrockettebeth"
-}, {
-  "_from": "events/_:dondimelloamputatesrockettebeth"
-  , "_to": "people/_:formerrockettebeth"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloamputatesrockettebeth"
-}, {
-  "_from": "people/_:falcon"
-  , "_to": "things/_:russianorthodoxchurch"
-  , "type": "isMemberOf"
-  , "vertex": "_:falcon"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "things/_:bahai"
-  , "type": "isMemberOf"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:malbachman"
-  , "_to": "things/_:episcopalchurch"
-  , "type": "isMemberOf"
-  , "vertex": "_:malbachman"
-}, {
-  "_from": "events/_:dondimelloscoresexcesssandwiches"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloscoresexcesssandwiches"
-}, {
-  "_from": "events/_:bachmananddimelloseeequus"
-  , "_to": "people/_:malbachman"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimelloseeequus"
-}, {
-  "_from": "events/_:bachmananddimelloseeequus"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimelloseeequus"
-}, {
-  "_from": "events/_:bachmananddimelloseeequus"
-  , "_to": "things/_:equus"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimelloseeequus"
-}, {
-  "_from": "events/_:bachmananddimellospendtheweekendincorona"
-  , "_to": "places/_:coronaca"
-  , "type": "occurredAt"
-  , "vertex": "_:bachmananddimellospendtheweekendincorona"
-}, {
-  "_from": "events/_:bachmananddimellospendtheweekendincorona"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimellospendtheweekendincorona"
-}, {
-  "_from": "events/_:bachmananddimellospendtheweekendincorona"
-  , "_to": "people/_:malbachman"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimellospendtheweekendincorona"
-}, {
-  "_from": "events/_:bachmananddimelloseethechildrenshour"
-  , "_to": "people/_:malbachman"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimelloseethechildrenshour"
-}, {
-  "_from": "events/_:bachmananddimelloseethechildrenshour"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:bachmananddimelloseethechildrenshour"
-}, {
-  "_from": "events/_:uclatheatrepresentsglengarryglenross"
-  , "_to": "people/_:malbachman"
-  , "type": "hasParticipant"
-  , "vertex": "_:uclatheatrepresentsglengarryglenross"
-}, {
-  "_from": "events/_:uclatheatrepresentsglengarryglenross"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:uclatheatrepresentsglengarryglenross"
-}, {
-  "_from": "events/_:dondimellossteelmagnolias"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellossteelmagnolias"
-}, {
-  "_from": "events/_:malbachmanmovestoaltadena"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:malbachmanmovestoaltadena"
-}, {
-  "_from": "events/_:malbachmanmovestoaltadena"
-  , "_to": "people/_:malbachman"
-  , "type": "hasParticipant"
-  , "vertex": "_:malbachmanmovestoaltadena"
-}, {
-  "_from": "people/_:malbachman"
-  , "_to": "places/_:altadenaca"
-  , "type": "livesAt"
-  , "vertex": "_:malbachman"
-}, {
-  "_from": "people/_:forestcarlisle"
-  , "_to": "people/_:marytoddlincoln"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:forestcarlisle"
-}, {
-  "_from": "people/_:malbachman"
-  , "_to": "things/_:thefifthwall"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:malbachman"
-}, {
-  "_from": "events/_:dondimelloseeshomealonelines"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloseeshomealonelines"
-}, {
-  "_from": "events/_:kevinlindtsfirstwords"
-  , "_to": "people/_:doulmanschmiedeberg"
-  , "type": "hasParticipant"
-  , "vertex": "_:kevinlindtsfirstwords"
-}, {
-  "_from": "events/_:kevinlindtsfirstwords"
-  , "_to": "people/_:gunterlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:kevinlindtsfirstwords"
-}, {
-  "_from": "events/_:kevinlindtsfirstwords"
-  , "_to": "people/_:gretalindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:kevinlindtsfirstwords"
-}, {
-  "_from": "events/_:kevinlindtsfirstwords"
-  , "_to": "people/_:utalindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:kevinlindtsfirstwords"
-}, {
-  "_from": "events/_:kevinlindtsfirstwords"
-  , "_to": "people/_:kevinlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:kevinlindtsfirstwords"
-}, {
-  "_from": "events/_:kevinlindtsfirstwords"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:kevinlindtsfirstwords"
-}, {
-  "_from": "events/_:augustlindtattemptssuicide2"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtattemptssuicide2"
-}, {
-  "_from": "events/_:augustlindtattemptssuicide2"
-  , "_to": "places/_:seattlespaceneedle"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtattemptssuicide2"
-}, {
-  "_from": "events/_:augustlindtvisitsannefrankhuis"
-  , "_to": "places/_:annefrankhuis"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtvisitsannefrankhuis"
-}, {
-  "_from": "events/_:augustlindtvisitsannefrankhuis"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvisitsannefrankhuis"
-}, {
-  "_from": "events/_:augustlindttoursthecongo"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindttoursthecongo"
-}, {
-  "_from": "events/_:augustlindttoursthecongo"
-  , "_to": "places/_:hopitaljasonsendweer"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindttoursthecongo"
-}, {
-  "_from": "events/_:augustlindttoursskokieil"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindttoursskokieil"
-}, {
-  "_from": "events/_:augustlindttoursskokieil"
-  , "_to": "places/_:tommybahamaskokie"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindttoursskokieil"
-}, {
-  "_from": "people/_:billcarter"
-  , "_to": "places/_:marktwainhotella"
-  , "type": "livesAt"
-  , "vertex": "_:billcarter"
-}, {
-  "_from": "events/_:billcarterschildplatoon"
-  , "_to": "places/_:newmexicousa"
-  , "type": "occurredAt"
-  , "vertex": "_:billcarterschildplatoon"
-}, {
-  "_from": "events/_:billcarterschildplatoonindresden"
-  , "_to": "places/_:dresdende"
-  , "type": "occurredAt"
-  , "vertex": "_:billcarterschildplatoonindresden"
-}, {
-  "_from": "events/_:billcarterschildplatoonindresden"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcarterschildplatoonindresden"
-}, {
-  "_from": "events/_:billcarterdoestopsecretbusiness"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcarterdoestopsecretbusiness"
-}, {
-  "_from": "events/_:billcartervotesperot"
-  , "_to": "people/_:hrossperot"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcartervotesperot"
-}, {
-  "_from": "events/_:billcartervotesperot"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcartervotesperot"
-}, {
-  "_from": "events/_:chipgardnerdebatescarolchanning"
-  , "_to": "people/_:carolchanning"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerdebatescarolchanning"
-}, {
-  "_from": "events/_:chipgardnerdebatescarolchanning"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerdebatescarolchanning"
-}, {
-  "_from": "events/_:prisonbargeriotof79"
-  , "_to": "people/_:gameshowcontestantchipgomand"
-  , "type": "hasParticipant"
-  , "vertex": "_:prisonbargeriotof79"
-}, {
-  "_from": "events/_:trynottogethitbythesehammers"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:trynottogethitbythesehammers"
-}, {
-  "_from": "events/_:trynottogethitbythesehammers"
-  , "_to": "people/_:gameshowcontestantmattwills"
-  , "type": "hasParticipant"
-  , "vertex": "_:trynottogethitbythesehammers"
-}, {
-  "_from": "events/_:trynottogethitbythesehammers"
-  , "_to": "people/_:gameshowcontestantrickstubble"
-  , "type": "hasParticipant"
-  , "vertex": "_:trynottogethitbythesehammers"
-}, {
-  "_from": "events/_:trynottogethitbythesehammers"
-  , "_to": "people/_:tipthompson"
-  , "type": "hasParticipant"
-  , "vertex": "_:trynottogethitbythesehammers"
-}, {
-  "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
-}, {
-  "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes"
-  , "_to": "people/_:tipthompson"
-  , "type": "hasParticipant"
-  , "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
-}, {
-  "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes"
-  , "_to": "people/_:unnamedgameshowcontestant1"
-  , "type": "hasParticipant"
-  , "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
-}, {
-  "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes"
-  , "_to": "people/_:gameshowcontestantcliff"
-  , "type": "hasParticipant"
-  , "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
-}, {
-  "_from": "events/_:chipgardnerswifepasses"
-  , "_to": "people/_:chipgardnersunnamedwife"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerswifepasses"
-}, {
-  "_from": "events/_:chipgardnerswifepasses"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerswifepasses"
-}, {
-  "_from": "events/_:chipgardnersstreetfightingyears"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnersstreetfightingyears"
-}, {
-  "_from": "events/_:wherediputmyjacketsuicide"
-  , "_to": "people/_:unnamedgameshowcontestant1"
-  , "type": "hasParticipant"
-  , "vertex": "_:wherediputmyjacketsuicide"
-}, {
-  "_from": "events/_:wherediputmyjacketsuicide"
-  , "_to": "people/_:tipthompson"
-  , "type": "hasParticipant"
-  , "vertex": "_:wherediputmyjacketsuicide"
-}, {
-  "_from": "events/_:wherediputmyjacketsuicide"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:wherediputmyjacketsuicide"
-}, {
-  "_from": "events/_:daltonwilcoxdisruptscellularservicenearearwolf"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxdisruptscellularservicenearearwolf"
-}, {
-  "_from": "events/_:daltonwilcoxvsaninvisibleman"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxvsaninvisibleman"
-}, {
-  "_from": "events/_:daltonwilcoxvsaninvisibleman"
-  , "_to": "people/_:unnamedinvisibleman"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxvsaninvisibleman"
-}, {
-  "_from": "events/_:sheinistrickedontotheadppp1"
-  , "_to": "people/_:russelshein"
-  , "type": "hasParticipant"
-  , "vertex": "_:sheinistrickedontotheadppp1"
-}, {
-  "_from": "events/_:sheinistrickedontotheadppp1"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:sheinistrickedontotheadppp1"
-}, {
-  "_from": "events/_:sheinistrickedontotheadppp2"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:sheinistrickedontotheadppp2"
-}, {
-  "_from": "events/_:sheinistrickedontotheadppp2"
-  , "_to": "people/_:russelshein"
-  , "type": "hasParticipant"
-  , "vertex": "_:sheinistrickedontotheadppp2"
-}, {
-  "_from": "events/_:becklandryburial"
-  , "_to": "people/_:becklandry"
-  , "type": "hasParticipant"
-  , "vertex": "_:becklandryburial"
-}, {
-  "_from": "events/_:becklandryburial"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:becklandryburial"
-}, {
-  "_from": "events/_:andicallahangetsanape"
-  , "_to": "people/_:andicallahanrn"
-  , "type": "hasParticipant"
-  , "vertex": "_:andicallahangetsanape"
-}, {
-  "_from": "events/_:andicallahangetsanape"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:andicallahangetsanape"
-}, {
-  "_from": "events/_:ashleypintossweetsixteen"
-  , "_to": "people/_:ashleypinto"
-  , "type": "hasParticipant"
-  , "vertex": "_:ashleypintossweetsixteen"
-}, {
-  "_from": "events/_:ashleypintossweetsixteen"
-  , "_to": "people/_:benalterman"
-  , "type": "hasParticipant"
-  , "vertex": "_:ashleypintossweetsixteen"
-}, {
-  "_from": "events/_:ashleypintossweetsixteen"
-  , "_to": "places/_:courtyardoldtown"
-  , "type": "occurredAt"
-  , "vertex": "_:ashleypintossweetsixteen"
-}, {
-  "_from": "events/_:augustlindtattemptssuicide1"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtattemptssuicide1"
-}, {
-  "_from": "events/_:augustlindtattemptssuicide1"
-  , "_to": "places/_:hollywoodsign"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtattemptssuicide1"
-}, {
-  "_from": "events/_:augustlindtattemptssuicideatearwolf"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtattemptssuicideatearwolf"
-}, {
-  "_from": "events/_:augustlindtattemptssuicideatearwolf"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtattemptssuicideatearwolf"
-}, {
-  "_from": "events/_:augustlindtisarrestedatgraceland"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtisarrestedatgraceland"
-}, {
-  "_from": "events/_:augustlindtisarrestedatgraceland"
-  , "_to": "places/_:gracelandelvis"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtisarrestedatgraceland"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "people/_:unnamedmarssimulatorbiomedicalscientist"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "people/_:unnamedmarssimulatordoctor"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "people/_:unnamedmarssimulatorentrepreneur"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "people/_:unnamedmarssimulatornasarep"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "people/_:unnamedmarssimulatorstowaway"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvacationsinhawaii"
-  , "_to": "places/_:maunaloa"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtvacationsinhawaii"
-}, {
-  "_from": "events/_:augustlindtvisitsepcot"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvisitsepcot"
-}, {
-  "_from": "events/_:augustlindtvisitsepcot"
-  , "_to": "places/_:epcotcenter"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtvisitsepcot"
-}, {
-  "_from": "events/_:augustlindtvisitsthepinebarrens"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtvisitsthepinebarrens"
-}, {
-  "_from": "events/_:augustlindtvisitsthepinebarrens"
-  , "_to": "places/_:thepinebarrensofnj"
-  , "type": "occurredAt"
-  , "vertex": "_:augustlindtvisitsthepinebarrens"
-}, {
-  "_from": "events/_:augustlindtwinsbestandydalycharacter"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasParticipant"
-  , "vertex": "_:augustlindtwinsbestandydalycharacter"
-}, {
-  "_from": "events/_:billcarterattemptssuicide1"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcarterattemptssuicide1"
-}, {
-  "_from": "events/_:billcarterattemptssuicide1"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:billcarterattemptssuicide1"
-}, {
-  "_from": "events/_:billcarterattemptssuicide2"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcarterattemptssuicide2"
-}, {
-  "_from": "events/_:billcartercheersaraceriot"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcartercheersaraceriot"
-}, {
-  "_from": "events/_:billcartercheersaraceriot"
-  , "_to": "places/_:lacanadaflintridge"
-  , "type": "occurredAt"
-  , "vertex": "_:billcartercheersaraceriot"
-}, {
-  "_from": "events/_:billcarterisaccomplicetoabande"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcarterisaccomplicetoabande"
-}, {
-  "_from": "events/_:billcarterisborn"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcarterisborn"
-}, {
-  "_from": "events/_:billcartertrainscarygrant"
-  , "_to": "people/_:billcarter"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcartertrainscarygrant"
-}, {
-  "_from": "events/_:billcartertrainscarygrant"
-  , "_to": "people/_:carygrant"
-  , "type": "hasParticipant"
-  , "vertex": "_:billcartertrainscarygrant"
-}, {
-  "_from": "events/_:bobbysteensmainventshitchinaride"
-  , "_to": "people/_:bobbysteensma"
-  , "type": "hasParticipant"
-  , "vertex": "_:bobbysteensmainventshitchinaride"
-}, {
-  "_from": "events/_:bookingagentismurdered"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:bookingagentismurdered"
-}, {
-  "_from": "events/_:bookingagentismurdered"
-  , "_to": "people/_:gil"
-  , "type": "hasParticipant"
-  , "vertex": "_:bookingagentismurdered"
-}, {
-  "_from": "events/_:bookingagentismurdered"
-  , "_to": "people/_:golly"
-  , "type": "hasParticipant"
-  , "vertex": "_:bookingagentismurdered"
-}, {
-  "_from": "events/_:bookingagentismurdered"
-  , "_to": "people/_:unnamedbookingagent"
-  , "type": "hasParticipant"
-  , "vertex": "_:bookingagentismurdered"
-}, {
-  "_from": "events/_:byrondennistongetsthescoop"
-  , "_to": "people/_:byrondenniston"
-  , "type": "hasParticipant"
-  , "vertex": "_:byrondennistongetsthescoop"
-}, {
-  "_from": "events/_:byrondennistongoestoprison1"
-  , "_to": "people/_:byrondenniston"
-  , "type": "hasParticipant"
-  , "vertex": "_:byrondennistongoestoprison1"
-}, {
-  "_from": "events/_:byrondennistongoestoprison1"
-  , "_to": "places/_:hmprisonwandsworth"
-  , "type": "occurredAt"
-  , "vertex": "_:byrondennistongoestoprison1"
-}, {
-  "_from": "events/_:byrondennistonisborn"
-  , "_to": "people/_:byrondenniston"
-  , "type": "hasParticipant"
-  , "vertex": "_:byrondennistonisborn"
-}, {
-  "_from": "events/_:byrondennistonrevealstoomuch"
-  , "_to": "people/_:byrondenniston"
-  , "type": "hasParticipant"
-  , "vertex": "_:byrondennistonrevealstoomuch"
-}, {
-  "_from": "events/_:cactustonyisborn"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisborn"
-}, {
-  "_from": "events/_:cactustonyisinterrogated1"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisinterrogated1"
-}, {
-  "_from": "events/_:cactustonyisinterrogated2"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisinterrogated2"
-}, {
-  "_from": "events/_:cactustonyisinterrogated2"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisinterrogated2"
-}, {
-  "_from": "events/_:cactustonyisinterrogated2"
-  , "_to": "people/_:jasonmantzoukas"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisinterrogated2"
-}, {
-  "_from": "events/_:cactustonyisinterrogated2"
-  , "_to": "people/_:scottaukerman"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyisinterrogated2"
-}, {
-  "_from": "events/_:cactustonyleaveshome"
-  , "_to": "people/_:aunteileen"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyleaveshome"
-}, {
-  "_from": "events/_:cactustonyleaveshome"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:cactustonyleaveshome"
-}, {
-  "_from": "events/_:cameronmcgonigleisborn"
-  , "_to": "people/_:cameronmcgonigle"
-  , "type": "hasParticipant"
-  , "vertex": "_:cameronmcgonigleisborn"
-}, {
-  "_from": "events/_:cameronmcgonigleisborn"
-  , "_to": "places/_:edinburghscotland"
-  , "type": "occurredAt"
-  , "vertex": "_:cameronmcgonigleisborn"
-}, {
-  "_from": "events/_:ceceliawilcoxismurdered"
-  , "_to": "people/_:ceceliawilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:ceceliawilcoxismurdered"
-}, {
-  "_from": "events/_:ceceliawilcoxismurdered"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:ceceliawilcoxismurdered"
-}, {
-  "_from": "events/_:ceceliawilcoxismurdered"
-  , "_to": "people/_:daltonwilcoxunnameddaughter1"
-  , "type": "hasParticipant"
-  , "vertex": "_:ceceliawilcoxismurdered"
-}, {
-  "_from": "events/_:ceceliawilcoxismurdered"
-  , "_to": "people/_:daltonwilcoxunnameddaughter2"
-  , "type": "hasParticipant"
-  , "vertex": "_:ceceliawilcoxismurdered"
-}, {
-  "_from": "events/_:ceceliawilcoxismurdered"
-  , "_to": "people/_:daltonwilcoxunnameddaughter3"
-  , "type": "hasParticipant"
-  , "vertex": "_:ceceliawilcoxismurdered"
-}, {
-  "_from": "events/_:chipgardnerappearsinlatimes"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerappearsinlatimes"
-}, {
-  "_from": "events/_:chipgardnerfollowssimpleminds"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerfollowssimpleminds"
-}, {
-  "_from": "events/_:chipgardnerfollowssimpleminds"
-  , "_to": "things/_:jesusjones"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerfollowssimpleminds"
-}, {
-  "_from": "events/_:chipgardnerfollowssimpleminds"
-  , "_to": "things/_:simpleminds"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerfollowssimpleminds"
-}, {
-  "_from": "events/_:chipgardnerhitsrockbottom"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerhitsrockbottom"
-}, {
-  "_from": "events/_:chipgardnerhostszap"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerhostszap"
-}, {
-  "_from": "events/_:chipgardnerhostszap"
-  , "_to": "people/_:jasonmantzoukas"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerhostszap"
-}, {
-  "_from": "events/_:chipgardnerhostszap"
-  , "_to": "people/_:scottaukerman"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerhostszap"
-}, {
-  "_from": "events/_:chipgardnerisborn"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerisborn"
-}, {
-  "_from": "events/_:chipgardnerisrunoverbyajeep"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerisrunoverbyajeep"
-}, {
-  "_from": "events/_:chipgardnerisrunoverbyajeep"
-  , "_to": "people/_:jasonmantzoukas"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerisrunoverbyajeep"
-}, {
-  "_from": "events/_:chipgardnerisrunoverbyajeep"
-  , "_to": "people/_:scottaukerman"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnerisrunoverbyajeep"
-}, {
-  "_from": "events/_:chipgardnermovestohollywood"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnermovestohollywood"
-}, {
-  "_from": "events/_:chipgardnertriestoexhumejimmorrison"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnertriestoexhumejimmorrison"
-}, {
-  "_from": "events/_:chipgardnertriestoexhumejimmorrison"
-  , "_to": "people/_:jimmorrison"
-  , "type": "hasParticipant"
-  , "vertex": "_:chipgardnertriestoexhumejimmorrison"
-}, {
-  "_from": "events/_:chipgardnertriestoexhumejimmorrison"
-  , "_to": "places/_:tombofjimmorrison"
-  , "type": "occurredAt"
-  , "vertex": "_:chipgardnertriestoexhumejimmorrison"
-}, {
-  "_from": "events/_:clivedundeeattemptssuicide"
-  , "_to": "people/_:clivedundee"
-  , "type": "hasParticipant"
-  , "vertex": "_:clivedundeeattemptssuicide"
-}, {
-  "_from": "events/_:clivedundeeattemptssuicide"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:clivedundeeattemptssuicide"
-}, {
-  "_from": "events/_:clivedundeeisborn"
-  , "_to": "people/_:clivedundee"
-  , "type": "hasParticipant"
-  , "vertex": "_:clivedundeeisborn"
-}, {
-  "_from": "events/_:daltonwilcoxattemptssuicide1"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxattemptssuicide1"
-}, {
-  "_from": "events/_:daltonwilcoxattemptssuicide1"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:daltonwilcoxattemptssuicide1"
-}, {
-  "_from": "events/_:daltonwilcoxisborn"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxisborn"
-}, {
-  "_from": "events/_:daltonwilcoxkillsjekyll"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxkillsjekyll"
-}, {
-  "_from": "events/_:daltonwilcoxkillsjekyll"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxkillsjekyll"
-}, {
-  "_from": "events/_:daltonwilcoxkillsjekyll"
-  , "_to": "places/_:londonbridgehavasu"
-  , "type": "occurredAt"
-  , "vertex": "_:daltonwilcoxkillsjekyll"
-}, {
-  "_from": "events/_:daltonwilcoxkillsthelochnessmonster"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxkillsthelochnessmonster"
-}, {
-  "_from": "events/_:daltonwilcoxkillsthelochnessmonster"
-  , "_to": "things/_:lochnessmonster"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxkillsthelochnessmonster"
-}, {
-  "_from": "events/_:daltonwilcoxkillsthelochnessmonster"
-  , "_to": "places/_:lochness"
-  , "type": "occurredAt"
-  , "vertex": "_:daltonwilcoxkillsthelochnessmonster"
-}, {
-  "_from": "events/_:daltonwilcoxlastride"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:daltonwilcoxlastride"
-}, {
-  "_from": "events/_:dannymahoneyattemptssuicide2"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneyattemptssuicide2"
-}, {
-  "_from": "events/_:dannymahoneyattemptssuicide2"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:dannymahoneyattemptssuicide2"
-}, {
-  "_from": "events/_:dannymahoneybuysaboombox"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneybuysaboombox"
-}, {
-  "_from": "events/_:dannymahoneybuysaheavycoat"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneybuysaheavycoat"
-}, {
-  "_from": "events/_:dannymahoneybuysaheavycoat"
-  , "_to": "places/_:nordstromsantamonica"
-  , "type": "occurredAt"
-  , "vertex": "_:dannymahoneybuysaheavycoat"
-}, {
-  "_from": "events/_:dannymahoneymeetsscottaukerman"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneymeetsscottaukerman"
-}, {
-  "_from": "events/_:dannymahoneymeetsscottaukerman"
-  , "_to": "people/_:scottaukerman"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneymeetsscottaukerman"
-}, {
-  "_from": "events/_:dannymahoneymeetsscottaukerman"
-  , "_to": "places/_:melroseatgower"
-  , "type": "occurredAt"
-  , "vertex": "_:dannymahoneymeetsscottaukerman"
-}, {
-  "_from": "events/_:dannymahoneywalksintotheocean"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneywalksintotheocean"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:birthdaygirl"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:charlottelistler"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:dabneycoleperson"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:daniellebartiromo"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:drsethwompler"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:ericgutterman"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:felipe"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:karim"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:katy"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:kimmy"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:lizmathers"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:marissawompler"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:scottaukerman"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "people/_:tracirearden"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimelloattemptssuicide1"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimelloattemptssuicide1"
-}, {
-  "_from": "events/_:dondimelloattemptssuicide1"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimelloattemptssuicide1"
-}, {
-  "_from": "events/_:dondimellodirectstherockettes"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellodirectstherockettes"
-}, {
-  "_from": "events/_:dondimellodirectstherockettes"
-  , "_to": "places/_:radiocity"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellodirectstherockettes"
-}, {
-  "_from": "events/_:dondimellofindsachild"
-  , "_to": "people/_:birthdaygirl"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellofindsachild"
-}, {
-  "_from": "events/_:dondimellofindsachild"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellofindsachild"
-}, {
-  "_from": "events/_:dondimellofindsachild"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellofindsachild"
-}, {
-  "_from": "events/_:dondimellofindsachild"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellofindsachild"
-}, {
-  "_from": "events/_:dondimellopresentsdisneysfrozen"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellopresentsdisneysfrozen"
-}, {
-  "_from": "events/_:dondimellosdisneyspeterpan"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosdisneyspeterpan"
-}, {
-  "_from": "events/_:dondimellosdisneyspeterpan"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosdisneyspeterpan"
-}, {
-  "_from": "events/_:dondimellosdisneyspeterpan"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellosdisneyspeterpan"
-}, {
-  "_from": "events/_:dondimellosdisneyswizardofoz"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosdisneyswizardofoz"
-}, {
-  "_from": "events/_:dondimellosdisneyswizardofoz"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosdisneyswizardofoz"
-}, {
-  "_from": "events/_:dondimellosdisneyswizardofoz"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellosdisneyswizardofoz"
-}, {
-  "_from": "events/_:dondimellosfindstony"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosfindstony"
-}, {
-  "_from": "events/_:dondimellosfindstony"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosfindstony"
-}, {
-  "_from": "events/_:dondimellosheyreallygiger"
-  , "_to": "people/_:andrewlloydwebber"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosheyreallygiger"
-}, {
-  "_from": "events/_:dondimellosheyreallygiger"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosheyreallygiger"
-}, {
-  "_from": "events/_:dondimellosheyreallygiger"
-  , "_to": "people/_:hrgiger"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosheyreallygiger"
-}, {
-  "_from": "events/_:dondimellostagesbeautyandthebeast"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostagesbeautyandthebeast"
-}, {
-  "_from": "events/_:dondimellostagesbeautyandthebeast"
-  , "_to": "people/_:malbachman"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostagesbeautyandthebeast"
-}, {
-  "_from": "events/_:dondimellostagesbeautyandthebeast"
-  , "_to": "people/_:dondimellosanimalguy"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostagesbeautyandthebeast"
-}, {
-  "_from": "events/_:dondimellostagesbeautyandthebeast"
-  , "_to": "places/_:ctusa"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellostagesbeautyandthebeast"
-}, {
-  "_from": "events/_:dondimellostagesjewmanji"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostagesjewmanji"
-}, {
-  "_from": "events/_:dondimellostagescinderella"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostagescinderella"
-}, {
-  "_from": "events/_:dondimellostagesjewmanji"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellostagesjewmanji"
-}, {
-  "_from": "events/_:dondimellostagescinderella"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellostagescinderella"
-}, {
-  "_from": "events/_:dondimellosdisneyszootopia"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellosdisneyszootopia"
-}, {
-  "_from": "events/_:dondimellostruewest"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostruewest"
-}, {
-  "_from": "events/_:dondimellostruewest"
-  , "_to": "people/_:johncreilly"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostruewest"
-}, {
-  "_from": "events/_:dondimellostruewest"
-  , "_to": "people/_:nicknolte"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellostruewest"
-}, {
-  "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday"
-  , "_to": "places/_:sixflagsmagicmountain"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
-}, {
-  "_from": "events/_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
-}, {
-  "_from": "events/_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
-  , "_to": "places/_:griffithobservatory"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
-}, {
-  "_from": "events/_:dondimellopresentsdisneyshanselandgretel"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellopresentsdisneyshanselandgretel"
-}, {
-  "_from": "events/_:dondimellopresentsdisneyshanselandgretel"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellopresentsdisneyshanselandgretel"
-}, {
-  "_from": "events/_:dondimellopresentsdisneyspuffthemagicdragon"
-  , "_to": "people/_:dondimello"
-  , "type": "hasParticipant"
-  , "vertex": "_:dondimellopresentsdisneyspuffthemagicdragon"
-}, {
-  "_from": "events/_:dondimellopresentsdisneyspuffthemagicdragon"
-  , "_to": "places/_:pasadenafairytaletheatre"
-  , "type": "occurredAt"
-  , "vertex": "_:dondimellopresentsdisneyspuffthemagicdragon"
-}, {
-  "_from": "events/_:edwardsollytutorshotdog"
-  , "_to": "people/_:elmeredwardsolly"
-  , "type": "hasParticipant"
-  , "vertex": "_:edwardsollytutorshotdog"
-}, {
-  "_from": "events/_:edwardsollytutorshotdog"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:edwardsollytutorshotdog"
-}, {
-  "_from": "events/_:fatherofjoebongoisborn"
-  , "_to": "people/_:fatherofjoebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:fatherofjoebongoisborn"
-}, {
-  "_from": "events/_:gilgetsaspotoncbb"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilgetsaspotoncbb"
-}, {
-  "_from": "events/_:gilgetsaspotoncbb"
-  , "_to": "people/_:gil"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilgetsaspotoncbb"
-}, {
-  "_from": "events/_:gilgetsaspotoncbb"
-  , "_to": "people/_:golly"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilgetsaspotoncbb"
-}, {
-  "_from": "events/_:gilgetsaspotoncbb"
-  , "_to": "people/_:unnamedbookingagent"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilgetsaspotoncbb"
-}, {
-  "_from": "events/_:gilmeetsgolly"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilmeetsgolly"
-}, {
-  "_from": "events/_:gilmeetsgolly"
-  , "_to": "people/_:gil"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilmeetsgolly"
-}, {
-  "_from": "events/_:gilmeetsgolly"
-  , "_to": "people/_:golly"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilmeetsgolly"
-}, {
-  "_from": "events/_:gilmeetsgolly"
-  , "_to": "people/_:jasonmantzoukas"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilmeetsgolly"
-}, {
-  "_from": "events/_:gilmeetsgolly"
-  , "_to": "people/_:scottaukerman"
-  , "type": "hasParticipant"
-  , "vertex": "_:gilmeetsgolly"
-}, {
-  "_from": "events/_:gilmeetsgolly"
-  , "_to": "places/_:internationalwaters"
-  , "type": "occurredAt"
-  , "vertex": "_:gilmeetsgolly"
-}, {
-  "_from": "events/_:heatcuregoesawry"
-  , "_to": "people/_:andicallahanrn"
-  , "type": "hasParticipant"
-  , "vertex": "_:heatcuregoesawry"
-}, {
-  "_from": "events/_:heatcuregoesawry"
-  , "_to": "people/_:cactustony"
-  , "type": "hasParticipant"
-  , "vertex": "_:heatcuregoesawry"
-}, {
-  "_from": "events/_:hotdogattemptssuicide1"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogattemptssuicide1"
-}, {
-  "_from": "events/_:hotdogattemptssuicide1"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:hotdogattemptssuicide1"
-}, {
-  "_from": "events/_:hotdogaudition1"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogaudition1"
-}, {
-  "_from": "events/_:hotdogaudition1"
-  , "_to": "things/_:shanana"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogaudition1"
-}, {
-  "_from": "events/_:hotdogaudition2"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogaudition2"
-}, {
-  "_from": "events/_:hotdogaudition2"
-  , "_to": "things/_:shanana"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogaudition2"
-}, {
-  "_from": "events/_:hotdogaudition3"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogaudition3"
-}, {
-  "_from": "events/_:hotdogaudition3"
-  , "_to": "things/_:shanana"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogaudition3"
-}, {
-  "_from": "events/_:hotdogbecomesthird"
-  , "_to": "people/_:abrahamapplebysgirlfriend"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogbecomesthird"
-}, {
-  "_from": "events/_:hotdogbecomesthird"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogbecomesthird"
-}, {
-  "_from": "events/_:hotdogbooksshananafraudulently"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogbooksshananafraudulently"
-}, {
-  "_from": "events/_:hotdogbooksshananafraudulently"
-  , "_to": "things/_:shanana"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogbooksshananafraudulently"
-}, {
-  "_from": "events/_:hotdogbooksshananafraudulently"
-  , "_to": "places/_:hiltonhotelhawaii"
-  , "type": "occurredAt"
-  , "vertex": "_:hotdogbooksshananafraudulently"
-}, {
-  "_from": "events/_:hotdogchangeshisname"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogchangeshisname"
-}, {
-  "_from": "events/_:hotdogdecapitatesastranger"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogdecapitatesastranger"
-}, {
-  "_from": "events/_:hotdogdecapitatesastranger"
-  , "_to": "people/_:unnamedscottishguy"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogdecapitatesastranger"
-}, {
-  "_from": "events/_:hotdogdecapitatesastranger"
-  , "_to": "places/_:necromance"
-  , "type": "occurredAt"
-  , "vertex": "_:hotdogdecapitatesastranger"
-}, {
-  "_from": "events/_:hotdogeatshisskis"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogeatshisskis"
-}, {
-  "_from": "events/_:hotdogemailsscreaminscott"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogemailsscreaminscott"
-}, {
-  "_from": "events/_:hotdogemailsscreaminscott"
-  , "_to": "people/_:screaminscottsimon"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogemailsscreaminscott"
-}, {
-  "_from": "events/_:hotdoggetskickedoutofnashasha"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdoggetskickedoutofnashasha"
-}, {
-  "_from": "events/_:hotdoggetskickedoutofnashasha"
-  , "_to": "things/_:nashasha"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdoggetskickedoutofnashasha"
-}, {
-  "_from": "events/_:hotdogintroducesfirearms"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogintroducesfirearms"
-}, {
-  "_from": "events/_:hotdogisborn"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogisborn"
-}, {
-  "_from": "events/_:hotdogisrescuedbythelizard"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogisrescuedbythelizard"
-}, {
-  "_from": "events/_:hotdogisrescuedbythelizard"
-  , "_to": "people/_:thelizard"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogisrescuedbythelizard"
-}, {
-  "_from": "events/_:hotdogloseshisjacket"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogloseshisjacket"
-}, {
-  "_from": "events/_:hotdogmakesthehalloffame"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogmakesthehalloffame"
-}, {
-  "_from": "events/_:hotdogmakesthehalloffame"
-  , "_to": "places/_:polkcityfl"
-  , "type": "occurredAt"
-  , "vertex": "_:hotdogmakesthehalloffame"
-}, {
-  "_from": "events/_:hotdogmoveson"
-  , "_to": "people/_:benalterman"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogmoveson"
-}, {
-  "_from": "events/_:hotdogmoveson"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogmoveson"
-}, {
-  "_from": "events/_:hotdogmoveson"
-  , "_to": "things/_:nashasha"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogmoveson"
-}, {
-  "_from": "events/_:hotdogmoveson"
-  , "_to": "things/_:shanana"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogmoveson"
-}, {
-  "_from": "events/_:hotdogrunsa50sbedandbreakfast"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogrunsa50sbedandbreakfast"
-}, {
-  "_from": "events/_:hotdogrunsa50sbedandbreakfast"
-  , "_to": "things/_:unnamed50sbedandbreakfast"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogrunsa50sbedandbreakfast"
-}, {
-  "_from": "events/_:hotdogrunsan80sbedandbreakfast"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogrunsan80sbedandbreakfast"
-}, {
-  "_from": "events/_:hotdogrunsan80sbedandbreakfast"
-  , "_to": "things/_:unnamed80sbedandbreakfast"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogrunsan80sbedandbreakfast"
-}, {
-  "_from": "events/_:hotdogsearchessanddiegoforshanana"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogsearchessanddiegoforshanana"
-}, {
-  "_from": "events/_:hotdogswifepasses"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogswifepasses"
-}, {
-  "_from": "events/_:hotdogswifepasses"
-  , "_to": "people/_:hotdogswife"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogswifepasses"
-}, {
-  "_from": "events/_:hotdogwaterskisonamotorcycle"
-  , "_to": "people/_:hotdog"
-  , "type": "hasParticipant"
-  , "vertex": "_:hotdogwaterskisonamotorcycle"
-}, {
-  "_from": "events/_:jeanclaudepepiauditionsfornosferatu"
-  , "_to": "people/_:jeanclaudepepi"
-  , "type": "hasParticipant"
-  , "vertex": "_:jeanclaudepepiauditionsfornosferatu"
-}, {
-  "_from": "events/_:jeanclaudepepiauditionsfornosferatu"
-  , "_to": "people/_:wernerherzog"
-  , "type": "hasParticipant"
-  , "vertex": "_:jeanclaudepepiauditionsfornosferatu"
-}, {
-  "_from": "events/_:jeanclaudepepiisborn"
-  , "_to": "people/_:jeanclaudepepi"
-  , "type": "hasParticipant"
-  , "vertex": "_:jeanclaudepepiisborn"
-}, {
-  "_from": "events/_:jeanclaudepepishootsageicospot"
-  , "_to": "people/_:jeanclaudepepi"
-  , "type": "hasParticipant"
-  , "vertex": "_:jeanclaudepepishootsageicospot"
-}, {
-  "_from": "events/_:joebongoadvisesguttermanandbartiromo"
-  , "_to": "people/_:daniellebartiromo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoadvisesguttermanandbartiromo"
-}, {
-  "_from": "events/_:joebongoadvisesguttermanandbartiromo"
-  , "_to": "people/_:ericgutterman"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoadvisesguttermanandbartiromo"
-}, {
-  "_from": "events/_:joebongoadvisesguttermanandbartiromo"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoadvisesguttermanandbartiromo"
-}, {
-  "_from": "events/_:joebongoauditionsforfriends"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoauditionsforfriends"
-}, {
-  "_from": "events/_:joebongofindsbongos"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongofindsbongos"
-}, {
-  "_from": "events/_:joebongofindsbongos"
-  , "_to": "places/_:venicefishingpier"
-  , "type": "occurredAt"
-  , "vertex": "_:joebongofindsbongos"
-}, {
-  "_from": "events/_:joebongogoesonsabbatical1"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongogoesonsabbatical1"
-}, {
-  "_from": "events/_:joebongogoesonsabbatical1"
-  , "_to": "places/_:largo"
-  , "type": "occurredAt"
-  , "vertex": "_:joebongogoesonsabbatical1"
-}, {
-  "_from": "events/_:joebongoisattackedbysnakes"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoisattackedbysnakes"
-}, {
-  "_from": "events/_:joebongoisfiredfromtheenglishdepartment"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoisfiredfromtheenglishdepartment"
-}, {
-  "_from": "events/_:joebongoisinvolvedinacaraccident"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoisinvolvedinacaraccident"
-}, {
-  "_from": "events/_:joebongoisinvolvedinacaraccident"
-  , "_to": "places/_:tikimermaidchartersharborcruiseboat"
-  , "type": "occurredAt"
-  , "vertex": "_:joebongoisinvolvedinacaraccident"
-}, {
-  "_from": "events/_:joebongostealsshoes"
-  , "_to": "people/_:jimmypage"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongostealsshoes"
-}, {
-  "_from": "events/_:joebongostealsshoes"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongostealsshoes"
-}, {
-  "_from": "events/_:joebongoteachesdrugunit"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoteachesdrugunit"
-}, {
-  "_from": "events/_:joebongoteachesdrugunit"
-  , "_to": "people/_:marissawompler"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoteachesdrugunit"
-}, {
-  "_from": "events/_:joebongoteachesdrugunit"
-  , "_to": "places/_:mdhs"
-  , "type": "occurredAt"
-  , "vertex": "_:joebongoteachesdrugunit"
-}, {
-  "_from": "events/_:joebongoteachessexunit"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoteachessexunit"
-}, {
-  "_from": "events/_:joebongoteachessexunit"
-  , "_to": "people/_:marissawompler"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongoteachessexunit"
-}, {
-  "_from": "events/_:joebongoteachessexunit"
-  , "_to": "places/_:mdhs"
-  , "type": "occurredAt"
-  , "vertex": "_:joebongoteachessexunit"
-}, {
-  "_from": "events/_:joebongovotesforjohnbanderson"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongovotesforjohnbanderson"
-}, {
-  "_from": "events/_:joebongovotesforjohnbanderson"
-  , "_to": "people/_:johnbanderson"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongovotesforjohnbanderson"
-}, {
-  "_from": "events/_:joebongrequestspreventativecasts"
-  , "_to": "people/_:joebongo"
-  , "type": "hasParticipant"
-  , "vertex": "_:joebongrequestspreventativecasts"
-}, {
-  "_from": "events/_:patrickmcmahonattemptssuicide1"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:patrickmcmahonattemptssuicide1"
-}, {
-  "_from": "events/_:patrickmcmahonattemptssuicide1"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:patrickmcmahonattemptssuicide1"
-}, {
-  "_from": "events/_:patrickmcmahonattemptssuicide1"
-  , "_to": "places/_:earwolfsunset"
-  , "type": "occurredAt"
-  , "vertex": "_:patrickmcmahonattemptssuicide1"
-}, {
-  "_from": "events/_:patrickmcmahonisaccused"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:patrickmcmahonisaccused"
-}, {
-  "_from": "events/_:patrickmcmahonisborn"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:patrickmcmahonisborn"
-}, {
-  "_from": "events/_:patrickmcmahonisnamedpersonoftheyear"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "hasParticipant"
-  , "vertex": "_:patrickmcmahonisnamedpersonoftheyear"
-}, {
-  "_from": "events/_:stephaniegoldbergismurdered"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:stephaniegoldbergismurdered"
-}, {
-  "_from": "events/_:mrswilcoxismurdered"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:mrswilcoxismurdered"
-}, {
-  "_from": "events/_:mrswilcoxismurdered"
-  , "_to": "people/_:daltonwilcoxunnamedwife1p"
-  , "type": "hasParticipant"
-  , "vertex": "_:mrswilcoxismurdered"
-}, {
-  "_from": "events/_:stephaniegoldbergismurdered"
-  , "_to": "people/_:stephaniegoldberg"
-  , "type": "hasParticipant"
-  , "vertex": "_:stephaniegoldbergismurdered"
-}, {
-  "_from": "events/_:surferssetworldrecord"
-  , "_to": "places/_:huntingtonbeach"
-  , "type": "occurredAt"
-  , "vertex": "_:surferssetworldrecord"
-}, {
-  "_from": "events/_:dannymahoneymeetsjimmyblades"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneymeetsjimmyblades"
-}, {
-  "_from": "things/_:takemywifekeys"
-  , "_to": "people/_:jimmyblades"
-  , "type": "hasParticipant"
-  , "vertex": "_:takemywifekeys"
-}, {
-  "_from": "people/_:jimmyblades"
-  , "_to": "things/_:takemywifekeys"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:jimmyblades"
-}, {
-  "_from": "people/_:ahiscousinpenny"
-  , "_to": "people/_:ahi"
-  , "type": "isSpouseOf"
-  , "vertex": "_:ahiscousinpenny"
-}, {
-  "_from": "people/_:ahiscousinpenny"
-  , "_to": "people/_:ahi"
-  , "type": "caresFor"
-  , "vertex": "_:ahiscousinpenny"
-}, {
-  "_from": "people/_:andicallahanrn"
-  , "_to": "people/_:bergenregionalbernard"
-  , "type": "caresFor"
-  , "vertex": "_:andicallahanrn"
-}, {
-  "_from": "people/_:andicallahanrn"
-  , "_to": "people/_:bergenregionalrosa"
-  , "type": "caresFor"
-  , "vertex": "_:andicallahanrn"
-}, {
-  "_from": "people/_:andicallahanrn"
-  , "_to": "people/_:god"
-  , "type": "seeAlso"
-  , "vertex": "_:andicallahanrn"
-}, {
-  "_from": "people/_:andicallahanrn"
-  , "_to": "places/_:bergenregional"
-  , "type": "worksAt"
-  , "vertex": "_:andicallahanrn"
-}, {
-  "_from": "people/_:angus"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:angus"
-}, {
-  "_from": "people/_:thomaslavergne"
-  , "_to": "people/_:stevefaye"
-  , "type": "hasFriend"
-  , "vertex": "_:thomaslavergne"
-}, {
-  "_from": "people/_:thomaslavergne"
-  , "_to": "people/_:arthurlavergne"
-  , "type": "isChildOf"
-  , "vertex": "_:thomaslavergne"
-}, {
-  "_from": "people/_:daltonwilcox"
-  , "_to": "people/_:unnamedmotherofdaltonwilcox"
-  , "type": "isChildOf"
-  , "vertex": "_:daltonwilcox"
-}, {
-  "_from": "people/_:michaellavergne"
-  , "_to": "people/_:arthurlavergne"
-  , "type": "isChildOf"
-  , "vertex": "_:michaellavergne"
-}, {
-  "_from": "people/_:arthurlavergne"
-  , "_to": "people/_:grandmotherpearlalavergne"
-  , "type": "isChildOf"
-  , "vertex": "_:arthurlavergne"
-}, {
-  "_from": "people/_:kevinlindt"
-  , "_to": "people/_:augustlindt"
-  , "type": "isChildOf"
-  , "vertex": "_:kevinlindt"
-}, {
-  "_from": "people/_:gunterlindt"
-  , "_to": "people/_:augustlindt"
-  , "type": "isChildOf"
-  , "vertex": "_:gunterlindt"
-}, {
-  "_from": "people/_:gretalindt"
-  , "_to": "people/_:augustlindt"
-  , "type": "isChildOf"
-  , "vertex": "_:gretalindt"
-}, {
-  "_from": "people/_:ashleypinto"
-  , "_to": "people/_:crystalalterman"
-  , "type": "isChildOf"
-  , "vertex": "_:ashleypinto"
-}, {
-  "_from": "people/_:veronicamelcher"
-  , "_to": "people/_:slamminoliverrothwell"
-  , "type": "hasFriend"
-  , "vertex": "_:veronicamelcher"
-}, {
-  "_from": "people/_:veronicamelcher"
-  , "_to": "people/_:hotdog"
-  , "type": "hasFriend"
-  , "vertex": "_:veronicamelcher"
-}, {
-  "_from": "people/_:augustlindt"
-  , "_to": "people/_:theschmiedebergmonkey1"
-  , "type": "hasFriend"
-  , "vertex": "_:augustlindt"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "people/_:falcon"
-  , "type": "hasFriend"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:augustlindt"
-  , "_to": "people/_:theschmiedebergmonkey1"
-  , "type": "hasFriend"
-  , "vertex": "_:augustlindt"
-}, {
-  "_from": "people/_:augustlindt"
-  , "_to": "places/_:schmiedebergpretzelcompany"
-  , "type": "worksAt"
-  , "vertex": "_:augustlindt"
-}, {
-  "_from": "people/_:benalterman"
-  , "_to": "people/_:mrfrancisco"
-  , "type": "hasFriend"
-  , "vertex": "_:benalterman"
-}, {
-  "_from": "people/_:benalterman"
-  , "_to": "people/_:mrshakamora"
-  , "type": "hasFriend"
-  , "vertex": "_:benalterman"
-}, {
-  "_from": "people/_:benalterman"
-  , "_to": "people/_:mrshakamora"
-  , "type": "hasFriend"
-  , "vertex": "_:benalterman"
-}, {
-  "_from": "people/_:benalterman"
-  , "_to": "people/_:thewidowfeeney"
-  , "type": "hasFriend"
-  , "vertex": "_:benalterman"
-}, {
-  "_from": "people/_:benalterman"
-  , "_to": "people/_:thewidowfeeney"
-  , "type": "hasFriend"
-  , "vertex": "_:benalterman"
-}, {
-  "_from": "people/_:benalterman"
-  , "_to": "places/_:shadyviewboardandcare"
-  , "type": "livesAt"
-  , "vertex": "_:benalterman"
-}, {
-  "_from": "people/_:jimmyblades"
-  , "_to": "things/_:lotpinc"
-  , "type": "worksAt"
-  , "vertex": "_:jimmyblades"
-}, {
-  "_from": "people/_:daltonwilcox"
-  , "_to": "things/_:uber"
-  , "type": "worksAt"
-  , "vertex": "_:daltonwilcox"
-}, {
-  "_from": "events/_:dannymahoneyimmunizeshisbrother"
-  , "_to": "people/_:dannymahoneysbrother"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneyimmunizeshisbrother"
-}, {
-  "_from": "events/_:dannymahoneyimmunizeshisbrother"
-  , "_to": "people/_:dannymahoney"
-  , "type": "hasParticipant"
-  , "vertex": "_:dannymahoneyimmunizeshisbrother"
-}, {
-  "_from": "people/_:dannymahoneysbrother"
-  , "_to": "people/_:dannymahoney"
-  , "type": "isSiblingOf"
-  , "vertex": "_:dannymahoneysbrother"
-}, {
-  "_from": "people/_:bertmahoney"
-  , "_to": "people/_:dannymahoneysbrother"
-  , "type": "isChildOf"
-  , "vertex": "_:bertmahoney"
-}, {
-  "_from": "people/_:bertmahoney"
-  , "_to": "things/_:unnamedplumbingco"
-  , "type": "worksAt"
-  , "vertex": "_:bertmahoney"
-}, {
-  "_from": "people/_:bigbobpinto"
-  , "_to": "people/_:crystalalterman"
-  , "type": "isSpouseOf"
-  , "vertex": "_:bigbobpinto"
-}, {
-  "_from": "people/_:daltonwilcoxunnamedwife1"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "isSpouseOf"
-  , "vertex": "_:daltonwilcoxunnamedwife1"
-}, {
-  "_from": "people/_:rickwakeman"
-  , "_to": "things/_:yesband"
-  , "type": "isMemberOf"
-  , "vertex": "_:rickwakeman"
-}, {
-  "_from": "people/_:billbuford"
-  , "_to": "things/_:yesband"
-  , "type": "isMemberOf"
-  , "vertex": "_:billbuford"
-}, {
-  "_from": "people/_:billcarter"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasFriend"
-  , "vertex": "_:billcarter"
-}, {
-  "_from": "people/_:billcarter"
-  , "_to": "places/_:ballyshollywood"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:billcarter"
-}, {
-  "_from": "people/_:billcarter"
-  , "_to": "things/_:trainerforthestarsseekingstars"
-  , "type": "worksAt"
-  , "vertex": "_:billcarter"
-}, {
-  "_from": "people/_:bryan"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:bryan"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:andicallahanrn"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:billcarter"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:dondimello"
-  , "type": "worksFor"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:gretchen"
-  , "type": "hasFriend"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "people/_:jackfitzgerald"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cactustony"
-  , "_to": "places/_:arclightcinemas"
-  , "type": "worksFor"
-  , "vertex": "_:cactustony"
-}, {
-  "_from": "people/_:cameronmcgonigle"
-  , "_to": "people/_:angus"
-  , "type": "hasFriend"
-  , "vertex": "_:cameronmcgonigle"
-}, {
-  "_from": "people/_:cameronmcgonigle"
-  , "_to": "people/_:bryan"
-  , "type": "hasFriend"
-  , "vertex": "_:cameronmcgonigle"
-}, {
-  "_from": "people/_:cameronmcgonigle"
-  , "_to": "people/_:dougie"
-  , "type": "hasFriend"
-  , "vertex": "_:cameronmcgonigle"
-}, {
-  "_from": "people/_:cameronmcgonigle"
-  , "_to": "people/_:laird"
-  , "type": "hasFriend"
-  , "vertex": "_:cameronmcgonigle"
-}, {
-  "_from": "people/_:cameronmcgonigle"
-  , "_to": "people/_:stuart"
-  , "type": "hasFriend"
-  , "vertex": "_:cameronmcgonigle"
-}, {
-  "_from": "people/_:cameronmcgonigle"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:cameronmcgonigle"
-}, {
-  "_from": "people/_:raikardpalmer"
-  , "_to": "things/_:emersonlakepalmer"
-  , "type": "isMemberOf"
-  , "vertex": "_:raikardpalmer"
-}, {
-  "_from": "people/_:carlpalmer"
-  , "_to": "things/_:emersonlakepalmer"
-  , "type": "isMemberOf"
-  , "vertex": "_:carlpalmer"
-}, {
-  "_from": "people/_:carygrant"
-  , "_to": "people/_:billcarter"
-  , "type": "wasClientOf"
-  , "vertex": "_:billcarter"
-}, {
-  "_from": "people/_:chipgardner"
-  , "_to": "people/_:dondimello"
-  , "type": "hasFriend"
-  , "vertex": "_:chipgardner"
-}, {
-  "_from": "people/_:chipgardner"
-  , "_to": "people/_:drspeedboat"
-  , "type": "isClientOf"
-  , "vertex": "_:chipgardner"
-}, {
-  "_from": "people/_:chipgardner"
-  , "_to": "people/_:gil"
-  , "type": "hasFriend"
-  , "vertex": "_:chipgardner"
-}, {
-  "_from": "people/_:chipgardner"
-  , "_to": "people/_:gretchen"
-  , "type": "seeAlso"
-  , "vertex": "_:chipgardner"
-}, {
-  "_from": "people/_:chipgardner"
-  , "_to": "people/_:thelizard"
-  , "type": "seeAlso"
-  , "vertex": "_:chipgardner"
-}, {
-  "_from": "people/_:chipgardnersunnamedwife"
-  , "_to": "people/_:chipgardner"
-  , "type": "wasSpouseOf"
-  , "vertex": "_:chipgardnersunnamedwife"
-}, {
-  "_from": "people/_:clivedundee"
-  , "_to": "people/_:dondimello"
-  , "type": "hasFriend"
-  , "vertex": "_:clivedundee"
-}, {
-  "_from": "people/_:clivedundee"
-  , "_to": "things/_:u2"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:clivedundee"
-}, {
-  "_from": "people/_:clivedundeeswife"
-  , "_to": "people/_:clivedundee"
-  , "type": "isSpouseOf"
-  , "vertex": "_:clivedundeeswife"
-}, {
-  "_from": "people/_:clivedundeeswife"
-  , "_to": "people/_:clivedundee"
-  , "type": "isSpouseOf"
-  , "vertex": "_:clivedundeeswife"
-}, {
-  "_from": "people/_:crystalalterman"
-  , "_to": "people/_:benalterman"
-  , "type": "isChildOf"
-  , "vertex": "_:crystalalterman"
-}, {
-  "_from": "people/_:crystalalterman"
-  , "_to": "people/_:bigbobpinto"
-  , "type": "isSpouseOf"
-  , "vertex": "_:crystalalterman"
-}, {
-  "_from": "people/_:crystalalterman"
-  , "_to": "people/_:littlebarnabus"
-  , "type": "hasFriend"
-  , "vertex": "_:crystalalterman"
-}, {
-  "_from": "people/_:daltonwilcox"
-  , "_to": "people/_:billcarter"
-  , "type": "hasFriend"
-  , "vertex": "_:daltonwilcox"
-}, {
-  "_from": "people/_:daltonwilcox"
-  , "_to": "people/_:darbyquinn"
-  , "type": "hasFriend"
-  , "vertex": "_:daltonwilcox"
-}, {
-  "_from": "people/_:daltonwilcoxunnameddaughter1"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "isChildOf"
-  , "vertex": "_:daltonwilcoxunnameddaughter1"
-}, {
-  "_from": "people/_:daltonwilcoxunnameddaughter2"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "isChildOf"
-  , "vertex": "_:daltonwilcoxunnameddaughter2"
-}, {
-  "_from": "people/_:daltonwilcoxunnameddaughter3"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "isChildOf"
-  , "vertex": "_:daltonwilcoxunnameddaughter3"
-}, {
-  "_from": "people/_:ceceliawilcox"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "wasSpouseOf"
-  , "vertex": "_:ceceliawilcox"
-}, {
-  "_from": "people/_:dannymahoney"
-  , "_to": "things/_:lotpinc"
-  , "type": "worksAt"
-  , "vertex": "_:dannymahoney"
-}, {
-  "_from": "people/_:dannymahoney"
-  , "_to": "things/_:unnamedplumbingco"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:dannymahoney"
-}, {
-  "_from": "people/_:codywakeman"
-  , "_to": "people/_:rickwakeman"
-  , "type": "isChildOf"
-  , "vertex": "_:codywakeman"
-}, {
-  "_from": "people/_:deanbuford"
-  , "_to": "people/_:billbuford"
-  , "type": "isChildOf"
-  , "vertex": "_:deanbuford"
-}, {
-  "_from": "people/_:codywakeman"
-  , "_to": "things/_:rosebushred"
-  , "type": "isFormerMemberOf"
-  , "vertex": "_:codywakeman"
-}, {
-  "_from": "people/_:deanbuford"
-  , "_to": "things/_:rosebushred"
-  , "type": "isFormerMemberOf"
-  , "vertex": "_:deanbuford"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasFriend"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "people/_:gil"
-  , "type": "hasFriend"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "people/_:marissawompler"
-  , "type": "hasFriend"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "places/_:arclightcinemas"
-  , "type": "worksAt"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "places/_:radiocity"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:dondimello"
-  , "_to": "things/_:unnamedmidtownpeeptheatre"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:dondimello"
-}, {
-  "_from": "people/_:dougie"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:dougie"
-}, {
-  "_from": "people/_:ezrapalmer"
-  , "_to": "people/_:raikardpalmer"
-  , "type": "isChildOf"
-  , "vertex": "_:ezrapalmer"
-}, {
-  "_from": "people/_:ezrapalmer"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:ezrapalmer"
-}, {
-  "_from": "people/_:garylee"
-  , "_to": "people/_:geddylee"
-  , "type": "isChildOf"
-  , "vertex": "_:garylee"
-}, {
-  "_from": "people/_:garylee"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:garylee"
-}, {
-  "_from": "people/_:geddylee"
-  , "_to": "things/_:rushband"
-  , "type": "isMemberOf"
-  , "vertex": "_:geddylee"
-}, {
-  "_from": "people/_:gil"
-  , "_to": "people/_:chipgardner"
-  , "type": "hasFriend"
-  , "vertex": "_:gil"
-}, {
-  "_from": "people/_:gil"
-  , "_to": "people/_:dondimello"
-  , "type": "hasFriend"
-  , "vertex": "_:gil"
-}, {
-  "_from": "people/_:gil"
-  , "_to": "places/_:arclightcinemas"
-  , "type": "hasWorkedFor"
-  , "vertex": "_:gil"
-}, {
-  "_from": "people/_:god"
-  , "_to": "people/_:andicallahanrn"
-  , "type": "seeAlso"
-  , "vertex": "_:god"
-}, {
-  "_from": "people/_:golly"
-  , "_to": "people/_:gil"
-  , "type": "worksFor"
-  , "vertex": "_:golly"
-}, {
-  "_from": "people/_:gretchen"
-  , "_to": "people/_:chipgardner"
-  , "type": "seeAlso"
-  , "vertex": "_:gretchen"
-}, {
-  "_from": "people/_:hotdog"
-  , "_to": "people/_:ahi"
-  , "type": "hasFriend"
-  , "vertex": "_:hotdog"
-}, {
-  "_from": "people/_:hotdog"
-  , "_to": "people/_:elmeredwardsolly"
-  , "type": "isClientOf"
-  , "vertex": "_:hotdog"
-}, {
-  "_from": "people/_:hotdog"
-  , "_to": "things/_:nashasha"
-  , "type": "isMemberOf"
-  , "vertex": "_:hotdog"
-}, {
-  "_from": "people/_:hotdogsunnamedson"
-  , "_to": "people/_:hotdog"
-  , "type": "isChildOf"
-  , "vertex": "_:hotdogsunnamedson"
-}, {
-  "_from": "people/_:ingridalterman"
-  , "_to": "people/_:benalterman"
-  , "type": "wasSpouseOf"
-  , "vertex": "_:ingridalterman"
-}, {
-  "_from": "people/_:irenetherockette"
-  , "_to": "places/_:radiocity"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:irenetherockette"
-}, {
-  "_from": "people/_:jasonwu"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:jasonwu"
-}, {
-  "_from": "people/_:jimmybongos"
-  , "_to": "people/_:joebongo"
-  , "type": "seeAlso"
-  , "vertex": "_:jimmybongos"
-}, {
-  "_from": "people/_:joebongo"
-  , "_to": "people/_:fatherofjoebongo"
-  , "type": "isChildOf"
-  , "vertex": "_:joebongo"
-}, {
-  "_from": "people/_:joebongo"
-  , "_to": "people/_:jimmybongos"
-  , "type": "seeAlso"
-  , "vertex": "_:joebongo"
-}, {
-  "_from": "people/_:joebongo"
-  , "_to": "people/_:motherofjoebongo"
-  , "type": "isChildOf"
-  , "vertex": "_:joebongo"
-}, {
-  "_from": "people/_:joebongo"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:joebongo"
-}, {
-  "_from": "people/_:kyledunforth"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:kyledunforth"
-}, {
-  "_from": "people/_:laird"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:laird"
-}, {
-  "_from": "people/_:littlebarnabus"
-  , "_to": "people/_:crystalalterman"
-  , "type": "hasFriend"
-  , "vertex": "_:littlebarnabus"
-}, {
-  "_from": "people/_:marissawompler"
-  , "_to": "people/_:dondimello"
-  , "type": "hasFriend"
-  , "vertex": "_:marissawompler"
-}, {
-  "_from": "people/_:michaeljackson"
-  , "_to": "people/_:drspeedboat"
-  , "type": "isClientOf"
-  , "vertex": "_:michaeljackson"
-}, {
-  "_from": "people/_:mrfrancisco"
-  , "_to": "people/_:benalterman"
-  , "type": "hasFriend"
-  , "vertex": "_:mrfrancisco"
-}, {
-  "_from": "people/_:garylee"
-  , "_to": "places/_:bajacantinamdr"
-  , "type": "livesAt"
-  , "vertex": "_:garylee"
-}, {
-  "_from": "people/_:philcollinsjr"
-  , "_to": "places/_:bajacantinamdr"
-  , "type": "livesAt"
-  , "vertex": "_:philcollinsjr"
-}, {
-  "_from": "people/_:ezrapalmer"
-  , "_to": "places/_:bajacantinamdr"
-  , "type": "livesAt"
-  , "vertex": "_:ezrapalmer"
-}, {
-  "_from": "people/_:codywakeman"
-  , "_to": "places/_:bajacantinamdr"
-  , "type": "livesAt"
-  , "vertex": "_:codywakeman"
-}, {
-  "_from": "people/_:mrfrancisco"
-  , "_to": "places/_:shadyviewboardandcare"
-  , "type": "livesAt"
-  , "vertex": "_:mrfrancisco"
-}, {
-  "_from": "people/_:mrfrancisco"
-  , "_to": "places/_:unnamedlotionshop"
-  , "type": "worksAt"
-  , "vertex": "_:mrfrancisco"
-}, {
-  "_from": "people/_:mrshakamora"
-  , "_to": "people/_:benalterman"
-  , "type": "hasFriend"
-  , "vertex": "_:mrshakamora"
-}, {
-  "_from": "people/_:mrshakamora"
-  , "_to": "places/_:shadyviewboardandcare"
-  , "type": "livesAt"
-  , "vertex": "_:mrshakamora"
-}, {
-  "_from": "people/_:oscarmeyer"
-  , "_to": "people/_:hotdog"
-  , "type": "isPossibleChildOf"
-  , "vertex": "_:oscarmeyer"
-}, {
-  "_from": "people/_:patrickmcmahon"
-  , "_to": "things/_:dexysmidnightrunners"
-  , "type": "isFormerMemberOf"
-  , "vertex": "_:patrickmcmahon"
-}, {
-  "_from": "people/_:patrickmcmahon"
-  , "_to": "things/_:unnamedmechanicbusiness"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:patrickmcmahon"
-}, {
-  "_from": "people/_:patrickmcmahon"
-  , "_to": "things/_:unnamedmedicalpackagingplant"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:patrickmcmahon"
-}, {
-  "_from": "people/_:philcollins"
-  , "_to": "things/_:genesisband"
-  , "type": "isMemberOf"
-  , "vertex": "_:philcollins"
-}, {
-  "_from": "people/_:philcollinsjr"
-  , "_to": "people/_:philcollins"
-  , "type": "isChildOf"
-  , "vertex": "_:philcollinsjr"
-}, {
-  "_from": "people/_:philcollinsjr"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:philcollinsjr"
-}, {
-  "_from": "people/_:pietrothedog"
-  , "_to": "people/_:benalterman"
-  , "type": "isPetOf"
-  , "vertex": "_:pietrothedog"
-}, {
-  "_from": "people/_:pietrothedog"
-  , "_to": "places/_:shadyviewboardandcare"
-  , "type": "livesAt"
-  , "vertex": "_:pietrothedog"
-}, {
-  "_from": "people/_:shamusmcmahon"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "isSiblingOf"
-  , "vertex": "_:shamusmcmahon"
-}, {
-  "_from": "people/_:stuart"
-  , "_to": "places/_:georgemackenzieofrosehaughmausoleum"
-  , "type": "livesAt"
-  , "vertex": "_:stuart"
-}, {
-  "_from": "people/_:stuart"
-  , "_to": "things/_:cameronmcgoniglesghosttoursthatarescary"
-  , "type": "worksFor"
-  , "vertex": "_:stuart"
-}, {
-  "_from": "people/_:thechonger"
-  , "_to": "things/_:rosebushred"
-  , "type": "isMemberOf"
-  , "vertex": "_:thechonger"
-}, {
-  "_from": "people/_:thelizard"
-  , "_to": "people/_:chipgardner"
-  , "type": "seeAlso"
-  , "vertex": "_:thelizard"
-}, {
-  "_from": "people/_:theschneidermannmonkey1"
-  , "_to": "people/_:augustlindt"
-  , "type": "hasFriend"
-  , "vertex": "_:theschneidermannmonkey1"
-}, {
-  "_from": "people/_:thewidowfeeney"
-  , "_to": "people/_:benalterman"
-  , "type": "hasFriend"
-  , "vertex": "_:thewidowfeeney"
-}, {
-  "_from": "people/_:thewidowfeeney"
-  , "_to": "places/_:shadyviewboardandcare"
-  , "type": "livesAt"
-  , "vertex": "_:thewidowfeeney"
-}, {
-  "_from": "people/_:tommcmahon"
-  , "_to": "people/_:patrickmcmahon"
-  , "type": "isSiblingOf"
-  , "vertex": "_:tommcmahon"
-}, {
-  "_from": "people/_:tommcmahon"
-  , "_to": "things/_:unnamedmechanicbusiness"
-  , "type": "hasWorkedAt"
-  , "vertex": "_:tommcmahon"
-}, {
-  "_from": "people/_:victor"
-  , "_to": "things/_:trainerforthestarsseekingstars"
-  , "type": "worksAt"
-  , "vertex": "_:victor"
-}, {
-  "_from": "people/_:zowber"
-  , "_to": "things/_:nashasha"
-  , "type": "isMemberOf"
-  , "vertex": "_:zowber"
-}, {
-  "_from": "events/_:margotchunkloseshervirginity"
-  , "_to": "places/_:laramiefeedandwesternsupply"
-  , "type": "occurredAt"
-  , "vertex": "_:margotchunkloseshervirginity"
-}, {
-  "_from": "events/_:ionetimekilledafrankenstein"
-  , "_to": "places/_:laramiefeedandwesternsupply"
-  , "type": "occurredAt"
-  , "vertex": "_:ionetimekilledafrankenstein"
-}, {
-  "_from": "events/_:ionetimekilledafrankenstein"
-  , "_to": "people/_:unnamedsecurityguardatlaramiesupply"
-  , "type": "hasParticipant"
-  , "vertex": "_:ionetimekilledafrankenstein"
-}, {
-  "_from": "events/_:ionetimekilledafrankenstein"
-  , "_to": "people/_:daltonwilcox"
-  , "type": "hasParticipant"
-  , "vertex": "_:ionetimekilledafrankenstein"
-}]
+[
+  {
+    "_from": "events/_:patrickmcmahonliftsarelic",
+    "_to": "places/_:limerickhuntmuseum",
+    "type": "occurredAt",
+    "vertex": "_:patrickmcmahonliftsarelic"
+  },{
+    "_from": "events/_:patrickmcmahonliftsarelic",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahonliftsarelic"
+  },{
+    "_from": "events/_:kevinlindtsitsonacat2",
+    "_to": "people/_:kevinlindt",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsitsonacat2"
+  },{
+    "_from": "events/_:byrondennistonkidnapsbeetlebailey",
+    "_to": "people/_:princegeorgeofcambridge",
+    "type": "hasParticipant",
+    "vertex": "_:byrondennistonkidnapsbeetlebailey"
+  },{
+    "_from": "events/_:russelsheinswifedisappears",
+    "_to": "people/_:russelsheinswife",
+    "type": "hasParticipant",
+    "vertex": "_:russelsheinswifedisappears"
+  },{
+    "_from": "events/_:byrondennistonkidnapsbeetlebailey",
+    "_to": "people/_:byrondenniston",
+    "type": "hasParticipant",
+    "vertex": "_:byrondennistonkidnapsbeetlebailey"
+  },{
+    "_from": "events/_:russelsheinmarrieshiswife",
+    "_to": "people/_:russelsheinswife",
+    "type": "hasParticipant",
+    "vertex": "_:russelsheinmarrieshiswife"
+  },{
+    "_from": "events/_:russelsheinmarrieshiswife",
+    "_to": "people/_:russelshein",
+    "type": "hasParticipant",
+    "vertex": "_:russelsheinmarrieshiswife"
+  },{
+    "_from": "events/_:lavergnefamilydinner001",
+    "_to": "people/_:grandmotherpearlalavergne",
+    "type": "hasParticipant",
+    "vertex": "_:lavergnefamilydinner001"
+  },
+  {
+    "_from": "events/_:lavergnefamilydinner001",
+    "_to": "people/_:thomaslavergne",
+    "type": "hasParticipant",
+    "vertex": "_:lavergnefamilydinner001"
+  },
+  {
+    "_from": "events/_:lavergnefamilydinner001",
+    "_to": "people/_:michaellavergne",
+    "type": "hasParticipant",
+    "vertex": "_:lavergnefamilydinner001"
+  },
+  {
+    "_from": "events/_:lavergnefamilydinner001",
+    "_to": "people/_:arthurlavergne",
+    "type": "hasParticipant",
+    "vertex": "_:lavergnefamilydinner001"
+  },
+  {
+    "_from": "events/_:lavergnefamilydinner001",
+    "_to": "people/_:stevefaye",
+    "type": "hasParticipant",
+    "vertex": "_:lavergnefamilydinner001"
+  },
+  {
+    "_from": "events/_:cactustonyisconvictedofliveburial",
+    "_to": "places/_:21choices",
+    "type": "occurredAt",
+    "vertex": "_:cactustonyisconvictedofliveburial"
+  },
+  {
+    "_from": "events/_:shamusmcmahon",
+    "_to": "people/_:shamusmcmahonsunnamedwife",
+    "type": "isSpouseOf",
+    "vertex": "_:shamusmcmahon"
+  },
+  {
+    "_from": "events/_:daltonwilcoxmurdersanallergic",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcox"
+  },
+  {
+    "_from": "events/_:daltonwilcoxmurdersanallergic",
+    "_to": "people/_:losangeleswerewolf1",
+    "type": "hasParticipant",
+    "vertex": "_:losangeleswerewolf1"
+  },
+  {
+    "_from": "events/_:shamusmcmahonsunnamedwife",
+    "_to": "people/_:shamusmcmahon",
+    "type": "isSpouseOf",
+    "vertex": "_:shamusmcmahonsunnamedwife"
+  },
+  {
+    "_from": "events/_:matrickpahahon",
+    "_to": "people/_:patrickmcmahon",
+    "type": "seeAlso",
+    "vertex": "_:matrickpahahon"
+  },
+  {
+    "_from": "events/_:johnnymcgorry",
+    "_to": "people/_:patrickmcmahon",
+    "type": "seeAlso",
+    "vertex": "_:johnnymcgorry"
+  },
+  {
+    "_from": "events/_:themcgorrykidnappings",
+    "_to": "people/_:johnnymcgorry",
+    "type": "hasParticipant",
+    "vertex": "_:themcgorrykidnappings"
+  },
+  {
+    "_from": "events/_:themcgorrykidnappings",
+    "_to": "people/_:shamusmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:themcgorrykidnappings"
+  },
+  {
+    "_from": "events/_:themcgorrykidnappings",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:themcgorrykidnappings"
+  },
+  {
+    "_from": "events/_:woodstock99",
+    "_to": "places/_:romeny",
+    "type": "occurredAt",
+    "vertex": "_:woodstock99"
+  },
+  {
+    "_from": "events/_:woodstock99",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:woodstock99"
+  },
+  {
+    "_from": "events/_:shananasueshotdog",
+    "_to": "things/_:shanana",
+    "type": "hasParticipant",
+    "vertex": "_:shananasueshotdog"
+  },
+  {
+    "_from": "events/_:hotdogandahiverballychumbodey",
+    "_to": "things/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogandahiverballychumbodey"
+  },
+  {
+    "_from": "events/_:hotdogandahiverballychumbodey",
+    "_to": "things/_:ahi",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogandahiverballychumbodey"
+  },
+  {
+    "_from": "events/_:shananasueshotdog",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:shananasueshotdog"
+  },
+  {
+    "_from": "events/_:daltonwilcoxmurdersacyclops",
+    "_to": "places/_:gowergulch",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxmurdersacyclops"
+  },
+  {
+    "_from": "events/_:daltonwilcoxmurdersacyclops",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxmurdersacyclops"
+  },
+  {
+    "_from": "events/_:mrsbronsongoesmissing",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:mrsbronsongoesmissing"
+  },
+  {
+    "_from": "events/_:mrsbronsongoesmissing",
+    "_to": "people/_:mrsbronson",
+    "type": "hasParticipant",
+    "vertex": "_:mrsbronsongoesmissing"
+  },
+  {
+    "_from": "events/_:cactustonyisarrested",
+    "_to": "places/_:arclightcinemas",
+    "type": "occurredAt",
+    "vertex": "_:cactustonyisarrested"
+  },
+  {
+    "_from": "events/_:cactustonyisarrested",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisarrested"
+  },
+  {
+    "_from": "events/_:cactustonyburieshendrixmurphy",
+    "_to": "people/_:hendrixmurphy",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyburieshendrixmurphy"
+  },
+  {
+    "_from": "events/_:cactustonyburieshendrixmurphy",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyburieshendrixmurphy"
+  },
+  {
+    "_from": "events/_:cactustonyburieshendrixmurphy",
+    "_to": "places/_:johnnyssportshop",
+    "type": "worksAt",
+    "vertex": "_:cactustonyburieshendrixmurphy"
+  },
+  {
+    "_from": "events/_:thecactusesmeetcute",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:thecactusesmeetcute"
+  },
+  {
+    "_from": "events/_:thecactusesmeetcute",
+    "_to": "people/_:cactusirene",
+    "type": "hasParticipant",
+    "vertex": "_:thecactusesmeetcute"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:cactusirene",
+    "type": "hasFriend",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:zippy",
+    "type": "hasFriend",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:hendrixmurphy",
+    "_to": "places/_:johnnyssportshop",
+    "type": "worksAt",
+    "vertex": "_:hendrixmurphy"
+  },
+  {
+    "_from": "events/_:hendrixmurphyisborn",
+    "_to": "people/_:hendrixmurphy",
+    "type": "hasParticipant",
+    "vertex": "_:hendrixmurphyisborn"
+  },
+  {
+    "_from": "people/_:alexandrahiggsportman",
+    "_to": "places/_:sanrafaelhills",
+    "type": "livesAt",
+    "vertex": "_:alexandrahiggsportman"
+  },
+  {
+    "_from": "events/_:cactustonyisconvictedofliveburial",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisconvictedofliveburial"
+  },
+  {
+    "_from": "events/_:cactustonyisconvictedofliveburial",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisconvictedofliveburial"
+  },
+  {
+    "_from": "events/_:pnptgreviewsadondimelloshow",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:pnptgreviewsadondimelloshow"
+  },
+  {
+    "_from": "events/_:dannymahoneyfallsasleep",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneyfallsasleep"
+  },
+  {
+    "_from": "events/_:pnptgreviewsadondimelloshow",
+    "_to": "things/_:pasadenanewspresstimesgazette",
+    "type": "hasParticipant",
+    "vertex": "_:pnptgreviewsadondimelloshow"
+  },
+  {
+    "_from": "events/_:ahppublishesaparkingticketstory",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:ahppublishesaparkingticketstory"
+  },
+  {
+    "_from": "events/_:ahppublishesaparkingticketstory",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:ahppublishesaparkingticketstory"
+  },
+  {
+    "_from": "events/_:ahppublishesaparkingticketstory",
+    "_to": "people/_:alexandrahiggsportman",
+    "type": "hasParticipant",
+    "vertex": "_:ahppublishesaparkingticketstory"
+  },
+  {
+    "_from": "people/_:lronhubbard",
+    "_to": "people/_:amazingcriswell",
+    "type": "hasFriend",
+    "vertex": "_:lronhubbard"
+  },
+  {
+    "_from": "people/_:lronhubbard",
+    "_to": "things/_:smersh",
+    "type": "miscellaneous",
+    "vertex": "_:lronhubbard"
+  },
+  {
+    "_from": "people/_:patrickmcmahon",
+    "_to": "places/_:limericktreatystone",
+    "type": "miscellaneous",
+    "vertex": "_:patrickmcmahon"
+  },
+  {
+    "_from": "people/_:monsignordamienfearnly",
+    "_to": "places/_:limericktreatystone",
+    "type": "miscellaneous",
+    "vertex": "_:monsignordamienfearnly"
+  },
+  {
+    "_from": "events/_:lronhubbardplaysstumptheclear1",
+    "_to": "people/_:lronhubbard",
+    "type": "hasParticipant",
+    "vertex": "_:lronhubbardplaysstumptheclear1"
+  },
+  {
+    "_from": "events/_:lronhubbardhidesunderpants",
+    "_to": "people/_:lronhubbard",
+    "type": "hasParticipant",
+    "vertex": "_:lronhubbardhidesunderpants"
+  },
+  {
+    "_from": "events/_:lronhubbardsunderpantsarefound",
+    "_to": "people/_:mariongrapes",
+    "type": "hasParticipant",
+    "vertex": "_:lronhubbardsunderpantsarefound"
+  },
+  {
+    "_from": "events/_:lronhubbardhidesunderpants",
+    "_to": "places/_:parisfr",
+    "type": "occurredAt",
+    "vertex": "_:lronhubbardhidesunderpants"
+  },
+  {
+    "_from": "events/_:lronhubbardsunderpantsarefound",
+    "_to": "places/_:parisfr",
+    "type": "occurredAt",
+    "vertex": "_:lronhubbardsunderpantsarefound"
+  },
+  {
+    "_from": "events/_:lronhubbardsmarkersarefound",
+    "_to": "people/_:mariongrapes",
+    "type": "hasParticipant",
+    "vertex": "_:lronhubbardsmarkersarefound"
+  },
+  {
+    "_from": "events/_:lronhubbardsmarkersarefound",
+    "_to": "places/_:madisonwi",
+    "type": "occurredAt",
+    "vertex": "_:lronhubbardsmarkersarefound"
+  },
+  {
+    "_from": "events/_:lronhubbardsspectaclesarefound",
+    "_to": "people/_:mariongrapes",
+    "type": "hasParticipant",
+    "vertex": "_:lronhubbardsspectaclesarefound"
+  },
+  {
+    "_from": "events/_:lronhubbardsspectaclesarefound",
+    "_to": "places/_:miamibeach",
+    "type": "occurredAt",
+    "vertex": "_:lronhubbardsspectaclesarefound"
+  },
+  {
+    "_from": "events/_:lronhubbardburiesspectacles",
+    "_to": "places/_:miamibeach",
+    "type": "occurredAt",
+    "vertex": "_:lronhubbardburiesspectacles"
+  },
+  {
+    "_from": "events/_:lronhubbardburiesspectacles",
+    "_to": "people/_:lronhubbard",
+    "type": "hasParticipant",
+    "vertex": "_:lronhubbardburiesspectacles"
+  },
+  {
+    "_from": "people/_:julesmcmanon",
+    "_to": "things/_:seaorg",
+    "type": "isMemberOf",
+    "vertex": "_:julesmcmanon"
+  },
+  {
+    "_from": "people/_:heidicorporate",
+    "_to": "things/_:seaorg",
+    "type": "isMemberOf",
+    "vertex": "_:heidicorporate"
+  },
+  {
+    "_from": "people/_:lronhubbard",
+    "_to": "things/_:seaorg",
+    "type": "isMemberOf",
+    "vertex": "_:lronhubbard"
+  },
+  {
+    "_from": "people/_:mariongrapes",
+    "_to": "things/_:seaorg",
+    "type": "isMemberOf",
+    "vertex": "_:mariongrapes"
+  },
+  {
+    "_from": "events/_:gollymurdersafamilyonmaricopastreet",
+    "_to": "people/_:golly",
+    "type": "hasParticipant",
+    "vertex": "_:gollymurdersafamilyonmaricopastreet"
+  },
+  {
+    "_from": "events/_:gollymurdersafamilyonmaricopastreet",
+    "_to": "places/_:maricopastphoenix",
+    "type": "occurredAt",
+    "vertex": "_:gollymurdersafamilyonmaricopastreet"
+  },
+  {
+    "_from": "people/_:gil",
+    "_to": "places/_:toweringpinespsychiatric",
+    "type": "livesAt",
+    "vertex": "_:gil"
+  },
+  {
+    "_from": "people/_:golly",
+    "_to": "places/_:toweringpinespsychiatric",
+    "type": "livesAt",
+    "vertex": "_:golly"
+  },
+  {
+    "_from": "people/_:chocolatepudding",
+    "_to": "places/_:toweringpinespsychiatric",
+    "type": "livesAt",
+    "vertex": "_:chocolatepudding"
+  },
+  {
+    "_from": "people/_:gil",
+    "_to": "people/_:marcorenaldo",
+    "type": "hasFriend",
+    "vertex": "_:gil"
+  },
+  {
+    "_from": "events/_:weebrucediesatedinburghcastle",
+    "_to": "people/_:weebruce",
+    "type": "hasParticipant",
+    "vertex": "_:weebrucediesatedinburghcastle"
+  },
+  {
+    "_from": "events/_:weebrucediesatedinburghcastle",
+    "_to": "places/_:edinburghcastle",
+    "type": "occurredAt",
+    "vertex": "_:weebrucediesatedinburghcastle"
+  },
+  {
+    "_from": "people/_:weebruce",
+    "_to": "places/_:edinburghcastle",
+    "type": "livesAt",
+    "vertex": "_:weebruce"
+  },
+  {
+    "_from": "people/_:daltonwilcoxvaultguy",
+    "_to": "people/_:daltonwilcox",
+    "type": "worksFor",
+    "vertex": "_:daltonwilcoxvaultguy"
+  },
+  {
+    "_from": "people/_:weebruce",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:weebruce"
+  },
+  {
+    "_from": "people/_:thetrowofdumbiedykesroad",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:thetrowofdumbiedykesroad"
+  },
+  {
+    "_from": "events/_:stuartcambridgegoesmissing",
+    "_to": "people/_:stuartcambridge",
+    "type": "hasParticipant",
+    "vertex": "_:stuartcambridgegoesmissing"
+  },
+  {
+    "_from": "people/_:thirstiestghostever",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:thirstiestghostever"
+  },
+  {
+    "_from": "people/_:sawneybean",
+    "_to": "places/_:tolboothtavern",
+    "type": "worksAt",
+    "vertex": "_:sawneybean"
+  },
+  {
+    "_from": "people/_:thirstiestghostever",
+    "_to": "places/_:hotelduvin",
+    "type": "worksAt",
+    "vertex": "_:thirstiestghostever"
+  },
+  {
+    "_from": "people/_:ghostofthebrewlab",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:ghostofthebrewlab"
+  },
+  {
+    "_from": "events/_:amandadies",
+    "_to": "places/_:brewlabcoffeeedinburgh",
+    "type": "occurredAt",
+    "vertex": "_:amandadies"
+  },
+  {
+    "_from": "events/_:thirstiestghosteverisborn",
+    "_to": "places/_:hotelduvin",
+    "type": "occurredAt",
+    "vertex": "_:thirstiestghosteverisborn"
+  },
+  {
+    "_from": "events/_:trumpcommissionstherockettes",
+    "_to": "people/_:donaldjtrump",
+    "type": "hasParticipant",
+    "vertex": "_:trumpcommissionstherockettes"
+  },
+  {
+    "_from": "events/_:trumpcommissionstherockettes",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:trumpcommissionstherockettes"
+  },
+  {
+    "_from": "events/_:joebongossexunitlosesaprop",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongossexunitlosesaprop"
+  },
+  {
+    "_from": "events/_:joebongossexunitlosesaprop",
+    "_to": "people/_:bonnieramirez",
+    "type": "hasParticipant",
+    "vertex": "_:joebongossexunitlosesaprop"
+  },
+  {
+    "_from": "events/_:margotchunkloseshervirginity",
+    "_to": "people/_:margotchunk",
+    "type": "hasParticipant",
+    "vertex": "_:margotchunkloseshervirginity"
+  },
+  {
+    "_from": "events/_:margotchunkisborn",
+    "_to": "people/_:margotchunk",
+    "type": "hasParticipant",
+    "vertex": "_:margotchunkisborn"
+  },
+  {
+    "_from": "events/_:patrickmcmahoncrashesaparty1",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahoncrashesaparty1"
+  },
+  {
+    "_from": "events/_:patrickmcmahoncrashesaparty1",
+    "_to": "people/_:johnnymcgorry",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahoncrashesaparty1"
+  },
+  {
+    "_from": "events/_:johnnymcgorrybreaksandenters",
+    "_to": "people/_:unnamedelderlywoman1",
+    "type": "hasParticipant",
+    "vertex": "_:johnnymcgorrybreaksandenters"
+  },
+  {
+    "_from": "events/_:johnnymcgorrybreaksandenters",
+    "_to": "people/_:gretathecaretaker",
+    "type": "hasParticipant",
+    "vertex": "_:johnnymcgorrybreaksandenters"
+  },
+  {
+    "_from": "events/_:johnnymcgorrybreaksandenters",
+    "_to": "people/_:johnnymcgorry",
+    "type": "hasParticipant",
+    "vertex": "_:johnnymcgorrybreaksandenters"
+  },
+  {
+    "_from": "events/_:johnnymcgorrybreaksandenters",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:johnnymcgorrybreaksandenters"
+  },
+  {
+    "_from": "people/_:monsignordamienfearnly",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasFriend",
+    "vertex": "_:monsignordamienfearnly"
+  },
+  {
+    "_from": "people/_:slamminoliverrothwell",
+    "_to": "things/_:shanana",
+    "type": "hasWorkedAt",
+    "vertex": "_:slamminoliverrothwell"
+  },
+  {
+    "_from": "events/_:thegreatminingoflakesuperior",
+    "_to": "places/_:lakesuperior",
+    "type": "occurredAt",
+    "vertex": "_:thegreatminingoflakesuperior"
+  },
+  {
+    "_from": "events/_:thegreatminingoflakesuperior",
+    "_to": "people/_:ahi",
+    "type": "hasParticipant",
+    "vertex": "_:thegreatminingoflakesuperior"
+  },
+  {
+    "_from": "events/_:thegreatminingoflakesuperior",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:thegreatminingoflakesuperior"
+  },
+  {
+    "_from": "events/_:hotdogiscutfromhistowboat",
+    "_to": "people/_:hamburgersurfer",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogiscutfromhistowboat"
+  },
+  {
+    "_from": "events/_:hotdogiscutfromhistowboat",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogiscutfromhistowboat"
+  },
+  {
+    "_from": "events/_:hotdoggetschewedoutbyhisbossathertz",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdoggetschewedoutbyhisbossathertz"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "people/_:unnamedabandonedtoddler",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:multiplechildrenarerippedapartbyrottweilers",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:multiplechildrenarerippedapartbyrottweilers"
+  },
+  {
+    "_from": "events/_:multiplechildrenarerippedapartbyrottweilers",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:multiplechildrenarerippedapartbyrottweilers"
+  },
+  {
+    "_from": "events/_:dondimellomeetsmarissawompler",
+    "_to": "people/_:marissawompler",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellomeetsmarissawompler"
+  },
+  {
+    "_from": "events/_:dondimellomeetsmarissawompler",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellomeetsmarissawompler"
+  },
+  {
+    "_from": "events/_:dondimelloaccidentallyjoinsthetaliban",
+    "_to": "places/_:bahrain",
+    "type": "occurredAt",
+    "vertex": "_:dondimelloaccidentallyjoinsthetaliban"
+  },
+  {
+    "_from": "events/_:dondimellostagescamelot",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostagescamelot"
+  },
+  {
+    "_from": "events/_:talibantalentnight",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:talibantalentnight"
+  },
+  {
+    "_from": "events/_:dondimelloburieswife1",
+    "_to": "people/_:falcon",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloburieswife1"
+  },
+  {
+    "_from": "events/_:dondimelloburieswife1",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloburieswife1"
+  },
+  {
+    "_from": "events/_:dondimelloaccidentallyjoinsthetaliban",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloaccidentallyjoinsthetaliban"
+  },
+  {
+    "_from": "people/_:alexandrahiggsportman",
+    "_to": "things/_:pasadenanewspresstimesgazette",
+    "type": "worksFor",
+    "vertex": "_:alexandrahiggsportman"
+  },
+  {
+    "_from": "events/_:dondimelloamputatesrockettebeth",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloamputatesrockettebeth"
+  },
+  {
+    "_from": "events/_:dondimelloamputatesrockettebeth",
+    "_to": "people/_:formerrockettebeth",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloamputatesrockettebeth"
+  },
+  {
+    "_from": "people/_:falcon",
+    "_to": "things/_:russianorthodoxchurch",
+    "type": "isMemberOf",
+    "vertex": "_:falcon"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "things/_:bahai",
+    "type": "isMemberOf",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:malbachman",
+    "_to": "things/_:episcopalchurch",
+    "type": "isMemberOf",
+    "vertex": "_:malbachman"
+  },
+  {
+    "_from": "events/_:dondimelloscoresexcesssandwiches",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloscoresexcesssandwiches"
+  },
+  {
+    "_from": "events/_:bachmananddimelloseeequus",
+    "_to": "people/_:malbachman",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimelloseeequus"
+  },
+  {
+    "_from": "events/_:bachmananddimelloseeequus",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimelloseeequus"
+  },
+  {
+    "_from": "events/_:bachmananddimelloseeequus",
+    "_to": "things/_:equus",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimelloseeequus"
+  },
+  {
+    "_from": "events/_:bachmananddimellospendtheweekendincorona",
+    "_to": "places/_:coronaca",
+    "type": "occurredAt",
+    "vertex": "_:bachmananddimellospendtheweekendincorona"
+  },
+  {
+    "_from": "events/_:bachmananddimellospendtheweekendincorona",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimellospendtheweekendincorona"
+  },
+  {
+    "_from": "events/_:bachmananddimellospendtheweekendincorona",
+    "_to": "people/_:malbachman",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimellospendtheweekendincorona"
+  },
+  {
+    "_from": "events/_:bachmananddimelloseethechildrenshour",
+    "_to": "people/_:malbachman",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimelloseethechildrenshour"
+  },
+  {
+    "_from": "events/_:bachmananddimelloseethechildrenshour",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:bachmananddimelloseethechildrenshour"
+  },
+  {
+    "_from": "events/_:uclatheatrepresentsglengarryglenross",
+    "_to": "people/_:malbachman",
+    "type": "hasParticipant",
+    "vertex": "_:uclatheatrepresentsglengarryglenross"
+  },
+  {
+    "_from": "events/_:uclatheatrepresentsglengarryglenross",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:uclatheatrepresentsglengarryglenross"
+  },
+  {
+    "_from": "events/_:dondimellossteelmagnolias",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellossteelmagnolias"
+  },
+  {
+    "_from": "events/_:malbachmanmovestoaltadena",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:malbachmanmovestoaltadena"
+  },
+  {
+    "_from": "events/_:malbachmanmovestoaltadena",
+    "_to": "people/_:malbachman",
+    "type": "hasParticipant",
+    "vertex": "_:malbachmanmovestoaltadena"
+  },
+  {
+    "_from": "people/_:malbachman",
+    "_to": "places/_:altadenaca",
+    "type": "livesAt",
+    "vertex": "_:malbachman"
+  },
+  {
+    "_from": "people/_:forestcarlisle",
+    "_to": "people/_:marytoddlincoln",
+    "type": "hasWorkedFor",
+    "vertex": "_:forestcarlisle"
+  },
+  {
+    "_from": "people/_:malbachman",
+    "_to": "things/_:thefifthwall",
+    "type": "hasWorkedFor",
+    "vertex": "_:malbachman"
+  },
+  {
+    "_from": "events/_:dondimelloseeshomealonelines",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloseeshomealonelines"
+  },
+  {
+    "_from": "events/_:kevinlindtsfirstwords",
+    "_to": "people/_:doulmanschmiedeberg",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsfirstwords"
+  },
+  {
+    "_from": "events/_:kevinlindtsfirstwords",
+    "_to": "people/_:gunterlindt",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsfirstwords"
+  },
+  {
+    "_from": "events/_:kevinlindtsfirstwords",
+    "_to": "people/_:gretalindt",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsfirstwords"
+  },
+  {
+    "_from": "events/_:kevinlindtsfirstwords",
+    "_to": "people/_:utalindt",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsfirstwords"
+  },
+  {
+    "_from": "events/_:kevinlindtsfirstwords",
+    "_to": "people/_:kevinlindt",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsfirstwords"
+  },
+  {
+    "_from": "events/_:kevinlindtsfirstwords",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:kevinlindtsfirstwords"
+  },
+  {
+    "_from": "events/_:augustlindtattemptssuicide2",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtattemptssuicide2"
+  },
+  {
+    "_from": "events/_:augustlindtattemptssuicide2",
+    "_to": "places/_:seattlespaceneedle",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtattemptssuicide2"
+  },
+  {
+    "_from": "events/_:augustlindtvisitsannefrankhuis",
+    "_to": "places/_:annefrankhuis",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtvisitsannefrankhuis"
+  },
+  {
+    "_from": "events/_:augustlindtvisitsannefrankhuis",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvisitsannefrankhuis"
+  },
+  {
+    "_from": "events/_:augustlindttoursthecongo",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindttoursthecongo"
+  },
+  {
+    "_from": "events/_:augustlindttoursthecongo",
+    "_to": "places/_:hopitaljasonsendweer",
+    "type": "occurredAt",
+    "vertex": "_:augustlindttoursthecongo"
+  },
+  {
+    "_from": "events/_:augustlindttoursskokieil",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindttoursskokieil"
+  },
+  {
+    "_from": "events/_:augustlindttoursskokieil",
+    "_to": "places/_:tommybahamaskokie",
+    "type": "occurredAt",
+    "vertex": "_:augustlindttoursskokieil"
+  },
+  {
+    "_from": "people/_:billcarter",
+    "_to": "places/_:marktwainhotella",
+    "type": "livesAt",
+    "vertex": "_:billcarter"
+  },
+  {
+    "_from": "events/_:billcarterschildplatoon",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterschildplatoon"
+  },
+  {
+    "_from": "events/_:billcarterschildplatoon",
+    "_to": "places/_:newmexicousa",
+    "type": "occurredAt",
+    "vertex": "_:billcarterschildplatoon"
+  },
+  {
+    "_from": "events/_:billcarterschildplatoonindresden",
+    "_to": "places/_:dresdende",
+    "type": "occurredAt",
+    "vertex": "_:billcarterschildplatoonindresden"
+  },
+  {
+    "_from": "events/_:billcarterschildplatoonindresden",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterschildplatoonindresden"
+  },
+  {
+    "_from": "events/_:billcarterdoestopsecretbusiness",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterdoestopsecretbusiness"
+  },
+  {
+    "_from": "events/_:billcartervotesperot",
+    "_to": "people/_:hrossperot",
+    "type": "hasParticipant",
+    "vertex": "_:billcartervotesperot"
+  },
+  {
+    "_from": "events/_:billcartervotesperot",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcartervotesperot"
+  },
+  {
+    "_from": "events/_:chipgardnerdebatescarolchanning",
+    "_to": "people/_:carolchanning",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerdebatescarolchanning"
+  },
+  {
+    "_from": "events/_:chipgardnerdebatescarolchanning",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerdebatescarolchanning"
+  },
+  {
+    "_from": "events/_:prisonbargeriotof79",
+    "_to": "people/_:gameshowcontestantchipgomand",
+    "type": "hasParticipant",
+    "vertex": "_:prisonbargeriotof79"
+  },
+  {
+    "_from": "events/_:trynottogethitbythesehammers",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:trynottogethitbythesehammers"
+  },
+  {
+    "_from": "events/_:trynottogethitbythesehammers",
+    "_to": "people/_:gameshowcontestantmattwills",
+    "type": "hasParticipant",
+    "vertex": "_:trynottogethitbythesehammers"
+  },
+  {
+    "_from": "events/_:trynottogethitbythesehammers",
+    "_to": "people/_:gameshowcontestantrickstubble",
+    "type": "hasParticipant",
+    "vertex": "_:trynottogethitbythesehammers"
+  },
+  {
+    "_from": "events/_:trynottogethitbythesehammers",
+    "_to": "people/_:tipthompson",
+    "type": "hasParticipant",
+    "vertex": "_:trynottogethitbythesehammers"
+  },
+  {
+    "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
+  },
+  {
+    "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes",
+    "_to": "people/_:tipthompson",
+    "type": "hasParticipant",
+    "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
+  },
+  {
+    "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes",
+    "_to": "people/_:unnamedgameshowcontestant1",
+    "type": "hasParticipant",
+    "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
+  },
+  {
+    "_from": "events/_:areyousmarterthanaroomfulofpoisonoussnakes",
+    "_to": "people/_:gameshowcontestantcliff",
+    "type": "hasParticipant",
+    "vertex": "_:areyousmarterthanaroomfulofpoisonoussnakes"
+  },
+  {
+    "_from": "events/_:chipgardnerswifepasses",
+    "_to": "people/_:chipgardnersunnamedwife",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerswifepasses"
+  },
+  {
+    "_from": "events/_:chipgardnerswifepasses",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerswifepasses"
+  },
+  {
+    "_from": "events/_:chipgardnersstreetfightingyears",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnersstreetfightingyears"
+  },
+  {
+    "_from": "events/_:wherediputmyjacketsuicide",
+    "_to": "people/_:unnamedgameshowcontestant1",
+    "type": "hasParticipant",
+    "vertex": "_:wherediputmyjacketsuicide"
+  },
+  {
+    "_from": "events/_:wherediputmyjacketsuicide",
+    "_to": "people/_:tipthompson",
+    "type": "hasParticipant",
+    "vertex": "_:wherediputmyjacketsuicide"
+  },
+  {
+    "_from": "events/_:wherediputmyjacketsuicide",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:wherediputmyjacketsuicide"
+  },
+  {
+    "_from": "events/_:daltonwilcoxdisruptscellularservicenearearwolf",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxdisruptscellularservicenearearwolf"
+  },
+  {
+    "_from": "events/_:daltonwilcoxvsaninvisibleman",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxvsaninvisibleman"
+  },
+  {
+    "_from": "events/_:daltonwilcoxvsaninvisibleman",
+    "_to": "people/_:unnamedinvisibleman",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxvsaninvisibleman"
+  },
+  {
+    "_from": "events/_:sheinistrickedontotheadppp1",
+    "_to": "people/_:russelshein",
+    "type": "hasParticipant",
+    "vertex": "_:sheinistrickedontotheadppp1"
+  },
+  {
+    "_from": "events/_:sheinistrickedontotheadppp1",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:sheinistrickedontotheadppp1"
+  },
+  {
+    "_from": "events/_:sheinistrickedontotheadppp2",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:sheinistrickedontotheadppp2"
+  },
+  {
+    "_from": "events/_:sheinistrickedontotheadppp2",
+    "_to": "people/_:russelshein",
+    "type": "hasParticipant",
+    "vertex": "_:sheinistrickedontotheadppp2"
+  },
+  {
+    "_from": "events/_:becklandryburial",
+    "_to": "people/_:becklandry",
+    "type": "hasParticipant",
+    "vertex": "_:becklandryburial"
+  },
+  {
+    "_from": "events/_:becklandryburial",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:becklandryburial"
+  },
+  {
+    "_from": "events/_:andicallahangetsanape",
+    "_to": "people/_:andicallahanrn",
+    "type": "hasParticipant",
+    "vertex": "_:andicallahangetsanape"
+  },
+  {
+    "_from": "events/_:andicallahangetsanape",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:andicallahangetsanape"
+  },
+  {
+    "_from": "events/_:ashleypintossweetsixteen",
+    "_to": "people/_:ashleypinto",
+    "type": "hasParticipant",
+    "vertex": "_:ashleypintossweetsixteen"
+  },
+  {
+    "_from": "events/_:ashleypintossweetsixteen",
+    "_to": "people/_:benalterman",
+    "type": "hasParticipant",
+    "vertex": "_:ashleypintossweetsixteen"
+  },
+  {
+    "_from": "events/_:ashleypintossweetsixteen",
+    "_to": "places/_:courtyardoldtown",
+    "type": "occurredAt",
+    "vertex": "_:ashleypintossweetsixteen"
+  },
+  {
+    "_from": "events/_:augustlindtattemptssuicide1",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtattemptssuicide1"
+  },
+  {
+    "_from": "events/_:augustlindtattemptssuicide1",
+    "_to": "places/_:hollywoodsign",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtattemptssuicide1"
+  },
+  {
+    "_from": "events/_:augustlindtattemptssuicideatearwolf",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtattemptssuicideatearwolf"
+  },
+  {
+    "_from": "events/_:augustlindtattemptssuicideatearwolf",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtattemptssuicideatearwolf"
+  },
+  {
+    "_from": "events/_:augustlindtisarrestedatgraceland",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtisarrestedatgraceland"
+  },
+  {
+    "_from": "events/_:augustlindtisarrestedatgraceland",
+    "_to": "places/_:gracelandelvis",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtisarrestedatgraceland"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "people/_:unnamedmarssimulatorbiomedicalscientist",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "people/_:unnamedmarssimulatordoctor",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "people/_:unnamedmarssimulatorentrepreneur",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "people/_:unnamedmarssimulatornasarep",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "people/_:unnamedmarssimulatorstowaway",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvacationsinhawaii",
+    "_to": "places/_:maunaloa",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtvacationsinhawaii"
+  },
+  {
+    "_from": "events/_:augustlindtvisitsepcot",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvisitsepcot"
+  },
+  {
+    "_from": "events/_:augustlindtvisitsepcot",
+    "_to": "places/_:epcotcenter",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtvisitsepcot"
+  },
+  {
+    "_from": "events/_:augustlindtvisitsthepinebarrens",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtvisitsthepinebarrens"
+  },
+  {
+    "_from": "events/_:augustlindtvisitsthepinebarrens",
+    "_to": "places/_:thepinebarrensofnj",
+    "type": "occurredAt",
+    "vertex": "_:augustlindtvisitsthepinebarrens"
+  },
+  {
+    "_from": "events/_:augustlindtwinsbestandydalycharacter",
+    "_to": "people/_:augustlindt",
+    "type": "hasParticipant",
+    "vertex": "_:augustlindtwinsbestandydalycharacter"
+  },
+  {
+    "_from": "events/_:billcarterattemptssuicide1",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterattemptssuicide1"
+  },
+  {
+    "_from": "events/_:billcarterattemptssuicide1",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:billcarterattemptssuicide1"
+  },
+  {
+    "_from": "events/_:billcarterattemptssuicide2",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterattemptssuicide2"
+  },
+  {
+    "_from": "events/_:billcartercheersaraceriot",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcartercheersaraceriot"
+  },
+  {
+    "_from": "events/_:billcartercheersaraceriot",
+    "_to": "places/_:lacanadaflintridge",
+    "type": "occurredAt",
+    "vertex": "_:billcartercheersaraceriot"
+  },
+  {
+    "_from": "events/_:billcarterisaccomplicetoabande",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterisaccomplicetoabande"
+  },
+  {
+    "_from": "events/_:billcarterisborn",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcarterisborn"
+  },
+  {
+    "_from": "events/_:billcartertrainscarygrant",
+    "_to": "people/_:billcarter",
+    "type": "hasParticipant",
+    "vertex": "_:billcartertrainscarygrant"
+  },
+  {
+    "_from": "events/_:billcartertrainscarygrant",
+    "_to": "people/_:carygrant",
+    "type": "hasParticipant",
+    "vertex": "_:billcartertrainscarygrant"
+  },
+  {
+    "_from": "events/_:bobbysteensmainventshitchinaride",
+    "_to": "people/_:bobbysteensma",
+    "type": "hasParticipant",
+    "vertex": "_:bobbysteensmainventshitchinaride"
+  },
+  {
+    "_from": "events/_:bookingagentismurdered",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:bookingagentismurdered"
+  },
+  {
+    "_from": "events/_:bookingagentismurdered",
+    "_to": "people/_:gil",
+    "type": "hasParticipant",
+    "vertex": "_:bookingagentismurdered"
+  },
+  {
+    "_from": "events/_:bookingagentismurdered",
+    "_to": "people/_:golly",
+    "type": "hasParticipant",
+    "vertex": "_:bookingagentismurdered"
+  },
+  {
+    "_from": "events/_:bookingagentismurdered",
+    "_to": "people/_:unnamedbookingagent",
+    "type": "hasParticipant",
+    "vertex": "_:bookingagentismurdered"
+  },
+  {
+    "_from": "events/_:byrondennistongetsthescoop",
+    "_to": "people/_:byrondenniston",
+    "type": "hasParticipant",
+    "vertex": "_:byrondennistongetsthescoop"
+  },
+  {
+    "_from": "events/_:byrondennistongoestoprison1",
+    "_to": "people/_:byrondenniston",
+    "type": "hasParticipant",
+    "vertex": "_:byrondennistongoestoprison1"
+  },
+  {
+    "_from": "events/_:byrondennistongoestoprison1",
+    "_to": "places/_:hmprisonwandsworth",
+    "type": "occurredAt",
+    "vertex": "_:byrondennistongoestoprison1"
+  },
+  {
+    "_from": "events/_:byrondennistonisborn",
+    "_to": "people/_:byrondenniston",
+    "type": "hasParticipant",
+    "vertex": "_:byrondennistonisborn"
+  },
+  {
+    "_from": "events/_:byrondennistonrevealstoomuch",
+    "_to": "people/_:byrondenniston",
+    "type": "hasParticipant",
+    "vertex": "_:byrondennistonrevealstoomuch"
+  },
+  {
+    "_from": "events/_:cactustonyisborn",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisborn"
+  },
+  {
+    "_from": "events/_:cactustonyisinterrogated1",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisinterrogated1"
+  },
+  {
+    "_from": "events/_:cactustonyisinterrogated2",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisinterrogated2"
+  },
+  {
+    "_from": "events/_:cactustonyisinterrogated2",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisinterrogated2"
+  },
+  {
+    "_from": "events/_:cactustonyisinterrogated2",
+    "_to": "people/_:jasonmantzoukas",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisinterrogated2"
+  },
+  {
+    "_from": "events/_:cactustonyisinterrogated2",
+    "_to": "people/_:scottaukerman",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyisinterrogated2"
+  },
+  {
+    "_from": "events/_:cactustonyleaveshome",
+    "_to": "people/_:aunteileen",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyleaveshome"
+  },
+  {
+    "_from": "events/_:cactustonyleaveshome",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:cactustonyleaveshome"
+  },
+  {
+    "_from": "events/_:cameronmcgonigleisborn",
+    "_to": "people/_:cameronmcgonigle",
+    "type": "hasParticipant",
+    "vertex": "_:cameronmcgonigleisborn"
+  },
+  {
+    "_from": "events/_:cameronmcgonigleisborn",
+    "_to": "places/_:edinburghscotland",
+    "type": "occurredAt",
+    "vertex": "_:cameronmcgonigleisborn"
+  },
+  {
+    "_from": "events/_:ceceliawilcoxismurdered",
+    "_to": "people/_:ceceliawilcox",
+    "type": "hasParticipant",
+    "vertex": "_:ceceliawilcoxismurdered"
+  },
+  {
+    "_from": "events/_:ceceliawilcoxismurdered",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:ceceliawilcoxismurdered"
+  },
+  {
+    "_from": "events/_:ceceliawilcoxismurdered",
+    "_to": "people/_:daltonwilcoxunnameddaughter1",
+    "type": "hasParticipant",
+    "vertex": "_:ceceliawilcoxismurdered"
+  },
+  {
+    "_from": "events/_:ceceliawilcoxismurdered",
+    "_to": "people/_:daltonwilcoxunnameddaughter2",
+    "type": "hasParticipant",
+    "vertex": "_:ceceliawilcoxismurdered"
+  },
+  {
+    "_from": "events/_:ceceliawilcoxismurdered",
+    "_to": "people/_:daltonwilcoxunnameddaughter3",
+    "type": "hasParticipant",
+    "vertex": "_:ceceliawilcoxismurdered"
+  },
+  {
+    "_from": "events/_:chipgardnerappearsinlatimes",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerappearsinlatimes"
+  },
+  {
+    "_from": "events/_:chipgardnerfollowssimpleminds",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerfollowssimpleminds"
+  },
+  {
+    "_from": "events/_:chipgardnerfollowssimpleminds",
+    "_to": "things/_:jesusjones",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerfollowssimpleminds"
+  },
+  {
+    "_from": "events/_:chipgardnerfollowssimpleminds",
+    "_to": "things/_:simpleminds",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerfollowssimpleminds"
+  },
+  {
+    "_from": "events/_:chipgardnerhitsrockbottom",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerhitsrockbottom"
+  },
+  {
+    "_from": "events/_:chipgardnerhostszap",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerhostszap"
+  },
+  {
+    "_from": "events/_:chipgardnerhostszap",
+    "_to": "people/_:jasonmantzoukas",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerhostszap"
+  },
+  {
+    "_from": "events/_:chipgardnerhostszap",
+    "_to": "people/_:scottaukerman",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerhostszap"
+  },
+  {
+    "_from": "events/_:chipgardnerisborn",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerisborn"
+  },
+  {
+    "_from": "events/_:chipgardnerisrunoverbyajeep",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerisrunoverbyajeep"
+  },
+  {
+    "_from": "events/_:chipgardnerisrunoverbyajeep",
+    "_to": "people/_:jasonmantzoukas",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerisrunoverbyajeep"
+  },
+  {
+    "_from": "events/_:chipgardnerisrunoverbyajeep",
+    "_to": "people/_:scottaukerman",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnerisrunoverbyajeep"
+  },
+  {
+    "_from": "events/_:chipgardnermovestohollywood",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnermovestohollywood"
+  },
+  {
+    "_from": "events/_:chipgardnertriestoexhumejimmorrison",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnertriestoexhumejimmorrison"
+  },
+  {
+    "_from": "events/_:chipgardnertriestoexhumejimmorrison",
+    "_to": "people/_:jimmorrison",
+    "type": "hasParticipant",
+    "vertex": "_:chipgardnertriestoexhumejimmorrison"
+  },
+  {
+    "_from": "events/_:chipgardnertriestoexhumejimmorrison",
+    "_to": "places/_:tombofjimmorrison",
+    "type": "occurredAt",
+    "vertex": "_:chipgardnertriestoexhumejimmorrison"
+  },
+  {
+    "_from": "events/_:clivedundeeattemptssuicide",
+    "_to": "people/_:clivedundee",
+    "type": "hasParticipant",
+    "vertex": "_:clivedundeeattemptssuicide"
+  },
+  {
+    "_from": "events/_:clivedundeeattemptssuicide",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:clivedundeeattemptssuicide"
+  },
+  {
+    "_from": "events/_:clivedundeeisborn",
+    "_to": "people/_:clivedundee",
+    "type": "hasParticipant",
+    "vertex": "_:clivedundeeisborn"
+  },
+  {
+    "_from": "events/_:daltonwilcoxattemptssuicide1",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxattemptssuicide1"
+  },
+  {
+    "_from": "events/_:daltonwilcoxattemptssuicide1",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxattemptssuicide1"
+  },
+  {
+    "_from": "events/_:daltonwilcoxisborn",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxisborn"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsjekyll",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsjekyll"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsjekyll",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsjekyll"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsjekyll",
+    "_to": "places/_:londonbridgehavasu",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsjekyll"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelochnessmonster",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthelochnessmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelochnessmonster",
+    "_to": "things/_:lochnessmonster",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthelochnessmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelochnessmonster",
+    "_to": "places/_:lochness",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthelochnessmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxlastride",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxlastride"
+  },
+  {
+    "_from": "events/_:dannymahoneyattemptssuicide2",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneyattemptssuicide2"
+  },
+  {
+    "_from": "events/_:dannymahoneyattemptssuicide2",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:dannymahoneyattemptssuicide2"
+  },
+  {
+    "_from": "events/_:dannymahoneybuysaboombox",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneybuysaboombox"
+  },
+  {
+    "_from": "events/_:dannymahoneybuysaheavycoat",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneybuysaheavycoat"
+  },
+  {
+    "_from": "events/_:dannymahoneybuysaheavycoat",
+    "_to": "places/_:nordstromsantamonica",
+    "type": "occurredAt",
+    "vertex": "_:dannymahoneybuysaheavycoat"
+  },
+  {
+    "_from": "events/_:dannymahoneymeetsscottaukerman",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneymeetsscottaukerman"
+  },
+  {
+    "_from": "events/_:dannymahoneymeetsscottaukerman",
+    "_to": "people/_:scottaukerman",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneymeetsscottaukerman"
+  },
+  {
+    "_from": "events/_:dannymahoneymeetsscottaukerman",
+    "_to": "places/_:melroseatgower",
+    "type": "occurredAt",
+    "vertex": "_:dannymahoneymeetsscottaukerman"
+  },
+  {
+    "_from": "events/_:dannymahoneywalksintotheocean",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneywalksintotheocean"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:birthdaygirl",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:charlottelistler",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:dabneycoleperson",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:daniellebartiromo",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:drsethwompler",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:ericgutterman",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:felipe",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:karim",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:katy",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:kimmy",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:lizmathers",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:marissawompler",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:scottaukerman",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "people/_:tracirearden",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimelloattemptssuicide1",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimelloattemptssuicide1"
+  },
+  {
+    "_from": "events/_:dondimelloattemptssuicide1",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:dondimelloattemptssuicide1"
+  },
+  {
+    "_from": "events/_:dondimellodirectstherockettes",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellodirectstherockettes"
+  },
+  {
+    "_from": "events/_:dondimellodirectstherockettes",
+    "_to": "places/_:radiocity",
+    "type": "occurredAt",
+    "vertex": "_:dondimellodirectstherockettes"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "people/_:birthdaygirl",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:dondimellofindsachild",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellofindsachild"
+  },
+  {
+    "_from": "events/_:dondimellopresentsdisneysfrozen",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellopresentsdisneysfrozen"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyspeterpan",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosdisneyspeterpan"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyspeterpan",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosdisneyspeterpan"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyspeterpan",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellosdisneyspeterpan"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyswizardofoz",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosdisneyswizardofoz"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyswizardofoz",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosdisneyswizardofoz"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyswizardofoz",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellosdisneyswizardofoz"
+  },
+  {
+    "_from": "events/_:dondimellosfindstony",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosfindstony"
+  },
+  {
+    "_from": "events/_:dondimellosfindstony",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosfindstony"
+  },
+  {
+    "_from": "events/_:dondimellosheyreallygiger",
+    "_to": "people/_:andrewlloydwebber",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosheyreallygiger"
+  },
+  {
+    "_from": "events/_:dondimellosheyreallygiger",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosheyreallygiger"
+  },
+  {
+    "_from": "events/_:dondimellosheyreallygiger",
+    "_to": "people/_:hrgiger",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosheyreallygiger"
+  },
+  {
+    "_from": "events/_:dondimellostagesbeautyandthebeast",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostagesbeautyandthebeast"
+  },
+  {
+    "_from": "events/_:dondimellostagesbeautyandthebeast",
+    "_to": "people/_:malbachman",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostagesbeautyandthebeast"
+  },
+  {
+    "_from": "events/_:dondimellostagesbeautyandthebeast",
+    "_to": "people/_:dondimellosanimalguy",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostagesbeautyandthebeast"
+  },
+  {
+    "_from": "events/_:dondimellostagesbeautyandthebeast",
+    "_to": "places/_:ctusa",
+    "type": "occurredAt",
+    "vertex": "_:dondimellostagesbeautyandthebeast"
+  },
+  {
+    "_from": "events/_:dondimellostagesjewmanji",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostagesjewmanji"
+  },
+  {
+    "_from": "events/_:dondimellostagescinderella",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostagescinderella"
+  },
+  {
+    "_from": "events/_:dondimellostagesjewmanji",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellostagesjewmanji"
+  },
+  {
+    "_from": "events/_:dondimellostagescinderella",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellostagescinderella"
+  },
+  {
+    "_from": "events/_:dondimellosdisneyszootopia",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosdisneyszootopia"
+  },
+  {
+    "_from": "events/_:dondimellostruewest",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostruewest"
+  },
+  {
+    "_from": "events/_:dondimellostruewest",
+    "_to": "people/_:johncreilly",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostruewest"
+  },
+  {
+    "_from": "events/_:dondimellostruewest",
+    "_to": "people/_:nicknolte",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellostruewest"
+  },
+  {
+    "_from": "events/_:dondimelloandcactustonyattendwomplersbirthday",
+    "_to": "places/_:sixflagsmagicmountain",
+    "type": "occurredAt",
+    "vertex": "_:dondimelloandcactustonyattendwomplersbirthday"
+  },
+  {
+    "_from": "events/_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
+  },
+  {
+    "_from": "events/_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium",
+    "_to": "places/_:griffithobservatory",
+    "type": "occurredAt",
+    "vertex": "_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
+  },
+  {
+    "_from": "events/_:dondimellopresentsdisneyshanselandgretel",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellopresentsdisneyshanselandgretel"
+  },
+  {
+    "_from": "events/_:dondimellopresentsdisneyshanselandgretel",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellopresentsdisneyshanselandgretel"
+  },
+  {
+    "_from": "events/_:dondimellopresentsdisneyspuffthemagicdragon",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellopresentsdisneyspuffthemagicdragon"
+  },
+  {
+    "_from": "events/_:dondimellopresentsdisneyspuffthemagicdragon",
+    "_to": "places/_:pasadenafairytaletheatre",
+    "type": "occurredAt",
+    "vertex": "_:dondimellopresentsdisneyspuffthemagicdragon"
+  },
+  {
+    "_from": "events/_:edwardsollytutorshotdog",
+    "_to": "people/_:elmeredwardsolly",
+    "type": "hasParticipant",
+    "vertex": "_:edwardsollytutorshotdog"
+  },
+  {
+    "_from": "events/_:edwardsollytutorshotdog",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:edwardsollytutorshotdog"
+  },
+  {
+    "_from": "events/_:fatherofjoebongoisborn",
+    "_to": "people/_:fatherofjoebongo",
+    "type": "hasParticipant",
+    "vertex": "_:fatherofjoebongoisborn"
+  },
+  {
+    "_from": "events/_:gilgetsaspotoncbb",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:gilgetsaspotoncbb"
+  },
+  {
+    "_from": "events/_:gilgetsaspotoncbb",
+    "_to": "people/_:gil",
+    "type": "hasParticipant",
+    "vertex": "_:gilgetsaspotoncbb"
+  },
+  {
+    "_from": "events/_:gilgetsaspotoncbb",
+    "_to": "people/_:golly",
+    "type": "hasParticipant",
+    "vertex": "_:gilgetsaspotoncbb"
+  },
+  {
+    "_from": "events/_:gilgetsaspotoncbb",
+    "_to": "people/_:unnamedbookingagent",
+    "type": "hasParticipant",
+    "vertex": "_:gilgetsaspotoncbb"
+  },
+  {
+    "_from": "events/_:gilmeetsgolly",
+    "_to": "people/_:chipgardner",
+    "type": "hasParticipant",
+    "vertex": "_:gilmeetsgolly"
+  },
+  {
+    "_from": "events/_:gilmeetsgolly",
+    "_to": "people/_:gil",
+    "type": "hasParticipant",
+    "vertex": "_:gilmeetsgolly"
+  },
+  {
+    "_from": "events/_:gilmeetsgolly",
+    "_to": "people/_:golly",
+    "type": "hasParticipant",
+    "vertex": "_:gilmeetsgolly"
+  },
+  {
+    "_from": "events/_:gilmeetsgolly",
+    "_to": "people/_:jasonmantzoukas",
+    "type": "hasParticipant",
+    "vertex": "_:gilmeetsgolly"
+  },
+  {
+    "_from": "events/_:gilmeetsgolly",
+    "_to": "people/_:scottaukerman",
+    "type": "hasParticipant",
+    "vertex": "_:gilmeetsgolly"
+  },
+  {
+    "_from": "events/_:gilmeetsgolly",
+    "_to": "places/_:internationalwaters",
+    "type": "occurredAt",
+    "vertex": "_:gilmeetsgolly"
+  },
+  {
+    "_from": "events/_:heatcuregoesawry",
+    "_to": "people/_:andicallahanrn",
+    "type": "hasParticipant",
+    "vertex": "_:heatcuregoesawry"
+  },
+  {
+    "_from": "events/_:heatcuregoesawry",
+    "_to": "people/_:cactustony",
+    "type": "hasParticipant",
+    "vertex": "_:heatcuregoesawry"
+  },
+  {
+    "_from": "events/_:hotdogattemptssuicide1",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogattemptssuicide1"
+  },
+  {
+    "_from": "events/_:hotdogattemptssuicide1",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:hotdogattemptssuicide1"
+  },
+  {
+    "_from": "events/_:hotdogaudition1",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogaudition1"
+  },
+  {
+    "_from": "events/_:hotdogaudition1",
+    "_to": "things/_:shanana",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogaudition1"
+  },
+  {
+    "_from": "events/_:hotdogaudition2",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogaudition2"
+  },
+  {
+    "_from": "events/_:hotdogaudition2",
+    "_to": "things/_:shanana",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogaudition2"
+  },
+  {
+    "_from": "events/_:hotdogaudition3",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogaudition3"
+  },
+  {
+    "_from": "events/_:hotdogaudition3",
+    "_to": "things/_:shanana",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogaudition3"
+  },
+  {
+    "_from": "events/_:hotdogbecomesthird",
+    "_to": "people/_:abrahamapplebysgirlfriend",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogbecomesthird"
+  },
+  {
+    "_from": "events/_:hotdogbecomesthird",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogbecomesthird"
+  },
+  {
+    "_from": "events/_:hotdogbooksshananafraudulently",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogbooksshananafraudulently"
+  },
+  {
+    "_from": "events/_:hotdogbooksshananafraudulently",
+    "_to": "things/_:shanana",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogbooksshananafraudulently"
+  },
+  {
+    "_from": "events/_:hotdogbooksshananafraudulently",
+    "_to": "places/_:hiltonhotelhawaii",
+    "type": "occurredAt",
+    "vertex": "_:hotdogbooksshananafraudulently"
+  },
+  {
+    "_from": "events/_:hotdogchangeshisname",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogchangeshisname"
+  },
+  {
+    "_from": "events/_:hotdogdecapitatesastranger",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogdecapitatesastranger"
+  },
+  {
+    "_from": "events/_:hotdogdecapitatesastranger",
+    "_to": "people/_:unnamedscottishguy",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogdecapitatesastranger"
+  },
+  {
+    "_from": "events/_:hotdogdecapitatesastranger",
+    "_to": "places/_:necromance",
+    "type": "occurredAt",
+    "vertex": "_:hotdogdecapitatesastranger"
+  },
+  {
+    "_from": "events/_:hotdogeatshisskis",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogeatshisskis"
+  },
+  {
+    "_from": "events/_:hotdogemailsscreaminscott",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogemailsscreaminscott"
+  },
+  {
+    "_from": "events/_:hotdogemailsscreaminscott",
+    "_to": "people/_:screaminscottsimon",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogemailsscreaminscott"
+  },
+  {
+    "_from": "events/_:hotdoggetskickedoutofnashasha",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdoggetskickedoutofnashasha"
+  },
+  {
+    "_from": "events/_:hotdoggetskickedoutofnashasha",
+    "_to": "things/_:nashasha",
+    "type": "hasParticipant",
+    "vertex": "_:hotdoggetskickedoutofnashasha"
+  },
+  {
+    "_from": "events/_:hotdogintroducesfirearms",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogintroducesfirearms"
+  },
+  {
+    "_from": "events/_:hotdogisborn",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogisborn"
+  },
+  {
+    "_from": "events/_:hotdogisrescuedbythelizard",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogisrescuedbythelizard"
+  },
+  {
+    "_from": "events/_:hotdogisrescuedbythelizard",
+    "_to": "people/_:thelizard",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogisrescuedbythelizard"
+  },
+  {
+    "_from": "events/_:hotdogloseshisjacket",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogloseshisjacket"
+  },
+  {
+    "_from": "events/_:hotdogmakesthehalloffame",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogmakesthehalloffame"
+  },
+  {
+    "_from": "events/_:hotdogmakesthehalloffame",
+    "_to": "places/_:polkcityfl",
+    "type": "occurredAt",
+    "vertex": "_:hotdogmakesthehalloffame"
+  },
+  {
+    "_from": "events/_:hotdogmoveson",
+    "_to": "people/_:benalterman",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogmoveson"
+  },
+  {
+    "_from": "events/_:hotdogmoveson",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogmoveson"
+  },
+  {
+    "_from": "events/_:hotdogmoveson",
+    "_to": "things/_:nashasha",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogmoveson"
+  },
+  {
+    "_from": "events/_:hotdogmoveson",
+    "_to": "things/_:shanana",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogmoveson"
+  },
+  {
+    "_from": "events/_:hotdogrunsa50sbedandbreakfast",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogrunsa50sbedandbreakfast"
+  },
+  {
+    "_from": "events/_:hotdogrunsa50sbedandbreakfast",
+    "_to": "things/_:unnamed50sbedandbreakfast",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogrunsa50sbedandbreakfast"
+  },
+  {
+    "_from": "events/_:hotdogrunsan80sbedandbreakfast",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogrunsan80sbedandbreakfast"
+  },
+  {
+    "_from": "events/_:hotdogrunsan80sbedandbreakfast",
+    "_to": "things/_:unnamed80sbedandbreakfast",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogrunsan80sbedandbreakfast"
+  },
+  {
+    "_from": "events/_:hotdogsearchessanddiegoforshanana",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogsearchessanddiegoforshanana"
+  },
+  {
+    "_from": "events/_:hotdogswifepasses",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogswifepasses"
+  },
+  {
+    "_from": "events/_:hotdogswifepasses",
+    "_to": "people/_:hotdogswife",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogswifepasses"
+  },
+  {
+    "_from": "events/_:hotdogwaterskisonamotorcycle",
+    "_to": "people/_:hotdog",
+    "type": "hasParticipant",
+    "vertex": "_:hotdogwaterskisonamotorcycle"
+  },
+  {
+    "_from": "events/_:jeanclaudepepiauditionsfornosferatu",
+    "_to": "people/_:jeanclaudepepi",
+    "type": "hasParticipant",
+    "vertex": "_:jeanclaudepepiauditionsfornosferatu"
+  },
+  {
+    "_from": "events/_:jeanclaudepepiauditionsfornosferatu",
+    "_to": "people/_:wernerherzog",
+    "type": "hasParticipant",
+    "vertex": "_:jeanclaudepepiauditionsfornosferatu"
+  },
+  {
+    "_from": "events/_:jeanclaudepepiisborn",
+    "_to": "people/_:jeanclaudepepi",
+    "type": "hasParticipant",
+    "vertex": "_:jeanclaudepepiisborn"
+  },
+  {
+    "_from": "events/_:jeanclaudepepishootsageicospot",
+    "_to": "people/_:jeanclaudepepi",
+    "type": "hasParticipant",
+    "vertex": "_:jeanclaudepepishootsageicospot"
+  },
+  {
+    "_from": "events/_:joebongoadvisesguttermanandbartiromo",
+    "_to": "people/_:daniellebartiromo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoadvisesguttermanandbartiromo"
+  },
+  {
+    "_from": "events/_:joebongoadvisesguttermanandbartiromo",
+    "_to": "people/_:ericgutterman",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoadvisesguttermanandbartiromo"
+  },
+  {
+    "_from": "events/_:joebongoadvisesguttermanandbartiromo",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoadvisesguttermanandbartiromo"
+  },
+  {
+    "_from": "events/_:joebongoauditionsforfriends",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoauditionsforfriends"
+  },
+  {
+    "_from": "events/_:joebongofindsbongos",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongofindsbongos"
+  },
+  {
+    "_from": "events/_:joebongofindsbongos",
+    "_to": "places/_:venicefishingpier",
+    "type": "occurredAt",
+    "vertex": "_:joebongofindsbongos"
+  },
+  {
+    "_from": "events/_:joebongogoesonsabbatical1",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongogoesonsabbatical1"
+  },
+  {
+    "_from": "events/_:joebongogoesonsabbatical1",
+    "_to": "places/_:largo",
+    "type": "occurredAt",
+    "vertex": "_:joebongogoesonsabbatical1"
+  },
+  {
+    "_from": "events/_:joebongoisattackedbysnakes",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoisattackedbysnakes"
+  },
+  {
+    "_from": "events/_:joebongoisfiredfromtheenglishdepartment",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoisfiredfromtheenglishdepartment"
+  },
+  {
+    "_from": "events/_:joebongoisinvolvedinacaraccident",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoisinvolvedinacaraccident"
+  },
+  {
+    "_from": "events/_:joebongoisinvolvedinacaraccident",
+    "_to": "places/_:ritzcarltonmdrparking",
+    "type": "occurredAt",
+    "vertex": "_:joebongoisinvolvedinacaraccident"
+  },
+  {
+    "_from": "events/_:joebongoisinvolvedinacaraccident",
+    "_to": "places/_:burtonchacepark",
+    "type": "occurredAt",
+    "vertex": "_:joebongoisinvolvedinacaraccident"
+  },
+  {
+    "_from": "events/_:joebongoisinvolvedinacaraccident",
+    "_to": "places/_:historicmarinadelreylighthouse",
+    "type": "occurredAt",
+    "vertex": "_:joebongoisinvolvedinacaraccident"
+  },
+  {
+    "_from": "events/_:joebongoisinvolvedinacaraccident",
+    "_to": "places/_:tikimermaidchartersharborcruiseboat",
+    "type": "occurredAt",
+    "vertex": "_:joebongoisinvolvedinacaraccident"
+  },
+  {
+    "_from": "events/_:joebongoisinvolvedinacaraccident",
+    "_to": "places/_:tonypsdocksidemdr",
+    "type": "occurredAt",
+    "vertex": "_:joebongoisinvolvedinacaraccident"
+  },
+  {
+    "_from": "events/_:joebongostealsshoes",
+    "_to": "people/_:jimmypage",
+    "type": "hasParticipant",
+    "vertex": "_:joebongostealsshoes"
+  },
+  {
+    "_from": "events/_:joebongostealsshoes",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongostealsshoes"
+  },
+  {
+    "_from": "events/_:joebongoteachesdrugunit",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoteachesdrugunit"
+  },
+  {
+    "_from": "events/_:joebongoteachesdrugunit",
+    "_to": "people/_:marissawompler",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoteachesdrugunit"
+  },
+  {
+    "_from": "events/_:joebongoteachesdrugunit",
+    "_to": "places/_:mdhs",
+    "type": "occurredAt",
+    "vertex": "_:joebongoteachesdrugunit"
+  },
+  {
+    "_from": "events/_:joebongoteachessexunit",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoteachessexunit"
+  },
+  {
+    "_from": "events/_:joebongoteachessexunit",
+    "_to": "people/_:marissawompler",
+    "type": "hasParticipant",
+    "vertex": "_:joebongoteachessexunit"
+  },
+  {
+    "_from": "events/_:joebongoteachessexunit",
+    "_to": "places/_:mdhs",
+    "type": "occurredAt",
+    "vertex": "_:joebongoteachessexunit"
+  },
+  {
+    "_from": "events/_:joebongovotesforjohnbanderson",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongovotesforjohnbanderson"
+  },
+  {
+    "_from": "events/_:joebongovotesforjohnbanderson",
+    "_to": "people/_:johnbanderson",
+    "type": "hasParticipant",
+    "vertex": "_:joebongovotesforjohnbanderson"
+  },
+  {
+    "_from": "events/_:joebongrequestspreventativecasts",
+    "_to": "people/_:joebongo",
+    "type": "hasParticipant",
+    "vertex": "_:joebongrequestspreventativecasts"
+  },
+  {
+    "_from": "events/_:patrickmcmahonattemptssuicide1",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahonattemptssuicide1"
+  },
+  {
+    "_from": "events/_:patrickmcmahonattemptssuicide1",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:patrickmcmahonattemptssuicide1"
+  },
+  {
+    "_from": "events/_:patrickmcmahonattemptssuicide1",
+    "_to": "places/_:earwolfsunset",
+    "type": "occurredAt",
+    "vertex": "_:patrickmcmahonattemptssuicide1"
+  },
+  {
+    "_from": "events/_:patrickmcmahonisaccused",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahonisaccused"
+  },
+  {
+    "_from": "events/_:patrickmcmahonisborn",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahonisborn"
+  },
+  {
+    "_from": "events/_:patrickmcmahonisnamedpersonoftheyear",
+    "_to": "people/_:patrickmcmahon",
+    "type": "hasParticipant",
+    "vertex": "_:patrickmcmahonisnamedpersonoftheyear"
+  },
+  {
+    "_from": "events/_:stephaniegoldbergismurdered",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:stephaniegoldbergismurdered"
+  },
+  {
+    "_from": "events/_:mrswilcoxismurdered",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:mrswilcoxismurdered"
+  },
+  {
+    "_from": "events/_:mrswilcoxismurdered",
+    "_to": "people/_:daltonwilcoxunnamedwife1p",
+    "type": "hasParticipant",
+    "vertex": "_:mrswilcoxismurdered"
+  },
+  {
+    "_from": "events/_:stephaniegoldbergismurdered",
+    "_to": "people/_:stephaniegoldberg",
+    "type": "hasParticipant",
+    "vertex": "_:stephaniegoldbergismurdered"
+  },
+  {
+    "_from": "events/_:surferssetworldrecord",
+    "_to": "places/_:huntingtonbeach",
+    "type": "occurredAt",
+    "vertex": "_:surferssetworldrecord"
+  },
+  {
+    "_from": "events/_:dannymahoneymeetsjimmyblades",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneymeetsjimmyblades"
+  },
+  {
+    "_from": "people/_:jimmyblades",
+    "_to": "things/_:takemywifekeys",
+    "type": "hasWorkedAt",
+    "vertex": "_:jimmyblades"
+  },
+  {
+    "_from": "people/_:ahiscousinpenny",
+    "_to": "people/_:ahi",
+    "type": "isSpouseOf",
+    "vertex": "_:ahiscousinpenny"
+  },
+  {
+    "_from": "people/_:ahiscousinpenny",
+    "_to": "people/_:ahi",
+    "type": "caresFor",
+    "vertex": "_:ahiscousinpenny"
+  },
+  {
+    "_from": "people/_:andicallahanrn",
+    "_to": "people/_:bergenregionalbernard",
+    "type": "caresFor",
+    "vertex": "_:andicallahanrn"
+  },
+  {
+    "_from": "people/_:andicallahanrn",
+    "_to": "people/_:bergenregionalrosa",
+    "type": "caresFor",
+    "vertex": "_:andicallahanrn"
+  },
+  {
+    "_from": "people/_:andicallahanrn",
+    "_to": "people/_:god",
+    "type": "seeAlso",
+    "vertex": "_:andicallahanrn"
+  },
+  {
+    "_from": "people/_:andicallahanrn",
+    "_to": "places/_:bergenregional",
+    "type": "worksAt",
+    "vertex": "_:andicallahanrn"
+  },
+  {
+    "_from": "people/_:angus",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:angus"
+  },
+  {
+    "_from": "people/_:thomaslavergne",
+    "_to": "people/_:stevefaye",
+    "type": "hasFriend",
+    "vertex": "_:thomaslavergne"
+  },
+  {
+    "_from": "people/_:thomaslavergne",
+    "_to": "people/_:arthurlavergne",
+    "type": "isChildOf",
+    "vertex": "_:thomaslavergne"
+  },
+  {
+    "_from": "people/_:daltonwilcox",
+    "_to": "people/_:unnamedmotherofdaltonwilcox",
+    "type": "isChildOf",
+    "vertex": "_:daltonwilcox"
+  },
+  {
+    "_from": "people/_:michaellavergne",
+    "_to": "people/_:arthurlavergne",
+    "type": "isChildOf",
+    "vertex": "_:michaellavergne"
+  },
+  {
+    "_from": "people/_:arthurlavergne",
+    "_to": "people/_:grandmotherpearlalavergne",
+    "type": "isChildOf",
+    "vertex": "_:arthurlavergne"
+  },
+  {
+    "_from": "people/_:kevinlindt",
+    "_to": "people/_:augustlindt",
+    "type": "isChildOf",
+    "vertex": "_:kevinlindt"
+  },
+  {
+    "_from": "people/_:gunterlindt",
+    "_to": "people/_:augustlindt",
+    "type": "isChildOf",
+    "vertex": "_:gunterlindt"
+  },
+  {
+    "_from": "people/_:gretalindt",
+    "_to": "people/_:augustlindt",
+    "type": "isChildOf",
+    "vertex": "_:gretalindt"
+  },
+  {
+    "_from": "people/_:ashleypinto",
+    "_to": "people/_:crystalalterman",
+    "type": "isChildOf",
+    "vertex": "_:ashleypinto"
+  },
+  {
+    "_from": "people/_:veronicamelcher",
+    "_to": "people/_:slamminoliverrothwell",
+    "type": "hasFriend",
+    "vertex": "_:veronicamelcher"
+  },
+  {
+    "_from": "people/_:veronicamelcher",
+    "_to": "people/_:hotdog",
+    "type": "hasFriend",
+    "vertex": "_:veronicamelcher"
+  },
+  {
+    "_from": "people/_:augustlindt",
+    "_to": "people/_:theschmiedebergmonkey1",
+    "type": "hasFriend",
+    "vertex": "_:augustlindt"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "people/_:falcon",
+    "type": "hasFriend",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:augustlindt",
+    "_to": "people/_:theschmiedebergmonkey1",
+    "type": "hasFriend",
+    "vertex": "_:augustlindt"
+  },
+  {
+    "_from": "people/_:augustlindt",
+    "_to": "places/_:schmiedebergpretzelcompany",
+    "type": "worksAt",
+    "vertex": "_:augustlindt"
+  },
+  {
+    "_from": "people/_:benalterman",
+    "_to": "people/_:mrfrancisco",
+    "type": "hasFriend",
+    "vertex": "_:benalterman"
+  },
+  {
+    "_from": "people/_:benalterman",
+    "_to": "people/_:mrshakamora",
+    "type": "hasFriend",
+    "vertex": "_:benalterman"
+  },
+  {
+    "_from": "people/_:benalterman",
+    "_to": "people/_:mrshakamora",
+    "type": "hasFriend",
+    "vertex": "_:benalterman"
+  },
+  {
+    "_from": "people/_:benalterman",
+    "_to": "people/_:thewidowfeeney",
+    "type": "hasFriend",
+    "vertex": "_:benalterman"
+  },
+  {
+    "_from": "people/_:benalterman",
+    "_to": "people/_:thewidowfeeney",
+    "type": "hasFriend",
+    "vertex": "_:benalterman"
+  },
+  {
+    "_from": "people/_:benalterman",
+    "_to": "places/_:shadyviewboardandcare",
+    "type": "livesAt",
+    "vertex": "_:benalterman"
+  },
+  {
+    "_from": "people/_:jimmyblades",
+    "_to": "things/_:lotpinc",
+    "type": "worksAt",
+    "vertex": "_:jimmyblades"
+  },
+  {
+    "_from": "people/_:daltonwilcox",
+    "_to": "things/_:uber",
+    "type": "worksAt",
+    "vertex": "_:daltonwilcox"
+  },
+  {
+    "_from": "events/_:dannymahoneyimmunizeshisbrother",
+    "_to": "people/_:dannymahoneysbrother",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneyimmunizeshisbrother"
+  },
+  {
+    "_from": "events/_:dannymahoneyimmunizeshisbrother",
+    "_to": "people/_:dannymahoney",
+    "type": "hasParticipant",
+    "vertex": "_:dannymahoneyimmunizeshisbrother"
+  },
+  {
+    "_from": "people/_:dannymahoneysbrother",
+    "_to": "people/_:dannymahoney",
+    "type": "isSiblingOf",
+    "vertex": "_:dannymahoneysbrother"
+  },
+  {
+    "_from": "people/_:bertmahoney",
+    "_to": "people/_:dannymahoneysbrother",
+    "type": "isChildOf",
+    "vertex": "_:bertmahoney"
+  },
+  {
+    "_from": "people/_:bertmahoney",
+    "_to": "things/_:unnamedplumbingco",
+    "type": "worksAt",
+    "vertex": "_:bertmahoney"
+  },
+  {
+    "_from": "people/_:bigbobpinto",
+    "_to": "people/_:crystalalterman",
+    "type": "isSpouseOf",
+    "vertex": "_:bigbobpinto"
+  },
+  {
+    "_from": "people/_:daltonwilcoxunnamedwife1",
+    "_to": "people/_:daltonwilcox",
+    "type": "isSpouseOf",
+    "vertex": "_:daltonwilcoxunnamedwife1"
+  },
+  {
+    "_from": "people/_:rickwakeman",
+    "_to": "things/_:yesband",
+    "type": "isMemberOf",
+    "vertex": "_:rickwakeman"
+  },
+  {
+    "_from": "people/_:billbuford",
+    "_to": "things/_:yesband",
+    "type": "isMemberOf",
+    "vertex": "_:billbuford"
+  },
+  {
+    "_from": "people/_:billcarter",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasFriend",
+    "vertex": "_:billcarter"
+  },
+  {
+    "_from": "people/_:billcarter",
+    "_to": "people/_:rochelletheelf",
+    "type": "hasFriend",
+    "vertex": "_:billcarter"
+  },
+  {
+    "_from": "people/_:billcarter",
+    "_to": "places/_:ballyshollywood",
+    "type": "hasWorkedAt",
+    "vertex": "_:billcarter"
+  },
+  {
+    "_from": "people/_:stuartcambridge",
+    "_to": "places/_:braidwoodcentre",
+    "type": "livesAt",
+    "vertex": "_:stuartcambridge"
+  },
+  {
+    "_from": "people/_:billcarter",
+    "_to": "things/_:trainerforthestarsseekingstars",
+    "type": "worksAt",
+    "vertex": "_:billcarter"
+  },
+  {
+    "_from": "people/_:bryan",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:bryan"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:andicallahanrn",
+    "type": "hasWorkedFor",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:billcarter",
+    "type": "hasWorkedFor",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:matrickpahahon",
+    "_to": "people/_:patrickmcmahon",
+    "type": "worksFor",
+    "vertex": "_:matrickpahahon"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:dondimello",
+    "type": "worksFor",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:gretchen",
+    "type": "hasFriend",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "people/_:jackfitzgerald",
+    "type": "hasWorkedFor",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:cactustony",
+    "_to": "places/_:arclightcinemas",
+    "type": "worksFor",
+    "vertex": "_:cactustony"
+  },
+  {
+    "_from": "people/_:cameronmcgonigle",
+    "_to": "people/_:angus",
+    "type": "hasFriend",
+    "vertex": "_:cameronmcgonigle"
+  },
+  {
+    "_from": "people/_:cameronmcgonigle",
+    "_to": "people/_:bryan",
+    "type": "hasFriend",
+    "vertex": "_:cameronmcgonigle"
+  },
+  {
+    "_from": "people/_:cameronmcgonigle",
+    "_to": "people/_:dougie",
+    "type": "hasFriend",
+    "vertex": "_:cameronmcgonigle"
+  },
+  {
+    "_from": "people/_:cameronmcgonigle",
+    "_to": "people/_:laird",
+    "type": "hasFriend",
+    "vertex": "_:cameronmcgonigle"
+  },
+  {
+    "_from": "people/_:cameronmcgonigle",
+    "_to": "people/_:stuart",
+    "type": "hasFriend",
+    "vertex": "_:cameronmcgonigle"
+  },
+  {
+    "_from": "people/_:cameronmcgonigle",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:cameronmcgonigle"
+  },
+  {
+    "_from": "people/_:raikardpalmer",
+    "_to": "things/_:emersonlakepalmer",
+    "type": "isMemberOf",
+    "vertex": "_:raikardpalmer"
+  },
+  {
+    "_from": "people/_:carlpalmer",
+    "_to": "things/_:emersonlakepalmer",
+    "type": "isMemberOf",
+    "vertex": "_:carlpalmer"
+  },
+  {
+    "_from": "people/_:carygrant",
+    "_to": "people/_:billcarter",
+    "type": "wasClientOf",
+    "vertex": "_:billcarter"
+  },
+  {
+    "_from": "people/_:chipgardner",
+    "_to": "people/_:dondimello",
+    "type": "hasFriend",
+    "vertex": "_:chipgardner"
+  },
+  {
+    "_from": "people/_:chipgardner",
+    "_to": "people/_:drspeedboat",
+    "type": "isClientOf",
+    "vertex": "_:chipgardner"
+  },
+  {
+    "_from": "people/_:chipgardner",
+    "_to": "people/_:gil",
+    "type": "hasFriend",
+    "vertex": "_:chipgardner"
+  },
+  {
+    "_from": "people/_:chipgardner",
+    "_to": "people/_:gretchen",
+    "type": "seeAlso",
+    "vertex": "_:chipgardner"
+  },
+  {
+    "_from": "people/_:chipgardner",
+    "_to": "people/_:thelizard",
+    "type": "seeAlso",
+    "vertex": "_:chipgardner"
+  },
+  {
+    "_from": "people/_:chipgardnersunnamedwife",
+    "_to": "people/_:chipgardner",
+    "type": "wasSpouseOf",
+    "vertex": "_:chipgardnersunnamedwife"
+  },
+  {
+    "_from": "people/_:clivedundee",
+    "_to": "people/_:dondimello",
+    "type": "hasFriend",
+    "vertex": "_:clivedundee"
+  },
+  {
+    "_from": "people/_:clivedundee",
+    "_to": "things/_:u2",
+    "type": "hasWorkedFor",
+    "vertex": "_:clivedundee"
+  },
+  {
+    "_from": "people/_:clivedundeeswife",
+    "_to": "people/_:clivedundee",
+    "type": "isSpouseOf",
+    "vertex": "_:clivedundeeswife"
+  },
+  {
+    "_from": "people/_:clivedundeeswife",
+    "_to": "people/_:clivedundee",
+    "type": "isSpouseOf",
+    "vertex": "_:clivedundeeswife"
+  },
+  {
+    "_from": "people/_:crystalalterman",
+    "_to": "people/_:benalterman",
+    "type": "isChildOf",
+    "vertex": "_:crystalalterman"
+  },
+  {
+    "_from": "people/_:crystalalterman",
+    "_to": "people/_:bigbobpinto",
+    "type": "isSpouseOf",
+    "vertex": "_:crystalalterman"
+  },
+  {
+    "_from": "people/_:crystalalterman",
+    "_to": "people/_:littlebarnabus",
+    "type": "hasFriend",
+    "vertex": "_:crystalalterman"
+  },
+  {
+    "_from": "people/_:daltonwilcox",
+    "_to": "people/_:billcarter",
+    "type": "hasFriend",
+    "vertex": "_:daltonwilcox"
+  },
+  {
+    "_from": "people/_:daltonwilcox",
+    "_to": "people/_:darbyquinn",
+    "type": "hasFriend",
+    "vertex": "_:daltonwilcox"
+  },
+  {
+    "_from": "people/_:daltonwilcoxunnameddaughter1",
+    "_to": "people/_:daltonwilcox",
+    "type": "isChildOf",
+    "vertex": "_:daltonwilcoxunnameddaughter1"
+  },
+  {
+    "_from": "people/_:daltonwilcoxunnameddaughter2",
+    "_to": "people/_:daltonwilcox",
+    "type": "isChildOf",
+    "vertex": "_:daltonwilcoxunnameddaughter2"
+  },
+  {
+    "_from": "people/_:daltonwilcoxunnameddaughter3",
+    "_to": "people/_:daltonwilcox",
+    "type": "isChildOf",
+    "vertex": "_:daltonwilcoxunnameddaughter3"
+  },
+  {
+    "_from": "people/_:ceceliawilcox",
+    "_to": "people/_:daltonwilcox",
+    "type": "wasSpouseOf",
+    "vertex": "_:ceceliawilcox"
+  },
+  {
+    "_from": "people/_:dannymahoney",
+    "_to": "things/_:lotpinc",
+    "type": "worksAt",
+    "vertex": "_:dannymahoney"
+  },
+  {
+    "_from": "people/_:dannymahoney",
+    "_to": "things/_:unnamedplumbingco",
+    "type": "hasWorkedAt",
+    "vertex": "_:dannymahoney"
+  },
+  {
+    "_from": "people/_:codywakeman",
+    "_to": "people/_:rickwakeman",
+    "type": "isChildOf",
+    "vertex": "_:codywakeman"
+  },
+  {
+    "_from": "people/_:deanbuford",
+    "_to": "people/_:billbuford",
+    "type": "isChildOf",
+    "vertex": "_:deanbuford"
+  },
+  {
+    "_from": "people/_:codywakeman",
+    "_to": "things/_:rosebushred",
+    "type": "isFormerMemberOf",
+    "vertex": "_:codywakeman"
+  },
+  {
+    "_from": "people/_:deanbuford",
+    "_to": "things/_:rosebushred",
+    "type": "isFormerMemberOf",
+    "vertex": "_:deanbuford"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "people/_:chipgardner",
+    "type": "hasFriend",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "people/_:gil",
+    "type": "hasFriend",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "people/_:marissawompler",
+    "type": "hasFriend",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "places/_:arclightcinemas",
+    "type": "worksAt",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "places/_:radiocity",
+    "type": "hasWorkedAt",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:dondimello",
+    "_to": "things/_:unnamedmidtownpeeptheatre",
+    "type": "hasWorkedAt",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:dougie",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:dougie"
+  },
+  {
+    "_from": "people/_:ezrapalmer",
+    "_to": "people/_:raikardpalmer",
+    "type": "isChildOf",
+    "vertex": "_:ezrapalmer"
+  },
+  {
+    "_from": "people/_:ezrapalmer",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:ezrapalmer"
+  },
+  {
+    "_from": "people/_:garylee",
+    "_to": "people/_:geddylee",
+    "type": "isChildOf",
+    "vertex": "_:garylee"
+  },
+  {
+    "_from": "people/_:garylee",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:garylee"
+  },
+  {
+    "_from": "people/_:geddylee",
+    "_to": "things/_:rushband",
+    "type": "isMemberOf",
+    "vertex": "_:geddylee"
+  },
+  {
+    "_from": "people/_:gil",
+    "_to": "people/_:chipgardner",
+    "type": "hasFriend",
+    "vertex": "_:gil"
+  },
+  {
+    "_from": "people/_:gil",
+    "_to": "people/_:dondimello",
+    "type": "hasFriend",
+    "vertex": "_:gil"
+  },
+  {
+    "_from": "people/_:gil",
+    "_to": "places/_:arclightcinemas",
+    "type": "hasWorkedFor",
+    "vertex": "_:gil"
+  },
+  {
+    "_from": "people/_:god",
+    "_to": "people/_:andicallahanrn",
+    "type": "seeAlso",
+    "vertex": "_:god"
+  },
+  {
+    "_from": "people/_:golly",
+    "_to": "people/_:gil",
+    "type": "worksFor",
+    "vertex": "_:golly"
+  },
+  {
+    "_from": "people/_:gretchen",
+    "_to": "people/_:chipgardner",
+    "type": "seeAlso",
+    "vertex": "_:gretchen"
+  },
+  {
+    "_from": "people/_:hotdog",
+    "_to": "people/_:ahi",
+    "type": "hasFriend",
+    "vertex": "_:hotdog"
+  },
+  {
+    "_from": "people/_:hotdog",
+    "_to": "people/_:elmeredwardsolly",
+    "type": "isClientOf",
+    "vertex": "_:hotdog"
+  },
+  {
+    "_from": "people/_:hotdog",
+    "_to": "things/_:nashasha",
+    "type": "isMemberOf",
+    "vertex": "_:hotdog"
+  },
+  {
+    "_from": "people/_:hotdogsunnamedson",
+    "_to": "people/_:hotdog",
+    "type": "isChildOf",
+    "vertex": "_:hotdogsunnamedson"
+  },
+  {
+    "_from": "people/_:ingridalterman",
+    "_to": "people/_:benalterman",
+    "type": "wasSpouseOf",
+    "vertex": "_:ingridalterman"
+  },
+  {
+    "_from": "people/_:irenetherockette",
+    "_to": "places/_:radiocity",
+    "type": "hasWorkedAt",
+    "vertex": "_:irenetherockette"
+  },
+  {
+    "_from": "people/_:jasonwu",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:jasonwu"
+  },
+  {
+    "_from": "people/_:jimmybongos",
+    "_to": "people/_:joebongo",
+    "type": "seeAlso",
+    "vertex": "_:jimmybongos"
+  },
+  {
+    "_from": "people/_:joebongo",
+    "_to": "people/_:fatherofjoebongo",
+    "type": "isChildOf",
+    "vertex": "_:joebongo"
+  },
+  {
+    "_from": "people/_:joebongo",
+    "_to": "people/_:jimmybongos",
+    "type": "seeAlso",
+    "vertex": "_:joebongo"
+  },
+  {
+    "_from": "people/_:joebongo",
+    "_to": "people/_:motherofjoebongo",
+    "type": "isChildOf",
+    "vertex": "_:joebongo"
+  },
+  {
+    "_from": "people/_:joebongo",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:joebongo"
+  },
+  {
+    "_from": "people/_:kyledunforth",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:kyledunforth"
+  },
+  {
+    "_from": "people/_:laird",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:laird"
+  },
+  {
+    "_from": "people/_:littlebarnabus",
+    "_to": "people/_:crystalalterman",
+    "type": "hasFriend",
+    "vertex": "_:littlebarnabus"
+  },
+  {
+    "_from": "people/_:marissawompler",
+    "_to": "people/_:dondimello",
+    "type": "hasFriend",
+    "vertex": "_:marissawompler"
+  },
+  {
+    "_from": "people/_:michaeljackson",
+    "_to": "people/_:drspeedboat",
+    "type": "isClientOf",
+    "vertex": "_:michaeljackson"
+  },
+  {
+    "_from": "people/_:mrfrancisco",
+    "_to": "people/_:benalterman",
+    "type": "hasFriend",
+    "vertex": "_:mrfrancisco"
+  },
+  {
+    "_from": "people/_:garylee",
+    "_to": "places/_:bajacantinamdr",
+    "type": "livesAt",
+    "vertex": "_:garylee"
+  },
+  {
+    "_from": "people/_:philcollinsjr",
+    "_to": "places/_:bajacantinamdr",
+    "type": "livesAt",
+    "vertex": "_:philcollinsjr"
+  },
+  {
+    "_from": "people/_:ezrapalmer",
+    "_to": "places/_:bajacantinamdr",
+    "type": "livesAt",
+    "vertex": "_:ezrapalmer"
+  },
+  {
+    "_from": "people/_:codywakeman",
+    "_to": "places/_:bajacantinamdr",
+    "type": "livesAt",
+    "vertex": "_:codywakeman"
+  },
+  {
+    "_from": "people/_:mrfrancisco",
+    "_to": "places/_:shadyviewboardandcare",
+    "type": "livesAt",
+    "vertex": "_:mrfrancisco"
+  },
+  {
+    "_from": "people/_:mrfrancisco",
+    "_to": "places/_:unnamedlotionshop",
+    "type": "worksAt",
+    "vertex": "_:mrfrancisco"
+  },
+  {
+    "_from": "people/_:mrshakamora",
+    "_to": "people/_:benalterman",
+    "type": "hasFriend",
+    "vertex": "_:mrshakamora"
+  },
+  {
+    "_from": "people/_:mrshakamora",
+    "_to": "places/_:shadyviewboardandcare",
+    "type": "livesAt",
+    "vertex": "_:mrshakamora"
+  },
+  {
+    "_from": "people/_:oscarmeyer",
+    "_to": "people/_:hotdog",
+    "type": "isPossibleChildOf",
+    "vertex": "_:oscarmeyer"
+  },
+  {
+    "_from": "people/_:patrickmcmahon",
+    "_to": "things/_:dexysmidnightrunners",
+    "type": "isFormerMemberOf",
+    "vertex": "_:patrickmcmahon"
+  },
+  {
+    "_from": "people/_:patrickmcmahon",
+    "_to": "things/_:unnamedmechanicbusiness",
+    "type": "hasWorkedAt",
+    "vertex": "_:patrickmcmahon"
+  },
+  {
+    "_from": "people/_:patrickmcmahon",
+    "_to": "things/_:unnamedmedicalpackagingplant",
+    "type": "hasWorkedAt",
+    "vertex": "_:patrickmcmahon"
+  },
+  {
+    "_from": "people/_:philcollins",
+    "_to": "things/_:genesisband",
+    "type": "isMemberOf",
+    "vertex": "_:philcollins"
+  },
+  {
+    "_from": "people/_:philcollinsjr",
+    "_to": "people/_:philcollins",
+    "type": "isChildOf",
+    "vertex": "_:philcollinsjr"
+  },
+  {
+    "_from": "people/_:philcollinsjr",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:philcollinsjr"
+  },
+  {
+    "_from": "people/_:pietrothedog",
+    "_to": "people/_:benalterman",
+    "type": "isPetOf",
+    "vertex": "_:pietrothedog"
+  },
+  {
+    "_from": "people/_:pietrothedog",
+    "_to": "places/_:shadyviewboardandcare",
+    "type": "livesAt",
+    "vertex": "_:pietrothedog"
+  },
+  {
+    "_from": "people/_:shamusmcmahon",
+    "_to": "people/_:patrickmcmahon",
+    "type": "isSiblingOf",
+    "vertex": "_:shamusmcmahon"
+  },
+  {
+    "_from": "people/_:stuart",
+    "_to": "places/_:georgemackenzieofrosehaughmausoleum",
+    "type": "livesAt",
+    "vertex": "_:stuart"
+  },
+  {
+    "_from": "people/_:stuart",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:stuart"
+  },
+  {
+    "_from": "people/_:thechonger",
+    "_to": "things/_:rosebushred",
+    "type": "isMemberOf",
+    "vertex": "_:thechonger"
+  },
+  {
+    "_from": "people/_:thelizard",
+    "_to": "people/_:chipgardner",
+    "type": "seeAlso",
+    "vertex": "_:thelizard"
+  },
+  {
+    "_from": "people/_:theschneidermannmonkey1",
+    "_to": "people/_:augustlindt",
+    "type": "hasFriend",
+    "vertex": "_:theschneidermannmonkey1"
+  },
+  {
+    "_from": "people/_:thewidowfeeney",
+    "_to": "people/_:benalterman",
+    "type": "hasFriend",
+    "vertex": "_:thewidowfeeney"
+  },
+  {
+    "_from": "people/_:thewidowfeeney",
+    "_to": "places/_:shadyviewboardandcare",
+    "type": "livesAt",
+    "vertex": "_:thewidowfeeney"
+  },
+  {
+    "_from": "people/_:tommcmahon",
+    "_to": "people/_:patrickmcmahon",
+    "type": "isSiblingOf",
+    "vertex": "_:tommcmahon"
+  },
+  {
+    "_from": "people/_:tommcmahon",
+    "_to": "things/_:unnamedmechanicbusiness",
+    "type": "hasWorkedAt",
+    "vertex": "_:tommcmahon"
+  },
+  {
+    "_from": "people/_:victor",
+    "_to": "things/_:trainerforthestarsseekingstars",
+    "type": "worksAt",
+    "vertex": "_:victor"
+  },
+  {
+    "_from": "people/_:zowber",
+    "_to": "things/_:nashasha",
+    "type": "isMemberOf",
+    "vertex": "_:zowber"
+  },
+  {
+    "_from": "events/_:margotchunkloseshervirginity",
+    "_to": "places/_:laramiefeedandwesternsupply",
+    "type": "occurredAt",
+    "vertex": "_:margotchunkloseshervirginity"
+  },
+  {
+    "_from": "events/_:ionetimekilledafrankenstein",
+    "_to": "places/_:laramiefeedandwesternsupply",
+    "type": "occurredAt",
+    "vertex": "_:ionetimekilledafrankenstein"
+  },
+  {
+    "_from": "events/_:ionetimekilledafrankenstein",
+    "_to": "people/_:unnamedsecurityguardatlaramiesupply",
+    "type": "hasParticipant",
+    "vertex": "_:ionetimekilledafrankenstein"
+  },
+  {
+    "_from": "events/_:ionetimekilledafrankenstein",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:ionetimekilledafrankenstein"
+  }
+]

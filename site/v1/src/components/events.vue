@@ -3,25 +3,23 @@
     <div id="map" style="width: 100%;height: 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;"></div>
     <div id="vue-root" class="container is-fixed-top">
       <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
-      <!-- -------------------------------------------------------------- TIMELINE
-<div id="line"/>
--->
-      <!-- <nav v-if="state === 'filled'" class="navbar is-fixed-top"> -->
-      <!-- <div id="console" class="columns is-size-7 has-text-weight-bold"> -->
       <!-- ************************************************************************************ #CONSOLE -->
-      <div v-if="state === 'filled'" id="console" class="has-text-weight-bold">
-        <!-- <a class="button is-small" v-on:click="zoomToFullExtent">
-    <span class="icon is-small">
-      <i class="mdi mdi-github"></i>
-    </span>
-    <span>X</span>
-  </a> -->
-        <a href="http://localhost:8181/#/events">
-          <b-icon icon="link" size="is-small"></b-icon>
-        </a>
-        <a class="" v-on:click="zoomToFullExtent">
+      <div class="has-text-weight-bold">
+        
+        <!-- <a class="" v-on:click="zoomToFullExtent">
           <b-icon icon="arrow-expand-all" size="is-small"></b-icon>
-        </a>
+        </a> -->
+
+        <div class="columns">
+          <div class="column is-full">
+            <p style="padding-top:1em;" class="title is-size-2 has-text-white">{{this.$MOMENT(times.line.begin).format('YYYY.MMM.DD')}} to {{this.$MOMENT(times.line.end).format('YYYY.MMM.DD')}}</p>
+
+            <!-- <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p> -->
+            <!-- <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p> -->
+          </div>
+          
+        </div nb="/.columns">
+
         <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
         <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
           <i :class="console.clazz" class="mdi"></i>
@@ -40,64 +38,57 @@
         <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
         <!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
         <!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-        <div class="tile is-ancestor">
-          <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <div class="columns">
-                <div class="column">
-                  <p class="title is-size-7">EVENTS BT {{ times.line.begin }} - {{ times.line.end }}</p>
-                  <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p>
-                  <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p>
-                  <p class="">
-                    <div style="font-size:.5em;" v-for="event in events">{{ event.id }}</div>
-                  </p>
-                </div>
-                <div v-if="geoms" class="column">
-                  <p class="title is-size-7">GEOMS</p>
-                  <p class="is-size-7">{{(geoms.length)}}</p>
-                  <p class="is-size-7">({{(l_json.getLayers().length)}}l)</p>
-                </div>
-                <div class="column">
-                  <p class="title is-size-7" v-if="active.key">GRPH</p>
-                  <p v-if="active.graph.participants">ppl:{{active.graph.participants.length}}</p>
-                </div>
-              </div>
-              <!-- /.columns -->
-            </div>
-            <!-- /.tile -->
-          </div>
-          <div class="tile is-parent">
-            <div class="tile is-child box">
-              <p class="title is-size-7" v-if="active.key">ACTIVE</p>
-              <p class="is-size-7">{{active.key}}</p>
-              <p v-if="active.item" class=" is-size-7">{{active.item.content}} ({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}})</p>
-              <p v-if="active.item" class="" style="font-size:.5em;">{{active.item.article}}</p>
-              <p v-if="(active.item && active.item.geo.length>0)">
-                <a class="" v-on:click="zoomToNext">
-                  <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
-                </a>
-              </p>
-              <div v-if="seens" class="column">
+              
+              <!-- <div v-if="seens" class="column">
                 <p class="title is-size-7">SEENS</p>
                 <p class="is-size-7">{{(seens.length)}}</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> -->
+          
+
       <!-- ************************************************************************************ /#CONSOLE -->
       <!-- #.navbar </nav> -->
-      <div class="" id="container-main">
-        <!-- -------------------------------------------------------------- SLIDER -->
-        <div id="slider" />
+      <div :class="(!state)?'is-hidden':''" id="container-main">
+        
+      
+      <div id="timeline"></div>
+
+      <!-- -------------------------------------------------------------- SLIDER -->
+        <div style="margin-top:5em;" id="slider"></div>
+
+    <div class="columns" v-if="active.key" id="dv-timeline-graph">
+
+      <div class="column is-two-fifths">
+        <div v-if="active.key">
+          
+<p style="margin-top:2em;" class="dv-title is-size-3">{{active.item.content}}</p>
+<p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
+            <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
+          </a></p>
+        <p style="margin-top:2em;">
+<div style="padding:0 4em;" v-for="articleitem in active.item.article">
+{{articleitem}}
+</div>
+      </p>        
+
+        </div nb="/if-active-key">
+      </div nb="/.is-two-fifths">
+<div class="column is-one-fifth"></div>
+      <div class="column is-two-fifths">
+        <div style="margin-top:4em;" v-if="active.key">
+<p class="is-size-4 dv-title-sub">Participants:</p>
+<p v-for="prsn in active.graph.participants">{{prsn.name}}</p>
+        </div>
       </div>
-      <!-- ************************************************************************************ /#CONTAINER-MAIN -->
-      <div id="timeline" />
-    </div>
+
+    </div nb="/.columns">
     <!-- ************************************************************************************ /#CONTAINER-MAIN -->
-  </div>
+  </div nb="/#container-main">
   <!-- ./#vue-root -->
-  </div>
+
+</div nb="/if-state">
+    </div nb="/#vue-root">
+  </div nb="/#dv-app">
 </template>
 
 <script>
@@ -109,7 +100,7 @@ export default {
       page: {
         title: "Andy Dalyverse Events"
       },
-      state: "filled",
+      state: true,
       fittable: true,
       geoms: [],
       seens: [],
@@ -121,23 +112,23 @@ export default {
         previous: null,
         default: {
           radius: 6,
-          fillColor: "#df04a3",
-          color: "#fc00b5",
+          fillColor: 'rgba(292,219,56,.6)',
+          color: "yellow",
           weight: 1,
           opacity: 0.8,
           fillOpacity: 0.8
         },
         active: {
           radius: 12,
-          fillColor: "#e3e10b",
-          color: "#c9c70a",
+          fillColor: '#0DDA19',
+          color: "white",
           weight: 1,
           opacity: 0.8,
           fillOpacity: 0.6
         },
         clicked: {
           radius: 12,
-          fillColor: "#e3e10b",
+          fillColor: 'rgba(292,219,56,.2)',
           color: "white",
           weight: 5,
           opacity: 1,
@@ -238,8 +229,6 @@ export default {
               return ev.geo.length < 1;
             }),
             ev => {
-              console.log("ev in neweventkey _find 226", ev);
-              console.log("tgkey in neweventkey _find 226", tgkey);
               return (
                 ev.geo[0].geo_key.id == tgkey.id &&
                 ev.geo[0].geo_key.type == tgkey.type
@@ -331,17 +320,10 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "MOUNTED! Bootstrapping events and initting vizes..." : null
     );
 
-    if (this.MAP == null) {
-      new L.Map('map', {
-        zoomControl: false,
-        center: [41.12410774245512, -41.6872787475586],
-        attributionControl: false,
-        zoom: 3
-      })
-    }
+    
 
     this.initBaseMap();
-    // this.setSlider();
+    this.setSlider();
     this.fetchEvents();
   }, //mounted
   methods: {
@@ -359,17 +341,24 @@ export default {
       let blu = null
       switch (process.env.MODE) {
         case 'L':
-          blu = 'http://mapproxy.libgeo2.llan.ll.mit.edu/wmts/l_mapbox_amazonia_grey/webmercator/{z}/{x}/{y}.png'
+          blu = 'http://localhost:8000/2x.png'
           break
         case '33':
-          blu = 'https://cartocdn_a.global.ssl.fastly.net/base-flatblue/{z}/{x}/{y}.png'
+          blu = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
           break
         default:
           blu = 'http://localhost:8000/2x.png'
           break
       }
 
-
+      if (this.MAP == null) {
+        this.MAP=new L.Map('map', {
+          zoomControl: false,
+          center: [41.12410774245512, -41.6872787475586],
+          attributionControl: false,
+          zoom: 3
+        })
+      }
 
       const baseLayer = new L.TileLayer(blu)
       console.log("baselayer:", blu);
@@ -456,6 +445,8 @@ export default {
         process.env.VERBOSITY == "DEBUG" ? "doPopupStuff()..." : null
       );
 
+      console.log(p)
+
       let copy =
         process.env.VERBOSITY === "DEBUG" ? '<h2 class="has-text-info is-size-2">' +
         p.layer.feature.properties.cartodb_id +
@@ -490,12 +481,13 @@ export default {
       }
     }, //doPopupStuff
     onKey: function (e) {
-      switch (true) {
-        case e.keyCode == 18 && this.state == "empty":
-          this.state = "filled";
+      console.log("keycode:",e.keyCode)
+      switch (e.keyCode) {
+        case 18:
+          this.state = !this.state;
           break;
-        case e.keyCode == 18 && this.state !== "empty":
-          this.state = "empty";
+        case e.keyCode == 999:
+          console.log('999')
           break;
         default:
           this.state = this.state;
@@ -658,10 +650,7 @@ export default {
           ],
           connect: true,
           behaviour: 'drag',
-          pips: {
-            mode: 'range',
-            density: 3
-          },
+          pips: null,
           tooltips: [{ to: effer, from: Number }, { to: effer, from: Number }],
           range: {
             min: parseInt(
@@ -905,8 +894,8 @@ export default {
         this.l_json.clearLayers();
         this.l_json.addData(this.geoms);
       } //if.geoms.null
-    }, //setMap
-    setGraph: function () {
+    } //setMap
+    ,setGraph: function () {
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
         process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
@@ -979,7 +968,7 @@ export default {
         this.zeroOut();
         // this.setSlider();
         this.setTimeline();
-        this.fetchGeometries();
+        if(this.MAP){this.fetchGeometries();}
       }
     }, //events
     "times.line": {
@@ -1006,7 +995,7 @@ export default {
         this.setItem();
         this.setGraph();
         this.setTimeline();
-        this.setMap();
+        if(this.MAP){this.setMap();}
         this.setPageTitle();
       }
     }

@@ -8,52 +8,40 @@ $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
-// Update Bulma's global variables
-// $family-sans-serif: "Nunito", sans-serif;
+$dv-subdued: rgba(69, 73, 85, 1);
+$dv-copy: rgba(243, 239, 245, 1);
+$dv-green: #0DDA19;
+$dv-off-green: rgba(63, 125, 32, 1);
+$dv-black: rgba(0, 0, 0, 1);
+$dv-selected:yellow;
+
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
-$A: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
-// Update some of Bulma's component variables
-$body-background-color: black;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-$dalyNode:rgba(255,255,255,1);
+$dalyNode:$dv-copy;
 $nondalyNode:rgba(125,125,125,1);
 $dalyLink:rgba(255,255,255,.5);
 $nondalyLink:rgba(25,25,25,.8);
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++ local ++ */
-/* +++++++++++++++++++++++++++++++++++++++ noui ++ */
+$font-title:'B612', sans-serif;
+$font-copy:'B612', sans-serif;
 
 $height-header:3vh;
 $height-main:100vh;
 
-body{width:100%;height:100%;color:white;background-color:$body-background-color;}
+$A-primary: $dv-green;
+$A: $dalyLink;
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ /\ var ++ */
 
-.noUi-pips-horizontal{height:auto;}
+body{width:100%;height:100%;color:$dv-copy;background-color:$dv-black;}
 
-.dv-app{
-  height:$height-main;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  // background-color:rgba(255,255,255,0);
-  a{font-weight:800;color:$A;}
-}
-
-#dv-nav-main{
-  background-color: black;
-  a.navbar-item{
-    &:hover{color:darken($A,22%);background-color:$body-background-color;}
-  }
-}
 #vue-root{
   margin:0;
   max-width:100%;
@@ -61,27 +49,9 @@ body{width:100%;height:100%;color:white;background-color:$body-background-color;
   .navbar{background-color:inherit;}
 }
 
-.dv-vertical-columns{height:$height-main;}
-
-.dv-column-left {
-  // padding:0;
-  padding:1em 0;
-  overflow-y: hidden;
-}
-
-.dv-column-right {
-  color: #00eb11;
-  overflow-y: auto;
-  padding-top:5em;
-  // background-color:$body-background-color;
-  background-color:adjust-color($body-background-color, $alpha: -0.4);
-  // border-left:solid 1px white;
-}
-
-.dv-trigger-active{color:red;cursor:pointer;}
+.card{background-color:adjust-color($dv-black,$alpha:-0.2);}
 
 #console{
-  // background-color:rgba(0,0,0,1);
   background-color:transparent;
   font-weight:800;
   font-size:.5em;
@@ -100,24 +70,96 @@ body{width:100%;height:100%;color:white;background-color:$body-background-color;
   color:inherit;
 }
 
-/* +++++++++++++++++++++++++++++++++++++++ network ++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ NOUI ++ */
+.noUi-pips-horizontal{height:auto;}
+
+.noUi-connect{
+  background-color:$dv-green;
+}
+.noUi-base{
+    background-color:$dv-black;
+  }
+/* ++++++++++++++++++++++++++++++++++++++++ /\ NOUI ++ */
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ dv- ++ */
+.dv-title-sub{
+  color:#9B9B9B;
+}
+.dv-app{
+  height:$height-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  // background-color:rgba(255,255,255,0);
+  // a{font-weight:800;color:$A;}
+  a{
+    color:$A;
+    &:hover{color:lighten($A,52%);}
+  }
+}
+
+#dv-nav-main{
+  background-color: $dv-black;
+  a.navbar-item{
+  color:$A-primary;
+  font-weight: 900;
+    &:hover{color:darken($A-primary,22%);background-color:$dv-black;}
+  }
+}
+
+
+#dv-timeline-graph{
+  // margin-top:1em;
+  background-color:adjust-color($dv-black,$alpha:-0.4);
+  padding:2em 0 5em 0;
+}
+
+.dv-vertical-columns{height:$height-main;}
+
+.dv-column-left {
+  // padding:0;
+  padding:1em 0;
+  overflow-y: hidden;
+  font-weight:800;
+}
+
+.dv-title{
+  font-family:$font-title;
+  color:$dv-copy;text-weight:900;}
+
+
+.dv-column-right {
+  color: $dv-copy;
+  overflow-y: auto;
+  padding-top:9em;
+  background-color:adjust-color($dv-black,$alpha:-0.1);
+  // background-color:adjust-color($body-background-color, $alpha: -0.4);
+  // border-left:solid 1px white;
+  .dv-graph-copy{
+    font-family:$font-copy;
+    color:$dv-copy;
+    padding:1em 3em;
+    li{padding-bottom:1em;}
+  }
+}
+
+.dv-trigger-active{color:$A;cursor:pointer;}
+
+/* ++++++++++++++++++++++++++++++++++++++++ /\ dv- ++ */
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ NETWORK- ++ */
 #network{
-  // background-color:rgba(0,0,0,1);
   background-color:transparent;
   height:100%;
   width:100%;
   border:none;
-    /*position:relative;*/
-  // height: 100vh;
-  // width: 100%;
-  /*min-height: calc(100vh - #{$navbar-height});*/
-  /*height:auto;width:auto;*/
-  /*display: block;*/
   overflow:hidden;
 
 svg {
-/*height:50vh;*/
-// outline: black solid 1px;
 position:relative;
 background-color:transparent;
 height:100%;
@@ -158,7 +200,7 @@ stroke-opacity:.1;
 }
     }//daly
 &.selected{
-  stroke:yellow;
+  stroke:$dv-selected;
   stroke-width:3;
   r:10;
 }
@@ -167,8 +209,70 @@ fill-opacity:.1;
 stroke-opacity:.1;
 }
 }
+/* ++++++++++++++++++++++++++++++++++++++++ /\ NETWORK- ++ */
 
-/* +++++++++++++++++++++++++++++++++++++++ timeline ++ */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ FONTS ++ */
+
+// @font-face {
+//   font-family: 'OpenSans-ExtraBold';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local('OpenSans-ExtraBold'), local('OpenSans-ExtraBold'), url('assets/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+// }
+
+@font-face {
+  font-family: 'B612';
+  font-style: normal;
+  font-weight: 400;
+  src: local('B612'), local('B612'), url('assets/fonts/B612/B612-Bold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: 'Miriam Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Miriam_Libre'), local('Miriam_Libre'), url('assets/fonts/Miriam_Libre/MiriamLibre-Bold.ttf'), format('truetype');
+}
+
+@font-face{
+  font-family:'Doppio_One';
+font-style:normal;
+font-weight:400;
+src:local('Doppio_One'),local('Doppio_One'),url('./assets/fonts/Doppio_One/DoppioOne-Regular.ttf'), format('truetype');
+}
+
+@font-face{
+  font-family:'Fira_Code';
+font-style:normal;
+font-weight:400;
+src:local('Fira_Code'),local('Fira_Code'),url('assets/fonts/Fira_Code/FiraCode-Regular.ttf'), format('truetype');
+}
+
+@font-face{
+  font-family:'IBM_Plex_Mono';
+font-style:normal;
+font-weight:400;
+src:local('IBM_Plex_Mono'),local('IBM_Plex_Mono'),url('assets/fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf'), format('truetype');
+}
+
+@font-face{
+  font-family:'K2D';
+font-style:normal;
+font-weight:400;
+src:local('K2D'),local('K2D'),url('assets/fonts/K2D/K2D-SemiBold.ttf'), format('truetype');
+}
+
+@font-face{
+  font-family:'Nanum_Gothic';
+font-style:normal;
+font-weight:400;
+src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/NanumGothic-Bold.ttf'), format('truetype');
+}
+/* ++++++++++++++++++++++++++++++++++++++++ /\ FONTS- ++ */
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ TIMELINE ++ */
 #timeline{
   padding-top:0;
 }
@@ -182,9 +286,9 @@ stroke-opacity:.1;
   background-color:rgba(0,0,0,.05)
 }
 .vis-item {
-  background-color:rgba(91,53,23,1);
-  color:#d8b425;
-  border-color:#d8b422;
+  background-color:$dv-black;
+  color:$dv-copy;
+  border-color:$dv-copy;
 }
 .vis-item.vis-box{
   border-radius:3px;
@@ -193,21 +297,44 @@ stroke-opacity:.1;
   font-weight:800;
   font-size:.8em;
 }
+
+.vis-dot.vis-selected{
+
+}
 .vis-item.vis-point.vis-selected, .vis-item.vis-selected{
-  background-color:orange;
-  color:rgba(91,53,23,1);
+  background-color:$dv-green;
+  color:$dv-black;
+  border-color:$dv-green;
+  .dv-time-item-w-geo{color:$dv-copy;}
 }
 .vis-text.vis-major{
   font-weight:800;
   font-size:1.7em;
+  color:rgba(255,255,255,.6);
 }
 .vis-text.vis-minor{
   font-size:.9em;
-  color:rgba(5,5,5,.5);
+  color:rgba(255,255,255,.6);
 }
 .dv-time-item{
 .dv-time-item-w-geo{
-  font-size:1.1em;
-  color: $pink;
+  font-size:1.4em;
+  color: $dv-green;
 }
 }
+
+.vis-time-axis .vis-grid.vis-minor{
+  border-color:rgba(255,255,255,.2);
+}
+
+.vis-panel.vis-bottom{
+
+  border-color:rgba(255,255,255,.2);
+}
+
+.vis-timeline{
+  
+  border:none;
+  // rgba(255,255,255,.2);
+}
+/* ++++++++++++++++++++++++++++++++++++++++ /\ TIMELINE- ++ */

@@ -11,48 +11,73 @@
 </li>
  -->
           <div class="columns">
-            <div class="column is-4"></div>
+            <div class="column is-5"></div>
             <div class="field column" style="padding:1% 2% 0 2%;margin-bottom:0;">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
                 <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-large" type="text">
               </div note="./control">
             </div>
-            <div class="column is-4"></div>
+            <div class="column is-2"></div>
           </div>
         <!-- </ul> -->
         <div id="network">
           <svg></svg>
         </div note="/#network">
       </div note="/.dv-column-left">
+    </div nb="/.dv-vertical-columns">
+    
 
-            <div v-if="active.key" class="column is-one-third is-overlay dv-column-right">
+<div v-if="active.key" class="column is-overlay is-one-third dv-column-right">
               <div id="dv-graph-wrapper">
-                <h4 class="is-size-4 has-text-weight-bold">{{active.label}}</h4>
+                <h4 class="is-size-4 has-text-weight-bold dv-title">{{active.label}}</h4>
                 <br/>
               </div note="/#dv-graph-wrapper">
-              <ul v-if="active.article">
+              <ul class="dv-graph-copy is-size-6 has-text-left" v-if="active.article">
                 <li>{{$_.first(active.article )}}
                 </li>
-                <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1
-      )))">
+                <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1)))">
                   {{articlechunk}}
                 </li>
               </ul>
               <br/>
               <div v-if="active.graph">
-                <div v-for="bucket in active.graph" class="tile is-12">
-                  <p class="heading">{{bucket.bucket_label}} ({{bucket.bucket_raw}})</p>
-                  <ul>
-                    <li v-for="node in bucket.nodes" class="title is-size-7">
-                      <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div note="/.dv-column-right">
 
-    </div>
+                            <div v-for="bucket in active.graph" class="row columns">
+
+                              <!-- /graph items -->
+
+                                <div class="column is-full">
+                                    <div class="card large">
+                                        <div class="card-image">
+                                            <figure class="image">
+                                                <span class="fa fa-circle"></span>
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="media">
+                                                <!-- <div class="media-left">
+                                                    <figure class="image is-96x96">
+                                                        <img src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg" alt="Image">
+                                                    </figure>
+                                                </div> -->
+                                                <div class="media-content">
+                                                    <p class="dv-title-sub has-text-weight-bold is-size-6 no-padding has-text-centered">{{bucket.bucket_label}}:</p>
+                                                </div>
+                                            </div>
+                                            <div class="content dv-graph-copy">
+                                                  <p v-for="node in bucket.nodes" class="title is-size-7">
+                                                    <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
+                                                  </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row.columns -->
+</div>
+                                          </div note="/.dv-column-right">
+
   </div>
   <!-- ./#vue-root -->
 </template>
@@ -86,13 +111,12 @@ export default {
         clazz: null,
         throb: false
       },
-      relationMap: [{ "rel": "hasFriend", "source": "Friendships", "target": "Friendships", "ver": "has friend" }, { "rel": "isFormerMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is former member of" }, { "rel": "isMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is member of" }, { "rel": "caresFor", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "cares for" }, { "rel": "isCaredForBy", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is cared for by" }, { "rel": "isClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is client of" }, { "rel": "wasClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "was client of" }, { "rel": "hasParticipant", "source": "Event Participants", "target": "Events Participated In", "ver": "has participant" }, { "rel": "participatedIn", "source": "Events Participated In", "target": "Event Participants", "ver": "participated in" }, { "rel": "isPetOf", "source": "Owners", "target": "Owns Pet", "ver": "is pet of" }, { "rel": "isChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is child of" }, { "rel": "isPossibleChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is possible child of" }, { "rel": "isSiblingOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is sibling of" }, { "rel": "islocateAt", "source": "Locations", "target": "Locations", "ver": "is located at" }, { "rel": "livesAt", "source": "Home Locations, Current & Former", "target": "Home Of", "ver": "lives at" }, { "rel": "isSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is spouse of" }, { "rel": "wasSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "was spouse of" }, { "rel": "isFormerSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is former spouse of" }, { "rel": "hasWorkedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "hasWorkedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "workedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "workedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "worksAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works at" }, { "rel": "worksFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works for" }, { "rel": "occurredAt", "source": "Event Location", "target": "Events Here", "ver": "occurred at" }, { "rel": "seeAlso", "source": "See Also", "target": "See Also", "ver": "see also" }]
+      relationMap: [{"rel":"miscellaneous","source":"Miscellaneous Connections","target":"Miscellaneous Connections","ver":"miscellaneous"},{"rel":"hasFriend","source":"Friendships Claimed","target":"Friendship Claimed By","ver":"has friend"},{"rel":"isFormerMemberOf","source":"Memberships","target":"Former Members","ver":"is former member of"},{"rel":"isMemberOf","source":"Memberships","target":"Current Members","ver":"is member of"},{"rel":"caresFor","source":"Professional Partnerships - Charges","target":"Caretakers","ver":"cares for"},{"rel":"isCaredForBy","source":"Caretakers","target":"Professional Partnerships - Charges","ver":"is cared for by"},{"rel":"isClientOf","source":"Professional Partnerships - Agencies","target":"Professional Partnerships - Clients","ver":"is client of"},{"rel":"wasClientOf","source":"Former Professional Partnerships - Agencies","target":"Former Professional Partnerships - Clients","ver":"was client of"},{"rel":"hasParticipant","source":"Event Participants","target":"Events Participated In","ver":"has participant"},{"rel":"participatedIn","source":"Events Participated In","target":"Event Participants","ver":"participated in"},{"rel":"isPetOf","source":"Pets","target":"Owners","ver":"is pet of"},{"rel":"isChildOf","source":"Familial Relations - Parents","target":"Familial Relations - Children","ver":"is child of"},{"rel":"isPossibleChildOf","source":"Familial Relations - Possible Parents","target":"Familial Relations - Possible Children","ver":"is possible child of"},{"rel":"isSiblingOf","source":"Familial Relations - Sibling","target":"Familial Relations - Sibling","ver":"is sibling of"},{"rel":"islocateAt","source":"Locations","target":"Locations - Sites Of","ver":"is located at"},{"rel":"livesAt","source":"Home Locations, Current & Former","target":"Home Of","ver":"lives at"},{"rel":"isSpouseOf","source":"Current Spouses","target":"Current Spouses","ver":"is spouse of"},{"rel":"wasSpouseOf","source":"Former Spouses","target":"Former Spouses","ver":"was spouse of"},{"rel":"hasWorkedAt","source":"Former Employing Agencies","target":"Former Employees","ver":"has worked at"},{"rel":"hasWorkedFor","source":"Former Employers","target":"Former Personal Employees","ver":"has worked for"},{"rel":"worksAt","source":"Current Employers","target":"Current Employees","ver":"works at"},{"rel":"worksFor","source":"Professional Relationship - Current Employers","target":"Professional Relationship - Current Employees","ver":"works for"},{"rel":"occurredAt","source":"Event Location","target":"Events Here","ver":"occurred at"},{"rel":"seeAlso","source":"See Also","target":"See Also","ver":"see also"}]
     }
   }, // data
   beforeCreate () {
     // some laziness to be fixed in the future
-    console.log(document.getElementById('map')
-)
+    // console.log(document.getElementById('map'))
   }, // beforeCreate
   created () {
 
@@ -109,6 +133,14 @@ export default {
 
     })
 
+    // if (process.env.MODE == "T") {
+      // this.fakeFetchEntities('small')
+
+    // } else {
+      this.fetchEntities()
+
+    // }
+
     this.console = {
       msgs: [{ msg: "created", severity: "normal" }],
       throb: true,
@@ -122,19 +154,14 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    if (process.env.MODE == "T") {
-      this.fakeFetchEntities('small')
-
-    } else {
-      this.fetchEntities()
-
-    }
+    
 
     if (this.$route.params
       .activeid) {
       console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
       this.active.key = decodeURIComponent(this.$route.params.activeid);
       console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
+      
     }
 
   }, //mounted
@@ -187,6 +214,7 @@ export default {
             lgo.edge_primary = lg.typ + '_for_' + primary
             return lgo
           }), 'edge_primary')
+
 
       let graf = this.$_.map(buckets, (Rs) => {
 
@@ -285,7 +313,6 @@ export default {
 
     },
     dragends (d) {
-
       if (this.active.key == d._id) {
         this.unSetActive(d._id)
       } else {
@@ -453,8 +480,6 @@ export default {
 
       simulation.force("link")
         .links(graph_edges);
-
-      console.log("simulation:", simulation);
 
       function ticked() {
         link.attr("d", positionLink);
@@ -662,11 +687,14 @@ export default {
             return p.selected = p.previouslySelected = false;
           })
         }
-
+// console.log("this@690:",this)
+if(this.className.baseVal.indexOf('invisible')<0){
         d3v4.select(this).classed("selected", function (p) {
+          console.log("p after:",p);
           d.previouslySelected = d.selected;
           return d.selected = true;
         });
+      }
 
         node.filter(function (d) {
             return d.selected;
@@ -693,7 +721,7 @@ export default {
         d.fx = null;
         d.fy = null;
         node.filter(function (d) {
-            return d.selected;
+                      return d.selected;
           })
           .each(function (d) { //d.fixed &= ~6; 
             d.fx = null;
@@ -768,18 +796,18 @@ export default {
       }
     }, //onkey
     setPageTitle: function () {
-      let sub = null;
+      // let sub = null;
 
-      switch (true) {
-        case typeof this.active.item == "undefined":
-          sub = this.active.key;
-          break;
-        default:
-          sub = this.active.item.content;
-          break;
-      }
-
-      this.page.title = "Dalyverse Entities Graph: " + sub;
+      // switch (true) {
+      //   case typeof this.active.item == "undefined":
+      //     sub = this.active.key;
+      //     break;
+      //   default:
+      //     sub = this.active.item.content;
+      //     break;
+      // }
+let sub = "Dalyverse Entities Graph: "
+      this.page.title = (this.active.label)?sub+this.active.label:sub;
     }, //setPageTitle
     setItem: function (q) {
 
@@ -934,7 +962,14 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
           }) //axios.then
           .catch(e => {
             console.error(e);
-          }); //axios.catch
+          }) //axios.catch
+          .finally(e => {
+            
+            if(this.active.key && !this.active.graph){
+              this.active.graph = this.subGraph(this.getGraph());
+            }
+
+          }) //axios.catch
       } //fetchEntities
       ,
     getClass: function (which, one) {

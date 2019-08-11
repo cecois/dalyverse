@@ -1,4 +1,16 @@
 [{
+  "_key": "_:byrondennistonkidnapsbeetlebailey"
+  , "name": "Byron Denniston Kidnaps Beetle Bailey"
+  , "article": ["With malice aforethought, Byron Denniston kidnaps the infant Prince George of Cambridge, promptly renaming the boy."]
+  , "timestamp": {
+    "start": "2013-10-17T16:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "approximate"
+    , "nb": "between July 2013 and July 2014"
+  }
+},{
   "_key": "_:daltonwilcoxmurdersanallergic"
   , "name": "Dalton Wilcox Murders an Allergic"
   , "article": ["Mistaking the coughing and weezing of an allergic man as symptoms of werewolfism, Dalton Wilcox shoots dead a man in a Los Angeles parking lot."]
@@ -1055,18 +1067,6 @@
     , "nb": "timestamp is prior to ADPPP#S1.5 and CBB#200"
   }
 }, {
-  "_key": "_:dondimellostageshanselandgretel"
-  , "name": "Don DiMello Presents: Disney's Hansel and Gretel"
-  , "article": ["Some time prior to Spring 2018, Don DiMello stages a production of the classic 'Hansel and Gretel' which results in, possibly among other legalities, a flurry of letters from a cast member named Alexandra, all of which are summarily ignored."]
-  , "timestamp": {
-    "start": "2017-10-18T13:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "estimate-prior"
-    , "nb": "timestamp is approximate - some time prior to ADPPP#S2.7"
-  }
-}, {
   "_key": "_:dondimellostruewest"
   , "name": "Don DiMello Presents: Disney's True West"
   , "article": ["Over the fall of 2011, Mr. DiMello teams with actors John C. Reilly and Nick Nolte to launch a production of Sam Shepard's 'True West' to be staged in a VFW hall in Death Valley, California. The show evidently never makes it due to the actors' objections to some of Mr. DiMello's tactics -- kidnapping and cuckolding -- as well as his insistence that beautiful women do a sexy dance in a tandem horse costume, followed by a simulated live birth, followed by foreplay."]
@@ -1429,9 +1429,9 @@
 }, {
   "_key": "_:dondimellopresentsdisneyshanselandgretel"
   , "name": "Don DiMello Presents 'Disneys Hansel and Gretel'"
-  , "article": ["The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and who doesn't really know what's happening. The show fails to reach denouement."]
+  , "article": ["Some time prior to Spring 2018, Don DiMello stages a production of the classic 'Hansel and Gretel' which results in, possibly among other legalities, a flurry of letters from a cast member named Alexandra, all of which are summarily ignored.","The show features a Gretel who suffers from both physical and mental problems - one leg 1.5' shorter than the other and who doesn't really know what's happening. The show fails to reach denouement."]
   , "timestamp": {
-    "start": "2013-02-11T19:00:00Z"
+    "start": "2018-02-11T19:00:00Z"
     , "end": null
   }
   , "nb_timestamp": {
@@ -1453,14 +1453,14 @@
 }, {
   "_key": "_:dondimellofindsachild"
   , "name": "Don DiMello Finds a Child"
-  , "article": ["Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it."]
+  , "article": ["Don DiMello discovers a 2 year-old child has been left behind after one of his shows at the Pasadena Fairy Tale Theatre. He keeps it, attends Marissa Wompler's birthday party with it."]
   , "timestamp": {
-    "start": "2014-08-10T02:30:00Z"
+    "start": "2014-08-09T02:30:00Z"
     , "end": null
   }
   , "nb_timestamp": {
     "class": null
-    , "nb": "timestamp is acc. to CBB#304"
+    , "nb": "timestamp is the night prior to Wompler's birthday"
   }
 }, {
   "_key": "_:dondimellopresentscdisneysomeondownandgetfuckedattheplanetarium"
@@ -1476,7 +1476,7 @@
   }
 }, {
   "_key": "_:cactustonyisinterrogated1"
-  , "name": "Cactus Tony is Interrogated and Cracks (1)"
+  , "name": "Cactus Tony is Interrogated and Cracks (#1)"
   , "article": ["For the first time in as many weeks, Cactus Tony cracks under the pressure of interrogation. The 2nd time would occur at Earwolf studios."]
   , "timestamp": {
     "start": "2013-02-04T19:00:00Z"
@@ -1488,7 +1488,7 @@
   }
 }, {
   "_key": "_:cactustonyisinterrogated2"
-  , "name": "Cactus Tony is Interrogated and Cracks (2"
+  , "name": "Cactus Tony is Interrogated and Cracks (#2)"
   , "article": ["In order to garner good press for Don DiMello, who was lying low at Griffith Observatory, Cactus Tony appears on the Comedy Bang! Bang! podcast, only to crack under Croatian Special Forces interrogation techniques and attempt suicide by defenestration."]
   , "timestamp": {
     "start": "2013-02-10T19:00:00Z"
@@ -2261,7 +2261,7 @@
 }, {
   "_key": "_:dondimelloandcactustonyattendwomplersbirthday"
   , "name": "Don DiMello and Cactus Tony Attend Marissa Wompler's Birthday Party"
-  , "article": ["Tracked down online by Seth Wompler, Mr. DiMello attends the Six Flags birthday party of Marissa Wompler (at her request), accompanied by a young child who had abandoned at one of his shows the night prior."]
+  , "article": ["Tracked down online by Seth Wompler, Mr. DiMello attends the Six Flags birthday party of Marissa Wompler (at her request), accompanied by a young child who had been abandoned at one of his shows the night prior."]
   , "timestamp": {
     "start": "2014-08-10T19:00:00Z"
     , "end": null
@@ -2305,5 +2305,17 @@
   , "nb_timestamp": {
     "class": null
     , "nb": "timestamp is rel. to imdb's filming date for nosferatu"
+  }
+}, {
+  "_key": "_:patrickmcmahonliftsarelic"
+  , "name": "Patrick McMahon Steals a Tapestry from The Hunt"
+  , "article": [""]
+  , "timestamp": {
+    "start": "1980-02-25T09:00:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": null
+    , "nb": "timestamp is a rough guess to his birthdate of 1960"
   }
 }]
