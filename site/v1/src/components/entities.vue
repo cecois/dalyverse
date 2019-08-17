@@ -1,120 +1,83 @@
 <template>
   <div id="vue-root" class="">
     <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
-    <nav id="dv-nav-main" class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="dv-nav-menu" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-        Home
-      </a>
-          <a class="navbar-item">
-        Entities
-      </a>
-          <a class="navbar-item">
-        Events
-      </a>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-          </div>
-        </div>
-      </div>
-    </nav>
     <div class="columns dv-vertical-columns">
-      <div class="column is-half dv-column-left">
+      <div class="column is-full dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->
-        <ul>
+        <!-- <ul style="border:none;background-color:black;"> -->
           <!-- <li>entities_total:
   <span v-if="entities_total.loading==true">1 sec...</span>
   <span v-else>{{entities_total.v}}</span>
 </li>
  -->
-          <li class="columns">
-            <div class="column is-3"></div>
-            <div class="field column">
+          <div class="columns">
+            <div class="column is-5"></div>
+            <div class="field column" style="padding:1% 2% 0 2%;margin-bottom:0;">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
-                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
-                <div class="column is-3"></div>
-              </div note="./columns">
+                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-large" type="text">
+              </div note="./control">
             </div>
-          </li>
-        </ul>
+            <div class="column is-2"></div>
+          </div>
+        <!-- </ul> -->
         <div id="network">
           <svg></svg>
         </div note="/#network">
       </div note="/.dv-column-left">
-      <div class="column is-half dv-column-right">
-        <div id="console" class="is-right breadcrumb">
-          <ul class="">
-            <li v-for="msg
- in console.msgs">
-              <span v-bind:class="msg.severity">{{msg.msg}}</span>
-            </li>
-          </ul>
-        </div>
-        {{active.label}}
-        <br/>
-        <!-- active.article: {{active.article}} -->
-        <p class="is-italic">
-          {{$_.first(active.article)}}
-        </p>
-        <ul v-if="active.article">
-          <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1
-)))">
-            {{articlechunk}}
-          </li>
-        </ul>
-        <br/>
-        <div v-if="active.graph">
-          <div v-for="bucket in active.graph" class="tile is-12">
-            <p class="heading">{{bucket.bucket_label}} ({{bucket.bucket_raw}})</p>
-            <ul>
-              <li v-for="node in bucket.nodes" class="title is-size-7">
-                <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!--         <nav class="level">
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C1</p>
-              <p class="title">3,456</p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C2</p>
-              <p class="title">123</p>
-            </div>
-          </div>
-        </nav> -->
-        <!--         <br/>
-        <nav class="level">
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C3</p>
-              <p class="title">3,456</p>
-            </div>
-          </div>
-          <div class="level-item has-text-centered">
-            <div>
-              <p class="heading">C4</p>
-              <p class="title">123</p>
-            </div>
-          </div>
-        <br/>
-        </nav> -->
-      </div note="/.dv-column-right">
-    </div>
+    </div nb="/.dv-vertical-columns">
+    
+
+<div v-if="active.key" class="column is-overlay is-one-third dv-column-right">
+              <div id="dv-graph-wrapper">
+                <h4 class="is-size-4 has-text-weight-bold dv-title">{{active.label}}</h4>
+                <br/>
+              </div note="/#dv-graph-wrapper">
+              <ul class="dv-graph-copy is-size-6 has-text-left" v-if="active.article">
+                <li>{{$_.first(active.article )}}
+                </li>
+                <li v-for="articlechunk in ($_.last(active.article,(active.article.length-1)))">
+                  {{articlechunk}}
+                </li>
+              </ul>
+              <br/>
+              <div v-if="active.graph">
+
+                            <div v-for="bucket in active.graph" class="row columns">
+
+                              <!-- /graph items -->
+
+                                <div class="column is-full">
+                                    <div class="card large">
+                                        <div class="card-image">
+                                            <figure class="image">
+                                                <span class="fa fa-circle"></span>
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="media">
+                                                <!-- <div class="media-left">
+                                                    <figure class="image is-96x96">
+                                                        <img src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg" alt="Image">
+                                                    </figure>
+                                                </div> -->
+                                                <div class="media-content">
+                                                    <p class="dv-title-sub has-text-weight-bold is-size-6 no-padding has-text-centered">{{bucket.bucket_label}}:</p>
+                                                </div>
+                                            </div>
+                                            <div class="content dv-graph-copy">
+                                                  <p v-for="node in bucket.nodes" class="title is-size-7">
+                                                    <span v-on:click.stop="setActive(node.id)" class="dv-trigger-active">{{node.label}}</span>
+                                                  </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row.columns -->
+</div>
+                                          </div note="/.dv-column-right">
+
   </div>
   <!-- ./#vue-root -->
 </template>
@@ -122,8 +85,6 @@
 <script>
 import * as d3 from 'd3';
 // import Graph from "./graph.vue";
-
-const sourceOfTruth = { p1: "im p1", p2: "im p2" }
 
 export default {
   name: "Entities",
@@ -150,10 +111,13 @@ export default {
         clazz: null,
         throb: false
       },
-      relationMap: [{ "rel": "hasFriend", "source": "Friendships", "target": "Friendships", "ver": "has friend" }, { "rel": "isFormerMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is former member of" }, { "rel": "isMemberOf", "source": "Memberships", "target": "Current & Former Members", "ver": "is member of" }, { "rel": "caresFor", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "cares for" }, { "rel": "isCaredForBy", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is cared for by" }, { "rel": "isClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "is client of" }, { "rel": "wasClientOf", "source": "Professional Partnerships", "target": "Professional Partnerships", "ver": "was client of" }, { "rel": "hasParticipant", "source": "Event Participants", "target": "Events Participated In", "ver": "has participant" }, { "rel": "participatedIn", "source": "Events Participated In", "target": "Event Participants", "ver": "participated in" }, { "rel": "isPetOf", "source": "Owners", "target": "Owns Pet", "ver": "is pet of" }, { "rel": "isChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is child of" }, { "rel": "isPossibleChildOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is possible child of" }, { "rel": "isSiblingOf", "source": "Familial Relations", "target": "Familial Relations", "ver": "is sibling of" }, { "rel": "islocateAt", "source": "Locations", "target": "Locations", "ver": "is located at" }, { "rel": "livesAt", "source": "Home Locations, Current & Former", "target": "Home Of", "ver": "lives at" }, { "rel": "isSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is spouse of" }, { "rel": "wasSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "was spouse of" }, { "rel": "isFormerSpouseOf", "source": "Current & Former Spouses", "target": "Current & Former Spouses", "ver": "is former spouse of" }, { "rel": "hasWorkedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "hasWorkedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "workedAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked at" }, { "rel": "workedFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "has worked for" }, { "rel": "worksAt", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works at" }, { "rel": "worksFor", "source": "Current & Former Employers", "target": "Current & Former Employees", "ver": "works for" }, { "rel": "occurredAt", "source": "Event Location", "target": "Events Here", "ver": "occurred at" }, { "rel": "seeAlso", "source": "See Also", "target": "See Also", "ver": "see also" }]
+      relationMap: [{"rel":"miscellaneous","source":"Miscellaneous Connections","target":"Miscellaneous Connections","ver":"miscellaneous"},{"rel":"hasFriend","source":"Friendships Claimed","target":"Friendship Claimed By","ver":"has friend"},{"rel":"isFormerMemberOf","source":"Memberships","target":"Former Members","ver":"is former member of"},{"rel":"isMemberOf","source":"Memberships","target":"Current Members","ver":"is member of"},{"rel":"caresFor","source":"Professional Partnerships - Charges","target":"Caretakers","ver":"cares for"},{"rel":"isCaredForBy","source":"Caretakers","target":"Professional Partnerships - Charges","ver":"is cared for by"},{"rel":"isClientOf","source":"Professional Partnerships - Agencies","target":"Professional Partnerships - Clients","ver":"is client of"},{"rel":"wasClientOf","source":"Former Professional Partnerships - Agencies","target":"Former Professional Partnerships - Clients","ver":"was client of"},{"rel":"hasParticipant","source":"Event Participants","target":"Events Participated In","ver":"has participant"},{"rel":"participatedIn","source":"Events Participated In","target":"Event Participants","ver":"participated in"},{"rel":"isPetOf","source":"Pets","target":"Owners","ver":"is pet of"},{"rel":"isChildOf","source":"Familial Relations - Parents","target":"Familial Relations - Children","ver":"is child of"},{"rel":"isPossibleChildOf","source":"Familial Relations - Possible Parents","target":"Familial Relations - Possible Children","ver":"is possible child of"},{"rel":"isSiblingOf","source":"Familial Relations - Sibling","target":"Familial Relations - Sibling","ver":"is sibling of"},{"rel":"islocateAt","source":"Locations","target":"Locations - Sites Of","ver":"is located at"},{"rel":"livesAt","source":"Home Locations, Current & Former","target":"Home Of","ver":"lives at"},{"rel":"isSpouseOf","source":"Current Spouses","target":"Current Spouses","ver":"is spouse of"},{"rel":"wasSpouseOf","source":"Former Spouses","target":"Former Spouses","ver":"was spouse of"},{"rel":"hasWorkedAt","source":"Former Employing Agencies","target":"Former Employees","ver":"has worked at"},{"rel":"hasWorkedFor","source":"Former Employers","target":"Former Personal Employees","ver":"has worked for"},{"rel":"worksAt","source":"Current Employers","target":"Current Employees","ver":"works at"},{"rel":"worksFor","source":"Professional Relationship - Current Employers","target":"Professional Relationship - Current Employees","ver":"works for"},{"rel":"occurredAt","source":"Event Location","target":"Events Here","ver":"occurred at"},{"rel":"seeAlso","source":"See Also","target":"See Also","ver":"see also"}]
     }
   }, // data
-  beforeCreate () {}, // beforeCreate
+  beforeCreate () {
+    // some laziness to be fixed in the future
+    // console.log(document.getElementById('map'))
+  }, // beforeCreate
   created () {
 
 
@@ -169,6 +133,14 @@ export default {
 
     })
 
+    // if (process.env.MODE == "T") {
+      // this.fakeFetchEntities('small')
+
+    // } else {
+      this.fetchEntities()
+
+    // }
+
     this.console = {
       msgs: [{ msg: "created", severity: "normal" }],
       throb: true,
@@ -182,20 +154,15 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    if (process.env.MODE == "T") {
-      this.fakeFetchEntities('small')
+    
 
-    } else {
-      this.fetchEntities()
-
-    }
-
-    // this.$nextTick(() => {
     if (this.$route.params
       .activeid) {
+      console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
       this.active.key = decodeURIComponent(this.$route.params.activeid);
+      console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
+      
     }
-    // })
 
   }, //mounted
   methods: {
@@ -248,6 +215,7 @@ export default {
             return lgo
           }), 'edge_primary')
 
+
       let graf = this.$_.map(buckets, (Rs) => {
 
         // get bucket type - same for all, take first, bust it open for edgetype
@@ -289,25 +257,29 @@ export default {
     } //getgraph
     ,
     setActive (nak) {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nak : null
-      );
-
+      console.log('setting active w :nak:', nak);
       let nakk = (nak) ? nak : this.active.key
 
-      console.log("nakk:", nakk);
+      if (nakk) {
+        let nakkf = (nakk.indexOf('%') >= 0) ? decodeURIComponent(nakk) : nakk
 
-      let ai = this.$_.findWhere(this.graph.nodes, { id: nakk })
+        console.info(
+          process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nakkf : null
+        );
 
-      this.active = {
-        key: (!ai) ? null : ai.id,
-        label: (!ai) ? null : ai.label,
-        article: (!ai) ? null : ai.article,
-        graph: null
-      }
 
-      // console.log(this.d3.select(this.prepId(nak)));
-      this.d3.select(this.prepId(nak)).classed("selected", true)
+        let ai = this.$_.findWhere(this.graph.nodes, { id: nakkf })
+
+        this.active = {
+          key: (!ai) ? null : ai.id,
+          label: (!ai) ? null : ai.label,
+          article: (!ai) ? null : ai.article,
+          graph: null
+        }
+
+        this.d3.select('circle').classed("selected", false)
+        this.d3.select(this.prepId(nakkf)).classed("selected", true)
+      } //if nakk
 
     },
     prepId (iak) {
@@ -341,7 +313,6 @@ export default {
 
     },
     dragends (d) {
-
       if (this.active.key == d._id) {
         this.unSetActive(d._id)
       } else {
@@ -378,19 +349,17 @@ export default {
       var rect = gMain.append('rect')
         .attr('width', parentWidth)
         .attr('height', parentHeight)
-        .style('fill', "none")
-        // .on('click.vue', this.unSetActive)
-        .on('click.vue', (w) => { console.log("w in rect.click.vue", w); })
+        .style('fill', "black")
+        .on('click.vue', (w) => {
+          this.unSetActive();
+        })
         .on('click.native', () => {
-          console.log("rect.click.native fired");
           node.each(function (d) {
             d.selected = false;
             d.previouslySelected = false;
           });
           node.classed("selected", false)
         });
-
-      console.log("rect exists:", rect);
 
       var gDraw = gMain.append('g');
 
@@ -502,6 +471,8 @@ export default {
         .force("center", d3v4.forceCenter(parentWidth / 2, parentHeight / 2))
         .force("x", d3v4.forceX(parentWidth / 2))
         .force("y", d3v4.forceY(parentHeight / 2));
+
+      this.simulation = simulation
 
       simulation
         .nodes(graph_nodes)
@@ -716,11 +687,14 @@ export default {
             return p.selected = p.previouslySelected = false;
           })
         }
-
+// console.log("this@690:",this)
+if(this.className.baseVal.indexOf('invisible')<0){
         d3v4.select(this).classed("selected", function (p) {
+          console.log("p after:",p);
           d.previouslySelected = d.selected;
           return d.selected = true;
         });
+      }
 
         node.filter(function (d) {
             return d.selected;
@@ -747,7 +721,7 @@ export default {
         d.fx = null;
         d.fy = null;
         node.filter(function (d) {
-            return d.selected;
+                      return d.selected;
           })
           .each(function (d) { //d.fixed &= ~6; 
             d.fx = null;
@@ -758,18 +732,17 @@ export default {
       var texts = ['Use the scroll wheel to zoom',
         'Hold the shift key to select nodes'
       ]
-
-      svg.selectAll('text')
-        .data(texts)
-        .enter()
-        .append('text')
-        .attr('x', 900)
-        .attr('y', function (d, i) {
-          return 470 + i * 18;
-        })
-        .text(function (d) {
-          return d;
-        });
+      // svg.selectAll('text')
+      //   .data(texts)
+      //   .enter()
+      //   .append('text')
+      //   .attr('x', 900)
+      //   .attr('y', function (d, i) {
+      //     return 470 + i * 18;
+      //   })
+      //   .text(function (d) {
+      //     return d;
+      //   });
 
       return null;
     }, //d3init
@@ -780,7 +753,7 @@ export default {
         case (!d._id):
           c = 'invisible'
           break;
-        case (d.daly == true):
+        case (d.daly=='true'):
           c = 'daly'
           break;
         default:
@@ -823,18 +796,18 @@ export default {
       }
     }, //onkey
     setPageTitle: function () {
-      let sub = null;
+      // let sub = null;
 
-      switch (true) {
-        case typeof this.active.item == "undefined":
-          sub = this.active.key;
-          break;
-        default:
-          sub = this.active.item.content;
-          break;
-      }
-
-      this.page.title = "Dalyverse Entities Graph: " + sub;
+      // switch (true) {
+      //   case typeof this.active.item == "undefined":
+      //     sub = this.active.key;
+      //     break;
+      //   default:
+      //     sub = this.active.item.content;
+      //     break;
+      // }
+let sub = "Dalyverse Entities Graph: "
+      this.page.title = (this.active.label)?sub+this.active.label:sub;
     }, //setPageTitle
     setItem: function (q) {
 
@@ -859,6 +832,7 @@ export default {
       );
       this.active.key = null
       this.active.graph = null
+      this.active.article = null
         // return {
         //   participants: null,
         //   locations: null
@@ -895,7 +869,7 @@ export default {
 
         this.$router.push({
           params: {
-            activeid: (this.active.key) ? encodeURIComponent(this.active.key) : ''
+            activeid: (this.active.key) ? this.active.key : ''
           }
         }); //rejplace
       } //setRoute
@@ -979,7 +953,7 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length
-            this.console.msgs.push({ msg: deeznodes.length + ' entities loaded', severity: normal })
+            this.console.msgs.push({ msg: deeznodes.length + ' entities loaded', severity: 'normal' })
             this.graph = {
               edges: response.data.result[0].edgez,
               nodes: deeznodes
@@ -988,7 +962,14 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
           }) //axios.then
           .catch(e => {
             console.error(e);
-          }); //axios.catch
+          }) //axios.catch
+          .finally(e => {
+            
+            if(this.active.key && !this.active.graph){
+              this.active.graph = this.subGraph(this.getGraph());
+            }
+
+          }) //axios.catch
       } //fetchEntities
       ,
     getClass: function (which, one) {
@@ -1038,7 +1019,11 @@ return {entitiez:unique(entities),edgez:unique(edgees)}'
     },
     graph: {
       handler: function (vnew, vold) {
-        if (vnew !== null) this.D3init();
+        if (vnew !== null) this.D3init()
+        this.$nextTick(() => {
+          console.log("in next tick, setting active...");
+          this.setActive()
+        })
       }
     } //nodes
   } //watch

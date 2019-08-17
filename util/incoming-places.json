@@ -1,4 +1,12 @@
 [{
+  "_key": "_:romeny"
+  , "name": "Rome, NY"
+  , "article": ["Rome is a city in upstate New York. In 1999 a Woodstock revival festival was held there."]
+  , "geo_key": {
+    "type": "point"
+    , "id": 1088
+  }
+},{
   "_key": "_:lacanadaflintridge"
   , "name": "La Cañada Flintridge, CA"
   , "article": ["La Cañada Flintridge is a city in California's Crescenta Valley."]
@@ -193,7 +201,7 @@
 }, {
   "_key": "_:limerickhuntmuseum"
   , "name": "Hunt Museum"
-  , "article": ["The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mara from the Hunt and 'fucked on it for a year.'"]
+  , "article": ["The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mary from the Hunt and 'fucked on it for a year.'"]
   , "geo_key": {
     "type": "poly"
     , "id": 567
@@ -369,7 +377,7 @@
 }, {
   "_key": "_:ctusa"
   , "name": "Connecticut, USA"
-  , "article": ["home of: Yale, a Pantages Theatre"]
+  , "article": ["home of: Yale; a Pantages Theatre"]
   , "geo_key": {
     "type": "poly"
     , "id": 2
