@@ -10,29 +10,40 @@
   <span v-else>{{entities_total.v}}</span>
 </li>
  -->
-          <div class="columns">
+<!--           <div class="columns">
             <div class="column is-5"></div>
-            <div class="field column" style="padding:1% 2% 0 2%;margin-bottom:0;">
-              <div class="control">
-                <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
-                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-large" type="text">
-              </div note="./control">
-            </div>
             <div class="column is-2"></div>
-          </div>
+          </div> -->
         <!-- </ul> -->
         <div id="network">
           <svg></svg>
         </div note="/#network">
       </div note="/.dv-column-left">
+      <div class="column">
+        <div class="field column" style="padding:1% 2% 0 2%;margin-bottom:0;">
+              <div class="control">
+                <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
+                <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-large" type="text">
+              </div note="./control">
+            </div>
+      </div>
     </div nb="/.dv-vertical-columns">
     
 
-<div v-if="active.key" class="column is-overlay is-one-third dv-column-right">
-              <div id="dv-graph-wrapper">
+              <!-- <div v-if="active.key" id="dv-graph-wrapper"> -->
+<!-- <simplebar data-simplebar-auto-hide="false" v-if="active.key" class="column is-overlay is-one-third dv-column-right"> -->
+<div v-if="active.key" id="dv-graph-wrapper" class="column is-overlay is-one-third dv-column-right" >
                 <h4 class="is-size-4 has-text-weight-bold dv-title">{{active.label}}</h4>
                 <br/>
-              </div note="/#dv-graph-wrapper">
+                <!-- <simplebar style="height:15vh;" data-simplebar-auto-hide="false">
+    <div v-for="n in 55" :key="n">Example content {{n}}</div>
+  </simplebar> -->
+ <simplebar id="dv-graph-copy-wrapper">
+
+<!--   <simplebar style="height:200px;" data-simplebar-auto-hide="false">
+    <div v-for="n in 50" :key="n">Example content</div>
+  </simplebar> -->
+
               <ul class="dv-graph-copy is-size-6 has-text-left" v-if="active.article">
                 <li>{{$_.first(active.article )}}
                 </li>
@@ -76,7 +87,10 @@
                             </div>
                             <!-- /.row.columns -->
 </div>
-                                          </div note="/.dv-column-right">
+ </simplebar nb="/#dv-graph-copy-wrapper">
+                                          <!-- </div note="/.dv-column-right"> -->
+              </div note="/v-if.active.key">
+                                          <!-- </div nb="/simplebar#dv-graph-wrapper"> -->
 
   </div>
   <!-- ./#vue-root -->
@@ -84,11 +98,14 @@
 
 <script>
 import * as d3 from 'd3';
-// import Graph from "./graph.vue";
+import simplebar from 'simplebar-vue';
+  import 'simplebar/dist/simplebar.min.css';
 
 export default {
   name: "Entities",
-  // components:{Graph},
+    components: {
+    simplebar
+  },
   data () {
     return {
       url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
@@ -349,7 +366,7 @@ export default {
       var rect = gMain.append('rect')
         .attr('width', parentWidth)
         .attr('height', parentHeight)
-        .style('fill', "black")
+        .style('fill', "white")
         .on('click.vue', (w) => {
           this.unSetActive();
         })
