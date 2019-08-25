@@ -9,10 +9,8 @@ $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 $dv-subdued: rgba(69, 73, 85, 1);
-$dv-copy: rgba(243, 239, 245, 1);
-$dv-green: #0DDA19;
-$dv-off-green: rgba(63, 125, 32, 1);
-$dv-black: rgba(0, 0, 0, 1);
+$dv-copy: rgba(0,0,0,.7);
+$dv-black: rgb(233,233,233);
 $dv-selected:yellow;
 
 $grey-dark: $brown;
@@ -25,10 +23,13 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-$dalyNode:$dv-copy;
+$dalyNode:black;
 $nondalyNode:rgba(125,125,125,1);
-$dalyLink:rgba(255,255,255,.5);
+$dalyLink:#09F130;
 $nondalyLink:rgba(25,25,25,.8);
+
+$dv-green: $nondalyNode;
+$dv-off-green: adjust-color($dv-green,$alpha:-0.2);
 
 $font-title:'B612', sans-serif;
 $font-copy:'B612', sans-serif;
@@ -40,19 +41,24 @@ $A-primary: $dv-green;
 $A: $dalyLink;
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ /\ var ++ */
 
-body{width:100%;height:100%;color:$dv-copy;background-color:$dv-black;}
+body{width:100%;height:100%;
+  // color:$dv-copy;
+  // background-color:$dv-black;
+}
 
 #vue-root{
   margin:0;
   max-width:100%;
   width:100%;
-  .navbar{background-color:inherit;}
+  .navbar{
+    // background-color:inherit;
+  }
 }
 
 .card{background-color:adjust-color($dv-black,$alpha:-0.2);}
 
 #console{
-  background-color:transparent;
+  // background-color:transparent;
   font-weight:800;
   font-size:.5em;
   span{
@@ -66,7 +72,7 @@ body{width:100%;height:100%;color:$dv-copy;background-color:$dv-black;}
 }
 
 .tile{
-  background-color:transparent;
+  // background-color:transparent;
   color:inherit;
 }
 
@@ -101,18 +107,26 @@ body{width:100%;height:100%;color:$dv-copy;background-color:$dv-black;}
 }
 
 #dv-nav-main{
-  background-color: $dv-black;
+  // background-color: $dv-black;
   a.navbar-item{
   color:$A-primary;
   font-weight: 900;
-    &:hover{color:darken($A-primary,22%);background-color:$dv-black;}
+    &:hover{color:darken($A-primary,22%);
+      // background-color:$dv-black;
+    }
   }
 }
 
+#dv-graph-wrapper{
+  background-color:$dv-black;
+}
+#dv-graph-copy-wrapper{
+height:90vh;
+}
 
 #dv-timeline-graph{
   // margin-top:1em;
-  background-color:adjust-color($dv-black,$alpha:-0.4);
+  // background-color:adjust-color($dv-black,$alpha:-0.4);
   padding:2em 0 5em 0;
 }
 
@@ -132,15 +146,16 @@ body{width:100%;height:100%;color:$dv-copy;background-color:$dv-black;}
 
 .dv-column-right {
   color: $dv-copy;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding-top:9em;
-  background-color:adjust-color($dv-black,$alpha:-0.1);
+  // background-color:adjust-color($dv-black,$alpha:-0.1);
   // background-color:adjust-color($body-background-color, $alpha: -0.4);
   // border-left:solid 1px white;
   .dv-graph-copy{
     font-family:$font-copy;
     color:$dv-copy;
     padding:1em 3em;
+    overflow-y: hidden;
     li{padding-bottom:1em;}
   }
 }
@@ -153,15 +168,16 @@ body{width:100%;height:100%;color:$dv-copy;background-color:$dv-black;}
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ NETWORK- ++ */
 #network{
-  background-color:transparent;
+  // background-color:transparent;
   height:100%;
   width:100%;
-  border:none;
+  // border:none;
+  border-top:1px solid $dv-subdued;
   overflow:hidden;
 
 svg {
 position:relative;
-background-color:transparent;
+// background-color:$dv-black;
 height:100%;
 width:100%;
   overflow:hidden;
@@ -171,7 +187,8 @@ width:100%;
 //graph edges
 .link {
   fill: none;
-  stroke: $dalyLink;
+  // stroke: $dalyLink;
+  stroke: #E1DBDB;
   // stroke-opacity: .5;
   stroke-width:2px;
   
@@ -286,7 +303,7 @@ src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/N
   background-color:rgba(0,0,0,.05)
 }
 .vis-item {
-  background-color:$dv-black;
+  // background-color:$dv-black;
   color:$dv-copy;
   border-color:$dv-copy;
 }

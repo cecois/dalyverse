@@ -65,6 +65,8 @@
 </template>
 
 <script>
+  
+
 export default {
   name: 'Default',
   data () {
