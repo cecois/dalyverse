@@ -3,6 +3,7 @@
     "_key": "_:lochnessmonster",
     "article": ["The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter."]
     ,"name": "The Loch Ness Monster",
+    "nami": "Loch Ness Monster, The",
     "links": [
       {
         "uri": "https://en.wikipedia.org/wiki/Loch_Ness_Monster",
@@ -62,11 +63,13 @@
   {
     "_key": "_:thefifthwall",
     "name": "The Fifth Wall",
+    "nami": "Fifth Wall, The",
     "article": ["The Fifth Wall was a theatre review periodical with a particular bent toward innovation."]
   },
   {
     "_key": "_:thechildrenshour",
     "name": "The Children's Hour",
+    "nami": "Children's Hour, The",
     "article": ["The Children's Hour is a play by Lillian Hellman."]
   },
   {
@@ -91,6 +94,7 @@
   {
     "_key": "_:thejourneymen",
     "name": "The Journeymen",
+    "nami": "Journeymen, The",
     "article": ["Possibly the greatest purveyors of Country & Western music ever."]
   },
   {

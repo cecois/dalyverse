@@ -42,7 +42,10 @@ export default {
   name: "App",
   data () {
     return {
-      panes: [{ nom: "Home", active: false, slug: "#/" }, { nom: "Entities", active: true, slug: "#/entities" }, { nom: "Events", active: true, slug: "#/events" }, { nom: "Murderers", active: true, slug: "#/murderers" }, { nom: "Concordance", active: true, slug: "#/concordance" }]
+      panes: [{ nom: "Home", active: true, slug: "#/" }, { nom: "Entities", active: false, slug: "#/entities" }, { nom: "Events", active: false, slug: "#/events" }, { nom: "Murderers", active: false, slug: "#/murderers" }
+      // , { nom: "Concordance", active: false, slug: "#/concordance" }
+      , { nom: "Index", active: false, slug: "#/index" }
+      , { nom: "About", active: false, slug: "#/about" }]
     }
   } //data
 }

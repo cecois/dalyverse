@@ -4,6 +4,8 @@ import DEFAULT from '@/components/Default'
 import EVENTS from '@/components/events'
 import ENTITIES from '@/components/entities'
 import MURDERERS from '@/components/murderers'
+import INDEX from '@/components/index'
+import ABOUT from '@/components/about'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/murderers/:murderer?',
       name: 'murderers',
       component: MURDERERS
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: INDEX
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: ABOUT
     }
   ]
 })

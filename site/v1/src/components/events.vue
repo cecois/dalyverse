@@ -96,6 +96,8 @@ export default {
   name: "Timeline",
   data () {
     return {
+      // url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
+      // url_arango: "http://localhost:8000",
       MAP: null,
       page: {
         title: "Andy Dalyverse Events"
@@ -344,7 +346,8 @@ export default {
           blu = 'http://localhost:8000/2x.png'
           break
         case '33':
-          blu = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
+          // blu = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
+          blu = 'https://{s}.tiles.mapbox.com/v3/infoamazonia.map-xs56h34ri/{z}/{x}/{y}.png'
           break
         default:
           blu = 'http://localhost:8000/2x.png'
@@ -375,8 +378,24 @@ export default {
 
       let q = 'RETURN LENGTH(events)'
 
+      if(process.env.MODE=="T"){
+
+console.log("WE GET local instead...")
+  axios
+        .get('http://localhost:8000/dv-timeline.json')
+        .then(response => {
+          console.info(
+            process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
+          );
+          this.events_total = response.data.result[0];
+        }) //axios.then
+        .catch(e => {
+          console.error(e);
+        }); //axios.catch
+      } else {
+
       axios
-        .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
+        .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
         })
         .then(response => {
@@ -388,7 +407,7 @@ export default {
         .catch(e => {
           console.error(e);
         }); //axios.catch
-
+}
     }, //getotalevents
     getStyle: function (o) {
       return {
@@ -709,8 +728,26 @@ export default {
         this.times.line.end +
         "')) return distinct { id:ev._key, content:ev.name, article:ev.article, start:tstart, end:tend,geo:geo}";
 
+// if(this.url_arango=="http://localhost:8000"){
+  if(process.env.MODE=="T"){
+axios
+        .get("http://localhost:8000/dv-timeline.json")
+        .then(response => {
+          console.info(
+            process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
+          );
+          this.events = response.data.result;
+          this.$nextTick(function () {
+            // events in place, item can be set therefrom...
+            this.setItem();
+          });
+        }) //axios.then
+        .catch(e => {
+          console.error(e);
+        }); //axios.catch
+} else {
       axios
-        .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
+        .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
         })
         .then(response => {
@@ -726,6 +763,7 @@ export default {
         .catch(e => {
           console.error(e);
         }); //axios.catch
+      }//if.else
     }, //fetchEvents
     fetchGeometries: function () {
       console.info(

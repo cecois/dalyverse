@@ -2,9 +2,33 @@
   <div class="dv-app"
  style="height:100%;">
  <div class="columns">
-  <div class="column is-one-third"></div>
+  <!-- <div class="column is-one-third"></div> -->
+  <div class="column">
+    
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      
+<h3 class="title">
+&nbsp;
+</h3>
+<h3 class="title">
+  The Andy Dalyverse
+</h3>
+<h5 class="subtitle">
+  people, places, and things in the greater andy daly canon
+</h5>
+
+    </div>
+  </div>
+</section>
+
+  </div>
+  <!-- <div class="column is-one-third"></div> -->
+      <!--
   <div class="column is-two-thirds">
-      <pre class="has-text-left" style="font-size:.8em;line-height:.9;background-color:black;color:white;">
+       <pre class="has-text-left" style="font-size:.8em;line-height:.9;background-color:black;color:white;">
  +----------------------------------------------------------------------------------------------------+
  |...........................................................:::.......  ..:.:.:..:.:.:.:.::.::.::.:::|
  |......... .....................................:::::........              ..:.:.::.:.:.:.::.:::.:::.|
@@ -57,8 +81,9 @@
  |............................             :===oo=++=======++==+=+++++:++::::+++:+++++=o=++++:+::+:.  |
  |........................                .++==o=oo+++==============+==+++++++=++==+=o==+++++++::+:.  |
  +----------------------------------------------------------------------------------------------------+
-</pre>
+</pre> 
   </div nb="/.column">
+-->
  </div nb="/.columns">
 
   </div>

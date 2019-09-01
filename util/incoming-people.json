@@ -11,6 +11,7 @@
     "_key": "_:fredvasili",
     "daly": "true",
     "name": "Fred Vasili",
+    "nami": "Vasili, Fred",
     "article": [
       "Fred Vasili is an American sailor from The Bronx who infiltrated the Red Beluga Harpoon Class Submarine Crew but couldn't maintain the accent and was outed."
     ]
@@ -19,6 +20,7 @@
     "_key": "_:drbuddymann",
     "daly": "true",
     "name": "Dr. Buddy Mann",
+    "nami": "Mann, Buddy (Dr.)",
     "article": [
       "Dr. Buddy Mann is an anasthesiologist and anasthesia fiend at St. Judas Memorial Hospital who likes the part where he tells the family that the procedure didn't work out."
     ]
@@ -27,6 +29,7 @@
     "_key": "_:mrsbronson",
     "daly": "false",
     "name": "Mrs. Bronson",
+    "nami": "Bronson, Mrs.",
     "article": [
       "Mrs. Bronson is a school teacher who, following a weekend spent with theatrical director Don DiMello, was on medical leave for 6-8 weeks."
     ]
@@ -35,6 +38,7 @@
     "_key": "_:astormhendry",
     "daly": "true",
     "name": "Astor M. Hendry",
+    "nami": "Hendry, Astor M.",
     "article": [
       "Astor M. Hendry is a passenger who openly admits to 'transporting monsters' on the Amtrak Heartland Flyer regional train."
     ]
@@ -43,6 +47,7 @@
     "_key": "_:scottlavendar",
     "daly": "true",
     "name": "Scott Lavendar",
+    "nami": "Lavendar, Scott",
     "article": [
       "Scott Lavendar is a frequentor of the Amtrak Heartland Flyer regional passenger train, to the point that he believes he, in fact, my literally have never been off of it.",
       "His education is 'the kind of education you can get on a train,' which has possessed him of the following skills: finding mice; imagining there's been a murder.",
@@ -53,6 +58,7 @@
     "_key": "_:grandmotherpearlalavergne",
     "daly": "false",
     "name": "Grandmother Pearla",
+    "nami": "Lavergne, Pearla",
     "article": [
       "Grandmother Pearla is the matriarch of the Lavergne family."
     ]
@@ -61,6 +67,7 @@
     "_key": "_:thomaslavergne",
     "daly": "false",
     "name": "Thomas Lavergne",
+    "nami": "Lavergne, Thomas",
     "article": [
       "Thomas Lavergne is a member of the Lavergne family."
     ]
@@ -69,6 +76,7 @@
     "_key": "_:michaellavergne",
     "daly": "false",
     "name": "Michael Lavergne",
+    "nami": "Lavergne, Michael",
     "article": [
       "Michael Lavergne is a member of the Lavergne family."
     ]
@@ -77,6 +85,7 @@
     "_key": "_:arthurlavergne",
     "daly": "false",
     "name": "Arthur Lavergne",
+    "nami": "Lavergne, Arthur",
     "article": [
       "Arthur Lavergne is a member of the Lavergne family."
     ]
@@ -85,6 +94,7 @@
     "_key": "_:stevefaye",
     "daly": "true",
     "name": "Steve Faye",
+    "nami": "Faye, Steve",
     "article": [
       "Steve Faye is from Hartford, CT and was pre-med before he found Hare Krishna.",
       "He suffers from A) Schizotypal Personality Disorder, B) occasional hunger before dinner, and C) an insatiable appetite for potatoes."
@@ -94,6 +104,7 @@
     "_key": "_:forestcarlisle",
     "daly": "true",
     "name": "Forest Carlisle",
+    "nami": "Carlisle, Forest",
     "article": [
       "Forest Carlisle was Mary Todd Lincoln's 'Mental Sickness Doctor.'",
       "In an effort to make Ms. Lincoln healthier and/or happier, he tried 'all of the modern techniques at the time' including 'poking her with fire'; 'dangling her out the window'; and 'threatening to bury her alive.'"
@@ -103,6 +114,7 @@
     "_key": "_:marytoddlincoln",
     "daly": "false",
     "name": "Mary Todd Lincoln",
+    "nami": "Lincoln, Mary Todd",
     "death_by": "stroke",
     "article": [
       "First Lady of the United States from 1861 to 1865."
@@ -136,6 +148,7 @@
     "_key": "_:detectivegordonramsey",
     "daly": "false",
     "name": "Detective Gordon Ramsey",
+    "nami": "Ramsey, Gordon",
     "article": [
       "Detective Gordon Ramsey is a police detective in Pasadena."
     ]
@@ -144,6 +157,7 @@
     "_key": "_:alexandrahiggsportman",
     "daly": "false",
     "name": "Alexandra Higgs Portman",
+    "nami": "Portman, Alexandra Higgs",
     "article": [
       "Alexandra Higgs Portman is a reporter at the Pasadena News Press Times-Gazette.",
       "She lives in the San Rafael Hills area of Pasadena."
@@ -152,6 +166,7 @@
   {
     "_key": "_:martinmargodale",
     "name": "Martin Margodale",
+    "nami": "Margodale, Martin",
     "article": [
       "Martin Margodale -- 'The Astonishing Martin' -- is a noted far-away magician and skeptic of Scientology."
     ]
@@ -160,6 +175,7 @@
     "_key": "_:julesmcmanon",
     "daly": "false",
     "name": "Jules McManon",
+    "nami": "McManon, Jules",
     "article": [
       "Jules McManon is a Clear Scientologist and member of L. Ron Hubbard's Sea Org.",
       "He is impervious to all disease and bacteria.",
@@ -171,6 +187,7 @@
     "_key": "_:amazingcriswell",
     "daly": "false",
     "name": "Jeron Criswell King",
+    "nami": "King, Jeron Criswell",
     "article": [
       "Jeron Criswell King was an American psychic."
     ]
@@ -179,6 +196,7 @@
     "_key": "_:heidicorporate",
     "daly": "false",
     "name": "Heidi Corporate",
+    "nami": "Corporate, Heidi",
     "article": [
       "Heidi Corporate is a trained Shakesepearean actor and member of the Missionaries Elite Unit in L. Ron Hubbard's Sea Org.",
       "Her previous lives include, but are not limited to: William Shakespeare, a Roman dog; and Maria Callas.",
@@ -192,6 +210,7 @@
     "_key": "_:mariongrapes",
     "daly": "false",
     "name": "Marion Grapes",
+    "nami": "Grapes, Marion",
     "article": [
       "Marion Grapes is a Distinguished Master at Arms, an ethics officer, and the Chief Officer of the Mission Into Time for L. Ron Hubbard's Sea Org.",
       "Among her charges is finding and recovering many of the treasures left for future generations by Mr. Hubbard in his various previous lives.",
@@ -203,6 +222,7 @@
     "_key": "_:lronhubbard",
     "daly": "true",
     "name": "Lafayette Ronald Hubbard",
+    "nami": "Hubbard, Lafayette Ronald",
     "article": [
       "L. Ron Hubbard was a science fiction writer and commodore to a fleet of personal paramilitary ships that traveled the world until too many ports-of-call refused entry.",
       "At one point his 'back was broken in 28 places' and, additionally there was 'something wrong' with his feet.",
@@ -224,6 +244,7 @@
     "_key": "_:marcorenaldo",
     "daly": "false",
     "name": "Marco Renaldo",
+    "nami": "Renaldo, Marco",
     "article": [
       "Marco Renaldo was a fine puppeteer whom Gil commissioned, once, for his puppet, Golly.",
       "Golly claims Marco 'used to kiss' him, but the claims remain unsubstantiated."
@@ -233,6 +254,7 @@
     "_key": "_:weebruce",
     "daly": "false",
     "name": "Wee Bruce - Teenaged Guard of the Ramparts",
+    "nami": "Wee Bruce",
     "article": [
       "Wee Bruce, Teenaged Guard of the Ramparts, is a ghost who haunts Edinburgh Castle.",
       "He features at the climax in Cameron McGonigle's Ghost Tours That Are Scary with a remarkably easy test of riddles."
@@ -242,6 +264,7 @@
     "_key": "_:thetrowofdumbiedykesroad",
     "daly": "false",
     "name": "Plaxicon - The Trow of Dumbiedykes Road",
+    "nami": "Plaxicon",
     "article": [
       "Plaxicon was a trow accused of vanquishing Stuart Cambridge in 1853.",
       "In fact, he may be not be a Trow at all but either an extraterrestrial traveler from Zaltan 3 or a Scot who got drunk, saw a drone, and lost his pants.",
@@ -252,6 +275,7 @@
     "_key": "_:stuartcambridge",
     "daly": "false",
     "name": "Stuart Cambridge",
+    "nami": "Cambridge, Stuart",
     "article": [
       "Stuart Cambridge was a much-beloved bagpipe player in Edinburgh who went missing in 1853, likely by alien abduction."
     ]
@@ -260,6 +284,7 @@
     "_key": "_:sawneybean",
     "daly": "false",
     "name": "Alexander (Sawney) Bean",
+    "nami": "Bean, Alexander (Sawney)",
     "article": [
       "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland.",
       "He lives in a cave in the Scottish Highlands with his giant, incestual family where he murders and eats weary travelers.",
@@ -270,6 +295,7 @@
     "_key": "_:ghostofthebrewlab",
     "daly": "false",
     "name": "Amanda (The Ghost of the Brew Lab)",
+    "nami": "Amanda",
     "article": [
       "Amanda is a deceased 19 year-old American woman who got her hair done and then promptly fell down the stairs of a coffee café and impaled her eye on a cappucino machine, spilling her brains through the chasm.",
       "Since, she haunts the café by disrupting the staff when they count out change, purturbing the books."
@@ -279,6 +305,7 @@
     "_key": "_:thirstiestghostever",
     "daly": "false",
     "name": "The Thirstiest Ghost Ever",
+    "nami": "Thirstiest Ghost Ever",
     "article": [
       "The Thirstiest Ghost Ever is a nameless, deceased woman who cleaned boots and fireplaces at the private home that later became Edinburgh's Hotel du Vin.",
       "Having grown extremely thirsty from the work (and denied a drink by her employer), she was curbed to death on a bucket of water by a coach iron."
@@ -291,6 +318,7 @@
       "Donald Trump was a president of the United States."
     ],
     "name": "Donald J. Trump"
+    ,"nami": "Trump, Donald J."
   },
   {
     "_key": "_:johnnymcgorry",
@@ -300,6 +328,7 @@
       "He is widely known to be the very lightly fictionalized persona of Patrick McMahon."
     ],
     "name": "Johnny McGorry"
+    ,"nami": "McGorry, Johnny"
   },
   {
     "_key": "_:matrickpahahon",
@@ -308,6 +337,7 @@
       "Matrick PaHahon is purportedly Patrick McMahon's literary agent, though he is commonly-known to be Patrick, himself."
     ],
     "name": "Matrick PaHahon"
+    ,"nami": "PaHahon, Matrick"
   },
   {
     "_key": "_:margotchunk",
@@ -317,6 +347,7 @@
       "She has tried and failed to make 'The Guiness Book of World Records' a number of times for, including but not limited to, walking the most amount of dog and drinking the most bleach."
     ],
     "name": "Margot Chunk"
+    ,"name": "Chunk, Margot"
   },
   {
     "_key": "_:gretathecaretaker",
@@ -325,6 +356,7 @@
       "Greta the Caretaker is an American home nurse (credentials unknown) who once found Johnny McGorry in her client's home, watching cartoons in his underwear."
     ],
     "name": "Greta the Caretaker"
+    ,"name": "Greta"
   },
   {
     "_key": "_:unnamedelderlywoman1",
@@ -338,6 +370,7 @@
     "_key": "_:slamminoliverrothwell",
     "daly": "false",
     "name": "Slammin' Oliver Rothwell",
+    "nami": "Rothwell, Oliver",
     "article": [
       "Slammin' Oliver Rothwell is a professor of Linguistics at Hofstra University and formerly a member of rock n' roll tribute act, Sha Na Na"
     ]
@@ -354,6 +387,7 @@
     "_key": "_:wernerherzog",
     "daly": "false",
     "name": "Werner Herzog",
+    "nami": "Herzog, Werner",
     "article": [
       "Werner Herzog is an award-winning feature and documentary film director and safe driving advocate from Germany.",
       "He is terrified of bugs.",
@@ -372,6 +406,7 @@
     "_key": "_:russelshein",
     "daly": "false",
     "name": "Russel Shein",
+    "nami": "Shein, Russel",
     "article": [
       "Russel Shein is a book publisher and editor."
     ]
@@ -398,6 +433,7 @@
     "_key": "_:monsignordamienfearnly",
     "daly": "false",
     "name": "Monsignor Damien Fearnly",
+    "nami": "Fearnly, Damien",
     "article": [
       "Monsignor Damien Fearnly grew up in Limerick, Ireland beside his lifelong friend Patrick McMahon."
     ]
@@ -406,6 +442,7 @@
     "_key": "_:luciancharms",
     "daly": "false",
     "name": "Lucian Charms",
+    "nami": "Charms, Lucian",
     "article": [
       "Lucian Charms grew up in a dry-docked pirate ship in the middle of Belfast.",
       "He is the President of The Ancient Order of Hibernians."
@@ -415,6 +452,7 @@
     "_key": "_:veronicamelcher",
     "daly": "false",
     "name": "Veronica Melcher",
+    "nami": "Melcher, Veronica",
     "article": [
       "Veronica Melcher is perhaps inarguably the biggest Sha Na Na-head of all time and an old friend of Hot Dog."
     ]
@@ -423,6 +461,7 @@
     "_key": "_:becklandry",
     "daly": "false",
     "name": "Beck Landry",
+    "nami": "Landry, Beck",
     "has_murdered": {
       "code": 1
     },
@@ -435,6 +474,7 @@
     "_key": "_:bobbysteensma",
     "daly": "false",
     "name": "Bobby Steensma",
+    "nami": "Steensma, Bobby",
     "article": [
       "Bobby Steensma is a true legend of water skiing."
     ]
@@ -443,6 +483,7 @@
     "_key": "_:ahi",
     "daly": "false",
     "name": "Barry (Ahi Tappo) Livingston-Smythe",
+    "nami": "Livingston-Smythe, Barry",
     "article": [
       "Ahi is an Australasian water skiing legend who, due to an accidental verbal chumming by his boat captain, was very tragically bitten by a Great White shark.",
       "He lost a kidney and a spleen and a forgotten third organ in the incident.",
@@ -466,6 +507,7 @@
     "_key": "_:darbyquinn",
     "daly": "false",
     "name": "Darby Quinn",
+    "nami": "Quinn, Darby",
     "article": [
       "Darby Quinn is an American cowboy who once made the mistake of exposing his young horse only to regular puppets and not marionettes.",
       "One day a marionette show came through town, spooking the horse and causing much havoc."
@@ -523,6 +565,7 @@
       "explain": "Scores of horses, at least."
     },
     "name": "Cameron McGonigle",
+    "nami": "McGonigle, Cameron",
     "article": [
       "Cameron McGonigle (b. 1979) is an independent Scottish ghost tour coordinator who doesn't like it when things are funny at the strip club.",
       "He owns and operates Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland."
@@ -582,6 +625,7 @@
     "_key": "_:screaminscottsimon",
     "daly": "false",
     "name": "Screamin' Scott Simon",
+    "nami": "Simon, Scott",
     "article": [
       "Screamin' Scott Simon is a member of interpretive Doo Wop group Sha Na Na."
     ],
@@ -596,6 +640,7 @@
     "_key": "_:elmeredwardsolly",
     "daly": "false",
     "name": "Elmer Edward Solly",
+    "nami": "Solly, Elmer Edward",
     "has_murdered": {
       "code": 1
     },
@@ -614,6 +659,7 @@
     "_key": "_:johnbanderson",
     "daly": "false",
     "name": "John B. Anderson",
+    "nami": "Anderson, John B.",
     "article": [
       "John B. Anderson was a Republican senator and Independent presidential candidate from Illinois."
     ],
@@ -628,6 +674,7 @@
     "_key": "_:oscarmeyer",
     "daly": "false",
     "name": "Oscar Meyer",
+    "nami": "Meyer, Oscar",
     "article": [
       "Oscar Meyer is a freshwater water skier and possibly the son of Hot Dog."
     ]
@@ -644,6 +691,7 @@
     "_key": "_:jimmybongos",
     "daly": "true",
     "name": "Jimmy Bongos",
+    "nami": "Bongos, Jimmy",
     "article": [
       "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
     ]
@@ -692,6 +740,7 @@
     "_key": "_:deanbuford",
     "daly": "false",
     "name": "Dean Buford",
+    "nami": "Buford, Dean",
     "article": [
       "Dean Buford is/was a student at Marina del Rey High School and a former member of Joe Bongo's band, Rosebush Red.",
       "He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
@@ -701,6 +750,7 @@
     "_key": "_:philcollinsjr",
     "daly": "false",
     "name": "Phil Collins, Jr.",
+    "nami": "Collins, Phil Jr.",
     "article": [
       "Phil Collins, Jr. is/was a student at Marina del Rey High School and a member of Joe Bongo's band, Rosebush Red.",
       "He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
@@ -710,6 +760,7 @@
     "_key": "_:garylee",
     "daly": "false",
     "name": "Gary Lee",
+    "nami": "Lee, Gary",
     "article": [
       "Gary Lee is/was a student at Marina del Rey High School and a member of Joe Bongo's band, Rosebush Red.",
       "He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
@@ -719,6 +770,7 @@
     "_key": "_:ezrapalmer",
     "daly": "false",
     "name": "Ezra Palmer",
+    "nami": "Palmer, Ezra",
     "article": [
       "Ezra Palmer is/was a student at Marina del Rey High School and a member of Joe Bongo's band, Rosebush Red.",
       "He may or may not have been flunked and held back by Bongo in order to maintain the group's lineup."
@@ -728,6 +780,7 @@
     "_key": "_:raikardpalmer",
     "daly": "false",
     "name": "Raikard Palmer",
+    "nami": "Palmer, Raikard",
     "article": [
       "Raikard Palmer was an extremely short-lived (and therefore largely unknown) saxaphonist for prog-rock group Emerson, Lake & Palmer."
     ]
@@ -736,6 +789,7 @@
     "_key": "_:carlpalmer",
     "daly": "false",
     "name": "Carl Palmer",
+    "nami": "Palmer, Carl",
     "article": [
       "Carl Palmer is a member of prog-rock group Emerson, Lake & Palmer."
     ]
@@ -744,6 +798,7 @@
     "_key": "_:billbuford",
     "daly": "false",
     "name": "Bill Buford",
+    "nami": "Buford, Bill",
     "article": [
       "Bill Buford is a member of prog-rock group Yes."
     ]
@@ -752,6 +807,7 @@
     "_key": "_:philcollins",
     "daly": "false",
     "name": "Phil Collins",
+    "nami": "Collins, Phil",
     "article": [
       "Phil Collins is a member of prog-rock group Genesis."
     ]
@@ -760,6 +816,7 @@
     "_key": "_:geddylee",
     "daly": "false",
     "name": "Geddy Lee",
+    "nami": "Lee, Geddy",
     "article": [
       "Geddy Lee is a member of prog-rock group Rush."
     ]
@@ -768,6 +825,7 @@
     "_key": "_:bonnieramirez",
     "daly": "false",
     "name": "Bonnie Ramirez",
+    "nami": "Ramirez, Bonnie",
     "article": [
       "Bonnie Ramirez was a student in Joe Bongo's Health class at Marina del Rey High School.",
       "Led astray by the misguided advice from Mr. Bongo that her tampon would 'dissolve' on its own, Ms. Ramirez lost a ping pong ball and missed considerable time in the Fall of 2014 due to toxic shock."
@@ -777,6 +835,7 @@
     "_key": "_:joebongo",
     "daly": "true",
     "name": "Joe (Bongo) Dunleavy",
+    "name": "Dunleavy, Joe",
     "article": [
       "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class; encourages students to share with classmates intimate details about their lives; teaches kids how to speedball; plays 'Find The Ping Pong Ball'; and solicits ideas for new Kama Sutra positions.",
       "He occasionally encourages his students to stand on their desks and call him 'Captain.'",
@@ -809,6 +868,7 @@
     "_key": "_:nicknolte",
     "daly": "false",
     "name": "Nick Nolte",
+    "nami": "Nolte, Nick",
     "article": [
       "Nick Nolte is a respected theatrical and film actor known for being drunk and looking crazy and sounding 'like a sad tea kettle.'"
     ],
@@ -823,6 +883,7 @@
     "_key": "_:johncreilly",
     "daly": "false",
     "name": "John C. Reilly",
+    "nami": "Reilly, John C.",
     "article": [
       "John C. Reilly is a respected theatrical and film actor known for saying the word 'awesome.'",
       "He knows seven people."
@@ -846,6 +907,7 @@
     "_key": "_:jeanclaudepepi",
     "daly": "true",
     "name": "Jean Claude Pepi",
+    "nami": "Pepi, Jean Claude",
     "article": [
       "Jean Claude Pepi (b. 1959) is a very famous French actor.",
       "He knew from an early age that he was destined to be Jean Claude Pepi and developed a long-standing fantasy to be ruled by bees."
@@ -861,6 +923,7 @@
     "_key": "_:andrewlloydwebber",
     "daly": "false",
     "name": "Andrew Lloyd Webber",
+    "nami": "Webber, Andrew Lloyd",
     "article": [
       "Dame Sir ALW is a Lord and peer of the British realm."
     ],
@@ -875,6 +938,7 @@
     "_key": "_:hrgiger",
     "daly": "false",
     "name": "H.R. Giger",
+    "nami": "Giger, Hans Ruedi",
     "article": [
       "H.R. Giger is an obsidion sexsmith; an inky-hued dinky feud; and a visual artist."
     ],
@@ -937,6 +1001,7 @@
     "_key": "_:jackfitzgerald",
     "daly": "true",
     "name": "Jack Fitzgerald",
+    "nami": "Fitzgerald, Jack",
     "article": [
       "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment.",
       "He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes.",
@@ -959,6 +1024,7 @@
     "_key": "_:byrondenniston",
     "daly": "true",
     "name": "Byron Denniston",
+    "nami": "Denniston, Byron",
     "article": [
       "Byron Denniston (b.approx 1943) is an amateur Royal Watcher and aspiring sorcerer and Practicer of Black Magic from the United Kingdom.",
       "He lives in a treehouse built by a magician that is perched outside of Kensington Palace. As such, he was able to scoop what he thought were potential names for the forthcoming baby that would come to be known as His Royal Highness Prince Louis of Cambridge.",
@@ -995,6 +1061,7 @@
     "_key": "_:princegeorgeofcambridge",
     "daly": "false",
     "name": "Beetle Bailey",
+    "nami": "Bailey, Beetle",
     "article": [
       "Formerly Prince George of Cambridge, Beetle Bailey was kidnapped sometime between July 2013 and July 2014 by Byron Denniston and promptly renamed."
     ]
@@ -1045,6 +1112,7 @@
     "_key": "_:michaeljackson",
     "daly": "false",
     "name": "Michael Jackson",
+    "nami": "Jackson, Michael",
     "article": [
       "Famous entertainer."
     ]
@@ -1053,6 +1121,7 @@
     "_key": "_:jimmorrison",
     "daly": "false",
     "name": "Jim Morrison",
+    "nami": "Morrison, Jim",
     "article": [
       "Famous entertainer."
     ]
@@ -1078,6 +1147,7 @@
     "_key": "_:tipthompson",
     "daly": "false",
     "name": "Tip Thompson",
+    "nami": "Thompson, Tip",
     "article": [
       "Tip Thompson is the sidekick to Chip Gardner and has been for many, many years."
     ]
@@ -1086,6 +1156,7 @@
     "_key": "_:chipgardner",
     "daly": "true",
     "name": "Chip Gardner",
+    "nami": "Gardner, Chip",
     "article": [
       "Chip Gardner (b. 1968) is a former L.A.-area radio DJ and host.",
       "He hosted such game shows as 'Electrified or Burning Hot'; 'Zap'; 'Can You Find You Way to the Surface?'; 'See if You Can Hold This for Half an Hour'; and \"Where'd I Put My Jacket?\".",
@@ -1106,6 +1177,7 @@
     "_key": "_:daltonwilcox",
     "daly": "true",
     "name": "Dalton Wilcox",
+    "nami": "Wilcox, Dalton",
     "article": [
       "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West (a fact encoded in \"The World Book\") that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter.",
       " He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere.",
@@ -1134,6 +1206,7 @@
     "_key": "_:stephaniegoldberg",
     "daly": "false",
     "name": "Stephanie Goldberg",
+    "nami": "Goldberg, Stephanie",
     "article": [
       "Stephanie Goldberg was an NYU student and, in 2011, the girlfriend of Cowboy Poet Dalton Wilcox.",
       "She was murdered in September of that same year."
@@ -1192,6 +1265,7 @@
     "_key": "_:ceceliawilcox",
     "daly": "false",
     "name": "Cecelia Wilcox",
+    "nami": "Wilcox, Cecelia",
     "article": [
       "Cecelia Wilcox was too fat to get out of bed for some time and was then killed."
     ]
@@ -1200,6 +1274,7 @@
     "_key": "_:jasonmantzoukas",
     "daly": "false",
     "name": "Jason Mantzoukas",
+    "nami": "Mantzoukas, Jason",
     "article": [
       "Jason Mantkoukas is not on Twitter."
     ]
@@ -1216,6 +1291,7 @@
     "_key": "_:abrahamappleby",
     "daly": "false",
     "name": "Abraham Appleby",
+    "nami": "Appleby, Abraham",
     "article": [
       "Abraham Appleby ('Double A') is a noted water skier and the second man to ever have sexual intercourse on water skis."
     ]
@@ -1240,6 +1316,7 @@
     "_key": "_:jimmypage",
     "daly": "false",
     "name": "Jimmy Page",
+    "nami": "Page, Jimmy",
     "article": [
       "Jimmy Page is a legendary guitarist and thief of American blues."
     ]
@@ -1256,6 +1333,7 @@
     "_key": "_:andicallahanrn",
     "daly": "true",
     "name": "Andi Callahan, RN",
+    "nami": "Callahan, Andi",
     "article": [
       "Andi Callahan is an uncredentialed medical professional and documented tax evader who enjoys frailty, has a history of experimenting on stray animals and transients out of an abandoned house, and now works at the Long-Term Care Floor of Bergen Regional Medical Center in New Jersey where many of the senior citizen patients are suffering from dementia and were committed against their will.",
       "He laughs a lot.",
@@ -1278,6 +1356,7 @@
     "_key": "_:clivedundee",
     "daly": "true",
     "name": "Clive Dundee",
+    "nami": "Dundee, Clive",
     "article": [
       "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks.",
       "He lives under a bridge in Manchester with a barren wife.",
@@ -1328,6 +1407,7 @@
     "_key": "_:thelizard",
     "daly": "false",
     "name": "The Lizard",
+    "name": "Lizard, The",
     "article": [
       "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire.",
       "He is Chip Gardner."
@@ -1381,6 +1461,7 @@
     "_key": "_:jasonwu",
     "daly": "false",
     "name": "Jason Wu",
+    "nami": "Wu, Jason",
     "article": [
       "Jason Wu is a student at Marina del Rey High School and a member of musical combination Rosebush Red.",
       "He is arguably most known for submitting the best new Kama Sutra position during the sex unit in Joe Bongo's Health class."
@@ -1390,6 +1471,7 @@
     "_key": "_:kyledunforth",
     "daly": "false",
     "name": "Kyle Dunforth",
+    "nami": "Dunforth, Kyle",
     "article": [
       "Kyle Dunforth is a student at Marina del Rey High School and a member of musical combination Rosebush Red."
     ]
@@ -1398,6 +1480,7 @@
     "_key": "_:thechonger",
     "daly": "false",
     "name": "The Chonger",
+    "nami": "Chonger, The",
     "article": [
       "The Chonger is a student at Marina del Rey High School and a member of musical combination Rosebush Red."
     ]
@@ -1406,6 +1489,7 @@
     "_key": "_:marissawompler",
     "daly": "false",
     "name": "Marissa Wompler",
+    "nami": "Wompler, Marissa",
     "article": [
       "Marissa Wompler is a student at Marina del Rey High School and an intern at Comedy Bang! Bang!",
       "In Fall 2014 it was revealed that Don DiMello had been her entertainment mentor for some time."
@@ -1431,6 +1515,7 @@
     "_key": "_:tracirearden",
     "daly": "false",
     "name": "Traci Reardon",
+    "nami": "Reardon, Traci",
     "article": [
       "Traci Reardon is teenager."
     ]
@@ -1439,6 +1524,7 @@
     "_key": "_:drsethwompler",
     "daly": "false",
     "name": "Dr. Seth Wompler",
+    "nami": "Wompler, Seth",
     "article": [
       "Dr. Seth Wompler is a podietrist."
     ]
@@ -1447,6 +1533,7 @@
     "_key": "_:daniellebartiromo",
     "daly": "false",
     "name": "Danielle Bartiromo",
+    "nami": "Bartiromo, Danielle",
     "article": [
       "Danielle Bartiromo is an amorous teenager."
     ]
@@ -1455,6 +1542,7 @@
     "_key": "_:charlottelistler",
     "daly": "false",
     "name": "Charlotte Listler",
+    "nami": "Listler, Charlotte",
     "has_murdered": {
       "code": 1
     },
@@ -1467,6 +1555,7 @@
     "_key": "_:ericgutterman",
     "daly": "false",
     "name": "Eric (Gutterballs) Gutterman",
+    "nami": "Gutterman, Eric",
     "article": [
       "Eric (Gutterballs) Gutterman is an amorous teenager."
     ]
@@ -1475,6 +1564,7 @@
     "_key": "_:dabneycoleperson",
     "daly": "false",
     "name": "Dabney Coleperson",
+    "nami": "Coleperson, Dabney",
     "article": [
       "Dabney Coleperson is a characiturist."
     ]
@@ -1483,6 +1573,7 @@
     "_key": "_:lizmathers",
     "daly": "false",
     "name": "Liz Mathers",
+    "nami": "Mathers, Liz",
     "article": [
       "Liz is a student and a caller into Marissa Wompler's birthday party."
     ]
@@ -1518,6 +1609,7 @@
       "code": 1
     },
     "name": "Don DiMello",
+    "nami": "DiMello, Don",
     "article": [
       "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California.",
       "He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show.",
@@ -1540,6 +1632,7 @@
     "_key": "_:patrickmcmahon",
     "daly": "true",
     "name": "Patrick McMahon",
+    "nami": "McMahon, Patrick",
     "article": [
       "Patrick McMahon is a traditional Irish storyteller from Limerick, Ireland.",
       "Born in 1960, he wrote limericks for the first 50 years of his life, then transitioned to prose in Fall, 2010.",
@@ -1560,6 +1653,7 @@
     "_key": "_:shamusmcmahon",
     "daly": "false",
     "name": "Shamus McMahon",
+    "nami": "McMahon, Shamus",
     "article": [
       "Shamus McMahon is a wealthy and successful Grammy-winning traditional Irish storyteller from Limerick, Ireland, who is very expensive to book.",
       "He is renowned not only for his humorous and heartbreaking prose, but also his PBS special that made even the most stoic New England Greeks break up with emotion.",
@@ -1572,6 +1666,7 @@
     "_key": "_:tommcmahon",
     "daly": "false",
     "name": "Tom McMahon",
+    "nami": "McMahon, Tom",
     "article": [
       "Tom McMahon is a mechanic."
     ]
@@ -1580,6 +1675,7 @@
     "_key": "_:billcarter",
     "daly": "true",
     "name": "Bill Carter",
+    "nami": "Carter, Bill",
     "article": [
       "Bill Carter is a personal trainer born in 1922.",
       "He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant).",
@@ -1628,22 +1724,16 @@
     "_key": "_:carygrant",
     "daly": "false",
     "name": "Cary Grant",
+    "nami": "Grant, Cary",
     "article": [
       "Cary Grant was an actor."
-    ]
-  },
-  {
-    "_key": "_:theschneidermannmonkey1",
-    "daly": "false",
-    "name": "The Schneidermann Monkey #1",
-    "article": [
-      "The Schneidermann Monkey is an animal that samples salt at the Schneidermann Pretzel Factory in Düsseldorf."
     ]
   },
   {
     "_key": "_:augustlindt",
     "daly": "true",
     "name": "August Lindt",
+    "nami": "Lindt, August",
     "has_murdered": {
       "code": 1
     },
@@ -1665,6 +1755,7 @@
     "_key": "_:dannymahoney",
     "daly": "true",
     "name": "Danny Mahoney",
+    "nami": "Mahoney, Danny",
     "article": [
       "Danny Mahoney is the owner/operator of Life of the Party, Inc., launched following his failed suicide attempt in the Pacific Ocean.",
       "Prior to that (~2008) he owned and operated a plumbing business with his nephew, Bertrand until that nephew 'grew weary of [Danny's] personality' and executed a hostile takeover.",
@@ -1682,6 +1773,7 @@
     "_key": "_:bertmahoney",
     "daly": "false",
     "name": "Bertrand (Bert) Mahoney",
+    "nami": "Mahoney, Bertrand",
     "article": [
       "Bertrand Mahoney is the nephew of Danny Mahoney.",
       "He is the victim of physical abuse (by Danny and by Danny's own admission) and the successful executor in 2008 of a hostile takeover of the pair's plumbing business."
@@ -1691,6 +1783,7 @@
     "_key": "_:scottaukerman",
     "daly": "false",
     "name": "Scott Aukerman",
+    "nami": "Aukerman, Scott",
     "article": [
       "Scott Aukerman is a host."
     ],
@@ -1733,6 +1826,7 @@
     "_key": "_:benalterman",
     "daly": "true",
     "name": "Ben Alterman",
+    "nami": "Alterman, Ben",
     "links": [
       {
         "uri": "http://comedybangbang.wikia.com/wiki/Ben_Alterman",
@@ -1749,6 +1843,7 @@
     "_key": "_:crystalalterman",
     "daly": "false",
     "name": "Crystal Pinto",
+    "nami": "Pinto, Crystal",
     "death_by": "Ovarian Cancer",
     "article": [
       "Crystal Pinto (b. 1966) is the daughter of Ben Alterman.",
@@ -1760,6 +1855,7 @@
     "_key": "_:ashleypinto",
     "daly": "false",
     "name": "Ashley Pinto",
+    "nami": "Pinto, Ashley",
     "article": [
       "Ashley Pinto (b. 1994) is the granddaughter of Ben Alterman."
     ]
@@ -1768,6 +1864,7 @@
     "_key": "_:ingridalterman",
     "daly": "false",
     "name": "Ingrid Alterman",
+    "nami": "Alterman, Ingrid",
     "death_by": "suicide",
     "article": [
       "Ingrid Alterman is the barren first wife of Ben Alterman."
@@ -1777,6 +1874,7 @@
     "_key": "_:hendrixmurphy",
     "daly": "false",
     "name": "Hendrix Murphy",
+    "nami": "Murphy, Hendrix",
     "article": [
       "Hendrix Murphy is in the California shrimping business.",
       "He is originally from 'Lake Ponchartrain' (New Orleans), Louisiana and makes $325,000/year in the California shrimping business.",
@@ -1787,6 +1885,7 @@
     "_key": "_:thewidowfeeney",
     "daly": "false",
     "name": "The Widow Feeney",
+    "nami": "Widow Feeney",
     "article": [
       "The Widow Feeney is a very thin friend and buildingmate of Ben Alterman."
     ]
@@ -1795,6 +1894,7 @@
     "_key": "_:mrshakamora",
     "daly": "false",
     "name": "Mrs. Hakamora",
+    "nami": "Hakamora, Mrs.",
     "article": [
       "Mrs. Hakamora is a friend and buildingmate of Ben Alterman."
     ]
@@ -1803,6 +1903,7 @@
     "_key": "_:mrfrancisco",
     "daly": "false",
     "name": "Mr. Francisco",
+    "nami": "Francisco, Mr.",
     "article": [
       "Mr. Francisco is a friend of Ben Alterman's and works at 'the lotion shop.'",
       "He is, according to Ben, reliably unreliable.",
@@ -1829,6 +1930,7 @@
     "_key": "_:bigbobpinto",
     "daly": "false",
     "name": "Big Bob Pinto",
+    "nami": "Pinto, Bob",
     "article": [
       "Big Bob Pinto (5'1\", 420) married Crystal Alterman."
     ]
@@ -1851,6 +1953,7 @@
     "_key": "_:malbachman",
     "daly": "false",
     "name": "Mallard (Mal) Bachman",
+    "nami": "Bachman, Mallard",
     "article": [
       "Mallard (Mal) Bachman is an Episcopalian theatre critic from New York who holds a degree in Dramaturgy from the University of Phoenix Online."
     ]
@@ -1859,6 +1962,7 @@
     "_key": "_:doulmanschmiedeberg",
     "daly": "false",
     "name": "Doulman Schmiedeberg",
+    "nami": "Schmiedeberg, Doulman",
     "article": [
       "Doulman Schmiedeberg is the boss of August Lindt."
     ]
@@ -1867,6 +1971,7 @@
     "_key": "_:utalindt",
     "daly": "false",
     "name": "Uta Lindt",
+    "nami": "Lindt, Uta",
     "article": [
       "Uta Lindt is the cuckolding wife of August Lindt."
     ]
@@ -1875,6 +1980,7 @@
     "_key": "_:gunterlindt",
     "daly": "false",
     "name": "Günter Lindt",
+    "nami": "Lindt, Günter",
     "article": [
       "Günter Lindt is one of several children to August Lindt."
     ]
@@ -1883,6 +1989,7 @@
     "_key": "_:gretalindt",
     "daly": "false",
     "name": "Greta Lindt",
+    "nami": "Lindt, Greta",
     "article": [
       "Greta Lindt is one of several children to August Lindt."
     ]
@@ -1891,6 +1998,7 @@
     "_key": "_:jimmyblades",
     "daly": "false",
     "name": "Jimmy Blades",
+    "nami": "Blades, James",
     "article": [
       "Formerly of 'Take My Wife Keys,' as of ADPPP#6 at least, Mr. Blades is the lone employee of Danny Mahoney at Life of the Party, Inc."
     ]
@@ -1899,6 +2007,7 @@
     "_key": "_:kevinlindt",
     "daly": "false",
     "name": "Kevin Lindt",
+    "nami": "Lindt, Kevin",
     "article": [
       "Kevin Lindt is one of several children to August Lindt."
     ]
@@ -1907,6 +2016,7 @@
     "_key": "_:carolchanning",
     "daly": "false",
     "name": "Carol Channing",
+    "nami": "Channing, Carol",
     "article": [
       "Carol Channing is a Broadway legend who, evidently, sought to become Honorary Mayor of Hollywood in direct competition with Chip Gardner."
     ]
@@ -1924,6 +2034,7 @@
     "_key": "_:gameshowcontestantchipgomand",
     "daly": "false",
     "name": "Game Show Contestant Chip Gomand",
+    "nami": "Gomand, Chip",
     "has_murdered": {
       "code": 1
     },
@@ -1935,6 +2046,7 @@
     "_key": "_:gameshowcontestantmattwills",
     "daly": "false",
     "name": "Game Show Contestant Matt Wills",
+    "nami": "Wills, Matt",
     "article": [
       "Matt Wills competed for a live leopard shark on Chip Gardner's 'Try Not to Get Hit by These Hammers' and subsequently perished."
     ]
@@ -1943,6 +2055,7 @@
     "_key": "_:gameshowcontestantrickstubble",
     "daly": "false",
     "name": "Game Show Contestant Rick Stubble",
+    "nami": "Stubble, Rick",
     "article": [
       "Rick Stubble competed for a live leopard shark on Chip Gardner's 'Try Not to Get Hit by These Hammers' and subsequently perished."
     ]
@@ -1951,6 +2064,7 @@
     "_key": "_:gameshowcontestantcliff",
     "daly": "false",
     "name": "Game Show Contestant Cliff",
+    "nami": "Cliff",
     "article": [
       "Cliff competed for a suit of armor on Chip Gardner's 'Are You Smarter than a Room Full of Poisonous Snakes?' and subsequently perished."
     ]
@@ -1959,6 +2073,7 @@
     "_key": "_:gameshowcontestantgay",
     "daly": "false",
     "name": "Game Show Contestant Gay",
+    "nami": "Gay",
     "article": [
       "Gay competed for a suit of armor on Chip Gardner's 'Are You Smarter than a Room Full of Poisonous Snakes?' and subsequently perished."
     ]
@@ -1967,6 +2082,7 @@
     "_key": "_:codywakeman",
     "daly": "false",
     "name": "Cody Wakeman",
+    "nami": "Wakeman, Cody",
     "article": [
       "Cody Wakeman is/was a student at Marina del Rey High School and keyboardist/secondary songwriter for Joe Bongo's band, Rosebush Red.",
       "He was forcibly transferred from Whittier High School by Joe Bongo with the express intent of forcing him into the band."
@@ -1976,6 +2092,7 @@
     "_key": "_:rickwakeman",
     "daly": "false",
     "name": "Rick Wakeman",
+    "nami": "Wakeman, Rick",
     "article": [
       "Rick Wakeman is a member of prog-rock group Yes."
     ]
@@ -1983,7 +2100,7 @@
   {
     "_key": "_:formerrockettebeth",
     "daly": "false",
-    "name": "Former Rockette Beth",
+    "name": "Beth",
     "article": [
       "Former Rockette Beth is an amputee who lives in upstate New York."
     ]
@@ -1992,6 +2109,7 @@
     "_key": "_:hrossperot",
     "daly": "false",
     "name": "H. Ross Perot",
+    "nami": "Perot, Henry Ross",
     "article": [
       "H. Ross Perot is an American businessman and former candidate for U.S. president."
     ]
@@ -2000,6 +2118,7 @@
     "_key": "_:theschmiedebergmonkey1",
     "daly": "false",
     "name": "The Schmiedeberg Monkey #1",
+    "nami": "Schmiedeberg Monkey #1",
     "article": [
       "The Schmiedeberg Monkey is an animal that samples salt at the Schmiedeberg Pretzel Factory in Düsseldorf."
     ]
