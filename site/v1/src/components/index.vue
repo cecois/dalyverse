@@ -856,10 +856,10 @@ let sub = "Dalyverse Entities Graph: "
         );
 
         let q =
-          'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,article:l.article})\
-let ppls = (for p in people return {daly:p.daly,_id:p._id,id:p._id,label:p.name,article:p.article})\
-let tngs = (for t in things return {daly:false,_id:t._id,id:t._id,label:t.name,article:t.article})\
-let evnts = (for ev in events return {daly:false,_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
+          'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,nami:l.nami,article:l.article})\
+let ppls = (for p in people return {daly:p.daly,_id:p._id,id:p._id,label:p.name,nami:p.nami,article:p.article})\
+let tngs = (for t in things return {daly:false,_id:t._id,id:t._id,label:t.name,nami:t.nami,article:t.article})\
+let evnts = (for ev in events return {daly:false,_id:ev._id,id:ev._id,label:ev.name,nami:ev.nami,article:ev.article})\
 let pplsplcs = (flatten(append(ppls,plcs)))\
 let tngsevts = (flatten(append(tngs,evnts)))\
 let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\

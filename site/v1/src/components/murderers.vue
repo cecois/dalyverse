@@ -203,18 +203,9 @@ var data = [
         );
 
         let q =
-          'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,article:l.article})\
-let ppls = (for p in people return {daly:p.daly,_id:p._id,id:p._id,label:p.name,article:p.article})\
-let tngs = (for t in things return {daly:false,_id:t._id,id:t._id,label:t.name,article:t.article})\
-let evnts = (for ev in events return {daly:false,_id:ev._id,id:ev._id,label:ev.name,article:ev.article})\
-let pplsplcs = (flatten(append(ppls,plcs)))\
-let tngsevts = (flatten(append(tngs,evnts)))\
-let entities = (RETURN flatten(append(pplsplcs,tngsevts)))\
-let edgees = (\
-for ent in entities[0] \
-FOR v, e, p IN 1..1 ANY ent edges \
-RETURN {typ:e.type,source:e._from,target:e._to,id:e._id,_id:e._id})\
-return {entitiez:unique(entities),edgez:unique(edgees)}'
+          'for p in people\
+filter p.has_murdered.code==1 OR p.has_murdered.code==2\
+return {daly:p.daly,_id:p._id,id:p._id,label:p.name,nami:p.nami,has_murdered:p.has_murdered,article:p.article}'
 
         axios
           .post(this.url_arango, {
