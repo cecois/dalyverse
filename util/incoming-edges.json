@@ -20,6 +20,11 @@
     "type": "hasParticipant",
     "vertex": "_:byrondennistonkidnapsbeetlebailey"
   },{
+    "_from": "events/_:starbucksgowergulch",
+    "_to": "people/_:jackfitzgerald",
+    "type": "occurredAt",
+    "vertex": "_:starbucksgowergulch"
+  },{
     "_from": "events/_:russelsheinswifedisappears",
     "_to": "people/_:russelsheinswife",
     "type": "hasParticipant",

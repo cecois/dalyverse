@@ -1,99 +1,115 @@
 <template>
-  <div class="dv-app">
-    <div id="map" style="width: 100%;height: 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;"></div>
-    <div id="vue-root" class="container is-fixed-top">
-      <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
-      <!-- ************************************************************************************ #CONSOLE -->
-      <div class="has-text-weight-bold">
+<div class="dv-app">
+  <div id="map" style="width: 100%;height: 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;"></div>
+  <div id="vue-root" class="container is-fixed-top">
+    <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
+    <!-- ************************************************************************************ #CONSOLE -->
+    <div class="has-text-weight-bold">
+      
+      <!-- <a class="" v-on:click="zoomToFullExtent">
+        <b-icon icon="arrow-expand-all" size="is-small"></b-icon>
+      </a> -->
+      <div class="columns">
+        <div class="column is-full">
+          <!-- <p style="padding-top:1em;" class="title is-size-2 has-text-white">{{this.$MOMENT(times.line.begin).format('YYYY.MMM.Mo')}} to {{this.$MOMENT(times.line.end).format('YYYY.MMM.Mo')}}</p> -->
+          <!-- <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p> -->
+          <!-- <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p> -->
+        </div>
         
-        <!-- <a class="" v-on:click="zoomToFullExtent">
-          <b-icon icon="arrow-expand-all" size="is-small"></b-icon>
-        </a> -->
-
+      </div nb="/.columns">
+      <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
+      <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
+        <i :class="console.clazz" class="mdi"></i>
+      </span>
+      <hr/> -->
+      <!-- <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div> -->
+      <!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div> -->
+      <!-- <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
+      <!-- <div class="column" v-if="events">events found:<code>{{events.length}}</code></div> -->
+      <!-- <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div> -->
+      <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
+      <!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
+      <div class="column is-3" v-if="active.item.content">TITL: {{active.item.content}}</div>
+      <div class="column is-3" v-if="active.item.article">ART: {{active.item.article}}</div>
+      <div class="column is-2 is-size-7">{{(events.length)}}</div> -->
+      <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
+      <!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
+      <!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
+      
+      <!-- <div v-if="seens" class="column">
+        <p class="title is-size-7">SEENS</p>
+        <p class="is-size-7">{{(seens.length)}}</p>
+      </div>
+    </div> -->
+    
+    <!-- ************************************************************************************ /#CONSOLE -->
+    <!-- #.navbar </nav> -->
+    <div :class="(!state)?'is-hidden':''" id="container-main">
+      
+      
+      <!-- -------------------------------------------------------------- SLIDER -->
+      <div style="margin-top:12vh;" id="slider"></div>
+      <!-- -------------------------------------------------------------- TIMELINE -->
+      <div id="timeline"></div>
+      <div class="is-overlay" v-if="active.key" id="dv-timeline-graph">
+        <!-- Main container -->
+        <nav class="level">
+          <!-- Left side -->
+          <div class="level-left">
+            <div class="level-item">
+              
+            </div>
+            
+          </div>
+          <!-- Right side -->
+          <div class="level-right">
+            <a @click="active.key=null" class="delete" style="margin-top: 7vh;right: 2vw;position:relative;"></a>
+          </div>
+        </nav>
+        <simplebar id="dv-graph-copy-wrapper">
+        <div class="columns"><div class="column is-12">
+          
+          <p style="" class="dv-title is-size-3">{{active.item.content}}</p>
+          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
+            <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
+          </a></p>
+          <p style="margin-top:2em;">
+            <div class="has-text-grey dv-graph-copy" style="padding:0 4em;font-weight:400;" v-for="articleitem in active.item.article">
+              {{articleitem}}
+            </div>
+          </p>
+        </div nb="/.column">
+      </div nb="/.columns">
         <div class="columns">
-          <div class="column is-full">
-            <p style="padding-top:1em;" class="title is-size-2 has-text-white">{{this.$MOMENT(times.line.begin).format('YYYY.MMM.DD')}} to {{this.$MOMENT(times.line.end).format('YYYY.MMM.DD')}}</p>
-
-            <!-- <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p> -->
-            <!-- <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p> -->
+          
+          <div class="column">
+            <div style="margin-top:4em;" v-if="active.key">
+              <p class="is-size-4 dv-title-sub">Participants:</p>
+              <p v-for="prsn in active.graph.participants">{{prsn.name}}</p>
+            </div>
           </div>
           
         </div nb="/.columns">
-
-        <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
-        <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
-          <i :class="console.clazz" class="mdi"></i>
-        </span>
-<hr/> -->
-        <!-- <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div> -->
-        <!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div> -->
-        <!-- <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
-        <!-- <div class="column" v-if="events">events found:<code>{{events.length}}</code></div> -->
-        <!-- <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div> -->
-        <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-        <!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
-<div class="column is-3" v-if="active.item.content">TITL: {{active.item.content}}</div>
-<div class="column is-3" v-if="active.item.article">ART: {{active.item.article}}</div>
-<div class="column is-2 is-size-7">{{(events.length)}}</div> -->
-        <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
-        <!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
-        <!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-              
-              <!-- <div v-if="seens" class="column">
-                <p class="title is-size-7">SEENS</p>
-                <p class="is-size-7">{{(seens.length)}}</p>
-              </div>
-            </div> -->
-          
-
-      <!-- ************************************************************************************ /#CONSOLE -->
-      <!-- #.navbar </nav> -->
-      <div :class="(!state)?'is-hidden':''" id="container-main">
-        
-      
-      <div id="timeline"></div>
-
-      <!-- -------------------------------------------------------------- SLIDER -->
-        <div style="margin-top:5em;" id="slider"></div>
-
-    <div class="columns" v-if="active.key" id="dv-timeline-graph">
-
-      <div class="column is-two-fifths">
-        <div v-if="active.key">
-          
-<p style="margin-top:2em;" class="dv-title is-size-3">{{active.item.content}}</p>
-<p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
-            <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
-          </a></p>
-        <p style="margin-top:2em;">
-<div style="padding:0 4em;" v-for="articleitem in active.item.article">
-{{articleitem}}
-</div>
-      </p>        
-
-        </div nb="/if-active-key">
-      </div nb="/.is-two-fifths">
-<div class="column is-one-fifth"></div>
-      <div class="column is-two-fifths">
-        <div style="margin-top:4em;" v-if="active.key">
-<p class="is-size-4 dv-title-sub">Participants:</p>
-<p v-for="prsn in active.graph.participants">{{prsn.name}}</p>
-        </div>
-      </div>
-
-    </div nb="/.columns">
-    <!-- ************************************************************************************ /#CONTAINER-MAIN -->
-  </div nb="/#container-main">
-  <!-- ./#vue-root -->
-
-</div nb="/if-state">
-    </div nb="/#vue-root">
-  </div nb="/#dv-app">
+      </simplebar>
+      </div nb="/#dv-timeline-graph">
+      <!-- ************************************************************************************ /#CONTAINER-MAIN -->
+    </div nb="/#container-main">
+    <!-- ./#vue-root -->
+  </div nb="/if-state">
+</div nb="/#vue-root">
+</div nb="/#dv-app">
 </template>
 
 <script>
+
+import simplebar from 'simplebar-vue';
+  import 'simplebar/dist/simplebar.min.css';
+
 export default {
   name: "Timeline",
+  components: {
+    simplebar
+  },
   data () {
     return {
       // url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
@@ -162,10 +178,10 @@ export default {
           handles: {
             begin: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
               .add(1, "year")
-              .format("YYYY-MM-DD"),
+              .format("YYYY-MM-Mo"),
             end: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
               .subtract(1, "year")
-              .format("YYYY-MM-DD")
+              .format("YYYY-MM-Mo")
           }
         }
       },
@@ -342,12 +358,13 @@ export default {
 
       let blu = null
       switch (process.env.MODE) {
-        case 'L':
+        case 'T':
           blu = 'http://localhost:8000/2x.png'
           break
         case '33':
           // blu = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
-          blu = 'https://{s}.tiles.mapbox.com/v3/infoamazonia.map-xs56h34ri/{z}/{x}/{y}.png'
+          // blu = 'https://cartocdn_d.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png'
+          blu = 'https://cartocdn_a.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png'
           break
         default:
           blu = 'http://localhost:8000/2x.png'
@@ -576,8 +593,8 @@ console.log("WE GET local instead...")
         }); // new vis
         this.timeline.on("rangechange", properties => {
           this.times.future = {
-            begin: this.$MOMENT(properties.start).format("YYYY-MMM-DD"),
-            end: this.$MOMENT(properties.end).format("YYYY-MMM-DD")
+            begin: this.$MOMENT(properties.start).format("YYYY-MMM-Mo"),
+            end: this.$MOMENT(properties.end).format("YYYY-MMM-Mo")
           };
         });
         this.timeline.on("rangechanged", properties => {
@@ -589,8 +606,8 @@ console.log("WE GET local instead...")
 
             this.times.future = { begin: null, end: null };
             this.times.line = {
-              begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
-              end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
+              begin: this.$MOMENT(properties.start).format("YYYY-MM-Mo"),
+              end: this.$MOMENT(properties.end).format("YYYY-MM-Mo")
             };
           }
 
@@ -603,6 +620,7 @@ console.log("WE GET local instead...")
 
         // now we wire up click-selection
         this.timeline.on("click", properties => {
+          console.log("properties:",properties)
             switch (true) {
               case properties.what == "background":
                 console.info(
@@ -654,18 +672,18 @@ console.log("WE GET local instead...")
         var slider = document.getElementById("slider");
 
         const effer = v => {
-          return this.$MOMENT(v).format("YYYY.MMM.DD");
+          return this.$MOMENT(v).format("YYYY.MMM.Mo");
         };
 
         this.slider = this.$NOUISLIDER.create(slider, {
           start: [
             this.$MOMENT(
               process.env.LINE_TIME_BEGIN,
-              "YYYY-MM-DD"
+              "YYYY-MM-Mo"
             ).valueOf(),
             this.$MOMENT(
               process.env.LINE_TIME_END,
-              "YYYY-MM-DD").valueOf()
+              "YYYY-MM-Mo").valueOf()
           ],
           connect: true,
           behaviour: 'drag',
@@ -941,22 +959,33 @@ axios
 
       // if we have an active.key
       if (this.active.key !== null) {
-        axios
-          .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
-            query: 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
-              this.active.key +
-              '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' +
-              this.active.key +
-              "\" edges filter e.type=='hasParticipant' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND \"events/" +
-              this.active.key +
-              "\" edges filter e.type=='occurredAt' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }"
-          })
-          .then(response => {
-            this.active.graph = response.data.result[0];
-          }) //axios.then
-          .catch(e => {
-            console.error(e);
-          }); //axios.catch
+
+        if(process.env.MODE=="T"){
+axios.get("http://localhost:8000/dv-timeline-graph.json")
+.then(response => {
+                    this.active.graph = response.data.result[0];
+                  }) //axios.then
+                  .catch(e => {
+                    console.error(e);
+                  }); //axios.catch
+        } else {
+                axios
+                  .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
+                    query: 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
+                      this.active.key +
+                      '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' +
+                      this.active.key +
+                      "\" edges filter e.type=='hasParticipant' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND \"events/" +
+                      this.active.key +
+                      "\" edges filter e.type=='occurredAt' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }"
+                  })
+                  .then(response => {
+                    this.active.graph = response.data.result[0];
+                  }) //axios.then
+                  .catch(e => {
+                    console.error(e);
+                  }); //axios.catch
+                }//ifmodet
       } //if key
       else {
         // no key? null it out

@@ -1,10 +1,28 @@
 <template>
   <div id="vue-root" class="">
     <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
-    <div class="columns dv-vertical-columns">
-      <div class="column ">
-        maybe dump pie chart in favor of daly character list that toggles who has/has not murdered
-        <div class="dv-pie-murderers"></div>
+
+<div class="columns" style="padding-top:2em;">
+  
+<div class="column has-text-grey-light">
+  The Andy Daly universe is a dangerous place, populated by an inordinate amount of known or suspected murderers. These are they:
+</div>
+</div>
+
+    <div class="columns dv-vertical-columns has-text-left" style="padding-left:1em;">
+      <div class="column " style="padding-top:2em;">
+        <!-- <div class="dv-pie-murderers"></div> -->
+        <h4 class="is-size-4" style="margin-bottom:2em;">Played by Daly</h4>
+        <div :class="n.has_murdered.code==1?'has-text-weight-bold':''" v-for="n in graph.nodes[0]">{{n.label}}
+<span style="padding-left:1em;" class="has-text-grey-lighter" v-if="n.has_murdered.code>0">({{n.has_murdered.explain}})</span>
+        </div>
+      </div note="/.column">
+      <div class="column " style="padding-top:2em;">
+        <!-- <div class="dv-pie-murderers"></div> -->
+      <h4 class="is-size-4" style="margin-bottom:2em;">Not Played by Daly</h4>
+      <div :class="n.has_murdered.code==1?'has-text-weight-bold':''" v-for="n in graph.nodes[1]">{{n.label}}
+<span style="padding-left:1em;" class="has-text-grey-lighter" v-if="n.has_murdered.code>0">({{n.has_murdered.explain}})</span>
+      </div>
       </div note="/.column">
     </div>
   </div>
@@ -22,7 +40,7 @@ export default {
     return {
       // url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
       // url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
-      url_arango: "http://localhost:8000",
+      // url_arango: "http://localhost:8000",
       graph: null,
       page: {
         title: "Andy Dalyverse Murderers"
@@ -64,7 +82,7 @@ export default {
       // this.fakeFetchEntities('small')
 
     // } else {
-      // this.fetchEntities()
+      this.fetchMurderers()
 
     // }
 
@@ -74,7 +92,7 @@ export default {
     //   this.active.key = decodeURIComponent(this.$route.params.activeid);
     //   console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
     // }
-this.doPieChart()
+// this.doPieChart()
   }, //mounted
   methods: {
     setPageTitle: function () {
@@ -197,32 +215,65 @@ var data = [
         return svg.node();
 
     },
-    fetchEntities: function () {
+    fetchMurderers: function () {
         console.info(
           process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
         );
 
+
+if(process.env.MODE=="T"){
+
+axios.get('http://localhost:8000/dv-murderers.json')
+.then(response => {
+            console.info(
+              process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
+            );
+
+            // this.graph = {
+            //   nodes: response.data.result
+            // }
+            this.graph={
+              nodes: this.$_.partition(response.data.result,(r)=>{
+
+return r.daly=='true'
+
+              })
+            }
+
+          }) //axios.then
+          .catch(e => {
+            console.error(e);
+          }); //axios.catch
+
+} else {
         let q =
-          'for p in people\
-filter p.has_murdered.code==1 OR p.has_murdered.code==2\
-return {daly:p.daly,_id:p._id,id:p._id,label:p.name,nami:p.nami,has_murdered:p.has_murdered,article:p.article}'
+          'for p in people filter p.has_murdered.code==1 OR p.has_murdered.code==2 return {daly:p.daly,_id:p._id,id:p._id,label:p.name,nami:p.nami,has_murdered:p.has_murdered,article:p.article}'
+
 
         axios
-          .post(this.url_arango, {
-            query: q
-          })
+          .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
+          query: q
+        },
+        {
+  auth: {
+    username: "ccmiller",
+    password: "rang0"
+  }
+}
+        )
           .then(response => {
             console.info(
               process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
             );
 
-            let deeznodes = response.data.result[0].entitiez[0]
+            // let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
-            this.entities_total.v = deeznodes.length
-            this.console.msgs.push({ msg: deeznodes.length + ' entities loaded', severity: 'normal' })
+            this.entities_total.v = response.data.result.length
+            this.console.msgs.push({ msg: response.data.result.length + ' entities loaded', severity: 'normal' })
             this.graph = {
-              edges: response.data.result[0].edgez,
-              nodes: deeznodes
+              nodes:this.$_.partition(response.data.result,(r)=>{
+return r.daly=='true'
+              })
             }
 
           }) //axios.then
@@ -230,7 +281,7 @@ return {daly:p.daly,_id:p._id,id:p._id,label:p.name,nami:p.nami,has_murdered:p.h
             console.error(e);
           }); //axios.catch
       } //fetchEntities
-
+}//ifmodet
   }, //methods
   computed: {}, //computed
 

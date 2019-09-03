@@ -563,6 +563,14 @@
     , "id": 149
   }
 }, {
+  "_key": "_:starbucksgowergulch"
+  , "name": "Starbucks - Gower Gulch"
+  , "article": ["Starbucks at Gower Gulch is a known hangout for Gadfly Jack Fitzgerald and others like him."]
+  , "geo_key": {
+    "type": "point"
+    , "id": 388
+  }
+}, {
   "_key": "_:schmiedebergpretzelcompany"
   , "name": "Schmiedeberg Pretzel Company"
   , "article": ["August Lindt's place of work."]

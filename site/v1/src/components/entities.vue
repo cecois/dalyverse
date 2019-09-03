@@ -1,6 +1,6 @@
 <template>
   <div id="vue-root" class="">
-    <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
+    <vue-headful :title="page.title" description="People, Places, Events &amp; Things in the Andy Dalyverse" />
     <div class="columns dv-vertical-columns">
       <div class="column is-full dv-column-left">
         <!-- <div id="network"><svg></svg></div note="/#network"> -->

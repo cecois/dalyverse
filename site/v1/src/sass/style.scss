@@ -1,7 +1,8 @@
 // Import a Google Font
 // @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-$font-body: 'Fira Sans Condensed', sans-serif;
+// $font-body: 'Fira Sans Condensed', sans-serif;
 // $font-body: 'K2D', sans-serif;
+$font-body: 'B612', sans-serif;
 // $font-body: 'Nanum Gothic', sans-serif;
 
 // Set your brand colors
@@ -102,8 +103,9 @@ body{width:100%;height:100%;
   background-color:$dv-green;
 }
 .noUi-base{
-    background-color:$dv-black;
+    background-color:white;
   }
+  .noUi-tooltip  {color:$dv-copy;}
 /* ++++++++++++++++++++++++++++++++++++++++ /\ NOUI ++ */
 
 
@@ -142,13 +144,19 @@ body{width:100%;height:100%;
   margin-top:16px;
 }
 #dv-graph-copy-wrapper{
-height:90vh;
+// height:90vh;
 }
 
 #dv-timeline-graph{
+// height:100%;
+height:($height-main - $height-header);
+
   // margin-top:1em;
   // background-color:adjust-color($dv-black,$alpha:-0.4);
-  padding:2em 0 5em 0;
+  // padding:2em 0 5em 0;
+  width:50%;
+  background-color:$dv-black;
+  z-index:2;
 }
 
 .dv-vertical-columns{height:$height-main;}
@@ -318,10 +326,12 @@ src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/N
   font-weight:800;font-size:.8em;
 }
 .vis-even{
-  background-color:rgba(0,0,0,.01)
+  // background-color:rgba(0,0,0,.01)
+  background-color:adjust-color($dv-black,$alpha:-0.2)
 }
 .vis-odd{
-  background-color:rgba(0,0,0,.05)
+  // background-color:rgba(0,0,0,.05)
+  background-color:adjust-color($dv-black,$alpha:-0.4)
 }
 .vis-item {
   background-color:$dv-black;
@@ -351,11 +361,13 @@ src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/N
 .vis-text.vis-major{
   font-weight:800;
   font-size:1.7em;
-  color:rgba(255,255,255,.6);
+  // color:rgba(255,255,255,.6);
+  color:$dv-copy;
 }
 .vis-text.vis-minor{
   font-size:.9em;
-  color:rgba(255,255,255,.6);
+  // color:rgba(255,255,255,.6);
+  color:$dv-copy;
 }
 .dv-time-item{
 .dv-time-item-w-geo{

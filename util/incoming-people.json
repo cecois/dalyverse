@@ -527,7 +527,7 @@
     "name": "Laird",
     "has_murdered": {
       "code": 2,
-      "explain": "Scores of horses, certainly."
+      "explain": "Countless horses, certainly."
     },
     "article": [
       "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses."
@@ -1005,13 +1005,16 @@
     "article": [
       "Jack Fitzgerald is a gadfly and contrarian, a fly in the ointment.",
       "He has been arrested 'many, many times' and lives with his mother next to the Los Angeles river, in which he washes his only set of clothes.",
+      "He supposedly successfully won an injunction against Halloween on the grounds that it constituted a public demonstration for which no permit had been issued.",
       "Most of his income is from not doing things he said he would do - $100/per.",
+      "He holds court at the Gower Gulch Starbucks.",
       "He attended the United College of Arts & Sciences & Knowledge and later founded a college in his back yard, primarily attended by a couple of girls and assisted by one Cactus Tony.",
       "Jack owns a coat hanger made of the human remains of his former student body.",
       "He makes many decisions by laying out the entrails of former college students and intuiting cosmic advice."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 2,
+      "explain":"A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."
     },
     "links": [
       {
