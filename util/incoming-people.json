@@ -265,8 +265,13 @@
     "daly": "false",
     "name": "Plaxicon - The Trow of Dumbiedykes Road",
     "nami": "Plaxicon",
+        "has_murdered": {
+      "code": 1,
+      "explain":"Turns out not a trow but an alien, Plaxicon openly admits to administering dissections of earthling bagpipers."
+    },
     "article": [
       "Plaxicon was a trow accused of vanquishing Stuart Cambridge in 1853.",
+      ,"He is not from France."
       "In fact, he may be not be a Trow at all but either an extraterrestrial traveler from Zaltan 3 or a Scot who got drunk, saw a drone, and lost his pants.",
       "His favorite candies are Minstrels and Maltesers."
     ]
@@ -281,10 +286,23 @@
     ]
   },
   {
+    "_key": "_:roderick",
+    "daly": "false",
+    "name": "Roderick",
+    "nami": "Roderick",
+    "article": [
+      "Roderick works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, procuring wheelbarrows-full of (often human) shit for the Edinburgh Castle leg of the tour."
+    ]
+  },
+  {
     "_key": "_:sawneybean",
     "daly": "false",
     "name": "Alexander (Sawney) Bean",
     "nami": "Bean, Alexander (Sawney)",
+        "has_murdered": {
+      "code": 1,
+      "explain":"Despite 'a lot of contradictory recipes' for cannibalism, Mr. Bean made a practice of sneaking out of his cave late at night, finding somebody riding on horseback, snatching them to slice up, cook, and eat."
+    },
     "article": [
       "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland.",
       "He lives in a cave in the Scottish Highlands with his giant, incestual family where he murders and eats weary travelers.",
@@ -463,7 +481,8 @@
     "name": "Beck Landry",
     "nami": "Landry, Beck",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":""
     },
     "article": [
       "Beck Landry is a cowboy who spends most of his time in the high country.",
@@ -527,7 +546,7 @@
     "name": "Laird",
     "has_murdered": {
       "code": 2,
-      "explain": "Countless horses, certainly."
+      "explain": "Countless horses, certainly. By fire."
     },
     "article": [
       "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses."
@@ -562,7 +581,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 2,
-      "explain": "Scores of horses, at least."
+      "explain": "It is unclear Mr. McGonigle's role in the murders of any number of Edinburgh's homeless population (he admits to being, at least, culpable), but he is certainly the ultimate causer of the deaths of many, many horses."
     },
     "name": "Cameron McGonigle",
     "nami": "McGonigle, Cameron",
