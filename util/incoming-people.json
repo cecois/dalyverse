@@ -1044,6 +1044,7 @@
     ],
     "has_murdered": {
       "code": 1
+      ,"explain": ""
     },
     "links": [
       {
