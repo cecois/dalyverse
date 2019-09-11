@@ -1062,7 +1062,8 @@
       "He has accidentally, from time to time, poisoned a baby with food."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 2,
+      "explain":"Mr. Denniston, in all of his tales on Comedy Bang! Bang!, often refers to potential tragedies for which he is responsible -- the losing of a baby, the poisoning of babies, a suspicious drowning of a Wandsworth prison guard -- but never implicates himself in any loss of life."
     },
     "links": [
       {
@@ -1113,7 +1114,8 @@
       "Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"Cactus Tony, reticent to admit murder on tape, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre."
     },
     "links": [
       {
@@ -1192,7 +1194,8 @@
       "Chip is also known as the Side-by-Side Gretchen and has been sued more than once by the Jim Morrison estate."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"As Satan incarnate, Mr. Gardner is openly responsible for myriad atrocities. Included among them are the routine murders caused by, or somehow otherwise associated with, various Hollywood game shows as well as ritualistic sacrifices in the woods with his friend, Rochelle the Elf."
     }
   },
   {
@@ -1221,7 +1224,8 @@
       "Also on CBB#599 he announced the working title of his next book: If You Thought You Were Done Buying at Least as Much Jewelry for Your Wife as You Buy Your Horse You Are Sorely Mistaken and Other Poems and Observations from a Life that Believe it or Not is Still Being Lived on the Range by Dalton Wilcox Who Wrote the First Book and the Second Book and has Now Written the Third Book by Dalton Wilcox.'"
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation."
     }
   },
   {
@@ -1365,7 +1369,8 @@
       "He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"Mr. Callahan, as an RN at Bergen Regional in New Jersey, in effect killed a patient named Rosa by wheeling her into a hospital room with a faulty call button and leaving her there overnight."
     },
     "links": [
       {
@@ -1416,7 +1421,8 @@
       "A boiler room in his home is still full of telephones from the time he ran a day-laboror-run phone bank."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":""
     },
     "links": [
       {
@@ -1696,6 +1702,10 @@
   {
     "_key": "_:billcarter",
     "daly": "true",
+        "has_murdered": {
+      "code": 2,
+      "explain":"Mr. Carter openly confesses to, is a professional at even, harrassing his clients with threats of violence. It has never been verified that the violence ever went too far, but seems likely given the severity of his threats."
+    },
     "name": "Bill Carter",
     "nami": "Carter, Bill",
     "article": [
