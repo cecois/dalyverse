@@ -265,8 +265,13 @@
     "daly": "false",
     "name": "Plaxicon - The Trow of Dumbiedykes Road",
     "nami": "Plaxicon",
+    "has_murdered": {
+      "code": 1,
+      "explain": "Turns out not a trow but an alien, Plaxicon openly admits to administering dissections of earthling bagpipers."
+    },
     "article": [
       "Plaxicon was a trow accused of vanquishing Stuart Cambridge in 1853.",
+      "He is not from France.",
       "In fact, he may be not be a Trow at all but either an extraterrestrial traveler from Zaltan 3 or a Scot who got drunk, saw a drone, and lost his pants.",
       "His favorite candies are Minstrels and Maltesers."
     ]
@@ -281,10 +286,23 @@
     ]
   },
   {
+    "_key": "_:roderick",
+    "daly": "false",
+    "name": "Roderick",
+    "nami": "Roderick",
+    "article": [
+      "Roderick works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, procuring wheelbarrows-full of (often human) shit for the Edinburgh Castle leg of the tour."
+    ]
+  },
+  {
     "_key": "_:sawneybean",
     "daly": "false",
     "name": "Alexander (Sawney) Bean",
     "nami": "Bean, Alexander (Sawney)",
+    "has_murdered": {
+      "code": 1,
+      "explain": "Despite 'a lot of contradictory recipes' for cannibalism, Mr. Bean made a practice of sneaking out of his cave late at night, finding somebody riding on horseback, snatching them to slice up, cook, and eat."
+    },
     "article": [
       "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland.",
       "He lives in a cave in the Scottish Highlands with his giant, incestual family where he murders and eats weary travelers.",
@@ -317,8 +335,8 @@
     "article": [
       "Donald Trump was a president of the United States."
     ],
-    "name": "Donald J. Trump"
-    ,"nami": "Trump, Donald J."
+    "name": "Donald J. Trump",
+    "nami": "Trump, Donald J."
   },
   {
     "_key": "_:johnnymcgorry",
@@ -327,8 +345,8 @@
       "Johnny McGorry is a fictional character in a wealth of traditional Irish folk tales.",
       "He is widely known to be the very lightly fictionalized persona of Patrick McMahon."
     ],
-    "name": "Johnny McGorry"
-    ,"nami": "McGorry, Johnny"
+    "name": "Johnny McGorry",
+    "nami": "McGorry, Johnny"
   },
   {
     "_key": "_:matrickpahahon",
@@ -336,8 +354,8 @@
     "article": [
       "Matrick PaHahon is purportedly Patrick McMahon's literary agent, though he is commonly-known to be Patrick, himself."
     ],
-    "name": "Matrick PaHahon"
-    ,"nami": "PaHahon, Matrick"
+    "name": "Matrick PaHahon",
+    "nami": "PaHahon, Matrick"
   },
   {
     "_key": "_:margotchunk",
@@ -346,8 +364,7 @@
       "Margot Chunk was summoned from retirement to be Joe Bongo's replacement as the driving instructor at Marina del Rey High School.",
       "She has tried and failed to make 'The Guiness Book of World Records' a number of times for, including but not limited to, walking the most amount of dog and drinking the most bleach."
     ],
-    "name": "Margot Chunk"
-    ,"name": "Chunk, Margot"
+    "name": "Chunk, Margot"
   },
   {
     "_key": "_:gretathecaretaker",
@@ -355,8 +372,7 @@
     "article": [
       "Greta the Caretaker is an American home nurse (credentials unknown) who once found Johnny McGorry in her client's home, watching cartoons in his underwear."
     ],
-    "name": "Greta the Caretaker"
-    ,"name": "Greta"
+    "name": "Greta"
   },
   {
     "_key": "_:unnamedelderlywoman1",
@@ -463,7 +479,8 @@
     "name": "Beck Landry",
     "nami": "Landry, Beck",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": "Landry, having been cuckolded by his wife with a ranch hand, tracked them down despite his own injuries from an unrelated fist fight, murdering them shortly before succumbing himself."
     },
     "article": [
       "Beck Landry is a cowboy who spends most of his time in the high country.",
@@ -527,7 +544,7 @@
     "name": "Laird",
     "has_murdered": {
       "code": 2,
-      "explain": "Countless horses, certainly."
+      "explain": "Countless horses, certainly. By fire."
     },
     "article": [
       "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses."
@@ -562,7 +579,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 2,
-      "explain": "Scores of horses, at least."
+      "explain": "It is unclear Mr. McGonigle's role in the murders of any number of Edinburgh's homeless population (he admits to being, at least, culpable), but he is certainly the ultimate causer of the deaths of many, many horses."
     },
     "name": "Cameron McGonigle",
     "nami": "McGonigle, Cameron",
@@ -642,7 +659,8 @@
     "name": "Elmer Edward Solly",
     "nami": "Solly, Elmer Edward",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":""
     },
     "article": [
       "Edward Solly was a murderer who assumed the identity of former Sha Na Na guitarist Vinnie Taylor.",
@@ -834,7 +852,6 @@
   {
     "_key": "_:joebongo",
     "daly": "true",
-    "name": "Joe (Bongo) Dunleavy",
     "name": "Dunleavy, Joe",
     "article": [
       "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class; encourages students to share with classmates intimate details about their lives; teaches kids how to speedball; plays 'Find The Ping Pong Ball'; and solicits ideas for new Kama Sutra positions.",
@@ -1014,7 +1031,7 @@
     ],
     "has_murdered": {
       "code": 2,
-      "explain":"A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."
+      "explain": "A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."
     },
     "links": [
       {
@@ -1043,8 +1060,8 @@
       "He has accidentally, from time to time, poisoned a baby with food."
     ],
     "has_murdered": {
-      "code": 1
-      ,"explain": ""
+      "code": 2,
+      "explain": "Mr. Denniston, in all of his tales on Comedy Bang! Bang!, often refers to potential tragedies for which he is responsible -- the losing of a baby, the poisoning of babies, a suspicious drowning of a Wandsworth prison guard -- but never implicates himself in any loss of life."
     },
     "links": [
       {
@@ -1095,7 +1112,8 @@
       "Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": "Cactus Tony, reticent to admit murder on tape, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre."
     },
     "links": [
       {
@@ -1174,7 +1192,8 @@
       "Chip is also known as the Side-by-Side Gretchen and has been sued more than once by the Jim Morrison estate."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": "As Satan incarnate, Mr. Gardner is openly responsible for myriad atrocities. Included among them are the routine murders caused by, or somehow otherwise associated with, various Hollywood game shows as well as ritualistic sacrifices in the woods with his friend, Rochelle the Elf."
     }
   },
   {
@@ -1203,7 +1222,8 @@
       "Also on CBB#599 he announced the working title of his next book: If You Thought You Were Done Buying at Least as Much Jewelry for Your Wife as You Buy Your Horse You Are Sorely Mistaken and Other Poems and Observations from a Life that Believe it or Not is Still Being Lived on the Range by Dalton Wilcox Who Wrote the First Book and the Second Book and has Now Written the Third Book by Dalton Wilcox.'"
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": "In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation."
     }
   },
   {
@@ -1347,7 +1367,8 @@
       "He has witnessed the light disappear from the eyes of a human more than 500 times. Including animals the total is estimated (by Andi) to be more than 10,000. Twenty of those were penguins."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": "Mr. Callahan, as an RN at Bergen Regional in New Jersey, in effect killed a patient named Rosa by wheeling her into a hospital room with a faulty call button and leaving her there overnight."
     },
     "links": [
       {
@@ -1398,7 +1419,8 @@
       "A boiler room in his home is still full of telephones from the time he ran a day-laboror-run phone bank."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": ""
     },
     "links": [
       {
@@ -1410,7 +1432,6 @@
   {
     "_key": "_:thelizard",
     "daly": "false",
-    "name": "The Lizard",
     "name": "Lizard, The",
     "article": [
       "The Lizard is a mariner, of sorts, who in International Waters will turn any corpse into anything they desire.",
@@ -1678,6 +1699,10 @@
   {
     "_key": "_:billcarter",
     "daly": "true",
+    "has_murdered": {
+      "code": 2,
+      "explain": "Mr. Carter openly confesses to, is a professional at even, harrassing his clients with threats of violence. It has never been verified that the violence ever went too far, but seems likely given the severity of his threats."
+    },
     "name": "Bill Carter",
     "nami": "Carter, Bill",
     "article": [

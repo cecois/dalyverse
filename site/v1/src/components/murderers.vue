@@ -13,9 +13,17 @@
       <div class="column " style="padding-top:2em;">
         <!-- <div class="dv-pie-murderers"></div> -->
         <h4 class="is-size-4" style="margin-bottom:2em;">Played by Daly</h4>
-        <div :class="n.has_murdered.code==1?'has-text-weight-bold':''" v-for="n in graph.nodes[0]">{{n.label}}
-<span style="padding-left:1em;" class="has-text-grey-lighter" v-if="n.has_murdered.code>0">({{n.has_murdered.explain}})</span>
-        </div>
+        <div class="tile is-ancestor">
+
+          <div v-for="n in graph.nodes[0]" class="article columns tile">
+
+            <div class="column"><div :class="n.has_murdered.code==1?'has-text-weight-bold':''" >{{n.label}}
+                              <span style="padding-left:1em;" class="has-text-grey-lighter" v-if="n.has_murdered.code>0">({{n.has_murdered.explain}})</span>
+                                      </div></div nb="/.column">
+
+                        </div nb="/.tile.columns">
+
+              </div nb="/.tile.is-ancestor">
       </div note="/.column">
       <div class="column " style="padding-top:2em;">
         <!-- <div class="dv-pie-murderers"></div> -->

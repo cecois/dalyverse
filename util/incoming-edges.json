@@ -489,6 +489,12 @@
     "vertex": "_:daltonwilcoxvaultguy"
   },
   {
+    "_from": "people/_:roderick",
+    "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
+    "type": "worksFor",
+    "vertex": "_:roderick"
+  },
+  {
     "_from": "people/_:weebruce",
     "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
     "type": "worksFor",
