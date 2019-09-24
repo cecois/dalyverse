@@ -1654,11 +1654,19 @@
     ]
   },
   {
+    "_key": "_:cakeboss",
+    "daly": "false",
+    "name": "Cake Boss",
+    "article": [
+      "Cake Boss is the boss of cakes."
+    ]
+  },
+  {
     "_key": "_:dondimello",
     "daly": "true",
     "has_murdered": {
       "code": 1,
-      "explain":""
+      "explain":"Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run."
     },
     "name": "Don DiMello",
     "nami": "DiMello, Don",
@@ -1841,7 +1849,7 @@
     "name": "Scott Aukerman",
     "nami": "Aukerman, Scott",
     "article": [
-      "Scott Aukerman is a host."
+      "Scott Aukerman is a host who believes every human deserves their own toilet."
     ],
     "links": [
       {

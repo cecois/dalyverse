@@ -1899,6 +1899,12 @@
     "vertex": "_:dondimellofindsachild"
   },
   {
+    "_from": "events/_:dondimellosthelittlemermaid",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosthelittlemermaid"
+  },
+  {
     "_from": "events/_:dondimellopresentsdisneysfrozen",
     "_to": "people/_:dondimello",
     "type": "hasParticipant",
@@ -2953,6 +2959,12 @@
     "_to": "things/_:cameronmcgoniglesghosttoursthatarescary",
     "type": "worksFor",
     "vertex": "_:bryan"
+  },
+  {
+    "_from": "people/_:cakeboss",
+    "_to": "people/_:dondimello",
+    "type": "hasWorkedFor",
+    "vertex": "_:cakeboss"
   },
   {
     "_from": "people/_:cactustony",
