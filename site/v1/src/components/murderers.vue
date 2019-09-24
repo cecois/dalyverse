@@ -1,54 +1,88 @@
 <template>
-  <div id="vue-root" class="">
-    <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
-
-<div class="columns" style="padding-top:2em;">
-  
-<div class="column has-text-grey-light">
-  The Andy Daly universe is a dangerous place, populated by an inordinate amount of known or suspected murderers. These are they:
-</div>
-</div>
-
-    <div class="columns dv-vertical-columns has-text-left" style="padding-left:1em;">
-      <div class="column " style="padding-top:2em;">
-        <!-- <div class="dv-pie-murderers"></div> -->
-        <h4 class="is-size-4" style="margin-bottom:2em;">Played by Daly</h4>
-        <div class="tile is-ancestor">
-
-          <div v-for="n in graph.nodes[0]" class="article columns tile">
-
-            <div class="column"><div :class="n.has_murdered.code==1?'has-text-weight-bold':''" >{{n.label}}
-                              <span style="padding-left:1em;" class="has-text-grey-lighter" v-if="n.has_murdered.code>0">({{n.has_murdered.explain}})</span>
-                                      </div></div nb="/.column">
-
-                        </div nb="/.tile.columns">
-
-              </div nb="/.tile.is-ancestor">
-      </div note="/.column">
-      <div class="column " style="padding-top:2em;">
-        <!-- <div class="dv-pie-murderers"></div> -->
-      <h4 class="is-size-4" style="margin-bottom:2em;">Not Played by Daly</h4>
-      <div :class="n.has_murdered.code==1?'has-text-weight-bold':''" v-for="n in graph.nodes[1]">{{n.label}}
-<span style="padding-left:1em;" class="has-text-grey-lighter" v-if="n.has_murdered.code>0">({{n.has_murdered.explain}})</span>
-      </div>
-      </div note="/.column">
+<div id="vue-root" class="">
+  <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
+  <div class="columns" style="padding-top:2em;">
+    <div class="column has-text-grey-light">
+      The Andy Daly universe is a dangerous place, populated by an inordinate amount of known or suspected murderers. These are they:
     </div>
   </div>
-  <!-- ./#vue-root -->
+  <div class="columns dv-vertical-columns has-text-left" style="padding-left:1em;">
+    <div class="column is-5" style="padding-top:2em;">
+      <div v-if="!active.onside"><h4 class="is-size-4" style="margin-bottom:2em;">Played by Daly</h4>
+            <dl class="dv-dl" v-for="n in graph.nodes[0]">
+              <dt><div @click="active.onside='L'" :class="[n.has_murdered.code==1?'has-text-weight-bold':'','level-item-left']" >{{n.label}}
+              </div></dt>
+              <dd><div style="" class="has-text-grey-lighter">{{n.has_murdered.explain}}</div></dd>
+            </dl></div nb="/v-if.onside">
+
+      <div v-if="active.onside=='R'">
+            
+<div class="is-overlay" v-if="active.key" id="dv-murderers-graph">
+        <!-- Main container -->
+        <nav class="level">
+          <!-- Left side -->
+          <div class="level-left">
+            <div class="level-item">
+              
+            </div>
+            
+          </div>
+          <!-- Right side -->
+          <div class="level-right">
+            <a @click="active.key=null" class="delete" style="margin-top: 7vh;right: 2vw;position:relative;"></a>
+          </div>
+        </nav>
+        <simplebar id="dv-graph-copy-wrapper">
+        <div class="columns"><div class="column is-12">
+          
+         <!--  <p style="" class="dv-title is-size-3">{{active.item.content}}</p>
+          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-if="(active.item)" class="">
+            <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
+          </a></p>
+          <p style="margin-top:2em;">
+            <div class="has-text-grey dv-graph-copy" style="padding:0 4em;font-weight:400;" v-for="articleitem in active.item.article">
+              {{articleitem}}
+            </div>
+          </p> -->
+        </div nb="/.column">
+      </div nb="/.columns">
+        <div class="columns">
+          
+          <div class="column">
+            <div style="margin-top:4em;" v-if="active.key">
+              <p class="is-size-4 dv-title-sub">Participants:</p>
+              <p v-for="prsn in active.graph.participants">{{prsn.name}}</p>
+            </div>
+          </div>
+          
+        </div nb="/.columns">
+      </simplebar>
+      </div nb="/#dv-timeline-graph">
+
+            </div nb="/v-if.onside">
+    </div note="/.column">
+    <div class="column is-2"></div>
+    <div class="column is-5" style="padding-top:2em;">
+      <div v-if="!active.onside"><h4 class="is-size-4" style="margin-bottom:2em;">Not Played by Daly</h4>
+            <dl class="dv-dl" v-for="n in graph.nodes[1]">
+              <dt><div @click="setActive(n._id,'R')" :class="[n.has_murdered.code==1?'has-text-weight-bold':'','level-item-left']" >{{n.label}}
+              </div></dt>
+              <dd><div style="" class="has-text-grey-lighter">{{n.has_murdered.explain}}</div></dd>
+            </dl></div nb="/v-if.onside">
+    </div note="/.column">
+  </div>
+</div>
+<!-- ./#vue-root -->
 </template>
 
 <script>
 import * as d3 from 'd3';
 // import Graph from "./graph.vue";
-
 export default {
   name: "Murderers",
   // components:{Graph},
   data () {
     return {
-      // url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
-      // url_arango: "http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR,
-      // url_arango: "http://localhost:8000",
       graph: null,
       page: {
         title: "Andy Dalyverse Murderers"
@@ -60,7 +94,8 @@ export default {
       active: {
         key: null,
         item: { article: null },
-        graph: null
+        graph: null,
+        onside:null
       },
       entities_total: { v: 0, loading: true },
       console: {
@@ -83,6 +118,77 @@ export default {
 
   }, // created
   mounted: function () {
+
+// if(process.env.MODE=='T'){
+//         let sAxios = document.createElement('script')
+//         sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
+//         document.head.appendChild(sAxios)
+
+//         // let sLeaflet = document.createElement('script')
+//         // sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
+//         // document.head.appendChild(sLeaflet)
+
+//         let sVis = document.createElement('script')
+//         sVis.setAttribute('src','http://localhost:8000/vis.min.js')
+//         document.head.appendChild(sVis)
+
+//         // let cLeaflet = document.createElement('link')
+//         // cLeaflet.setAttribute('rel','stylesheet')
+//         // cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
+//         // document.head.appendChild(cLeaflet)
+
+//         let cVis = document.createElement('link')
+//         cVis.setAttribute('rel','stylesheet')
+//         cVis.setAttribute('src','http://localhost:8000/vis.min.css')
+//         document.head.appendChild(cVis)
+
+//         let cVisTimeline = document.createElement('link')
+//         cVisTimeline.setAttribute('rel','stylesheet')
+//         cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
+//         document.head.appendChild(cVisTimeline)
+
+        
+//         let cMaterial = document.createElement('link')
+//         cMaterial.setAttribute('rel','stylesheet')
+//         cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
+//         document.head.appendChild(cMaterial)
+
+//       } else {
+
+//                 let sAxios = document.createElement('script')
+//         sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
+//         document.head.appendChild(sAxios)
+
+//         // let sLeaflet = document.createElement('script')
+//         // sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
+//         // document.head.appendChild(sLeaflet)
+
+//         let sVis = document.createElement('script')
+//         sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
+//         document.head.appendChild(sVis)
+
+//         // let cLeaflet = document.createElement('link')
+//         // cLeaflet.setAttribute('rel','stylesheet')
+//         // cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
+//         // document.head.appendChild(cLeaflet)
+
+//         let cVis = document.createElement('link')
+//         cVis.setAttribute('rel','stylesheet')
+//         cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
+//         document.head.appendChild(cVis)
+
+//         let cVisTimeline = document.createElement('link')
+//         cVisTimeline.setAttribute('rel','stylesheet')
+//         cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
+//         document.head.appendChild(cVisTimeline)
+
+//         let cMaterial = document.createElement('link')
+//         cMaterial.setAttribute('rel','stylesheet')
+//         cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
+//         document.head.appendChild(cMaterial)
+
+//       }
+
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
@@ -103,6 +209,33 @@ export default {
 // this.doPieChart()
   }, //mounted
   methods: {
+    setActive:function(itemid,side){
+      this.active.onside=side
+      this.active.key=itemid
+      
+    },//setactive
+    setActiveItem:function(){
+      console.log(
+        process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
+      );
+      console.log(
+        process.env.VERBOSITY == "DEBUG" && this.active.key !== null ? "  -> active.key is " +
+        this.active.key +
+        " setting real item from " +
+        this.events.length +
+        " events..." : null
+      );
+
+console.log("ITEM:::",this.$_.findWhere(this.$_.flatten(this.nodes), {
+          id: this.active.key
+        }));
+
+      this.active.item =
+        this.active.key !== null ? this.$_.findWhere(this.$_.flatten(this.nodes), {
+          id: this.active.key
+        }) : this.nullItem();
+
+    },//setactive
     setPageTitle: function () {
       let sub = null;
 
@@ -294,8 +427,8 @@ return r.daly=='true'
   computed: {}, //computed
 
   watch: {
-    // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
-    query: {
+    "active.item": { handler: function (vnew) { this.setActiveItem() } }
+    ,query: {
       handler: function (vnew, vold) {
 
 

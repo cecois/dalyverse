@@ -633,6 +633,18 @@
     "vertex": "_:slamminoliverrothwell"
   },
   {
+    "_from": "people/_:dondimello",
+    "_to": "things/_:unnamedpropertydamagingfirm",
+    "type": "hasWorkedAt",
+    "vertex": "_:dondimello"
+  },
+  {
+    "_from": "people/_:propertydamagergene",
+    "_to": "things/_:unnamedpropertydamagingfirm",
+    "type": "hasWorkedAt",
+    "vertex": "_:propertydamagergene"
+  },
+  {
     "_from": "events/_:thegreatminingoflakesuperior",
     "_to": "places/_:lakesuperior",
     "type": "occurredAt",

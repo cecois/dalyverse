@@ -193,6 +193,15 @@
     ]
   },
   {
+    "_key": "_:propertydamagergene",
+    "daly": "false",
+    "name": "Gene",
+    "nami": "Gene",
+    "article": [
+      "Gene owned a property damaging firm that once employed a young Don DiMello."
+    ]
+  },
+  {
     "_key": "_:heidicorporate",
     "daly": "false",
     "name": "Heidi Corporate",
@@ -660,7 +669,7 @@
     "nami": "Solly, Elmer Edward",
     "has_murdered": {
       "code": 1,
-      "explain":""
+      "explain":"Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."
     },
     "article": [
       "Edward Solly was a murderer who assumed the identity of former Sha Na Na guitarist Vinnie Taylor.",
@@ -710,6 +719,10 @@
     "daly": "true",
     "name": "Jimmy Bongos",
     "nami": "Bongos, Jimmy",
+    "has_murdered": {
+      "code": 1,
+      "explain":"Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings. Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."
+    },
     "article": [
       "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
     ]
@@ -863,16 +876,19 @@
       "He considers himself a drug survivor, a designation with which not everybody agrees except perhaps his doctor, who has determined that Mr. Bongo is operating on only two of the four quadrants of his brain.",
       "In lieu of drugs, Mr. Bongo now practices a number of different approaches to achieving natural highs such as oxygen and sleep deprivation, squatting-and-standing-very-fast, and acid.",
       "He does parking lot security and cafeteria duty at MDRHS and doubles as a driver's ed instructor (despite being responsible for the most expensive car accident in the history of Marina del Rey).",
-      " Mr. Bongo commands a musical combination called Rosebush Red, does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit.",
+      "Mr. Bongo commands a musical combination called Rosebush Red, does not own a watch and has openly admitted to flunking students in order to maintain a more stable lineup for that outfit.",
       "He gets into a lot of fights with charicaturists out on the Venice Fishing Pier and he hasn't purchased a single 'Guiness Book of World Records' since they stopped certifying and endorsing dangerous stunts.",
       "He claims to have 3 fathers (does not know which is biological) and he writes one sexually-explicit letter a day to Ian Anderson of Jethro Tull.",
       "He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system.",
       " Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72.",
+      "He has 'been alive for 33 students deaths.'",
+      "His hobby is taking apart Triumph motorcycles and not reassembling them."
       "He is not an android and he's 'tired of the question.'",
       "He does own a rug made of human hair; has been 'brutally beaten on a number occasions' for not having his bongos with him; and believes himself to be the inspiration behind the character of Isaac on ABC's 'The Love Boat' because, for a while, he was a bartender on a cruise ship - this despite him, at that time, not being an African-American."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 2,
+      "explain":"Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), it seems likely that bad things have happened even with no bongos present. He does own a rug made of human hair, for example, refusing to explain the sources, saying only that \"there's various different ways of getting people's hair.\" Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, that he in fact has a 'house full of rugs.' Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."
     },
     "links": [
       {
@@ -1108,12 +1124,13 @@
       "He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house.",
       "In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.'",
       "He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn.",
+      "His hands are registered weapons 'when combined with a shovel.'"
       "He works as well at Jack Fitzgerald's backyard college, for which he serves as an admissions officer.",
       "Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent."
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "Cactus Tony, reticent to admit murder on tape, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre."
+      "explain": "Cactus Tony, reticent to admit murder on tape beyond the time he pushed his aunt Eileen into a homemade grave, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre. As a member of the Croatian Special Forces, it is implied on CBB#200 that he at least did battle, probably successfully, with Serbian troops."
     },
     "links": [
       {
@@ -1223,7 +1240,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation."
+      "explain": "In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation. Or whom, according to an episode of 'Bananas for Bonanza' at the 2018 Peecast Blast in Los Angeles, had bad allergies. In a poem on the same show, he appeared to confess to killing 'a Mexican family because I was drunk driving too fast.' It is one of several such admissions that could, strictly-speaking, be the fiction of poetry but probably is not. A final admission is pretty certainly a truth - that the 'jewelry' he got his wife was a silver bullet, right in the heart."
     }
   },
   {
@@ -1420,7 +1437,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": ""
+      "explain": "As a test of whether or not he was a Highlander (after watching the 1986 film 'The Highlander,' he once beheaded a stranger; He admitted on CBB#400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly."
     },
     "links": [
       {
@@ -1550,6 +1567,10 @@
     "daly": "false",
     "name": "Dr. Seth Wompler",
     "nami": "Wompler, Seth",
+    "has_murdered": {
+      "code": 1,
+      "explain":"During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."
+    },
     "article": [
       "Dr. Seth Wompler is a podietrist."
     ]
@@ -1569,10 +1590,15 @@
     "name": "Charlotte Listler",
     "nami": "Listler, Charlotte",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military. She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"
     },
     "article": [
-      "Charlotte Listler is a former sniper, a current educator and educarer.",
+      "Charlotte Listler is a former sniper; a former hand model; and a current educator and educarer.",
+      "Her military codename is 'Giraffe.'",
+      "She is 1/18th Native American.",
+      "Some of her Farsi-language poetry has been published in Palestinian periodicals.",
+      "Her senior thesis at University of Phoenix Online was on 'Broken Hymens.'",
       "She runs the Starz Academy at Marina del Rey High School in California, is 1/18th Native American, and has an exhaustive collection of soft rock n roll."
     ]
   },
@@ -1631,7 +1657,8 @@
     "_key": "_:dondimello",
     "daly": "true",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":""
     },
     "name": "Don DiMello",
     "nami": "DiMello, Don",

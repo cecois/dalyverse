@@ -303,6 +303,8 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
     );
 
+    
+
     this.$once('hook:fitArrest', function () {
       this.fittable = false;
       this.fetchTotalEvents();
@@ -338,9 +340,80 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "MOUNTED! Bootstrapping events and initting vizes..." : null
     );
 
-    
+    // if(process.env.MODE=='T'){
+    //     let sAxios = document.createElement('script')
+    //     sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
+    //     document.head.appendChild(sAxios)
 
-    this.initBaseMap();
+    //     let sLeaflet = document.createElement('script')
+    //     sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
+    //     document.head.appendChild(sLeaflet)
+
+    //     let sVis = document.createElement('script')
+    //     sVis.setAttribute('src','http://localhost:8000/vis.min.js')
+    //     document.head.appendChild(sVis)
+
+    //     let cLeaflet = document.createElement('link')
+    //     cLeaflet.setAttribute('rel','stylesheet')
+    //     cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
+    //     document.head.appendChild(cLeaflet)
+
+    //     let cVis = document.createElement('link')
+    //     cVis.setAttribute('rel','stylesheet')
+    //     cVis.setAttribute('src','http://localhost:8000/vis.min.css')
+    //     document.head.appendChild(cVis)
+
+    //     let cVisTimeline = document.createElement('link')
+    //     cVisTimeline.setAttribute('rel','stylesheet')
+    //     cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
+    //     document.head.appendChild(cVisTimeline)
+
+        
+    //     let cMaterial = document.createElement('link')
+    //     cMaterial.setAttribute('rel','stylesheet')
+    //     cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
+    //     document.head.appendChild(cMaterial)
+
+    //   } else {
+
+    //             let sAxios = document.createElement('script')
+    //     sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
+    //     document.head.appendChild(sAxios)
+
+    //     // let sLeaflet = document.createElement('script')
+    //     // sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
+    //     // document.head.appendChild(sLeaflet)
+
+    //     let sVis = document.createElement('script')
+    //     sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
+    //     document.head.appendChild(sVis)
+
+    //     let cLeaflet = document.createElement('link')
+    //     cLeaflet.setAttribute('rel','stylesheet')
+    //     cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
+    //     document.head.appendChild(cLeaflet)
+
+    //     let cVis = document.createElement('link')
+    //     cVis.setAttribute('rel','stylesheet')
+    //     cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
+    //     document.head.appendChild(cVis)
+
+    //     let cVisTimeline = document.createElement('link')
+    //     cVisTimeline.setAttribute('rel','stylesheet')
+    //     cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
+    //     document.head.appendChild(cVisTimeline)
+
+    //     let cMaterial = document.createElement('link')
+    //     cMaterial.setAttribute('rel','stylesheet')
+    //     cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
+    //     document.head.appendChild(cMaterial)
+
+    //   }
+
+this.$nextTick(() => this.initBaseMap()
+  // .setSlider().fetchEvents()
+  )
+    // this.initBaseMap();
     this.setSlider();
     this.fetchEvents();
   }, //mounted
@@ -412,10 +485,17 @@ console.log("WE GET local instead...")
       } else {
 
       axios
-        .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
+          .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
-        })
-        .then(response => {
+        },
+        {
+  auth: {
+    username: process.env.ARANGOUSER,
+    password: process.env.ARANGOPSSW
+  }
+}
+        )
+          .then(response => {
           console.info(
             process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
           );
@@ -765,10 +845,17 @@ axios
         }); //axios.catch
 } else {
       axios
-        .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
+          .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
-        })
-        .then(response => {
+        },
+        {
+  auth: {
+    username: process.env.ARANGOUSER,
+    password: process.env.ARANGOPSSW
+  }
+}
+        )
+          .then(response => {
           console.info(
             process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
           );

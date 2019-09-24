@@ -33,6 +33,21 @@
               <!-- <div v-if="active.key" id="dv-graph-wrapper"> -->
 <!-- <simplebar data-simplebar-auto-hide="false" v-if="active.key" class="column is-overlay is-one-third dv-column-right"> -->
 <div v-if="active.key" id="dv-graph-wrapper" class="column is-overlay is-one-third dv-column-right" >
+
+<nav class="level">
+          <!-- Left side -->
+          <div class="level-left">
+            <div class="level-item">
+              
+            </div>
+            
+          </div>
+          <!-- Right side -->
+          <div class="level-right">
+            <a @click="active.key=null" class="delete" style="margin-top: 7vh;right: 2vw;position:relative;"></a>
+          </div>
+        </nav>
+  
                 <h4 class="is-size-4 has-text-weight-bold dv-title">{{active.label}}</h4>
                 <br/>
                 <!-- <simplebar style="height:15vh;" data-simplebar-auto-hide="false">
@@ -170,8 +185,77 @@ export default {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    
 
+    // if(process.env.MODE=='T'){
+    //     let sAxios = document.createElement('script')
+    //     sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
+    //     document.head.appendChild(sAxios)
+
+    //     let sLeaflet = document.createElement('script')
+    //     sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
+    //     document.head.appendChild(sLeaflet)
+
+    //     let sVis = document.createElement('script')
+    //     sVis.setAttribute('src','http://localhost:8000/vis.min.js')
+    //     document.head.appendChild(sVis)
+
+    //     let cLeaflet = document.createElement('link')
+    //     cLeaflet.setAttribute('rel','stylesheet')
+    //     cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
+    //     document.head.appendChild(cLeaflet)
+
+    //     let cVis = document.createElement('link')
+    //     cVis.setAttribute('rel','stylesheet')
+    //     cVis.setAttribute('src','http://localhost:8000/vis.min.css')
+    //     document.head.appendChild(cVis)
+
+    //     let cVisTimeline = document.createElement('link')
+    //     cVisTimeline.setAttribute('rel','stylesheet')
+    //     cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
+    //     document.head.appendChild(cVisTimeline)
+
+        
+    //     let cMaterial = document.createElement('link')
+    //     cMaterial.setAttribute('rel','stylesheet')
+    //     cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
+    //     document.head.appendChild(cMaterial)
+
+    //   } else {
+
+    //             let sAxios = document.createElement('script')
+    //     sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
+    //     document.head.appendChild(sAxios)
+
+    //     let sLeaflet = document.createElement('script')
+    //     sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
+    //     document.head.appendChild(sLeaflet)
+
+    //     let sVis = document.createElement('script')
+    //     sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
+    //     document.head.appendChild(sVis)
+
+    //     let cLeaflet = document.createElement('link')
+    //     cLeaflet.setAttribute('rel','stylesheet')
+    //     cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
+    //     document.head.appendChild(cLeaflet)
+
+    //     let cVis = document.createElement('link')
+    //     cVis.setAttribute('rel','stylesheet')
+    //     cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
+    //     document.head.appendChild(cVis)
+
+    //     let cVisTimeline = document.createElement('link')
+    //     cVisTimeline.setAttribute('rel','stylesheet')
+    //     cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
+    //     document.head.appendChild(cVisTimeline)
+
+    //     let cMaterial = document.createElement('link')
+    //     cMaterial.setAttribute('rel','stylesheet')
+    //     cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
+    //     document.head.appendChild(cMaterial)
+
+    //   }
+    
     if (this.$route.params
       .activeid) {
       console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
