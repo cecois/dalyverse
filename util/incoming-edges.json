@@ -5,6 +5,16 @@
     "type": "occurredAt",
     "vertex": "_:patrickmcmahonliftsarelic"
   },{
+    "_from": "events/_:dondimellosannie",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellosannie"
+  },{
+    "_from": "events/_:dondimellogetsmarried",
+    "_to": "people/_:dondimello",
+    "type": "hasParticipant",
+    "vertex": "_:dondimellogetsmarried"
+  },{
     "_from": "events/_:patrickmcmahonliftsarelic",
     "_to": "people/_:patrickmcmahon",
     "type": "hasParticipant",

@@ -731,6 +731,18 @@
     , "nb": "timestamp is a very loose estimate, any time prior to ADPPP#S1.1"
   }
 }, {
+  "_key": "_:dondimellogetsmarried"
+  , "name": ""
+  , "article": ["In order to procure a boat load of slaves from Vietnam, Mr. DiMello agreed to marry at least one of them."]
+  , "timestamp": {
+    "start": "2013-06-30T10:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-year"
+    , "nb": "timestamp is a loose estimate acc. to CBB Live in Los Angeles 2013"
+  }
+}, {
   "_key": "_:russelsheinmarrieshiswife"
   , "name": "Russel Shein Marries"
   , "article": ["Twenty-five years prior to his wife's disappearance, Russel and Mrs. Shein are married."]
@@ -1115,6 +1127,20 @@
   , "nb_timestamp": {
     "class": "estimate-firm"
     , "nb": "timestamp is acc. to ADPPP#S1.5, research shows a Grease event at Venice High (MDRHS) on June 1 2012 -- https://patch.com/california/venice/venice-high-school-aka-rydell-high-to-host-2nd-greasefd7aa4eef9"
+  }
+}, {
+  "_key": "_:dondimellosannie"
+  , "name": "Don DiMello Presents: Disney's Annie"
+  , "article": [
+    ""
+  ]
+  , "timestamp": {
+    "start": "2013-10-11T13:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "estimate-prior"
+    , "nb": "timestamp is acc. to CBB Live in Los Angeles 2013"
   }
 }, {
   "_key": "_:dondimellossteelmagnolias"
