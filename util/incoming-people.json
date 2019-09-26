@@ -1666,7 +1666,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 1,
-      "explain":"Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run. In 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs."
+      "explain":"Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run; in 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs; and in the same show he clearly states that at least three of lead roles in Annie were burned alive while he danced around the fire."
     },
     "name": "Don DiMello",
     "nami": "DiMello, Don",
@@ -1799,7 +1799,8 @@
     "name": "August Lindt",
     "nami": "Lindt, August",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":""
     },
     "article": [
       "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany.",
