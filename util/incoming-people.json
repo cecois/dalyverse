@@ -1674,6 +1674,7 @@
       "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California.",
       "He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show.",
       "He was community-raised in a brothel that was later burned to the ground in a likely case of arson.",
+      "He played Daddy Warbucks in his own production of 'Annie.'",
       "His earliest memory is witnessing a shooting of a prostitute at said brothel.",
       "He is a 'bit of a drooler,' wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011.",
       "He has been 'trying to get into heroin for years.'",
@@ -1799,7 +1800,8 @@
     "name": "August Lindt",
     "nami": "Lindt, August",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":""
     },
     "article": [
       "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany.",
