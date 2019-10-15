@@ -37,7 +37,7 @@
     <article class="tile is-child">
         <p class="title">Data &amp; Specs</p>
       <div class="content">
-        <p class="">Similar to the <a href="http://cbb.milleria.org">Comedy Bang! Bang! Bit Tracker project</a>, the data behind this are manually logged, simply by listening to audio of Daly and structuring the crazy shit he improvs about this or that character. Dissimilar to that project, however, this Dalyverse is a <em>graph</em> - the people, places, and things are nodes and the edges are the relationships therebetween: <em>hasParticipant, occurredAt, worksAt, hasFriend</em>, and so on.</p>
+        <p class="">Similar to the <a href="http://cbb.milleria.org">Comedy Bang! Bang! Bit Tracker project</a>, the data behind this are manually logged, simply by listening to audio of Daly and structuring the crazy shit he improvs about this or that character (or into which he's pimped). Dissimilar to that project, however, this Dalyverse is a <em>graph</em> - the people, places, and things are nodes and the edges are the relationships therebetween: <em>hasParticipant, occurredAt, worksAt, hasFriend</em>, and so on.</p>
         <p>Those objects are stored in a NoSQL db specifically designed for scalable graphed relationships, <a href="https://www.arangodb.com
 ">ArangoDB</a>. Stricly-speaking, anybody is welcome to build something off of this dataset. It's not well-documented like published research data should be, but if you're fan enough to even get to this paragraph you're fan enough to almost intuit what's available. Lotsa Don DiMello stuff, Cactus Tony stuff, less Neptuna stuff.</p>
       </div>

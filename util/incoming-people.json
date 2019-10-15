@@ -1,5 +1,26 @@
 [
   {
+    "_key": "_:glenwoodvaughan",
+    "daly": "false",
+    "name": "Glenwood Vaughan",
+    "article": [
+      "Glenwood Vaughan is a butler, chauffeur, barber, and wing man to William George Frederick Schmitt-Hoffman XXVIII."
+,"He reads bedtime stories to Mr. Schmitt-Hoffman."
+,"He also administers surgery-grade anesthesia to the former Baron of Renfrew."
+,"Penniless, he lives in a dilapidated mansion in Beverly Hills, California, with six families of ferile raccoons (plus two unaffiliated)."
+    ]
+  },{
+    "_key": "_:williamgeorgefrederickschmitthoffmanxxviii",
+    "daly": "true",
+    "name": "William George Frederick Schmitt-Hoffman XXVIII",
+    "article": [
+      "William George Frederick Schmitt-Hoffman XXVIII is the host of 'The Great American Cabinet of Curiosities' podcast."
+      ,"His titles include: Margrave of Upper and Lower Lausitz; Royal Knight Companion of the Order of the Thistle; Vice Laird of Aershire; Member in Good Standing of the Order of Merit; and Former Baron of Renfrew."
+      ,"He grew up squatting in various mansions across the European countryside."
+      ,"On the inaugural episode of TGACoC it is lightly implied that he and Glenwood Vaughan fled Europe under some duress."
+    ]
+  },
+  {
     "_key": "_:losangeleswerewolf1",
     "daly": "false",
     "name": "Unnamed Los Angeles Werewolf #1",
@@ -669,7 +690,7 @@
     "nami": "Solly, Elmer Edward",
     "has_murdered": {
       "code": 1,
-      "explain":"Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."
+      "explain": "Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."
     },
     "article": [
       "Edward Solly was a murderer who assumed the identity of former Sha Na Na guitarist Vinnie Taylor.",
@@ -721,7 +742,7 @@
     "nami": "Bongos, Jimmy",
     "has_murdered": {
       "code": 1,
-      "explain":"Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings. Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."
+      "explain": "Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings. Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."
     },
     "article": [
       "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
@@ -882,13 +903,13 @@
       "He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system.",
       " Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72.",
       "He has 'been alive for 33 students deaths.'",
-      "His hobby is taking apart Triumph motorcycles and not reassembling them."
+      "His hobby is taking apart Triumph motorcycles and not reassembling them.",
       "He is not an android and he's 'tired of the question.'",
       "He does own a rug made of human hair; has been 'brutally beaten on a number occasions' for not having his bongos with him; and believes himself to be the inspiration behind the character of Isaac on ABC's 'The Love Boat' because, for a while, he was a bartender on a cruise ship - this despite him, at that time, not being an African-American."
     ],
     "has_murdered": {
       "code": 2,
-      "explain":"Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), it seems likely that bad things have happened even with no bongos present. He does own a rug made of human hair, for example, refusing to explain the sources, saying only that \"there's various different ways of getting people's hair.\" Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, that he in fact has a 'house full of rugs.' Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."
+      "explain": "Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), it seems likely that bad things have happened even with no bongos present. He does own a rug made of human hair, for example, refusing to explain the sources, saying only that \"there's various different ways of getting people's hair.\" Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, that he in fact has a 'house full of rugs.' Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."
     },
     "links": [
       {
@@ -994,6 +1015,10 @@
     "_key": "_:gil",
     "daly": "true",
     "name": "Gil",
+       "has_murdered": {
+      "code": 1,
+      "explain":"Perhaps technically not a murderer due to an apparent possession by Golly, it is somewhat evident a number of people have met their ends by Gil's hand. Most of these, it seems, occurred in international waters as part of a murder club."
+    },
     "article": [
       "Gil is a former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist.",
       "He has been in show business since the day he ended up back on shore following an incident with a Murder Club out in International Waters.",
@@ -1017,11 +1042,13 @@
     "article": [
       "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottl; a tin can; a boot; Gil's hand; a turtle; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife)",
       "He prefers to be called a gentleman.",
+      "Golly has a temper but cannot express his anger on his own.",
       "He likes beautiful ladies with big hips and is a 'proponent of murder in all of its forms.'",
       "He has a temper and once participated (successfully) in a Murder Club out in International Waters."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"On CBB#274 Golly admits to orchestrating the Satanic murder club that duped Gil out into international waters and resulted in the deaths of up to 33 cast members of a children's TV show."
     },
     "links": [
       {
@@ -1124,7 +1151,7 @@
       "He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house.",
       "In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.'",
       "He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn.",
-      "His hands are registered weapons 'when combined with a shovel.'"
+      "His hands are registered weapons 'when combined with a shovel.'",
       "He works as well at Jack Fitzgerald's backyard college, for which he serves as an admissions officer.",
       "Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent."
     ],
@@ -1569,7 +1596,7 @@
     "nami": "Wompler, Seth",
     "has_murdered": {
       "code": 1,
-      "explain":"During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."
+      "explain": "During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."
     },
     "article": [
       "Dr. Seth Wompler is a podietrist."
@@ -1591,7 +1618,7 @@
     "nami": "Listler, Charlotte",
     "has_murdered": {
       "code": 1,
-      "explain":"Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military. She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"
+      "explain": "Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military. She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"
     },
     "article": [
       "Charlotte Listler is a former sniper; a former hand model; and a current educator and educarer.",
@@ -1666,7 +1693,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 1,
-      "explain":"Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run; in 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs; and in the same show he clearly states that at least three of lead roles in Annie were burned alive while he danced around the fire."
+      "explain": "Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run; in 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs; and in the same show he clearly states that at least three of lead roles in Annie were burned alive while he danced around the fire."
     },
     "name": "Don DiMello",
     "nami": "DiMello, Don",
@@ -1800,15 +1827,16 @@
     "name": "August Lindt",
     "nami": "Lindt, August",
     "has_murdered": {
-      "code": 1,
-      "explain":""
+      "code": 2,
+      "explain": "To a Mars simulation he brought a knife and several cosmonauts never returned. While unexplained, it remains fishy. Also on CBB#475 he appears to reveal that he cannibalized at least one compatriot from a self-induced avalanche; scalded the face of another with boiling hot coffee; stabbed in the back with scissors another; bludgeoned a stowaway with a fire extinguisher; and stabbed a NASA engineer as many as 19 times. Further, the doctor who attended to the NASA engineer ended up dead from stab wounds, blunt trauma, and \"having been thrown,\" fairly clearly by Lindt also."
     },
     "article": [
       "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany.",
       "August is an avid traveler.",
-      "In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide.",
+      "He was once trapped for 'weeks' in a self-induced avalanche.",
+      "In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide - when he arrived at the Hollywood sign with a rope, a can of gasoline, and a suicide note he was 'descended upon by sheriffs.'",
       "He is work friends with a monkey and has a purturbed family life.",
-      "On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can see water in slow motion."
+      "On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can \"see water in slow motion.\""
     ],
     "links": [
       {
@@ -2102,10 +2130,11 @@
     "name": "Game Show Contestant Chip Gomand",
     "nami": "Gomand, Chip",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain":"During a prison riot in 1979, Mr. Gomand, a prison guard, was called upon to prove his loyalty to the prisoners by killing a fellow guard."
     },
     "article": [
-      "Chip Gomand is a former prison guard who competed for the name Marleygot Foreleanor on Chip Gardner's 'Yes But Can You Still do it if We Set You on Fire?' and subsequently perished."
+      "Chip Gomand is a former prison guard in Buckley, Ohio, who competed for the name Marleygot Foreleanor on Chip Gardner's 'Yes But Can You Still do it if We Set You on Fire?' and subsequently perished."
     ]
   },
   {

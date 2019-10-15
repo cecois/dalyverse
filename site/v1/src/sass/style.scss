@@ -47,6 +47,7 @@ $height-main:100vh;
 
 $A-primary: $dv-green;
 $A: $dalyLink;
+$AH: adjust-color($A,$alpha:-0.5);
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ /\ var ++ */
 
 body{width:100%;height:100%;
@@ -144,7 +145,8 @@ body{width:100%;height:100%;
   margin-top:16px;
 }
 #dv-graph-copy-wrapper{
-// height:90vh;
+height:90vh;
+padding-bottom:5em;
 }
 
 #dv-index-graph{
@@ -206,7 +208,10 @@ height:($height-main - $height-header);
   }
 }
 
-.dv-trigger-active{color:$A;cursor:pointer;}
+.dv-graph-item{
+  padding:1em 3em;
+}
+.dv-trigger-active{color:$A;cursor:pointer;&:hover{color:$AH;};&:active{color:$dv-copy;}}
 
 /* ++++++++++++++++++++++++++++++++++++++++ /\ dv- ++ */
 

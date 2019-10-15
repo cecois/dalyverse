@@ -91,10 +91,22 @@
     "vertex": "_:cactustonyisconvictedofliveburial"
   },
   {
-    "_from": "events/_:shamusmcmahon",
+    "_from": "people/_:shamusmcmahon",
     "_to": "people/_:shamusmcmahonsunnamedwife",
     "type": "isSpouseOf",
     "vertex": "_:shamusmcmahon"
+  },
+  {
+    "_from": "people/_:russelsheinswife",
+    "_to": "people/_:russelshein",
+    "type": "isSpouseOf",
+    "vertex": "_:russelsheinswife"
+  },
+  {
+    "_from": "people/_:russelshein",
+    "_to": "people/_:russelsheinswife",
+    "type": "isSpouseOf",
+    "vertex": "_:russelshein"
   },
   {
     "_from": "events/_:daltonwilcoxmurdersanallergic",
@@ -493,6 +505,12 @@
     "vertex": "_:weebruce"
   },
   {
+    "_from": "people/_:glenwoodvaughan",
+    "_to": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+    "type": "worksFor",
+    "vertex": "_:glenwoodvaughan"
+  },
+  {
     "_from": "people/_:daltonwilcoxvaultguy",
     "_to": "people/_:daltonwilcox",
     "type": "worksFor",
@@ -887,6 +905,18 @@
     "_to": "people/_:malbachman",
     "type": "hasParticipant",
     "vertex": "_:malbachmanmovestoaltadena"
+  },
+  {
+    "_from": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+    "_to": "places/_:minnellimansion",
+    "type": "livesAt",
+    "vertex": "_:williamgeorgefrederickschmitthoffmanxxviii"
+  },
+  {
+    "_from": "people/_:glenwoodvaughan",
+    "_to": "places/_:minnellimansion",
+    "type": "livesAt",
+    "vertex": "_:glenwoodvaughan"
   },
   {
     "_from": "people/_:malbachman",
@@ -2835,12 +2865,6 @@
   {
     "_from": "people/_:benalterman",
     "_to": "people/_:mrfrancisco",
-    "type": "hasFriend",
-    "vertex": "_:benalterman"
-  },
-  {
-    "_from": "people/_:benalterman",
-    "_to": "people/_:mrshakamora",
     "type": "hasFriend",
     "vertex": "_:benalterman"
   },

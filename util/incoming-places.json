@@ -7,6 +7,14 @@
     , "id": 1088
   }
 },{
+  "_key": "_:minnellimansion"
+  , "name": "The Minnelli Mansion"
+  , "article": ["The Minnelli mansion is a contested property in Beverly Hills -- the former home of director Vincent Minnelli -- that has been largely abandoned save for William George Frederick Schmitt-Hoffman XXVIII and Glenwood Vaughan and many raccoons."]
+  , "geo_key": {
+    "type": "point"
+    , "id": 1145
+  }
+},{
   "_key": "_:lacanadaflintridge"
   , "name": "La Cañada Flintridge, CA"
   , "article": ["La Cañada Flintridge is a city in California's Crescenta Valley."]
