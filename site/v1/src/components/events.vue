@@ -1056,17 +1056,25 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
                     console.error(e);
                   }); //axios.catch
         } else {
-                axios
-                  .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
-                    query: 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
+
+          let q = 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
                       this.active.key +
                       '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' +
                       this.active.key +
                       "\" edges filter e.type=='hasParticipant' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND \"events/" +
                       this.active.key +
                       "\" edges filter e.type=='occurredAt' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }"
-                  })
-                  .then(response => {
+                axios.post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
+          query: q
+        },
+        {
+  auth: {
+    username: process.env.ARANGOUSER,
+    password: process.env.ARANGOPSSW
+  }
+}
+        )
+          .then(response => {
                     this.active.graph = response.data.result[0];
                   }) //axios.then
                   .catch(e => {

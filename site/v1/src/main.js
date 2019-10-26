@@ -13,9 +13,11 @@ import App from './App'
 import router from './router'
 import underscore from 'vue-underscore'
 import vueHeadful from 'vue-headful'
+import vueTopprogress from 'vue-top-progress'
 
 Vue.component('vue-headful', vueHeadful)
 
+Vue.use(vueTopprogress,{color:"#bc000e"})
 Vue.use(underscore)
 Vue.use(VTooltip)
 Vue.config.productionTip = false

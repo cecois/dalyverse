@@ -5,19 +5,20 @@
     
     <div class="column has-text-grey-light">
       <div class="title">People Index:</div>
+      <div class="has-text-grey is-size-7">(bolded == played by Daly)</div>
     </div>
 
   </div>
-  <div class="columns dv-vertical-columns has-text-left" style="padding-left:1em;">
-    <div class="column " style="padding-top:2em;">
-      <div class="level" style="margin-bottom:2em;">
-        <div class="level-item"></div>
-        <div class="level-item">
+  <div class="columns dv-vertical-columns has-text-left">
+    <div class="column is-12" style="padding-top:2em;">
+      <div class="columns" style="margin-bottom:2em;">
+        <div class="column is-3"></div>
+        <div class="column is-6">
         
         <input class="input is-small" type="text" placeholder="" v-model="livefilter">
           
         </div>
-        <div class="level-item"></div>
+        <div class="column is-3"></div>
       </div nb="/.level">
 
       <div class="table-container">
@@ -26,7 +27,7 @@
           <tbody>
             <tr v-for="N in graph.nodes">
               <th>{{N.alpha}}</th>
-              <td v-for="e in N.entities" class="dv-index-entities" v-if="(!livefilter || e.label.toLowerCase().indexOf(livefilter)>=0)"><span v-if="e" @click.stop="setActive(e.id)" class="dv-trigger-active">{{e.label}}</span>
+              <td v-for="e in N.entities" :class="[e.daly=='true'?'has-text-weight-bold':'','dv-index-entities']" v-if="(!livefilter || e.label.toLowerCase().indexOf(livefilter)>=0)"><span v-if="e" @click.stop="setActive(e.id)" class="dv-trigger-active">{{e.label}}</span>
               </td>
               <!-- <td>v-vor=e in N.entities</td> -->
             </tr>
@@ -66,9 +67,13 @@
         <div class="columns">
           
           <div class="column" v-if="active.graph">
-            <div style="margin-top:4em;" v-for="ent in active.graph">
-              <h5 class="is-size-4 dv-title-sub">{{ent.bucketLabel}}</h5>
-              <li v-for="bucket in ent.buckets">{{bucket.edge.name}}</li>
+            <div class="dv-index-graph-item" style="margin-top:4em;" v-for="ent in active.graph">
+              <h5 class="is-size-4">{{ent.bucketLabel}}</h5>
+              <li v-for="bucket in ent.buckets">
+              <!-- {{bucket.edge.name}} -->
+              <span v-if="bucket.edge._id.indexOf('people')==0" @click.stop="setActive(bucket.edge._id)" class="dv-trigger-active">{{bucket.edge.name}}</span>
+              <span v-else>{{bucket.edge.name}}</span>
+            </li>
               <!-- <p>{{ent.edge.name}}</p> -->
             </div>
           </div>
@@ -125,94 +130,19 @@ export default {
       process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
     );
 
-if (this.$route.params.activeKey) {
-      this.active.key = this.$route.params.activeKey;
-    }
-    // this.d3 = d3;
-
   }, // created
   mounted: function () {
     console.info(
       process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
     );
-    
-// if(process.env.MODE=='T'){
-//         let sAxios = document.createElement('script')
-//         sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
-//         document.head.appendChild(sAxios)
-
-//         let sLeaflet = document.createElement('script')
-//         sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
-//         document.head.appendChild(sLeaflet)
-
-//         let sVis = document.createElement('script')
-//         sVis.setAttribute('src','http://localhost:8000/vis.min.js')
-//         document.head.appendChild(sVis)
-
-//         let cLeaflet = document.createElement('link')
-//         cLeaflet.setAttribute('rel','stylesheet')
-//         cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
-//         document.head.appendChild(cLeaflet)
-
-//         let cVis = document.createElement('link')
-//         cVis.setAttribute('rel','stylesheet')
-//         cVis.setAttribute('src','http://localhost:8000/vis.min.css')
-//         document.head.appendChild(cVis)
-
-//         let cVisTimeline = document.createElement('link')
-//         cVisTimeline.setAttribute('rel','stylesheet')
-//         cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
-//         document.head.appendChild(cVisTimeline)
-
-        
-//         let cMaterial = document.createElement('link')
-//         cMaterial.setAttribute('rel','stylesheet')
-//         cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
-//         document.head.appendChild(cMaterial)
-
-//       } else {
-
-//                 let sAxios = document.createElement('script')
-//         sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
-//         document.head.appendChild(sAxios)
-
-//         let sLeaflet = document.createElement('script')
-//         sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
-//         document.head.appendChild(sLeaflet)
-
-//         let sVis = document.createElement('script')
-//         sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
-//         document.head.appendChild(sVis)
-
-//         let cLeaflet = document.createElement('link')
-//         cLeaflet.setAttribute('rel','stylesheet')
-//         cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
-//         document.head.appendChild(cLeaflet)
-
-//         let cVis = document.createElement('link')
-//         cVis.setAttribute('rel','stylesheet')
-//         cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
-//         document.head.appendChild(cVis)
-
-//         let cVisTimeline = document.createElement('link')
-//         cVisTimeline.setAttribute('rel','stylesheet')
-//         cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
-//         document.head.appendChild(cVisTimeline)
-
-//         let cMaterial = document.createElement('link')
-//         cMaterial.setAttribute('rel','stylesheet')
-//         cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
-//         document.head.appendChild(cMaterial)
-
-//       }
 
       this.fetchIndex()
-      // this.$nextTick(() => this.fetchIndex())
 
-// this.doPieChart()
   }, //mounted
   methods: {
         setItem: function () {
+          // if(this.graph && this.active.key){
+
       console.log(process.env.VERBOSITY == "DEBUG" ? "setItem()..." : null);
       console.log(
         process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
@@ -234,6 +164,9 @@ console.log("AI:",ai);
           graph: null
         }
 
+        // this.subGraph();
+          // }//if.graph
+
     }, //setitem
     nullGraph: function () {
       console.info(
@@ -248,7 +181,6 @@ console.log("AI:",ai);
         // };
     }, //nullGraph
     subGraph () {
-
       /*
       the raw graph is going to be so many hasWorkedAt|hasParticipatedIn|occuredAt relations etc.
       the problem is the vector between the source and target: e.g. if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
@@ -260,13 +192,13 @@ console.log("AI:",ai);
 
       // get the edges that have a typ (by filtering) and bucket em with a concat of the edgetype and which of the node ends (' id) matches active.key
 
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
+      console.log(process.env.VERBOSITY == "DEBUG" ? "subGraph()..." : null);
       console.log(
         process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
       );
 
       // if we have an active.key
-      if (this.active.key !== null) {
+      if (this.active.key) {
 
         if(process.env.MODE=="T"){
 axios.get("http://localhost:8000/full-graph-fake.json")
@@ -361,57 +293,7 @@ this.active.graph=this.$_.map(buckets,(B)=>{
       // this.active.graph=graf
 
     } //subgraph
-    ,setGraph: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
-      );
-
-      // if we have an active.key
-      if (this.active.key !== null) {
-
-        if(process.env.MODE=="T"){
-axios.get("http://localhost:8000/full-graph-fake.json")
-.then(response => {
-  console.log(response.data.result[0])
-                    this.active.graph = response.data.result[0];
-                  }) //axios.then
-                  .catch(e => {
-                    console.error(e);
-                  }); //axios.catch
-        } else {
-          let q = "FOR v,e IN 1..1 OUTBOUND '"+this.active.key+"' edges RETURN {edge:v,type:e.type}"
-
-                axios.post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
-          query: q
-        },
-        {
-  auth: {
-    username: process.env.ARANGOUSER,
-    password: process.env.ARANGOPSSW
-  }
-}
-        )
-          .then(response => {
-                    // this.active.graph = response.data.result;
-                    let buckets = this.$_.groupBy(this.$_.reject(response.data.result,(r)=>{return r._key==this.active.key}),'type')
-                    
-                    // return response.data.result
-                  }) //axios.then
-                  .catch(e => {
-                    console.error(e);
-                  }); //axios.catch
-                }//ifmodet
-      } //if key
-      else {
-        // no key? null it out
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
-        );
-        this.active.graph = this.nullGraph();
-      }
-    }, //setgraph
-    setRoute: function () {
+    ,setRoute: function () {
         console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
         this.$router.push({
@@ -553,9 +435,12 @@ this.graph={
         console.info(
           process.env.VERBOSITY === "DEBUG" ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew : null
         );
-        this.setRoute();
+        // if(this.graph){
+        // this.setRoute();
         this.setItem();
         this.subGraph();
+        // }//if graph
+        // this.subGraph();
         // this.setGraph();
         // this.active.graph = this.setGraph();
         // this.setTimeline();

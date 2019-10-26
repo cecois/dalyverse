@@ -29,7 +29,7 @@ $input-shadow: none;
 
 $dalyNode:rgba(5,5,5,.9);
 $nondalyNode:#bbbfbd;
-$dalyLink:#80a1d4;
+$dalyLink:#348aa7;
 //#09F130;
 // #b486ab
 // #dbd8ae
@@ -112,8 +112,11 @@ body{width:100%;height:100%;
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ dv- ++ */
-.dv-title-sub{
-  color:#9B9B9B;
+
+.dv-index-graph-item{
+  font-size:.9em;
+  padding:0 5em;
+  li{list-style: none;padding-left:1em;}
 }
 .dv-app{
   height:$height-main;
@@ -195,7 +198,7 @@ height:($height-main - $height-header);
 .dv-column-right {
   color: $dv-copy;
   overflow-y: hidden;
-  padding-top:5em;
+  // padding-top:5em;
   // background-color:adjust-color($dv-black,$alpha:-0.1);
   // background-color:adjust-color($body-background-color, $alpha: -0.4);
   // border-left:solid 1px white;
@@ -228,6 +231,7 @@ height:($height-main - $height-header);
 
 svg {
 position:relative;
+border-top:1px solid grey;
 // background-color:$dv-black;
 height:100%;
 width:100%;
@@ -432,7 +436,7 @@ src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/N
   }
   
   dd {
-    color: grey;
+    color: $dv-copy;
     // margin-left: 50%;
     margin-bottom: .5em;
   }

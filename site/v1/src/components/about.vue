@@ -20,18 +20,18 @@
       <div class="tile is-parent">
         <article class="tile is-child ">
           <p class="title">Sources</p>
-          <div class="content"><p class="">There are plenty of Daly appearances that are not represented here - <em>Conan</em> and <em>Hollywood Handbook</em> and <em>Nine Sweaters</em> and so on. But because his fullest (and arguably tightest) universe is the one spanning <em>Comedy Bang! Bang!</em> and the <em>Andy Daly Podcast Pilot Project</em> this resource focuses primarily on those characters and events. With a few <em>Super Ego</em> in there as well.</p></div>
+          <div class="content"><p class="">There are plenty of Daly appearances that are not represented here - <em>Conan</em> and <em>Hollywood Handbook</em> and <em>Nine Sweaters</em> and so on. But because his fullest (and arguably tightest) universe is the one spanning <em>Comedy Bang! Bang!</em> and the <em>Andy Daly Podcast Pilot Project</em> this resource focuses primarily on those characters and events. With a few <em>Super Ego</em> and <em>Great American Cabinet of Curiosities</em> in there as well.</p></div>
         </article>
       </div>
     </div>
-    <!-- <div class="tile is-parent">
-      <article class="tile is-child notification is-danger">
-        <p class="title">Wide tile</p>
-        <p class="subtitle">Aligned with the right tile</p>
-        <div class="content">
-        </div>
+    <div class="tile is-parent">
+      <article class="tile is-child">
+        <p class="title">Legal</p>
+        <div class="content"><p class="">
+          Do understand that Andy Daly has nothing to do with this. Fansite.
+        </p></div>
       </article>
-    </div> -->
+    </div>
   </div>
   <div class="tile is-parent">
     <article class="tile is-child">
