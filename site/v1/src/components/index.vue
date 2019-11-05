@@ -1,5 +1,6 @@
 <template>
 <div id="vue-root" class="">
+  <vue-topprogress ref="topProgress"></vue-topprogress>
   <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
   <div class="columns" style="padding-top:2em;">
     
@@ -109,6 +110,11 @@ export default {
       state: "filled",
       fittable: true,
       query: null,
+      loadings:[
+      {mod:"init",isLoading:false},
+      {mod:"item",isLoading:false},
+      {mod:"subgraph",isLoading:false}
+      ],
       active: {
         key: null,
         item: { article: null },
@@ -148,14 +154,9 @@ export default {
         process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
       );
 
-      // this.active.item =
-      //   this.active.key !== null ? this.$_.findWhere(this.events, {
-      //     id: this.active.key
-      //   }) : this.nullItem();
+      this.$_.findWhere(this.loadings,{"mod":"item"}).isLoading=true
 
-              let ai = this.$_.findWhere(this.$_.flatten(this.$_.pluck(this.graph.nodes,'entities')), { id: this.active.key })
-
-console.log("AI:",ai);
+      let ai = this.$_.findWhere(this.$_.flatten(this.$_.pluck(this.graph.nodes,'entities')), { id: this.active.key })
 
         this.active.item = {
           key: (!ai) ? null : ai.id,
@@ -164,8 +165,9 @@ console.log("AI:",ai);
           graph: null
         }
 
-        // this.subGraph();
-          // }//if.graph
+window.scrollTo(0, 0);
+
+this.$_.findWhere(this.loadings,{"mod":"item"}).isLoading=false
 
     }, //setitem
     nullGraph: function () {
@@ -430,6 +432,15 @@ this.graph={
   computed: {}, //computed
 
   watch: {
+    "loadings": {
+      handler: function (vnew, vold) {
+
+        // this.$refs.topProgress.done();
+        this.$_.contains(this.$_.pluck(vnew,'isLoading'),true)?this.$refs.topProgress.start():this.$refs.topProgress.done();
+      }//handler
+      ,
+     deep: true
+    },
         "active.key": {
       handler: function (vnew, vold) {
         console.info(

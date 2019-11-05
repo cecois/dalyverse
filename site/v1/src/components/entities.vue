@@ -1,5 +1,6 @@
 <template>
   <div id="vue-root" class="">
+    <vue-topprogress ref="topProgress"></vue-topprogress>
     <vue-headful :title="page.title" description="People, Places, Events &amp; Things in the Andy Dalyverse" />
     <div class="columns dv-vertical-columns">
       <div class="column is-full dv-column-left">
@@ -141,6 +142,11 @@ export default {
       state: "filled",
       fittable: true,
       query: null,
+      loadings:[
+      {mod:"init",isLoading:false},
+      {mod:"item",isLoading:false},
+      {mod:"subgraph",isLoading:false}
+      ],
       active: {
         key: null,
         item: { article: null },
@@ -1047,6 +1053,9 @@ let sub = "Dalyverse Entities Graph: "
 
     }, //fakefetch
     fetchEntities: function () {
+
+this.$_.findWhere(this.loadings,{"mod":"init"}).isLoading=true
+
         console.info(
           process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
         );
@@ -1126,7 +1135,7 @@ else {        axios
             console.error(e);
           }) //axios.catch
           .finally(e => {
-            
+            this.$_.findWhere(this.loadings,{"mod":"init"}).isLoading=false
             if(this.active.key && !this.active.graph){
               this.active.graph = this.subGraph(this.getGraph());
             }
@@ -1160,7 +1169,14 @@ else {        axios
   computed: {}, //computed
 
   watch: {
-    // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
+    "loadings": {
+      handler: function (vnew, vold) {
+
+        this.$_.contains(this.$_.pluck(vnew,'isLoading'),true)?this.$refs.topProgress.start():this.$refs.topProgress.done();
+      }//handler
+      ,
+     deep: true
+    },
     query: {
       handler: function (vnew, vold) {
 

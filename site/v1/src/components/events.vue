@@ -1,5 +1,6 @@
 <template>
 <div class="dv-app">
+  <vue-topprogress ref="topProgress"></vue-topprogress>
   <div id="map" style="width: 100%;height: 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;"></div>
   <div id="vue-root" class="container is-fixed-top">
     <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
@@ -118,6 +119,11 @@ export default {
       page: {
         title: "Andy Dalyverse Events"
       },
+      loadings:[
+      {mod:"init",isLoading:false},
+      {mod:"item",isLoading:false},
+      {mod:"subgraph",isLoading:false}
+      ],
       state: true,
       fittable: true,
       geoms: [],
@@ -628,6 +634,7 @@ console.log("WE GET local instead...")
       this.page.title = "Dalyverse Events: " + sub;
     }, //setPageTitle
     nullGraph: function () {
+
       console.info(
         process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
       );
@@ -909,6 +916,8 @@ axios
       }
     }, //fetchGeometries
     setItem: function () {
+      
+
       console.log(process.env.VERBOSITY == "DEBUG" ? "setItem()..." : null);
       console.log(
         process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
@@ -1039,6 +1048,9 @@ axios
       } //if.geoms.null
     } //setMap
     ,setGraph: function () {
+
+this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=true
+
       console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
       console.log(
         process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
@@ -1076,6 +1088,9 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
         )
           .then(response => {
                     this.active.graph = response.data.result[0];
+
+this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
+
                   }) //axios.then
                   .catch(e => {
                     console.error(e);
@@ -1087,6 +1102,7 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
         console.log(
           process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
         );
+        this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
         this.active.graph = this.nullGraph();
       }
     }, //setgraph
@@ -1104,6 +1120,15 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
   }, //methods
   computed: {}, //computed
   watch: {
+    "loadings": {
+      handler: function (vnew, vold) {
+
+        // this.$refs.topProgress.done();
+        this.$_.contains(this.$_.pluck(vnew,'isLoading'),true)?this.$refs.topProgress.start():this.$refs.topProgress.done();
+      }//handler
+      ,
+     deep: true
+    },
     item: {
       handler: function (vnew, vold) {
         console.info(

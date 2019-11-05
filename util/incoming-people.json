@@ -3,6 +3,7 @@
     "_key": "_:glenwoodvaughan",
     "daly": "false",
     "name": "Glenwood Vaughan",
+    "nami": "Vaughan, Glenwood",
     "article": [
       "Glenwood Vaughan is a butler, chauffeur, barber, Lyft-scheduler, Former-Baron-of-Renfrew-impersonator, nose blower, beekeeper, cook, suit presser, tandem bicycle pedaler, shoe prepper, bird trainer, dialect coach, and wing man to William George Frederick Schmitt-Hoffman XXVIII."
 ,"He reads bedtime stories to Mr. Schmitt-Hoffman."
@@ -12,6 +13,7 @@
     "_key": "_:williamgeorgefrederickschmitthoffmanxxviii",
     "daly": "true",
     "name": "William George Frederick Schmitt-Hoffman XXVIII",
+    "nami": "Schmitt-Hoffman, William George Frederick XXVIII",
     "article": [
       "William George Frederick Schmitt-Hoffman XXVIII is the host of 'The Great American Cabinet of Curiosities' podcast."
       ,"His titles include: Margrave of Upper and Lower Lausitz; Royal Knight Companion of the Noble Order of the Thistle; Vice Laird of Aershire; Member in Good Standing of the Order of Merit; Member in Good Standing of the National Honor Society; and Former Baron of Renfrew."
@@ -305,7 +307,7 @@
     "nami": "Plaxicon",
     "has_murdered": {
       "code": 1,
-      "explain": "Turns out not a trow but an alien, Plaxicon openly admits to administering dissections of earthling bagpipers."
+      "explain": ["Turns out not a trow but an alien, Plaxicon openly admits to administering dissections of earthling bagpipers."]
     },
     "article": [
       "Plaxicon was a trow accused of vanquishing Stuart Cambridge in 1853.",
@@ -339,7 +341,7 @@
     "nami": "Bean, Alexander (Sawney)",
     "has_murdered": {
       "code": 1,
-      "explain": "Despite 'a lot of contradictory recipes' for cannibalism, Mr. Bean made a practice of sneaking out of his cave late at night, finding somebody riding on horseback, snatching them to slice up, cook, and eat."
+      "explain": ["Despite 'a lot of contradictory recipes' for cannibalism, Mr. Bean made a practice of sneaking out of his cave late at night, finding somebody riding on horseback, snatching them to slice up, cook, and eat."]
     },
     "article": [
       "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland.",
@@ -518,7 +520,7 @@
     "nami": "Landry, Beck",
     "has_murdered": {
       "code": 1,
-      "explain": "Landry, having been cuckolded by his wife with a ranch hand, tracked them down despite his own injuries from an unrelated fist fight, murdering them shortly before succumbing himself."
+      "explain": ["Landry, having been cuckolded by his wife with a ranch hand, tracked them down despite his own injuries from an unrelated fist fight, murdering them shortly before succumbing himself."]
     },
     "article": [
       "Beck Landry is a cowboy who spends most of his time in the high country.",
@@ -582,7 +584,7 @@
     "name": "Laird",
     "has_murdered": {
       "code": 2,
-      "explain": "Countless horses, certainly. By fire."
+      "explain": ["Countless horses, certainly. By fire."]
     },
     "article": [
       "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses."
@@ -617,7 +619,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 2,
-      "explain": "It is unclear Mr. McGonigle's role in the murders of any number of Edinburgh's homeless population (he admits to being, at least, culpable), but he is certainly the ultimate causer of the deaths of many, many horses."
+      "explain": ["It is unclear Mr. McGonigle's role in the murders of any number of Edinburgh's homeless population (he admits to being, at least, culpable), but he is certainly the ultimate causer of the deaths of many, many horses."]
     },
     "name": "Cameron McGonigle",
     "nami": "McGonigle, Cameron",
@@ -698,7 +700,7 @@
     "nami": "Solly, Elmer Edward",
     "has_murdered": {
       "code": 1,
-      "explain": "Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."
+      "explain": ["Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."]
     },
     "article": [
       "Edward Solly was a murderer who assumed the identity of former Sha Na Na guitarist Vinnie Taylor.",
@@ -750,7 +752,7 @@
     "nami": "Bongos, Jimmy",
     "has_murdered": {
       "code": 1,
-      "explain": "Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings. Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."
+      "explain": ["Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings.","Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."]
     },
     "article": [
       "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
@@ -894,7 +896,8 @@
   {
     "_key": "_:joebongo",
     "daly": "true",
-    "name": "Dunleavy, Joe",
+    "name": "Joe Dunleavy",
+    "nami": "Dunleavy, Joe",
     "article": [
       "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class; encourages students to share with classmates intimate details about their lives; teaches kids how to speedball; plays 'Find The Ping Pong Ball'; and solicits ideas for new Kama Sutra positions.",
       "He occasionally encourages his students to stand on their desks and call him 'Captain.'",
@@ -917,7 +920,7 @@
     ],
     "has_murdered": {
       "code": 2,
-      "explain": "Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), it seems likely that bad things have happened even with no bongos present. He does own a rug made of human hair, for example, refusing to explain the sources, saying only that \"there's various different ways of getting people's hair.\" Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, that he in fact has a 'house full of rugs.' Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."
+      "explain": ["Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), however, it seems likely that bad things have happened even with no bongos present.","He does own a rug made of human hair, for example, refusing to explain the sources and saying only that \"there's various different ways of getting people's hair.\"","Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, and that he in fact has a 'house full of rugs.'","Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."]
     },
     "links": [
       {
@@ -1025,7 +1028,7 @@
     "name": "Gil",
        "has_murdered": {
       "code": 1,
-      "explain":"Perhaps technically not a murderer due to an apparent possession by Golly, it is somewhat evident a number of people have met their ends by Gil's hand. Most of these, it seems, occurred in international waters as part of a murder club."
+      "explain":["Perhaps technically not a murderer due to an apparent possession by Golly, it is somewhat evident a number of people have met their ends by Gil's hand. Most of these, it seems, occurred in international waters as part of a murder club."]
     },
     "article": [
       "Gil is a former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist.",
@@ -1048,7 +1051,7 @@
     "daly": "true",
     "name": "Golly",
     "article": [
-      "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottl; a tin can; a boot; Gil's hand; a turtle; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife)",
+      "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle; a tin can; a boot; Gil's hand; a turtle; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife)",
       "He prefers to be called a gentleman.",
       "Golly has a temper but cannot express his anger on his own.",
       "He likes beautiful ladies with big hips and is a 'proponent of murder in all of its forms.'",
@@ -1056,7 +1059,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain":"On CBB#274 Golly admits to orchestrating the Satanic murder club that duped Gil out into international waters and resulted in the deaths of up to 33 cast members of a children's TV show."
+      "explain":["On CBB#274 Golly admits to orchestrating the Satanic murder club that duped Gil out into international waters and resulted in the deaths of up to 33 cast members of a children's TV show."]
     },
     "links": [
       {
@@ -1082,7 +1085,7 @@
     ],
     "has_murdered": {
       "code": 2,
-      "explain": "A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."
+      "explain": ["A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."]
     },
     "links": [
       {
@@ -1112,7 +1115,7 @@
     ],
     "has_murdered": {
       "code": 2,
-      "explain": "Mr. Denniston, in all of his tales on Comedy Bang! Bang!, often refers to potential tragedies for which he is responsible -- the losing of a baby, the poisoning of babies, a suspicious drowning of a Wandsworth prison guard -- but never implicates himself in any loss of life."
+      "explain": ["Mr. Denniston, in all of his tales on Comedy Bang! Bang!, often refers to potential tragedies for which he is responsible -- the losing of a baby, the poisoning of babies, a suspicious drowning of a Wandsworth prison guard -- but never implicates himself in any loss of life."]
     },
     "links": [
       {
@@ -1165,7 +1168,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "Cactus Tony, reticent to admit murder on tape beyond the time he pushed his aunt Eileen into a homemade grave, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre. As a member of the Croatian Special Forces, it is implied on CBB#200 that he at least did battle, probably successfully, with Serbian troops."
+      "explain": ["Cactus Tony, reticent to admit murder on tape beyond the time he pushed his aunt Eileen into a homemade grave, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre.","As a member of the Croatian Special Forces, it is implied on CBB#200 that he at least did battle, probably successfully, with Serbian troops."]
     },
     "links": [
       {
@@ -1245,7 +1248,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "As Satan incarnate, Mr. Gardner is openly responsible for myriad atrocities. Included among them are the routine murders caused by, or somehow otherwise associated with, various Hollywood game shows as well as ritualistic sacrifices in the woods with his friend, Rochelle the Elf."
+      "explain": ["As Satan incarnate, Mr. Gardner is openly responsible for myriad atrocities. Included among them are the routine murders caused by, or somehow otherwise associated with, various Hollywood game shows as well as ritualistic sacrifices in the woods with his friend, Rochelle the Elf."]
     }
   },
   {
@@ -1275,7 +1278,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation. Or whom, according to an episode of 'Bananas for Bonanza' at the 2018 Peecast Blast in Los Angeles, had bad allergies. In a poem on the same show, he appeared to confess to killing 'a Mexican family because I was drunk driving too fast.' It is one of several such admissions that could, strictly-speaking, be the fiction of poetry but probably is not. A final admission is pretty certainly a truth - that the 'jewelry' he got his wife was a silver bullet, right in the heart."
+      "explain": ["In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation or whom, according to an episode of 'Bananas for Bonanza' at the 2018 Peecast Blast in Los Angeles, had bad allergies.","In a poem also read at Peecast 2018, he appeared to confess to killing 'a Mexican family because I was drunk driving too fast.' It is one of several such admissions that could, strictly-speaking, be the fiction of poetry but probably is not.","A final admission is pretty certainly a truth - that the 'jewelry' he got his wife was a silver bullet, right in the heart."]
     }
   },
   {
@@ -1420,7 +1423,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "Mr. Callahan, as an RN at Bergen Regional in New Jersey, in effect killed a patient named Rosa by wheeling her into a hospital room with a faulty call button and leaving her there overnight."
+      "explain": ["Mr. Callahan, as an RN at Bergen Regional in New Jersey, in effect killed a patient named Rosa by wheeling her into a hospital room with a faulty call button and leaving her there overnight."]
     },
     "links": [
       {
@@ -1472,7 +1475,7 @@
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "As a test of whether or not he was a Highlander (after watching the 1986 film 'The Highlander,' he once beheaded a stranger; He admitted on CBB#400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly."
+      "explain": ["As a test of whether or not he was a Highlander (after watching the 1986 film 'The Highlander,' he once beheaded a stranger.","He admitted on CBB#400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly."]
     },
     "links": [
       {
@@ -1604,7 +1607,7 @@
     "nami": "Wompler, Seth",
     "has_murdered": {
       "code": 1,
-      "explain": "During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."
+      "explain": ["During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."]
     },
     "article": [
       "Dr. Seth Wompler is a podietrist."
@@ -1626,7 +1629,7 @@
     "nami": "Listler, Charlotte",
     "has_murdered": {
       "code": 1,
-      "explain": "Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military. She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"
+      "explain": ["Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military.","She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"]
     },
     "article": [
       "Charlotte Listler is a former sniper; a former hand model; and a current educator and educarer.",
@@ -1701,7 +1704,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 1,
-      "explain": "Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run; in 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs; and in the same show he clearly states that at least three of lead roles in Annie were burned alive while he danced around the fire."
+      "explain": ["Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run.","In 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs.","Also in the 2013 live show he clearly states that at least three of the lead roles in Annie were burned alive while he danced around the fire."]
     },
     "name": "Don DiMello",
     "nami": "DiMello, Don",
@@ -1772,7 +1775,7 @@
     "daly": "true",
     "has_murdered": {
       "code": 2,
-      "explain": "Mr. Carter openly confesses to, is a professional at even, harrassing his clients with threats of violence. It has never been verified that the violence ever went too far, but seems likely given the severity of his threats."
+      "explain": ["Mr. Carter openly confesses to, is a professional at even, harrassing his clients with threats of violence. It has never been verified that the violence ever went too far, but seems likely given the severity of his threats."]
     },
     "name": "Bill Carter",
     "nami": "Carter, Bill",
@@ -1781,7 +1784,7 @@
       "He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant).",
       "At least as recently as 2010 he works at Bally's in Hollywood. Sort of.",
       "He is riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed.",
-      "He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business.",
+      "He has been to jail many times for reasons including (but not limited to) beating people up; not beating people up; cheering race riots; stealing things; not stealing things; minding his own business.",
       "He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard, and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group).",
       "He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.",
       "In 2014 it was revealed he had been training with Dalton Wilcox for years in anticipation of an epic battle between good and evil."
@@ -1836,7 +1839,7 @@
     "nami": "Lindt, August",
     "has_murdered": {
       "code": 2,
-      "explain": "To a Mars simulation he brought a knife and several cosmonauts never returned. While unexplained, it remains fishy. Also on CBB#475 he appears to reveal that he cannibalized at least one compatriot from a self-induced avalanche; scalded the face of another with boiling hot coffee; stabbed in the back with scissors another; bludgeoned a stowaway with a fire extinguisher; and stabbed a NASA engineer as many as 19 times. Further, the doctor who attended to the NASA engineer ended up dead from stab wounds, blunt trauma, and \"having been thrown,\" fairly clearly by Lindt also."
+      "explain": ["To a Mars simulation he brought a knife and several cosmonauts never returned. While unexplained, it remains fishy.","Also on CBB#475 he appears to reveal that he cannibalized at least one compatriot from a self-induced avalanche; scalded the face of another with boiling hot coffee; stabbed in the back with scissors another; bludgeoned a stowaway with a fire extinguisher; and stabbed a NASA engineer as many as 19 times.","Further, the doctor who attended to the NASA engineer ended up dead from stab wounds, blunt trauma, and \"having been thrown,\" fairly clearly by Lindt also."]
     },
     "article": [
       "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany.",
@@ -1910,7 +1913,7 @@
     "name": "Shooter",
     "has_murdered": {
       "code": 2,
-      "explain": "Shooter has admitted to 'going up on a rooftop' to 'take potshots,' which suggests it's likely but unadmitted that some of the victims perhaps expired from their injuries."
+      "explain": ["Shooter has admitted to 'going up on a rooftop' to 'take potshots,' which suggests it's likely but unadmitted that some of the victims perhaps expired from their injuries."]
     },
     "links": [
       {
@@ -2043,7 +2046,7 @@
     "name": "Falcon",
     "has_murdered": {
       "code": 2,
-      "explain": "Charged with stale Rockettes who ultimately disappear, it's unclear who actually pulls the trigger on the wolf attacks."
+      "explain": ["Charged with stale Rockettes who ultimately disappear, it's unclear who actually pulls the trigger on the wolf attacks."]
     },
     "article": [
       "Falcon has emphysema and remains active on Friendster.",
@@ -2139,7 +2142,7 @@
     "nami": "Gomand, Chip",
     "has_murdered": {
       "code": 1,
-      "explain":"During a prison riot in 1979, Mr. Gomand, a prison guard, was called upon to prove his loyalty to the prisoners by killing a fellow guard."
+      "explain":["During a prison riot in 1979, Mr. Gomand, a prison guard, was called upon to prove his loyalty to the prisoners by killing a fellow guard."]
     },
     "article": [
       "Chip Gomand is a former prison guard in Buckley, Ohio, who competed for the name Marleygot Foreleanor on Chip Gardner's 'Yes But Can You Still do it if We Set You on Fire?' and subsequently perished."

@@ -73,12 +73,19 @@
 
 <div class="columns dv-vertical-columns has-text-left" style="padding-left:1em;">
     <div class="column is-5" style="padding-top:2em;padding-left:1em;">
-      <div v-if="!active.onside"><h4 class="is-size-4" style="margin-bottom:2em;">Played by Daly</h4>
+      <div v-if="!active.onside"><h4 class="is-size-4 has-text-weight-bold" style="margin-bottom:2em;">Played by Daly</h4>
             <dl v-if="(!livefilter || n.label.toLowerCase().indexOf(livefilter)>=0)" class="dv-dl" v-for="n in graph.true" style="margin-bottom:2em;">
               <div v-if="n.has_murdered" @click="setActive(n._id,'R')" class='level-item-left'>
                 <h5 :class="[n.has_murdered.code==1?'has-text-weight-bold':'','is-size-5','dv-trigger-active']">{{n.label}}</h5>
               </div>
-              <div v-if="n.has_murdered" style="" class="has-text-grey-lighter">{{n.has_murdered.explain}}</div>
+              <div v-if="n.has_murdered" style="" class="has-text-grey-lighter">
+              <!-- {{n.has_murdered.explain}} -->
+              <ul>
+                <li class="dv-murder-explain" v-for="explanation in n.has_murdered.explain">
+                  {{explanation}}
+                </li>
+              </ul>
+            </div>
             </dl>
           </div nb="/v-if.onside">
 
@@ -88,12 +95,19 @@
     </div note="/.column">
     <div class="column is-2"></div>
     <div class="column is-5" style="padding-top:2em;padding-right:1em;">
-      <div v-if="!active.onside"><h4 class="is-size-4" style="margin-bottom:2em;">Not Played by Daly</h4>
+      <div v-if="!active.onside"><h4 class="is-size-4 has-text-weight-bold" style="margin-bottom:2em;">Not Played by Daly</h4>
             <dl v-if="(!livefilter || n.label.toLowerCase().indexOf(livefilter)>=0)" class="dv-dl" v-for="n in graph.false" style="margin-bottom:2em;">
               <div v-if="n.has_murdered" @click="setActive(n._id,'L')" class='level-item-left'>
                 <h5 :class="[n.has_murdered.code==1?'has-text-weight-bold':'','is-size-5','dv-trigger-active']">{{n.label}}</h5>
               </div>
-              <div v-if="n.has_murdered" style="" class="has-text-grey-lighter">{{n.has_murdered.explain}}</div>
+              <div v-if="n.has_murdered" style="" class="has-text-grey-lighter">
+              <!-- {{n.has_murdered.explain}} -->
+              <ul>
+                <li class="dv-murder-explain" v-for="explanation in n.has_murdered.explain">
+                  {{explanation}}
+                </li>
+              </ul>
+            </div>
             </dl>
 
           </div nb="/v-if.onside">
@@ -232,16 +246,7 @@ export default {
         process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
       );
 
-      // this.active.item =
-      //   this.active.key !== null ? this.$_.findWhere(this.events, {
-      //     id: this.active.key
-      //   }) : this.nullItem();
-
-      console.log('in setItem, key:',this.active.key)
-
               let ai = this.$_.findWhere(this.$_.union(this.graph.true,this.graph.false ), { id: this.active.key })
-
-console.log("AI:",ai);
 
         this.active.item = {
           key: (!ai) ? null : ai.id,
@@ -251,6 +256,7 @@ console.log("AI:",ai);
         }
 
         this.$_.findWhere(this.loadings,{"mod":"item"}).isLoading=false
+        window.scrollTo(0, 0);
 
     }, //setitem
     nullGraph: function () {
