@@ -5,6 +5,26 @@
     "type": "occurredAt",
     "vertex": "_:patrickmcmahonliftsarelic"
   },{
+    "_from": "events/_:schmitthoffmanlosesrenfrewbaron",
+    "_to": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+    "type": "hasParticipant",
+    "vertex": "_:schmitthoffmanlosesrenfrewbaron"
+  },{
+    "_from": "events/_:schmitthoffmanlosesrenfrewbaron",
+    "_to": "people/_:unnamedgreekbusinessman",
+    "type": "hasParticipant",
+    "vertex": "_:schmitthoffmanlosesrenfrewbaron"
+  },{
+    "_from": "events/_:schmitthoffmanloseslowermargrave",
+    "_to": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+    "type": "hasParticipant",
+    "vertex": "_:schmitthoffmanloseslowermargrave"
+  },{
+    "_from": "events/_:schmitthoffmanloseslowermargrave",
+    "_to": "people/_:unnamedukrainianoligarch",
+    "type": "hasParticipant",
+    "vertex": "_:schmitthoffmanloseslowermargrave"
+  },{
     "_from": "events/_:dondimellosannie",
     "_to": "people/_:dondimello",
     "type": "hasParticipant",

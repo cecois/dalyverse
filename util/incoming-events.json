@@ -1,4 +1,40 @@
 [{
+  "_key": "_:schmitthoffmanandvaughanfleeeurope"
+  , "name": "William and Glenwood Flee Europe"
+  , "article": ["Due to undisclosed threats, Glenwood Vaughan and William George Frederick Schmitt-Hoffman XXVIII flee Europe for the United States."]
+  , "timestamp": {
+    "start": "2015-10-10T16:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "approximate"
+    , "nb": "some time after the Minnelli mansion came to be empty and before the launch of GACoC"
+  }
+},{
+  "_key": "_:schmitthoffmanloseslowermargrave"
+  , "name": "William Schmitt-Hoffman Loses a Margraveship"
+  , "article": ["In a high-stakes game of Go Fish, Mr. Schmitt-Hoffman loses the title of Margrave of Lower Lausitz to a Ukrainian oligarch."]
+  , "timestamp": {
+    "start": "2019-10-28T16:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "firm"
+    , "nb": "announced to have taken place soon before GACoC 2019.Nov.04"
+  }
+},{
+  "_key": "_:schmitthoffmanlosesrenfrewbaron"
+  , "name": "William Schmitt-Hoffman Loses a Baronship"
+  , "article": ["In a high-stakes game of Checkers, Mr. Schmitt-Hoffman loses the title of Baron of Renfrew to a Greek businessman."]
+  , "timestamp": {
+    "start": "2018-07-07T16:10:00Z"
+    , "end": null
+  }
+  , "nb_timestamp": {
+    "class": "approximate"
+    , "nb": "some time before the inaugural GACoC"
+  }
+},{
   "_key": "_:byrondennistonkidnapsbeetlebailey"
   , "name": "Byron Denniston Kidnaps Beetle Bailey"
   , "article": ["With malice aforethought, Byron Denniston kidnaps the infant Prince George of Cambridge, promptly renaming the boy."]
