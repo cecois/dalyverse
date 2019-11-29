@@ -71,7 +71,7 @@
         <div class="columns"><div class="column is-12">
           
           <p style="" class="dv-title is-size-3">{{active.item.content}}</p>
-          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
+          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-tooltip.right-start="'zoom map to this location'" v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
             <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
           </a></p>
           <p style="margin-top:2em;">
@@ -220,19 +220,8 @@ export default {
         })
         // .addTo(this.MAP)
 
-      // .on("layeradd", parent => {
-      // console.log(
-      //   process.env.VERBOSITY == "DEBUG" ? "on.layeradd..." : null,
-      //   parent
-      // );
-
-      // })
         .on("click", parent => {
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on click, this obj:" : null,
-            parent
-          );
-
+          
           // reduce potentially huge thing into just important bits
           let FR = {
             properties: {
@@ -262,27 +251,14 @@ export default {
 
           let neweventkey = neweventkeyob ? neweventkeyob.id : null;
 
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on click, new event key:" : null,
-            neweventkey
-          );
-
           if (neweventkey) {
             this.active.key = neweventkey;
           }
         })
         .on("popupopen", parent => {
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on popupopen, glowing:" : null,
-            parent
-          );
+
         })
         .on("popupclose", event => {
-          console.log("POPUPCLOSE.event:", event);
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on popupclose, sending to seen list:" : null,
-            event
-          );
 
           // parent.layer.setStyle(this.styles.previous)
           event.layer.setStyle(this.getGeoStyle("seen"));
@@ -305,12 +281,7 @@ export default {
   }, // data
   beforeCreate () {}, // beforeCreate
   created () {
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
-    );
-
     
-
     this.$once('hook:fitArrest', function () {
       this.fittable = false;
       this.fetchTotalEvents();
@@ -337,14 +308,9 @@ export default {
     // this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
     // this.initData();
     window.addEventListener("keydown", this.onKey);
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "end CREATED, initial state set" : null
-    );
+    
   }, // created
   mounted: function () {
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "MOUNTED! Bootstrapping events and initting vizes..." : null
-    );
 
     // if(process.env.MODE=='T'){
     //     let sAxios = document.createElement('script')
@@ -426,15 +392,6 @@ this.$nextTick(() => this.initBaseMap()
   methods: {
     initBaseMap: function () {
 
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "initBaseMap()..." : null
-      );
-
-      // this.MAP = new L.Map('map', {
-      // this.MAP = 
-
-      // console.log('this.map:',this.MAP)
-
       let blu = null
       switch (process.env.MODE) {
         case 'T':
@@ -460,29 +417,19 @@ this.$nextTick(() => this.initBaseMap()
       }
 
       const baseLayer = new L.TileLayer(blu)
-      console.log("baselayer:", blu);
       this.MAP.addLayer(baseLayer)
       this.MAP.addLayer(this.l_json)
-        // this.l_json.addTo(this.MAP)
 
     }, //initBaseMap
     fetchTotalEvents: function () {
-
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "getTotalEvents()..." : null
-      );
 
       let q = 'RETURN LENGTH(events)'
 
       if(process.env.MODE=="T"){
 
-console.log("WE GET local instead...")
   axios
         .get('http://localhost:8000/dv-timeline.json')
         .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
-          );
           this.events_total = response.data.result[0];
         }) //axios.then
         .catch(e => {
@@ -502,9 +449,6 @@ console.log("WE GET local instead...")
 }
         )
           .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
-          );
           this.events_total = response.data.result[0];
         }) //axios.then
         .catch(e => {
@@ -530,16 +474,14 @@ console.log("WE GET local instead...")
 
     }, // zeroOut
     zoomToNext: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "zoomToNext()..." : null
-      );
 
       // grab target key (it'll be the ol {id:<id>,type:<type>})
       let zoomto = this.zooms.next ? this.zooms.next : null;
-      console.log("zoomto:",zoomto);
+      console.log("zoomto", zoomto.id);
 
       // find map object
       let mo = this.$_.find(this.l_json.getLayers(), L => {
+        console.log('L.feature.properties.cartodb_id',L.feature.properties.cartodb_id);
         return (
           L.feature.properties.cartodb_id == zoomto.id &&
           this.launderGeoType(L.feature.geometry.type) == zoomto.type
@@ -547,16 +489,11 @@ console.log("WE GET local instead...")
       });
 
       if (zoomto.type === "point") {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "   -> zooming to type:" + zoomto.type : null
-        );
         this.MAP.setView(mo.getLatLng(), 12, {
           animate: true
         });
       } else {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "   -> zooming to type:" + zoomto.type : null
-        );
+        
         this.MAP.fitBounds(mo.getBounds());
       }
     }, //zoomtonext
@@ -564,11 +501,6 @@ console.log("WE GET local instead...")
       this.MAP.fitBounds(this.l_json.getBounds());
     }, //zoomToFullExtent
     doPopupStuff: function (p, e) {
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "doPopupStuff()..." : null
-      );
-
-      console.log(p)
 
       let copy =
         process.env.VERBOSITY === "DEBUG" ? '<h2 class="has-text-info is-size-2">' +
@@ -586,14 +518,8 @@ console.log("WE GET local instead...")
 
       // if it's a click event we popup no questions asked
       if (e) {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "  -> event so we just do wut we told" : null
-        );
         po.openOn(this.MAP);
       } else {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "  -> not event so we check against active.key" : null
-        );
         if ((p.layer.properties.cartodb_id = 999)) {
           po.openOn(this.MAP);
         }
@@ -604,13 +530,12 @@ console.log("WE GET local instead...")
       }
     }, //doPopupStuff
     onKey: function (e) {
-      console.log("keycode:",e.keyCode)
+      
       switch (e.keyCode) {
         case 18:
           this.state = !this.state;
           break;
         case e.keyCode == 999:
-          console.log('999')
           break;
         default:
           this.state = this.state;
@@ -636,18 +561,12 @@ console.log("WE GET local instead...")
     }, //setPageTitle
     nullGraph: function () {
 
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
-      );
       return {
         participants: null,
         locations: null
       };
     }, //nullGraph
     nullItem: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
-      );
       return {
         id: null,
         content: null,
@@ -659,12 +578,8 @@ console.log("WE GET local instead...")
       };
     }, //nullItem
     setTimeline: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setTimeline()..." : null);
 
       if (!this.timeline) {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? " :no timeline - you're the timeline" : null
-        );
         const el = this.$el.querySelector("#timeline");
         // create the Timeline
 
@@ -686,10 +601,7 @@ console.log("WE GET local instead...")
           };
         });
         this.timeline.on("rangechanged", properties => {
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? " :timeline:rangechanged..." : null
-          );
-
+          
           if (properties.byUser == true) {
 
             this.times.future = { begin: null, end: null };
@@ -708,55 +620,33 @@ console.log("WE GET local instead...")
 
         // now we wire up click-selection
         this.timeline.on("click", properties => {
-          console.log("properties:",properties)
+          
             switch (true) {
               case properties.what == "background":
-                console.info(
-                  process.env.VERBOSITY == "DEBUG" ? " :timeline:click off any item - SET KEY TO NULL." : null
-                );
-                // this.timeline.setSelection();
+                
                 this.active.key = null;
                 break;
               case properties.what == "item" && properties.item == this.active.key:
-                console.info(
-                  process.env.VERBOSITY == "DEBUG" ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)." : null
-                );
-                // this.timeline.setSelection();
                 this.active.key = null;
                 break;
               default:
-                console.info(
-                  process.env.VERBOSITY == "DEBUG" ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
-                  properties.item : null
-                );
-                // this.timeline.setSelection(properties.item);
                 this.active.key = properties.item;
                 break;
             }
           }) //.on
       } //if.timeline
       else {
-        console.info(
-          process.env.VERBOSITY == "DEBUG" ? " timeline extant, doing other, setting selection to " +
-          this.active.key : null
-        );
         this.timeline.setItems(this.events);
         this.timeline.setSelection(this.active.key);
 
-        console.log('this.timeline.range', this.timeline.range);
         this.timeline.fit();
       } //else.timeline
     }, //settimeline
     setSlider: function () {
-      // {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
 
       if (!this.slider) {
         // no slider - you're the slider
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "no slider - you're the slider" : null
-        );
-
+        
         var slider = document.getElementById("slider");
 
         const effer = v => {
@@ -806,9 +696,6 @@ console.log("WE GET local instead...")
         });
       } //if.slider
       else {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "slider extant, auditing handles..." : null
-        );
         this.slider.set([
           this.$MOMENT(
             this.times.line.begin,
@@ -823,10 +710,7 @@ console.log("WE GET local instead...")
       // }
     }, //setSlider
     fetchEvents: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fetchEvents()..." : null
-      );
-
+      
       let q =
         'for e in edges filter e.type=="hasParticipant" OR e.type=="occurredAt" for ev in events filter e._from==ev._id AND e.type=="hasParticipant" LET tstart = HAS(ev.timestamp, "start")==true ? DATE_FORMAT(ev.timestamp.start, "%yyyy-%mm-%dd") : DATE_FORMAT(ev.timestamp, "%yyyy-%mm-%dd") LET tend = HAS(ev.timestamp, "end")==true ? DATE_FORMAT(ev.timestamp.endz, "%yyyy-%mm-%dd") : null LET geo=( for g in edges filter g._from==ev._id AND g.type=="occurredAt" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP(\'' +
         this.times.line.begin +
@@ -839,9 +723,6 @@ console.log("WE GET local instead...")
 axios
         .get("http://localhost:8000/dv-timeline.json")
         .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
-          );
           this.events = response.data.result;
           this.$nextTick(function () {
             // events in place, item can be set therefrom...
@@ -864,9 +745,6 @@ axios
 }
         )
           .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
-          );
           this.events = response.data.result;
           this.$nextTick(function () {
             // events in place, item can be set therefrom...
@@ -879,17 +757,10 @@ axios
       }//if.else
     }, //fetchEvents
     fetchGeometries: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fetchGeometries()..." : null
-      );
-
+      
       let eventswgeoms = this.$_.reject(this.events, t => {
         return t.geo.length < 1;
       });
-
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "  -> found " + eventswgeoms.length + " georeferenced events" : null
-      );
 
       let eventgeoms = this.$_.map(eventswgeoms, g => {
         return {
@@ -899,10 +770,11 @@ axios
           geoarticle: g.geo[0].article
         };
       });
-
+// this.$_.pluck(eventgeoms, "milleriakey")
+console.log("this.$_.pluck(eventgeoms, \"milleriakey\")", this.$_.pluck(eventgeoms, "milleriakey"));
       if (eventgeoms.length > 0) {
         var u =
-          process.env.MODE == "33" ? "http://milleria.org:3030/geoms/cbb?q=" +
+          process.env.MODE == "33" ? process.env.API_ROOT+"/geoms/cbb?q=" +
           this.$_.pluck(eventgeoms, "milleriakey").join(",") : "http://localhost:8000/dalyverse-geoms-T.json";
 
         axios
@@ -918,19 +790,6 @@ axios
     }, //fetchGeometries
     setItem: function () {
       
-
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setItem()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
-      );
-      console.log(
-        process.env.VERBOSITY == "DEBUG" && this.active.key !== null ? "  -> active.key is " +
-        this.active.key +
-        " setting real item from " +
-        this.events.length +
-        " events..." : null
-      );
-
       this.active.item =
         this.active.key !== null ? this.$_.findWhere(this.events, {
           id: this.active.key
@@ -986,7 +845,6 @@ axios
       return o;
     }, //geoKeyStringGen
     getGeoStyle: function (f) {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "getGeoStyle..." : null);
 
       let tgkey = typeof f == "object" ? this.geoKeyGen(f) : f;
 
@@ -1019,44 +877,21 @@ axios
           break;
       }
 
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  --> resulting style:" + JSON.stringify(styl) : null
-      );
       return styl;
     }, //getgeostyle
     setMap: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setMap()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> clearing current" : null
-      );
+      
       this.l_json.clearLayers();
 
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key + " in setMap..." : null
-      );
-
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> -> testing this.geoms for null" : null
-      );
-
-      if (this.geoms == null) {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> but anyway, this.geoms is null" : null
-        );
-      } else {
-        this.l_json.clearLayers();
+      this.l_json.clearLayers();
         this.l_json.addData(this.geoms);
-      } //if.geoms.null
+      
     } //setMap
     ,setGraph: function () {
 
 this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=true
 
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
-      );
-
+      
       // if we have an active.key
       if (this.active.key !== null) {
 
@@ -1100,15 +935,11 @@ this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
       } //if key
       else {
         // no key? null it out
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
-        );
         this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
         this.active.graph = this.nullGraph();
       }
     }, //setgraph
     setRoute: function () {
-        console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
         this.$router.push({
           params: {
@@ -1132,27 +963,17 @@ this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
     },
     item: {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:ITEM:old/new:" +
-          JSON.stringify(vold) +
-          "/" +
-          JSON.stringify(vnew) : null
-        );
+        
       }
     }, //item
     geoms: {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:GEOMS:old/new:" + vold.length + "/" + vnew.length : null
-        );
+        
         this.setMap();
       }
     }, //item
     events: {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:events:old/new:" + vold.length + "/" + vnew.length : null
-        );
         this.zeroOut();
         // this.setSlider();
         this.setTimeline();
@@ -1161,13 +982,7 @@ this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
     }, //events
     "times.line": {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:times.line:old/new:" +
-          JSON.stringify(vold) +
-          "/" +
-          JSON.stringify(vnew) : null
-        );
-        console.log("TIMES OB", JSON.stringify(this.times))
+        
         this.fetchEvents();
         this.setRoute();
         this.setPageTitle();
@@ -1176,9 +991,6 @@ this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
     }, //times.line
     "active.key": {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew : null
-        );
         this.setRoute();
         this.setItem();
         this.setGraph();
