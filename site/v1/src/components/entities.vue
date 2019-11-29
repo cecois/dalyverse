@@ -229,6 +229,7 @@ export default {
     },
     subGraph (G) {
 
+
       /*
       the raw graph is going to be so many hasWorkedAt|hasParticipatedIn|occuredAt relations etc.
       the problem is the vector between the source and target: e.g. if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
@@ -298,6 +299,8 @@ export default {
     } //getgraph
     ,
     setActive (nak) {
+
+
       let nik = (nak)?nak:null;
       let nakk = (nik) ? nik : this.active.key
 
@@ -313,9 +316,11 @@ export default {
           graph: null
         }
 
-        this.d3.select('circle').classed("selected", false)
+
+        // then light up the active
         this.d3.select(this.prepId(nakkf)).classed("selected", true)
       } //if nakk
+      
 
     },
     prepId (iak) {
@@ -346,7 +351,6 @@ export default {
 let nik = (nak)?nak:null
       
       this.nullGraph();
-      this.d3.select(this.prepId(null)).classed("selected", false)
 
     },
     dragends (d) {
@@ -1027,8 +1031,13 @@ else {        axios
     "active.key": {
       handler: function (vnew, vold) {
 
+        if(!vnew){
+          // key is being cleared, we also clear d3 selections
+          this.d3.selectAll("circle").classed("selected", false)
+        }
+
         this.setRoute();
-        // this.unSetActive(vold)
+
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
       }
