@@ -536,11 +536,12 @@ console.log("WE GET local instead...")
 
       // grab target key (it'll be the ol {id:<id>,type:<type>})
       let zoomto = this.zooms.next ? this.zooms.next : null;
+      console.log("zoomto:",zoomto);
 
       // find map object
       let mo = this.$_.find(this.l_json.getLayers(), L => {
         return (
-          L.feature.properties.cartodb_id === zoomto.id &&
+          L.feature.properties.cartodb_id == zoomto.id &&
           this.launderGeoType(L.feature.geometry.type) == zoomto.type
         );
       });

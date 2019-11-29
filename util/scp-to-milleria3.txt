@@ -1,0 +1,6 @@
+scp ~/git/dalyverse/util/incoming-edges.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-events.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-issues.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-people.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-places.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-things.json wompupthejams.com:/tmp/
