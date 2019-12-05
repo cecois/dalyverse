@@ -10,7 +10,7 @@
       <div class="tile is-parent is-vertical">
         <article class="tile is-child ">
           <p class="title">Am I a What?</p>
-          <div class="content"><p class="">What we've done, here, is log thousands of data points from 60-some Andy Daly appearances; mapped and graphed them; and visualized them here from various angles. Primarily as a tribute to Daly's unparalleled ability to build out his own wild – but meticulous – canon.</p></div>
+          <div class="content"><p class="">What we've done, here, is log thousands of data points from 60-some Andy Daly appearances; mapped and graphed them; then visualized them here from various angles. Primarily as a tribute to Daly's unparalleled ability to build out his own wild – but meticulous – canon.</p></div>
         </article>
         <!-- <article class="tile is-child ">
           <p class="title">adfadsf</p>

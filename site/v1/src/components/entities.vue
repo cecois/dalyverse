@@ -229,7 +229,7 @@ export default {
     },
     subGraph (G) {
 
-
+this.loadings.subgraph=true
       /*
       the raw graph is going to be so many hasWorkedAt|hasParticipatedIn|occuredAt relations etc.
       the problem is the vector between the source and target: e.g. if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
@@ -283,6 +283,7 @@ export default {
 
       })
 
+this.loadings.subgraph=false
       return graf
 
     } //subgraph
@@ -950,7 +951,9 @@ axios
           })
 
 }
-else {        axios
+else {        
+this.loadings.init=true
+  axios
           .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
         },
@@ -980,7 +983,7 @@ else {        axios
             if(this.active.key && !this.active.graph){
               this.active.graph = this.subGraph(this.getGraph());
             }
-
+this.loadings.init=false
           }) //axios.finally
           }
       } //fetchEntities

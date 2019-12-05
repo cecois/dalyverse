@@ -12,39 +12,11 @@
       </a> -->
       <div class="columns">
         <div class="column is-full">
-          <!-- <p style="padding-top:1em;" class="title is-size-2 has-text-white">{{this.$MOMENT(times.line.begin).format('YYYY.MMM.Mo')}} to {{this.$MOMENT(times.line.end).format('YYYY.MMM.Mo')}}</p> -->
-          <!-- <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p> -->
-          <!-- <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p> -->
         </div>
         
       </div nb="/.columns">
-      <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
-      <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
-        <i :class="console.clazz" class="mdi"></i>
-      </span>
-      <hr/> -->
-      <!-- <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div> -->
-      <!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div> -->
-      <!-- <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
-      <!-- <div class="column" v-if="events">events found:<code>{{events.length}}</code></div> -->
-      <!-- <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div> -->
-      <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-      <!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
-      <div class="column is-3" v-if="active.item.content">TITL: {{active.item.content}}</div>
-      <div class="column is-3" v-if="active.item.article">ART: {{active.item.article}}</div>
-      <div class="column is-2 is-size-7">{{(events.length)}}</div> -->
-      <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
-      <!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
-      <!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-      
-      <!-- <div v-if="seens" class="column">
-        <p class="title is-size-7">SEENS</p>
-        <p class="is-size-7">{{(seens.length)}}</p>
-      </div>
-    </div> -->
     
     <!-- ************************************************************************************ /#CONSOLE -->
-    <!-- #.navbar </nav> -->
     <div :class="(!state)?'is-hidden':''" id="container-main">
       
       
@@ -71,7 +43,7 @@
         <div class="columns"><div class="column is-12">
           
           <p style="" class="dv-title is-size-3">{{active.item.content}}</p>
-          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-tooltip.right-start="'zoom map to this location'" v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
+          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.Do')}}) <a v-tooltip.right-start="'zoom map to this location'" v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
             <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
           </a></p>
           <p style="margin-top:2em;">
@@ -180,15 +152,15 @@ export default {
           range: {
             begin: process.env.SLIDER_RANGE_BEGIN,
             end: process.env.SLIDER_RANGE_END
-          },
-          handles: {
-            begin: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
-              .add(1, "year")
-              .format("YYYY-MM-Mo"),
-            end: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
-              .subtract(1, "year")
-              .format("YYYY-MM-Mo")
           }
+          // ,handles: {
+          //   begin: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
+          //     .add(1, "year")
+          //     .format("YYYY-MM-DD"),
+          //   end: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
+          //     .subtract(1, "year")
+          //     .format("YYYY-MM-DD")
+          // }
         }
       },
       active: {
@@ -304,83 +276,10 @@ export default {
     if (this.$route.params.activeid) {
       this.active.key = this.$route.params.activeid;
     }
-    // this.times.slider.end=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
-    // this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
-    // this.initData();
     window.addEventListener("keydown", this.onKey);
     
   }, // created
   mounted: function () {
-
-    // if(process.env.MODE=='T'){
-    //     let sAxios = document.createElement('script')
-    //     sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
-    //     document.head.appendChild(sAxios)
-
-    //     let sLeaflet = document.createElement('script')
-    //     sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
-    //     document.head.appendChild(sLeaflet)
-
-    //     let sVis = document.createElement('script')
-    //     sVis.setAttribute('src','http://localhost:8000/vis.min.js')
-    //     document.head.appendChild(sVis)
-
-    //     let cLeaflet = document.createElement('link')
-    //     cLeaflet.setAttribute('rel','stylesheet')
-    //     cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
-    //     document.head.appendChild(cLeaflet)
-
-    //     let cVis = document.createElement('link')
-    //     cVis.setAttribute('rel','stylesheet')
-    //     cVis.setAttribute('src','http://localhost:8000/vis.min.css')
-    //     document.head.appendChild(cVis)
-
-    //     let cVisTimeline = document.createElement('link')
-    //     cVisTimeline.setAttribute('rel','stylesheet')
-    //     cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
-    //     document.head.appendChild(cVisTimeline)
-
-        
-    //     let cMaterial = document.createElement('link')
-    //     cMaterial.setAttribute('rel','stylesheet')
-    //     cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
-    //     document.head.appendChild(cMaterial)
-
-    //   } else {
-
-    //             let sAxios = document.createElement('script')
-    //     sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
-    //     document.head.appendChild(sAxios)
-
-    //     // let sLeaflet = document.createElement('script')
-    //     // sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
-    //     // document.head.appendChild(sLeaflet)
-
-    //     let sVis = document.createElement('script')
-    //     sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
-    //     document.head.appendChild(sVis)
-
-    //     let cLeaflet = document.createElement('link')
-    //     cLeaflet.setAttribute('rel','stylesheet')
-    //     cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
-    //     document.head.appendChild(cLeaflet)
-
-    //     let cVis = document.createElement('link')
-    //     cVis.setAttribute('rel','stylesheet')
-    //     cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
-    //     document.head.appendChild(cVis)
-
-    //     let cVisTimeline = document.createElement('link')
-    //     cVisTimeline.setAttribute('rel','stylesheet')
-    //     cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
-    //     document.head.appendChild(cVisTimeline)
-
-    //     let cMaterial = document.createElement('link')
-    //     cMaterial.setAttribute('rel','stylesheet')
-    //     cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
-    //     document.head.appendChild(cMaterial)
-
-    //   }
 
 this.$nextTick(() => this.initBaseMap()
   // .setSlider().fetchEvents()
@@ -398,8 +297,6 @@ this.$nextTick(() => this.initBaseMap()
           blu = 'http://localhost:8000/2x.png'
           break
         case '33':
-          // blu = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
-          // blu = 'https://cartocdn_d.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png'
           blu = 'https://cartocdn_a.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png'
           break
         default:
@@ -477,11 +374,9 @@ this.$nextTick(() => this.initBaseMap()
 
       // grab target key (it'll be the ol {id:<id>,type:<type>})
       let zoomto = this.zooms.next ? this.zooms.next : null;
-      console.log("zoomto", zoomto.id);
 
       // find map object
       let mo = this.$_.find(this.l_json.getLayers(), L => {
-        console.log('L.feature.properties.cartodb_id',L.feature.properties.cartodb_id);
         return (
           L.feature.properties.cartodb_id == zoomto.id &&
           this.launderGeoType(L.feature.geometry.type) == zoomto.type
@@ -504,10 +399,10 @@ this.$nextTick(() => this.initBaseMap()
 
       let copy =
         process.env.VERBOSITY === "DEBUG" ? '<h2 class="has-text-info is-size-2">' +
-        p.layer.feature.properties.cartodb_id +
+        p.layer.feature.properties.name +
         "</h2>" +
         '<div class="has-text-grey-lighter is-size-5">' +
-        p.layer.feature.properties.name +
+        p.layer.feature.properties.anno +
         "</div>" : '<div><h5 class="is-size-5">real h5</h5>real subhead</div>';
 
       let po = L.popup()
@@ -596,8 +491,8 @@ this.$nextTick(() => this.initBaseMap()
         }); // new vis
         this.timeline.on("rangechange", properties => {
           this.times.future = {
-            begin: this.$MOMENT(properties.start).format("YYYY-MMM-Mo"),
-            end: this.$MOMENT(properties.end).format("YYYY-MMM-Mo")
+            begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
+            end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
           };
         });
         this.timeline.on("rangechanged", properties => {
@@ -606,8 +501,8 @@ this.$nextTick(() => this.initBaseMap()
 
             this.times.future = { begin: null, end: null };
             this.times.line = {
-              begin: this.$MOMENT(properties.start).format("YYYY-MM-Mo"),
-              end: this.$MOMENT(properties.end).format("YYYY-MM-Mo")
+              begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
+              end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
             };
           }
 
@@ -650,18 +545,21 @@ this.$nextTick(() => this.initBaseMap()
         var slider = document.getElementById("slider");
 
         const effer = v => {
-          return this.$MOMENT(v).format("YYYY.MMM.Mo");
+          return this.$MOMENT(v).format("YYYY.MMM.Do");
         };
 
         this.slider = this.$NOUISLIDER.create(slider, {
+          // handles
           start: [
             this.$MOMENT(
               process.env.LINE_TIME_BEGIN,
-              "YYYY-MM-Mo"
+              // this.times.slider.handles.begin,
+              "YYYY-MM-DD"
             ).valueOf(),
             this.$MOMENT(
               process.env.LINE_TIME_END,
-              "YYYY-MM-Mo").valueOf()
+              // this.times.slider.handles.end,
+              "YYYY-MM-DD").valueOf()
           ],
           connect: true,
           behaviour: 'drag',
@@ -681,18 +579,15 @@ this.$nextTick(() => this.initBaseMap()
         /* ----------------------- WIRE/REWIRE ---------- */
 
         this.slider.on("change", (values, handle) => {
-          // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
-          //   "YYYY-MM-DD"
-          // );
-          // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
+
+
           let to = {
             begin: this.$MOMENT(values[0], "x").format("YYYY-MM-DD"),
             end: this.$MOMENT(values[1], "x").format("YYYY-MM-DD")
           };
+          
           this.times.line = to;
-          this.times.slider.handles = to;
-          // this.fetchEvents();
-          // this.routize();
+          
         });
       } //if.slider
       else {
@@ -700,17 +595,21 @@ this.$nextTick(() => this.initBaseMap()
           this.$MOMENT(
             this.times.line.begin,
             "YYYY-MM-DD"
-          ).valueOf(),
+          ).valueOf()
+          ,
           this.$MOMENT(
             this.times.line.end,
             "YYYY-MM-DD").valueOf()
         ])
+
       }
 
       // }
     }, //setSlider
     fetchEvents: function () {
       
+      this.loadings.subgraph=true
+
       let q =
         'for e in edges filter e.type=="hasParticipant" OR e.type=="occurredAt" for ev in events filter e._from==ev._id AND e.type=="hasParticipant" LET tstart = HAS(ev.timestamp, "start")==true ? DATE_FORMAT(ev.timestamp.start, "%yyyy-%mm-%dd") : DATE_FORMAT(ev.timestamp, "%yyyy-%mm-%dd") LET tend = HAS(ev.timestamp, "end")==true ? DATE_FORMAT(ev.timestamp.endz, "%yyyy-%mm-%dd") : null LET geo=( for g in edges filter g._from==ev._id AND g.type=="occurredAt" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP(\'' +
         this.times.line.begin +
@@ -733,6 +632,7 @@ axios
           console.error(e);
         }); //axios.catch
 } else {
+  this.loadings.init=true
       axios
           .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
@@ -753,11 +653,15 @@ axios
         }) //axios.then
         .catch(e => {
           console.error(e);
+        }) //axios.catch
+        .finally(e => {
+          this.loadings.subgraph=false
         }); //axios.catch
       }//if.else
     }, //fetchEvents
     fetchGeometries: function () {
       
+      this.loadings.init=true
       let eventswgeoms = this.$_.reject(this.events, t => {
         return t.geo.length < 1;
       });
@@ -770,8 +674,7 @@ axios
           geoarticle: g.geo[0].article
         };
       });
-// this.$_.pluck(eventgeoms, "milleriakey")
-console.log("this.$_.pluck(eventgeoms, \"milleriakey\")", this.$_.pluck(eventgeoms, "milleriakey"));
+
       if (eventgeoms.length > 0) {
         var u =
           process.env.MODE == "33" ? process.env.API_ROOT+"/geoms/cbb?q=" +
@@ -780,11 +683,15 @@ console.log("this.$_.pluck(eventgeoms, \"milleriakey\")", this.$_.pluck(eventgeo
         axios
           .get(u)
           .then(response => {
+            
             this.geoms = response.data;
           }) //axios.then
           .catch(e => {
             this.console.msg = null;
             console.error(e);
+          }) //axios.catch
+          .finally(e => {
+            this.loadings.init=false
           }); //axios.catch
       }
     }, //fetchGeometries

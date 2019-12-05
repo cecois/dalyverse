@@ -17,7 +17,7 @@ import vueTopprogress from 'vue-top-progress'
 
 Vue.component('vue-headful', vueHeadful)
 
-Vue.use(vueTopprogress,{color:"#bc000e"})
+Vue.use(vueTopprogress,{color:"#bd5db4"})
 Vue.use(underscore)
 Vue.use(VTooltip)
 Vue.config.productionTip = false
