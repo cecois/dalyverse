@@ -33,7 +33,7 @@
       </article>
     </div>
   </div>
-  <div class="tile is-parent">
+  <div class="tile is-parent" style="padding-top:3em;">
     <article class="tile is-child">
         <p class="title">Data &amp; Specs</p>
       <div class="content">

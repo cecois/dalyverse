@@ -562,6 +562,10 @@
   "_key": "_:radiocity"
   , "name": "Radio City Music Hall"
   , "article": ["Radio City Music Hall is a legendary performance space in New York City."]
+  , "geo_key": {
+    "type": "point"
+    , "id": 98
+  }
 }, {
   "_key": "_:ballyshollywood"
   , "name": "Bally's Hollywood"

@@ -677,7 +677,7 @@ axios
 
       if (eventgeoms.length > 0) {
         var u =
-          process.env.MODE == "33" ? process.env.API_ROOT+"/geoms/cbb?q=" +
+          process.env.MODE == "33" ? process.env.API_ROOT+"/geoms/simple?q=" +
           this.$_.pluck(eventgeoms, "milleriakey").join(",") : "http://localhost:8000/dalyverse-geoms-T.json";
 
         axios
