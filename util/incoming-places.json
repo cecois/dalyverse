@@ -276,7 +276,7 @@
   , "article": ["Corona, California is a town in California that once hosted a getaway weekend for Mal Bachman and Don DiMello."]
   , "geo_key": {
     "type": "poly"
-    , "id": 561
+    , "id": 1073
   }
 }, {
   "_key": "_:dresdende"
@@ -284,7 +284,7 @@
   , "article": ["Dresden is a significant site in World War II."]
   , "geo_key": {
     "type": "poly"
-    , "id": 556
+    , "id": 1072
   }
 }, {
   "_key": "_:laramiefeedandwesternsupply"
@@ -292,7 +292,7 @@
   , "article": ["LFWS is a purveyor of western gear and other supplies to cowboys."]
   , "geo_key": {
     "type": "point"
-    , "id": 979
+    , "id": 1187
   }
 }, {
   "_key": "_:gowergulch"
@@ -308,7 +308,7 @@
   , "article": ["Questionable boutique hotel off of Wilcox."]
   , "geo_key": {
     "type": "poly"
-    , "id": 980
+    , "id": 1186
   }
 }, {
   "_key": "_:courtyardoldtown"
@@ -364,7 +364,7 @@
   , "article": ["popular tourism site"]
   , "geo_key": {
     "type": "poly"
-    , "id": 140
+    , "id": 143
   }
 }, {
   "_key": "_:gracelandelvis"
@@ -404,7 +404,7 @@
   , "article": ["Former site of: a Dr. Jekyll."]
   , "geo_key": {
     "type": "point"
-    , "id": 968
+    , "id": 1185
   }
 }, {
   "_key": "_:tombofjimmorrison"
@@ -436,7 +436,7 @@
   , "article": ["Largo at the Coronet is a theatre space in Los Angeles."]
   , "geo_key": {
     "type": "point"
-    , "id": 977
+    , "id": 1184
   }
 }, {
   "_key": "_:venicefishingpier"
