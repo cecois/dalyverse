@@ -43,16 +43,16 @@
   , "name": "Miami Beach"
   , "article": ["Miami Beach is a popular vacation spot in Florida as well as the location of one of L. Ron Hubbard's hidden future treasures."]
   , "geo_key": {
-    "type": "point"
-    , "id": 999
+    "type": "poly"
+    , "id": 1078
   }
 }, {
   "_key": "_:sanrafaelhills"
   , "name": "San Rafael Hills"
   , "article": ["San Rafael Hills is a neighborhood in Pasadena, California."]
   , "geo_key": {
-    "type": "point"
-    , "id": 998
+    "type": "poly"
+    , "id": 1077
   }
 }, {
   "_key": "_:johnnyssportshop"
@@ -60,7 +60,7 @@
   , "article": ["Johnny's Sport Shop is a bait and tackle shop in Pasadena and, according to one if its imployees, Hendrix Murphy, the location of an early attempt at live burial by Cactus Tony."]
   , "geo_key": {
     "type": "point"
-    , "id": 997
+    , "id": 1209
   }
 }, {
   "_key": "_:tommyschiliburger"
@@ -68,7 +68,7 @@
   , "article": ["Tommy's Chili Burger is a restaurant that figured significantly in the murder trial of Cactus Tony."]
   , "geo_key": {
     "type": "point"
-    , "id": 996
+    , "id": 1208
   }
 }, {
   "_key": "_:21choices"
@@ -76,7 +76,7 @@
   , "article": ["21 Choices - Old Town is a restaurant that figured significantly in the murder trial of Cactus Tony."]
   , "geo_key": {
     "type": "point"
-    , "id": 995
+    , "id": 1207
   }
 }, {
   "_key": "_:sanquentin"
@@ -92,15 +92,15 @@
   , "article": ["The Braidwood Centre, former home of a much-beloved bagpiper named Stuart Cambridge, is a haunted stop on Cameron McGonigle's tour of Edinburgh."]
   , "geo_key": {
     "type": "point"
-    , "id": 994
+    , "id": 1206
   }
 }, {
   "_key": "_:edinburghcastle"
   , "name": "Edinburgh Castle"
   , "article": ["Edinburgh Castle is a haunted stop on Cameron McGonigle's tour of Edinburgh."]
   , "geo_key": {
-    "type": "point"
-    , "id": 993
+    "type": "poly"
+    , "id": 1076
   }
 }, {
   "_key": "_:tolboothtavern"
@@ -108,7 +108,7 @@
   , "article": ["Tolbooth Tavern is a haunted stop on Cameron McGonigle's tour of Edinburgh."]
   , "geo_key": {
     "type": "point"
-    , "id": 992
+    , "id": 1205
   }
 }, {
   "_key": "_:brewlabcoffeeedinburgh"
@@ -116,7 +116,7 @@
   , "article": ["Brew Lab Coffee is a haunted stop on Cameron McGonigle's tour of Edinburgh - use the Tour discount!"]
   , "geo_key": {
     "type": "point"
-    , "id": 991
+    , "id": 1204
   }
 }, {
   "_key": "_:hotelduvin"
@@ -124,15 +124,15 @@
   , "article": ["Hotel du Vin is a haunted stop on Cameron McGonigle's tour of Edinburgh."]
   , "geo_key": {
     "type": "point"
-    , "id": 990
+    , "id": 1203
   }
 }, {
   "_key": "_:toweringpinespsychiatric"
-  , "name": "Gateway Hospital and Mental Health Center"
+  , "name": "Gatway Hospital and Mental Health Center"
   , "article": ["home of: Gil"]
   , "geo_key": {
     "type": "point"
-    , "id": 989
+    , "id": 1202
   }
 }, {
   "_key": "_:maricopastphoenix"
@@ -140,7 +140,7 @@
   , "article": ["site of: a murder by a puppet"]
   , "geo_key": {
     "type": "point"
-    , "id": 988
+    , "id": 1201
   }
 }, {
   "_key": "_:ritzcarltonmdrparking"
@@ -148,7 +148,7 @@
   , "article": ["The Ritz-Carlton (Marina del Rey) Parking Ramp was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history."]
   , "geo_key": {
     "type": "point"
-    , "id": 984
+    , "id": 1200
   }
 }, {
   "_key": "_:tonypsdocksidemdr"
@@ -156,7 +156,7 @@
   , "article": ["Tony P's Dockside Grill in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history."]
   , "geo_key": {
     "type": "point"
-    , "id": 985
+    , "id": 1199
   }
 }, {
   "_key": "_:tikimermaidchartersharborcruiseboat"
@@ -164,7 +164,7 @@
   , "article": ["The Tiki Mermaid Charters Harbor Cruise Boat in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The ship sank under weight of Joe Bongo's automobile and remains on the floor of the harbor to this day."]
   , "geo_key": {
     "type": "point"
-    , "id": 986
+    , "id": 1198
   }
 }, {
   "_key": "_:bajacantinamdr"
@@ -172,7 +172,7 @@
   , "article": ["Baja Cantina - Marina del Rey is a restaurant near the harbor in Marina del Rey, California, above which live all of the school-aged members of the rock group Rosebush Red."]
   , "geo_key": {
     "type": "point"
-    , "id": 987
+    , "id": 1197
   }
 }, {
   "_key": "_:historicmarinadelreylighthouse"
@@ -204,7 +204,7 @@
   , "article": ["The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahon and Damien Fearnly would occasionally take shits on said stone for fun."]
   , "geo_key": {
     "type": "point"
-    , "id": 983
+    , "id": 1196
   }
 }, {
   "_key": "_:limerickhuntmuseum"
@@ -212,7 +212,7 @@
   , "article": ["The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mary from the Hunt and 'fucked on it for a year.'"]
   , "geo_key": {
     "type": "poly"
-    , "id": 567
+    , "id": 1075
   }
 }, {
   "_key": "_:bahrain"
@@ -220,7 +220,7 @@
   , "article": ["site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer"]
   , "geo_key": {
     "type": "poly"
-    , "id": 562
+    , "id": 1074
   }
 }, {
   "_key": "_:altadenaca"
@@ -244,7 +244,7 @@
   , "article": ["The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank (-- Wikipedia, 2019.Jan)"]
   , "geo_key": {
     "type": "poly"
-    , "id": 560
+    , "id": 1190
   }
 }, {
   "_key": "_:tommybahamaskokie"
@@ -252,7 +252,7 @@
   , "article": ["A proxy for Tommy Bahama - Skokie; site of: August Lindt buying a shirt"]
   , "geo_key": {
     "type": "point"
-    , "id": 982
+    , "id": 1189
   }
 }, {
   "_key": "_:hopitaljasonsendweer"
@@ -260,7 +260,7 @@
   , "article": ["Site of: August Lindt, on vacation."]
   , "geo_key": {
     "type": "poly"
-    , "id": 559
+    , "id": 1188
   }
 }, {
   "_key": "_:newmexicousa"
