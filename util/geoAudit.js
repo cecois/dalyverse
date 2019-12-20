@@ -4,7 +4,7 @@ const AXIOS=require('axios')
 ;
 
 // let confirmeds=[]
-let confirmeds=[
+var confirmeds=[
 "shadyviewboardandcare"
 ,"unnamedlotionshop"
 ,"schmiedebergpretzelcompany"
@@ -83,14 +83,26 @@ let confirmeds=[
 ,"romeny"
 ]
 
-let places = JSON.parse(FS.readFileSync('/Users/ccmiller/git/dalyverse/util/incoming-places.json'))
+var places = JSON.parse(FS.readFileSync('/Users/ccmiller/git/dalyverse/util/incoming-places.json'))
 
-__.each(places,(p)=>{
+// 'http://wompupthejams.com:3030/geoms/simple?q=poly:1188',
+// 'http://wompupthejams.com:3030/geoms/simple?q=poly:1186',
+// 'http://wompupthejams.com:3030/geoms/simple?q=poly:1190',
 
-if(!__.contains(confirmeds,p._key.replace("_:",'')))
-{
-	console.log("\r\r")
-	console.log({url:"http://wompupthejams.com:3030/geoms/simple?q="+p.geo_key.type+':'+p.geo_key.id,name:p.name,article:p.article,key:p._key})
-}
+const main = async () =>{
 
-})
+__.each(places,async (p)=>{
+
+let uri = "http://wompupthejams.com:3030/geoms/simple?q="+p.geo_key.type+':'+p.geo_key.id
+
+AXIOS.head(uri)
+    .then(response => console.info(response.statusText=='OK'?'':response)) //Log is giving an undefined response
+    .catch((error)=>{console.log(error)});
+
+})//each
+
+
+
+} //main
+
+main();
