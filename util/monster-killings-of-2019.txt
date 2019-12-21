@@ -1,244 +1,57 @@
-MONSTER KILLINGS 2019
 
-bt april 29, 2019 and November 6, 2019
+          --------------------
+          
+          --------------------
+          
 
+          --------------------
 
-{
-  "_key": "_:scapeoreswamp"
-  , "name": "Scape Ore Swamp"
-  , "article": ["Scape Ore Swamp is a rural area in Lee County, South Carolina, USA, rumored to (formerly) host a Lizard Man."]
-  , "geo_key": {
-    "type": "point"
-    , "id": 1167
-  }
-}
---------------------
-{
-    "_key": "_:lizardmanofscapeoreswamp",
-    "daly": "false",
-    "name": "Lizard Man of Scape Ore Swamp",
-    "nami": "Scape Ore Swamp, Lizard Man Of",
-    "article": [
-      "Lizard Man of Scape Ore Swamp is a legendary monster said to inhabit Scape Ore Swamp in Lee County, SC, USA."
-    ]
-  }
---------------------
-
-{
-  "_key": "_:daltonwilcoxkillsthelizardman"
-  , "name": "Dalton Wilcox Kills The Lizard Man of Scape Ore Swamp"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-05-01T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
 ------------------------------------------------------------------------
-{
-  "_key": "_:suwanneecountyflorida"
-  , "name": "Suwannee County"
-  , "article": ["Suwannee County is a rural admin in Florida, USA, rumored to host multiple Skunk Apes."]
-  , "geo_key": {
-    "type": "poly"
-    , "id": 1066
-  }
-}
---------------------
-{
-    "_key": "_:daltonwilcoxskunkape",
-    "daly": "false",
-    "name": "Dalton Wilcox' Skunk Ape",
-    "nami": "Ape, Skunk",
-    "article": [
-      "Dalton Wilcox' Skunk Ape is a skunk ape found and murdered (by Wilcox) in Florida, USA."
-    ]
-  }
---------------------
-{
-  "_key": "_:daltonwilcoxkillsaskunkape"
-  , "name": "Dalton Wilcox Kills a Skunk Ape"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-05-11T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
+          --------------------
+          
+            --------------------
+          
+          --------------------
+          
 ------------------------------------------------------------------------
-{
-  "_key": "_:popelickbridge"
-  , "name": "Pope Lick Bridge"
-  , "article": ["Pope Lick Bridge is an overpass near Louisville, Kentucky, USA, rumored to formerly house an eponymous monster."]
-  , "geo_key": {
-    "type": "point"
-    , "id": 1168
-  }
-}
---------------------
-{
-    "_key": "_:popelickmonster",
-    "daly": "false",
-    "name": "Pople Lick Monster",
-    "nami": "Monster, Pope Lick",
-    "article": [
-      "The Pope Lick Monster is a legendary part-man, part-goat, and part-sheep creature reported to live beneath a railroad trestle bridge in Louisville, Kentucky, USA."
-    ]
-  }
---------------------
-{
-  "_key": "_:daltonwilcoxkillsthepopelickmonster"
-  , "name": "Dalton Wilcox Kills the Pope Lick Monster of Louisville"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-06-24T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
+          --------------------
+          
+          --------------------
+            
+          --------------------
+          
 ------------------------------------------------------------------------
-{
-  "_key": "_:branchhillohio"
-  , "name": "Branch Hill"
-  , "article": ["Branch Hill is a town in Ohio, USA, rumored to (formerly) host the Loveland Frog Man."]
-  , "geo_key": {
-    "type": "point"
-    , "id": 1169
-  }
-}
---------------------
-{
-    "_key": "_:thelovelandfrogman",
-    "daly": "false",
-    "name": "The Loveland Frog Man",
-    "nami": "Frog Man, Loveland",
-    "article": [
-      "The Loveland Frog Man is a legendary humanoid frog allegedly spotted in Loveland, OH, USA."
-    ]
-  }
---------------------
-{
-  "_key": "_:daltonwilcoxkillsthelovelandfrogman"
-  , "name": "Dalton Wilcox Kills the Loveland Frog Man"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-07-31T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
+          --------------------
+          
+          --------------------
+            
+          --------------------
+          
 ------------------------------------------------------------------------
-{
-  "_key": "_:honeyislandswamp"
-  , "name": "Honey Island Swamp"
-  , "article": ["Honey Island Swamp is a marshland in eastern Louisiana, USA, rumored to (formerly) host the Honey Island Swamp Monster."]
-  , "geo_key": {
-    "type": "point"
-    , "id": 1170
-  }
-}
---------------------
-{
-    "_key": "_:honeyislandswampmonster",
-    "daly": "false",
-    "name": "The Honey Island Swamp Monster",
-    "nami": "Swamp Monster, Honey Island The",
-    "article": [
-      "The Honey Island Swamp Monster is a legendary biped with gray hair and yellow or red eyes purportedly (formerly) living in eastern Louisiana's Honey Island Swamp.","The monster is said to smell perfectly awful."
-    ]
-  }
---------------------
-{
-  "_key": "_:daltonwilcoxkillsthehoneyislandswampmonster"
-  , "name": "Dalton Wilcox Kills the Honey Island Swamp Monster"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-08-09T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
+          --------------------
+          
+          --------------------
+            
+          --------------------
+          
 ------------------------------------------------------------------------
-{
-  "_key": "_:arroyocoloradocanal"
-  , "name": "Arroyo Colorado Canal"
-  , "article": ["Arroyo Colorado Canal is a waterway in Harlingen, Texas, USA, rumored to (formerly) host the Big Bird of the Rio Grande Valley."]
-  , "geo_key": {
-    "type": "point"
-    , "id": 1171
-  }
-}
---------------------
-{
-    "_key": "_:thebigbirdoftheriograndevalley",
-    "daly": "false",
-    "name": "Big Bird of the Rio Grande Valley",
-    "nami": "Rio Grande Valley, Big Bird Of",
-    "article": [
-      "The Big Bird of the Rio Grande Valley is a winged ape said to (formerly) terrorize South Texas, USA."
-    ]
-  }
---------------------
-{
-  "_key": "_:daltonwilcoxkillsthebigbirdoftheriograndevalley"
-  , "name": "Dalton Wilcox Kills the Big Bird of the Rio Grande Valley"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-08-25T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
+          --------------------
+          
+          --------------------
+            
+          --------------------
+          
 ------------------------------------------------------------------------
-{
-  "_key": "_:freetownstateforest"
-  , "name": "Freetown-Fall River State Forest"
-  , "article": ["Freetown-Fall River State Forest is a protected land in Massachusetts, USA, rumored to (formerly) host at least one Pukwudgie."]
-  , "geo_key": {
-    "type": "poly"
-    , "id": 1067
-  }
-}
---------------------
-{
-    "_key": "_:daltonwilcoxpukwudgie",
-    "daly": "false",
-    "name": "Dalton Wilcox' Pukwudgie",
-    "nami": "Pukwudgie, Dalton Wilcox'",
-    "article": [
-      "Dalton Wilcox' Pukwudgie is a Pukwudgie found and murdered (by Wilcox) in Freetown-Fall River State Forest in southern Massachusetts, USA."
-    ]
-  }
---------------------
-poly:1067
-{
-  "_key": "_:daltonwilcoxkillsthepukwudgie"
-  , "name": "Dalton Wilcox Kills the Pukwudgie"
-  , "article": ["Mr. Wilcox, on a tour around the U.S. specifically to kill regional monsters, reported the slaughter at a live Comedy Bang! Bang! show in Portland (early show 2019)"]
-  , "timestamp": {
-    "start": "2019-10-01T16:10:00Z"
-    , "end": null
-  }
-  , "nb_timestamp": {
-    "class": "approximate"
-    , "nb": "some time between April 29 and November 6 2019"
-  }
-}
+          
+          --------------------
+          
+          --------------------
+            
+          --------------------
+          

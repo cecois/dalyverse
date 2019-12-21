@@ -4,77 +4,92 @@
     "_to": "places/_:limerickhuntmuseum",
     "type": "occurredAt",
     "vertex": "_:patrickmcmahonliftsarelic"
-  },{
+  },
+  {
     "_from": "events/_:schmitthoffmanlosesrenfrewbaron",
     "_to": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
     "type": "hasParticipant",
     "vertex": "_:schmitthoffmanlosesrenfrewbaron"
-  },{
+  },
+  {
     "_from": "events/_:schmitthoffmanlosesrenfrewbaron",
     "_to": "people/_:unnamedgreekbusinessman",
     "type": "hasParticipant",
     "vertex": "_:schmitthoffmanlosesrenfrewbaron"
-  },{
+  },
+  {
     "_from": "events/_:schmitthoffmanloseslowermargrave",
     "_to": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
     "type": "hasParticipant",
     "vertex": "_:schmitthoffmanloseslowermargrave"
-  },{
+  },
+  {
     "_from": "events/_:schmitthoffmanloseslowermargrave",
     "_to": "people/_:unnamedukrainianoligarch",
     "type": "hasParticipant",
     "vertex": "_:schmitthoffmanloseslowermargrave"
-  },{
+  },
+  {
     "_from": "events/_:dondimellosannie",
     "_to": "people/_:dondimello",
     "type": "hasParticipant",
     "vertex": "_:dondimellosannie"
-  },{
+  },
+  {
     "_from": "events/_:dondimellogetsmarried",
     "_to": "people/_:dondimello",
     "type": "hasParticipant",
     "vertex": "_:dondimellogetsmarried"
-  },{
+  },
+  {
     "_from": "events/_:patrickmcmahonliftsarelic",
     "_to": "people/_:patrickmcmahon",
     "type": "hasParticipant",
     "vertex": "_:patrickmcmahonliftsarelic"
-  },{
+  },
+  {
     "_from": "events/_:kevinlindtsitsonacat2",
     "_to": "people/_:kevinlindt",
     "type": "hasParticipant",
     "vertex": "_:kevinlindtsitsonacat2"
-  },{
+  },
+  {
     "_from": "events/_:byrondennistonkidnapsbeetlebailey",
     "_to": "people/_:princegeorgeofcambridge",
     "type": "hasParticipant",
     "vertex": "_:byrondennistonkidnapsbeetlebailey"
-  },{
+  },
+  {
     "_from": "events/_:starbucksgowergulch",
     "_to": "people/_:jackfitzgerald",
     "type": "occurredAt",
     "vertex": "_:starbucksgowergulch"
-  },{
+  },
+  {
     "_from": "events/_:russelsheinswifedisappears",
     "_to": "people/_:russelsheinswife",
     "type": "hasParticipant",
     "vertex": "_:russelsheinswifedisappears"
-  },{
+  },
+  {
     "_from": "events/_:byrondennistonkidnapsbeetlebailey",
     "_to": "people/_:byrondenniston",
     "type": "hasParticipant",
     "vertex": "_:byrondennistonkidnapsbeetlebailey"
-  },{
+  },
+  {
     "_from": "events/_:russelsheinmarrieshiswife",
     "_to": "people/_:russelsheinswife",
     "type": "hasParticipant",
     "vertex": "_:russelsheinmarrieshiswife"
-  },{
+  },
+  {
     "_from": "events/_:russelsheinmarrieshiswife",
     "_to": "people/_:russelshein",
     "type": "hasParticipant",
     "vertex": "_:russelsheinmarrieshiswife"
-  },{
+  },
+  {
     "_from": "events/_:lavergnefamilydinner001",
     "_to": "people/_:grandmotherpearlalavergne",
     "type": "hasParticipant",
@@ -3679,5 +3694,173 @@
     "_to": "people/_:daltonwilcox",
     "type": "hasParticipant",
     "vertex": "_:ionetimekilledafrankenstein"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelizardman",
+    "_to": "people/_:lizardmanofscapeoreswamp",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthelizardman"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelizardman",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthelizardman"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelizardman",
+    "_to": "places/_:scapeoreswamp",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthelizardman"
+  },
+  {
+    "_from": "people/_:lizardmanofscapeoreswamp",
+    "_to": "places/_:scapeoreswamp",
+    "type": "livesAt",
+    "vertex": "_:lizardmanofscapeoreswamp"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsaskunkape",
+    "_to": "people/_:daltonwilcoxskunkape",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsaskunkape"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsaskunkape",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsaskunkape"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsaskunkape",
+    "_to": "places/_:scapeoreswamp",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsaskunkape"
+  },
+  {
+    "_from": "people/_:daltonwilcoxskunkape",
+    "_to": "places/_:suwanneecountyflorida",
+    "type": "livesAt",
+    "vertex": "_:daltonwilcoxskunkape"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthepopelickmonster",
+    "_to": "people/_:popelickmonster",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthepopelickmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthepopelickmonster",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthepopelickmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthepopelickmonster",
+    "_to": "places/_:popelickbridge",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthepopelickmonster"
+  },
+  {
+    "_from": "people/_:popelickmonster",
+    "_to": "places/_:popelickbridge",
+    "type": "livesAt",
+    "vertex": "_:popelickmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelovelandfrogman",
+    "_to": "people/_:thelovelandfrogman",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthelovelandfrogman"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelovelandfrogman",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthelovelandfrogman"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthelovelandfrogman",
+    "_to": "places/_:branchhillohio",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthelovelandfrogman"
+  },
+  {
+    "_from": "people/_:thelovelandfrogman",
+    "_to": "places/_:branchhillohio",
+    "type": "livesAt",
+    "vertex": "_:thelovelandfrogman"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthehoneyislandswampmonster",
+    "_to": "people/_:honeyislandswampmonster",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthehoneyislandswampmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthehoneyislandswampmonster",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthehoneyislandswampmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthehoneyislandswampmonster",
+    "_to": "places/_:honeyislandswamp",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthehoneyislandswampmonster"
+  },
+  {
+    "_from": "people/_:honeyislandswampmonster",
+    "_to": "places/_:honeyislandswamp",
+    "type": "livesAt",
+    "vertex": "_:honeyislandswampmonster"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthebigbirdoftheriograndevalley",
+    "_to": "people/_:thebigbirdoftheriograndevalley",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthebigbirdoftheriograndevalley"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthebigbirdoftheriograndevalley",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthebigbirdoftheriograndevalley"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthebigbirdoftheriograndevalley",
+    "_to": "places/_:arroyocoloradocanal",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthebigbirdoftheriograndevalley"
+  },
+  {
+    "_from": "people/_:thebigbirdoftheriograndevalley",
+    "_to": "places/_:arroyocoloradocanal",
+    "type": "livesAt",
+    "vertex": "_:thebigbirdoftheriograndevalley"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthepukwudgie",
+    "_to": "people/_:daltonwilcoxpukwudgie",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthepukwudgie"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthepukwudgie",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxkillsthepukwudgie"
+  },
+  {
+    "_from": "events/_:daltonwilcoxkillsthepukwudgie",
+    "_to": "places/_:freetownstateforest",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxkillsthepukwudgie"
+  },
+  {
+    "_from": "people/_:daltonwilcoxpukwudgie",
+    "_to": "places/_:freetownstateforest",
+    "type": "livesAt",
+    "vertex": "_:daltonwilcoxpukwudgie"
   }
 ]
