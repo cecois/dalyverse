@@ -29,7 +29,7 @@ $input-shadow: none;
 
 $dalyNode:rgba(5,5,5,.9);
 $nondalyNode:#bbbfbd;
-$dalyLink:#80a1d4;
+$dalyLink:#348aa7;
 //#09F130;
 // #b486ab
 // #dbd8ae
@@ -47,11 +47,13 @@ $height-main:100vh;
 
 $A-primary: $dv-green;
 $A: $dalyLink;
+$AH: adjust-color($A,$alpha:-0.5);
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ /\ var ++ */
 
 body{width:100%;height:100%;
   // color:$dv-copy;
   font-family: $font-body;
+  overflow:auto;
   // background-color:$dv-black;
 }
 
@@ -111,8 +113,15 @@ body{width:100%;height:100%;
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ dv- ++ */
-.dv-title-sub{
-  color:#9B9B9B;
+
+.dv-murder-explain{
+  padding:1em 1em;
+}
+
+.dv-index-graph-item{
+  font-size:.9em;
+  padding:0 5em;
+  li{list-style: none;padding-left:1em;}
 }
 .dv-app{
   height:$height-main;
@@ -144,7 +153,8 @@ body{width:100%;height:100%;
   margin-top:16px;
 }
 #dv-graph-copy-wrapper{
-// height:90vh;
+height:90vh;
+padding-bottom:8em;
 }
 
 #dv-index-graph{
@@ -193,7 +203,7 @@ height:($height-main - $height-header);
 .dv-column-right {
   color: $dv-copy;
   overflow-y: hidden;
-  padding-top:5em;
+  // padding-top:5em;
   // background-color:adjust-color($dv-black,$alpha:-0.1);
   // background-color:adjust-color($body-background-color, $alpha: -0.4);
   // border-left:solid 1px white;
@@ -206,7 +216,10 @@ height:($height-main - $height-header);
   }
 }
 
-.dv-trigger-active{color:$A;cursor:pointer;}
+.dv-graph-item{
+  padding:1em 3em;
+}
+.dv-trigger-active{color:$A;cursor:pointer;&:hover{color:$AH;};&:active{color:$dv-copy;}}
 
 /* ++++++++++++++++++++++++++++++++++++++++ /\ dv- ++ */
 
@@ -223,6 +236,7 @@ height:($height-main - $height-header);
 
 svg {
 position:relative;
+border-top:1px solid grey;
 // background-color:$dv-black;
 height:100%;
 width:100%;
@@ -340,6 +354,104 @@ src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/N
 // .dv-index-table{overflow-x: scroll;}
 /* ++++++++++++++++++++++++++++++++++++++++ /\ INDEX- ++ */
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ⬇ V-TOOLTIP  ++ */
+
+.tooltip {
+  display: block !important;
+  z-index: 10000;
+  font-size: .7em;
+
+  .tooltip-inner {
+    background: adjust-color($dalyLink,$alpha:-0.2);
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px 4px;
+  }
+
+  .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+    border-color: adjust-color($dalyLink,$alpha:-0.2);
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 0 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    margin-top: 5px;
+
+    .tooltip-arrow {
+      border-width: 0 5px 5px 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &[x-placement^="right"] {
+    margin-left: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 5px 5px 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[x-placement^="left"] {
+    margin-right: 5px;
+
+    .tooltip-arrow {
+      border-width: 5px 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s, visibility .15s;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .15s;
+  }
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++ /\ V-TOOLTIP - ++ */
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \/ TIMELINE ++ */
 #timeline{
@@ -427,7 +539,7 @@ src:local('Nanum_Gothic'),local('Nanum_Gothic'),url('assets/fonts/Nanum_Gothic/N
   }
   
   dd {
-    color: grey;
+    color: $dv-copy;
     // margin-left: 50%;
     margin-bottom: .5em;
   }

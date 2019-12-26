@@ -1,5 +1,6 @@
 <template>
   <div id="vue-root" class="">
+    <vue-topprogress ref="topProgress"></vue-topprogress>
     <vue-headful :title="page.title" description="People, Places, Events &amp; Things in the Andy Dalyverse" />
     <div class="columns dv-vertical-columns">
       <div class="column is-full dv-column-left">
@@ -16,17 +17,27 @@
           </div> -->
         <!-- </ul> -->
         <div id="network">
+          <div class="columns" style="padding-top:5px;">
+            <div class="column is-one-third"></div>
+            <div class="field column is-one-third" style="padding:1% 2% 0 2%;margin-bottom:0;">
+                        <div class="control">
+                          <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
+                          <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-small" type="text">
+                        </div note="./control">
+                      </div>
+            <div class="column is-one-third"></div>
+                    </div NB="/.columns">
           <svg></svg>
         </div note="/#network">
       </div note="/.dv-column-left">
-      <div class="column">
+      <!-- <div class="column">
         <div class="field column" style="padding:1% 2% 0 2%;margin-bottom:0;">
               <div class="control">
                 <input v-if="entities_total.loading" class="input is-small" type="text" placeholder="loading entities...">
                 <input v-model="query" v-bind:placeholder="'filter '+entities_total.v+' total entities'" v-else class="input is-large" type="text">
               </div note="./control">
             </div>
-      </div>
+      </div> -->
     </div nb="/.dv-vertical-columns">
     
 
@@ -131,6 +142,11 @@ export default {
       state: "filled",
       fittable: true,
       query: null,
+      loadings:[
+      {mod:"init",isLoading:false},
+      {mod:"item",isLoading:false},
+      {mod:"subgraph",isLoading:false}
+      ],
       active: {
         key: null,
         item: { article: null },
@@ -142,22 +158,16 @@ export default {
         clazz: null,
         throb: false
       },
-      relationMap: [{"rel":"miscellaneous","source":"Miscellaneous Connections","target":"Miscellaneous Connections","ver":"miscellaneous"},{"rel":"hasFriend","source":"Friendships Claimed","target":"Friendship Claimed By","ver":"has friend"},{"rel":"isFormerMemberOf","source":"Memberships","target":"Former Members","ver":"is former member of"},{"rel":"isMemberOf","source":"Memberships","target":"Current Members","ver":"is member of"},{"rel":"caresFor","source":"Professional Partnerships - Charges","target":"Caretakers","ver":"cares for"},{"rel":"isCaredForBy","source":"Caretakers","target":"Professional Partnerships - Charges","ver":"is cared for by"},{"rel":"isClientOf","source":"Professional Partnerships - Agencies","target":"Professional Partnerships - Clients","ver":"is client of"},{"rel":"wasClientOf","source":"Former Professional Partnerships - Agencies","target":"Former Professional Partnerships - Clients","ver":"was client of"},{"rel":"hasParticipant","source":"Event Participants","target":"Events Participated In","ver":"has participant"},{"rel":"participatedIn","source":"Events Participated In","target":"Event Participants","ver":"participated in"},{"rel":"isPetOf","source":"Pets","target":"Owners","ver":"is pet of"},{"rel":"isChildOf","source":"Familial Relations - Parents","target":"Familial Relations - Children","ver":"is child of"},{"rel":"isPossibleChildOf","source":"Familial Relations - Possible Parents","target":"Familial Relations - Possible Children","ver":"is possible child of"},{"rel":"isSiblingOf","source":"Familial Relations - Sibling","target":"Familial Relations - Sibling","ver":"is sibling of"},{"rel":"islocateAt","source":"Locations","target":"Locations - Sites Of","ver":"is located at"},{"rel":"livesAt","source":"Home Locations, Current & Former","target":"Home Of","ver":"lives at"},{"rel":"isSpouseOf","source":"Current Spouses","target":"Current Spouses","ver":"is spouse of"},{"rel":"wasSpouseOf","source":"Former Spouses","target":"Former Spouses","ver":"was spouse of"},{"rel":"hasWorkedAt","source":"Former Employing Agencies","target":"Former Employees","ver":"has worked at"},{"rel":"hasWorkedFor","source":"Former Employers","target":"Former Personal Employees","ver":"has worked for"},{"rel":"worksAt","source":"Current Employers","target":"Current Employees","ver":"works at"},{"rel":"worksFor","source":"Professional Relationship - Current Employers","target":"Professional Relationship - Current Employees","ver":"works for"},{"rel":"occurredAt","source":"Event Location","target":"Events Here","ver":"occurred at"},{"rel":"seeAlso","source":"See Also","target":"See Also","ver":"see also"}]
+      relationMap: [{"rel":"miscellaneous","source":"Miscellaneous Connections","target":"Miscellaneous Connections","ver":"miscellaneous"},{"rel":"hasFriend","source":"Friendships Claimed","target":"Friendship Claimed By","ver":"has friend"},{"rel":"isFormerMemberOf","source":"Memberships","target":"Former Members","ver":"is former member of"},{"rel":"isMemberOf","source":"Memberships","target":"Current Members","ver":"is member of"},{"rel":"caresFor","source":"Professional Partnerships - Charges","target":"Caretakers","ver":"cares for"},{"rel":"isCaredForBy","source":"Caretakers","target":"Professional Partnerships - Charges","ver":"is cared for by"},{"rel":"isClientOf","source":"Professional Partnerships - Agencies","target":"Professional Partnerships - Clients","ver":"is client of"},{"rel":"wasClientOf","source":"Former Professional Partnerships - Agencies","target":"Former Professional Partnerships - Clients","ver":"was client of"},{"rel":"hasParticipant","source":"Event Participants","target":"Events Participated In","ver":"has participant"},{"rel":"participatedIn","source":"Events Participated In","target":"Event Participants","ver":"participated in"},{"rel":"isPetOf","source":"Pets","target":"Owners","ver":"is pet of"},{"rel":"isChildOf","source":"Familial Relations - Parents","target":"Familial Relations - Children","ver":"is child of"},{"rel":"isPossibleChildOf","source":"Familial Relations - Possible Parents","target":"Familial Relations - Possible Children","ver":"is possible child of"},{"rel":"isSiblingOf","source":"Familial Relations - Sibling","target":"Familial Relations - Sibling","ver":"is sibling of"},{"rel":"islocateAt","source":"Locations","target":"Locations - Sites Of","ver":"is located at"},{"rel":"livesAt","source":"Home Locations, Current & Former","target":"Home Of","ver":"lives at"},{"rel":"isSpouseOf","source":"Current Spouses","target":"Current Spouses","ver":"is spouse of"},{"rel":"wasSpouseOf","source":"Former Spouses","target":"Former Spouses","ver":"was spouse of"},{"rel":"hasWorkedAt","source":"Former Employing Agencies","target":"Former Employees","ver":"has worked at"},{"rel":"hasWorkedFor","source":"Former Employers","target":"Former Personal Employees","ver":"has worked for"},{"rel":"hasWorkedFor","source":"hwfSo","target":"hwfTa","ver":"has worked for"},{"rel":"worksAt","source":"Current Employers","target":"Current Employees","ver":"works at"},{"rel":"worksFor","source":"Professional Relationship - Current Employers","target":"Professional Relationship - Current Employees","ver":"works for"},{"rel":"occurredAt","source":"Event Location","target":"Events Here","ver":"occurred at"},{"rel":"seeAlso","source":"See Also","target":"See Also","ver":"see also"}]
     }
   }, // data
   beforeCreate () {
-    // some laziness to be fixed in the future
-    // console.log(document.getElementById('map'))
   }, // beforeCreate
   created () {
 
 
     window.addEventListener("keydown", this.onKey);
 
-
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
-    );
 
     this.$once('hook:once', function () {
       this.fittable = false;
@@ -182,85 +192,10 @@ export default {
 
   }, // created
   mounted: function () {
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
-    );
-
-    // if(process.env.MODE=='T'){
-    //     let sAxios = document.createElement('script')
-    //     sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
-    //     document.head.appendChild(sAxios)
-
-    //     let sLeaflet = document.createElement('script')
-    //     sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
-    //     document.head.appendChild(sLeaflet)
-
-    //     let sVis = document.createElement('script')
-    //     sVis.setAttribute('src','http://localhost:8000/vis.min.js')
-    //     document.head.appendChild(sVis)
-
-    //     let cLeaflet = document.createElement('link')
-    //     cLeaflet.setAttribute('rel','stylesheet')
-    //     cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
-    //     document.head.appendChild(cLeaflet)
-
-    //     let cVis = document.createElement('link')
-    //     cVis.setAttribute('rel','stylesheet')
-    //     cVis.setAttribute('src','http://localhost:8000/vis.min.css')
-    //     document.head.appendChild(cVis)
-
-    //     let cVisTimeline = document.createElement('link')
-    //     cVisTimeline.setAttribute('rel','stylesheet')
-    //     cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
-    //     document.head.appendChild(cVisTimeline)
-
-        
-    //     let cMaterial = document.createElement('link')
-    //     cMaterial.setAttribute('rel','stylesheet')
-    //     cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
-    //     document.head.appendChild(cMaterial)
-
-    //   } else {
-
-    //             let sAxios = document.createElement('script')
-    //     sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
-    //     document.head.appendChild(sAxios)
-
-    //     let sLeaflet = document.createElement('script')
-    //     sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
-    //     document.head.appendChild(sLeaflet)
-
-    //     let sVis = document.createElement('script')
-    //     sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
-    //     document.head.appendChild(sVis)
-
-    //     let cLeaflet = document.createElement('link')
-    //     cLeaflet.setAttribute('rel','stylesheet')
-    //     cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
-    //     document.head.appendChild(cLeaflet)
-
-    //     let cVis = document.createElement('link')
-    //     cVis.setAttribute('rel','stylesheet')
-    //     cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
-    //     document.head.appendChild(cVis)
-
-    //     let cVisTimeline = document.createElement('link')
-    //     cVisTimeline.setAttribute('rel','stylesheet')
-    //     cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
-    //     document.head.appendChild(cVisTimeline)
-
-    //     let cMaterial = document.createElement('link')
-    //     cMaterial.setAttribute('rel','stylesheet')
-    //     cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
-    //     document.head.appendChild(cMaterial)
-
-    //   }
     
     if (this.$route.params
       .activeid) {
-      console.log("key incoming -- " + decodeURIComponent(this.$route.params.activeid) + " -- activating...");
       this.active.key = decodeURIComponent(this.$route.params.activeid);
-      console.log("setting acxtive w/ route param/this.active.key:", this.active.key);
       
     }
 
@@ -294,6 +229,7 @@ export default {
     },
     subGraph (G) {
 
+this.loadings.subgraph=true
       /*
       the raw graph is going to be so many hasWorkedAt|hasParticipatedIn|occuredAt relations etc.
       the problem is the vector between the source and target: e.g. if an edge connecting to Radio City sports a hasWorkedAt then we know Radio City is the target and we'll display the source under 'current & former employees' or whatever. Other relations sport more ambiguous direction (e.g. hasFriend). For viz, this all needs to be sorted out into situationally-sensitive categories (and their headings).
@@ -315,8 +251,13 @@ export default {
             return lgo
           }), 'edge_primary')
 
+        let Rss = this.$_.reject(buckets,(r)=>{
+          
+          return (typeof r[0].source._id == 'undefined')
+        })
+      let graf = this.$_.map(Rss, (Rs) => {
 
-      let graf = this.$_.map(buckets, (Rs) => {
+
 
         // get bucket type - same for all, take first, bust it open for edgetype
         // get bucket type - same for all, take first, bust it open for primary (driving) node
@@ -326,10 +267,11 @@ export default {
           brel = this.$_.findWhere(this.relationMap, { rel: btyp });
 
         // gather up all the entries of this bucket        
-        let entries = this.$_.map(Rs, (t) => {
-            let datanode = (t.source.id == this.active.key) ? t.target : t.source;
-            return datanode
-          }) //map
+        let entries = this.$_.uniq(this.$_.map(Rs, (t) => {
+                    let datanode = (t.source.id == this.active.key) ? t.target : t.source;
+                    return datanode
+                  })) //map
+
 
         let o = {
           bucket_raw: btyp,
@@ -341,6 +283,7 @@ export default {
 
       })
 
+this.loadings.subgraph=false
       return graf
 
     } //subgraph
@@ -357,17 +300,13 @@ export default {
     } //getgraph
     ,
     setActive (nak) {
+
+
       let nik = (nak)?nak:null;
-      console.log('setting active w :nak:', nik);
       let nakk = (nik) ? nik : this.active.key
 
       if (nakk) {
         let nakkf = (nakk.indexOf('%') >= 0) ? decodeURIComponent(nakk) : nakk
-
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "activating w _id:" + nakkf : null
-        );
-
 
         let ai = this.$_.findWhere(this.graph.nodes, { id: nakkf })
 
@@ -378,9 +317,11 @@ export default {
           graph: null
         }
 
-        this.d3.select('circle').classed("selected", false)
+
+        // then light up the active
         this.d3.select(this.prepId(nakkf)).classed("selected", true)
       } //if nakk
+      
 
     },
     prepId (iak) {
@@ -409,9 +350,8 @@ export default {
     unSetActive (nak) {
 
 let nik = (nak)?nak:null
-      console.log("nak in unset active:", null);
+      
       this.nullGraph();
-      this.d3.select(this.prepId(null)).classed("selected", false)
 
     },
     dragends (d) {
@@ -480,10 +420,7 @@ let nik = (nak)?nak:null
       var graph_nodes = this.$_.sortBy(this.graph.nodes, 'daly');
       var graph_edges = this.graph.edges;
 
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "initing D3 w/ nodes, edges: " + graph_nodes.length + "," + graph_edges.length : null
-      );
-
+      
       /* ---------------------------- bezier hack: */
 
       var nodes = graph_nodes,
@@ -646,17 +583,9 @@ let nik = (nak)?nak:null
             //   })
           link.classed("muted", (o) => {
               let oids = o.map(m => m['id'])
-                //mute whatever is not connected
-                // return (o.source !== d && o.target !== d);
-                // return !_.contains(_.pluck(o, 'id'), d.id);
-                // console.log("oids in test:", oids);
-                // console.log("did in test:", d.id);
+                
               return !oids.includes(d.id);
             })
-            // link.style("stroke-opacity", function (o) {
-            //   return o.source === d || o.target === d ? 1 : opacity;
-            // });
-            // link.style("stroke", function (o) { // return o.source === d || o.target === d ? o.source.colour : "#ddd"; // });
 
         };
       }
@@ -664,10 +593,6 @@ let nik = (nak)?nak:null
       function mouseOut() {
         node.classed('muted', false);
         link.classed('muted', false);
-        // node.style("stroke-opacity", 1);
-        // node.style("fill-opacity", 1);
-        // link.style("stroke-opacity", 1);
-        // link.style("stroke", "#ddd");
       }
 
       function tickedog() {
@@ -794,11 +719,9 @@ let nik = (nak)?nak:null
             return p.selected = p.previouslySelected = false;
           })
         }
-// console.log("@715:",this.className.baseVal.indexOf('invisible'))
-// console.log("@715:",this.className)
+
 if(this.className.baseVal.indexOf('invisible')<0){
         d3v4.select(this).classed("selected", function (p) {
-          // console.log("p after:",p);
           d.previouslySelected = d.selected;
           return d.selected = true;
         });
@@ -904,17 +827,7 @@ if(d.hasOwnProperty('_id')==false){
       }
     }, //onkey
     setPageTitle: function () {
-      // let sub = null;
-
-      // switch (true) {
-      //   case typeof this.active.item == "undefined":
-      //     sub = this.active.key;
-      //     break;
-      //   default:
-      //     sub = this.active.item.content;
-      //     break;
-      // }
-let sub = "Dalyverse Entities Graph: "
+      let sub = "Dalyverse Entities Graph: "
       this.page.title = (this.active.label)?sub+this.active.label:sub;
     }, //setPageTitle
     setItem: function (q) {
@@ -923,9 +836,6 @@ let sub = "Dalyverse Entities Graph: "
 
     },
     nullItem: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
-      );
       return {
         _key: null,
         _rev: null,
@@ -935,59 +845,29 @@ let sub = "Dalyverse Entities Graph: "
       };
     }, //nullItem
     nullGraph: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
-      );
       this.active.key = null
       this.active.graph = null
       this.active.article = null
-        // return {
-        //   participants: null,
-        //   locations: null
-        // };
     }, //nullGraph
-    // setGraph: function () {
-    //   console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
-    //   console.log(
-    //     process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
-    //   );
-
-    //   // if we have an active.key
-    //   if (this.active.key !== null) {
-    //     axios
-    //       .post(this.url_arango, {
-    //         query: 'for p in people return p'
-    //       })
-    //       .then(response => {
-    //         this.active.graph = response.data.result[0];
-    //       }) //axios.then
-    //       .catch(e => {
-    //         console.error(e);
-    //       }); //axios.catch
-    //   } //if key
-    //   else {
-    //     // no key? null it out
-    //     console.log(
-    //       process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
-    //     );
-    //     this.active.graph = this.nullGraph();
-    //   }
-    // }, //setgraph
     setRoute: function () {
+          let key = (this.active.key) ? encodeURIComponent(this.active.key) : ''
+
+          // http://localhost:8181/#/entities/people%2F_:clivedundee
+          // http://localhost:8181/#/entities/people/_:clivedundee
 
         this.$router.push({
-          params: {
-            activeid: (this.active.key) ? this.active.key : ''
-          }
+          // name: 'entities', params:{
+          //   activeid: (this.active.key) ? this.active.key : ''
+          // }
+          path: `/entities/${key}`
+          // params: {
+          //   activeid: key
+          // }
         }); //rejplace
       } //setRoute
       ,
     fakeFetchEntities: function (small) {
 
-
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fakeFetchEntities()..." : null
-      );
 
       if (small) {
         this.graph = {
@@ -1008,10 +888,6 @@ let sub = "Dalyverse Entities Graph: "
         axios
           .get("http://localhost:8000/full-graph-fake.json")
           .then(response => {
-            console.info(
-              process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
-            );
-
             this.entities_total.loading = false
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.v = deeznodes.length
@@ -1031,9 +907,8 @@ let sub = "Dalyverse Entities Graph: "
 
     }, //fakefetch
     fetchEntities: function () {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "fetchEntities()..." : null
-        );
+
+this.$_.findWhere(this.loadings,{"mod":"init"}).isLoading=true
 
         let q =
           'let plcs = (for l in places return {daly:false,_id:l._id,id:l._id,label:l.name,article:l.article})\
@@ -1054,10 +929,6 @@ if(process.env.MODE=="T"){
 axios
           .get('http://localhost:8000/dv-init.json')
           .then(response => {
-            console.info(
-              process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
-            );
-
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length
@@ -1080,15 +951,20 @@ axios
           })
 
 }
-else {        axios
+else {        
+this.loadings.init=true
+  axios
           .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
-            query: q
-          })
+          query: q
+        },
+        {
+  auth: {
+    username: process.env.ARANGOUSER,
+    password: process.env.ARANGOPSSW
+  }
+}
+        )
           .then(response => {
-            console.info(
-              process.env.VERBOSITY === "DEBUG" ? "setting entities w/ axios response..." : null
-            );
-
             let deeznodes = response.data.result[0].entitiez[0]
             this.entities_total.loading = false
             this.entities_total.v = deeznodes.length
@@ -1103,11 +979,11 @@ else {        axios
             console.error(e);
           }) //axios.catch
           .finally(e => {
-            
+            this.$_.findWhere(this.loadings,{"mod":"init"}).isLoading=false
             if(this.active.key && !this.active.graph){
               this.active.graph = this.subGraph(this.getGraph());
             }
-
+this.loadings.init=false
           }) //axios.finally
           }
       } //fetchEntities
@@ -1137,7 +1013,14 @@ else {        axios
   computed: {}, //computed
 
   watch: {
-    // 'active': { handler: function (vnew) { this.setActive(vnew) } } //active // ,
+    "loadings": {
+      handler: function (vnew, vold) {
+
+        this.$_.contains(this.$_.pluck(vnew,'isLoading'),true)?this.$refs.topProgress.start():this.$refs.topProgress.done();
+      }//handler
+      ,
+     deep: true
+    },
     query: {
       handler: function (vnew, vold) {
 
@@ -1151,8 +1034,13 @@ else {        axios
     "active.key": {
       handler: function (vnew, vold) {
 
+        if(!vnew){
+          // key is being cleared, we also clear d3 selections
+          this.d3.selectAll("circle").classed("selected", false)
+        }
+
         this.setRoute();
-        // this.unSetActive(vold)
+
         this.active.graph = this.subGraph(this.getGraph());
         this.setPageTitle();
       }
@@ -1161,7 +1049,7 @@ else {        axios
       handler: function (vnew, vold) {
         if (vnew !== null) this.D3init()
         this.$nextTick(() => {
-          console.log("in next tick, setting active...");
+          
           this.setActive()
         })
       }

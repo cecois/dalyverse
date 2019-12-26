@@ -32,7 +32,7 @@ export default new Router({
       component: MURDERERS
     },
     {
-      path: '/index',
+      path: '/index/:activeKey?',
       name: 'index',
       component: INDEX
     },

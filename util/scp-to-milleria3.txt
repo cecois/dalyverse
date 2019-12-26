@@ -1,0 +1,8 @@
+scp ~/git/dalyverse/util/incoming-edges.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-events.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-issues.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-people.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-places.json wompupthejams.com:/tmp/
+scp ~/git/dalyverse/util/incoming-things.json wompupthejams.com:/tmp/
+
+#docker cp incoming-edges.json arangodb:/tmp && docker cp incoming-events.json arangodb:/tmp && docker cp incoming-people.json arangodb:/tmp && docker cp incoming-places.json arangodb:/tmp && docker cp incoming-things.json arangodb:/tmp

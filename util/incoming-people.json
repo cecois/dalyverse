@@ -1,6 +1,54 @@
 add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood, Wesley Norton and their murders by DW?
 [
   {
+    "_key": "_:glenwoodvaughan",
+    "daly": "false",
+    "name": "Glenwood Vaughan",
+    "nami": "Vaughan, Glenwood",
+    "article": [
+      "Glenwood Vaughan is a butler, chauffeur, barber, Lyft-scheduler, trampoline repairman, takeout caller, dental floss washer, Former-Baron-of-Renfrew-impersonator, nose blower, beekeeper, cook, suit presser, tandem bicycle pedaler, shoe prepper, bird trainer, dialect coach, and wing man to William George Frederick Schmitt-Hoffman XXVIII.",
+      "He reads bedtime stories to Mr. Schmitt-Hoffman.",
+      "He also administers surgery-grade anesthesia to the former Baron of Renfrew."
+    ]
+  },
+  {
+    "_key": "_:williamgeorgefrederickschmitthoffmanxxviii",
+    "daly": "true",
+    "name": "William George Frederick Schmitt-Hoffman XXVIII",
+    "nami": "Schmitt-Hoffman, William George Frederick XXVIII",
+    "article": [
+      "William George Frederick Schmitt-Hoffman XXVIII is the host of 'The Great American Cabinet of Curiosities' podcast.",
+      "His titles include: Margrave of Upper Lausitz; Former Margrave of Lower Lausitz; Two-Time Customer of the Week at the Beverly Hills Coffee Bean & Tea Leaf; Royal Knight Companion of the Noble Order of the Thistle; Vice Laird of Aershire; Newbury Award Nominee; Member in Good Standing of the Order of Merit; Member in Good Standing of the National Honor Society; and Former Baron of Renfrew.",
+      "He is a two-time winner of the Outland Tropy.",
+      "He is the only living two-time self-nomimee for the Teen Choice Awards.",
+      "He was formerly driven around in a Toyota by Glenwood Vaughan.",
+      "He grew up squatting in various mansions across the European countryside.",
+      "Penniless -- his money is tied up in castles and tapestries -- he lives in a dilapidated mansion with spotty WiFi in Beverly Hills, California, with Glenwood Vaughan, six families of ferile raccoons (plus two unaffiliated), and countless rats and bats.",
+      "Over the course of TGACoC it is slowly revealed that he and Glenwood Vaughan fled Europe under fraudulent passports due to unmet 'expectations' that he would pay for various 'products and services.'",
+      "There is a 'persistent family rumor' that he has a twin brother who is living in poverty somewhere in Germany.",
+      "He lost the title of 'Baron of Renfrew' to a Greek businessman in a game of checkers, the rules of which he did not know at all well.",
+      "People with whom Mr. Schmitt-Hoffman claims to be related include: Winston Churchill, Ghengis Khan, Louis XVI, and Louis XIV.",
+      "He is a documented lover of the Trader Joe's peanut butter pretzels.",
+      "He 'fundamentally' doesn't understand cartoons."
+    ]
+  },
+  {
+    "_key": "_:unnamedgreekbusinessman",
+    "daly": "false",
+    "name": "Unnamed Greek Businessman",
+    "article": [
+      "Unnamed Greek Businessman is the relatively new Baron of Renfrew, having won the title from William George Frederick Schmitt-Hoffman XXVIII in a game of high-stakes Checkers in Fall 2019."
+    ]
+  },
+  {
+    "_key": "_:unnamedukrainianoligarch",
+    "daly": "false",
+    "name": "Unnamed Ukrainian Oligarch",
+    "article": [
+      "Unnamed Ukrainian Oligarch is the relatively new Margrave of Lower Lausitz, having won the title from William George Frederick Schmitt-Hoffman XXVIII in a game of high-stakes Go Fish in October 2019."
+    ]
+  },
+  {
     "_key": "_:losangeleswerewolf1",
     "daly": "false",
     "name": "Unnamed Los Angeles Werewolf #1",
@@ -209,7 +257,7 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Corporate, Heidi",
     "article": [
       "Heidi Corporate is a trained Shakesepearean actor and member of the Missionaries Elite Unit in L. Ron Hubbard's Sea Org.",
-      "Her previous lives include, but are not limited to: William Shakespeare, a Roman dog; and Maria Callas.",
+      "Her previous lives include, but are not limited to: William Shakespeare; a Roman dog; and Maria Callas.",
       "Charged by Mr. Hubbard with infiltrating and imploding the World Federation of Mental Health some time in the later 1960s, Ms. Corporate rented an office in rainy Switzerland and discovered there that the WFMH was never incorporated. She therefore set out to incorporate *herself* as the WFMH. Wearing a powdered wig and a big sack she purchased with Sea Org funds, she announced herself grandly to The Incorporation Offices, where she was met with a request for proof of identity.",
       "Aboard the Sea Org flagship in approximately 1970, Ms. Corporate was considering a third character to present to Incorporation officers.",
       "At that same time, Ms. Corporate changed her name to 'Tomato Loose Pie' and then shortly thereafter to simply 'Loose Pie.'",
@@ -277,7 +325,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Plaxicon",
     "has_murdered": {
       "code": 1,
-      "explain": "Turns out not a trow but an alien, Plaxicon openly admits to administering dissections of earthling bagpipers."
+      "explain": [
+        "Turns out not a trow but an alien, Plaxicon openly admits to administering dissections of earthling bagpipers."
+      ]
     },
     "article": [
       "Plaxicon was a trow accused of vanquishing Stuart Cambridge in 1853.",
@@ -311,7 +361,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Bean, Alexander (Sawney)",
     "has_murdered": {
       "code": 1,
-      "explain": "Despite 'a lot of contradictory recipes' for cannibalism, Mr. Bean made a practice of sneaking out of his cave late at night, finding somebody riding on horseback, snatching them to slice up, cook, and eat."
+      "explain": [
+        "Despite 'a lot of contradictory recipes' for cannibalism, Mr. Bean made a practice of sneaking out of his cave late at night, finding somebody riding on horseback, snatching them to slice up, cook, and eat."
+      ]
     },
     "article": [
       "Sawney Bean The Cannibal of The Coast is a possibly-mythical persona known for mass murder and cannibalism in 16th-century Scotland.",
@@ -362,7 +414,7 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "_key": "_:matrickpahahon",
     "daly": "true",
     "article": [
-      "Matrick PaHahon is purportedly Patrick McMahon's literary agent, though he is commonly-known to be Patrick, himself."
+      "Matrick PaHahon is purportedly Patrick McMahon's literary agent, though he is commonly known to be Patrick, himself."
     ],
     "name": "Matrick PaHahon",
     "nami": "PaHahon, Matrick"
@@ -490,7 +542,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Landry, Beck",
     "has_murdered": {
       "code": 1,
-      "explain": "Landry, having been cuckolded by his wife with a ranch hand, tracked them down despite his own injuries from an unrelated fist fight, murdering them shortly before succumbing himself."
+      "explain": [
+        "Landry, having been cuckolded by his wife with a ranch hand, tracked them down despite his own injuries from an unrelated fist fight, murdering them shortly before succumbing himself."
+      ]
     },
     "article": [
       "Beck Landry is a cowboy who spends most of his time in the high country.",
@@ -554,7 +608,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "Laird",
     "has_murdered": {
       "code": 2,
-      "explain": "Countless horses, certainly. By fire."
+      "explain": [
+        "Countless horses, certainly. By fire."
+      ]
     },
     "article": [
       "Laird works at Cameron McGonigle's Ghost Tours That Are Scary in Edinburgh, Scotland, setting fire to horses."
@@ -589,7 +645,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "daly": "true",
     "has_murdered": {
       "code": 2,
-      "explain": "It is unclear Mr. McGonigle's role in the murders of any number of Edinburgh's homeless population (he admits to being, at least, culpable), but he is certainly the ultimate causer of the deaths of many, many horses."
+      "explain": [
+        "It is unclear Mr. McGonigle's role in the murders of any number of Edinburgh's homeless population (he admits to being, at least, culpable), but he is certainly the ultimate causer of the deaths of many, many horses."
+      ]
     },
     "name": "Cameron McGonigle",
     "nami": "McGonigle, Cameron",
@@ -670,7 +728,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Solly, Elmer Edward",
     "has_murdered": {
       "code": 1,
-      "explain":"Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."
+      "explain": [
+        "Elmer Solly, in 1969, killed the 2-year-old child of his then-girlfriend, then went on the lam for 27 years, taking among several aliases that of 'Danny C,' member of Sha Na Na."
+      ]
     },
     "article": [
       "Edward Solly was a murderer who assumed the identity of former Sha Na Na guitarist Vinnie Taylor.",
@@ -722,7 +782,10 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Bongos, Jimmy",
     "has_murdered": {
       "code": 1,
-      "explain":"Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings. Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."
+      "explain": [
+        "Speaking hypothetically on CBB #365, Joe Bongo states that 'if you unleash Jimmy Bongos onto the world, anything can happen' and further implies that one of those things is drownings.",
+        "Later in the same show he admits to being 53 years old, enjoying hurting people, and killing and eating \"hundreds\" of people."
+      ]
     },
     "article": [
       "Jimmy Bongos (b. 1962) is the character assumed by Joe Bongo while playing bongos."
@@ -866,7 +929,8 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
   {
     "_key": "_:joebongo",
     "daly": "true",
-    "name": "Dunleavy, Joe",
+    "name": "Joe Dunleavy",
+    "nami": "Dunleavy, Joe",
     "article": [
       "Joe Bongo is a health and driving educator at Marina del Rey High School in California with a nontraditional teaching style - he plays bongos in class; encourages students to share with classmates intimate details about their lives; teaches kids how to speedball; plays 'Find The Ping Pong Ball'; and solicits ideas for new Kama Sutra positions.",
       "He occasionally encourages his students to stand on their desks and call him 'Captain.'",
@@ -883,13 +947,18 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
       "He has expressed dissatisfaction with the decreasing length of conjugal visits in the California state penal system.",
       " Mr. Bongo does not have a birthday and therefore marks time by counting the Olympics - by 2015 he had seen 18 long jump competitions, placing his age somewhere above 72.",
       "He has 'been alive for 33 students deaths.'",
-      "His hobby is taking apart Triumph motorcycles and not reassembling them."
+      "His hobby is taking apart Triumph motorcycles and not reassembling them.",
       "He is not an android and he's 'tired of the question.'",
       "He does own a rug made of human hair; has been 'brutally beaten on a number occasions' for not having his bongos with him; and believes himself to be the inspiration behind the character of Isaac on ABC's 'The Love Boat' because, for a while, he was a bartender on a cruise ship - this despite him, at that time, not being an African-American."
     ],
     "has_murdered": {
       "code": 2,
-      "explain":"Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), it seems likely that bad things have happened even with no bongos present. He does own a rug made of human hair, for example, refusing to explain the sources, saying only that \"there's various different ways of getting people's hair.\" Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, that he in fact has a 'house full of rugs.' Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."
+      "explain": [
+        "Bongo claims to have 'been alive for 33 student deaths' but does not confess to causing -- or playing any role, even -- in any of them. Given the violent tendencies of Jimmy Bongos (Joe when he plays the bongos), however, it seems likely that bad things have happened even with no bongos present.",
+        "He does own a rug made of human hair, for example, refusing to explain the sources and saying only that \"there's various different ways of getting people's hair.\"",
+        "Jimmy Bongos later states explicitly that every strand of hair in the rug came directly from a murder victim, that it's not the only such rug he owns, and that he in fact has a 'house full of rugs.'",
+        "Given that the home by definition belongs to Joe, it seems likely Joe himself is complicit in plenty of Jimmy's crimes, if not his own."
+      ]
     },
     "links": [
       {
@@ -995,6 +1064,12 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "_key": "_:gil",
     "daly": "true",
     "name": "Gil",
+    "has_murdered": {
+      "code": 1,
+      "explain": [
+        "Perhaps technically not a murderer due to an apparent possession by Golly, it is somewhat evident a number of people have met their ends by Gil's hand. Most of these, it seems, occurred in international waters as part of a murder club."
+      ]
+    },
     "article": [
       "Gil is a former Dean Martin lookalike and freelancer at the Hollywood ArcLight and current ventriloquist.",
       "He has been in show business since the day he ended up back on shore following an incident with a Murder Club out in International Waters.",
@@ -1016,13 +1091,17 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "daly": "true",
     "name": "Golly",
     "article": [
-      "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottl; a tin can; a boot; Gil's hand; a turtle; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife)",
+      "Golly is a sentient ventriloquist dummy that takes many forms (cardboard box; sneaker; found human tooth; a piece of wood; the wind; a fish; several shirts; a pill bottle; a tin can; a boot; Gil's hand; a turtle; a tissue box; a dead dog; an earring; a few different squirrels; a shovel; a pair of pants; a broken bottle; and a knife)",
       "He prefers to be called a gentleman.",
+      "Golly has a temper but cannot express his anger on his own.",
       "He likes beautiful ladies with big hips and is a 'proponent of murder in all of its forms.'",
       "He has a temper and once participated (successfully) in a Murder Club out in International Waters."
     ],
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": [
+        "On CBB#274 Golly admits to orchestrating the Satanic murder club that duped Gil out into international waters and resulted in the deaths of up to 33 cast members of a children's TV show."
+      ]
     },
     "links": [
       {
@@ -1048,7 +1127,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     ],
     "has_murdered": {
       "code": 2,
-      "explain": "A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."
+      "explain": [
+        "A notorious gadfly, Mr. Fitzgerald started a 'college' in his back yard in which local young women were shackled to tall poles moored in concrete. It is unclear if it was by the hand of Mr. Fitzgerald himself or his 'admissions officer' Cactus Tony, but the school became littered with human remains."
+      ]
     },
     "links": [
       {
@@ -1078,7 +1159,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     ],
     "has_murdered": {
       "code": 2,
-      "explain": "Mr. Denniston, in all of his tales on Comedy Bang! Bang!, often refers to potential tragedies for which he is responsible -- the losing of a baby, the poisoning of babies, a suspicious drowning of a Wandsworth prison guard -- but never implicates himself in any loss of life."
+      "explain": [
+        "Mr. Denniston, in all of his tales on Comedy Bang! Bang!, often refers to potential tragedies for which he is responsible -- the losing of a baby, the poisoning of babies, a suspicious drowning of a Wandsworth prison guard -- but never implicates himself in any loss of life."
+      ]
     },
     "links": [
       {
@@ -1125,13 +1208,16 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
       "He was unable to return even had he wanted because his parents had told him he had a severe paper allergy and they had intentionally scrambled the address on his house.",
       "In his later years, overcoming the paper allergy, he every Christmas writes a letter to his aunt Eileen in 'China, USA.'",
       "He currently works at the ArcLight, giving hand jobs at the command of Don DiMello in return, usually, for popcorn.",
-      "His hands are registered weapons 'when combined with a shovel.'"
+      "His hands are registered weapons 'when combined with a shovel.'",
       "He works as well at Jack Fitzgerald's backyard college, for which he serves as an admissions officer.",
       "Following his defenestration from the Earwolf studios, he was in rough shape, tooling around Los Angeles 'clearly brain-damaged' in 'a filthy wheelchair' made 'entirely out of snakeskin,' according to Gil, for whom he posed as a booking agent."
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "Cactus Tony, reticent to admit murder on tape beyond the time he pushed his aunt Eileen into a homemade grave, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre. As a member of the Croatian Special Forces, it is implied on CBB#200 that he at least did battle, probably successfully, with Serbian troops."
+      "explain": [
+        "Cactus Tony, reticent to admit murder on tape beyond the time he pushed his aunt Eileen into a homemade grave, has been directly named by others in association with a number of murders. Not least of these is the near-liquification of confused college girls by Andi Callahan and the famous devouring of a child by rottweilers after hours at the Pasadena Fairy Tale Theatre.",
+        "As a member of the Croatian Special Forces, it is implied on CBB#200 that he at least did battle, probably successfully, with Serbian troops."
+      ]
     },
     "links": [
       {
@@ -1211,7 +1297,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "As Satan incarnate, Mr. Gardner is openly responsible for myriad atrocities. Included among them are the routine murders caused by, or somehow otherwise associated with, various Hollywood game shows as well as ritualistic sacrifices in the woods with his friend, Rochelle the Elf."
+      "explain": [
+        "As Satan incarnate, Mr. Gardner is openly responsible for myriad atrocities. Included among them are the routine murders caused by, or somehow otherwise associated with, various Hollywood game shows as well as ritualistic sacrifices in the woods with his friend, Rochelle the Elf."
+      ]
     }
   },
   {
@@ -1222,9 +1310,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "article": [
       "Dalton Wilcox (b. 1956) is a real cowboy and such a celebrated chronicler and collector of the wit and wisdom of the West (a fact encoded in \"The World Book\") that he is often called the Poet Laureate of the West, a moniker that was very likely coined by himself in his hard copy newsletter.",
       " He is the author of 'You Must Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Other Poems and Observations, Humorous and Otherwise, from a Life on the Range) by Dalton Wilcox' which, due to the incompetence of his publisher, is largely not available anywhere.",
-      "His sequel to Buy Your Wife is called 'You Still Have to Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Even More Poems and Additional Observations, Humorous and Otherwise, from a Life Still Being Lived on the Range) by Dalton Wilcox, Who Also Wrote the Last Book.'",
+      "His sequel to Buy Your Wife is called 'The Fast & The Furious Presents: You Still Have to Buy Your Wife at Least as Much Jewelry as You Buy Your Horse (and Even More Poems and Additional Observations, Humorous and Otherwise, from a Life Still Being Lived on the Range) by Dalton Wilcox, Who Also Wrote the Last Book and May Well Write the Next One (If He Feels Like It).'",
       "",
-      "He has also authored such poems as \"The Lonesome Cowboy,\" \"The Lonesome Cowboy 2018,\" \"There's Other Things a Cowboy Can Also Fuck,\" \"I Have Been to Goddamned Europe,\" and \"Ben Cartwright Buried Three Wives\".",
+      "He has also authored such poems as \"The Lonesome Cowboy,\" \"The Lonesome Cowboy 2018,\" \"There's Other Things a Cowboy Can Also Fuck,\" \"I Have Been to Goddamned Europe,\" \"Ben Cartwright Buried Three Wives,\" and A Visit to \"Pittock Mansion.\"",
       "Implied in his poem, \"Ebenezer Wilcox,\" are multiple vehicular homicides; the murders of (the ghosts of) Sherriff Ben McBride, Deputy Gear and a curious passer-by; and the shooting of a young werecat boy. The poem is dedicated to the latter three.",
       "He is plagued by -- and a self-declared vanquisher of -- mummies, Frankensteins, creatures from The Black Lagoon, and vampires but is occasionally suspected of vampirism himself.",
       "He knows how to hollow-out a horse and put a girl in there.",
@@ -1237,11 +1325,17 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
       "In early 2019, Mr. Wilcox changed his name to Walton Dilcox and began driving Uber shifts in his truck, murdering 100% of his rides.",
       "While he doesn't like to admit it, preferring instead to be perceived as a respectable author, he does keep a cadre of girls out on a boat in international waters.",
       "On CBB#599 he was challenged to fashion a 'bun gun' - a weapon that fires a hot dog bullet - an accepted it.",
-      "Also on CBB#599 he announced the working title of his next book: If You Thought You Were Done Buying at Least as Much Jewelry for Your Wife as You Buy Your Horse You Are Sorely Mistaken and Other Poems and Observations from a Life that Believe it or Not is Still Being Lived on the Range by Dalton Wilcox Who Wrote the First Book and the Second Book and has Now Written the Third Book by Dalton Wilcox.'"
+      "Also on CBB#599 he announced the working title of his next book: If You Thought You Were Done Buying at Least as Much Jewelry for Your Wife as You Buy Your Horse You Are Sorely Mistaken and Other Poems and Observations from a Life that Believe it or Not is Still Being Lived on the Range by Dalton Wilcox Who Wrote the First Book and the Second Book and has Now Written the Third Book by Dalton Wilcox.'",
+      "At a live CBB in Portland, Oregon, ('the bullshit west,' according to Mr. Wilcox), he admitted to paying for a basic cable package.",
+      "At this same show, he admitted that he believes a Hydrox is better than an Oreo."
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation. Or whom, according to an episode of 'Bananas for Bonanza' at the 2018 Peecast Blast in Los Angeles, had bad allergies. In a poem on the same show, he appeared to confess to killing 'a Mexican family because I was drunk driving too fast.' It is one of several such admissions that could, strictly-speaking, be the fiction of poetry but probably is not. A final admission is pretty certainly a truth - that the 'jewelry' he got his wife was a silver bullet, right in the heart."
+      "explain": [
+        "In a poem read aloud on #CBB300, Mr. Wilcox claims to have killed Satan himself on numerous occasions. Moreover it is widely recognized, but never admitted by Mr. Wilcox himself, that the many vampires, werewolves, mummies, and assorted other monsters that have been felled by Mr. Wilcox have all simply been humans with which Mr. Wilcox had some sort of ill relation or whom, according to an episode of 'Bananas for Bonanza' at the 2018 Peecast Blast in Los Angeles, had bad allergies.",
+        "In a poem also read at Peecast 2018, he appeared to confess to killing 'a Mexican family because I was drunk driving too fast.' It is one of several such admissions that could, strictly-speaking, be the fiction of poetry but probably is not.",
+        "A final admission is pretty certainly a truth - that the 'jewelry' he got his wife was a silver bullet, right in the heart."
+      ]
     }
   },
   {
@@ -1386,7 +1480,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "Mr. Callahan, as an RN at Bergen Regional in New Jersey, in effect killed a patient named Rosa by wheeling her into a hospital room with a faulty call button and leaving her there overnight."
+      "explain": [
+        "Mr. Callahan, as an RN at Bergen Regional in New Jersey, in effect killed a patient named Rosa by wheeling her into a hospital room with a faulty call button and leaving her there overnight."
+      ]
     },
     "links": [
       {
@@ -1401,9 +1497,8 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "Clive Dundee",
     "nami": "Dundee, Clive",
     "article": [
-      "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing all of the group's middle eight breaks.",
-      "He lives under a bridge in Manchester with a barren wife.",
-      "He intends suicide regardless of the outcome of his lawsuit.",
+      "Clive Dundee is the fifth member of rock and roll musical combination U2, whom in 2011 he sued for royalties and respect for his uncompensated writing of all of the group's middle eight breaks.",
+      "He lives under a bridge in Manchester with a barren wife and intends suicide regardless of the outcome of his lawsuit.",
       "In early 2014 it was implied but never proven that he had originally been booked on Comedy Bang! Bang! fraudulently by Cactus Tony."
     ],
     "links": [
@@ -1433,12 +1528,16 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
       "He admitted on CBB#400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly.",
       "He once danced The Water Twist for nine months straight.",
       "The toilet at his home is lined with white, shag carpet.",
+      "His legs are incredibly powerful.",
       "Some time in late 2018, early 2019 he was sued out of his water skiis by the rock n' roll cover band Sha Na Na. Hot Dog represented himself at trial.",
       "A boiler room in his home is still full of telephones from the time he ran a day-laboror-run phone bank."
     ],
     "has_murdered": {
       "code": 1,
-      "explain": "As a test of whether or not he was a Highlander (after watching the 1986 film 'The Highlander,' he once beheaded a stranger; He admitted on CBB#400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly."
+      "explain": [
+        "As a test of whether or not he was a Highlander (after watching the 1986 film 'The Highlander,' he once beheaded a stranger.",
+        "He admitted on CBB#400 that he has perhaps murdered 40-50 people, largely at the behest of known murderer Edward Solly."
+      ]
     },
     "links": [
       {
@@ -1570,7 +1669,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Wompler, Seth",
     "has_murdered": {
       "code": 1,
-      "explain":"During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."
+      "explain": [
+        "During the course of one of his back-alley corn removals, Dr. Wompler somewhat inadvertently let a Guatemalan woman bleed out."
+      ]
     },
     "article": [
       "Dr. Seth Wompler is a podietrist."
@@ -1592,7 +1693,10 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "nami": "Listler, Charlotte",
     "has_murdered": {
       "code": 1,
-      "explain":"Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military. She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"
+      "explain": [
+        "Ms. Listler saw 'heavy shit' in Afghanistan and has logged an indefinite number of formal kills as a sniper in the United States military.",
+        "She admits on CBB#304 to knowing how to scalp a human with one blade and on CBB#492 to killing 'thousands of people.'"
+      ]
     },
     "article": [
       "Charlotte Listler is a former sniper; a former hand model; and a current educator and educarer.",
@@ -1667,7 +1771,11 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "daly": "true",
     "has_murdered": {
       "code": 1,
-      "explain":"Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run. In 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs."
+      "explain": [
+        "Although privy to and complicit in a staggering number of untoward situations, Mr. DiMello seldom admits to crime. At Bumbershoot 2011, however, he does flatly state that 'sometimes we lose a mermaid' - at least three actors in his stage production of 'The Little Mermaid' had leapt into a live shark tank througout the show's run.",
+        "In 2013, during a live Comedy Bang! Bang! taping in Los Angeles, he heavily implies that he murdered his then-wife in the Angeles Crest forest by kicking her over a cliff where she was devoured by wild dogs.",
+        "Also in the 2013 live show he clearly states that at least three of the lead roles in Annie were burned alive while he danced around the fire."
+      ]
     },
     "name": "Don DiMello",
     "nami": "DiMello, Don",
@@ -1675,6 +1783,7 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
       "Don DiMello is a theatrical director from Connecticut, known for many annual Rockettes shows at Radio City Music Hall as well as a number of geurilla productions, primarily at the Pasedena Fairytale Theatre in  California.",
       "He first worked as a sewer vermin wrangler and then a property damager before falling in love with theatre arts at a Midtown peep show.",
       "He was community-raised in a brothel that was later burned to the ground in a likely case of arson.",
+      "He played Daddy Warbucks in his own production of 'Annie.'",
       "His earliest memory is witnessing a shooting of a prostitute at said brothel.",
       "He is a 'bit of a drooler,' wears his lucky Carhartt sweatpants every Christmas season, and his patent for a 'Pussy Pastie' has been pending since at least 2011.",
       "He has been 'trying to get into heroin for years.'",
@@ -1737,7 +1846,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "daly": "true",
     "has_murdered": {
       "code": 2,
-      "explain": "Mr. Carter openly confesses to, is a professional at even, harrassing his clients with threats of violence. It has never been verified that the violence ever went too far, but seems likely given the severity of his threats."
+      "explain": [
+        "Mr. Carter openly confesses to, is a professional at even, harrassing his clients with threats of violence. It has never been verified that the violence ever went too far, but seems likely given the severity of his threats."
+      ]
     },
     "name": "Bill Carter",
     "nami": "Carter, Bill",
@@ -1746,8 +1857,8 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
       "He is in terrific shape since approximately World War II when, disgusted with Cary Grant's upper body strength, he alit for Los Angeles to train him (Grant).",
       "At least as recently as 2010 he works at Bally's in Hollywood. Sort of.",
       "He is riddled with surgery (loosely-defined) scars and has a tattoo of a former girlfriend but with her eyes removed.",
-      "He has been to jail many times for reasons including (but not limited to) beating people up; not being people up; cheering race riots; stealing things; not stealing things; minding his own business.",
-      "He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group).",
+      "He has been to jail many times for reasons including (but not limited to) beating people up; not beating people up; cheering race riots; stealing things; not stealing things; minding his own business.",
+      "He possesses an extensive VHS collection of his own nude workout videos, is classified as a wizard, and by 2010 had attempted suicide 19 times (and is, in fact, a member of a suicide support group).",
       "He also once allowed a woman -- for unknown reasons -- to drill a hole in his head.",
       "In 2014 it was revealed he had been training with Dalton Wilcox for years in anticipation of an epic battle between good and evil."
     ],
@@ -1800,14 +1911,21 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "August Lindt",
     "nami": "Lindt, August",
     "has_murdered": {
-      "code": 1
+      "code": 2,
+      "explain": [
+        "To a Mars simulation he brought a knife and several cosmonauts never returned. While unexplained, it remains fishy.",
+        "Also on CBB#475 he appears to reveal that he cannibalized at least one compatriot from a self-induced avalanche; scalded the face of another with boiling hot coffee; stabbed in the back with scissors another; bludgeoned a stowaway with a fire extinguisher; and stabbed a NASA engineer as many as 19 times.",
+        "Further, the doctor who attended to the NASA engineer ended up dead from stab wounds, blunt trauma, and \"having been thrown,\" fairly clearly by Lindt also."
+      ]
     },
     "article": [
       "August Lindt is a salt tester and maker of Tang-soaked pretzels from Düsseldorf, Germany.",
+      "Side effects from his work (manually tasting salt crystals) include: a deeply calloused tongue; high sodium; high blood pressure.",
       "August is an avid traveler.",
-      "In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide.",
+      "He was once trapped for 'weeks' in a self-induced avalanche.",
+      "In 2010, receiving only three months of vacation, he opted to leave his family back in Düsseldorf and visit Hollywood, California where he hatched an ultimately unsuccessful bid to commit suicide - when he arrived at the Hollywood sign with a rope, a can of gasoline, and a suicide note he was 'descended upon by sheriffs.'",
       "He is work friends with a monkey and has a purturbed family life.",
-      "On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can see water in slow motion."
+      "On Comedy Bang! Bang! #475 it was revealed the Mr. Lindt can \"see water in slow motion.\""
     ],
     "links": [
       {
@@ -1873,7 +1991,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "Shooter",
     "has_murdered": {
       "code": 2,
-      "explain": "Shooter has admitted to 'going up on a rooftop' to 'take potshots,' which suggests it's likely but unadmitted that some of the victims perhaps expired from their injuries."
+      "explain": [
+        "Shooter has admitted to 'going up on a rooftop' to 'take potshots,' which suggests it's likely but unadmitted that some of the victims perhaps expired from their injuries."
+      ]
     },
     "links": [
       {
@@ -2006,7 +2126,9 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "Falcon",
     "has_murdered": {
       "code": 2,
-      "explain": "Charged with stale Rockettes who ultimately disappear, it's unclear who actually pulls the trigger on the wolf attacks."
+      "explain": [
+        "Charged with stale Rockettes who ultimately disappear, it's unclear who actually pulls the trigger on the wolf attacks."
+      ]
     },
     "article": [
       "Falcon has emphysema and remains active on Friendster.",
@@ -2101,10 +2223,13 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "Game Show Contestant Chip Gomand",
     "nami": "Gomand, Chip",
     "has_murdered": {
-      "code": 1
+      "code": 1,
+      "explain": [
+        "During a prison riot in 1979, Mr. Gomand, a prison guard, was called upon to prove his loyalty to the prisoners by killing a fellow guard."
+      ]
     },
     "article": [
-      "Chip Gomand is a former prison guard who competed for the name Marleygot Foreleanor on Chip Gardner's 'Yes But Can You Still do it if We Set You on Fire?' and subsequently perished."
+      "Chip Gomand is a former prison guard in Buckley, Ohio, who competed for the name Marleygot Foreleanor on Chip Gardner's 'Yes But Can You Still do it if We Set You on Fire?' and subsequently perished."
     ]
   },
   {
@@ -2194,6 +2319,70 @@ add Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood
     "name": "Danny Mahoney's Unnamed Brother",
     "article": [
       "Danny Mahoney's Unnamed Brother was a colleague of Mr. Mahoney's charged with handling any asbestos-related labors met by Danny's plumbing company."
+    ]
+  },
+  {
+    "_key": "_:lizardmanofscapeoreswamp",
+    "daly": "false",
+    "name": "Lizard Man of Scape Ore Swamp",
+    "nami": "Scape Ore Swamp, Lizard Man Of",
+    "article": [
+      "Lizard Man of Scape Ore Swamp is a legendary monster said to inhabit Scape Ore Swamp in Lee County, SC, USA."
+    ]
+  },
+  {
+    "_key": "_:daltonwilcoxskunkape",
+    "daly": "false",
+    "name": "Dalton Wilcox' Skunk Ape",
+    "nami": "Ape, Skunk",
+    "article": [
+      "Dalton Wilcox' Skunk Ape is a skunk ape found and murdered (by Wilcox) in Florida, USA."
+    ]
+  },
+  {
+    "_key": "_:popelickmonster",
+    "daly": "false",
+    "name": "Pople Lick Monster",
+    "nami": "Monster, Pope Lick",
+    "article": [
+      "The Pope Lick Monster is a legendary part-man, part-goat, and part-sheep creature reported to live beneath a railroad trestle bridge in Louisville, Kentucky, USA."
+    ]
+  },
+  {
+    "_key": "_:thelovelandfrogman",
+    "daly": "false",
+    "name": "The Loveland Frog Man",
+    "nami": "Frog Man, Loveland",
+    "article": [
+      "The Loveland Frog Man is a legendary humanoid frog allegedly spotted in Loveland, OH, USA."
+    ]
+  },
+  {
+    "_key": "_:honeyislandswampmonster",
+    "daly": "false",
+    "name": "The Honey Island Swamp Monster",
+    "nami": "Swamp Monster, Honey Island The",
+    "article": [
+      "The Honey Island Swamp Monster is a legendary biped with gray hair and yellow or red eyes purportedly (formerly) living in eastern Louisiana's Honey Island Swamp.",
+      "The monster is said to smell perfectly awful."
+    ]
+  },
+  {
+    "_key": "_:thebigbirdoftheriograndevalley",
+    "daly": "false",
+    "name": "Big Bird of the Rio Grande Valley",
+    "nami": "Rio Grande Valley, Big Bird Of",
+    "article": [
+      "The Big Bird of the Rio Grande Valley is a winged ape said to (formerly) terrorize South Texas, USA."
+    ]
+  },
+  {
+    "_key": "_:daltonwilcoxpukwudgie",
+    "daly": "false",
+    "name": "Dalton Wilcox' Pukwudgie",
+    "nami": "Pukwudgie, Dalton Wilcox'",
+    "article": [
+      "Dalton Wilcox' Pukwudgie is a Pukwudgie found and murdered (by Wilcox) in Freetown-Fall River State Forest in southern Massachusetts, USA."
     ]
   }
 ]

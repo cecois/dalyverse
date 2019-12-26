@@ -1,5 +1,6 @@
 <template>
 <div class="dv-app">
+  <vue-topprogress ref="topProgress"></vue-topprogress>
   <div id="map" style="width: 100%;height: 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 0;"></div>
   <div id="vue-root" class="container is-fixed-top">
     <vue-headful :title="page.title" description="Events Timeline and Graph from the Andy Dalyverse" />
@@ -11,39 +12,11 @@
       </a> -->
       <div class="columns">
         <div class="column is-full">
-          <!-- <p style="padding-top:1em;" class="title is-size-2 has-text-white">{{this.$MOMENT(times.line.begin).format('YYYY.MMM.Mo')}} to {{this.$MOMENT(times.line.end).format('YYYY.MMM.Mo')}}</p> -->
-          <!-- <p v-if="times.future.begin" class="is-size-7">next: {{times.future.begin}} - {{times.future.end}}</p> -->
-          <!-- <p class="is-size-7">{{(events.length)}} (of {{events_total}} total)</p> -->
         </div>
         
       </div nb="/.columns">
-      <!-- <div class="column"><span v-if="console">{{console.msg}}</span></div> -->
-      <!-- <span v-bind:class="{ throbber: console.throb }" class="icon">
-        <i :class="console.clazz" class="mdi"></i>
-      </span>
-      <hr/> -->
-      <!-- <div class="column" v-if="active.key">active.key:<code>{{active.key}}</code></div> -->
-      <!-- <div class="column" v-if="filterz.time.beginz">filterz.time.beginz:<code>{{filterz.time.beginz}}</code></div> -->
-      <!-- <div class="column" v-if="filterz.time.endz">filterz.time.endz:<code>{{filterz.time.endz}}</code></div> -->
-      <!-- <div class="column" v-if="events">events found:<code>{{events.length}}</code></div> -->
-      <!-- <div class="column" v-if="active.item">active.item.start:<code>{{active.item.start}}</code></div> -->
-      <!-- <div class="column" v-if="active.graph">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-      <!-- <div class="column is-4" v-if="active.key">KEY: {{active.key}}</div>
-      <div class="column is-3" v-if="active.item.content">TITL: {{active.item.content}}</div>
-      <div class="column is-3" v-if="active.item.article">ART: {{active.item.article}}</div>
-      <div class="column is-2 is-size-7">{{(events.length)}}</div> -->
-      <!-- <div class="column" v-if="active.item">{{active.item.article}}</div> -->
-      <!-- <div class="column" v-if="active.graph.locations">active.graph.locations:<code>{{active.graph.locations.length}}</code></div> -->
-      <!-- <div class="column" v-if="active.graph.participants">active.graph.participants:<code>{{active.graph.participants}}</code></div> -->
-      
-      <!-- <div v-if="seens" class="column">
-        <p class="title is-size-7">SEENS</p>
-        <p class="is-size-7">{{(seens.length)}}</p>
-      </div>
-    </div> -->
     
     <!-- ************************************************************************************ /#CONSOLE -->
-    <!-- #.navbar </nav> -->
     <div :class="(!state)?'is-hidden':''" id="container-main">
       
       
@@ -70,7 +43,7 @@
         <div class="columns"><div class="column is-12">
           
           <p style="" class="dv-title is-size-3">{{active.item.content}}</p>
-          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.DD')}}) <a v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
+          <p class="is-size-7 dv-title-sub">({{this.$MOMENT(active.item.start).format('YYYY.MMM.Do')}}) <a v-tooltip.right-start="'zoom map to this location'" v-if="(active.item && active.item.geo.length>0)" class="" v-on:click="zoomToNext">
             <b-icon icon="magnify-plus-outline" size="is-small"></b-icon>
           </a></p>
           <p style="margin-top:2em;">
@@ -118,6 +91,11 @@ export default {
       page: {
         title: "Andy Dalyverse Events"
       },
+      loadings:[
+      {mod:"init",isLoading:false},
+      {mod:"item",isLoading:false},
+      {mod:"subgraph",isLoading:false}
+      ],
       state: true,
       fittable: true,
       geoms: [],
@@ -174,15 +152,15 @@ export default {
           range: {
             begin: process.env.SLIDER_RANGE_BEGIN,
             end: process.env.SLIDER_RANGE_END
-          },
-          handles: {
-            begin: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
-              .add(1, "year")
-              .format("YYYY-MM-Mo"),
-            end: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
-              .subtract(1, "year")
-              .format("YYYY-MM-Mo")
           }
+          // ,handles: {
+          //   begin: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
+          //     .add(1, "year")
+          //     .format("YYYY-MM-DD"),
+          //   end: this.$MOMENT(process.env.SLIDER_RANGE_BEGIN)
+          //     .subtract(1, "year")
+          //     .format("YYYY-MM-DD")
+          // }
         }
       },
       active: {
@@ -214,19 +192,8 @@ export default {
         })
         // .addTo(this.MAP)
 
-      // .on("layeradd", parent => {
-      // console.log(
-      //   process.env.VERBOSITY == "DEBUG" ? "on.layeradd..." : null,
-      //   parent
-      // );
-
-      // })
         .on("click", parent => {
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on click, this obj:" : null,
-            parent
-          );
-
+          
           // reduce potentially huge thing into just important bits
           let FR = {
             properties: {
@@ -256,27 +223,14 @@ export default {
 
           let neweventkey = neweventkeyob ? neweventkeyob.id : null;
 
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on click, new event key:" : null,
-            neweventkey
-          );
-
           if (neweventkey) {
             this.active.key = neweventkey;
           }
         })
         .on("popupopen", parent => {
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on popupopen, glowing:" : null,
-            parent
-          );
+
         })
         .on("popupclose", event => {
-          console.log("POPUPCLOSE.event:", event);
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? "  -> on popupclose, sending to seen list:" : null,
-            event
-          );
 
           // parent.layer.setStyle(this.styles.previous)
           event.layer.setStyle(this.getGeoStyle("seen"));
@@ -299,12 +253,7 @@ export default {
   }, // data
   beforeCreate () {}, // beforeCreate
   created () {
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
-    );
-
     
-
     this.$once('hook:fitArrest', function () {
       this.fittable = false;
       this.fetchTotalEvents();
@@ -327,88 +276,10 @@ export default {
     if (this.$route.params.activeid) {
       this.active.key = this.$route.params.activeid;
     }
-    // this.times.slider.end=(this.$route.params.tend)?this.$route.params.tend:this.filterz.time.endz;
-    // this.active.key=(this.$route.params.activeid)?this.$route.params.activeid:null;
-    // this.initData();
     window.addEventListener("keydown", this.onKey);
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "end CREATED, initial state set" : null
-    );
+    
   }, // created
   mounted: function () {
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "MOUNTED! Bootstrapping events and initting vizes..." : null
-    );
-
-    // if(process.env.MODE=='T'){
-    //     let sAxios = document.createElement('script')
-    //     sAxios.setAttribute('src','http://localhost:8000/axios.min.js')
-    //     document.head.appendChild(sAxios)
-
-    //     let sLeaflet = document.createElement('script')
-    //     sLeaflet.setAttribute('src','http://localhost:8000/leaflet.js')
-    //     document.head.appendChild(sLeaflet)
-
-    //     let sVis = document.createElement('script')
-    //     sVis.setAttribute('src','http://localhost:8000/vis.min.js')
-    //     document.head.appendChild(sVis)
-
-    //     let cLeaflet = document.createElement('link')
-    //     cLeaflet.setAttribute('rel','stylesheet')
-    //     cLeaflet.setAttribute('src','http://localhost:8000/leaflet.css')
-    //     document.head.appendChild(cLeaflet)
-
-    //     let cVis = document.createElement('link')
-    //     cVis.setAttribute('rel','stylesheet')
-    //     cVis.setAttribute('src','http://localhost:8000/vis.min.css')
-    //     document.head.appendChild(cVis)
-
-    //     let cVisTimeline = document.createElement('link')
-    //     cVisTimeline.setAttribute('rel','stylesheet')
-    //     cVisTimeline.setAttribute('src','http://localhost:8000/vis-timeline-graph2d.min.css')
-    //     document.head.appendChild(cVisTimeline)
-
-        
-    //     let cMaterial = document.createElement('link')
-    //     cMaterial.setAttribute('rel','stylesheet')
-    //     cMaterial.setAttribute('src','http://localhost:8000/css/materialdesignicons.min.css')
-    //     document.head.appendChild(cMaterial)
-
-    //   } else {
-
-    //             let sAxios = document.createElement('script')
-    //     sAxios.setAttribute('src','http://unpkg.com/axios/dist/axios.min.js')
-    //     document.head.appendChild(sAxios)
-
-    //     // let sLeaflet = document.createElement('script')
-    //     // sLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.js')
-    //     // document.head.appendChild(sLeaflet)
-
-    //     let sVis = document.createElement('script')
-    //     sVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js')
-    //     document.head.appendChild(sVis)
-
-    //     let cLeaflet = document.createElement('link')
-    //     cLeaflet.setAttribute('rel','stylesheet')
-    //     cLeaflet.setAttribute('src','https://unpkg.com/leaflet@1.4.0/dist/leaflet.css')
-    //     document.head.appendChild(cLeaflet)
-
-    //     let cVis = document.createElement('link')
-    //     cVis.setAttribute('rel','stylesheet')
-    //     cVis.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css')
-    //     document.head.appendChild(cVis)
-
-    //     let cVisTimeline = document.createElement('link')
-    //     cVisTimeline.setAttribute('rel','stylesheet')
-    //     cVisTimeline.setAttribute('src','https://visjs.github.io/vis-timeline/dist/vis-timeline-graph2d.min.css')
-    //     document.head.appendChild(cVisTimeline)
-
-    //     let cMaterial = document.createElement('link')
-    //     cMaterial.setAttribute('rel','stylesheet')
-    //     cMaterial.setAttribute('src','href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css')
-    //     document.head.appendChild(cMaterial)
-
-    //   }
 
 this.$nextTick(() => this.initBaseMap()
   // .setSlider().fetchEvents()
@@ -420,23 +291,12 @@ this.$nextTick(() => this.initBaseMap()
   methods: {
     initBaseMap: function () {
 
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "initBaseMap()..." : null
-      );
-
-      // this.MAP = new L.Map('map', {
-      // this.MAP = 
-
-      // console.log('this.map:',this.MAP)
-
       let blu = null
       switch (process.env.MODE) {
         case 'T':
           blu = 'http://localhost:8000/2x.png'
           break
         case '33':
-          // blu = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
-          // blu = 'https://cartocdn_d.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png'
           blu = 'https://cartocdn_a.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png'
           break
         default:
@@ -454,29 +314,19 @@ this.$nextTick(() => this.initBaseMap()
       }
 
       const baseLayer = new L.TileLayer(blu)
-      console.log("baselayer:", blu);
       this.MAP.addLayer(baseLayer)
       this.MAP.addLayer(this.l_json)
-        // this.l_json.addTo(this.MAP)
 
     }, //initBaseMap
     fetchTotalEvents: function () {
-
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "getTotalEvents()..." : null
-      );
 
       let q = 'RETURN LENGTH(events)'
 
       if(process.env.MODE=="T"){
 
-console.log("WE GET local instead...")
   axios
         .get('http://localhost:8000/dv-timeline.json')
         .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
-          );
           this.events_total = response.data.result[0];
         }) //axios.then
         .catch(e => {
@@ -496,9 +346,6 @@ console.log("WE GET local instead...")
 }
         )
           .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events_total w/ axios response..." : null
-          );
           this.events_total = response.data.result[0];
         }) //axios.then
         .catch(e => {
@@ -524,9 +371,6 @@ console.log("WE GET local instead...")
 
     }, // zeroOut
     zoomToNext: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "zoomToNext()..." : null
-      );
 
       // grab target key (it'll be the ol {id:<id>,type:<type>})
       let zoomto = this.zooms.next ? this.zooms.next : null;
@@ -534,22 +378,17 @@ console.log("WE GET local instead...")
       // find map object
       let mo = this.$_.find(this.l_json.getLayers(), L => {
         return (
-          L.feature.properties.cartodb_id === zoomto.id &&
+          L.feature.properties.cartodb_id == zoomto.id &&
           this.launderGeoType(L.feature.geometry.type) == zoomto.type
         );
       });
 
       if (zoomto.type === "point") {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "   -> zooming to type:" + zoomto.type : null
-        );
         this.MAP.setView(mo.getLatLng(), 12, {
           animate: true
         });
       } else {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "   -> zooming to type:" + zoomto.type : null
-        );
+        
         this.MAP.fitBounds(mo.getBounds());
       }
     }, //zoomtonext
@@ -557,18 +396,13 @@ console.log("WE GET local instead...")
       this.MAP.fitBounds(this.l_json.getBounds());
     }, //zoomToFullExtent
     doPopupStuff: function (p, e) {
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "doPopupStuff()..." : null
-      );
-
-      console.log(p)
 
       let copy =
         process.env.VERBOSITY === "DEBUG" ? '<h2 class="has-text-info is-size-2">' +
-        p.layer.feature.properties.cartodb_id +
+        p.layer.feature.properties.name +
         "</h2>" +
         '<div class="has-text-grey-lighter is-size-5">' +
-        p.layer.feature.properties.name +
+        p.layer.feature.properties.anno +
         "</div>" : '<div><h5 class="is-size-5">real h5</h5>real subhead</div>';
 
       let po = L.popup()
@@ -579,14 +413,8 @@ console.log("WE GET local instead...")
 
       // if it's a click event we popup no questions asked
       if (e) {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "  -> event so we just do wut we told" : null
-        );
         po.openOn(this.MAP);
       } else {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "  -> not event so we check against active.key" : null
-        );
         if ((p.layer.properties.cartodb_id = 999)) {
           po.openOn(this.MAP);
         }
@@ -597,13 +425,12 @@ console.log("WE GET local instead...")
       }
     }, //doPopupStuff
     onKey: function (e) {
-      console.log("keycode:",e.keyCode)
+      
       switch (e.keyCode) {
         case 18:
           this.state = !this.state;
           break;
         case e.keyCode == 999:
-          console.log('999')
           break;
         default:
           this.state = this.state;
@@ -628,18 +455,13 @@ console.log("WE GET local instead...")
       this.page.title = "Dalyverse Events: " + sub;
     }, //setPageTitle
     nullGraph: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "returning null graph..." : null
-      );
+
       return {
         participants: null,
         locations: null
       };
     }, //nullGraph
     nullItem: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "returning null item..." : null
-      );
       return {
         id: null,
         content: null,
@@ -651,12 +473,8 @@ console.log("WE GET local instead...")
       };
     }, //nullItem
     setTimeline: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setTimeline()..." : null);
 
       if (!this.timeline) {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? " :no timeline - you're the timeline" : null
-        );
         const el = this.$el.querySelector("#timeline");
         // create the Timeline
 
@@ -673,21 +491,18 @@ console.log("WE GET local instead...")
         }); // new vis
         this.timeline.on("rangechange", properties => {
           this.times.future = {
-            begin: this.$MOMENT(properties.start).format("YYYY-MMM-Mo"),
-            end: this.$MOMENT(properties.end).format("YYYY-MMM-Mo")
+            begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
+            end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
           };
         });
         this.timeline.on("rangechanged", properties => {
-          console.log(
-            process.env.VERBOSITY == "DEBUG" ? " :timeline:rangechanged..." : null
-          );
-
+          
           if (properties.byUser == true) {
 
             this.times.future = { begin: null, end: null };
             this.times.line = {
-              begin: this.$MOMENT(properties.start).format("YYYY-MM-Mo"),
-              end: this.$MOMENT(properties.end).format("YYYY-MM-Mo")
+              begin: this.$MOMENT(properties.start).format("YYYY-MM-DD"),
+              end: this.$MOMENT(properties.end).format("YYYY-MM-DD")
             };
           }
 
@@ -700,70 +515,51 @@ console.log("WE GET local instead...")
 
         // now we wire up click-selection
         this.timeline.on("click", properties => {
-          console.log("properties:",properties)
+          
             switch (true) {
               case properties.what == "background":
-                console.info(
-                  process.env.VERBOSITY == "DEBUG" ? " :timeline:click off any item - SET KEY TO NULL." : null
-                );
-                // this.timeline.setSelection();
+                
                 this.active.key = null;
                 break;
               case properties.what == "item" && properties.item == this.active.key:
-                console.info(
-                  process.env.VERBOSITY == "DEBUG" ? " :timeline:clicked item id is already the active key - INVERT (SET KEY TO NULL)." : null
-                );
-                // this.timeline.setSelection();
                 this.active.key = null;
                 break;
               default:
-                console.info(
-                  process.env.VERBOSITY == "DEBUG" ? " :timeline:clicked item id doesn't match current active.id, setting active.id to " +
-                  properties.item : null
-                );
-                // this.timeline.setSelection(properties.item);
                 this.active.key = properties.item;
                 break;
             }
           }) //.on
       } //if.timeline
       else {
-        console.info(
-          process.env.VERBOSITY == "DEBUG" ? " timeline extant, doing other, setting selection to " +
-          this.active.key : null
-        );
         this.timeline.setItems(this.events);
         this.timeline.setSelection(this.active.key);
 
-        console.log('this.timeline.range', this.timeline.range);
         this.timeline.fit();
       } //else.timeline
     }, //settimeline
     setSlider: function () {
-      // {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "initSlider()..." : null);
 
       if (!this.slider) {
         // no slider - you're the slider
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "no slider - you're the slider" : null
-        );
-
+        
         var slider = document.getElementById("slider");
 
         const effer = v => {
-          return this.$MOMENT(v).format("YYYY.MMM.Mo");
+          return this.$MOMENT(v).format("YYYY.MMM.Do");
         };
 
         this.slider = this.$NOUISLIDER.create(slider, {
+          // handles
           start: [
             this.$MOMENT(
               process.env.LINE_TIME_BEGIN,
-              "YYYY-MM-Mo"
+              // this.times.slider.handles.begin,
+              "YYYY-MM-DD"
             ).valueOf(),
             this.$MOMENT(
               process.env.LINE_TIME_END,
-              "YYYY-MM-Mo").valueOf()
+              // this.times.slider.handles.end,
+              "YYYY-MM-DD").valueOf()
           ],
           connect: true,
           behaviour: 'drag',
@@ -783,41 +579,36 @@ console.log("WE GET local instead...")
         /* ----------------------- WIRE/REWIRE ---------- */
 
         this.slider.on("change", (values, handle) => {
-          // this.filterz.time.beginz = this.$MOMENT(values[0], "x").format(
-          //   "YYYY-MM-DD"
-          // );
-          // this.filterz.time.endz = this.$MOMENT(values[1], "x").format("YYYY-MM-DD");
+
+
           let to = {
             begin: this.$MOMENT(values[0], "x").format("YYYY-MM-DD"),
             end: this.$MOMENT(values[1], "x").format("YYYY-MM-DD")
           };
+          
           this.times.line = to;
-          this.times.slider.handles = to;
-          // this.fetchEvents();
-          // this.routize();
+          
         });
       } //if.slider
       else {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "slider extant, auditing handles..." : null
-        );
         this.slider.set([
           this.$MOMENT(
             this.times.line.begin,
             "YYYY-MM-DD"
-          ).valueOf(),
+          ).valueOf()
+          ,
           this.$MOMENT(
             this.times.line.end,
             "YYYY-MM-DD").valueOf()
         ])
+
       }
 
       // }
     }, //setSlider
     fetchEvents: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fetchEvents()..." : null
-      );
+      
+      this.loadings.subgraph=true
 
       let q =
         'for e in edges filter e.type=="hasParticipant" OR e.type=="occurredAt" for ev in events filter e._from==ev._id AND e.type=="hasParticipant" LET tstart = HAS(ev.timestamp, "start")==true ? DATE_FORMAT(ev.timestamp.start, "%yyyy-%mm-%dd") : DATE_FORMAT(ev.timestamp, "%yyyy-%mm-%dd") LET tend = HAS(ev.timestamp, "end")==true ? DATE_FORMAT(ev.timestamp.endz, "%yyyy-%mm-%dd") : null LET geo=( for g in edges filter g._from==ev._id AND g.type=="occurredAt" for pl in places filter g._to==pl._id return distinct pl ) filter (DATE_TIMESTAMP(tstart)>=DATE_TIMESTAMP(\'' +
@@ -831,9 +622,6 @@ console.log("WE GET local instead...")
 axios
         .get("http://localhost:8000/dv-timeline.json")
         .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
-          );
           this.events = response.data.result;
           this.$nextTick(function () {
             // events in place, item can be set therefrom...
@@ -844,6 +632,7 @@ axios
           console.error(e);
         }); //axios.catch
 } else {
+  this.loadings.init=true
       axios
           .post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
           query: q
@@ -856,9 +645,6 @@ axios
 }
         )
           .then(response => {
-          console.info(
-            process.env.VERBOSITY === "DEBUG" ? "setting events w/ axios response..." : null
-          );
           this.events = response.data.result;
           this.$nextTick(function () {
             // events in place, item can be set therefrom...
@@ -867,21 +653,18 @@ axios
         }) //axios.then
         .catch(e => {
           console.error(e);
+        }) //axios.catch
+        .finally(e => {
+          this.loadings.subgraph=false
         }); //axios.catch
       }//if.else
     }, //fetchEvents
     fetchGeometries: function () {
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "fetchGeometries()..." : null
-      );
-
+      
+      this.loadings.init=true
       let eventswgeoms = this.$_.reject(this.events, t => {
         return t.geo.length < 1;
       });
-
-      console.info(
-        process.env.VERBOSITY === "DEBUG" ? "  -> found " + eventswgeoms.length + " georeferenced events" : null
-      );
 
       let eventgeoms = this.$_.map(eventswgeoms, g => {
         return {
@@ -894,33 +677,26 @@ axios
 
       if (eventgeoms.length > 0) {
         var u =
-          process.env.MODE == "33" ? "http://milleria.org:3030/geoms/cbb?q=" +
+          process.env.MODE == "33" ? process.env.API_ROOT+"/geoms/simple?q=" +
           this.$_.pluck(eventgeoms, "milleriakey").join(",") : "http://localhost:8000/dalyverse-geoms-T.json";
 
         axios
           .get(u)
           .then(response => {
+            
             this.geoms = response.data;
           }) //axios.then
           .catch(e => {
             this.console.msg = null;
             console.error(e);
+          }) //axios.catch
+          .finally(e => {
+            this.loadings.init=false
           }); //axios.catch
       }
     }, //fetchGeometries
     setItem: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setItem()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> active.key is " + this.active.key + " (NULL), nulling item..." : null
-      );
-      console.log(
-        process.env.VERBOSITY == "DEBUG" && this.active.key !== null ? "  -> active.key is " +
-        this.active.key +
-        " setting real item from " +
-        this.events.length +
-        " events..." : null
-      );
-
+      
       this.active.item =
         this.active.key !== null ? this.$_.findWhere(this.events, {
           id: this.active.key
@@ -976,7 +752,6 @@ axios
       return o;
     }, //geoKeyStringGen
     getGeoStyle: function (f) {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "getGeoStyle..." : null);
 
       let tgkey = typeof f == "object" ? this.geoKeyGen(f) : f;
 
@@ -1009,41 +784,21 @@ axios
           break;
       }
 
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  --> resulting style:" + JSON.stringify(styl) : null
-      );
       return styl;
     }, //getgeostyle
     setMap: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setMap()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> clearing current" : null
-      );
+      
       this.l_json.clearLayers();
 
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key + " in setMap..." : null
-      );
-
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> -> testing this.geoms for null" : null
-      );
-
-      if (this.geoms == null) {
-        console.log(
-          process.env.VERBOSITY == "DEBUG" && this.active.key == null ? "  -> but anyway, this.geoms is null" : null
-        );
-      } else {
-        this.l_json.clearLayers();
+      this.l_json.clearLayers();
         this.l_json.addData(this.geoms);
-      } //if.geoms.null
+      
     } //setMap
     ,setGraph: function () {
-      console.log(process.env.VERBOSITY == "DEBUG" ? "setGraph()..." : null);
-      console.log(
-        process.env.VERBOSITY == "DEBUG" ? "  -> active.key is " + this.active.key : null
-      );
 
+this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=true
+
+      
       // if we have an active.key
       if (this.active.key !== null) {
 
@@ -1056,18 +811,29 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
                     console.error(e);
                   }); //axios.catch
         } else {
-                axios
-                  .post("http://" + process.env.ARANGOIP + ":8529/_api/cursor", {
-                    query: 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
+
+          let q = 'LET event = (for vertices, edges, paths in OUTBOUND "events/' +
                       this.active.key +
                       '" edges return distinct { name: FIRST(paths.vertices).name, evid: FIRST(paths.edges)._from }) LET people = ( for v,e,p in 1..1 OUTBOUND "events/' +
                       this.active.key +
                       "\" edges filter e.type=='hasParticipant' RETURN {name:v.name,key:v._id} ) LET places = ( for v,e,p in 1..1 OUTBOUND \"events/" +
                       this.active.key +
                       "\" edges filter e.type=='occurredAt' RETURN {name:v.name,key:v._id} ) return { event:event, participants:people, locations:places }"
-                  })
-                  .then(response => {
+                axios.post("http://" + process.env.ARANGOIP + ":" + process.env.ARANGOPORT + process.env.ARANGOCURSOR, {
+          query: q
+        },
+        {
+  auth: {
+    username: process.env.ARANGOUSER,
+    password: process.env.ARANGOPSSW
+  }
+}
+        )
+          .then(response => {
                     this.active.graph = response.data.result[0];
+
+this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
+
                   }) //axios.then
                   .catch(e => {
                     console.error(e);
@@ -1076,14 +842,11 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
       } //if key
       else {
         // no key? null it out
-        console.log(
-          process.env.VERBOSITY == "DEBUG" ? "no active.key, nulling graph..." : null
-        );
+        this.$_.findWhere(this.loadings,{"mod":"subgraph"}).isLoading=false
         this.active.graph = this.nullGraph();
       }
     }, //setgraph
     setRoute: function () {
-        console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
 
         this.$router.push({
           params: {
@@ -1096,29 +859,28 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
   }, //methods
   computed: {}, //computed
   watch: {
+    "loadings": {
+      handler: function (vnew, vold) {
+
+        // this.$refs.topProgress.done();
+        this.$_.contains(this.$_.pluck(vnew,'isLoading'),true)?this.$refs.topProgress.start():this.$refs.topProgress.done();
+      }//handler
+      ,
+     deep: true
+    },
     item: {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:ITEM:old/new:" +
-          JSON.stringify(vold) +
-          "/" +
-          JSON.stringify(vnew) : null
-        );
+        
       }
     }, //item
     geoms: {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:GEOMS:old/new:" + vold.length + "/" + vnew.length : null
-        );
+        
         this.setMap();
       }
     }, //item
     events: {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:events:old/new:" + vold.length + "/" + vnew.length : null
-        );
         this.zeroOut();
         // this.setSlider();
         this.setTimeline();
@@ -1127,13 +889,7 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
     }, //events
     "times.line": {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:times.line:old/new:" +
-          JSON.stringify(vold) +
-          "/" +
-          JSON.stringify(vnew) : null
-        );
-        console.log("TIMES OB", JSON.stringify(this.times))
+        
         this.fetchEvents();
         this.setRoute();
         this.setPageTitle();
@@ -1142,9 +898,6 @@ axios.get("http://localhost:8000/dv-timeline-graph.json")
     }, //times.line
     "active.key": {
       handler: function (vnew, vold) {
-        console.info(
-          process.env.VERBOSITY === "DEBUG" ? "WATCH:ACTIVE.KEY:old/new:" + vold + "/" + vnew : null
-        );
         this.setRoute();
         this.setItem();
         this.setGraph();
