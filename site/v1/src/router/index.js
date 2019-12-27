@@ -6,6 +6,7 @@ import ENTITIES from '@/components/entities'
 import MURDERERS from '@/components/murderers'
 import INDEX from '@/components/index'
 import ABOUT from '@/components/about'
+import POETRY from '@/components/poetry'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/index/:activeKey?',
       name: 'index',
       component: INDEX
+    },
+    {
+      path: '/poetry',
+      name: 'poetry',
+      component: POETRY
     },
     {
       path: '/about',

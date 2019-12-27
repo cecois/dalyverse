@@ -45,7 +45,9 @@ export default {
       panes: [{ nom: "Home", active: true, slug: "#/" }, { nom: "Entities", active: false, slug: "#/entities" }, { nom: "Events", active: false, slug: "#/events" }, { nom: "Murderers", active: false, slug: "#/murderers" }
       // , { nom: "Concordance", active: false, slug: "#/concordance" }
       , { nom: "Index", active: false, slug: "#/index" }
-      , { nom: "About", active: false, slug: "#/about" }]
+      , { nom: "Poetry", active: false, slug: "#/poetry" }
+      , { nom: "About", active: false, slug: "#/about" }
+      ]
     }
   } //data
 }
