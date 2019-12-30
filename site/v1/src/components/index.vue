@@ -5,7 +5,7 @@
   <div class="columns" style="padding-top:2em;">
     
     <div class="column has-text-grey-light">
-      <div class="title">People Index:</div>
+      <div class="title">People Index</div>
       <div class="has-text-grey is-size-7">(bolded == played by Daly)</div>
     </div>
 

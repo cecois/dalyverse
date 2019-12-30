@@ -1,197 +1,8 @@
-<template>
-<div id="vue-root" class="">
-  <vue-topprogress ref="topProgress"></vue-topprogress>
-  <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
-  <div class="columns" style="padding-top:2em;">
-    
-    <div class="column has-text-grey-light">
-      <div class="title">Poetry</div>
-      <!-- <div class="has-text-grey is-size-7">(bolded == played by Daly)</div> -->
-    </div>
-
-  </div>
-  <div class="columns dv-vertical-columns has-text-left">
-    <div class="column is-6" style="padding-top:2em;">
-      <div class="columns" style="margin-bottom:2em;">
-        <div class="column is-3"></div NB=".column.is-3">
-        <div class="column is-6">
-        
-        <input class="input is-large" type="text" placeholder="" v-model="livefilter">
-          
-        </div NB=".column.is-6">
-        <div class="column is-3"></div NB=".column.is-3">
-      </div  NB=".columns">
-
-      <div class="table-container">
-        <!-- TILES PER LETTER? -->
-        <table class="table dv-index-table is-striped">
-          <tbody>
-            <tr v-for="P in poetry.poems" v-if="(!livefilter || P.title.toLowerCase().indexOf(livefilter)>=0 || P.author.toLowerCase().indexOf(livefilter)>=0)">
-              <!-- <th>{{P.title}}</th> -->
-              <td>
-                <span @click="setActive(P._id)" class="dv-trigger-active">{{P.title}}</span><span class="has-text-grey-light is-size-7">&nbsp;({{P.author}})</span>
-              </td>
-              <!-- <td>v-vor=e in N.entities</td> -->
-            </tr>
-          </tbody>
-        </table>
-      </div nb="/.table-container">
-    </div note="/.column is-6">
-    <div class="column is-6" style="padding-top:4em;">
-      
-      <div v-if="active" style="padding-left:2em;">
-      <div class="level-right">
-            <a @click="setActive()" class="delete" style="margin-top: 7vh;right: 2vw;position:relative;"></a>
-          </div>
-          <p class="title">{{active.title}}</p>
-                <p class="subtitle">&nbsp;&nbsp;by {{active.author}}</p>
-                <p class="has-text-grey-light">&nbsp;&nbsp;({{active.meta}})</p>
-                <ul style="padding:1em 0;" v-for="stanza in active.stanzas">
-                  <li v-for="line in stanza.lines">{{line}}</li>
-                </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ./#vue-root -->
-</template>
-
-<script>
-// import * as d3 from 'd3';
-import simplebar from 'simplebar-vue';
-  import 'simplebar/dist/simplebar.min.css';
-
-export default {
-  name: "Poetry",
-  components: {
-    simplebar
-  },
-  data () {
-    return {
-      active:null,
-      poetry: {poems:[
-        {"_id":"iiveneverseenthesouthoffrancebartlebymulcahy",
-"title":"I've Never Seen the South of France",
-"author":"Bartleby Mulcahy",
-"meta":"prem. ADPPP 9 ~1:20:15",
-"stanzas":[
-{"lines":
 [
-"i've never seen the south of france"
-,"nor a breakfast nook wearin pants"
-]
-}
-]},
-        {"_id":"icanrelatetobonanzabartlebymulcahy",
-"title":"I Can Relate to Bonanza",
-"author":"Bartleby Mulcahy",
-"meta":"prem. ADPPP 9 ~1:17:45",
-"stanzas":[
-{"lines":
-[
-"there are many paths in life"
-,"and some i've never took"
-,"i've never seen the south of france"
-,"nor have i seen a brook"
-]
-}
-,{"lines":
-[
-"but of all the things i've never done"
-,"along the paths in life"
-,"the one i've missed the most"
-,"is that i've never had a wife"
-]
-}
-,{"lines":
-[
-"ben cartwright had three"
-,"he'd see a woman and right away he'd choose her"
-,"but though i've never had one"
-,"at least i never had to lose her"
-]
-}
-]},
-        {"_id":"bencartwrightburiedthreewivesdaltonwilcox",
-"title":"Ben Cartwright Buried Three Wives",
-"author":"Dalton Wilcox",
-"meta":"prem. ADPPP 9 ~1:11:30",
-"stanzas":[
-{"lines":
-[
-"a true Cowboy of the american west"
-,"doesn't need tv - he likes campfires best"
-,"if he wants to watch some ranchers workin on the land"
-,"he can look out his damn window and then go lend a hand"
-]
-}
-,{"lines":
-[
-"but what about those ignorant city-slickin jackasses?"
-,"how could Cowboys educate the stupid, stupid masses?"
-,"bonanza! bonanza! bonanza! bonanza!"
-,"a real, no bullshit, television extravaganza"
-]
-}
-,{"lines":
-[
-"four real men livin on the ponderosa"
-,"doin what they want to and doin what they're supposeda"
-,"adam has a face but it aint too expressive"
-,"hoss is a giant and that there is impressive"
-]
-}
-,{"lines":
-[
-"little joe is pretty (too pretty if you ask me)"
-,"but the cartwright i like best is ben - tough and fair and free"
-,"he's a hell of a rancher and a real good dad"
-,"and you'll regret it if you make him mad"
-]
-}
-,{"lines":
-[
-"he's got more good qualities than a short poem can mention"
-,"but there's one thing about him that's caught my attention"
-,"ben cartwright has buried three wives"
-,"because they died - something ended their lives"
-]
-}
-,{"lines":
-[
-"the story goes that childbirth is the thing that killed the first"
-,"the second died by indian (cuz indians are the worst)"
-,"the third fell off a horse and was that way dismembered"
-,"but except for ol ben cartwright there's no one else remembers"
-]
-}
-,{"lines":[
-"no one else can tell the tales of how these women died"
-,"is it possible that when ol ben cartwright said those things he lied?"
-]}
-
-,{"lines":[
-"maybe his first wife was cursed by a mummy"
-,"he'd'a shot her then cuz men aint no dummy"
-,"maybe his second was a black lagoon creature"
-,"he'd'a killed her, too - yep, that'd teach her"
-]
-}
-,{"lines":[
-"the third one, a werewolf? who knows - you get the point"
-,"the ponderosa's too nice a place to have monsters in the joint"
-,"ben cartwright is smart - he puts safety before romance"
-,"the type of guy who probly keeps a stake of wood down his pants"
-]
-},{"lines":
-["which i do in case i'm gonna run into any vampires"]
-}
-]},
   {
-    "_id":"untitledrussellshein",
     "title": "Untitled",
     "author": "Russell Shein",
-    "meta": "prem. ADPPP #1 ~1:09:30",
+    "meta": "(prem. ADPPP #1 ~1:09:30)",
     "stanzas": [
       {
         "lines": [
@@ -215,10 +26,9 @@ export default {
     ]
   },
   {
-    "_id":"untitledbartlebymulcahy",
     "title": "Untitled",
     "author": "Bartleby Mulcahy",
-    "meta": "prem. ADPPP #1 ~58:30",
+    "meta": "(prem. ADPPP #1 ~58:30)",
     "stanzas": [
       {
         "lines": [
@@ -239,10 +49,9 @@ export default {
     ]
   },
   {
-    "_id":"whoamisallyjespa",
     "title": "Who Am I?",
     "author": "Sally Jespa",
-    "meta": "prem. ADPPP #1 ~51:30",
+    "meta": "(prem. ADPPP #1 ~51:30)",
     "stanzas": [
       {
         "lines": [
@@ -301,10 +110,9 @@ export default {
     ]
   },
   {
-    "_id":"ionetimekilledafrankensteindaltonwilcox",
     "title": "I One Time Killed a Frankenstein",
     "author": "Dalton Wilcox",
-    "meta": "prem. ADPPP #1 ~43:45",
+    "meta": "(prem. ADPPP #1 ~43:45)",
     "stanzas": [
       {
         "lines": [
@@ -331,10 +139,9 @@ export default {
     ]
   },
   {
-    "_id":"ihavebeentogoddamnedeuropedaltonwilcox",
     "title": "I Have Been to Goddamned Europe",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 529 ~1:10:20",
+    "meta": "(prem. Comedy Bang! Bang! 529 ~1:10:20)",
     "stanzas": [
       {
         "lines": [
@@ -378,10 +185,9 @@ export default {
     ]
   },
   {
-    "_id":"theresotherthingsacowboycanalsofuckdaltonwilcox",
     "title": "There's Other Things a Cowboy Can Also Fuck",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 442 ~1:11:00",
+    "meta": "(prem. Comedy Bang! Bang! 442 ~1:11:00)",
     "stanzas": [
       {
         "lines": [
@@ -440,10 +246,9 @@ export default {
     ]
   },
   {
-    "_id":"regardingthesituation...daltonwilcox",
     "title": "Regarding the Situation of the Evil Versus Good Battle that is Commencing Here on the Twilight Nether Region to Decide Whether Everybody Who's Died Since 1981 is Going to Heaven or Hell",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 300 ~45:30",
+    "meta": "(prem. Comedy Bang! Bang! 300 ~45:30)",
     "stanzas": [
       {
         "lines": [
@@ -494,10 +299,9 @@ export default {
     ]
   },
   {
-    "_id":"ebenezerwilcoxdaltonwilcox",
     "title": "Ebenezer Wilcox",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 262 ~36:00",
+    "meta": "(prem. Comedy Bang! Bang! 262 ~36:00)",
     "stanzas": [
       {
         "lines": [
@@ -556,10 +360,9 @@ export default {
     ]
   },
   {
-    "_id":"alsomummmiesdaltonwilcox",
     "title": "Also Mummies",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 148 ~57:20 - dedicated to Pete Dawson, Lennox Wilder, Boone Wilde, Cal Turner, Marlon Keaton, Don Holt",
+    "meta": "(prem. Comedy Bang! Bang! 148 ~57:20 - dedicated to Pete Dawson, Lennox Wilder, Boone Wilder, Cal Turner, Marlon Keaton, Don Holt)",
     "stanzas": [
       {
         "lines": [
@@ -608,10 +411,9 @@ export default {
     ]
   },
   {
-    "_id":"adangerouslifedaltonwilcox",
     "title": "A Dangerous Life",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 148 ~44:00 - dedicated to the memories of Winston Black, Carlise Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood, Wesley Norton",
+    "meta": "(prem. Comedy Bang! Bang! 148 ~44:00 - dedicated to the memories of Winston Black, Carlisle Dunhill, Baxter Fields, Tom Sherwood, Lester Delwood, Wesley Norton)",
     "stanzas": [
       {
         "lines": [
@@ -657,44 +459,9 @@ export default {
     ]
   },
   {
-    "_id":"thatlonesomecowboyin2018daltonwilcox",
-    "title": "That Lonesome Cowboy in 2018",
-    "author": "Dalton Wilcox",
-    "meta": "prem. ADPPP 9 ~37:00",
-    "stanzas": [
-      {
-        "lines": [
-          "a Cowboy in 2018 is a lonesome man",
-          "there's none more lonesome in the land",
-          "he rides atop his only friend - his horse, a companion on whom he can depend",
-          "his woman may be miles behind him in 2018",
-          "sadness and desperation may find him in 2018"
-        ]
-      },
-      {
-        "lines": [
-          "but a Cowboy who's wise will turn to the earth to lend him solace and even mirth",
-          "the earth from which all beauty springs, such bounty forth she always brings",
-          "he'll dig a hole with cracked, scorched hands; pour in all the water that hole demands in 2018",
-          "until that hole is moist, just right - the earth'll never put up any kind of a fight in 2018"
-        ]
-      },
-      {
-        "lines": [
-          "his cries of joy no one will hear in 2018",
-          "in case i am not being clear - i'm saying that Cowboy is gonna fuck a hole in the ground in 2018",
-          "we all do it, that's what i have found",
-          "any Cowboy that knows that lonesome hell can fashion a land virginie well",
-          "if a Cowboy's seed worked like other seeds there'd be Cowboys growing everywhere across the plains like weeds"
-        ]
-      }
-    ]
-  },
-  {
-    "_id":"thelonesomecowboydaltonwilcox",
     "title": "The Lonesome Cowboy",
     "author": "Dalton Wilcox",
-    "meta": "prem. Comedy Bang! Bang! 148 ~32:30",
+    "meta": "(prem. Comedy Bang! Bang! 148 ~32:30)",
     "stanzas": [
       {
         "lines": [
@@ -725,7 +492,6 @@ export default {
     ]
   },
   {
-    "_id":"avisittopittickmansiondaltonwilcox",
     "title": "A Visit to Pittick Mansion",
     "author": "Dalton Wilcox",
     "stanzas": [
@@ -778,93 +544,4 @@ export default {
       }
     ]
   }
-]},
-      livefilter:null,
-      page: {
-        title: "Andy Dalyverse - Poetry"
-      },
-      meta: { graph: { loading: false } },
-      loadings:[
-      {mod:"init",isLoading:false},
-      {mod:"item",isLoading:false},
-      {mod:"subgraph",isLoading:false}
-      ],
-      console: {
-        msgs: [],
-        clazz: null,
-        throb: false
-      }
-    }
-  }, // data
-  beforeCreate () {}, // beforeCreate
-  created () {
-
-
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "begin CREATED, processing incoming vars" : null
-    );
-
-  }, // created
-  mounted: function () {
-    console.info(
-      process.env.VERBOSITY === "DEBUG" ? "running in mode:" + process.env.MODE : null
-    );
-
-  }, //mounted
-  methods: {
-    setRoute: function () {
-        console.info(process.env.VERBOSITY === "DEBUG" ? "setRoute()..." : null);
-
-        this.$router.push({
-          params: {
-            activeKey: this.active.key
-          }
-        });
-      } //setRoute
-    ,setActive: function (p) {
-
-if(p){
-  this.active=this.$_.findWhere(this.poetry.poems,{_id:p})
-} else {
-  this.active=null;
-}
-
-      } //setActive
-    ,setPageTitle: function () {
-      let sub = null;
-
-      switch (true) {
-        case typeof this.active.item == "undefined":
-          sub = this.active.key;
-          break;
-        default:
-          sub = this.active.item.content;
-          break;
-      }
-
-      this.page.title = "Dalyverse Entities Graph: " + sub;
-    } //setPageTitle
-  }, //methods
-  computed: {}, //computed
-
-  watch: {
-    "loadings": {
-      handler: function (vnew, vold) {
-
-        // this.$refs.topProgress.done();
-        this.$_.contains(this.$_.pluck(vnew,'isLoading'),true)?this.$refs.topProgress.start():this.$refs.topProgress.done();
-      }//handler
-      ,
-     deep: true
-    },
-  } //watch
-}; //export.timeline
-</script>
-
-<style scoped=true>
-/* ---------------------------------- BULMA -- */
-
-.hero.is-medium > .hero-body {
-  padding: 0px;
-}
-</style>
+]

@@ -1,5 +1,6 @@
 // Import a Google Font
 // @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
 // $font-body: 'Fira Sans Condensed', sans-serif;
 // $font-body: 'K2D', sans-serif;
 $font-body: 'B612', sans-serif;
@@ -55,6 +56,19 @@ body{width:100%;height:100%;
   font-family: $font-body;
   overflow:auto;
   // background-color:$dv-black;
+}
+
+input.input{
+  font-family: 'Heebo', sans-serif;
+  border-color:$nondalyNode;
+  font-weight:800;
+  font-family:$font-body;
+  color:$dalyLink;
+  &:focus{
+  border-color:$dalyLink;
+  }&:active{
+  border-color:$dalyLink;
+}
 }
 
 ::selection {
