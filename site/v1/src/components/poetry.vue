@@ -26,10 +26,11 @@
         <!-- TILES PER LETTER? -->
         <table class="table dv-index-table is-striped">
           <tbody>
-            <tr v-for="P in poetry.poems" v-if="(!livefilter || P.title.toLowerCase().indexOf(livefilter)>=0 || P.author.toLowerCase().indexOf(livefilter)>=0)">
+            <tr v-for="P in poetry.poems" v-if="(!livefilter || P.title.toLowerCase().indexOf(livefilter.toLowerCase())>=0 || P.author.toLowerCase().indexOf(livefilter.toLowerCase())>=0 || P._id.toLowerCase().indexOf(livefilter.toLowerCase())>=0)">
               <!-- <th>{{P.title}}</th> -->
               <td>
-                <span @click="setActive(P._id)" class="dv-trigger-active">{{P.title}}</span><span class="has-text-grey-light is-size-7">&nbsp;({{P.author}})</span>
+                <span @click="setActive(P._id)" class="dv-trigger-active">{{P.title}}</span>
+                <div style="padding-left:2em;" class="has-text-grey-light is-size-7">&nbsp;({{P.author}})</div>
               </td>
               <!-- <td>v-vor=e in N.entities</td> -->
             </tr>
@@ -70,6 +71,82 @@ export default {
     return {
       active:null,
       poetry: {poems:[
+        {"_id":"ithinkyoutwoguysareprickslimerick",
+"title":"I Think You Two Guys are Pricks",
+"author":"Patrick McMahon",
+"meta":"prem. CBB 74 ~1:25:15",
+"stanzas":[
+{"lines":
+[
+"I think you two guys are pricks."
+,"I think you two guys are dicks."
+]
+}
+,{"lines":
+[
+"I came in here to tell stories"
+,"about poor old Johnny McGorry."
+,"And it turns out that Nicole Kidman and her entire family were all ghosts."
+]
+}
+]},
+        {"_id":"margaretandtedlimerick",
+"title":"In Commemoration of the 50th Wedding Anniversary of Margaret & Ted",
+"author":"Patrick McMahon",
+"meta":"prem. CBB 74 ~1:10:00",
+"stanzas":[
+{"lines":
+[
+"Happy 50th to Margaret and Ted."
+,"I thank god that neither is dead."
+]
+}
+,{"lines":
+[
+"I've slept with you both"
+,"despite your sacred oath."
+,"Turns out Rosebud was a sled."
+]
+}
+]},
+        {"_id":"obamacarelimerick",
+"title":"Obamacare",
+"author":"Patrick McMahon",
+"meta":"prem. CBB 74 ~1:07:50",
+"stanzas":[
+{"lines":
+[
+"There once was a fella named Obama"
+,"he was sad because of the cancer that killed his mama."
+]
+}
+,{"lines":
+[
+"He wanted to make it better"
+,"so he rolled up his sweater."
+,"And he handed it to Big Insurance and Pharma."
+]
+}
+]},
+        {"_id":"thereoncewasahousethatwasdarklimerick",
+"title":"There Once was a House that was Dark",
+"author":"Patrick McMahon, Scott Aukerman, Jason Mantzoukas",
+"meta":"prem. CBB 74 ~1:06:30",
+"stanzas":[
+{"lines":
+[
+"There once was a house that was dark"
+,"and that is where I wanted to park."
+]
+}
+,{"lines":
+[
+"She turned off the lights"
+,"and it gave me a fright."
+,"Seriously, shut the fuckin lights off."
+]
+}
+]},
         {"_id":"iiveneverseenthesouthoffrancebartlebymulcahy",
 "title":"I've Never Seen the South of France",
 "author":"Bartleby Mulcahy",

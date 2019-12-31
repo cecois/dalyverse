@@ -72,12 +72,12 @@ input.input{
 }
 
 ::selection {
-  background: $dv-copy; /* WebKit/Blink Browsers */
-  color:$dv-black;
+  background: $dalyLink; /* WebKit/Blink Browsers */
+  color:$nondalyNode;
 }
 ::-moz-selection {
-  background: $dv-copy; /* Gecko Browsers */
-  color:$dv-black;
+  background: $dalyLink; /* Gecko Browsers */
+  color:$nondalyNode;
 }
 
 #vue-root{
