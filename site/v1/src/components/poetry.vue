@@ -71,7 +71,139 @@ export default {
     return {
       active:null,
       poetry: {poems:[
-        {"_id":"ithinkyoutwoguysareprickslimerick",
+        {"_id":"putinlimerickpatrickmcmahon",
+"title":"Putin",
+"author":"Patrick McMahon",
+"meta":"prem. ADPPP 8 ~1:25:45",
+"stanzas":[
+{"lines":
+[
+"There once was a Russian president name'a 'Putin'"
+,"for whom no right-minded person was rootin.'"
+]
+}
+,{"lines":
+[
+"He put us in fear"
+,"and would never be named Irish Person of the Year."
+,"And he looks like the type of guy who's allergic to gluten."
+]
+}
+]},
+        {"_id":"bonoboslimerickirishmen",
+"title":"Bonobos",
+"author":"The Irishmen",
+"meta":"prem. ADPPP 8 ~1:24:00",
+"stanzas":[
+{"lines":
+[
+"When goin online to buy clothes"
+,"best go to the place e'ryone knows."
+]
+}
+,{"lines":
+[
+"If you're union and a teamtress"
+,"you won't need a seamstress."
+,"Because I hope Warby Parker, Bonobos, and LegalZoom is what you chose."
+]
+}
+]},
+        {"_id":"fridaynightlightslimerickcharms",
+"title":"Friday Night Lights",
+"author":"Lucian Charms",
+"meta":"prem. ADPPP 8 ~1:21:30",
+"stanzas":[
+{"lines":
+[
+"There once was a coach name'a Taylor"
+,"who watched footballs across a field that would sail her."
+]
+}
+,{"lines":
+[
+"He loved football the most"
+,"but would never go to the post."
+,"As he never wanted to use nothin' but stamps.com to mail her."
+]
+}
+]},
+        {"_id":"thepopelimerickfearnly",
+"title":"The Pope",
+"author":"Monsignor Damien Fearnly",
+"meta":"prem. ADPPP 8 ~1:20:00",
+"stanzas":[
+{"lines":
+[
+"There once was a Pope from the future."
+,"And if you were a sinner he'd boot yer."
+]
+}
+,{"lines":
+[
+"He'd look you up and down"
+,"and say with a frown,"
+,"\"why, if you was a trumpet I'd toot ya.\""
+]
+}
+]},
+        {"_id":"locksmithslimerickshamus",
+"title":"Locksmiths",
+"author":"Shamus McMahon",
+"meta":"prem. ADPPP 8 ~1:17:45",
+"stanzas":[
+{"lines":
+[
+"There once was a locksmith named Bob."
+,"Who took locksmithing for a job."
+]
+}
+,{"lines":
+[
+"He installed locks in a house."
+,"But he was a louse."
+,"So each house he locked up he would rob."
+]
+}
+]},
+        {"_id":"theforcesofevillimerick",
+"title":"The Forces of Evil",
+"author":"Patrick McMahon",
+"meta":"prem. CBB 300 ~1:53:15",
+"stanzas":[
+{"lines":
+[
+"The forces of evil are one."
+,"This battle ain't gonna be fun."
+]
+}
+,{"lines":
+[
+"But we've got to prevail."
+,"Use stamps.com to help with your mail."
+,"A limerick is more powerful than a gun."
+]
+}
+]},
+        {"_id":"thebattlebetweengoodandevillimerick",
+"title":"The Battle Between Good and Evil",
+"author":"Patrick McMahon",
+"meta":"prem. CBB 300 ~1:24:30",
+"stanzas":[
+{"lines":
+[
+"A great battle is being waged."
+,"In the Twilight Nether Realm is where it's staged."
+]
+}
+,{"lines":
+[
+"Evil might win"
+,"which would be a great sin."
+,"I tell you what - I really like that Greek yogurt by FAGE."
+]
+}
+]},{"_id":"ithinkyoutwoguysareprickslimerick",
 "title":"I Think You Two Guys are Pricks",
 "author":"Patrick McMahon",
 "meta":"prem. CBB 74 ~1:25:15",
