@@ -2,69 +2,61 @@
 
 <!-- 
 
-
-Observations:
-
-It's more comfortable to ride a horse with a saddle than without.
-What about a donkey?
-If you need to (or if you want to) you can fuck a can of beans.
-
-
-==========
-
-I Have Killed Your Sea Monster (A Poem to the People of Seattle)
-prem CBB Seattle 2019 ~1:51:30
-
-For at least the past 200 years you have lived with sea monster fears.
-A terrifying creature has roamed your waters, gobbling up your sons and daughters.
-So many vessels never make it back to port as the beast capsizes them purely for sport.
-She probably lures fishermen out to sea with a sexy siren song; but those fishermen do not know they will be dead before too long.
-
-They're imaging they will have sex or get a hand job at least.
-From a beautiful woman - not get eaten by a beast.
-I guess they think there's a woman on a boat they cannot see?
-I honestly do not think that trick would work on me.
-
-But anyway the point is that I came here to kill it.
-I had made myself a promise and I meant to fulfill it.
-I asked the hotel desk man to recommend a boat.
-He sent me someplace you should avoid - here's the name, now - you take note.
-
-\"Ride the Ducks Seattle\" - an amphibious duckboat tour.
-The tour guide promised to \"quack us up\" with jokes and antics galore.
-It was hell on earth for 90 minutes listening to his witticisms.
-Of his city slickin' japes I have only criticisms.
-
-Oh, other folks were laughin but I could only frown.
-When he told us the acquarium had the freshest sushi in town.
-Sitting on that boat took everything I've got.
-When he said the Space Needle was for giving a Martian a flu shot.
-
-Enduring that boat ride was a god-almighty battle.
-He said if we drank too much Starbucks we'd be Sleepless in Seattle.
-Then something happened just when we were passing Ranier Square Tower.
-Something that made controlling myself take all of my power.
-
-He said \"Folks think this building is an eyesore, blocking the view, just like this guy's cowboy hat,\" pointing at you-know-who.
-
-That's when a realization rocked me to my very sole.
-Caddy was a shapeshifter.
-In the form of this asshole.
-
-When the tour was over and he said goodbye to everyone I walked right up to Caddy and I pulled out my gun.
-He said \"Watcha doin, there? Is this about the hat?\"
-And I said \"Well, a sea monster would say exactly that.\"
-
-A silver bullet between the eyes sent Caddy to the ground.
-I returned its lifeless body to the waters of The Sound.
-And now that I've killed that monster as only a Cowboy could.
-I'll admit saying 'Microsoft' as a way to describe a penis - that was pretty good.
-
-
-
-
+{"_id":"acowboycomestocanada",
+"title":"A Cowboy Comes to Canada",
+"author":"Dalton Wilcox",
+"meta":"prem. CBB Vancouver 2019 ~1:53:30",
+"stanzas":[
+{"lines":[
+"I aint never been to Canada before and I don't reckon I will be again.",
+"And you know the old saying: 'When in Canada, do like Canada men.'",
+"So I figured as long as I was in town I'd check out a game of hockey.",
+"It seems like a dumb sport - not like baseball or boxing (which you might know from Rocky)."
+]}
+,{"lines":[
+"But what the hell, I had time so I took myself out to a Canucks game."
+,"And something happened there, my friends, after which I will never be the same."
+,"The game was going along, apparently just fine - grown men glidin around like children at Christmas time."
+,"But at the end of the first half there was only three points scored - for a fella that's used to the rodeo, let me tell you I was bored."
+]},
+,{"lines":[
+"So I headed down to the locker room to have a word with the players."
+,"To tell em to pick up the pace and lead them in some prayers."
+,"I also figured there'd be groupies down there hangin out while the game was ceased."
+,"And I could have sex or get a hand job at least."
+]}
+,{"lines":[
+"But I lost my way and I got confused in the bowels of Rogers arena."
+,"I got scared I'd be stuck there all night and I never woulda seen ya."
+,"And then I wandered down somewhere I wasn't supposed to go."
+,"That's how I came to know somethin Dalton Wilcox wasn't supposed to know."
+]}
+,{"lines":[
+"I saw a thing that made me get upset and go all pale - a horrible creature with the body of a man and the head of a goddam whale."
+,"He was dressed just like a hockey player and I can only assume that he was wearing the clothes (and possibly skin) of a man he'd just consumed."
+]}
+,{"lines":[
+"I pulled my gun and steadied my hand and looked him in the eye."
+,"I said \"you disgusting creature, it's time for you to die.\""
+,"I came here to try to have sex or get a hand job at least."
+,"But now I'm here to ask you: 'are you half-man, half-beast?'"
+]}
+,{"lines":[
+"He raised his hands in surrender, which is a classic monster trick."
+,"Then he looked like he was tryin to take off his own head, which woulda made me sick."
+,"So I shot him, now he's dead - you're welcome, Vancouver, B.C."
+,"And as for that hand job? Ladies, I'm stayin at the Best Western on Granville - come see me."
+]}
 
  -->
+
+    /////////////////////\\\\\\\\\\\\\\\\\\\\\ ____  ____  ________  ___
+   /////////////////////\\\\\\\\\\\\\\\\\\\\\ / __ \/ __ \/ ____/  |/  /
+  /////////////////////\\\\\\\\\\\\\\\\\\\\\ / /_/ / / / / __/ / /|_/ /
+ /////////////////////\\\\\\\\\\\\\\\\\\\\\ / ____/ /_/ / /___/ /  / /
+/////////////////////\\\\\\\\\\\\\\\\\\\\\ /_/    \____/_____/_/  /_/
+
+
 
 <div id="vue-root" class="">
   <vue-topprogress ref="topProgress"></vue-topprogress>
