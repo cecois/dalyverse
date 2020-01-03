@@ -1,5 +1,80 @@
 [
   {
+    "_from": "events/_:daltonwilcoxmurderscaddytheseamonster",
+    "_to": "people/_:caddytheseamonster",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxmurderscaddytheseamonster"
+  },{
+    "_from": "events/_:daltonwilcoxmurderscaddytheseamonster",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxmurderscaddytheseamonster"
+  },{
+    "_from": "events/_:daltonwilcoxmurderscaddytheseamonster",
+    "_to": "places/_:rainiertowerseattle",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxmurderscaddytheseamonster"
+  },{
+    "_from": "events/_:daltonwilcoxmurdersafrankensteininseattle",
+    "_to": "people/_:unnamedseattlefrankenstein",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxmurdersafrankensteininseattle"
+  },{
+    "_from": "events/_:daltonwilcoxmurdersafrankensteininseattle",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcoxmurdersafrankensteininseattle"
+  },{
+    "_from": "events/_:daltonwilcoxmurdersafrankensteininseattle",
+    "_to": "places/_:blankspacecafe",
+    "type": "occurredAt",
+    "vertex": "_:daltonwilcoxmurdersafrankensteininseattle"
+  },{
+    "_from": "people/_:jimmyblades",
+    "_to": "things/_:thejourneymen",
+    "type": "isMemberOf",
+    "vertex": "_:jimmyblades"
+  },{
+    "_from": "people/_:titshanrahan",
+    "_to": "things/_:thejourneymen",
+    "type": "isMemberOf",
+    "vertex": "_:titshanrahan"
+  },{
+    "_from": "people/_:thumpercollins",
+    "_to": "things/_:thejourneymen",
+    "type": "isMemberOf",
+    "vertex": "_:thumpercollins"
+  },{
+    "_from": "people/_:cubbylauterborn",
+    "_to": "things/_:thejourneymen",
+    "type": "isMemberOf",
+    "vertex": "_:cubbylauterborn"
+  },{
+    "_from": "people/_:shuntmcguppin",
+    "_to": "things/_:thejourneymen",
+    "type": "isMemberOf",
+    "vertex": "_:shuntmcguppin"
+  },{
+    "_from": "people/_:mutttaylor",
+    "_to": "things/_:thejourneymen",
+    "type": "isMemberOf",
+    "vertex": "_:mutttaylor"
+  },{
+    "_from": "events/_:terlinguatexaschilicookoff2012",
+    "_to": "people/_:sallyjespa",
+    "type": "hasParticipant",
+    "vertex": "_:terlinguatexaschilicookoff2012"
+  },{
+    "_from": "events/_:terlinguatexaschilicookoff2012",
+    "_to": "people/_:daltonwilcox",
+    "type": "hasParticipant",
+    "vertex": "_:terlinguatexaschilicookoff2012"
+  },{
+    "_from": "events/_:terlinguatexaschilicookoff2012",
+    "_to": "places/_:ranchocasiterlingua",
+    "type": "occurredAt",
+    "vertex": "_:terlinguatexaschilicookoff2012"
+  },{
     "_from": "events/_:patrickmcmahonliftsarelic",
     "_to": "places/_:limerickhuntmuseum",
     "type": "occurredAt",

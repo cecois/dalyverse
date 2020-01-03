@@ -72,7 +72,7 @@ I'll admit saying 'Microsoft' as a way to describe a penis - that was pretty goo
   <div class="columns" style="padding-top:2em;">
     
     <div class="column has-text-grey-light">
-      <div class="title">Poetry</div>
+      <div class="title">Poems</div>
       <!-- <div class="has-text-grey is-size-7">(bolded == played by Daly)</div> -->
     </div>
 
@@ -138,6 +138,77 @@ export default {
     return {
       active:null,
       poetry: {poems:[
+        {"_id":"ihavekilledyourseamonster",
+"title":"I Have Killed Your Sea Monster (A Poem to the People of Seattle)",
+"author":"Dalton Wilcox",
+"meta":"prem. CBB Seattle 2019 ~1:51:30",
+"stanzas":[
+{"lines":[
+"For at least the past 200 years you have lived with sea monster fears.",
+"A terrifying creature has roamed your waters, gobbling up your sons and daughters.",
+"So many vessels never make it back to port as the beast capsizes them purely for sport.",
+"She probably lures fishermen out to sea with a sexy siren song; but those fishermen do not know they will be dead before too long."
+]}
+,
+{"lines":[
+"They're imaging they will have sex or get a hand job at least.",
+"From a beautiful woman - not get eaten by a beast.",
+"I guess they think there's a woman on a boat they cannot see?",
+"I honestly do not think that trick would work on me."
+]}
+,
+{"lines":[
+"But anyway the point is that I came here to kill it.",
+"I had made myself a promise and I meant to fulfill it.",
+"I asked the hotel desk man to recommend a boat.",
+"He sent me someplace you should avoid - here's the name, now - you take note."
+]}
+,
+{"lines":[
+"\"Ride the Ducks Seattle\" - an amphibious duckboat tour.",
+"The tour guide promised to \"quack us up\" with jokes and antics galore.",
+"It was hell on earth for 90 minutes listening to his witticisms.",
+"Of his city slickin' japes I have only criticisms."
+]}
+,
+{"lines":[
+"Oh, other folks were laughin but I could only frown.",
+"When he told us the acquarium had the freshest sushi in town.",
+"Sitting on that boat took everything I've got.",
+"When he said the Space Needle was for giving a Martian a flu shot."
+]}
+,
+{"lines":[
+"Enduring that boat ride was a god-almighty battle.",
+"He said if we drank too much Starbucks we'd be Sleepless in Seattle.",
+"Then something happened just when we were passing Ranier Square Tower.",
+"Something that made controlling myself take all of my power."
+]}
+,
+{"lines":["He said \"Folks think this building is an eyesore, blocking the view, just like this guy's cowboy hat,\" pointing at you-know-who."]}
+,
+{
+  "lines":[
+  "That's when a realization rocked me to my very sole.",
+"Caddy was a shapeshifter.",
+"In the form of this asshole."
+  ]
+}
+,
+{
+  "lines":[
+  "When the tour was over and he said goodbye to everyone I walked right up to Caddy and I pulled out my gun.",
+"He said \"Watcha doin, there? Is this about the hat?\"",
+"And I said \"Well, a sea monster would say exactly that.\""
+  ]
+}
+,{"lines":[
+"A silver bullet between the eyes sent Caddy to the ground."
+,"I returned its lifeless body to the waters of The Sound."
+,"And now that I've killed that monster as only a Cowboy could."
+,"I'll admit saying 'Microsoft' as a way to describe a penis - that was pretty good."
+]}
+]},
         {"_id":"putinlimerickpatrickmcmahon",
 "title":"Putin",
 "author":"Patrick McMahon",

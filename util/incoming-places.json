@@ -1,5 +1,37 @@
 [
   {
+    "_key": "_:rainiertowerseattle",
+    "name": "Rainier Tower - Seattle",
+    "article": [
+      "Rainier Tower is a Seattle landmark, outside of which Dalton Wilcox was insulted by a DuckBoat operator, leading to tragedy."
+    ],
+    "geo_key": {
+      "type": "poly",
+      "id": 1081
+    }
+  },
+  {
+    "_key": "_:blankspacecafe",
+    "name": "Blank Space Café",
+    "article": [
+      "Blank Space Café was a popular hangout for at least one Frankenstein."
+    ],
+    "geo_key": {
+      "type": "point",
+      "id": 1215
+    }
+  },
+  {
+    "_key": "_:ranchocasiterlingua",
+    "name": "Rancho Casi de los Chisos",
+    "article": [
+      "Rancho Casi de los Chisos is the site of the Terlingua Texas Chili Cookoff."
+    ],
+    "geo_key": {
+      "type": "point",
+      "id": 1214
+    }
+  },{
     "_key": "_:romeny",
     "name": "Rome, NY",
     "article": [

@@ -7,6 +7,7 @@ import MURDERERS from '@/components/murderers'
 import INDEX from '@/components/index'
 import ABOUT from '@/components/about'
 import POETRY from '@/components/poetry'
+import OBSERVATIONS from '@/components/observations'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/poetry',
       name: 'poetry',
       component: POETRY
+    },
+    {
+      path: '/observations',
+      name: 'observations',
+      component: OBSERVATIONS
     },
     {
       path: '/about',

@@ -1,5 +1,48 @@
 [
   {
+    "_key": "_:daltonwilcoxmurderscaddytheseamonster",
+    "name": "Dalton Wilcox Murders Caddy the Sea Monster",
+    "article": [
+      "Insulted by a DuckBoat operator whom he knew instantly to be a shapeshifting sea monster, Mr. Wilcox confronted the beast and put a silver bullet between his eyes."
+    ],
+    "timestamp": {
+      "start": "2012-11-05T16:10:00Z",
+      "end": null
+    },
+    "nb_timestamp": {
+      "class": "approximate to the week",
+      "nb": "the day before(?) CBB Seattle 2019"
+    }
+  },{
+    "_key": "_:daltonwilcoxmurdersafrankensteininseattle",
+    "name": "Dalton Wilcox Murders a Seattle Frankenstein",
+    "article": [
+      "Offered a \"coffee-flavored bubble tea,\" Dalton knows instantly he is dealing with a Frankenstein and so rips away a table leg, lights it as a torch, and chases the monster into Elliott Bay."
+    ],
+    "timestamp": {
+      "start": "2012-11-06T16:10:00Z",
+      "end": null
+    },
+    "nb_timestamp": {
+      "class": "firm to the day",
+      "nb": "the day of CBB Seattle 2019"
+    }
+  },{
+    "_key": "_:terlinguatexaschilicookoff2012",
+    "name": "Dalton Wilcox Meets Sally Jespa at a Texas Chili Cookoff/Cowboy Poetry Workshop",
+    "article": [
+      "Referred to colloquially by Dalton Wilcox as The Great Texas Chili Cookoff, this is presumably the chili cookoff at which Dalton first met fellow poet Sally Jespa."
+    ],
+    "timestamp": {
+      "start": "2012-11-10T16:10:00Z",
+      "end": null
+    },
+    "nb_timestamp": {
+      "class": "approximate",
+      "nb": "some first-weekend-in-november before ADPPP 1"
+    }
+  },
+  {
     "_key": "_:schmitthoffmanandvaughanfleeeurope",
     "name": "William and Glenwood Flee Europe",
     "article": [
