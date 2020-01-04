@@ -1,63 +1,5 @@
 <template>
 
-<!-- 
-
-{"_id":"acowboycomestocanada",
-"title":"A Cowboy Comes to Canada",
-"author":"Dalton Wilcox",
-"meta":"prem. CBB Vancouver 2019 ~1:53:30",
-"stanzas":[
-{"lines":[
-"I aint never been to Canada before and I don't reckon I will be again.",
-"And you know the old saying: 'When in Canada, do like Canada men.'",
-"So I figured as long as I was in town I'd check out a game of hockey.",
-"It seems like a dumb sport - not like baseball or boxing (which you might know from Rocky)."
-]}
-,{"lines":[
-"But what the hell, I had time so I took myself out to a Canucks game."
-,"And something happened there, my friends, after which I will never be the same."
-,"The game was going along, apparently just fine - grown men glidin around like children at Christmas time."
-,"But at the end of the first half there was only three points scored - for a fella that's used to the rodeo, let me tell you I was bored."
-]},
-,{"lines":[
-"So I headed down to the locker room to have a word with the players."
-,"To tell em to pick up the pace and lead them in some prayers."
-,"I also figured there'd be groupies down there hangin out while the game was ceased."
-,"And I could have sex or get a hand job at least."
-]}
-,{"lines":[
-"But I lost my way and I got confused in the bowels of Rogers arena."
-,"I got scared I'd be stuck there all night and I never woulda seen ya."
-,"And then I wandered down somewhere I wasn't supposed to go."
-,"That's how I came to know somethin Dalton Wilcox wasn't supposed to know."
-]}
-,{"lines":[
-"I saw a thing that made me get upset and go all pale - a horrible creature with the body of a man and the head of a goddam whale."
-,"He was dressed just like a hockey player and I can only assume that he was wearing the clothes (and possibly skin) of a man he'd just consumed."
-]}
-,{"lines":[
-"I pulled my gun and steadied my hand and looked him in the eye."
-,"I said \"you disgusting creature, it's time for you to die.\""
-,"I came here to try to have sex or get a hand job at least."
-,"But now I'm here to ask you: 'are you half-man, half-beast?'"
-]}
-,{"lines":[
-"He raised his hands in surrender, which is a classic monster trick."
-,"Then he looked like he was tryin to take off his own head, which woulda made me sick."
-,"So I shot him, now he's dead - you're welcome, Vancouver, B.C."
-,"And as for that hand job? Ladies, I'm stayin at the Best Western on Granville - come see me."
-]}
-
- -->
-
-    /////////////////////\\\\\\\\\\\\\\\\\\\\\ ____  ____  ________  ___
-   /////////////////////\\\\\\\\\\\\\\\\\\\\\ / __ \/ __ \/ ____/  |/  /
-  /////////////////////\\\\\\\\\\\\\\\\\\\\\ / /_/ / / / / __/ / /|_/ /
- /////////////////////\\\\\\\\\\\\\\\\\\\\\ / ____/ /_/ / /___/ /  / /
-/////////////////////\\\\\\\\\\\\\\\\\\\\\ /_/    \____/_____/_/  /_/
-
-
-
 <div id="vue-root" class="">
   <vue-topprogress ref="topProgress"></vue-topprogress>
   <vue-headful :title="page.title" description="People, Places, Events & Things in the Andy Dalyverse" />
@@ -130,6 +72,68 @@ export default {
     return {
       active:null,
       poetry: {poems:[
+        {
+  "_id": "acowboycomestocanada",
+  "title": "A Cowboy Comes to Canada",
+  "author": "Dalton Wilcox",
+  "meta": "prem. CBB Vancouver 2019 ~1:53:30",
+  "stanzas": [
+    {
+      "lines": [
+        "I aint never been to Canada before and I don't reckon I will be again.",
+        "And you know the old saying: 'When in Canada, do like Canada men.'",
+        "So I figured as long as I was in town I'd check out a game of hockey.",
+        "It seems like a dumb sport - not like baseball or boxing (which you might know from Rocky)."
+      ]
+    },
+    {
+      "lines": [
+        "But what the hell, I had time so I took myself out to a Canucks game.",
+        "And something happened there, my friends, after which I will never be the same.",
+        "The game was going along, apparently just fine - grown men glidin around like children at Christmas time.",
+        "But at the end of the first half there was only three points scored - for a fella that's used to the rodeo, let me tell you I was bored."
+      ]
+    },
+    {
+      "lines": [
+        "So I headed down to the locker room to have a word with the players.",
+        "To tell em to pick up the pace and lead them in some prayers.",
+        "I also figured there'd be groupies down there hangin out while the game was ceased.",
+        "And I could have sex or get a hand job at least."
+      ]
+    },
+    {
+      "lines": [
+        "But I lost my way and I got confused in the bowels of Rogers arena.",
+        "I got scared I'd be stuck there all night and I never woulda seen ya.",
+        "And then I wandered down somewhere I wasn't supposed to go.",
+        "That's how I came to know somethin Dalton Wilcox wasn't supposed to know."
+      ]
+    },
+    {
+      "lines": [
+        "I saw a thing that made me get upset and go all pale - a horrible creature with the body of a man and the head of a goddam whale.",
+        "He was dressed just like a hockey player and I can only assume that he was wearing the clothes (and possibly skin) of a man he'd just consumed."
+      ]
+    },
+    {
+      "lines": [
+        "I pulled my gun and steadied my hand and looked him in the eye.",
+        "I said \"you disgusting creature, it's time for you to die.\"",
+        "I came here to try to have sex or get a hand job at least.",
+        "But now I'm here to ask you: 'are you half-man, half-beast?'"
+      ]
+    },
+    {
+      "lines": [
+        "He raised his hands in surrender, which is a classic monster trick.",
+        "Then he looked like he was tryin to take off his own head, which woulda made me sick.",
+        "So I shot him, now he's dead - you're welcome, Vancouver, B.C.",
+        "And as for that hand job? Ladies, I'm stayin at the Best Western on Granville - come see me."
+      ]
+    }
+  ]
+},
         {"_id":"ihavekilledyourseamonster",
 "title":"I Have Killed Your Sea Monster (A Poem to the People of Seattle)",
 "author":"Dalton Wilcox",

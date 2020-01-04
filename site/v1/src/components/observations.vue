@@ -13,11 +13,11 @@
   <div class="columns dv-vertical-columns has-text-left">
     <div class="column is-12" style="padding-top:2em;">
       <div class="columns" style="margin-bottom:2em;">
-        <div class="column is-12">
+        <div class="column is-6 has-text-centered">
         
         <input class="input is-large" type="text" placeholder="" v-model="livefilter">
           
-        </div NB=".column.is-12">
+        </div NB=".column.is-6">
       </div  NB=".columns">
 
       <div class="table-container">
