@@ -1,1161 +1,1391 @@
 [{
-	"_key": "_:saintgeorgeschapel",
-	"name": "Saint George's Chapel",
-	"article": [
-      "Saint George's Chapel is a storied UK location."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1179
-	}
-	}, {
-	"_key": "_:lloydshqlondon",
-	"name": "Lloyds Banking Group HQ - London",
-	"article": [
-      "Lloys Banking Group operation headquarters on London's Gresham Street."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1352
-	}
-	}, {
-	"_key": "_:westminsterabbey",
-	"name": "Westminster Abbey",
-	"article": [
-      "Westminster Abbey is a storied UK location."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1171
-	}
-	}, {
-	"_key": "_:bankofthewesteagarspringerville",
-	"name": "Bank of the West - Eagar/Springerville",
-	"article": [
-      "A Bank of the West location in Eagar/Springerville is the site of a bodyswap engineered by Dalton Wilcox on behalf of one of his unnamed ranch hands."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1345
-	}
-	}, {
-	"_key": "_:cramdanielshome",
-	"name": "Downtown L.A.",
-	"article": [
-      "Cram Daniels, host of the #1 Western TV Series-Themed Podcast, 'Deadwood Boys,' lives in downtown Los Angeles."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1330
-	}
-	}, {
-	"_key": "_:holidayinnexpressmarana",
-	"name": "Holiday Inn Express & Suites Tucson North - Marana",
-	"article": [
-      "Holiday Inn Express & Suites Tucson North - Marana is a hotel outside of Tucson, AZ."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1329
-	}
-	}, {
-	"_key": "_:cemexazusaquarry",
-	"name": "Cemex - Azusa Quarry",
-	"article": [
-      "Cemex - Azusa Quarry is a quarry in Azusa, CA."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1165
-	}
-	}, {
-	"_key": "_:walmartburbank",
-	"name": "Wal-Mart - Burbank",
-	"article": [
-      "Wal-Mart Supercenter is a retail store in Burbank, CA."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1328
-	}
-	}, {
-	"_key": "_:montrosebowl",
-	"name": "Montrose Bowl",
-	"article": [
-      "Montrose Bowl is petite, party- and film-friendly bowling alley in Montrose, CA."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1327
-	}
-	}, {
-	"_key": "_:arponspearfishing",
-	"name": "Arpon Spearfishing",
-	"article": [
-      "Arpon Spearfishing is a thrill-fishing service near Cozumel, Mx."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1326
-	}
-	}, {
-	"_key": "_:wetsealburbank",
-	"name": "Wet Seal - Burbank",
-	"article": [
-      "Wet Seal (potentially formerly Contempo Casuals) is a mid-range clothing store."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1325
-	}
-	}, {
-	"_key": "_:wichitafallstx",
-	"name": "Home of Chip Junction",
-	"article": [
-      "Four hundred miles straight south of the world's largest ball of yarn you will find Chip Junction (and his grandmother, Apple)."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1163
-	}
-	}, {
-	"_key": "_:leapznboundswest",
-	"name": "Leaps N Boundz - West L.A.",
-	"article": [
-      "Leaps N Boundz is a therapy, recreation, and social programs facility for individuals with diverse abilities."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1324
-	}
-}, {
-	"_key": "_:mooretheatreseattle",
-	"name": "Moore Theatre - Seattle",
-	"article": [
-      "Seattle's oldest (1907) living theatre and relative site of, in October 2019, a vampire slaughter."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1320
-	}
-	}, {
-	"_key": "_:leapznboundswest",
-	"name": "Leaps N Boundz - West L.A.",
-	"article": [
-      "Leaps N Boundz is a therapy, recreation, and social programs facility for individuals with diverse abilities."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1324
-	}
-}, {
-	"_key": "_:yoshinowawilshirealvarado",
-	"name": "Yoshinowa - Wilshire & Alvarado",
-	"article": [
-      "Yoshinowa - Wilshire & Alvarado is an instance of the famous Yoshinowa chain."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1323
-	}
-}, {
-	"_key": "_:hmsbounty",
-	"name": "HMS Bounty",
-	"article": [
-      "HMS Bounty is a nautically-themed bar and restaurant on Wilshire in Hollywood."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1322
-	}
-}, {
-	"_key": "_:lanl",
-	"name": "Los Alamos National Laboratory",
-	"article": [
-      "Los Alamos National Laboratory is a US Department of Energy facility in New Mexico."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1162
-	}
-}, {
-	"_key": "_:svalbardarchipelago",
-	"name": "Svalbard",
-	"article": [
-      "Svalbard is a Norwegian archipelago between mainland Norway and the North Pole, here a possible proxy for The Island of Misfit Toys."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1156
-	}
-}, {
-	"_key": "_:saltonsea",
-	"name": "Salton Sea",
-	"article": [
-      "Salton Sea is a shallow lake in So. California with a high concentration of salts."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1161
-	}
-}, {
-	"_key": "_:bonnevillesaltflats",
-	"name": "Bonneville Salt Flats",
-	"article": [
-      "Bonneville Salt Flats are a collection of scenic salt flats formed when Lake Bonneville dried up near the Utah/Nevada border."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1321
-	}
-}, {
-	"_key": "_:tupuaiislands",
-	"name": "Tupua'i Islands",
-	"article": [
-      "The Tupua'i Islands (Austral Islands) are a French Polynesian chain, here a possible proxy for H.G. Wells' Island of Dr. Moreau."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1157
-	}
-}, {
-	"_key": "_:islandsrestaurantpalmdesert",
-	"name": "Islands Restaurant - Palm Desert",
-	"article": [
-      "Islands is a tropical-themed burger joint."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1300
-	}
-}, {
-	"_key": "_:millsparkcarsoncity",
-	"name": "Mills Park - Carson City",
-	"article": [
-      "Mills Park is traditionally the site of the Nevada State Fair."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1120
-	}
-}, {
-	"_key": "_:motel6arcadia",
-	"name": "Motel 6 - Arcadia",
-	"article": [
-      "In order to record BFB#005, Bartleby Mulcahey had to step out of the great California mountains and into this Motel 6."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1314,
-	}
-}, {
-	"_key": "_:perseverenceranch",
-	"name": "Perseverence Ranch",
-	"article": [
-      "On BFB#005 Dalton Wilcox discloses the approximate location of his ranch outside of Tombstone."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1313,
-	}
-}, {
-	"_key": "_:mutttaylorshospicebrothelspasadena",
-	"name": "Mutt Taylor's Hospice Brothels - Pasadena",
-	"article": [
-      "On BFB#003 Mr. Taylor plugs this first (of an unknown number) hospice brothel that looks like a Church's Chicken on the outside."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1311,
-	}
-}, {
-	"_key": "_:gibbonconservationcentersantaclaritaca",
-	"name": "Gibbon Conservation Center - Santa Clarita",
-	"article": [
-      "Gibbon Conservation Center is a non-profit center to promote the conservation, study and care of gibbons through public education and habitat preservation. On BFB#003 Dalton Wilcox states outright that the preserve did not even respond to his request to book a private hunting event there."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1310,
-	}
-}, {
-	"_key": "_:rainiertowerseattle",
-	"name": "Rainier Tower - Seattle",
-	"article": [
-      "Rainier Tower is a Seattle landmark, outside of which Dalton Wilcox was insulted by a DuckBoat operator, leading to tragedy."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1081
-	}
-}, {
-	"_key": "_:blankspacecafe",
-	"name": "Blank Space Café",
-	"article": [
-      "Blank Space Café was a popular hangout for at least one Frankenstein."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1215
-	}
-}, {
-	"_key": "_:ranchocasiterlingua",
-	"name": "Rancho Casi de los Chisos",
-	"article": [
-      "Rancho Casi de los Chisos is the site of the Terlingua Texas Chili Cookoff."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1214
-	}
-}, {
-	"_key": "_:romeny",
-	"name": "Rome, NY",
-	"article": [
-      "Rome is a city in upstate New York. In 1999 a Woodstock revival festival was held there."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1088
-	}
-}, {
-	"_key": "_:theblacklagoon",
-	"name": "Wakulla Springs State Park",
-	"article": [
-      "Wakulla Springs State Park is the de facto primary black lagoon of creature fame."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1263
-	}
-}, {
-	"_key": "_:minnellimansion",
-	"name": "The Minnelli Mansion",
-	"article": [
-      "The Minnelli mansion is a contested property in Beverly Hills -- the former home of director Vincent Minnelli -- that has been largely abandoned save for William George Frederick Schmitt-Hoffman XXVIII and Glenwood Vaughan and many raccoons."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1145
-	}
-}, {
-	"_key": "_:lacanadaflintridge",
-	"name": "La Cañada Flintridge, CA",
-	"article": [
-      "La Cañada Flintridge is a city in California's Crescenta Valley."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 148
-	}
-}, {
-	"_key": "_:parisfr",
-	"name": "Paris, France",
-	"article": [
-      "Paris, France, is a major metropolis in France."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 409
-	}
-}, {
-	"_key": "_:madisonwi",
-	"name": "Madison, WI",
-	"article": [
-      "Madison, Wisconsin is the capitol city of Wisconsin, USA."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 568
-	}
-}, {
-	"_key": "_:miamibeach",
-	"name": "Miami Beach",
-	"article": [
-      "Miami Beach is a popular vacation spot in Florida as well as the location of one of L. Ron Hubbard's hidden future treasures."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1078
-	}
-}, {
-	"_key": "_:sanrafaelhills",
-	"name": "San Rafael Hills",
-	"article": [
-      "San Rafael Hills is a neighborhood in Pasadena, California."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1077
-	}
-}, {
-	"_key": "_:johnnyssportshop",
-	"name": "Johnny's Sport Shop",
-	"article": [
-      "Johnny's Sport Shop is a bait and tackle shop in Pasadena and, according to one if its imployees, Hendrix Murphy, the location of an early attempt at live burial by Cactus Tony."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1209
-	}
-}, {
-	"_key": "_:tommyschiliburger",
-	"name": "Tommy's Chili Burger",
-	"article": [
-      "Tommy's Chili Burger is a restaurant that figured significantly in the murder trial of Cactus Tony."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1208
-	}
-}, {
-	"_key": "_:21choices",
-	"name": "21 Choices - Old Town",
-	"article": [
-      "21 Choices - Old Town is a restaurant that figured significantly in the murder trial of Cactus Tony."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1207
-	}
-}, {
-	"_key": "_:sanquentin",
-	"name": "San Quentin State Prison",
-	"article": [
-      "San Quentin State Prison is a legendary prison in Marin County, California."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 64
-	}
-}, {
-	"_key": "_:braidwoodcentre",
-	"name": "The Braidwood Centre",
-	"article": [
-      "The Braidwood Centre, former home of a much-beloved bagpiper named Stuart Cambridge, is a haunted stop on Cameron McGonigle's tour of Edinburgh."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1206
-	}
-}, {
-	"_key": "_:edinburghcastle",
-	"name": "Edinburgh Castle",
-	"article": [
-      "Edinburgh Castle is a haunted stop on Cameron McGonigle's tour of Edinburgh."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1076
-	}
-}, {
-	"_key": "_:tolboothtavern",
-	"name": "Tolbooth Tavern - Edinburgh",
-	"article": [
-      "Tolbooth Tavern is a haunted stop on Cameron McGonigle's tour of Edinburgh."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1205
-	}
-}, {
-	"_key": "_:brewlabcoffeeedinburgh",
-	"name": "Brew Lab Coffee - Edinburgh",
-	"article": [
-      "Brew Lab Coffee is a haunted stop on Cameron McGonigle's tour of Edinburgh - use the Tour discount!"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1204
-	}
-}, {
-	"_key": "_:hotelduvin",
-	"name": "Hotel du Vin",
-	"article": [
-      "Hotel du Vin is a haunted stop on Cameron McGonigle's tour of Edinburgh."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1203
-	}
-}, {
-	"_key": "_:toweringpinespsychiatric",
-	"name": "Gatway Hospital and Mental Health Center",
-	"article": [
-      "home of: Gil"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1202
-	}
-}, {
-	"_key": "_:maricopastphoenix",
-	"name": "Maricopa St., Phoenix",
-	"article": [
-      "site of: a murder by a puppet"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1201
-	}
-}, {
-	"_key": "_:ritzcarltonmdrparking",
-	"name": "Ritz-Carlton (Marina del Rey) Parking Ramp",
-	"article": [
-      "The Ritz-Carlton (Marina del Rey) Parking Ramp was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1200
-	}
-}, {
-	"_key": "_:tonypsdocksidemdr",
-	"name": "Tony P's Dockside Grill",
-	"article": [
-      "Tony P's Dockside Grill in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1199
-	}
-}, {
-	"_key": "_:tikimermaidchartersharborcruiseboat",
-	"name": "Tiki Mermaid Charters Harbor Cruise Boat",
-	"article": [
-      "The Tiki Mermaid Charters Harbor Cruise Boat in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The ship sank under weight of Joe Bongo's automobile and remains on the floor of the harbor to this day."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1198
-	}
-}, {
-	"_key": "_:bajacantinamdr",
-	"name": "Baja Cantina - Marina del Rey",
-	"article": [
-      "Baja Cantina - Marina del Rey is a restaurant near the harbor in Marina del Rey, California, above which live all of the school-aged members of the rock group Rosebush Red."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1197
-	}
-}, {
-	"_key": "_:historicmarinadelreylighthouse",
-	"name": "Historic Marina del Rey Lighthouse",
-	"article": [
-      "Historic Marina del Rey Lighthouse was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The lighthouse was tipped into the water and rests on the floor of the harbor to this day."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 958
-	}
-}, {
-	"_key": "_:burtonchacepark",
-	"name": "Burton Chace Park",
-	"article": [
-      "Burton Chace Park was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The park incurred $18M worth of damages."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 548
-	}
-}, {
-	"_key": "_:lakesuperior",
-	"name": "Lake Superior, USA",
-	"article": [
-      "site of: an annual freshwater skiing competition, bombed in the early 1970s by saltwater skiiers"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 566
-	}
-}, {
-	"_key": "_:limericktreatystone",
-	"name": "The Treaty Stone",
-	"article": [
-      "The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahon and Damien Fearnly would occasionally take shits on said stone for fun."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1196
-	}
-}, {
-	"_key": "_:limerickhuntmuseum",
-	"name": "Hunt Museum",
-	"article": [
-      "The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mary from the Hunt and 'fucked on it for a year.'"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1075
-	}
-}, {
-	"_key": "_:bahrain",
-	"name": "Bahrain",
-	"article": [
-      "site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1074
-	}
-}, {
-	"_key": "_:altadenaca",
-	"name": "Altadena, CA",
-	"article": [
-      "home of: Mal Bachman"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 403
-	}
-}, {
-	"_key": "_:seattlespaceneedle",
-	"name": "Seattle Space Needle",
-	"article": [
-      "site of: a failed August Lindt suicide attempt"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 516
-	}
-}, {
-	"_key": "_:annefrankhuis",
-	"name": "Anne Frank Huis",
-	"article": [
-      "The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank (-- Wikipedia, 2019.Jan)"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1190
-	}
-}, {
-	"_key": "_:tommybahamaskokie",
-	"name": "Tommy Bahamas - Northbrook",
-	"article": [
-      "A proxy for Tommy Bahama - Skokie; site of: August Lindt buying a shirt"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1189
-	}
-}, {
-	"_key": "_:hopitaljasonsendweer",
-	"name": "Hôpital Jason Sendwe Emergency Room, ",
-	"article": [
-      "Site of: August Lindt, on vacation."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1188
-	}
-}, {
-	"_key": "_:newmexicousa",
-	"name": "New Mexico, USA",
-	"article": [
-      "The 47th state in the Union."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 381
-	}
-}, {
-	"_key": "_:coronaca",
-	"name": "Corona, CA",
-	"article": [
-      "Corona, California is a town in California that once hosted a getaway weekend for Mal Bachman and Don DiMello."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1073
-	}
-}, {
-	"_key": "_:dresdende",
-	"name": "Dresden, Germany",
-	"article": [
-      "Dresden is a significant site in World War II."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1072
-	}
-}, {
-	"_key": "_:laramiefeedandwesternsupply",
-	"name": "Laramie Feed and Western Supply",
-	"article": [
-      "LFWS is a purveyor of western gear and other supplies to cowboys."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1187
-	}
-}, {
-	"_key": "_:gowergulch",
-	"name": "Gower Gulch",
-	"article": [
-      "Corner of Gower@Sunset in Hollywood."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 324
-	}
-}, {
-	"_key": "_:marktwainhotella",
-	"name": "Mark Twain Hotel - Los Angeles",
-	"article": [
-      "Questionable boutique hotel off of Wilcox."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1186
-	}
-}, {
-	"_key": "_:courtyardoldtown",
-	"name": "Courtyard Los Angeles Pasadena/Old Town",
-	"article": [
-      "site of: Quinceañeras"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 597
-	}
-}, {
-	"_key": "_:nordstromsantamonica",
-	"name": "Nordstrom Santa Monica",
-	"article": [
-      "great coat selection"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 17
-	}
-}, {
-	"_key": "_:thegrovela",
-	"name": "The Grove",
-	"article": [
-      "popular hangout"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 13
-	}
-}, {
-	"_key": "_:melroseatgower",
-	"name": "Melrose @ Gower",
-	"article": [
-      "intersection"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 902
-	}
-}, {
-	"_key": "_:1031wilshire",
-	"name": "1031 Wilshire - Home of Indie 103.1",
-	"article": [
-      "not really"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 111
-	}
-}, {
-	"_key": "_:thepinebarrensofnj",
-	"name": "The Pine Barrens of NJ",
-	"article": [
-      "best place in all of NJ"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 27
-	}
-}, {
-	"_key": "_:epcotcenter",
-	"name": "Epcot Center",
-	"article": [
-      "popular tourism site"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 143
-	}
-}, {
-	"_key": "_:gracelandelvis",
-	"name": "Elvis' Graceland",
-	"article": [
-      "popular tourism site"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 130
-	}
-}, {
-	"_key": "_:hollywoodsign",
-	"name": "The Hollywood Sign",
-	"article": [
-      "site of: failed suicides"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 134
-	}
-}, {
-	"_key": "_:ctusa",
-	"name": "Connecticut, USA",
-	"article": [
-      "home of: Yale; a Pantages Theatre"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 2
-	}
-}, {
-	"_key": "_:earwolfsunset",
-	"name": "Earwolf Studios - Sunset",
-	"article": [
-      "Site of: multiple defenestrations."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 137
-	}
-}, {
-	"_key": "_:londonbridgehavasu",
-	"name": "London Bridge (Lake Havasu City)",
-	"article": [
-      "Former site of: a Dr. Jekyll."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1185
-	}
-}, {
-	"_key": "_:tombofjimmorrison",
-	"name": "Jim Morrison's Tomb (Père-Lachaise)",
-	"article": [
-      "Hot graffiti spot."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 319
-	}
-}, {
-	"_key": "_:internationalwaters",
-	"name": "International Waters",
-	"article": [
-      "A marine frontier, of sorts."
-    ],
-	"geo_key": {
-		"type": "line",
-		"id": 11
-	}
-}, {
-	"_key": "_:mdhs",
-	"name": "Venice High School (proxy for: Marina del Rey High School)",
-	"article": [
-      "Venice High School serves the MDR community."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 210
-	}
-}, {
-	"_key": "_:largo",
-	"name": "Largo at the Coronet",
-	"article": [
-      "Largo at the Coronet is a theatre space in Los Angeles."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1184
-	}
-}, {
-	"_key": "_:venicefishingpier",
-	"name": "Venice Fishing Pier",
-	"article": [
-      "Venice Fishing Pier is a pier for fishing in Venice."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 221
-	}
-}, {
-	"_key": "_:lochness",
-	"name": "Loch Ness",
-	"article": [
-      "Loch Ness is a lake in the United Kingdom."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 250
-	}
-}, {
-	"_key": "_:canalsidefishandchip",
-	"name": "Canal Side Fish & Chip",
-	"article": [
-      "Canal Side Fish & Chip is a bodega near Fort Augustus, Scotland"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1312
-	}
-}, {
-	"_key": "_:hmprisonwandsworth",
-	"name": "HM Prison Wandsworth",
-	"article": [
-      "HM Prison Wandsworth is a Category B men's prison at Wandsworth in the London Borough of Wandsworth, South West London, England. Among its notable inmates are or were: Gary Glitter, James Earl Ray, Julian Assange, and Byron Denniston."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 938
-	}
-}, {
-	"_key": "_:polkcityfl",
-	"name": "Polk City, FL",
-	"article": [
-      "Polk City, Florida is home to the Water Skiing Hall of Fame."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 520
-	}
-}, {
-	"_key": "_:edinburghscotland",
-	"name": "Edinburgh, Scotland",
-	"article": [
-      "Edinburgh, Scotland, is in Scotland."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 465
-	}
-}, {
-	"_key": "_:georgemackenzieofrosehaughmausoleum",
-	"name": "George Mackenzie of Rosehaugh Mausoleum",
-	"article": [
-      "George Mackenzie of Rosehaugh Mausoleum is a tourist attraction in Edinburgh."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 840
-	}
-}, {
-	"_key": "_:necromance",
-	"name": "Necromance",
-	"article": [
-      "In March 1986, following the release of Russell Mulcahey's 'Highlander,' Hot Dog stole  a sword from a novelty and costume shop approximately 10 blocks from the ArcLight and then decapitates an unnamed Scottish guy with it."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 582
-	}
-}, {
-	"_key": "_:maunaloa",
-	"name": "Mauna Loa",
-	"article": [
-      "Mauna Loa is an Hawaiin volcano that maybe could be a decent spot for a Mars simulator."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 769
-	}
-}, {
-	"_key": "_:hiltonhotelhawaii",
-	"name": "Hilton Waikoloa Village",
-	"article": [
-      "Site of: Hot Dog's probable last audition for Sha Na Na."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 580
-	}
-}, {
-	"_key": "_:arclightcinemas",
-	"name": "ArcLight Cinemas",
-	"article": [
-      "The ArcLight Cinemas is a cinema where many things have happened."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 133
-	}
-}, {
-	"_key": "_:huntingtonbeach",
-	"name": "Huntington Beach",
-	"article": [
-      "Site of: a surfing world record; nothing else"
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 222
-	}
-}, {
-	"_key": "_:bergenregional",
-	"name": "Bergen Regional Medical Center",
-	"article": [
-      "Bergen Regional Medical Center."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 202
-	}
-}, {
-	"_key": "_:sixflagsmagicmountain",
-	"name": "Six Flags Magic Mountain",
-	"article": [
-      "Valencia, CA"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 7
-	}
-}, {
-	"_key": "_:pasadenafairytaletheatre",
-	"name": "Pasadena Fairy Tale Theatre",
-	"article": [
-      "Legendary arts venue"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 6
-	}
-}, {
-	"_key": "_:griffithobservatory",
-	"name": "Griffith Observatory",
-	"article": [
-      "Legendary science venue"
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 250
-	}
-}, {
-	"_key": "_:radiocity",
-	"name": "Radio City Music Hall",
-	"article": [
-      "Radio City Music Hall is a legendary performance space in New York City."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 98
-	}
-}, {
-	"_key": "_:ballyshollywood",
-	"name": "Bally's Hollywood",
-	"article": [
-      "Bill Carter's place of work."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 149
-	}
-}, {
-	"_key": "_:starbucksgowergulch",
-	"name": "Starbucks - Gower Gulch",
-	"article": [
-      "Starbucks at Gower Gulch is a known hangout for Gadfly Jack Fitzgerald and others like him."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 388
-	}
-}, {
-	"_key": "_:schmiedebergpretzelcompany",
-	"name": "Schmiedeberg Pretzel Company",
-	"article": [
-      "Makers of the loudest pretzels in Germany; August Lindt's place of work."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 129
-	}
-}, {
-	"_key": "_:unnamedlotionshop",
-	"name": "Unnamed Lotion Shop",
-	"article": [
-      "Possibly only existing in the fantastical imagination of Jeff Garlin, this unnamed lotion shop supposedly sits on Boner Avenue and is staffed by, among others no doubt, 'Mr. Francisco,' the star of one of Ben Alterman's standup jokes."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 111
-	}
-}, {
-	"_key": "_:shadyviewboardandcare",
-	"name": "Shady View Board & Care",
-	"article": [
-      "Shady View Board & Care is an active retirement community east of Los Angeles."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 598
-	}
-}, {
-	"_key": "_:scapeoreswamp",
-	"name": "Scape Ore Swamp",
-	"article": [
-      "Scape Ore Swamp is a rural area in Lee County, South Carolina, USA, rumored to (formerly) host a Lizard Man."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1167
-	}
-}, {
-	"_key": "_:suwanneecountyflorida",
-	"name": "Suwannee County",
-	"article": [
-      "Suwannee County is a rural admin in Florida, USA, rumored to host multiple Skunk Apes."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1066
-	}
-}, {
-	"_key": "_:popelickbridge",
-	"name": "Pope Lick Bridge",
-	"article": [
-      "Pope Lick Bridge is an overpass near Louisville, Kentucky, USA, rumored to formerly house an eponymous monster."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1168
-	}
-}, {
-	"_key": "_:branchhillohio",
-	"name": "Branch Hill",
-	"article": [
-      "Branch Hill is a town in Ohio, USA, rumored to (formerly) host the Loveland Frog Man."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1169
-	}
-}, {
-	"_key": "_:honeyislandswamp",
-	"name": "Honey Island Swamp",
-	"article": [
-      "Honey Island Swamp is a marshland in eastern Louisiana, USA, rumored to (formerly) host the Honey Island Swamp Monster."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1170
-	}
-}, {
-	"_key": "_:arroyocoloradocanal",
-	"name": "Arroyo Colorado Canal",
-	"article": [
-      "Arroyo Colorado Canal is a waterway in Harlingen, Texas, USA, rumored to (formerly) host the Big Bird of the Rio Grande Valley."
-    ],
-	"geo_key": {
-		"type": "point",
-		"id": 1171
-	}
-}, {
-	"_key": "_:freetownstateforest",
-	"name": "Freetown-Fall River State Forest",
-	"article": [
-      "Freetown-Fall River State Forest is a protected land in Massachusetts, USA, rumored to (formerly) host at least one Pukwudgie."
-    ],
-	"geo_key": {
-		"type": "poly",
-		"id": 1067
-	}
+    "_key": "_:burntpineisland",
+    "name": "Burnt Pine",
+    "article": [
+        "Burnt Pine is an island in the Tasman Sea where all inhabitants have vowed to never critique each other's accent."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1223
+    }
+},{
+    "_key": "_:harryandmeghansteahouse",
+    "name": "Harry and Meghan's Teahouse",
+    "article": [
+        "Harry and Meghan's Teahouse is a rather secluded structure in Montecito, California, USA."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1434
+    }
+}, {
+    "_key": "_:andyrichtersbackyard",
+    "name": "Andy Richter's Back Yard",
+    "article": [
+        "Andy Richter's Back Yard is Andy Richter's backyard in Burbank."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1406
+    }
+}, {
+    "_key": "_:hickoryfarmskioskwinterspringsmall",
+    "name": "Hickory Farms Kiosk - Winter Springs Mall",
+    "article": [
+        "Hickory Farms Kiosk - Winter Springs Mall is an open-air kiosk that doesn't require masks during pandemics."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1433
+    }
+}, {
+    "_key": "_:churchoftheholysepulchre",
+    "name": "Church of the Holy Sepulchre",
+    "article": [
+        "Church of the Holy Sepulchre is a religious facility in Jerusalem."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1222
+    }
+}, {
+    "_key": "_:wilcoxranch2",
+    "name": "Wilcox Ranch #2",
+    "article": [
+        "Wilcox Ranch #2 is an underground facility built by Dalton Wilcox following the sudden detonation of his former ranch just outside of Tombstone, AZ."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1430
+    }
+}, {
+    "_key": "_:jemsfeedfarm",
+    "name": "Jem's Feed & Farm",
+    "article": [
+        "Jem's Feed & Farm is a feed supply store near Tombstone, AZ that supplies Dalton Wilcox with his podcasts."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1429
+    }
+}, {
+    "_key": "_:212buslinelabreaatsunset",
+    "name": "L.A. Metro #212 - La Brea/Sunset Stop",
+    "article": [
+        "L.A. Metro #212 - La Brea/Sunset Stop is also the home of Sugar Cane"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1426
+    }
+}, {
+    "_key": "_:pokherknights",
+    "name": "The Truckee Strip",
+    "article": [
+        "The Truckee Strip (Pokher Knights) is a gentlemen's club near Lake Tahoe."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1428
+    }
+}, {
+    "_key": "_:212buslinelabrea",
+    "name": "L.A. Metro #212 - La Brea",
+    "article": [
+        "L.A. Metro #212 - La Brea is a bus route in Los Angeles, CA, USA."
+    ],
+    "geo_key": {
+        "type": "line",
+        "id": 316
+    }
+}, {
+    "_key": "_:patientexpressclinictombstone",
+    "name": "Patient Express Clinic - Tombstone",
+    "article": [
+        "Patient Express Clinic is an emergency care clinic in Tombstone, AZ, USA."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1422
+    }
+}, {
+    "_key": "_:rocknrollhalloffame",
+    "name": "Rock and Roll Hall of Fame",
+    "article": [
+        "Rock and Roll Hall of Fame is a museum."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1109
+    }
+}, {
+    "_key": "_:wildrosecasinoresortsemmetsburg",
+    "name": "Wild Rose Casino & Resorts - Emmetsburg",
+    "article": [
+        "Wild Rose Casino & Resorts - Emmetsburg is a Wild Rose Casino site in northwest Iowa."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1404
+    }
+}, {
+    "_key": "_:theshananahouse",
+    "name": "The Sha Na Na House",
+    "article": [
+        "Actually just John Bowzer Bowman's last known residence, the home is, according to legend anyway, the home to all active members of Sha Na Na at any given moment. And Hot Dog."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1346
+    }
+}, {
+    "_key": "_:rocketmortgagefieldhouse",
+    "name": "Rocket Mortgage FieldHouse",
+    "article": [
+        "Rocket Mortgage FieldHouse is a multi-purpose arena in Cleveland, Ohio. In its employ, as of 2021, are various members of the musical combination Sha Na Na."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1203
+    }
+}, {
+    "_key": "_:officesofrobertsbennett",
+    "name": "Offices of Robert S. Bennett",
+    "article": [
+        "The Offices of Robert S. Bennett hosted the 1998 deposition of sitting president William Jefferson Clinton."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1403
+    }
+}, {
+    "_key": "_:clarashortridgefoltzcriminaljusticecenter",
+    "name": "Clara Shortridge Foltz Criminal Justice Center",
+    "article": [
+        "Clara Shortridge Foltz Criminal Justice Center is a criminal courthouse in Los Angeles, CA, USA."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1202
+    }
+}, {
+    "_key": "_:neverlandranch",
+    "name": "Neverland Ranch",
+    "article": [
+        "Neverland Ranch is the site of a private amusement park and nothing else."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 801
+    }
+}, {
+    "_key": "_:gemeentealphenaandenrijn",
+    "name": "Gemeente Alphen aan den Rijn",
+    "article": [
+        "Gemeente Alphen aan den Rijn is a city in The Netherlands, site of the launch of Plan One."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1347
+    }
+}, {
+    "_key": "_:forestlawncemetery",
+    "name": "Forest Lawn Cemetery",
+    "article": [
+        "Forest Lawn Memorial Park – Hollywood Hills is one of several sites in the Forest Lawn network of cemeteries."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1170
+    }
+}, {
+    "_key": "_:hooterstucson",
+    "name": "Hooters - Tucson",
+    "article": [
+        "In the parking lot of Hooters in Tucson (presumably), Mr. Wilcox was confronted by a man, now deceased, who claimed Wilcox had stolen his laptop."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1394
+    }
+}, {
+    "_key": "_:ophirmine",
+    "name": "Ophir Mine",
+    "article": [
+        "In the tunnels of the Ophir Mine, Dalton Wilcox' wife, Erena escaped his wrath - the only monster to have ever done so at that point."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1393
+    }
+}, {
+    "_key": "_:superlubeplusbenson",
+    "name": "Super Lube Plus",
+    "article": [
+        "Super Lube Plus (possible proxy for Quick Lube)"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1392
+    }
+}, {
+    "_key": "_:saintgeorgeschapel",
+    "name": "Saint George's Chapel",
+    "article": [
+        "Saint George's Chapel is a storied UK location."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1179
+    }
+}, {
+    "_key": "_:lloydshqlondon",
+    "name": "Lloyds Banking Group HQ - London",
+    "article": [
+        "Lloys Banking Group operation headquarters on London's Gresham Street."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1352
+    }
+}, {
+    "_key": "_:westminsterabbey",
+    "name": "Westminster Abbey",
+    "article": [
+        "Westminster Abbey is a storied UK location."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1171
+    }
+}, {
+    "_key": "_:bankofthewesteagarspringerville",
+    "name": "Bank of the West - Eagar/Springerville",
+    "article": [
+        "A Bank of the West location in Eagar/Springerville is the site of a bodyswap engineered by Dalton Wilcox on behalf of one of his unnamed ranch hands."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1345
+    }
+}, {
+    "_key": "_:cramdanielshome",
+    "name": "Downtown L.A.",
+    "article": [
+        "Cram Daniels, host of the #1 Western TV Series-Themed Podcast, 'Deadwood Boys,' lives in downtown Los Angeles."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1330
+    }
+}, {
+    "_key": "_:holidayinnexpressmarana",
+    "name": "Holiday Inn Express & Suites Tucson North - Marana",
+    "article": [
+        "Holiday Inn Express & Suites Tucson North - Marana is a hotel outside of Tucson, AZ."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1329
+    }
+}, {
+    "_key": "_:cemexazusaquarry",
+    "name": "Cemex - Azusa Quarry",
+    "article": [
+        "Cemex - Azusa Quarry is a quarry in Azusa, CA."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1165
+    }
+}, {
+    "_key": "_:walmartburbank",
+    "name": "Wal-Mart - Burbank",
+    "article": [
+        "Wal-Mart Supercenter is a retail store in Burbank, CA."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1328
+    }
+}, {
+    "_key": "_:montrosebowl",
+    "name": "Montrose Bowl",
+    "article": [
+        "Montrose Bowl is petite, party- and film-friendly bowling alley in Montrose, CA."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1327
+    }
+}, {
+    "_key": "_:arponspearfishing",
+    "name": "Arpon Spearfishing",
+    "article": [
+        "Arpon Spearfishing is a thrill-fishing service near Cozumel, Mx."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1326
+    }
+}, {
+    "_key": "_:wetsealburbank",
+    "name": "Wet Seal - Burbank",
+    "article": [
+        "Wet Seal (potentially formerly Contempo Casuals) is a mid-range clothing store."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1325
+    }
+}, {
+    "_key": "_:wichitafallstx",
+    "name": "Home of Chip Junction",
+    "article": [
+        "Four hundred miles straight south of the world's largest ball of yarn you will find Chip Junction (and his grandmother, Apple)."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1163
+    }
+}, {
+    "_key": "_:leapznboundswest",
+    "name": "Leaps N Boundz - West L.A.",
+    "article": [
+        "Leaps N Boundz is a therapy, recreation, and social programs facility for individuals with diverse abilities."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1324
+    }
+}, {
+    "_key": "_:mooretheatreseattle",
+    "name": "Moore Theatre - Seattle",
+    "article": [
+        "Seattle's oldest (1907) living theatre and relative site of, in October 2019, a vampire slaughter."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1320
+    }
+}, {
+    "_key": "_:leapznboundswest",
+    "name": "Leaps N Boundz - West L.A.",
+    "article": [
+        "Leaps N Boundz is a therapy, recreation, and social programs facility for individuals with diverse abilities."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1324
+    }
+}, {
+    "_key": "_:yoshinowawilshirealvarado",
+    "name": "Yoshinowa - Wilshire & Alvarado",
+    "article": [
+        "Yoshinowa - Wilshire & Alvarado is an instance of the famous Yoshinowa chain."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1323
+    }
+}, {
+    "_key": "_:hmsbounty",
+    "name": "HMS Bounty",
+    "article": [
+        "HMS Bounty is a nautically-themed bar and restaurant on Wilshire in Hollywood."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1322
+    }
+}, {
+    "_key": "_:lanl",
+    "name": "Los Alamos National Laboratory",
+    "article": [
+        "Los Alamos National Laboratory is a US Department of Energy facility in New Mexico."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1162
+    }
+}, {
+    "_key": "_:svalbardarchipelago",
+    "name": "Svalbard",
+    "article": [
+        "Svalbard is a Norwegian archipelago between mainland Norway and the North Pole, here a possible proxy for The Island of Misfit Toys."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1156
+    }
+}, {
+    "_key": "_:saltonsea",
+    "name": "Salton Sea",
+    "article": [
+        "Salton Sea is a shallow lake in So. California with a high concentration of salts."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1161
+    }
+}, {
+    "_key": "_:bonnevillesaltflats",
+    "name": "Bonneville Salt Flats",
+    "article": [
+        "Bonneville Salt Flats are a collection of scenic salt flats formed when Lake Bonneville dried up near the Utah/Nevada border."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1321
+    }
+}, {
+    "_key": "_:tupuaiislands",
+    "name": "Tupua'i Islands",
+    "article": [
+        "The Tupua'i Islands (Austral Islands) are a French Polynesian chain, here a possible proxy for H.G. Wells' Island of Dr. Moreau."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1157
+    }
+}, {
+    "_key": "_:islandsrestaurantpalmdesert",
+    "name": "Islands Restaurant - Palm Desert",
+    "article": [
+        "Islands is a tropical-themed burger joint."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1300
+    }
+}, {
+    "_key": "_:millsparkcarsoncity",
+    "name": "Mills Park - Carson City",
+    "article": [
+        "Mills Park is traditionally the site of the Nevada State Fair."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1120
+    }
+}, {
+    "_key": "_:motel6arcadia",
+    "name": "Motel 6 - Arcadia",
+    "article": [
+        "In order to record BFB#005, Bartleby Mulcahey had to step out of the great California mountains and into this Motel 6."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1314,
+    }
+}, {
+    "_key": "_:perseverenceranch",
+    "name": "Perseverence Ranch",
+    "article": [
+        "On BFB#005 Dalton Wilcox discloses the approximate location of his ranch outside of Tombstone."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1313,
+    }
+}, {
+    "_key": "_:mutttaylorshospicebrothelspasadena",
+    "name": "Mutt Taylor's Hospice Brothels - Pasadena",
+    "article": [
+        "On BFB#003 Mr. Taylor plugs this first (of an unknown number) hospice brothel that looks like a Church's Chicken on the outside."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1311,
+    }
+}, {
+    "_key": "_:gibbonconservationcentersantaclaritaca",
+    "name": "Gibbon Conservation Center - Santa Clarita",
+    "article": [
+        "Gibbon Conservation Center is a non-profit center to promote the conservation, study and care of gibbons through public education and habitat preservation. On BFB#003 Dalton Wilcox states outright that the preserve did not even respond to his request to book a private hunting event there."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1310,
+    }
+}, {
+    "_key": "_:rainiertowerseattle",
+    "name": "Rainier Tower - Seattle",
+    "article": [
+        "Rainier Tower is a Seattle landmark, outside of which Dalton Wilcox was insulted by a DuckBoat operator, leading to tragedy."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1081
+    }
+}, {
+    "_key": "_:blankspacecafe",
+    "name": "Blank Space Café",
+    "article": [
+        "Blank Space Café was a popular hangout for at least one Frankenstein."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1215
+    }
+}, {
+    "_key": "_:ranchocasiterlingua",
+    "name": "Rancho Casi de los Chisos",
+    "article": [
+        "Rancho Casi de los Chisos is the site of the Terlingua Texas Chili Cookoff."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1214
+    }
+}, {
+    "_key": "_:romeny",
+    "name": "Rome, NY",
+    "article": [
+        "Rome is a city in upstate New York. In 1999 a Woodstock revival festival was held there."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1088
+    }
+}, {
+    "_key": "_:theblacklagoon",
+    "name": "Wakulla Springs State Park",
+    "article": [
+        "Wakulla Springs State Park is the de facto primary black lagoon of creature fame."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1263
+    }
+}, {
+    "_key": "_:minnellimansion",
+    "name": "The Minnelli Mansion",
+    "article": [
+        "The Minnelli mansion is a contested property in Beverly Hills -- the former home of director Vincent Minnelli -- that has been largely abandoned save for William George Frederick Schmitt-Hoffman XXVIII and Glenwood Vaughan and many raccoons."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1145
+    }
+}, {
+    "_key": "_:lacanadaflintridge",
+    "name": "La Cañada Flintridge, CA",
+    "article": [
+        "La Cañada Flintridge is a city in California's Crescenta Valley."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 148
+    }
+}, {
+    "_key": "_:parisfr",
+    "name": "Paris, France",
+    "article": [
+        "Paris, France, is a major metropolis in France."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 409
+    }
+}, {
+    "_key": "_:madisonwi",
+    "name": "Madison, WI",
+    "article": [
+        "Madison, Wisconsin is the capitol city of Wisconsin, USA."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 568
+    }
+}, {
+    "_key": "_:miamibeach",
+    "name": "Miami Beach",
+    "article": [
+        "Miami Beach is a popular vacation spot in Florida as well as the location of one of L. Ron Hubbard's hidden future treasures."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1078
+    }
+}, {
+    "_key": "_:sanrafaelhills",
+    "name": "San Rafael Hills",
+    "article": [
+        "San Rafael Hills is a neighborhood in Pasadena, California."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1077
+    }
+}, {
+    "_key": "_:johnnyssportshop",
+    "name": "Johnny's Sport Shop",
+    "article": [
+        "Johnny's Sport Shop is a bait and tackle shop in Pasadena and, according to one if its imployees, Hendrix Murphy, the location of an early attempt at live burial by Cactus Tony."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1209
+    }
+}, {
+    "_key": "_:tommyschiliburger",
+    "name": "Tommy's Chili Burger",
+    "article": [
+        "Tommy's Chili Burger is a restaurant that figured significantly in the murder trial of Cactus Tony."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1208
+    }
+}, {
+    "_key": "_:21choices",
+    "name": "21 Choices - Old Town",
+    "article": [
+        "21 Choices - Old Town is a restaurant that figured significantly in the murder trial of Cactus Tony."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1207
+    }
+}, {
+    "_key": "_:sanquentin",
+    "name": "San Quentin State Prison",
+    "article": [
+        "San Quentin State Prison is a legendary prison in Marin County, California."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 64
+    }
+}, {
+    "_key": "_:braidwoodcentre",
+    "name": "The Braidwood Centre",
+    "article": [
+        "The Braidwood Centre, former home of a much-beloved bagpiper named Stuart Cambridge, is a haunted stop on Cameron McGonigle's tour of Edinburgh."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1206
+    }
+}, {
+    "_key": "_:edinburghcastle",
+    "name": "Edinburgh Castle",
+    "article": [
+        "Edinburgh Castle is a haunted stop on Cameron McGonigle's tour of Edinburgh."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1076
+    }
+}, {
+    "_key": "_:tolboothtavern",
+    "name": "Tolbooth Tavern - Edinburgh",
+    "article": [
+        "Tolbooth Tavern is a haunted stop on Cameron McGonigle's tour of Edinburgh."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1205
+    }
+}, {
+    "_key": "_:brewlabcoffeeedinburgh",
+    "name": "Brew Lab Coffee - Edinburgh",
+    "article": [
+        "Brew Lab Coffee is a haunted stop on Cameron McGonigle's tour of Edinburgh - use the Tour discount!"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1204
+    }
+}, {
+    "_key": "_:hotelduvin",
+    "name": "Hotel du Vin",
+    "article": [
+        "Hotel du Vin is a haunted stop on Cameron McGonigle's tour of Edinburgh."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1203
+    }
+}, {
+    "_key": "_:toweringpinespsychiatric",
+    "name": "Gatway Hospital and Mental Health Center",
+    "article": [
+        "home of: Gil"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1202
+    }
+}, {
+    "_key": "_:maricopastphoenix",
+    "name": "Maricopa St., Phoenix",
+    "article": [
+        "site of: a murder by a puppet"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1201
+    }
+}, {
+    "_key": "_:ritzcarltonmdrparking",
+    "name": "Ritz-Carlton (Marina del Rey) Parking Ramp",
+    "article": [
+        "The Ritz-Carlton (Marina del Rey) Parking Ramp was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1200
+    }
+}, {
+    "_key": "_:tonypsdocksidemdr",
+    "name": "Tony P's Dockside Grill",
+    "article": [
+        "Tony P's Dockside Grill in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1199
+    }
+}, {
+    "_key": "_:tikimermaidchartersharborcruiseboat",
+    "name": "Tiki Mermaid Charters Harbor Cruise Boat",
+    "article": [
+        "The Tiki Mermaid Charters Harbor Cruise Boat in Marina del Rey was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The ship sank under weight of Joe Bongo's automobile and remains on the floor of the harbor to this day."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1198
+    }
+}, {
+    "_key": "_:bajacantinamdr",
+    "name": "Baja Cantina - Marina del Rey",
+    "article": [
+        "Baja Cantina - Marina del Rey is a restaurant near the harbor in Marina del Rey, California, above which live all of the school-aged members of the rock group Rosebush Red."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1197
+    }
+}, {
+    "_key": "_:historicmarinadelreylighthouse",
+    "name": "Historic Marina del Rey Lighthouse",
+    "article": [
+        "Historic Marina del Rey Lighthouse was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The lighthouse was tipped into the water and rests on the floor of the harbor to this day."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 958
+    }
+}, {
+    "_key": "_:burtonchacepark",
+    "name": "Burton Chace Park",
+    "article": [
+        "Burton Chace Park was one of several casualties in what was, by March 2018 at least, the most expensive car accident in Marina del Rey history. The park incurred $18M worth of damages."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 548
+    }
+}, {
+    "_key": "_:lakesuperior",
+    "name": "Lake Superior, USA",
+    "article": [
+        "site of: an annual freshwater skiing competition, bombed in the early 1970s by saltwater skiiers"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 566
+    }
+}, {
+    "_key": "_:limericktreatystone",
+    "name": "The Treaty Stone",
+    "article": [
+        "The Treaty Stone is the rock on which the Treaty of Limerick was signed in 1691, marking the surrender of the city to William of Orange -- limerick.ie. In their days as younger men growing up in Limerick, Patrick McMahon and Damien Fearnly would occasionally take shits on said stone for fun."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1196
+    }
+}, {
+    "_key": "_:limerickhuntmuseum",
+    "name": "Hunt Museum",
+    "article": [
+        "The Hunt Museum in Limerick 'preserves and exhibits the original artefacts gathered, over a life time, by John and Gertrude Hunt and known as the Hunt Collection' -- huntmuseum.com. As a young man growing up in Limerick, Patrick McMahon once stole a tapestry of the Virgin Mary from the Hunt and 'fucked on it for a year.'"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1075
+    }
+}, {
+    "_key": "_:bahrain",
+    "name": "Bahrain",
+    "article": [
+        "site of: Don DiMello, years ago, investigating whether there was any way to safely decapitate a dancer"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1074
+    }
+}, {
+    "_key": "_:altadenaca",
+    "name": "Altadena, CA",
+    "article": [
+        "home of: Mal Bachman"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 403
+    }
+}, {
+    "_key": "_:seattlespaceneedle",
+    "name": "Seattle Space Needle",
+    "article": [
+        "site of: a failed August Lindt suicide attempt"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 516
+    }
+}, {
+    "_key": "_:annefrankhuis",
+    "name": "Anne Frank Huis",
+    "article": [
+        "The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank (-- Wikipedia, 2019.Jan)"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1190
+    }
+}, {
+    "_key": "_:tommybahamaskokie",
+    "name": "Tommy Bahamas - Northbrook",
+    "article": [
+        "A proxy for Tommy Bahama - Skokie; site of: August Lindt buying a shirt"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1189
+    }
+}, {
+    "_key": "_:hopitaljasonsendweer",
+    "name": "Hôpital Jason Sendwe Emergency Room, ",
+    "article": [
+        "Site of: August Lindt, on vacation."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1188
+    }
+}, {
+    "_key": "_:newmexicousa",
+    "name": "New Mexico, USA",
+    "article": [
+        "The 47th state in the Union."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 381
+    }
+}, {
+    "_key": "_:coronaca",
+    "name": "Corona, CA",
+    "article": [
+        "Corona, California is a town in California that once hosted a getaway weekend for Mal Bachman and Don DiMello."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1073
+    }
+}, {
+    "_key": "_:dresdende",
+    "name": "Dresden, Germany",
+    "article": [
+        "Dresden is a significant site in World War II."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1072
+    }
+}, {
+    "_key": "_:laramiefeedandwesternsupply",
+    "name": "Laramie Feed and Western Supply",
+    "article": [
+        "LFWS is a purveyor of western gear and other supplies to cowboys."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1187
+    }
+}, {
+    "_key": "_:gowergulch",
+    "name": "Gower Gulch",
+    "article": [
+        "Corner of Gower@Sunset in Hollywood."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 324
+    }
+}, {
+    "_key": "_:marktwainhotella",
+    "name": "Mark Twain Hotel - Los Angeles",
+    "article": [
+        "Questionable boutique hotel off of Wilcox."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1186
+    }
+}, {
+    "_key": "_:courtyardoldtown",
+    "name": "Courtyard Los Angeles Pasadena/Old Town",
+    "article": [
+        "site of: Quinceañeras"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 597
+    }
+}, {
+    "_key": "_:nordstromsantamonica",
+    "name": "Nordstrom Santa Monica",
+    "article": [
+        "great coat selection"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 17
+    }
+}, {
+    "_key": "_:thegrovela",
+    "name": "The Grove",
+    "article": [
+        "popular hangout"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 13
+    }
+}, {
+    "_key": "_:melroseatgower",
+    "name": "Melrose @ Gower",
+    "article": [
+        "intersection"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 902
+    }
+}, {
+    "_key": "_:1031wilshire",
+    "name": "1031 Wilshire - Home of Indie 103.1",
+    "article": [
+        "not really"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 111
+    }
+}, {
+    "_key": "_:thepinebarrensofnj",
+    "name": "The Pine Barrens of NJ",
+    "article": [
+        "best place in all of NJ"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 27
+    }
+}, {
+    "_key": "_:epcotcenter",
+    "name": "Epcot Center",
+    "article": [
+        "popular tourism site"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 143
+    }
+}, {
+    "_key": "_:gracelandelvis",
+    "name": "Elvis' Graceland",
+    "article": [
+        "popular tourism site"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 130
+    }
+}, {
+    "_key": "_:hollywoodsign",
+    "name": "The Hollywood Sign",
+    "article": [
+        "site of: failed suicides"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 134
+    }
+}, {
+    "_key": "_:ctusa",
+    "name": "Connecticut, USA",
+    "article": [
+        "home of: Yale; a Pantages Theatre"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 2
+    }
+}, {
+    "_key": "_:earwolfsunset",
+    "name": "Earwolf Studios - Sunset",
+    "article": [
+        "Site of: multiple defenestrations."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 137
+    }
+}, {
+    "_key": "_:londonbridgehavasu",
+    "name": "London Bridge (Lake Havasu City)",
+    "article": [
+        "Former site of: a Dr. Jekyll."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1185
+    }
+}, {
+    "_key": "_:tombofjimmorrison",
+    "name": "Jim Morrison's Tomb (Père-Lachaise)",
+    "article": [
+        "Hot graffiti spot."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 319
+    }
+}, {
+    "_key": "_:internationalwaters",
+    "name": "International Waters",
+    "article": [
+        "A marine frontier, of sorts."
+    ],
+    "geo_key": {
+        "type": "line",
+        "id": 11
+    }
+}, {
+    "_key": "_:mdhs",
+    "name": "Venice High School (proxy for: Marina del Rey High School)",
+    "article": [
+        "Venice High School serves the MDR community."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 210
+    }
+}, {
+    "_key": "_:largo",
+    "name": "Largo at the Coronet",
+    "article": [
+        "Largo at the Coronet is a theatre space in Los Angeles."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1184
+    }
+}, {
+    "_key": "_:venicefishingpier",
+    "name": "Venice Fishing Pier",
+    "article": [
+        "Venice Fishing Pier is a pier for fishing in Venice."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 221
+    }
+}, {
+    "_key": "_:lochness",
+    "name": "Loch Ness",
+    "article": [
+        "Loch Ness is a lake in the United Kingdom."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 250
+    }
+}, {
+    "_key": "_:canalsidefishandchip",
+    "name": "Canal Side Fish & Chip",
+    "article": [
+        "Canal Side Fish & Chip is a bodega near Fort Augustus, Scotland"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1312
+    }
+}, {
+    "_key": "_:hmprisonwandsworth",
+    "name": "HM Prison Wandsworth",
+    "article": [
+        "HM Prison Wandsworth is a Category B men's prison at Wandsworth in the London Borough of Wandsworth, South West London, England. Among its notable inmates are or were: Gary Glitter, James Earl Ray, Julian Assange, and Byron Denniston."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 938
+    }
+}, {
+    "_key": "_:polkcityfl",
+    "name": "Polk City, FL",
+    "article": [
+        "Polk City, Florida is home to the Water Skiing Hall of Fame."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 520
+    }
+}, {
+    "_key": "_:edinburghscotland",
+    "name": "Edinburgh, Scotland",
+    "article": [
+        "Edinburgh, Scotland, is in Scotland."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 465
+    }
+}, {
+    "_key": "_:georgemackenzieofrosehaughmausoleum",
+    "name": "George Mackenzie of Rosehaugh Mausoleum",
+    "article": [
+        "George Mackenzie of Rosehaugh Mausoleum is a tourist attraction in Edinburgh."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 840
+    }
+}, {
+    "_key": "_:necromance",
+    "name": "Necromance",
+    "article": [
+        "In March 1986, following the release of Russell Mulcahey's 'Highlander,' Hot Dog stole  a sword from a novelty and costume shop approximately 10 blocks from the ArcLight and then decapitates an unnamed Scottish guy with it."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 582
+    }
+}, {
+    "_key": "_:maunaloa",
+    "name": "Mauna Loa",
+    "article": [
+        "Mauna Loa is an Hawaiin volcano that maybe could be a decent spot for a Mars simulator."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 769
+    }
+}, {
+    "_key": "_:hiltonhotelhawaii",
+    "name": "Hilton Waikoloa Village",
+    "article": [
+        "Site of: Hot Dog's probable last audition for Sha Na Na."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 580
+    }
+}, {
+    "_key": "_:arclightcinemas",
+    "name": "ArcLight Cinemas",
+    "article": [
+        "The ArcLight Cinemas is a cinema where many things have happened."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 133
+    }
+}, {
+    "_key": "_:huntingtonbeach",
+    "name": "Huntington Beach",
+    "article": [
+        "Site of: a surfing world record; nothing else"
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 222
+    }
+}, {
+    "_key": "_:bergenregional",
+    "name": "Bergen Regional Medical Center",
+    "article": [
+        "Bergen Regional Medical Center."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 202
+    }
+}, {
+    "_key": "_:sixflagsmagicmountain",
+    "name": "Six Flags Magic Mountain",
+    "article": [
+        "Valencia, CA"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 7
+    }
+}, {
+    "_key": "_:pasadenafairytaletheatre",
+    "name": "Pasadena Fairy Tale Theatre",
+    "article": [
+        "Legendary arts venue"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 6
+    }
+}, {
+    "_key": "_:griffithobservatory",
+    "name": "Griffith Observatory",
+    "article": [
+        "Legendary science venue"
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 250
+    }
+}, {
+    "_key": "_:radiocity",
+    "name": "Radio City Music Hall",
+    "article": [
+        "Radio City Music Hall is a legendary performance space in New York City."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 98
+    }
+}, {
+    "_key": "_:ballyshollywood",
+    "name": "Bally's Hollywood",
+    "article": [
+        "Bill Carter's place of work."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 149
+    }
+}, {
+    "_key": "_:starbucksgowergulch",
+    "name": "Starbucks - Gower Gulch",
+    "article": [
+        "Starbucks at Gower Gulch is a known hangout for Gadfly Jack Fitzgerald and others like him."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 388
+    }
+}, {
+    "_key": "_:schmeidebergpretzelcompany",
+    "name": "Schmeideberg Pretzel Company",
+    "article": [
+        "Makers of the loudest pretzels in Germany; August Lindt's place of work."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 129
+    }
+}, {
+    "_key": "_:unnamedlotionshop",
+    "name": "Unnamed Lotion Shop",
+    "article": [
+        "Possibly only existing in the fantastical imagination of Jeff Garlin, this unnamed lotion shop supposedly sits on Boner Avenue and is staffed by, among others no doubt, 'Mr. Francisco,' the star of one of Ben Alterman's standup jokes."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 111
+    }
+}, {
+    "_key": "_:shadyviewboardandcare",
+    "name": "Shady View Board & Care",
+    "article": [
+        "Shady View Board & Care is an active retirement community east of Los Angeles."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 598
+    }
+}, {
+    "_key": "_:scapeoreswamp",
+    "name": "Scape Ore Swamp",
+    "article": [
+        "Scape Ore Swamp is a rural area in Lee County, South Carolina, USA, rumored to (formerly) host a Lizard Man."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1167
+    }
+}, {
+    "_key": "_:suwanneecountyflorida",
+    "name": "Suwannee County",
+    "article": [
+        "Suwannee County is a rural admin in Florida, USA, rumored to host multiple Skunk Apes."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1066
+    }
+}, {
+    "_key": "_:popelickbridge",
+    "name": "Pope Lick Bridge",
+    "article": [
+        "Pope Lick Bridge is an overpass near Louisville, Kentucky, USA, rumored to formerly house an eponymous monster."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1168
+    }
+}, {
+    "_key": "_:branchhillohio",
+    "name": "Branch Hill",
+    "article": [
+        "Branch Hill is a town in Ohio, USA, rumored to (formerly) host the Loveland Frog Man."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1169
+    }
+}, {
+    "_key": "_:honeyislandswamp",
+    "name": "Honey Island Swamp",
+    "article": [
+        "Honey Island Swamp is a marshland in eastern Louisiana, USA, rumored to (formerly) host the Honey Island Swamp Monster."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1170
+    }
+}, {
+    "_key": "_:arroyocoloradocanal",
+    "name": "Arroyo Colorado Canal",
+    "article": [
+        "Arroyo Colorado Canal is a waterway in Harlingen, Texas, USA, rumored to (formerly) host the Big Bird of the Rio Grande Valley."
+    ],
+    "geo_key": {
+        "type": "point",
+        "id": 1171
+    }
+}, {
+    "_key": "_:freetownstateforest",
+    "name": "Freetown-Fall River State Forest",
+    "article": [
+        "Freetown-Fall River State Forest is a protected land in Massachusetts, USA, rumored to (formerly) host at least one Pukwudgie."
+    ],
+    "geo_key": {
+        "type": "poly",
+        "id": 1067
+    }
 }]
