@@ -89,25 +89,25 @@
     "type": "occurredAt",
     "vertex": "_:ahiisborntosurf"
 }, {
-    "_from": "events/_:byrondenistonrecordsbe2frommontecito",
+    "_from": "events/_:byrondennistonrecordsbe2frommontecito",
     "_to": "places/_:harryandmeghansteahouse",
     "type": "occurredAt",
-    "vertex": "_:byrondenistonrecordsbe2frommontecito"
+    "vertex": "_:byrondennistonrecordsbe2frommontecito"
 }, {
-    "_from": "events/_:byrondenistonrecordsbe2frommontecito",
+    "_from": "events/_:byrondennistonrecordsbe2frommontecito",
     "_to": "people/_:philomenabonpointemiller",
     "type": "hasParticipant",
-    "vertex": "_:byrondenistonrecordsbe2frommontecito"
+    "vertex": "_:byrondennistonrecordsbe2frommontecito"
 }, {
-    "_from": "events/_:byrondenistonrecordsbe2frommontecito",
+    "_from": "events/_:byrondennistonrecordsbe2frommontecito",
     "_to": "people/_:dickieponsenby",
     "type": "hasParticipant",
-    "vertex": "_:byrondenistonrecordsbe2frommontecito"
+    "vertex": "_:byrondennistonrecordsbe2frommontecito"
 }, {
-    "_from": "events/_:byrondenistonrecordsbe2frommontecito",
+    "_from": "events/_:byrondennistonrecordsbe2frommontecito",
     "_to": "people/_:byrondenniston",
     "type": "hasParticipant",
-    "vertex": "_:byrondenistonrecordsbe2frommontecito"
+    "vertex": "_:byrondennistonrecordsbe2frommontecito"
 }, {
     "_from": "events/_:daltonwilcoxpullsabadronaldinandyrichtersbackyard",
     "_to": "people/_:mutttaylor",
