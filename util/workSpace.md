@@ -197,9 +197,51 @@ mutttaylor
         ]
     }
 
+    ,{
+        "_key": "_:lilibetdianamountbattenwindsor",
+        "daly": "false",
+        "name": "Lilibet Diana Mountbatten-Windsor",
+        "nami": "Mountbatten-Windsor, Lilibet Diana",
+        "article": [
+            "Lilibet Diana Mountbatten-Windsor is the granddaughter of King Charles III."
+        ]
+    }
 
-lillibut hasParticipant
 
-byron hasParticipant
 
 ##### edges
+
+    ,{
+        "_from": "events/_:byrondennistonobservesabreastfeedingmixup",
+        "_to": "places/_:harryandmeghansmainhousemontecito",
+        "type": "occurredAt",
+        "vertex": "_:byrondennistonobservesabreastfeedingmixup"
+    }
+
+    ,{
+        "_from": "events/_:byrondennistonobservesabreastfeedingmixup",
+        "_to": "people/_:byrondenniston",
+        "type": "hasParticipant",
+        "vertex": "_:byrondennistonobservesabreastfeedingmixup"
+    }
+
+    ,{
+        "_from": "events/_:byrondennistonobservesabreastfeedingmixup",
+        "_to": "people/_:princeharrydukeofsussex",
+        "type": "hasParticipant",
+        "vertex": "_:byrondennistonobservesabreastfeedingmixup"
+    }
+
+    ,{
+        "_from": "events/_:byrondennistonobservesabreastfeedingmixup",
+        "_to": "people/_:meghanduchessofsussex",
+        "type": "hasParticipant",
+        "vertex": "_:byrondennistonobservesabreastfeedingmixup"
+    }
+
+    ,{
+        "_from": "events/_:byrondennistonobservesabreastfeedingmixup",
+        "_to": "people/_:lilibetdianamountbattenwindsor",
+        "type": "hasParticipant",
+        "vertex": "_:byrondennistonobservesabreastfeedingmixup"
+    }
