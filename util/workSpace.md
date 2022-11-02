@@ -152,8 +152,8 @@ mutttaylor
             "Harry and Meghan's Montecito House is the home of Prince Harry and his wife, Meghan Marke, the Duke and Duchess of Sussex."
         ],
         "geo_key": {
-            "type": "",
-            "id": 
+            "type": "point",
+            "id":1621 
         }
     }
 
