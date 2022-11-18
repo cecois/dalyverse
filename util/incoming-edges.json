@@ -1,4 +1,19 @@
-[, {
+[{
+    "_from": "people/_:daltonwilcox",
+    "_to": "events/_:daltonwilcoxpullsabadronaldinandyrichtersbackyard",
+    "type": "hasParticipant",
+    "vertex": "_:daltonwilcox"
+}, {
+    "_from": "people/_:mutttaylor",
+    "_to": "events/_:daltonwilcoxpullsabadronaldinandyrichtersbackyard",
+    "type": "hasParticipant",
+    "vertex": "_:mutttaylor"
+}, {
+    "_from": "people/_:andyrichter",
+    "_to": "events/_:daltonwilcoxpullsabadronaldinandyrichtersbackyard",
+    "type": "hasParticipant",
+    "vertex": "_:andyrichter"
+}, {
     "_from": "people/_:paulmccartney",
     "_to": "things/_:shanana",
     "type": "isMemberOf",
