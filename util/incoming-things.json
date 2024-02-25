@@ -1,199 +1,305 @@
-[{
-    "_key": "_:townland",
-    "name": "Townland",
-    "article": ["Townland is a remarkably melodic rootsy band from Los Angeles."]
-},{
-    "_key": "_:sweatequity",
-    "name": "Sweat Equity",
-    "article": ["Sweat Equity is a real estate company owned and operated by Amy Sleeverson. If you sweat on a piece of property she'll put her real estate placard on it and sell it."]
-},{
-    "_key": "_:twomasterspayroll",
-    "name": "Two Masters Payroll",
-    "article": ["Two Masters Payroll is a payroll service owned and operated by Amy Sleeverson. All transactions incur an “Automated Tithing Solution” (in gold) that is sent directly to the **Church of the Holy Sepulchre** in Jerusalem."]
-}, {
-    "_key": "_:cowboyflicks",
-    "name": "CountryFlicks",
-    "article": ["CountryFlicks is a company, akin to CleanFlicks, that scrubs all urban elements from popular cinema."]
-}, {
-    "_key": "_:lazyboys",
-    "name": "Lazy Boys",
-    "article": ["Lazy Boys were a disco outfit with which Mutt Taylor dabbled."]
-}, {
-    "_key": "_:thedoobiebrothers",
-    "name": "The Doobie Brothers",
-    "article": ["The Doobie Brothers were a shitty band from the 20th century."]
-}, {
-    "_key": "_:thejourneymen",
-    "name": "The Journemen",
-    "article": ["The Journeymen are the finest purveyors of Country & Western music in the land."]
-}, {
-    "_key": "_:lochnessmonster",
-    "article": ["The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter."],
-    "name": "The Loch Ness Monster",
-    "nami": "Loch Ness Monster, The",
-    "links": [{
-        "uri": "https://en.wikipedia.org/wiki/Loch_Ness_Monster",
-        "label": "Wikipedia"
-    }]
-}, {
-    "_key": "_:unnamedorangutan",
-    "name": "Unnamed Orangutan",
-    "article": ["Unnamed Orangutan was an oranguton impulsively-purchased in 1978 by Dalton Wilcox."]
-}, {
-    "_key": "_:miltonanddupree",
-    "name": "Milton and Dupree",
-    "article": ["Milton and Dupree are a Vaudeville act whose two members were once accidentally married to each other in Reno, NV."]
-}, {
-    "_key": "_:unnamedpropertydamagingfirm",
-    "name": "Unnamed Property Damaging Firm",
-    "article": ["Unnamed Property Damaging Firm was a business, probably in Connecticut, that gave Don DiMello one of his earliest jobs."]
-}, {
-    "_key": "_:uber",
-    "name": "Uber",
-    "article": ["Uber is a car-sharing service."]
-}, {
-    "_key": "_:seaorg",
-    "name": "Sea Org",
-    "article": ["Sea Org is the action wing of L. Ron Hubbard's halo of self- and world-improving initiatives."]
-}, {
-    "_key": "_:pasadenanewspresstimesgazette",
-    "name": "Pasadena News Press Times-Gazette",
-    "article": ["The Pasadena News Press Times-Gazette is a local weekly distributed in, and focused on, arts and entertainment in 'our pretty good life in this basically typical small city in America' - Pasadena, California."]
-}, {
-    "_key": "_:smersh",
-    "name": "SMERSH",
-    "article": ["SMERSH is primarily an espionage organization felt by L. Ron Hubbard to be targeting for sabotage the missions of his Sea Org in the late 1960s. According to Mr. Hubbard, SMERSH was a code name borrowed from the James Bond 007 book 'Goldfinger.' Its letters stood for \"Soviet, Executive, Murder and so on.\" [sic] \"'SMERSH' of course was a fiction,\" wrote Mr. Hubbard, but \"The enemy we fight is not. We call him SMERSH just to be factual and impolite.\" -- https://www.villagevoice.com/2011/12/23/scientology-on-the-high-seas-yuletide-cheer-including-dickens-adapted-with-evil-psychs/"]
-}, {
-    "_key": "_:russianorthodoxchurch",
-    "name": "Russian Orthodox Church",
-    "article": ["The Russian Orthodox Church (ROC)...is one of the autocephalous Eastern Orthodox Christian churches. -- Wikipedia"]
-}, {
-    "_key": "_:takemywifekeys",
-    "name": "Take My Wife Keys",
-    "article": ["Take My Wife Keys was a party entertainment business."]
-}, {
-    "_key": "_:episcopalchurch",
-    "name": "Episcopal Church",
-    "article": ["The Episcopal Church (TEC) is the member church of the worldwide Anglican Communion based in the United States with dioceses elsewhere. -- Wikipedia"]
-}, {
-    "_key": "_:bahai",
-    "name": "Bahá'í",
-    "article": ["Bahá'í Faith is a religion teaching the essential worth of all religions, and the unity and equality of all people. -- Wikipedia"]
-}, {
-    "_key": "_:equus",
-    "name": "Equus",
-    "article": ["Equus is a 1973 play by Peter Shaffer."]
-}, {
-    "_key": "_:thefifthwall",
-    "name": "The Fifth Wall",
-    "nami": "Fifth Wall, The",
-    "article": ["The Fifth Wall was a theatre review periodical with a particular bent toward innovation."]
-}, {
-    "_key": "_:thechildrenshour",
-    "name": "The Children's Hour",
-    "nami": "Children's Hour, The",
-    "article": ["The Children's Hour is a play by Lillian Hellman."]
-}, {
-    "_key": "_:glengarryglenross",
-    "name": "Glengarry Glen Ross",
-    "article": ["Glengarry Glen Ross is a play by David Mamet"]
-}, {
-    "_key": "_:cameronmcgoniglesghosttoursthatarescary",
-    "name": "Cameron McGonigle's Ghost Tours That Are Scary",
-    "article": ["Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland."],
-    "geo_key": {
-        "type": "_key",
-        "id": null
-    }
-}, {
-    "_key": "_:homealonefilm",
-    "name": "Home Alone",
-    "article": ["Home Alone is a 1990 Chris Columbus film produced by John Hughes."]
-}, {
-    "_key": "_:thejourneymen",
-    "name": "The Journeymen",
-    "nami": "Journeymen, The",
-    "article": ["Possibly the greatest purveyors of Country & Western music ever."]
-}, {
-    "_key": "_:u2",
-    "name": "U2",
-    "article": ["Rock and roll musical combination."]
-}, {
-    "_key": "_:simpleminds",
-    "name": "Simple Minds",
-    "article": ["Rock and roll musical combination."]
-}, {
-    "_key": "_:jesusjones",
-    "name": "Jesus Jones",
-    "article": ["Rock and roll musical combination."]
-}, {
-    "_key": "_:shanana",
-    "name": "Sha Na Na",
-    "article": ["Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase."],
-    "links": [{
-        "uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
-        "label": "Wikipedia"
-    }]
-}, {
-    "_key": "_:lotpinc",
-    "name": "Life of the Party, Inc.",
-    "article": ["Life of the Party, Inc., is a party-execution operation launched and owned by Danny Mahoney. The way it works is: if you're throwing a party -- any kind of a party, doesn't matter if it's a Baz Mitzvah, somebody's getting out of jail, or even a gay wedding -- you hire LOTPCInc and Danny will come to the party and make it fantastic by being the life of the party. Harmonica performances must be explicitly requested. The company can be reached at 1-800-CMONNOW."]
-}, {
-    "_key": "_:nashasha",
-    "name": "Na Sha Sha",
-    "article": ["Na Sha Sha is a classic American rock n' roll tribute band that does exist."],
-    "links": []
-}, {
-    "_key": "_:emersonlakepalmer",
-    "name": "Emerson, Lake & Palmer",
-    "article": ["Emerson, Lake & Palmer is a legendary English prog-rock band."]
-}, {
-    "_key": "_:yesband",
-    "name": "Yes",
-    "article": ["Yes is a legendary English prog-rock band."]
-}, {
-    "_key": "_:rushband",
-    "name": "Rush",
-    "article": ["Rush is a legendary Canadian prog-rock band."]
-}, {
-    "_key": "_:genesisband",
-    "name": "Genesis",
-    "article": ["Genesis is a legendary English prog-rock band."]
-}, {
-    "_key": "_:rosebushred",
-    "name": "Rosebush Red",
-    "article": ["Rosebush Red is a high school rock band at one point, at least, comprised entirely of the sons of Prog pioneers."],
-    "links": []
-}, {
-    "_key": "_:dexysmidnightrunners",
-    "name": "Dexys Midnight Runners",
-    "article": ["Dexys Midnight Runners are an English pop band with soul influences who achieved their major success in the early to mid-1980s."]
-}, {
-    "_key": "_:unnamedmidtownpeeptheatre",
-    "name": "Unnamed Peepshow/Theatre in Midtown NYC",
-    "article": [null]
-}, {
-    "_key": "_:unnamedmedicalpackagingplant",
-    "name": "Unnamed Medical Packaging Plant",
-    "article": [null]
-}, {
-    "_key": "_:unnamed80sbedandbreakfast",
-    "name": "Unnamed 80s-Themed Bed and Breakfast",
-    "article": [null]
-}, {
-    "_key": "_:unnamed50sbedandbreakfast",
-    "name": "Unnamed 50s-Themed Bed and Breakfast",
-    "article": [null]
-}, {
-    "_key": "_:unnamedmechanicbusiness",
-    "name": "Unnamed Mechanic Business",
-    "article": [null]
-}, {
-    "_key": "_:trainerforthestarsseekingstars",
-    "name": "Trainer for the Stars Seeking Stars",
-    "article": ["Bill Carter's personal training org."]
-}, {
-    "_key": "_:unnamedplumbingco",
-    "name": "Unnamed Plumbing Company",
-    "article": ["Until late 2008, Danny and Bert Mahoney operated a as-yet unnamed plumbing business. In the winter of that year, Bertrand 'grew weary' of Danny's personality and executed a hostile takeover, plunging Danny into a short-lived emotional spiral that led to a failed suicide attempt."]
-}]
+[
+	{
+		"_key": "_:townland",
+		"name": "Townland",
+		"article": [
+			"Townland is a remarkably melodic rootsy band from Los Angeles."
+		]
+	},
+	{
+		"_key": "_:sweatequity",
+		"name": "Sweat Equity",
+		"article": [
+			"Sweat Equity is a real estate company owned and operated by Amy Sleeverson. If you sweat on a piece of property she'll put her real estate placard on it and sell it."
+		]
+	},
+	{
+		"_key": "_:twomasterspayroll",
+		"name": "Two Masters Payroll",
+		"article": [
+			"Two Masters Payroll is a payroll service owned and operated by Amy Sleeverson. All transactions incur an “Automated Tithing Solution” (in gold) that is sent directly to the **Church of the Holy Sepulchre** in Jerusalem."
+		]
+	},
+	{
+		"_key": "_:cowboyflicks",
+		"name": "CountryFlicks",
+		"article": [
+			"CountryFlicks is a company, akin to CleanFlicks, that scrubs all urban elements from popular cinema."
+		]
+	},
+	{
+		"_key": "_:lazyboys",
+		"name": "Lazy Boys",
+		"article": [
+			"Lazy Boys were a disco outfit with which Mutt Taylor dabbled."
+		]
+	},
+	{
+		"_key": "_:thedoobiebrothers",
+		"name": "The Doobie Brothers",
+		"article": [
+			"The Doobie Brothers were a shitty band from the 20th century."
+		]
+	},
+	{
+		"_key": "_:thejourneymen",
+		"name": "The Journemen",
+		"article": [
+			"The Journeymen are the finest purveyors of Country & Western music in the land."
+		]
+	},
+	{
+		"_key": "_:lochnessmonster",
+		"article": [
+			"The Loch Ness Monster is a mythical creature from Scotland, claimed by Poet Laureate of the West Dalton Wilcox to be a shapeshifter."
+		],
+		"name": "The Loch Ness Monster",
+		"nami": "Loch Ness Monster, The",
+		"links": [
+			{
+				"uri": "https://en.wikipedia.org/wiki/Loch_Ness_Monster",
+				"label": "Wikipedia"
+			}
+		]
+	},
+	{
+		"_key": "_:unnamedorangutan",
+		"name": "Unnamed Orangutan",
+		"article": [
+			"Unnamed Orangutan was an oranguton impulsively-purchased in 1978 by Dalton Wilcox."
+		]
+	},
+	{
+		"_key": "_:miltonanddupree",
+		"name": "Milton and Dupree",
+		"article": [
+			"Milton and Dupree are a Vaudeville act whose two members were once accidentally married to each other in Reno, NV."
+		]
+	},
+	{
+		"_key": "_:unnamedpropertydamagingfirm",
+		"name": "Unnamed Property Damaging Firm",
+		"article": [
+			"Unnamed Property Damaging Firm was a business, probably in Connecticut, that gave Don DiMello one of his earliest jobs."
+		]
+	},
+	{
+		"_key": "_:uber",
+		"name": "Uber",
+		"article": ["Uber is a car-sharing service."]
+	},
+	{
+		"_key": "_:seaorg",
+		"name": "Sea Org",
+		"article": [
+			"Sea Org is the action wing of L. Ron Hubbard's halo of self- and world-improving initiatives."
+		]
+	},
+	{
+		"_key": "_:pasadenanewspresstimesgazette",
+		"name": "Pasadena News Press Times-Gazette",
+		"article": [
+			"The Pasadena News Press Times-Gazette is a local weekly distributed in, and focused on, arts and entertainment in 'our pretty good life in this basically typical small city in America' - Pasadena, California."
+		]
+	},
+	{
+		"_key": "_:smersh",
+		"name": "SMERSH",
+		"article": [
+			"SMERSH is primarily an espionage organization felt by L. Ron Hubbard to be targeting for sabotage the missions of his Sea Org in the late 1960s. According to Mr. Hubbard, SMERSH was a code name borrowed from the James Bond 007 book 'Goldfinger.' Its letters stood for \"Soviet, Executive, Murder and so on.\" [sic] \"'SMERSH' of course was a fiction,\" wrote Mr. Hubbard, but \"The enemy we fight is not. We call him SMERSH just to be factual and impolite.\" -- https://www.villagevoice.com/2011/12/23/scientology-on-the-high-seas-yuletide-cheer-including-dickens-adapted-with-evil-psychs/"
+		]
+	},
+	{
+		"_key": "_:russianorthodoxchurch",
+		"name": "Russian Orthodox Church",
+		"article": [
+			"The Russian Orthodox Church (ROC)...is one of the autocephalous Eastern Orthodox Christian churches. -- Wikipedia"
+		]
+	},
+	{
+		"_key": "_:takemywifekeys",
+		"name": "Take My Wife Keys",
+		"article": ["Take My Wife Keys was a party entertainment business."]
+	},
+	{
+		"_key": "_:episcopalchurch",
+		"name": "Episcopal Church",
+		"article": [
+			"The Episcopal Church (TEC) is the member church of the worldwide Anglican Communion based in the United States with dioceses elsewhere. -- Wikipedia"
+		]
+	},
+	{
+		"_key": "_:bahai",
+		"name": "Bahá'í",
+		"article": [
+			"Bahá'í Faith is a religion teaching the essential worth of all religions, and the unity and equality of all people. -- Wikipedia"
+		]
+	},
+	{
+		"_key": "_:equus",
+		"name": "Equus",
+		"article": ["Equus is a 1973 play by Peter Shaffer."]
+	},
+	{
+		"_key": "_:thefifthwall",
+		"name": "The Fifth Wall",
+		"nami": "Fifth Wall, The",
+		"article": [
+			"The Fifth Wall was a theatre review periodical with a particular bent toward innovation."
+		]
+	},
+	{
+		"_key": "_:thechildrenshour",
+		"name": "The Children's Hour",
+		"nami": "Children's Hour, The",
+		"article": ["The Children's Hour is a play by Lillian Hellman."]
+	},
+	{
+		"_key": "_:glengarryglenross",
+		"name": "Glengarry Glen Ross",
+		"article": ["Glengarry Glen Ross is a play by David Mamet"]
+	},
+	{
+		"_key": "_:cameronmcgoniglesghosttoursthatarescary",
+		"name": "Cameron McGonigle's Ghost Tours That Are Scary",
+		"article": [
+			"Cameron McGonigle's Ghost Tours That Are Scary is a tourism service in Edinburgh, Scotland."
+		],
+		"geo_key": {
+			"type": "_key",
+			"id": null
+		}
+	},
+	{
+		"_key": "_:homealonefilm",
+		"name": "Home Alone",
+		"article": [
+			"Home Alone is a 1990 Chris Columbus film produced by John Hughes."
+		]
+	},
+	{
+		"_key": "_:thejourneymen",
+		"name": "The Journeymen",
+		"nami": "Journeymen, The",
+		"article": [
+			"Possibly the greatest purveyors of Country & Western music ever."
+		]
+	},
+	{
+		"_key": "_:u2",
+		"name": "U2",
+		"article": ["Rock and roll musical combination."]
+	},
+	{
+		"_key": "_:simpleminds",
+		"name": "Simple Minds",
+		"article": ["Rock and roll musical combination."]
+	},
+	{
+		"_key": "_:jesusjones",
+		"name": "Jesus Jones",
+		"article": ["Rock and roll musical combination."]
+	},
+	{
+		"_key": "_:shanana",
+		"name": "Sha Na Na",
+		"article": [
+			"Sha Na Na is a tribute act with a tumultuous history and a rabid fanbase."
+		],
+		"links": [
+			{
+				"uri": "https://en.wikipedia.org/wiki/Sha_Na_Na",
+				"label": "Wikipedia"
+			}
+		]
+	},
+	{
+		"_key": "_:lotpinc",
+		"name": "Life of the Party, Inc.",
+		"article": [
+			"Life of the Party, Inc., is a party-execution operation launched and owned by Danny Mahoney. The way it works is: if you're throwing a party -- any kind of a party, doesn't matter if it's a Baz Mitzvah, somebody's getting out of jail, or even a gay wedding -- you hire LOTPCInc and Danny will come to the party and make it fantastic by being the life of the party. Harmonica performances must be explicitly requested. The company can be reached at 1-800-CMONNOW."
+		]
+	},
+	{
+		"_key": "_:nashasha",
+		"name": "Na Sha Sha",
+		"article": [
+			"Na Sha Sha is a classic American rock n' roll tribute band that does exist."
+		],
+		"links": []
+	},
+	{
+		"_key": "_:emersonlakepalmer",
+		"name": "Emerson, Lake & Palmer",
+		"article": [
+			"Emerson, Lake & Palmer is a legendary English prog-rock band."
+		]
+	},
+	{
+		"_key": "_:yesband",
+		"name": "Yes",
+		"article": ["Yes is a legendary English prog-rock band."]
+	},
+	{
+		"_key": "_:rushband",
+		"name": "Rush",
+		"article": ["Rush is a legendary Canadian prog-rock band."]
+	},
+	{
+		"_key": "_:genesisband",
+		"name": "Genesis",
+		"article": ["Genesis is a legendary English prog-rock band."]
+	},
+	{
+		"_key": "_:rosebushred",
+		"name": "Rosebush Red",
+		"article": [
+			"Rosebush Red is a high school rock band at one point, at least, comprised entirely of the sons of Prog pioneers."
+		],
+		"links": []
+	},
+	{
+		"_key": "_:dexysmidnightrunners",
+		"name": "Dexys Midnight Runners",
+		"article": [
+			"Dexys Midnight Runners are an English pop band with soul influences who achieved their major success in the early to mid-1980s."
+		]
+	},
+	{
+		"_key": "_:unnamedmidtownpeeptheatre",
+		"name": "Unnamed Peepshow/Theatre in Midtown NYC",
+		"article": [null]
+	},
+	{
+		"_key": "_:unnamedmedicalpackagingplant",
+		"name": "Unnamed Medical Packaging Plant",
+		"article": [null]
+	},
+	{
+		"_key": "_:unnamed80sbedandbreakfast",
+		"name": "Unnamed 80s-Themed Bed and Breakfast",
+		"article": [null]
+	},
+	{
+		"_key": "_:unnamed50sbedandbreakfast",
+		"name": "Unnamed 50s-Themed Bed and Breakfast",
+		"article": [null]
+	},
+	{
+		"_key": "_:unnamedmechanicbusiness",
+		"name": "Unnamed Mechanic Business",
+		"article": [null]
+	},
+	{
+		"_key": "_:trainerforthestarsseekingstars",
+		"name": "Trainer for the Stars Seeking Stars",
+		"article": ["Bill Carter's personal training org."]
+	},
+	{
+		"_key": "_:unnamedplumbingco",
+		"name": "Unnamed Plumbing Company",
+		"article": [
+			"Until late 2008, Danny and Bert Mahoney operated a as-yet unnamed plumbing business. In the winter of that year, Bertrand 'grew weary' of Danny's personality and executed a hostile takeover, plunging Danny into a short-lived emotional spiral that led to a failed suicide attempt."
+		]
+	}
+]
