@@ -24,6 +24,12 @@
         "vertex": "_:byrondenniston"
     },
     {
+        "_from": "people/_:charingcrosstheatre",
+        "_to": "events/_:byrondennistonattendstheonelovefilmpremiere",
+        "type": "occurredAt",
+        "vertex": "_:charingcrosstheatre"
+    },
+    {
         "_from": "people/_:meghanduchessofsussex",
         "_to": "events/_:byrondennistonattendstheonelovefilmpremiere",
         "type": "hasParticipant",

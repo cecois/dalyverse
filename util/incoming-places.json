@@ -1,5 +1,16 @@
 [
     {
+        "_key": "_:charingcrosstheatre",
+        "name": "Charing Cross Theatre",
+        "article": [
+            "The Charing Cross Theatre is an Off West End theatre under The Arches off Villiers Street"
+        ],
+        "geo_key": {
+            "type": "point",
+            "id": 1822
+        }
+    },
+    {
         "_key": "_:quoinrockmanorhouse",
         "name": "Quoin Rock Manor House",
         "article": [
@@ -564,17 +575,6 @@
         "geo_key": {
             "type": "point",
             "id": 1320
-        }
-    },
-    {
-        "_key": "_:leapznboundswest",
-        "name": "Leaps N Boundz - West L.A.",
-        "article": [
-            "Leaps N Boundz is a therapy, recreation, and social programs facility for individuals with diverse abilities."
-        ],
-        "geo_key": {
-            "type": "point",
-            "id": 1324
         }
     },
     {

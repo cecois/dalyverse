@@ -1,0 +1,25 @@
+/**
+ * src/styles/_settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+@use "vuetify/settings" with (
+  $app-bar-background: false
+);
+
+@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
+
+body {
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 100;
+}
+
+//::selection {
+//  color: $appWhiteOff; /* WebKit/Blink Browsers */
+//  background: $appSecondary;
+//}
+//::-moz-selection {
+//  color: $appWhiteOff; /* Gecko Browsers */
+//  background: $appSecondary;
+//}

@@ -247,3 +247,31 @@ EOF
 
 - Moving toward podman instead of docker (and upgrading from v3.5.0 to 3.11.7)
 - moving off nginx-proxy toward manually-configuring an :80 nginx
+
+<!-- podman run --name arangodb -e ARANGO_RANDOM_ROOT_PASSWORD=1 -d -p 8529:8529 arangodb -->
+<!-- podman run --name arangodb -v $HOME/git/dalyverse/util:/mnt/ -e ARANGO_RANDOM_ROOT_PASSWORD=1 -d -p 8529:8529 arangodb -->
+<!-- podman run --name arangodb -v $HOME:$HOME -e ARANGO_RANDOM_ROOT_PASSWORD=1 -d -p 8529:8529 arangodb -->
+<!-- podman run --name arangodb -v $HOME:$HOME:Z -e ARANGO_RANDOM_ROOT_PASSWORD=1 -d -p 8529:8529 arangodb # Error: SELinux relabeling of /home/ccmiller is not allowed-->
+
+podman run --name arangodb -v $HOME/git/dalyverse/util:/mnt:Z -e ARANGO_RANDOM_ROOT_PASSWORD=1 -d -p 8529:8529 arangodb
+
+podman logs arangodb|grep -i GENERATED #JEAlHs20oUvk23RF
+
+cat << EOF > arango.conf
+server {
+listen 80;
+server_name arango.milleria-dev.org;
+
+    location / {
+        proxy_pass http://159.65.190.110:8529;
+    }
+    }
+
+arangoimport --file "/mnt/incoming-places.json" --type json --collection "places" --create-collection true
+arangoimport --file "/mnt/incoming-people.json" --type json --collection "people" --create-collection true
+arangoimport --file "/mnt/incoming-events.json" --type json --collection "events" --create-collection true
+arangoimport --file "/mnt/incoming-edges.json" --type json --collection "edges" --create-collection-type edge --create-collection true
+
+##### Query
+
+JEAlHs20oUvk23RF
