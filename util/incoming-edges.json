@@ -1,9 +1,51 @@
 [
     {
+        "_from": "people/_:chipgardner",
+        "_to": "events/_:chipgardnergetsbannedfromthesonylot",
+        "type": "hasParticipant",
+        "vertex": "_:chipgardner"
+    },
+    {
+        "_from": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+        "_to": "events/_:williamschmitthoffmanannounceshiscandidacyforthebeverlyhillshomeownersassociationboard",
+        "type": "hasParticipant",
+        "vertex": "_:williamgeorgefrederickschmitthoffmanxxviii"
+    },
+    {
+        "_from": "place/_:sonypicturestudiosmotorgate",
+        "_to": "events/_:chipgardnergetsbannedfromthesonylot",
+        "type": "occurredAt",
+        "vertex": "_:sonypicturestudiosmotorgate"
+    },
+    {
+        "_from": "place/_:angelesnationalforest",
+        "_to": "events/_:kenjenningschipgardnerbowhunts",
+        "type": "occurredAt",
+        "vertex": "_:angelesnationalforest"
+    },
+    {
         "_from": "place/_:quoinrockmanorhouse",
         "_to": "events/_:theweddingofladyameliaspencertogregthegrizmallett",
         "type": "occurredAt",
         "vertex": "_:quoinrockmanorhouse"
+    },
+    {
+        "_from": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+        "_to": "events/_:williamschmitthoffmanglenwoodlosetheircar",
+        "type": "hasParticipant",
+        "vertex": "_:williamgeorgefrederickschmitthoffmanxxviii"
+    },
+    {
+        "_from": "people/_:williamgeorgefrederickschmitthoffmanxxviii",
+        "_to": "events/_:williamschmitthoffmanfailstobecomeapersonaltrainer",
+        "type": "hasParticipant",
+        "vertex": "_:williamgeorgefrederickschmitthoffmanxxviii"
+    },
+    {
+        "_from": "people/_:glenwoodvaughan",
+        "_to": "events/_:williamschmitthoffmanglenwoodlosetheircar",
+        "type": "hasParticipant",
+        "vertex": "_:glenwoodvaughan"
     },
     {
         "_from": "people/_:ladyameliaspencer",
@@ -226,6 +268,18 @@
         "_to": "places/_:sunglasshuthuntingtonbeach",
         "type": "worksAt",
         "vertex": "_:hotdog"
+    },
+    {
+        "_from": "people/_:chipgardner",
+        "_to": "people/_:kenjennings",
+        "type": "hasFriend",
+        "vertex": "_:chipgardner"
+    },
+    {
+        "_from": "people/_:kenjennings",
+        "_to": "people/_:chipgardner",
+        "type": "hasFriend",
+        "vertex": "_:kenjennings"
     },
     {
         "_from": "people/_:amysleeverson",

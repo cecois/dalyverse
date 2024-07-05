@@ -1,5 +1,80 @@
 [
     {
+        "key": "_:chipgardnergetsbannedfromthesonylot",
+        "name": "Chip Gardner gets banned from the Sony lot.",
+        "article": [
+            "Chip Gardner, crashing the set of Jeopardy!, is escorted to the other side of the gate."
+        ],
+        "timestamp": {
+            "start": "2022-06-12T13:15:00Z",
+            "end": "2022-06-12T15:15:00Z"
+        },
+        "nb_timestamp": {
+            "class": "wild guess",
+            "nb": "acc to chip on cbb#864@70+"
+        }
+    },
+    {
+        "key": "_:kenjenningschipgardnerbowhunts",
+        "name": "Ken Jennings and Chip Gardner Bow Hunts",
+        "article": [
+            "Chip Gardner and certifiable friend, Ken Jennings, will on 'most weekends' hunt by bow in the Angeles National Forest."
+        ],
+        "timestamp": {
+            "start": "2016-10-22T13:15:00Z",
+            "end": "2024-05-22T13:15:00Z"
+        },
+        "nb_timestamp": {
+            "class": "ongoing",
+            "nb": "most weekends acc to chip on cbb#864@67+"
+        }
+    },
+    {
+        "key": "_:williamschmitthoffmanannounceshiscandidacyforthebeverlyhillshomeownersassociationboard",
+        "name": "William Schmitt-Hoffman Announces His Candidacy for the Beverly Hills Home Owners Association Board",
+        "article": [
+            "William Schmitt-Hoffman, presumably due to personal home-ownership issues, announced his candidacy for the Beverly Hills Home Owners Association Board."
+        ],
+        "timestamp": {
+            "start": "2019-10-22T13:15:00Z",
+            "end": "2019-10-22T13:15:00Z"
+        },
+        "nb_timestamp": {
+            "class": "estimate to the quarter",
+            "nb": "'recently' per GACOC#11"
+        }
+    },
+    {
+        "key": "_:williamschmitthoffmanfailstobecomeapersonaltrainer",
+        "name": "William Schmitt-Hoffman Fails to Become a Personal Trainer",
+        "article": [
+            "For reasons undisclosed but presumed, William George Frederick Schmitt-Hoffman XXVIII fails to become a personal trainer."
+        ],
+        "timestamp": {
+            "start": "2019-03-22T13:15:00Z",
+            "end": "2019-03-22T13:15:00Z"
+        },
+        "nb_timestamp": {
+            "class": "estimate to the year",
+            "nb": "'a couple of months ago' during GACOC#6"
+        }
+    },
+    {
+        "key": "_:williamschmitthoffmanglenwoodlosetheircar",
+        "name": "William Schmitt-Hoffman & Glenwood Lose Their Car",
+        "article": [
+            "For reasons undisclosed, William George Frederick Schmitt-Hoffman XXVIII & Glenwood Vaughan lose ownership of their shared Toyota."
+        ],
+        "timestamp": {
+            "start": "2023-01-22T13:15:00Z",
+            "end": "2023-01-22T13:15:00Z"
+        },
+        "nb_timestamp": {
+            "class": "estimate",
+            "nb": null
+        }
+    },
+    {
         "key": "_:theweddingofladyameliaspencertogregthegrizmallett",
         "name": "Lady Amelia Spencer Marries The Griz",
         "article": [
@@ -243,7 +318,7 @@
         "_key": "_:byrondennistonchallengesthegriztoaduel",
         "name": "Byron Denniston Challenges The Griz to a Duel",
         "article": [
-            "In possible a pique of folly, Byron Denniston challenges Greg Mallett to a water polo duel for the hand of Lady Amelia Spencer."
+            "In a possible pique of folly, Byron Denniston challenges Greg Mallett to a water polo duel for the hand of Lady Amelia Spencer."
         ],
         "timestamp": {
             "start": "2022-03-17T22:12:00Z",
@@ -3225,8 +3300,8 @@
             "During the Water Skiing Wars of the late 60s and early 70s, Hot Dog and Ahi verbally chum an adversary named Bodey."
         ],
         "timestamp": {
-            "start": "1970-04-14T122:00:00Z",
-            "end": null
+            "start": "1970-04-14T12:00:00Z",
+            "end": "1970-04-14T14:00:00Z"
         },
         "nb_timestamp": {
             "class": "estimate-prior",
@@ -3241,7 +3316,7 @@
         ],
         "timestamp": {
             "start": "1964-08-08T19:00:00Z",
-            "end": null
+            "end": "1969-06-01T19:00:00Z"
         },
         "nb_timestamp": {
             "class": "estimate-prior",

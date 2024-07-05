@@ -1,5 +1,27 @@
 [
     {
+        "_key": "_:sonypicturestudiosmotorgate",
+        "name": "Sony Picture Studios Motor Gate",
+        "article": [
+            "Sony Picture Studios Motor Gate is a guarded point of egress at Sony Pictures studio, Culver City, CA"
+        ],
+        "geo_key": {
+            "type": "point",
+            "id": 1853
+        }
+    },
+    {
+        "_key": "_:angelesnationalforest",
+        "name": "Angeles National Forest",
+        "article": [
+            "Angeles National Forest is a Southern California property managed by the U.S. Department of Agriculture Forest Service"
+        ],
+        "geo_key": {
+            "type": "poly",
+            "id": 1444
+        }
+    },
+    {
         "_key": "_:charingcrosstheatre",
         "name": "Charing Cross Theatre",
         "article": [

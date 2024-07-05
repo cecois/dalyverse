@@ -7,7 +7,7 @@
           <v-row dense>
             <v-col class="v-col-3"></v-col>
             <v-col class="v-col-6 pt-12 mt-12">
-              <div class="text-center app-hero-hero">observations</div>
+              <div class="text-center app-hero-hero">humorous</div>
               <div class="text-center app-hero-hero">otherwise</div>
             </v-col>
             <v-col class="v-col-auto"></v-col>
