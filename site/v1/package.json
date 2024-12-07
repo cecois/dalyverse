@@ -10,7 +10,7 @@
         "build": "node build/build.js"
     },
     "dependencies": {
-        "buefy": "^0.6.6",
+        "buefy": "^0.7.2",
         "dotenv": "^6.0.0",
         "dotenv-webpack": "^1.5.7",
         "eslint-friendly-formatter": "^4.0.1",
